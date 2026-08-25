@@ -1,0 +1,21 @@
+/* ---------------- Bookkeeping vs accounting ---------------- */
+.bk-vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.bk-vs-card {
+  border-radius: var(--r);
+  padding: 28px 26px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.bk-vs-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.bk-vs-us { background: var(--surface); border: 1px solid rgba(37, 99, 235, 0.35); box-shadow: var(--shadow-md); }
+.bk-vs-cpa { background: var(--surface-2); border: 1px solid var(--peach-line); }
+.bk-vs-card .bk-tag { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-ink); }
+.bk-vs-card h3 { font-family: var(--display); font-weight: 700; font-size: 20px; color: var(--ink); margin: 8px 0 0; }
+.bk-vs-card p { font-size: 14.5px; line-height: 1.6; color: var(--muted-ink); margin: 12px 0 0; }
+.bk-vs-foot { margin-top: 22px; font-size: 15px; color: var(--ink); line-height: 1.6; max-width: 70ch; }
+.bk-vs-foot b { color: var(--ink); }
+
+@media (max-width: 900px) {
+  .bk-vs-grid { grid-template-columns: 1fr; }
+}

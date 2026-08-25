@@ -1,0 +1,186 @@
+/* ---------------- Bookkeeping hero — close-date calendar ---------------- */
+.bk-file { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal-ink); }
+.bk-sub { font-size: clamp(16px, 1.3vw, 18px); color: var(--muted-ink); line-height: 1.65; max-width: 62ch; margin: 14px 0 0; }
+
+.bk-hero { position: relative; overflow: hidden; }
+.bk-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 55% 55% at 78% 30%, rgba(37, 99, 235, 0.1), transparent 70%),
+    radial-gradient(ellipse 45% 50% at 12% 80%, rgba(20, 184, 166, 0.08), transparent 60%);
+}
+.bk-hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; position: relative; z-index: 1; }
+.bk-hero h1 { font-size: clamp(36px, 4.6vw, 58px); color: var(--ink); margin: 18px 0 0; line-height: 1.05; }
+.bk-hero .bk-lead { font-size: clamp(16px, 1.35vw, 19px); color: var(--muted-ink); line-height: 1.65; max-width: 48ch; margin: 20px 0 0; }
+.bk-hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+
+/* hero load-in (same signature as the services page) */
+.bk-hero .hero-el {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.85s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.85s cubic-bezier(0.16, 0.84, 0.44, 1);
+  transition-delay: calc(var(--i, 0) * 115ms + 0.08s);
+}
+.bk-hero .hero-el.in { opacity: 1; transform: none; }
+
+/* close-date visual card */
+.bk-vis { position: relative; width: 100%; max-width: 440px; margin-left: auto; }
+.bk-vis.hero-el { transform: none; transition: opacity 0.55s ease 0.1s; }
+.bk-cal {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  padding: 26px 26px 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.bk-cal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(70% 60% at 100% 0%, rgba(37, 99, 235, 0.05), transparent 60%);
+}
+.bk-cal-top { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+.bk-cal-top b { font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--ink); }
+.bk-cal-top span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.bk-grid7 { display: grid; grid-template-columns: repeat(7, 1fr); gap: 7px; margin-top: 18px; position: relative; z-index: 1; }
+.bk-grid7 i { font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: center; font-style: normal; padding-bottom: 2px; }
+.bk-grid7 u {
+  font-style: normal;
+  text-decoration: none;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--muted-ink);
+  background: var(--surface-2);
+}
+.bk-grid7 u.dim { opacity: 0.35; }
+.bk-grid7 u.circle {
+  color: #fff;
+  background: var(--grad-fill);
+  position: relative;
+  box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.7);
+  overflow: visible;
+}
+/* draw-in ring around the close date */
+.bk-ring { position: absolute; inset: -6px; width: calc(100% + 12px); height: calc(100% + 12px); overflow: visible; pointer-events: none; }
+.bk-ring circle {
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-dasharray: 132;
+  stroke-dashoffset: 132;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+.bk-cal-foot { margin-top: 20px; display: flex; align-items: center; gap: 10px; position: relative; z-index: 1; font-size: 13.5px; color: var(--ink); }
+.bk-cal-foot .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--grad-fill); flex: none; }
+
+/* calendar entrance (fires when .bk-vis gets .in) */
+.bk-cal { opacity: 0; transform: translateY(16px) scale(0.985); }
+.bk-vis.in .bk-cal { animation: bkCard 0.7s cubic-bezier(0.16, 0.84, 0.44, 1) both; }
+@keyframes bkCard {
+  from { opacity: 0; transform: translateY(16px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+.bk-cal-top { opacity: 0; }
+.bk-vis.in .bk-cal-top { animation: bkFade 0.5s ease 0.18s both; }
+.bk-grid7 i { opacity: 0; }
+.bk-vis.in .bk-grid7 i { animation: bkFade 0.4s ease 0.28s both; }
+/* day cells wave in; --d set per-cell */
+.bk-grid7 u { opacity: 0; transform: translateY(9px) scale(0.9); }
+.bk-vis.in .bk-grid7 u { animation: bkCell 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) both; animation-delay: var(--d, 0s); }
+.bk-grid7 u.dim { opacity: 0; }
+.bk-vis.in .bk-grid7 u.dim { animation: bkCellDim 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) both; animation-delay: var(--d, 0s); }
+@keyframes bkCell {
+  from { opacity: 0; transform: translateY(9px) scale(0.9); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes bkCellDim {
+  from { opacity: 0; transform: translateY(9px) scale(0.9); }
+  to { opacity: 0.35; transform: none; }
+}
+/* close date stamps in after the wave lands */
+.bk-vis.in .bk-grid7 u.circle { animation: bkStamp 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 1.05s both; }
+@keyframes bkStamp {
+  0% { opacity: 0; transform: scale(0.4) rotate(-8deg); }
+  60% { opacity: 1; transform: scale(1.12) rotate(2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+/* ring draws after the stamp, then the dot pulses */
+.bk-vis.in .bk-ring circle { animation: bkDraw 0.7s cubic-bezier(0.16, 0.84, 0.44, 1) 1.35s forwards; }
+@keyframes bkDraw {
+  to { stroke-dashoffset: 0; }
+}
+.bk-cal-foot { opacity: 0; }
+.bk-vis.in .bk-cal-foot { animation: bkFade 0.5s ease 1.7s both; }
+.bk-vis.in .bk-cal-foot .dot { animation: bkFade 0.5s ease 1.7s both, bkPulse 2.2s ease-in-out 2.2s infinite; }
+@keyframes bkPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(37, 99, 235, 0); }
+}
+@keyframes bkFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+/* floating chips pop in last */
+.bk-chip {
+  position: absolute;
+  z-index: 3;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  padding: 11px 15px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  opacity: 0;
+  transform: translateY(10px) scale(0.92);
+}
+.bk-chip .tick {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(20, 184, 166, 0.14);
+  display: grid;
+  place-items: center;
+  color: var(--teal-ink);
+  flex: none;
+}
+.bk-chip.c1 { top: -16px; left: -18px; }
+.bk-chip.c2 { bottom: -16px; right: -14px; }
+.bk-vis.in .bk-chip.c1 { animation: bkChip 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.9s both, bkFloat 5s ease-in-out 2.5s infinite; }
+.bk-vis.in .bk-chip.c2 { animation: bkChip 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 2.15s both, bkFloat 5.5s ease-in-out 3s infinite; }
+@keyframes bkChip {
+  to { opacity: 1; transform: none; }
+}
+@keyframes bkFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 900px) {
+  .bk-hero-grid { grid-template-columns: 1fr; gap: 34px; }
+  .bk-vis { margin: 0 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bk-hero .hero-el { opacity: 1; transform: none; transition: none; }
+  .bk-cal, .bk-cal-top, .bk-grid7 i, .bk-grid7 u, .bk-cal-foot, .bk-cal-foot .dot, .bk-chip { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .bk-grid7 u.dim { opacity: 0.35 !important; }
+  .bk-ring circle { stroke-dashoffset: 0 !important; animation: none !important; }
+}

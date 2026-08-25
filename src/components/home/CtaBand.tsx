@@ -8,6 +8,7 @@ import { openAiAdvisor } from "@/components/layout/FloatingActions";
 import "./cta-band.css";
 
 type CtaBandProps = {
+  eyebrow?: string;
   heading?: string;
   copy?: string;
   primaryLabel?: string;
@@ -15,14 +16,18 @@ type CtaBandProps = {
   secondary?: { label: string; href: string };
   /** Optional fine-print line under the actions. */
   fine?: string;
+  /** When set, a still image replaces the background video. */
+  bgImage?: string;
 };
 
 export default function CtaBand({
+  eyebrow = "Your next step",
   heading = "The growth team you can't afford to hire — for the price you can.",
   copy = "Book a free consultation and we'll map the fastest path from where you are to real traction. No decks, no pressure.",
   primaryLabel = "Book a free consultation",
   secondary,
   fine,
+  bgImage,
 }: CtaBandProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const primaryRef = useMagnetic<HTMLAnchorElement>();
@@ -36,13 +41,21 @@ export default function CtaBand({
   }, [reduce]);
 
   return (
-    <section className="cta-home" id="book">
-      <video ref={videoRef} className="cta-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true">
-        <source src="/assets/videos/cta-background.mp4" type="video/mp4" />
-      </video>
+    <section className={`cta-home${bgImage ? " has-photo" : ""}`} id="book">
+      {bgImage ? (
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="cta-bg" src={bgImage} alt="" aria-hidden="true" />
+          <span className="cta-veil" aria-hidden="true"></span>
+        </>
+      ) : (
+        <video ref={videoRef} className="cta-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true">
+          <source src="/assets/videos/cta-background.mp4" type="video/mp4" />
+        </video>
+      )}
       <Reveal className="wrap">
         <span className="eyebrow" style={{ justifyContent: "center" }}>
-          Your next step
+          {eyebrow}
         </span>
         <h2>{heading}</h2>
         <p>{copy}</p>

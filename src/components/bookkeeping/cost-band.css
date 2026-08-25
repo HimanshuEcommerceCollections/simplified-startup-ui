@@ -1,0 +1,36 @@
+/* ---------------- What it costs ---------------- */
+.bk-price {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: var(--r);
+  padding: 30px 30px 28px;
+  box-shadow: var(--shadow-sm);
+  max-width: 820px;
+}
+.bk-price p.bk-price-lead { font-size: 15.5px; line-height: 1.65; color: var(--muted-ink); margin: 0 0 22px; }
+.bk-tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.bk-tier {
+  border: 1px solid var(--peach-line);
+  border-radius: 12px;
+  padding: 20px 22px;
+  background: var(--surface-2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.bk-tier:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(37, 99, 235, 0.3); }
+.bk-tier .bk-off {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 28px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.bk-tier p { font-size: 14px; color: var(--muted-ink); margin: 6px 0 0; line-height: 1.55; }
+.bk-price-foot { margin-top: 20px; font-size: 14px; color: var(--ink); }
+.bk-price-foot a { color: var(--blue); font-weight: 600; border-bottom: 1px solid rgba(37, 99, 235, 0.35); }
+
+@media (max-width: 900px) {
+  .bk-tiers { grid-template-columns: 1fr; }
+}

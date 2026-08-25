@@ -1,0 +1,57 @@
+/* ---------------- Catch-up callout ---------------- */
+.bk-callout {
+  background: var(--grad);
+  border-radius: 20px;
+  padding: 40px 44px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.bk-callout::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 70%);
+  pointer-events: none;
+}
+/* slow shine sweep */
+.bk-callout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 38%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transform: skewX(-15deg);
+  animation: bkCalloutShine 6s ease-in-out 1.2s infinite;
+}
+@keyframes bkCalloutShine {
+  0% { left: -40%; }
+  32%, 100% { left: 135%; }
+}
+.bk-callout .bk-co-txt { position: relative; z-index: 1; max-width: 60ch; }
+.bk-callout .bk-co-eyebrow { color: rgba(255, 255, 255, 0.85); }
+.bk-callout .bk-co-eyebrow::before { background: rgba(255, 255, 255, 0.7); }
+.bk-callout h3 { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); color: #fff; margin: 0; }
+.bk-callout p { font-size: 16px; color: rgba(255, 255, 255, 0.9); margin: 12px 0 0; line-height: 1.6; }
+.bk-callout .btn { position: relative; z-index: 1; background: #fff; color: var(--ink); border-radius: 10px; padding: 15px 28px; white-space: nowrap; }
+.bk-callout .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22); }
+
+@media (max-width: 900px) {
+  .bk-callout { padding: 30px 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bk-callout::before { display: none; }
+}

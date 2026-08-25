@@ -9,9 +9,9 @@ import "./navbar.css";
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
   { label: "Why us", href: "/#why" },
-  { label: "Pricing", href: "/#pricing" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Resources", href: "/#resources" },
 ];
 
@@ -37,8 +37,11 @@ export default function Navbar() {
   }, []);
 
   function isActive(href: string) {
+    if (href.startsWith("/#")) return false;
     if (href === "/") return pathname === "/";
-    return pathname === href;
+    // service detail pages highlight the Services item
+    if (href === "/services") return pathname === "/services" || pathname === "/bookkeeping";
+    return pathname === href || pathname.startsWith(`${href}/`);
   }
 
   return (

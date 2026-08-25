@@ -15,7 +15,7 @@ const SERVICE_LINKS = [
 
 const COMPANY_LINKS = [
   { label: "About", href: "/about" },
-  { label: "Pricing", href: "/#pricing" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/#resources" },
   { label: "Resources", href: "/#resources" },
   { label: "Contact", href: "/#book" },
@@ -47,9 +47,12 @@ export default function Footer() {
             <ul>
               {SERVICE_LINKS.map((label) => (
                 <li key={label}>
-                  <Link href="/#services">{label}</Link>
+                  <Link href="/services">{label}</Link>
                 </li>
               ))}
+              <li>
+                <Link href="/bookkeeping">Bookkeeping &amp; Accounting</Link>
+              </li>
             </ul>
           </div>
           <div className={revealClass}>

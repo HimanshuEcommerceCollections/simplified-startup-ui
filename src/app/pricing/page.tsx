@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingActions from "@/components/layout/FloatingActions";
 import Faq from "@/components/home/Faq";
+import CtaBand from "@/components/home/CtaBand";
 import PricingHero from "@/components/pricing/PricingHero";
 import PricingTiers from "@/components/pricing/PricingTiers";
 import RateCard from "@/components/pricing/RateCard";
@@ -10,7 +11,6 @@ import ScopedPractices from "@/components/pricing/ScopedPractices";
 import BundleDiscounts from "@/components/pricing/BundleDiscounts";
 import TermsGrid from "@/components/pricing/TermsGrid";
 import ResourcesDesk from "@/components/pricing/ResourcesDesk";
-import PricingCta from "@/components/pricing/PricingCta";
 
 export const metadata: Metadata = {
   title: "Pricing — Every Price, Published | Simplified Startup",
@@ -57,7 +57,7 @@ export default function PricingPage() {
         <TermsGrid />
         <Faq title="About the numbers" eyebrow="— Fair questions" items={PRICING_FAQS} />
         <ResourcesDesk />
-        <PricingCta />
+        <CtaBand />
       </main>
       <Footer />
       <FloatingActions />

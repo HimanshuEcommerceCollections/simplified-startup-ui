@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Reveal from "@/components/ui/Reveal";
 import "./service-explorer.css";
 
@@ -11,6 +12,8 @@ type Service = {
   included: { b: string; rest: string }[];
   get: string;
   for: string;
+  /** When set, clicking the row navigates to this page. */
+  href?: string;
 };
 
 const SERVICES: Service[] = [
@@ -108,6 +111,7 @@ const SERVICES: Service[] = [
   {
     title: "Bookkeeping & Accounting",
     sub: "Finance handled, end to end",
+    href: "/bookkeeping",
     is: "Clean monthly books, plain-English reporting, and a dated close — organized so tax season is a handoff, not a scramble.",
     included: [
       { b: "Categorize & reconcile", rest: "every transaction sorted, accounts matched to the penny." },
@@ -123,9 +127,15 @@ const SERVICES: Service[] = [
 const pad = (n: number) => String(n + 1).padStart(2, "0");
 
 export default function ServiceExplorer() {
+  const router = useRouter();
   const [active, setActive] = useState(0);
   const hoverActivate = (i: number) => {
     if (window.matchMedia("(hover: hover)").matches) setActive(i);
+  };
+  const onRowClick = (i: number) => {
+    const href = SERVICES[i].href;
+    if (href) router.push(href);
+    else setActive(i);
   };
 
   return (
@@ -147,7 +157,7 @@ export default function ServiceExplorer() {
                 className={`cap-row${i === active ? " is-active" : ""}`}
                 role="tab"
                 aria-selected={i === active}
-                onClick={() => setActive(i)}
+                onClick={() => onRowClick(i)}
                 onMouseEnter={() => hoverActivate(i)}
               >
                 <span className="cap-num">{pad(i)}</span>

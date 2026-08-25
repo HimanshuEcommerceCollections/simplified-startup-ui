@@ -1,0 +1,116 @@
+/* ---------------- Testimonials carousel ---------------- */
+.tst { background: var(--paper); color: var(--ink); overflow: hidden; }
+.tst-head { max-width: none; text-align: center; margin-left: auto; margin-right: auto; margin-bottom: 64px; }
+.tst-head .eyebrow { justify-content: center; }
+.tst-head .eyebrow::before { display: none; }
+.tst-head h2 { font-size: clamp(32px, 5vw, 56px); letter-spacing: 0.02em; margin-top: 14px; }
+
+.tst-carousel { position: relative; max-width: 1180px; margin: 0 auto; }
+.tst-viewport { overflow: hidden; padding-top: 58px; }
+.tst-track { display: flex; gap: 26px; will-change: transform; transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.tst-card {
+  flex: 0 0 calc((100% - 52px) / 3);
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line-ink);
+  border-radius: 16px;
+  padding: 70px 30px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(20, 20, 40, 0.1);
+  transition: transform 0.35s var(--ease-premium), box-shadow 0.35s var(--ease-premium), border-color 0.35s ease;
+}
+.tst-card:hover { transform: translateY(-6px); box-shadow: 0 22px 46px rgba(20, 20, 40, 0.16); border-color: rgba(37, 99, 235, 0.28); }
+.tst-avatar {
+  position: absolute;
+  top: -52px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #eaf0ff 0%, #e6fbf8 100%);
+  border: 5px solid #fff;
+  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.2);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 38px;
+  color: var(--blue);
+  letter-spacing: 0;
+  transition: transform 0.35s var(--ease-premium);
+}
+.tst-card:hover .tst-avatar { transform: translateX(-50%) scale(1.06); }
+.tst-stars { color: var(--coral); font-size: 19px; letter-spacing: 5px; margin: 2px 0 14px; line-height: 1; }
+.tst-quote-ico {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 52px;
+  line-height: 0.6;
+  color: var(--teal);
+  opacity: 0.35;
+  display: block;
+  margin-bottom: 10px;
+  height: 26px;
+}
+.tst-text {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--muted-ink);
+  max-width: 34ch;
+  margin: 0 auto 26px;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+}
+.tst-name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.tst-role { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
+
+.tst-controls { display: flex; align-items: center; justify-content: center; gap: 26px; margin-top: 44px; }
+.tst-arrow {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--peach-line);
+  background: #fff;
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s var(--ease-premium), background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.tst-arrow:hover {
+  background: var(--grad);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.32);
+}
+.tst-dots { display: flex; align-items: center; gap: 10px; }
+.tst-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background: var(--peach-line);
+  transition: width 0.3s var(--ease-premium), background 0.3s ease;
+}
+.tst-dot.active { width: 30px; background: var(--grad); }
+
+@media (max-width: 900px) {
+  .tst-card { flex: 0 0 100%; padding: 66px 24px 32px; }
+  .tst-head { margin-bottom: 52px; }
+}

@@ -1,0 +1,186 @@
+/* ---------------- HOW WE HELP — interactive journey ---------------- */
+.jr-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; }
+.jr-nav { display: flex; align-items: center; gap: 14px; flex: none; padding-bottom: 4px; }
+.jr-count { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.14em; color: var(--muted); }
+.jr-count b { color: var(--ink); font-weight: 700; }
+
+.jr { position: relative; margin-top: clamp(34px, 4vw, 48px); }
+/* the path lives on a dark drafting panel */
+.jr-stage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  margin-right: 36%;
+  padding: clamp(38px, 4.4vw, 56px) clamp(28px, 3.4vw, 46px) clamp(46px, 5vw, 64px);
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(ellipse 62% 74% at 18% 14%, rgba(37, 99, 235, 0.3), transparent 66%),
+    radial-gradient(ellipse 50% 60% at 92% 96%, rgba(20, 184, 166, 0.2), transparent 62%),
+    linear-gradient(158deg, #0f172a 0%, #16233f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 34px 70px -40px rgba(15, 23, 42, 0.6);
+}
+.jr-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* rail */
+.jr-rail { position: relative; display: flex; width: 100%; z-index: 1; }
+.jr-track, .jr-fill { position: absolute; top: 26px; left: 12.5%; right: 12.5%; height: 2px; border-radius: 2px; }
+.jr-track { background: rgba(255, 255, 255, 0.15); }
+.jr-fill { right: auto; width: 0; background: var(--grad-fill); transition: width 0.6s cubic-bezier(0.16, 0.84, 0.44, 1); }
+.jr-pt {
+  flex: 1;
+  position: relative;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  font: inherit;
+}
+.jr-bead {
+  position: relative;
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.4s cubic-bezier(0.34, 1.5, 0.64, 1), background 0.35s ease, border-color 0.35s ease,
+    color 0.35s ease;
+}
+.jr-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.42);
+  transition: color 0.35s ease;
+}
+.jr-pt:hover .jr-bead { border-color: rgba(255, 255, 255, 0.5); }
+.jr-pt:hover .jr-label { color: rgba(255, 255, 255, 0.72); }
+.jr-pt.is-done .jr-bead { border-color: rgba(20, 184, 166, 0.85); color: #5eead4; background: rgba(20, 184, 166, 0.1); }
+.jr-pt.is-done .jr-label { color: rgba(255, 255, 255, 0.6); }
+.jr-pt.is-on .jr-bead {
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  border-color: transparent;
+  background: var(--grad-fill);
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.16), 0 8px 20px -6px rgba(20, 184, 166, 0.6);
+}
+.jr-pt.is-on .jr-label { color: #fff; }
+.jr-pt:focus-visible { outline: none; }
+.jr-pt:focus-visible .jr-bead { box-shadow: 0 0 0 3px var(--teal); }
+
+/* the marker that walks the path */
+.jr-pin {
+  position: absolute;
+  top: -30px;
+  left: 12.5%;
+  width: 26px;
+  height: 30px;
+  transform: translateX(-50%);
+  transition: left 0.55s cubic-bezier(0.34, 1.28, 0.5, 1);
+  pointer-events: none;
+  z-index: 3;
+}
+.jr-pin svg { width: 26px; height: 30px; filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.45)); }
+
+/* the stage card */
+.jr-card {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42%;
+  z-index: 4;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 18px;
+  padding: 30px 32px;
+  box-shadow: 0 34px 64px -30px rgba(15, 23, 42, 0.5);
+}
+.jr-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.jr-eyebrow::before { content: ""; width: 20px; height: 1px; background: var(--teal-ink); opacity: 0.85; }
+.jr-card h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(21px, 2.2vw, 26px);
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 12px 0 10px;
+}
+.jr-card p { font-size: 15px; line-height: 1.6; color: var(--muted-ink); margin: 0; }
+.jr-list { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.jr-list li { position: relative; padding-left: 18px; font-size: 14.5px; line-height: 1.5; color: var(--muted-ink); }
+.jr-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--grad-fill);
+}
+.jr-p[hidden] { display: none; }
+/* content changes with a short lift */
+.jr-card.sw .jr-p > * { animation: jrRise 0.5s cubic-bezier(0.16, 0.84, 0.44, 1) both; }
+.jr-card.sw .jr-p > *:nth-child(2) { animation-delay: 0.06s; }
+.jr-card.sw .jr-p > *:nth-child(3) { animation-delay: 0.12s; }
+.jr-card.sw .jr-p > *:nth-child(4) { animation-delay: 0.18s; }
+@keyframes jrRise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 1000px) {
+  .jr-stage { margin-right: 0; min-height: 0; padding-bottom: clamp(40px, 5vw, 54px); }
+  .jr-card {
+    position: static;
+    transform: none;
+    width: auto;
+    margin: -26px 20px 0;
+    box-shadow: 0 26px 54px -30px rgba(15, 23, 42, 0.45);
+  }
+}
+@media (max-width: 620px) {
+  .jr-top { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .jr-nav { padding-bottom: 0; }
+  .jr-label { font-size: 9px; letter-spacing: 0.08em; }
+  .jr-card { margin: -22px 12px 0; padding: 24px 22px; }
+  .jr-pin { top: -27px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jr-fill, .jr-pin, .jr-bead { transition: none !important; }
+  .jr-card.sw .jr-p > * { animation: none !important; }
+}

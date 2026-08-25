@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 372">
+  <defs>
+    <linearGradient id="b" x1="300" y1="30" x2="70" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3fa9f8"/>
+      <stop offset="0.55" stop-color="#1478f0"/>
+      <stop offset="1" stop-color="#0b50d0"/>
+    </linearGradient>
+    <linearGradient id="o" x1="300" y1="30" x2="70" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffc131"/>
+      <stop offset="0.55" stop-color="#fb9014"/>
+      <stop offset="1" stop-color="#f1650b"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#b)" d="M320 32
+    C 264 17, 198 7, 140 9
+    C 88 13, 44 34, 22 72
+    C 13 93, 10 118, 11 142
+    C 12 170, 19 198, 34 220
+    C 49 238, 71 249, 96 248
+    C 110 247, 124 245, 133 240
+    C 120 231, 106 214, 100 194
+    C 94 168, 100 140, 120 122
+    C 138 103, 162 100, 186 104
+    C 228 108, 274 88, 320 32 Z"/>
+  <path fill="url(#o)" d="M320 32
+    C 264 17, 198 7, 140 9
+    C 88 13, 44 34, 22 72
+    C 13 93, 10 118, 11 142
+    C 12 170, 19 198, 34 220
+    C 49 238, 71 249, 96 248
+    C 110 247, 124 245, 133 240
+    C 120 231, 106 214, 100 194
+    C 94 168, 100 140, 120 122
+    C 138 103, 162 100, 186 104
+    C 228 108, 274 88, 320 32 Z" transform="rotate(180 160 186)"/>
+</svg>

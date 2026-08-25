@@ -1,0 +1,106 @@
+/* ---------------- OUR APPROACH — 3D coverflow on a dark band ---------------- */
+.cf-band {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse 56% 60% at 14% 8%, rgba(37, 99, 235, 0.32), transparent 62%),
+    radial-gradient(ellipse 46% 56% at 88% 94%, rgba(20, 184, 166, 0.22), transparent 60%),
+    linear-gradient(158deg, #0f172a 0%, #16233f 100%);
+}
+.page-about .band.cf-band {
+  background: radial-gradient(ellipse 56% 60% at 14% 8%, rgba(37, 99, 235, 0.32), transparent 62%),
+    radial-gradient(ellipse 46% 56% at 88% 94%, rgba(20, 184, 166, 0.22), transparent 60%),
+    linear-gradient(158deg, #0f172a 0%, #16233f 100%);
+}
+.cf-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.45;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+.cf-band .wrap { position: relative; z-index: 1; }
+.cf-head { text-align: center; max-width: 640px; margin: 0 auto; }
+.cf-head .ab-h2 { color: #fff; }
+.cf-head .sec-lead { color: rgba(255, 255, 255, 0.66); margin-left: auto; margin-right: auto; }
+.cf-head .eyebrow { color: #5eead4; }
+.page-about .cf-head .eyebrow::before { background: #5eead4; }
+
+.cf-stage {
+  position: relative;
+  height: 344px;
+  margin-top: clamp(34px, 4vw, 50px);
+  perspective: 1250px;
+  transform-style: preserve-3d;
+  touch-action: pan-y;
+  --cw: 322px;
+}
+.cf-card {
+  position: absolute;
+  top: 0;
+  left: calc(50% - (var(--cw) / 2));
+  width: var(--cw);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 26px 28px;
+  box-shadow: 0 28px 60px -26px rgba(0, 0, 0, 0.55);
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+  transform: translateX(calc(var(--o, 0) * 47%)) rotateY(calc(var(--o, 0) * -31deg))
+    translateZ(calc(var(--a, 0) * -96px)) scale(calc(1 - var(--a, 0) * 0.055));
+  opacity: calc(1 - var(--a, 0) * 0.34);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.25, 1), opacity 0.5s ease;
+  pointer-events: none;
+}
+.cf-card.is-mid { pointer-events: auto; }
+.cf-card.is-side { pointer-events: auto; cursor: pointer; }
+.cf-card.nt { transition: none !important; }
+.cf-card:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
+.cf-ic {
+  width: 54px;
+  height: 54px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  background: var(--grad);
+  color: #fff;
+}
+.cf-ic svg { width: 25px; height: 25px; }
+.cf-card h3 { font-family: var(--display); font-weight: 700; font-size: 21px; letter-spacing: -0.015em; color: var(--ink); margin: 22px 0 10px; }
+.cf-card p { font-size: 14.5px; line-height: 1.6; color: var(--muted-ink); margin: 0; }
+.cf-ix { margin-top: auto; font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; color: var(--teal-ink); }
+
+.cf-ctrl { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 34px; }
+.cf-hint {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.42);
+  margin: 18px 0 0;
+}
+
+@media (max-width: 900px) {
+  .cf-stage { --cw: 300px; height: 334px; }
+  .cf-card {
+    transform: translateX(calc(var(--o, 0) * 44%)) rotateY(calc(var(--o, 0) * -28deg))
+      translateZ(calc(var(--a, 0) * -110px)) scale(calc(1 - var(--a, 0) * 0.07));
+  }
+}
+@media (max-width: 620px) {
+  .cf-stage { --cw: 250px; height: 352px; perspective: 900px; }
+  .cf-card { padding: 22px 20px; }
+  .cf-card h3 { font-size: 19px; margin-top: 18px; }
+  .cf-card p { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cf-card { transition: none !important; }
+}

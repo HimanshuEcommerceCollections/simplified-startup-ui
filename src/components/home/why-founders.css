@@ -1,0 +1,48 @@
+/* ---------------- Why founders choose us — sticky scroll story ---------------- */
+.why-scroll { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.why-sticky { position: sticky; top: 92px; }
+.why-media {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 66.7%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: #eef3fb;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.16), 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+.why-media .wm-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.6s var(--ease-premium), transform 1s var(--ease-premium);
+}
+.why-media .wm-img.active { opacity: 1; transform: scale(1); }
+.why-steps { display: flex; flex-direction: column; }
+.why-step {
+  min-height: 66vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.32;
+  transition: opacity 0.45s var(--ease-premium);
+}
+.why-step.active { opacity: 1; }
+.why-num { font-family: var(--mono); font-size: 13px; letter-spacing: 0.14em; color: var(--coral); margin-bottom: 14px; }
+.why-step h3 { font-size: clamp(24px, 3vw, 34px); line-height: 1.12; color: var(--ink); margin: 0 0 14px; letter-spacing: -0.02em; }
+.why-step p { font-size: clamp(15px, 1.4vw, 17px); line-height: 1.65; color: var(--muted-ink); max-width: 44ch; margin: 0; }
+
+@media (max-width: 860px) {
+  .why-scroll { grid-template-columns: 1fr; gap: 22px; }
+  .why-sticky { top: 64px; z-index: 1; }
+  .why-media { padding-top: 62%; }
+  .why-step { min-height: 44vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .why-step { opacity: 1; }
+}

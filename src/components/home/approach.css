@@ -1,0 +1,98 @@
+/* ---------------- Approach — "How founders build" comparison ---------------- */
+.band.approach { padding: 0 0 96px; background: #fff; color: var(--ink); overflow: hidden; }
+.approach-band {
+  position: relative;
+  background: var(--peach);
+  clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+  padding: 56px 0 46px;
+  margin-bottom: 50px;
+}
+.approach-head { max-width: 640px; }
+.approach-head h2 { font-size: clamp(32px, 4.6vw, 52px); margin-top: 16px; color: #151515; line-height: 1.03; }
+.approach-head p { margin-top: 18px; font-size: 18px; color: var(--muted-ink); line-height: 1.5; }
+.approach-head .eyebrow.on-light { color: var(--coral); }
+
+.cards3 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.c3 {
+  position: relative;
+  background: #fff;
+  border-radius: 6px;
+  padding: 32px 26px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(20, 20, 40, 0.09);
+  transition: transform 0.3s var(--ease-premium), box-shadow 0.3s var(--ease-premium), opacity 0.6s ease,
+    border-color 0.3s ease;
+}
+.c3::before { content: ""; position: absolute; inset: 0; background: var(--grad); opacity: 0; transition: opacity 0.4s ease; z-index: 0; }
+.c3 > * { position: relative; z-index: 1; }
+.c3 .ic { display: block; color: #1a1a1a; margin-bottom: 26px; transition: color 0.4s ease; }
+.c3 .ic svg { width: 46px; height: 46px; }
+.c3 .t {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  color: var(--teal);
+  margin-bottom: 8px;
+  line-height: 1.15;
+  transition: color 0.4s ease;
+}
+.c3 .t .line {
+  flex: 1;
+  height: 2px;
+  background: var(--teal);
+  opacity: 0.55;
+  border-radius: 2px;
+  max-width: 74px;
+  transition: background 0.4s ease, opacity 0.4s ease;
+}
+.c3:hover { transform: translateY(-10px); box-shadow: 0 30px 62px rgba(37, 99, 235, 0.34); }
+.c3:hover::before,
+.c3.featured::before { opacity: 1; }
+.c3.featured { box-shadow: 0 26px 55px rgba(37, 99, 235, 0.28); }
+.c3:hover .ic,
+.c3.featured .ic { color: #fff; }
+.c3:hover .t,
+.c3.featured .t { color: #fff; }
+.c3:hover .t .line,
+.c3.featured .t .line { background: #fff; opacity: 0.85; }
+
+/* comparison rows + recommended badge */
+.c3-row { margin-top: 13px; }
+.c3-k {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+.c3-v { display: block; font-size: 14.5px; color: var(--muted-ink); line-height: 1.5; }
+.c3:hover .c3-k,
+.c3.featured .c3-k { color: rgba(255, 255, 255, 0.82); }
+.c3:hover .c3-v,
+.c3.featured .c3-v { color: #fff; }
+.c3-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  padding: 5px 11px;
+  border-radius: 100px;
+}
+
+@media (min-width: 861px) and (max-width: 1080px) {
+  .cards3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 820px) {
+  .cards3 { grid-template-columns: 1fr; }
+  .approach-band { clip-path: none; padding: 44px 0 30px; margin-bottom: 34px; }
+  .approach-head { padding-top: 8px; }
+}

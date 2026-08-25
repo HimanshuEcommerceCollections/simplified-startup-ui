@@ -1,0 +1,111 @@
+/* ---------------- WHY — cards with micro-diagrams ---------------- */
+.why2-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
+.why2-card { background: var(--surface); border: 1px solid var(--peach-line); border-radius: 18px; padding: 28px 26px; }
+.why2-card h3 { font-family: var(--display); font-weight: 600; font-size: 19px; color: var(--ink); margin: 0 0 10px; }
+.why2-card p { font-size: 15px; line-height: 1.6; color: var(--muted-ink); margin: 0; }
+.why2-card.is-fix {
+  background: linear-gradient(150deg, rgba(37, 99, 235, 0.06), rgba(20, 184, 166, 0.06));
+  border-color: transparent;
+  position: relative;
+}
+.why2-card.is-fix::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1.5px;
+  background: var(--grad);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.why2-card.is-fix h3 { color: var(--teal-ink); }
+
+/* micro-diagrams: each animates that card's own claim */
+.wm { display: block; width: 100%; height: auto; margin: 0 0 20px; overflow: visible; }
+.wm-base { stroke: var(--peach-line); stroke-width: 2; stroke-linecap: round; }
+.wm-u, .wm-n, .wm-tool { transform-box: fill-box; transform-origin: center; }
+
+/* 1. THE GAPS COST YOU — work units fall through the gaps */
+.wm-u { fill: rgba(37, 99, 235, 0.24); opacity: 0; }
+.why2-card.in .wm-u { animation: wmSettle 0.4s cubic-bezier(0.34, 1.4, 0.64, 1) both; animation-delay: calc(0.24s + var(--i, 0) * 52ms); }
+@keyframes wmSettle {
+  from { opacity: 0; transform: translateY(-9px); }
+  to { opacity: 1; transform: none; }
+}
+.wm-u.wm-fall { fill: var(--coral); }
+.why2-card.in .wm-u.wm-fall {
+  animation: wmSettle 0.4s cubic-bezier(0.34, 1.4, 0.64, 1) both, wmFall 0.85s cubic-bezier(0.35, 0.05, 0.7, 1) forwards;
+  animation-delay: calc(0.24s + var(--i, 0) * 52ms), calc(0.95s + var(--i, 0) * 40ms);
+}
+@keyframes wmFall {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translateY(30px) rotate(16deg); }
+}
+
+/* 2. TOOLS AREN'T A TEAM — tools reach and never connect */
+.wm-tool { fill: var(--surface); stroke: var(--peach-line); stroke-width: 1.6; opacity: 0; }
+.why2-card.in .wm-tool { animation: wmPop 0.42s cubic-bezier(0.34, 1.5, 0.64, 1) both; animation-delay: calc(0.24s + var(--i, 0) * 70ms); }
+@keyframes wmPop {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: none; }
+}
+.wm-glyph { stroke: rgba(37, 99, 235, 0.55); stroke-width: 1.6; stroke-linecap: round; opacity: 0; }
+.why2-card.in .wm-glyph { animation: wmFade 0.4s ease both; animation-delay: calc(0.42s + var(--i, 0) * 70ms); }
+@keyframes wmFade {
+  to { opacity: 1; }
+}
+.wm-stub { stroke: rgba(37, 99, 235, 0.45); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.why2-card.in .wm-stub { animation: wmReach 1.5s ease-in-out both; animation-delay: calc(0.5s + var(--i, 0) * 90ms); }
+@keyframes wmReach {
+  0% { stroke-dashoffset: 1; }
+  45%, 60% { stroke-dashoffset: 0.06; }
+  100% { stroke-dashoffset: 0.45; }
+}
+.wm-void { fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-dasharray: 4 5; opacity: 0; }
+.why2-card.in .wm-void { animation: wmVoid 2.2s ease-in-out 0.6s both; }
+@keyframes wmVoid {
+  0% { opacity: 0; }
+  22% { opacity: 0.5; }
+  55% { opacity: 0.22; }
+  78% { opacity: 0.5; }
+  100% { opacity: 0.32; }
+}
+
+/* 3. THE FIX — pieces assemble */
+.wm-link { stroke: url(#wmg); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.why2-card.in .wm-link { animation: wmDraw 0.5s cubic-bezier(0.16, 0.84, 0.44, 1) both; animation-delay: calc(0.46s + var(--i, 0) * 95ms); }
+@keyframes wmDraw {
+  to { stroke-dashoffset: 0; }
+}
+.wm-n { fill: rgba(37, 99, 235, 0.28); opacity: 0; }
+.why2-card.in .wm-n { animation: wmConverge 0.55s cubic-bezier(0.34, 1.4, 0.64, 1) both; animation-delay: calc(0.24s + var(--i, 0) * 70ms); }
+@keyframes wmConverge {
+  from { opacity: 0; transform: translateX(var(--from, 0)) scale(0.7); }
+  to { opacity: 1; transform: none; }
+}
+.wm-hub { fill: url(#wmg); opacity: 0; transform-box: fill-box; transform-origin: center; }
+.why2-card.in .wm-hub { animation: wmPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.92s both; }
+.wm-ring { fill: none; stroke: var(--blue); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.why2-card.in .wm-ring { animation: wmRing 0.95s ease-out 1.08s both; }
+@keyframes wmRing {
+  from { opacity: 0.5; transform: scale(1); }
+  to { opacity: 0; transform: scale(2.5); }
+}
+
+@media (max-width: 620px) {
+  .why2-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .why2-card.in .wm-u, .why2-card.in .wm-u.wm-fall, .why2-card.in .wm-tool, .why2-card.in .wm-glyph,
+  .why2-card.in .wm-stub, .why2-card.in .wm-void, .why2-card.in .wm-link, .why2-card.in .wm-n,
+  .why2-card.in .wm-hub, .why2-card.in .wm-ring { animation: none !important; }
+  .wm-u, .wm-tool, .wm-glyph, .wm-n, .wm-hub { opacity: 1; transform: none; }
+  .wm-u.wm-fall { opacity: 0.35; transform: translateY(22px); }
+  .wm-void { opacity: 0.32; }
+  .wm-stub { stroke-dashoffset: 0.45; }
+  .wm-link { stroke-dashoffset: 0; }
+  .wm-ring { opacity: 0; }
+}

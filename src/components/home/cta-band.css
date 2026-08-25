@@ -22,3 +22,4 @@
 .cta-home h2 { font-size: clamp(32px, 5vw, 58px); max-width: 16ch; margin: 0 auto 18px; }
 .cta-home p { color: #b7bec9; font-size: 18px; max-width: 46ch; margin: 0 auto 34px; }
 .cta-home .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.cta-home .cta-fine { font-size: 13px; color: rgba(226, 232, 240, 0.5); margin: 14px auto 0; }

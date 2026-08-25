@@ -1,0 +1,115 @@
+/* ---------------- Why one team beats six vendors ---------------- */
+.page-services #why-stack { padding: 0; position: relative; }
+.hc-stick { position: static; min-height: 0; display: flex; align-items: center; padding: 96px 0; }
+.hc-inner { max-width: var(--wrap); width: 100%; }
+.hc-grid { display: grid; grid-template-columns: 0.86fr 1.14fr; gap: 64px; align-items: start; }
+
+.hc-left .eyebrow { margin-bottom: 20px; }
+.hc-bold {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  font-size: clamp(24px, 2.6vw, 34px);
+  color: var(--ink);
+  margin: 0;
+  max-width: 14ch;
+}
+.hc-bold .kw { color: var(--blue); position: relative; white-space: nowrap; }
+.hc-bold .kw::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.04em;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.js-reveal .hc-bold .kw::after { transition: transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1) 0.4s; }
+.js-reveal .hc-bold.on .kw::after { transform: scaleX(1); }
+.hc-progress { display: flex; gap: 9px; margin-top: 34px; }
+.hc-progress .pd {
+  width: 34px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--peach-line);
+  transition: background 0.55s ease, transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: left center;
+}
+.hc-progress .pd.on { background: var(--grad); transform: scaleX(1.05); }
+
+.hc-right { min-width: 0; }
+.hc-intro {
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.6;
+  color: var(--muted-ink);
+  margin: 0 0 36px;
+  max-width: 54ch;
+}
+.hc-intro strong { color: var(--ink); font-weight: 600; }
+.hc-lines { display: flex; flex-direction: column; gap: 26px; }
+.hc-line {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: clamp(20px, 2.1vw, 30px);
+  line-height: 1.32;
+  color: var(--ink);
+}
+.hc-line .kw { color: var(--blue); position: relative; z-index: 1; padding: 0 0.05em; border-radius: 5px; }
+.hc-line .kw::before {
+  content: "";
+  position: absolute;
+  left: -0.05em;
+  right: -0.05em;
+  top: 4%;
+  bottom: 4%;
+  z-index: -1;
+  border-radius: 6px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(120deg, rgba(37, 99, 235, 0.18), rgba(20, 184, 166, 0.16));
+}
+
+/* orchestrated one-time reveal (only when JS drives it) */
+.js-reveal .hc-left .eyebrow,
+.js-reveal .hc-bold,
+.js-reveal .hc-intro {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.js-reveal .hc-left .eyebrow.on,
+.js-reveal .hc-bold.on,
+.js-reveal .hc-intro.on { opacity: 1; transform: none; }
+.js-reveal .hc-line {
+  opacity: 0;
+  transform: translateY(26px);
+  filter: blur(8px);
+  transition: opacity 0.8s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.16, 0.84, 0.44, 1),
+    filter 0.8s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.js-reveal .hc-line.on { opacity: 1; transform: none; filter: blur(0); }
+.js-reveal .hc-line .kw::before { transition: transform 0.55s cubic-bezier(0.16, 0.84, 0.44, 1) 0.3s; }
+.js-reveal .hc-line.on .kw::before { transform: scaleX(1); }
+
+@media (max-width: 860px) {
+  .hc-stick { position: static; min-height: 0; padding: 64px 0; }
+  .hc-grid { grid-template-columns: 1fr; gap: 26px; }
+  .hc-intro { font-size: 16.5px; margin-bottom: 22px; }
+  .hc-lines { gap: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal .hc-left .eyebrow,
+  .js-reveal .hc-bold,
+  .js-reveal .hc-intro,
+  .js-reveal .hc-line { opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important; }
+  .js-reveal .hc-line .kw::before,
+  .js-reveal .hc-bold .kw::after { transform: scaleX(1) !important; transition: none !important; }
+  .hc-progress .pd { background: var(--grad) !important; transition: none !important; }
+}

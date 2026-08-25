@@ -1,0 +1,170 @@
+/* ---------------- How it works — "the current" phase flow ---------------- */
+.jr-title {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  margin: 12px 0 0;
+}
+.jr-lead { font-size: 16px; line-height: 1.6; color: var(--muted-ink); max-width: 54ch; margin: 16px 0 0; }
+
+.pf { position: relative; margin-top: 44px; }
+.pf-count {
+  text-align: right;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.pf-count b { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.pf-track { position: relative; }
+
+.pf-rail { position: absolute; left: 0; right: 0; top: 14px; height: 2px; z-index: 0; pointer-events: none; }
+.pf-rail-base { position: absolute; left: 0; top: 0; height: 100%; width: 0; background: var(--peach-line); border-radius: 2px; }
+.pf-rail-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: var(--grad);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 12px -1px rgba(37, 99, 235, 0.45);
+}
+.pf-rail-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 110px 100%;
+  background-repeat: no-repeat;
+  mix-blend-mode: screen;
+  animation: pfCurrent 1.9s linear infinite;
+}
+@keyframes pfCurrent {
+  0% { background-position: -120px 0; }
+  100% { background-position: calc(100% + 120px) 0; }
+}
+
+.pf-comet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(circle at 50% 50%, #fff 0%, #7dd3fc 36%, rgba(20, 184, 166, 0) 72%);
+  box-shadow: 0 0 18px 6px rgba(45, 212, 191, 0.5), 0 0 5px 1px rgba(255, 255, 255, 0.9);
+  transition: opacity 0.45s ease;
+}
+.pf.drawing .pf-comet,
+.pf.done .pf-comet { opacity: 0.95; }
+
+.pf-stages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; z-index: 1; }
+.pf-stage { position: relative; padding-right: 16px; transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.16, 0.84, 0.44, 1); }
+.pf-stage:not(.lit) { opacity: 0.42; }
+
+.pf-node {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border: 2px solid var(--peach-line);
+  color: var(--muted);
+  transition: border-color 0.45s ease, color 0.45s ease, box-shadow 0.45s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.pf-node svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  position: relative;
+  z-index: 2;
+}
+.pf-stage.lit .pf-node {
+  border-color: transparent;
+  color: #fff;
+  background: var(--nc, var(--grad));
+  box-shadow: 0 7px 20px -5px var(--ncs, rgba(37, 99, 235, 0.55));
+}
+.pf-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid var(--rc, var(--blue));
+  opacity: 0;
+  transform: scale(0.7);
+  pointer-events: none;
+}
+.pf-stage.burst .pf-ring { animation: pfBurst 0.72s ease-out; }
+@keyframes pfBurst {
+  0% { opacity: 0.75; transform: scale(0.72); }
+  100% { opacity: 0; transform: scale(2.25); }
+}
+
+.pf-kicker {
+  display: block;
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.45s ease;
+}
+.pf-stage.lit .pf-kicker { color: var(--tc, var(--teal-ink)); }
+.pf-name {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 19px;
+  color: var(--ink);
+  margin: 5px 0 0;
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+.pf-idx { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.02em; color: var(--muted); transition: color 0.45s ease; }
+.pf-stage.lit .pf-idx { color: var(--tc, var(--teal-ink)); }
+.pf-desc { font-size: 13.5px; line-height: 1.6; color: var(--muted-ink); margin: 10px 0 0; opacity: 0.55; transition: opacity 0.45s ease; }
+.pf-stage.lit .pf-desc { opacity: 1; }
+
+.pf.done .pf-stage { cursor: pointer; }
+.pf-stage:focus-visible { outline: none; }
+.pf-stage:focus-visible .pf-node {
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3), 0 7px 20px -5px var(--ncs, rgba(37, 99, 235, 0.55));
+}
+@media (hover: hover) {
+  .pf.done .pf-stages:hover .pf-stage { opacity: 0.45; }
+  .pf.done .pf-stages:hover .pf-stage:hover { opacity: 1; transform: translateY(-5px); }
+  .pf.done .pf-stage:hover .pf-node { transform: scale(1.14); }
+}
+
+@media (max-width: 760px) {
+  .pf { margin-top: 32px; }
+  .pf-stages { grid-template-columns: 1fr; gap: 34px; padding-left: 54px; }
+  .pf-stage { padding-right: 0; }
+  .pf-node { position: absolute; left: -54px; top: 0; }
+  .pf-kicker { margin-top: 3px; }
+  .pf-rail { left: auto; right: auto; top: 0; bottom: 0; width: 2px; height: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pf-rail-fill::after { animation: none; opacity: 0; }
+  .pf-comet { display: none; }
+  .pf-stage { transition: none; }
+}

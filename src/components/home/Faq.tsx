@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/ui/Reveal";
 import "./faq.css";
 
-const FAQS = [
+export type FaqEntry = { question: string; answer: string };
+
+const FAQS: FaqEntry[] = [
   {
     question: "What do I actually get with one partner?",
     answer:
@@ -78,17 +80,31 @@ function FaqItem({
   );
 }
 
-export default function Faq() {
+type FaqProps = {
+  /** Section heading (default: the home-page title). */
+  title?: string;
+  /** Optional eyebrow rendered above the heading. */
+  eyebrow?: string;
+  /** FAQ entries (default: the home-page questions). */
+  items?: FaqEntry[];
+};
+
+export default function Faq({ title = "Frequently Asked Questions", eyebrow, items = FAQS }: FaqProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section className="band light" id="faq">
       <div className="wrap">
         <Reveal className="sec-head">
-          <h2>Frequently Asked Questions</h2>
+          {eyebrow && (
+            <span className="eyebrow" style={{ justifyContent: "center", display: "inline-flex" }}>
+              {eyebrow}
+            </span>
+          )}
+          <h2>{title}</h2>
         </Reveal>
         <div className="faq-list">
-          {FAQS.map((faq, i) => (
+          {items.map((faq, i) => (
             <FaqItem
               key={faq.question}
               question={faq.question}

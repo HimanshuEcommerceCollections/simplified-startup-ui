@@ -1,0 +1,136 @@
+/* ---------------- How it runs — three steps with rail ---------------- */
+.bk-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; position: relative; perspective: 1300px; }
+/* connecting progress rail (shows in the gaps between cards) */
+.bk-rail {
+  position: absolute;
+  top: 49px;
+  left: 16.66%;
+  right: 16.66%;
+  height: 3px;
+  border-radius: 3px;
+  z-index: 0;
+  background: var(--peach-line);
+  overflow: hidden;
+}
+.bk-rail-fill {
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 3px;
+  background: var(--grad-fill);
+  transition: transform 1.5s cubic-bezier(0.16, 0.84, 0.44, 1) 0.25s;
+}
+.bk-steps.steps-in .bk-rail-fill { transform: scaleX(1); }
+.bk-step {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: var(--r);
+  padding: 26px 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+  will-change: transform;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.55s cubic-bezier(0.16, 0.84, 0.44, 1),
+    box-shadow 0.4s ease, border-color 0.3s ease;
+}
+.bk-steps.steps-in .bk-step { opacity: 1; transform: none; }
+.bk-steps.steps-in .bk-step:nth-child(2) { transition-delay: 0.12s; }
+.bk-steps.steps-in .bk-step:nth-child(3) { transition-delay: 0.24s; }
+.bk-steps.steps-in .bk-step:nth-child(4) { transition-delay: 0.36s; }
+.bk-step.tilt3d { transition: box-shadow 0.3s ease, border-color 0.3s ease; }
+.bk-step:hover { box-shadow: 0 40px 74px -34px rgba(37, 99, 235, 0.5); border-color: rgba(37, 99, 235, 0.38); }
+/* colour spotlight that tracks the cursor */
+.bk-step::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: inherit;
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(37, 99, 235, 0.18), rgba(20, 184, 166, 0.09) 42%, transparent 64%);
+  transition: opacity 0.35s ease;
+}
+.bk-step:hover::before { opacity: 1; }
+/* numbered node: lights up in sequence; floats forward in 3D on tilt */
+.bk-step .bk-node {
+  position: relative;
+  z-index: 2;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: none;
+  transition: background 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease,
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.bk-step .bk-node span { position: relative; z-index: 1; }
+.bk-step .bk-node::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  opacity: 0;
+  transform: scale(0.6);
+}
+.bk-step.lit .bk-node {
+  background: var(--grad);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 12px 26px -10px rgba(37, 99, 235, 0.75);
+  transform: scale(1.06);
+}
+.bk-step.lit .bk-node::after { animation: bkNodePulse 0.8s cubic-bezier(0.16, 0.84, 0.44, 1); }
+@keyframes bkNodePulse {
+  0% { opacity: 0.7; transform: scale(0.6); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+/* 3D parallax depth — children lift toward the viewer while tilting */
+.bk-step h3,
+.bk-step .bk-when,
+.bk-step p,
+.bk-step .bk-get { position: relative; z-index: 2; transition: transform 0.4s cubic-bezier(0.16, 0.84, 0.44, 1); }
+.bk-step.tilt3d .bk-node { transform: translateZ(52px) scale(1.08); }
+.bk-step.tilt3d h3,
+.bk-step.tilt3d .bk-when { transform: translateZ(34px); }
+.bk-step.tilt3d p { transform: translateZ(18px); }
+.bk-step.tilt3d .bk-get { transform: translateZ(10px); }
+.bk-step h3 { font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--ink); margin: 18px 0 0; }
+.bk-step .bk-when {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  margin-top: 6px;
+  display: block;
+}
+.bk-step p { font-size: 14px; line-height: 1.6; color: var(--muted-ink); margin: 14px 0 0; }
+.bk-step p strong { color: var(--ink); font-weight: 600; }
+.bk-step .bk-get { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--peach-line); color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .bk-step { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .bk-rail-fill { transform: scaleX(1) !important; transition: none !important; }
+  .bk-step .bk-node { background: var(--grad) !important; color: #fff !important; border-color: transparent !important; transform: none !important; transition: none !important; }
+  .bk-step.tilt3d .bk-node, .bk-step.tilt3d h3, .bk-step.tilt3d .bk-when, .bk-step.tilt3d p, .bk-step.tilt3d .bk-get { transform: none !important; }
+  .bk-step::before { display: none; }
+}
+@media (max-width: 900px) {
+  .bk-steps { grid-template-columns: 1fr; }
+  .bk-rail { display: none; }
+  .bk-step.tilt3d { transform: none !important; }
+  .bk-step.tilt3d .bk-node, .bk-step.tilt3d h3, .bk-step.tilt3d .bk-when, .bk-step.tilt3d p { transform: none; }
+}

@@ -87,6 +87,28 @@ button { font-family: inherit; }
 }
 .page-services .sec-head.reveal.in { transform: none; }
 
+/* Bookkeeping page — light scope, same token family as about/services */
+.page-bookkeeping { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); padding-top: 86px; }
+@media (max-width: 620px) {
+  .page-bookkeeping { padding-top: 80px; }
+}
+.page-bookkeeping :focus-visible { outline-color: var(--teal); }
+.page-bookkeeping ::selection { background: var(--teal); color: #fff; }
+.page-bookkeeping .eyebrow { color: var(--teal-ink); }
+.page-bookkeeping .eyebrow::before { background: var(--teal-ink); opacity: 0.85; }
+.page-bookkeeping h1, .page-bookkeeping h2, .page-bookkeeping h3 { line-height: 1.08; }
+.page-bookkeeping .band { padding: 72px 0; background: var(--surface); color: var(--ink); }
+.page-bookkeeping .band.light { background: var(--surface-2); }
+.page-bookkeeping .sec-head { max-width: 640px; margin-bottom: 44px; }
+.page-bookkeeping .sec-head h2 { font-size: clamp(28px, 3.4vw, 42px); margin-top: 14px; }
+.page-bookkeeping .sec-head p { margin-top: 14px; font-size: 16px; color: var(--muted); }
+.page-bookkeeping .band.light .sec-head p { color: var(--muted-ink); }
+.page-bookkeeping .sec-head.reveal {
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.5s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.page-bookkeeping .sec-head.reveal.in { transform: none; }
+
 /* Pricing page — light scope; content visible by default (no scroll reveals) */
 .page-pricing { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); padding-top: 86px; }
 @media (max-width: 620px) {
@@ -211,6 +233,10 @@ section { position: relative; }
 }
 [data-anim].in { opacity: 1; transform: none; clip-path: none; }
 [data-anim="rise"] { transform: translateY(22px); }
+[data-anim="left"] { transform: translateX(-42px); }
+[data-anim="right"] { transform: translateX(42px); }
+[data-anim="up"] { transform: translateY(42px); }
+[data-anim="step"] { transform: translateX(-26px); }
 [data-anim="pop"] {
   transform: scale(0.8);
   transition: opacity 0.45s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);

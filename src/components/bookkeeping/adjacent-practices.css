@@ -1,0 +1,38 @@
+/* ---------------- Adjacent practices ---------------- */
+.bk-adj { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; perspective: 1200px; }
+.bk-adj-card {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+}
+.bk-adj-card:hover { transform: translateY(-3px); border-color: #d8e2f0; }
+.bk-adj-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1;
+  background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), rgba(37, 99, 235, 0.15), rgba(20, 184, 166, 0.07) 44%, transparent 62%);
+  transition: opacity 0.3s ease;
+}
+.bk-adj-card:hover::before { opacity: 1; }
+.bk-adj-card.tilt3d { transition: box-shadow 0.3s ease, border-color 0.3s ease; }
+.bk-adj-card h3 { font-family: var(--display); font-weight: 700; font-size: 16px; color: var(--ink); position: relative; z-index: 2; }
+.bk-adj-card p { font-size: 14px; line-height: 1.55; color: var(--muted-ink); margin: 8px 0 0; position: relative; z-index: 2; }
+.bk-adj-note { margin-top: 20px; font-size: 14px; color: var(--muted-ink); }
+.bk-adj-note a { color: var(--blue); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .bk-adj { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bk-adj-card.tilt3d { transform: none !important; }
+}

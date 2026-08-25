@@ -1,0 +1,43 @@
+/* ---------------- The discipline ---------------- */
+.bk-disc-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
+.bk-disc-h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(28px, 3.4vw, 40px);
+  margin-top: 12px;
+  color: var(--ink);
+}
+.bk-disc-lead { font-size: clamp(16px, 1.3vw, 18px); color: var(--muted-ink); line-height: 1.65; margin: 16px 0 0; }
+.bk-disc-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.bk-disc-list li {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  padding-left: 56px;
+}
+.bk-disc-list li .bk-ic {
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.08);
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  transition: background 0.35s ease, color 0.35s ease, transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.bk-disc-list li b { display: block; font-family: var(--display); font-weight: 600; color: var(--ink); font-size: 15.5px; margin-bottom: 3px; }
+.bk-disc-list li span { font-size: 14px; color: var(--muted-ink); line-height: 1.55; }
+.bk-disc-list li { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.bk-disc-list li:hover { transform: translateX(7px); box-shadow: var(--shadow-md); border-color: rgba(37, 99, 235, 0.28); }
+.bk-disc-list li:hover .bk-ic { background: var(--grad); color: #fff; transform: rotate(-8deg) scale(1.1); }
+
+@media (max-width: 900px) {
+  .bk-disc-grid { grid-template-columns: 1fr; gap: 26px; }
+}

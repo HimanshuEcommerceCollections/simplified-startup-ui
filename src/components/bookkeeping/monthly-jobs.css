@@ -1,0 +1,84 @@
+/* ---------------- Monthly jobs — flip cards (2x3) ---------------- */
+.bk-jobs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.bk-job {
+  position: relative;
+  min-height: 174px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  perspective: 1100px;
+  cursor: pointer;
+  outline: none;
+}
+.bk-job-inner {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1);
+  will-change: transform;
+}
+.bk-job.flipped .bk-job-inner,
+.bk-job:focus-visible .bk-job-inner { transform: rotateY(180deg); }
+@media (hover: hover) {
+  .bk-job:hover .bk-job-inner { transform: rotateY(180deg); }
+}
+.bk-job:focus-visible { border-radius: 12px; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35); }
+.bk-job-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--peach-line);
+  box-shadow: var(--shadow-sm);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.bk-job-front { background: var(--surface); }
+.bk-job-front .bk-num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--teal-ink); }
+.bk-job-front h3 { font-family: var(--display); font-weight: 700; font-size: 17px; color: var(--ink); margin: 8px 0 0; }
+.bk-flip-hint {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.bk-flip-hint svg { width: 13px; height: 13px; color: var(--teal-ink); }
+.bk-job-back {
+  background: var(--grad);
+  color: #fff;
+  transform: rotateY(180deg);
+  justify-content: center;
+  border-color: transparent;
+  position: absolute;
+  inset: 0;
+}
+.bk-job-back::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 70%);
+  pointer-events: none;
+}
+.bk-job-back .bk-num { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; color: rgba(255, 255, 255, 0.78); margin-bottom: 8px; position: relative; z-index: 1; }
+.bk-job-back p { font-size: 13.5px; line-height: 1.55; color: #fff; margin: 0; position: relative; z-index: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bk-job-inner { transition: none; }
+}
+@media (max-width: 900px) {
+  .bk-jobs { grid-template-columns: 1fr; }
+  .bk-job { min-height: 150px; }
+}

@@ -1,0 +1,91 @@
+/* ---------------- The fine print — terms grid ---------------- */
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--peach-line);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+.term { background: var(--surface); padding: 26px 24px; position: relative; isolation: isolate; transition: background 0.3s ease; }
+.term > * { position: relative; z-index: 2; }
+/* inner spotlight tracking the cursor */
+.term::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(190px circle at var(--x, 50%) var(--y, 50%), rgba(37, 99, 235, 0.11), transparent 60%);
+}
+.term:hover::before { opacity: 1; }
+/* gradient border that ignites around the cursor */
+.term::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  padding: 1.4px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    240px circle at var(--x, 50%) var(--y, 50%),
+    rgba(37, 99, 235, 0.95),
+    rgba(20, 184, 166, 0.55) 42%,
+    transparent 66%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.term:hover::after { opacity: 1; }
+.term:hover { background: #fbfdff; }
+.term .t-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  margin-bottom: 10px;
+  display: block;
+  transition: letter-spacing 0.4s cubic-bezier(0.16, 0.84, 0.44, 1), color 0.3s ease;
+}
+.term:hover .t-label { color: var(--blue); letter-spacing: 0.22em; }
+.term h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 16.5px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+  position: relative;
+  display: inline-block;
+}
+.term h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.45s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.term:hover h3::after { transform: scaleX(1); }
+.term p { font-size: 14px; line-height: 1.55; color: var(--muted-ink); }
+
+@media (max-width: 920px) {
+  .terms-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .terms-grid { grid-template-columns: 1fr; }
+}

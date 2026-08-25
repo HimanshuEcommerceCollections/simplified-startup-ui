@@ -1,0 +1,70 @@
+/* ---------------- Scoped practices ---------------- */
+.scoped-lead { max-width: 70ch; font-size: 16px; line-height: 1.65; color: var(--muted-ink); margin-bottom: 34px; }
+.scoped-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.scoped-card {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.16, 0.84, 0.44, 1), border-color 0.3s cubic-bezier(0.16, 0.84, 0.44, 1);
+  position: relative;
+  isolation: isolate;
+}
+.scoped-card:hover { transform: translateY(-3px); border-color: rgba(37, 99, 235, 0.35); }
+.scoped-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 1.5px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  background: conic-gradient(from var(--ang), #2563eb, #14b8a6, #5fe0d2, #2563eb);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: beam 4s linear infinite;
+  transition: opacity 0.3s ease;
+}
+.scoped-card:hover::before { opacity: 1; }
+.scoped-card > * { position: relative; z-index: 1; }
+.scoped-card h3 { font-family: var(--display); font-weight: 700; font-size: 17px; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.01em; }
+.scoped-card p { font-size: 14.5px; line-height: 1.55; color: var(--muted-ink); }
+
+.scoped-rule {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-left: 3px solid transparent;
+  border-image: var(--grad) 1;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.scoped-rule .rl-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-ink); }
+.scoped-rule .rl-flow { font-family: var(--display); font-weight: 600; font-size: 15.5px; color: var(--ink); }
+.rl-flow .step {
+  color: var(--muted);
+  display: inline-block;
+  transition: color 0.5s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.5s cubic-bezier(0.16, 0.84, 0.44, 1),
+    text-shadow 0.5s ease;
+}
+.rl-flow .step.lit { color: var(--blue); transform: translateY(-1px); text-shadow: 0 6px 18px rgba(37, 99, 235, 0.28); }
+.rl-flow .arw { color: var(--muted); margin: 0 8px; transition: opacity 0.4s ease, transform 0.4s ease; }
+.rl-flow .arw.lit { opacity: 0.9; transform: translateX(2px); }
+.scoped-rule .rl-note { font-size: 13.5px; color: var(--muted-ink); }
+
+@media (max-width: 920px) {
+  .scoped-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scoped-card { transition: none; }
+  .scoped-card::before { animation: none !important; }
+  .rl-flow .step { color: var(--blue); }
+}

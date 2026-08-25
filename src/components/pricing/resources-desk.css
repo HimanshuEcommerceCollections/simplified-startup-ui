@@ -1,0 +1,53 @@
+/* ---------------- From the resources desk ---------------- */
+.res-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.res-card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 26px 26px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.16, 0.84, 0.44, 1), border-color 0.3s cubic-bezier(0.16, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.res-card:hover { transform: translateY(-4px); border-color: rgba(37, 99, 235, 0.4); }
+.res-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -160%;
+  width: 60%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(100deg, transparent, rgba(37, 99, 235, 0.12), transparent);
+  transform: skewX(-18deg);
+  transition: left 0.75s ease;
+}
+.res-card:hover::after { left: 170%; }
+.res-card > * { position: relative; z-index: 1; }
+.res-card .r-kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal-ink); }
+.res-card h3 { font-family: var(--display); font-weight: 700; font-size: 19px; color: var(--ink); margin: 12px 0 8px; letter-spacing: -0.01em; }
+.res-card p { font-size: 14.5px; line-height: 1.6; color: var(--muted-ink); }
+.res-card .r-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--blue);
+}
+.res-card .r-go .arw { transition: transform 0.25s ease; font-style: normal; }
+.res-card:hover .r-go .arw { transform: translate(4px, -4px); }
+
+@media (max-width: 920px) {
+  .res-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .res-card { transition: none; }
+  .res-card::after { display: none; }
+}

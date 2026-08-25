@@ -1,0 +1,83 @@
+/* ---------------- Standalone services — rate card ---------------- */
+.rate-group { margin-top: 34px; }
+.rate-group:first-of-type { margin-top: 0; }
+.rate-glabel {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.rate-glabel::after { content: ""; flex: 1; height: 1px; background: var(--peach-line); }
+.rate-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px 26px;
+  align-items: baseline;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--peach-line);
+  position: relative;
+  isolation: isolate;
+  transition: transform 0.3s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.rate-row:last-child { border-bottom: 0; }
+.rate-row::before {
+  content: "";
+  position: absolute;
+  inset: 0 -16px;
+  z-index: 0;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.09), rgba(20, 184, 166, 0.05) 55%, transparent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.45s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.rate-row:hover::before { transform: scaleX(1); }
+.rate-row > * { position: relative; z-index: 1; }
+.rate-main .rate-title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.rate-main .rate-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.rate-row:hover .rate-title { transform: translateX(4px); }
+.rate-row:hover .rate-title::after { transform: scaleX(1); }
+.rate-main p { margin-top: 5px; font-size: 14px; line-height: 1.5; color: var(--muted-ink); max-width: 60ch; }
+.rate-price {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ink);
+  white-space: nowrap;
+  text-align: right;
+  transition: transform 0.3s cubic-bezier(0.16, 0.84, 0.44, 1), color 0.3s ease;
+}
+.rate-price .per { font-family: var(--body); font-weight: 500; font-size: 13px; color: var(--muted); }
+.rate-price.scope { font-size: 14px; font-weight: 600; color: var(--teal-ink); }
+.rate-row:hover .rate-price { transform: scale(1.07); color: var(--blue); }
+.rate-row:hover .rate-price.scope { color: var(--teal-ink); }
+
+@media (max-width: 560px) {
+  .rate-row { grid-template-columns: 1fr; gap: 8px; }
+  .rate-price { text-align: left; }
+}

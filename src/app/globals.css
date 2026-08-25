@@ -65,6 +65,28 @@ button { font-family: inherit; }
 .page-about :focus-visible { outline-color: var(--teal); }
 .page-about ::selection { background: var(--teal); color: #fff; }
 
+/* Services page — light scope, same token family as about */
+.page-services { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); padding-top: 86px; }
+@media (max-width: 620px) {
+  .page-services { padding-top: 80px; }
+}
+.page-services :focus-visible { outline-color: var(--teal); }
+.page-services ::selection { background: var(--teal); color: #fff; }
+.page-services .eyebrow { color: var(--teal-ink); }
+.page-services .eyebrow::before { background: var(--teal-ink); opacity: 0.85; }
+.page-services h1, .page-services h2, .page-services h3 { line-height: 1.08; }
+.page-services .band { padding: 72px 0; background: var(--surface); color: var(--ink); }
+.page-services .band.light { background: var(--surface-2); }
+.page-services .sec-head { max-width: 640px; margin-bottom: 44px; }
+.page-services .sec-head h2 { font-size: clamp(28px, 3.6vw, 42px); margin-top: 14px; }
+.page-services .sec-head p { margin-top: 14px; font-size: 16px; color: var(--muted); }
+.page-services .band.light .sec-head p { color: var(--muted-ink); }
+.page-services .sec-head.reveal {
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.5s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.page-services .sec-head.reveal.in { transform: none; }
+
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
 
 .eyebrow {

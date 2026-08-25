@@ -7,7 +7,23 @@ import { useReducedMotion } from "@/lib/useReducedMotion";
 import { openAiAdvisor } from "@/components/layout/FloatingActions";
 import "./cta-band.css";
 
-export default function CtaBand() {
+type CtaBandProps = {
+  heading?: string;
+  copy?: string;
+  primaryLabel?: string;
+  /** When set, the secondary action renders as a link instead of the AI Advisor button. */
+  secondary?: { label: string; href: string };
+  /** Optional fine-print line under the actions. */
+  fine?: string;
+};
+
+export default function CtaBand({
+  heading = "The growth team you can't afford to hire — for the price you can.",
+  copy = "Book a free consultation and we'll map the fastest path from where you are to real traction. No decks, no pressure.",
+  primaryLabel = "Book a free consultation",
+  secondary,
+  fine,
+}: CtaBandProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const primaryRef = useMagnetic<HTMLAnchorElement>();
   const reduce = useReducedMotion();
@@ -28,19 +44,23 @@ export default function CtaBand() {
         <span className="eyebrow" style={{ justifyContent: "center" }}>
           Your next step
         </span>
-        <h2>The growth team you can&apos;t afford to hire — for the price you can.</h2>
-        <p>
-          Book a free consultation and we&apos;ll map the fastest path from where you are to real
-          traction. No decks, no pressure.
-        </p>
+        <h2>{heading}</h2>
+        <p>{copy}</p>
         <div className="cta-actions">
           <a href="#book" ref={primaryRef} className="btn btn-primary magnetic">
-            Book a free consultation <span className="arw">↗</span>
+            {primaryLabel} <span className="arw">↗</span>
           </a>
-          <button type="button" className="btn btn-ghost-dark" onClick={openAiAdvisor}>
-            Try the AI Advisor
-          </button>
+          {secondary ? (
+            <a href={secondary.href} className="btn btn-ghost-dark">
+              {secondary.label}
+            </a>
+          ) : (
+            <button type="button" className="btn btn-ghost-dark" onClick={openAiAdvisor}>
+              Try the AI Advisor
+            </button>
+          )}
         </div>
+        {fine && <p className="cta-fine">{fine}</p>}
       </Reveal>
     </section>
   );

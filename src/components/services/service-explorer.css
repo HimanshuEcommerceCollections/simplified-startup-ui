@@ -1,0 +1,156 @@
+/* ---------------- Capabilities explorer (the eight services) ---------------- */
+.cap-head { margin-bottom: 34px; }
+.cap-title {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  margin: 12px 0 0;
+}
+.svc-sub {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--muted-ink);
+  max-width: 60ch;
+  margin: 16px 0 0;
+}
+.cap-explorer { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.cap-list { display: flex; flex-direction: column; border-top: 1px solid var(--peach-line); }
+.cap-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--peach-line);
+  padding: 22px 6px;
+  cursor: pointer;
+  position: relative;
+  transition: padding-left 0.3s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.cap-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--grad);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.cap-row.is-active::before { transform: scaleY(1); }
+.cap-row.is-active { padding-left: 18px; }
+.cap-num { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.1em; }
+.cap-row.is-active .cap-num { color: var(--blue); }
+.cap-row-main { display: flex; flex-direction: column; gap: 3px; }
+.cap-row-title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(17px, 2vw, 21px);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.cap-row-sub { font-size: 13px; color: var(--muted); }
+.cap-arrow {
+  font-style: normal;
+  color: var(--muted);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.cap-row.is-active .cap-arrow { opacity: 1; transform: none; color: var(--blue); }
+.cap-row:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 8px; }
+.cap-panel {
+  position: sticky;
+  top: 100px;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  padding: 34px 34px 32px;
+  min-height: 420px;
+  overflow: hidden;
+}
+.cap-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(70% 60% at 100% 0%, rgba(37, 99, 235, 0.06), transparent 60%),
+    radial-gradient(60% 50% at 0% 100%, rgba(20, 184, 166, 0.06), transparent 60%);
+}
+.cap-view { display: none; position: relative; z-index: 1; }
+.cap-view.is-active { display: block; animation: capFade 0.45s cubic-bezier(0.16, 0.84, 0.44, 1); }
+@keyframes capFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.cap-view-num {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: block;
+}
+.cap-view h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  font-size: 26px;
+  color: var(--ink);
+  margin: 14px 0 0;
+}
+.cap-incl { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 13px; }
+.cap-incl li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--muted-ink);
+  max-width: 58ch;
+}
+.cap-incl li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: var(--grad-fill);
+}
+.cap-incl b { color: var(--ink); font-weight: 600; }
+
+/* service panel rich content */
+.cap-view .cv-is { font-size: 15.5px; line-height: 1.62; color: var(--muted-ink); margin: 12px 0 0; max-width: 48ch; }
+.cap-view .cv-label {
+  display: block;
+  margin: 20px 0 0;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cap-view .cv-get { font-size: 14.5px; line-height: 1.6; color: var(--ink); margin: 18px 0 0; max-width: 48ch; }
+.cap-view .cv-get strong { color: var(--ink); }
+.cap-view .cv-for { font-size: 13.5px; color: var(--muted); margin: 10px 0 0; font-style: italic; }
+
+@media (max-width: 1024px) {
+  .cap-explorer { grid-template-columns: 1fr; gap: 26px; }
+  .cap-panel { position: static; min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cap-view.is-active { animation: none; }
+}

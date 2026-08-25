@@ -1,0 +1,131 @@
+/* ---------------- Monthly packages — tier cards ---------------- */
+@property --ang {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; perspective: 1300px; }
+.tier {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 18px;
+  padding: 30px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.16, 0.84, 0.44, 1), box-shadow 0.35s cubic-bezier(0.16, 0.84, 0.44, 1);
+  transform-style: preserve-3d;
+  isolation: isolate;
+}
+.tier:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.tier > * { position: relative; z-index: 1; }
+.tier-spot {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), rgba(37, 99, 235, 0.14), transparent 62%);
+}
+.tier:hover .tier-spot { opacity: 1; }
+.tier-name { font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: -0.01em; color: var(--ink); }
+.tier-price {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(26px, 3vw, 34px);
+  color: var(--ink);
+  margin-top: 14px;
+  line-height: 1.05;
+}
+.tier-price .per { font-family: var(--body); font-weight: 500; font-size: 15px; color: var(--muted); letter-spacing: 0; }
+.tier-desc { margin-top: 14px; font-size: 15px; line-height: 1.55; color: var(--muted-ink); }
+.tier-div { height: 1px; background: var(--peach-line); margin: 22px 0; }
+.tier-list { list-style: none; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.tier-list li { position: relative; padding-left: 28px; font-size: 14.5px; line-height: 1.45; color: var(--ink); }
+.tier-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: rgba(20, 184, 166, 0.14);
+}
+.tier-list li::after {
+  content: "✓";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal-ink);
+}
+.tier-cta { margin-top: 26px; }
+.tier-cta .btn { width: 100%; justify-content: center; }
+
+/* featured: static gradient ring + a light beam travelling the border */
+.tier.is-feature { border-color: transparent; box-shadow: 0 24px 56px -24px rgba(37, 99, 235, 0.5); }
+.tier.is-feature::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1.6px;
+  background: var(--grad);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.tier-beam {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  pointer-events: none;
+  z-index: 0;
+  background: conic-gradient(from var(--ang), transparent 0 66%, #5fe0d2 80%, #ffffff 88%, #2563eb 95%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: beam 4.2s linear infinite;
+}
+@keyframes beam {
+  to { --ang: 360deg; }
+}
+.tier-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--grad);
+  border-radius: 100px;
+  padding: 7px 16px;
+  box-shadow: 0 10px 24px -10px rgba(37, 99, 235, 0.7);
+  animation: badgeFloat 3.4s ease-in-out infinite;
+}
+@keyframes badgeFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-3px); }
+}
+.tiers-note { margin-top: 22px; font-size: 13.5px; color: var(--muted); text-align: center; }
+
+@media (max-width: 920px) {
+  .tiers { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tier { transition: none; }
+  .tier-beam, .tier-badge { animation: none !important; }
+}

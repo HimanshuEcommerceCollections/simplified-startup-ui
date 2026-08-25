@@ -87,6 +87,26 @@ button { font-family: inherit; }
 }
 .page-services .sec-head.reveal.in { transform: none; }
 
+/* Pricing page — light scope; content visible by default (no scroll reveals) */
+.page-pricing { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); padding-top: 86px; }
+@media (max-width: 620px) {
+  .page-pricing { padding-top: 80px; }
+}
+.page-pricing :focus-visible { outline-color: var(--teal); }
+.page-pricing ::selection { background: var(--teal); color: #fff; }
+.page-pricing .eyebrow { color: var(--teal-ink); }
+.page-pricing .eyebrow::before { background: var(--teal-ink); opacity: 0.85; }
+.page-pricing h1, .page-pricing h2, .page-pricing h3 { line-height: 1.08; }
+.page-pricing .band { padding: 80px 0; background: var(--surface); color: var(--ink); }
+.page-pricing .band.light { background: var(--surface-2); }
+.page-pricing .sec-head { max-width: 660px; margin-bottom: 44px; }
+.page-pricing .sec-head h2 { font-size: clamp(28px, 3.6vw, 42px); margin-top: 14px; }
+.page-pricing .sec-head p { margin-top: 16px; font-size: 16.5px; color: var(--muted); line-height: 1.6; }
+.page-pricing .band.light .sec-head p { color: var(--muted-ink); }
+@media (max-width: 560px) {
+  .page-pricing .band { padding: 60px 0; }
+}
+
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
 
 .eyebrow {

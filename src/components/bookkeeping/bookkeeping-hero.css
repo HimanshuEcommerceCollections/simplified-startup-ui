@@ -72,7 +72,9 @@
   overflow: visible;
 }
 /* draw-in ring around the close date */
-.bk-ring { position: absolute; inset: -6px; width: calc(100% + 12px); height: calc(100% + 12px); overflow: visible; pointer-events: none; }
+/* max-width: none — the global `svg { max-width: 100% }` reset would clamp the
+   ring to the cell width and shift its center 6px left of the date */
+.bk-ring { position: absolute; inset: -6px; width: calc(100% + 12px); height: calc(100% + 12px); max-width: none; overflow: visible; pointer-events: none; }
 .bk-ring circle {
   fill: none;
   stroke: var(--teal);

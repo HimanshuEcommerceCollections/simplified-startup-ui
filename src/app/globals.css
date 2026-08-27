@@ -62,6 +62,55 @@ button { font-family: inherit; }
 @media (max-width: 620px) {
   .page-about { padding-top: 80px; }
 }
+
+/* Resource pages (faq / blog / glossary / why-us / careers) share one design system */
+.page-resource {
+  --wrap: 1180px;
+  --line: rgba(15, 23, 42, 0.12);
+  --blue-deep: #1e3a8a;
+  --slate: #334155;
+  --shadow-lg: 0 30px 70px -28px rgba(30, 58, 138, 0.34);
+  --ease: cubic-bezier(0.16, 0.84, 0.44, 1);
+  background: var(--surface);
+  color: var(--ink);
+  padding-top: 86px;
+}
+@media (max-width: 620px) {
+  .page-resource { padding-top: 80px; }
+}
+.page-resource ::selection { background: var(--teal); color: #fff; }
+.page-resource :focus-visible { outline-color: var(--teal); }
+.page-resource .eyebrow { color: var(--teal-ink); }
+.page-resource .eyebrow::before { background: var(--teal-ink); opacity: 0.85; }
+.page-resource h1, .page-resource h2, .page-resource h3 { line-height: 1.08; }
+.page-resource .grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.page-resource .band { padding: 92px 0; background: var(--surface); color: var(--ink); position: relative; }
+.page-resource .band.tint { background: var(--surface-2); }
+.page-resource .band.dark { background: #0b1220; color: #e8eef8; }
+.page-resource .band.dark .eyebrow { color: #5eead4; }
+.page-resource .band.dark .eyebrow::before { background: #5eead4; }
+.page-resource .sec-head { max-width: 680px; margin-bottom: 52px; }
+.page-resource .sec-head h2 { font-size: clamp(29px, 3.8vw, 46px); margin-top: 16px; }
+.page-resource .sec-head p { margin-top: 18px; font-size: 16.5px; color: var(--muted); line-height: 1.62; }
+.page-resource .band.dark .sec-head p { color: #9fb0c9; }
+.page-resource .reveal {
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: calc(var(--d, 0) * 1ms);
+}
+.page-resource .reveal.in { transform: none; }
+.page-resource .btn { padding: 14px 26px; transition: transform 0.2s var(--ease), filter 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease; }
+.page-resource .btn-primary { box-shadow: 0 12px 26px -12px rgba(37, 99, 235, 0.7); }
+.page-resource .btn-primary:hover { transform: none; filter: brightness(1.06); }
+.page-resource .btn-ghost { border-color: var(--line); }
+.page-resource .btn-ghost:hover { border-color: var(--ink); transform: none; }
+.page-resource mark { background: rgba(37, 99, 235, 0.16); color: inherit; border-radius: 3px; padding: 0 2px; }
 .page-about :focus-visible { outline-color: var(--teal); }
 .page-about ::selection { background: var(--teal); color: #fff; }
 

@@ -14,6 +14,7 @@ type RevealProps = {
   /** Stagger index — becomes the `--i` custom property. */
   index?: number;
   threshold?: number;
+  [dataAttr: `data-${string}`]: unknown;
 } & HTMLAttributes<HTMLElement>;
 
 /** Scroll-reveal wrapper: adds the `in` class once the element enters the viewport. */

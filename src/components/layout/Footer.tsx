@@ -15,9 +15,10 @@ const SERVICE_LINKS = [
 
 const COMPANY_LINKS = [
   { label: "About", href: "/about" },
+  { label: "Why Us", href: "/why-us" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Blog", href: "/#resources" },
-  { label: "Resources", href: "/#resources" },
+  { label: "Blog", href: "/blog" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/#book" },
 ];
 
@@ -75,7 +76,7 @@ export default function Footer() {
                 <Link href="/#book">Try the AI Advisor</Link>
               </li>
               <li>
-                <Link href="/#book">Get Started form</Link>
+                <Link href="/growth-plan">Get Started form</Link>
               </li>
               <li>
                 <a href="mailto:hello@simplifiedstartup.com">hello@simplifiedstartup.com</a>

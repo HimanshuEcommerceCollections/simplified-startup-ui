@@ -95,6 +95,7 @@
   font-size: 14px;
   letter-spacing: 0.04em;
   transition: color 0.16s;
+  white-space: nowrap;
 }
 .nav-links a:hover,
 .nav-links a.active { color: var(--teal); }
@@ -111,6 +112,99 @@
 .nav-links a:hover::after,
 .nav-links a.active::after { right: 0; }
 
+/* Resources dropdown */
+.nav-drop { position: relative; }
+.nav-drop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--display);
+  font-weight: 500;
+  color: #2a2a2a;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  padding: 0;
+  position: relative;
+  transition: color 0.16s;
+}
+.nav-drop-btn:hover,
+.nav-drop-btn.active,
+.nav-drop.open .nav-drop-btn { color: var(--teal); }
+.nav-drop-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -6px;
+  height: 2px;
+  background: var(--grad);
+  transition: right 0.3s var(--ease-premium);
+}
+.nav-drop-btn:hover::after,
+.nav-drop-btn.active::after { right: 0; }
+.nav-drop-caret { transition: transform 0.25s var(--ease-premium); }
+.nav-drop.open .nav-drop-caret { transform: rotate(180deg); }
+.nav-drop-panel {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 240px;
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.14), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s var(--ease-premium), transform 0.25s var(--ease-premium), visibility 0.25s;
+  z-index: 10;
+}
+/* invisible hover bridge between the pill and the panel */
+.nav-drop-panel::before { content: ""; position: absolute; left: 0; right: 0; top: -18px; height: 18px; }
+.nav-drop.open .nav-drop-panel { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+.nav-links .nav-drop-panel a {
+  display: block;
+  padding: 11px 14px;
+  border-radius: 10px;
+  text-transform: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.nav-links .nav-drop-panel a::after { content: none; }
+.nav-links .nav-drop-panel a:hover { background: var(--peach); color: var(--blue); }
+.nav-links .nav-drop-panel a.active { color: var(--blue); }
+.nav-drop-panel a small { display: block; font-family: var(--body); font-weight: 400; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+
+@media (max-width: 1000px) {
+  /* inside the mobile menu the dropdown flattens into an inline group */
+  .nav-links.show .nav-drop { width: 100%; }
+  .nav-links.show .nav-drop-btn { width: 100%; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--peach-line); }
+  .nav-links.show .nav-drop-panel {
+    position: static;
+    transform: none;
+    min-width: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 0 0 14px;
+    display: none;
+  }
+  .nav-links.show .nav-drop.open .nav-drop-panel { display: block; opacity: 1; visibility: visible; pointer-events: auto; }
+  .nav-links.show .nav-drop-panel::before { content: none; }
+  .nav-links.show .nav-drop-panel a { padding: 12px 0; border-bottom: 1px solid var(--peach-line); border-radius: 0; }
+  .nav-links.show .nav-drop-panel a small { display: none; }
+}
+
 .nav-right { display: flex; align-items: center; gap: 20px; }
 .nav-phone { display: flex; align-items: center; gap: 11px; }
 .nav-phone .ico {
@@ -124,7 +218,10 @@
   flex: none;
 }
 .nav-phone .q { font-size: 12.5px; color: #9a7a66; line-height: 1.2; }
-.nav-phone .num { font-family: var(--display); font-weight: 700; font-size: 16px; color: #171717; }
+.nav-phone .num { font-family: var(--display); font-weight: 700; font-size: 16px; color: #171717; white-space: nowrap; }
+@media (max-width: 1180px) {
+  .nav-phone { display: none; }
+}
 
 .nav-cta .btn {
   background: var(--grad);

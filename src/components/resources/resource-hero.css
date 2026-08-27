@@ -1,0 +1,129 @@
+/* ---------------- Resource hero (faq / blog / glossary) ---------------- */
+@keyframes rhUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.rh-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 70px 0 78px;
+  background: radial-gradient(60% 70% at 100% 0%, rgba(37, 99, 235, 0.07), transparent 60%),
+    radial-gradient(55% 70% at 0% 100%, rgba(20, 184, 166, 0.07), transparent 60%), #f8fafc;
+}
+.rh-hero--blog { padding-bottom: 44px; }
+.rh-hero--glossary { padding-bottom: 74px; }
+.rh-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(80% 80% at 25% 15%, #000, transparent 82%);
+  mask-image: radial-gradient(80% 80% at 25% 15%, #000, transparent 82%);
+  animation: rhGrid 24s linear infinite;
+}
+@keyframes rhGrid {
+  to { background-position: 46px 46px; }
+}
+.rh-cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(32px);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12), rgba(20, 184, 166, 0.08) 45%, transparent 70%);
+}
+.rh-hero:hover .rh-cursor { opacity: 1; }
+.rh-hero-inner { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(32px, 5vw, 60px); align-items: center; max-width: var(--wrap); }
+.rh-hero-copy { min-width: 0; }
+.rh-tag { margin-bottom: 20px; opacity: 0; animation: rhUp 0.7s var(--ease) 0.05s both; }
+.rh-h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.03;
+  font-size: clamp(40px, 5.4vw, 72px);
+  color: var(--ink);
+}
+.rh-hero--blog .rh-h1 { font-size: clamp(44px, 8vw, 96px); line-height: 1.02; }
+.rh-hero--glossary .rh-h1 { font-size: clamp(42px, 6vw, 80px); line-height: 1.02; }
+.rh-mask { display: block; overflow: hidden; padding-bottom: 0.05em; }
+.rh-mask i { display: block; font-style: normal; transform: translateY(115%); }
+.rh-hero.in .rh-mask i { animation: rhMask 1s var(--ease) forwards; }
+.rh-hero.in .rh-mask:nth-child(2) i { animation-delay: 0.12s; }
+@keyframes rhMask {
+  to { transform: none; }
+}
+.rh-lead {
+  margin-top: 20px;
+  max-width: 52ch;
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.6;
+  color: var(--muted-ink);
+  opacity: 0;
+  animation: rhUp 0.8s var(--ease) 0.55s both;
+}
+.rh-hero--blog .rh-lead { margin-top: 22px; max-width: 60ch; font-size: clamp(16px, 1.7vw, 20px); }
+
+/* search box */
+.rh-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 26px;
+  max-width: 440px;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 100px;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  animation: rhUp 0.8s var(--ease) 0.7s both;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.rh-search:focus-within { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12); }
+.rh-search-ico { width: 20px; height: 20px; flex: none; margin-left: 18px; fill: none; stroke: var(--muted); stroke-width: 2; stroke-linecap: round; }
+.rh-search input { flex: 1; min-width: 0; border: 0; background: transparent; outline: none; font-family: var(--body); font-size: 16px; color: var(--ink); padding: 15px 12px; }
+.rh-search input::-webkit-search-cancel-button { display: none; }
+.rh-search-clear {
+  border: 0;
+  background: var(--surface-2);
+  color: var(--muted-ink);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  flex: none;
+  transition: background 0.2s ease;
+}
+.rh-search-clear:hover { background: var(--peach-line); }
+
+/* right-hand signature card slot */
+.rh-hero-card { min-width: 0; display: flex; justify-content: flex-end; opacity: 0; animation: rhUp 0.8s var(--ease) 0.5s both; }
+
+@media (max-width: 960px) {
+  .rh-hero-inner { grid-template-columns: 1fr; gap: 34px; }
+  .rh-hero-card { justify-content: flex-start; }
+  .rh-search { max-width: none; }
+}
+@media (max-width: 600px) {
+  .rh-h1 { font-size: clamp(36px, 10vw, 52px) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rh-hero *, .rh-hero-bg { animation: none !important; }
+  .rh-mask i { transform: none; }
+  .rh-tag, .rh-lead, .rh-search, .rh-hero-card { opacity: 1; transform: none; }
+}

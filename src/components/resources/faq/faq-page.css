@@ -1,0 +1,201 @@
+/* ---------------- FAQ page (namespaced .fq-) ---------------- */
+@keyframes fqDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* hero signature: animated Q -> A demo */
+.fq-demo {
+  position: relative;
+  width: min(440px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 18px;
+  padding: 24px 24px 26px;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04), 0 30px 70px -30px rgba(30, 58, 138, 0.32);
+}
+.fq-demo-q, .fq-demo-a { display: flex; gap: 13px; align-items: flex-start; }
+.fq-demo-badge {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+  background: var(--ink);
+}
+.fq-demo-badge.a { background: var(--grad); box-shadow: 0 8px 18px -8px rgba(20, 184, 166, 0.6); }
+.fq-demo-q p {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  min-height: 1.35em;
+}
+.fq-demo-q p::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--blue);
+  margin-left: 2px;
+  vertical-align: -2px;
+  animation: fqCaret 1s steps(1) infinite;
+}
+.fq-demo.answered .fq-demo-q p::after { display: none; }
+@keyframes fqCaret {
+  50% { opacity: 0; }
+}
+.fq-demo-think { display: flex; gap: 6px; padding: 16px 0 6px 41px; opacity: 0; }
+.fq-demo.thinking .fq-demo-think { opacity: 1; }
+.fq-demo-think i { width: 7px; height: 7px; border-radius: 50%; background: var(--peach-line); animation: fqDot 1s var(--ease) infinite; }
+.fq-demo-think i:nth-child(2) { animation-delay: 0.15s; }
+.fq-demo-think i:nth-child(3) { animation-delay: 0.3s; }
+@keyframes fqDot {
+  0%, 100% { transform: translateY(0); background: var(--peach-line); }
+  50% { transform: translateY(-5px); background: var(--teal); }
+}
+.fq-demo-a { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.5s var(--ease), opacity 0.45s ease; }
+.fq-demo.answered .fq-demo-a { max-height: 260px; opacity: 1; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--peach-line); }
+.fq-demo-a p { font-size: 15px; line-height: 1.6; color: var(--muted-ink); }
+.fq-demo-tag {
+  display: inline-block;
+  margin-top: 16px;
+  margin-left: 41px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 100px;
+  padding: 5px 11px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.fq-demo.answered .fq-demo-tag { opacity: 1; transform: none; }
+
+/* -------- CHIPS -------- */
+.fq-body { padding-top: 44px; }
+.fq-chips {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  padding: 6px;
+  border: 1px solid var(--peach-line);
+  border-radius: 100px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.fq-chips::-webkit-scrollbar { display: none; }
+.fq-chipbg {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: calc(100% - 12px);
+  width: 0;
+  border-radius: 100px;
+  background: var(--grad);
+  box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.6);
+  transition: transform 0.45s var(--ease), width 0.45s var(--ease);
+  z-index: 0;
+}
+.fq-chip {
+  position: relative;
+  z-index: 1;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--muted-ink);
+  padding: 10px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+.fq-chip:hover { color: var(--ink); }
+.fq-chip.is-active { color: #fff; }
+.fq-count { margin: 16px 2px 30px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); }
+
+/* -------- LIST -------- */
+.fq-cat { margin-bottom: 38px; }
+.fq-cat-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(20px, 2.4vw, 26px);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.fq-cat-i { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--teal-ink); background: rgba(20, 184, 166, 0.1); border-radius: 8px; padding: 5px 9px; }
+.fq-acc { border-top: 1px solid var(--line); }
+.fq-item { border-bottom: 1px solid var(--line); }
+.fq-q {
+  width: 100%;
+  border: 0;
+  background: none;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 4px;
+  text-align: left;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(15.5px, 1.7vw, 18px);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+.fq-q:hover { color: var(--blue); }
+.fq-chev { position: relative; width: 15px; height: 15px; flex: none; }
+.fq-chev::before, .fq-chev::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 9px;
+  height: 2px;
+  background: var(--teal);
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease);
+}
+.fq-chev::before { left: 0; transform: rotate(45deg); }
+.fq-chev::after { right: 0; transform: rotate(-45deg); }
+.fq-item.open .fq-chev::before { transform: rotate(-45deg); }
+.fq-item.open .fq-chev::after { transform: rotate(45deg); }
+.fq-a p { padding: 0 4px 20px; max-width: 74ch; font-size: 15.5px; line-height: 1.65; color: var(--muted-ink); }
+.fq-item.open .fq-a { animation: fqReveal 0.4s var(--ease); }
+@keyframes fqReveal {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.fq-empty { text-align: center; padding: 30px 0 8px; }
+.fq-empty p { color: var(--muted-ink); margin-bottom: 16px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fq-demo-think i, .fq-demo-q p::after { animation: none !important; }
+  .fq-demo-q p::after { display: none; }
+  .fq-demo-a { max-height: none; opacity: 1; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--peach-line); }
+  .fq-demo-tag { opacity: 1; transform: none; }
+  .fq-chipbg, .fq-chip { transition: none !important; }
+}

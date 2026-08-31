@@ -79,7 +79,6 @@ export default function BookkeepingPage() {
           primaryLabel="Get your free growth plan"
           secondary={{ label: "See pricing", href: "/pricing" }}
           fine="Flat, published pricing. You own everything. No lock-in."
-          bgImage="/assets/images/bookkeeping-cta-bg.png"
         />
       </main>
       <Footer />

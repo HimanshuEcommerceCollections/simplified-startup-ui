@@ -9,7 +9,7 @@ import WhatWeDo from "@/components/about/WhatWeDo";
 import HowWeHelp from "@/components/about/HowWeHelp";
 import WhoWeAreFor from "@/components/about/WhoWeAreFor";
 import OurApproach from "@/components/about/OurApproach";
-import AboutCta from "@/components/about/AboutCta";
+import CtaBand from "@/components/home/CtaBand";
 
 export const metadata: Metadata = {
   title: "About — Simplified Startup",
@@ -32,7 +32,13 @@ export default function AboutPage() {
         <HowWeHelp />
         <WhoWeAreFor />
         <OurApproach />
-        <AboutCta />
+        <CtaBand
+          heading="Ready to build your business?"
+          copy="Book a free strategy call and we'll map the fastest path across the pieces that matter first. No pressure — the plan is yours to keep either way."
+          primaryLabel="Book a free strategy call"
+          secondary={{ label: "See our services", href: "/#services" }}
+          fine="Free · 30 minutes · No obligation"
+        />
       </main>
       <Footer />
       <FloatingActions />

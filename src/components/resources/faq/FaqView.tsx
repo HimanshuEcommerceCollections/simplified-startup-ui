@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Reveal from "@/components/ui/Reveal";
 import ResourceHero from "@/components/resources/ResourceHero";
-import CtaCard from "@/components/resources/CtaCard";
+import CtaBand from "@/components/home/CtaBand";
 import Highlight from "@/components/resources/Highlight";
 import FaqDemoCard from "./FaqDemoCard";
 import { FAQ_CATEGORIES, FAQ_CATEGORY_TITLES, FAQ_CHIP_LABELS } from "./faq-data";
@@ -176,15 +176,19 @@ export default function FaqView() {
         </div>
       </section>
 
-      <CtaCard
+      <CtaBand
         eyebrow="Still have a question?"
         heading="Ask us directly."
-        solid={{ label: "Contact us", href: "/#book", arrow: "→" }}
-        line={{ label: "Back to questions", href: "#faq" }}
-      >
-        Didn&apos;t find what you were looking for?{" "}
-        <strong>We answer real questions in plain language — not sales pitches.</strong>
-      </CtaCard>
+        copy={
+          <>
+            Didn&apos;t find what you were looking for?{" "}
+            <strong>We answer real questions in plain language — not sales pitches.</strong>
+          </>
+        }
+        primaryLabel="Contact us"
+        primaryHref="/#book"
+        secondary={{ label: "Back to questions", href: "#faq" }}
+      />
     </>
   );
 }

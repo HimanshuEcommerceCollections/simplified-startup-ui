@@ -3,7 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import Reveal from "@/components/ui/Reveal";
 import ResourceHero from "@/components/resources/ResourceHero";
-import CtaCard from "@/components/resources/CtaCard";
+import CtaBand from "@/components/home/CtaBand";
 import BlogDefluffCard from "./BlogDefluffCard";
 import "./blog-page.css";
 
@@ -248,15 +248,19 @@ export default function BlogView() {
         </div>
       </section>
 
-      <CtaCard
+      <CtaBand
         eyebrow="Prefer it done for you?"
         heading="Read all you like — free."
-        solid={{ label: "See services & pricing", href: "/pricing", arrow: "→" }}
-        line={{ label: "Keep reading", href: "#articles" }}
-      >
-        When you&apos;re ready for a team to run it, we&apos;re here.{" "}
-        <strong>Published prices, senior people, work you own.</strong>
-      </CtaCard>
+        copy={
+          <>
+            When you&apos;re ready for a team to run it, we&apos;re here.{" "}
+            <strong>Published prices, senior people, work you own.</strong>
+          </>
+        }
+        primaryLabel="See services & pricing"
+        primaryHref="/pricing"
+        secondary={{ label: "Keep reading", href: "#articles" }}
+      />
     </>
   );
 }

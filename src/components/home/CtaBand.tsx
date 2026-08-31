@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import Reveal from "@/components/ui/Reveal";
 import { useMagnetic } from "@/lib/useMagnetic";
 import { useReducedMotion } from "@/lib/useReducedMotion";
@@ -10,14 +10,18 @@ import "./cta-band.css";
 type CtaBandProps = {
   eyebrow?: string;
   heading?: string;
-  copy?: string;
+  /** Rich copy — pass a fragment so <strong> emphasis survives. */
+  copy?: ReactNode;
   primaryLabel?: string;
+  primaryHref?: string;
   /** When set, the secondary action renders as a link instead of the AI Advisor button. */
-  secondary?: { label: string; href: string };
+  secondary?: { label: string; href: string; arrow?: string };
   /** Optional fine-print line under the actions. */
   fine?: string;
   /** When set, a still image replaces the background video. */
   bgImage?: string;
+  /** Anchor id — in-page links (careers #apply, about #book, …) target the band itself. */
+  id?: string;
 };
 
 export default function CtaBand({
@@ -25,9 +29,11 @@ export default function CtaBand({
   heading = "The growth team you can't afford to hire — for the price you can.",
   copy = "Book a free consultation and we'll map the fastest path from where you are to real traction. No decks, no pressure.",
   primaryLabel = "Book a free consultation",
+  primaryHref = "/growth-plan",
   secondary,
   fine,
   bgImage,
+  id = "book",
 }: CtaBandProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const primaryRef = useMagnetic<HTMLAnchorElement>();
@@ -41,7 +47,7 @@ export default function CtaBand({
   }, [reduce]);
 
   return (
-    <section className={`cta-home${bgImage ? " has-photo" : ""}`} id="book">
+    <section className={`cta-home${bgImage ? " has-photo" : ""}`} id={id}>
       {bgImage ? (
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -60,12 +66,13 @@ export default function CtaBand({
         <h2>{heading}</h2>
         <p>{copy}</p>
         <div className="cta-actions">
-          <a href="#book" ref={primaryRef} className="btn btn-primary magnetic">
+          <a href={primaryHref} ref={primaryRef} className="btn btn-primary magnetic">
             {primaryLabel} <span className="arw">↗</span>
           </a>
           {secondary ? (
             <a href={secondary.href} className="btn btn-ghost-dark">
               {secondary.label}
+              {secondary.arrow && <span className="arw"> {secondary.arrow}</span>}
             </a>
           ) : (
             <button type="button" className="btn btn-ghost-dark" onClick={openAiAdvisor}>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import Reveal from "@/components/ui/Reveal";
-import CtaCard from "@/components/resources/CtaCard";
+import CtaBand from "@/components/home/CtaBand";
 import { useInView } from "@/lib/useInView";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import {
@@ -521,16 +521,20 @@ export default function WebsiteDevelopmentView() {
         </div>
       </section>
 
-      <CtaCard
+      <CtaBand
         eyebrow="End of file · SS-WEB-02"
         heading="Get your free growth plan."
-        solid={{ label: "Get your free growth plan", href: "/growth-plan" }}
-        line={{ label: "See the checklist", href: "#bar", arrow: "↗" }}
+        copy={
+          <>
+            A working session on your goals, then a written plan with the exact scope, price band, and schedule
+            we&apos;d recommend — <strong>free, and yours to keep whether or not you hire us.</strong>
+          </>
+        }
+        primaryLabel="Get your free growth plan"
+        primaryHref="/growth-plan"
+        secondary={{ label: "See the checklist", href: "#bar", arrow: "↗" }}
         id="plan"
-      >
-        A working session on your goals, then a written plan with the exact scope, price band, and schedule we&apos;d
-        recommend — <strong>free, and yours to keep whether or not you hire us.</strong>
-      </CtaCard>
+      />
     </>
   );
 }

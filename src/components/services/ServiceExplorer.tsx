@@ -20,6 +20,7 @@ const SERVICES: Service[] = [
   {
     title: "Digital Marketing",
     sub: "Get found and get pipeline",
+    href: "/digital-marketing",
     is: "Full-funnel demand generation — the channels that turn strangers into booked calls, run as one coordinated program instead of disconnected tactics.",
     included: [
       { b: "SEO & AI-search", rest: "technical fixes, on-page work, content, and authority so you rank in Google and get cited in AI answers." },
@@ -47,6 +48,7 @@ const SERVICES: Service[] = [
   {
     title: "Branding & Growth",
     sub: "Look like the leader in your space",
+    href: "/branding-growth",
     is: "Identity systems and the positioning behind them — the message and look that make the shortlist decision go your way.",
     included: [
       { b: "Brand discovery", rest: "audience, competitors, positioning, and voice, captured in a findings doc." },
@@ -87,6 +89,7 @@ const SERVICES: Service[] = [
   {
     title: "Business & Startup Advisory",
     sub: "A plan, not a pep talk",
+    href: "/business-advisory",
     is: "Go-to-market, positioning, pricing, and business-model work from operators who've launched and run companies of their own.",
     included: [
       { b: "Validation", rest: "pressure-test the market before you spend a year finding out." },
@@ -100,6 +103,7 @@ const SERVICES: Service[] = [
   {
     title: "Talent & Staffing",
     sub: "Senior capability without the full-time hire",
+    href: "/talent-staffing",
     is: "Vetted virtual assistants and specialists, scoped to a role scorecard and managed for you — on your business hours.",
     included: [
       { b: "Role scorecard", rest: "the five tasks and the standard, written down before we source." },

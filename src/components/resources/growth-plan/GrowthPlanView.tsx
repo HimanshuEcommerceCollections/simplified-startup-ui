@@ -5,6 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 import { useInView } from "@/lib/useInView";
 import { usePointerSpot } from "@/lib/usePointerSpot";
 import GpPlanCard from "./GpPlanCard";
+import CtaBand from "@/components/home/CtaBand";
 import "./growth-plan-page.css";
 
 const CHECK = (
@@ -478,6 +479,22 @@ export default function GrowthPlanView() {
           </div>
         </div>
       </section>
+
+      <CtaBand
+        eyebrow="One conversation, one written plan"
+        heading="Not ready to fill a form? Just talk to us."
+        copy={
+          <>
+            A 45-minute working session, then the plan lands in your inbox —{" "}
+            <strong>free, and yours to keep whether or not you hire us.</strong>
+          </>
+        }
+        primaryLabel="Request my free growth plan"
+        primaryHref="#request"
+        secondary={{ label: "See services & pricing", href: "/pricing" }}
+        fine="No card. No obligation. We send the plan once — the next step is yours."
+        id="talk"
+      />
     </>
   );
 }

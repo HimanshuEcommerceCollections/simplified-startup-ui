@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import Reveal from "@/components/ui/Reveal";
-import CtaCard from "@/components/resources/CtaCard";
+import CtaBand from "@/components/home/CtaBand";
 import {
   AdjacentGrid,
   Callout,
@@ -482,17 +482,20 @@ export default function AiAutomationView() {
         </div>
       </section>
 
-      <CtaCard
+      <CtaBand
         eyebrow="End of file · SS-WEB-07"
         heading="Get your free growth plan."
-        solid={{ label: "Get your free growth plan", href: "/growth-plan" }}
-        line={{ label: "See what it costs", href: "#pricing", arrow: "↗" }}
+        copy={
+          <>
+            A working session on your goals, then a written plan with the exact scope, price, and sequence we&apos;d
+            recommend — <strong>free, and yours to keep whether or not you hire us.</strong>
+          </>
+        }
+        primaryLabel="Get your free growth plan"
+        primaryHref="/growth-plan"
+        secondary={{ label: "See what it costs", href: "#pricing", arrow: "↗" }}
         id="plan"
-        tint
-      >
-        A working session on your goals, then a written plan with the exact scope, price, and sequence we&apos;d recommend
-        — <strong>free, and yours to keep whether or not you hire us.</strong>
-      </CtaCard>
+      />
     </>
   );
 }

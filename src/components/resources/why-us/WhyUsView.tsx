@@ -3,7 +3,7 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
-import CtaCard from "@/components/resources/CtaCard";
+import CtaBand from "@/components/home/CtaBand";
 import { usePointerSpot } from "@/lib/usePointerSpot";
 import WhyUsInvoice from "./WhyUsInvoice";
 import "./why-us-page.css";
@@ -500,16 +500,20 @@ export default function WhyUsView() {
         </div>
       </section>
 
-      <CtaCard
+      <CtaBand
         eyebrow="See the difference on the first call"
         heading="A real plan, not a pitch."
-        solid={{ label: "Get your free growth plan", href: "/#book", arrow: "↗" }}
-        line={{ label: "See pricing", href: "/pricing" }}
+        copy={
+          <>
+            Book a free growth plan. You&apos;ll leave with a real, written document and a straight answer on whether
+            we&apos;re the right partner. <strong>No decks, no pressure, no obligation either way.</strong>
+          </>
+        }
+        primaryLabel="Get your free growth plan"
+        primaryHref="/growth-plan"
+        secondary={{ label: "See pricing", href: "/pricing" }}
         id="apply"
-      >
-        Book a free growth plan. You&apos;ll leave with a real, written document and a straight answer on whether
-        we&apos;re the right partner. <strong>No decks, no pressure, no obligation either way.</strong>
-      </CtaCard>
+      />
     </>
   );
 }

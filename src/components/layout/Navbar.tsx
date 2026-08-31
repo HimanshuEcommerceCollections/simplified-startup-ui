@@ -71,7 +71,15 @@ export default function Navbar() {
     };
   }, [resourcesOpen]);
 
-  const SERVICE_DETAIL_ROUTES = ["/bookkeeping", "/website-development", "/ai-automation"];
+  const SERVICE_DETAIL_ROUTES = [
+    "/bookkeeping",
+    "/website-development",
+    "/ai-automation",
+    "/talent-staffing",
+    "/digital-marketing",
+    "/business-advisory",
+    "/branding-growth",
+  ];
 
   function isActive(href: string) {
     if (href.startsWith("/#")) return false;

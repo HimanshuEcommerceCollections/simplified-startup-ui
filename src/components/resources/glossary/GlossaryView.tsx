@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Reveal from "@/components/ui/Reveal";
 import ResourceHero from "@/components/resources/ResourceHero";
-import CtaCard from "@/components/resources/CtaCard";
+import CtaBand from "@/components/home/CtaBand";
 import Highlight from "@/components/resources/Highlight";
 import GlossaryHeroCard from "./GlossaryHeroCard";
 import { ACTIVE_LETTERS, ALPHABET, GLOSSARY, TOTAL_TERMS } from "./glossary-data";
@@ -152,15 +152,19 @@ export default function GlossaryView() {
         </div>
       </section>
 
-      <CtaCard
+      <CtaBand
         eyebrow="Have a term we missed?"
         heading="Ask — we'll explain it plainly."
-        solid={{ label: "Contact us", href: "/#book", arrow: "→" }}
-        line={{ label: "Back to top", href: "#top" }}
-      >
-        Marketing changes fast, and we add new terms as they come up.{" "}
-        <strong>Heard something you&apos;re not sure about? We&apos;ll add it here.</strong>
-      </CtaCard>
+        copy={
+          <>
+            Marketing changes fast, and we add new terms as they come up.{" "}
+            <strong>Heard something you&apos;re not sure about? We&apos;ll add it here.</strong>
+          </>
+        }
+        primaryLabel="Contact us"
+        primaryHref="/#book"
+        secondary={{ label: "Back to top", href: "#top" }}
+      />
     </>
   );
 }

@@ -5,12 +5,12 @@ import { useInView } from "@/lib/useInView";
 import "./footer.css";
 
 const SERVICE_LINKS = [
-  { label: "Digital Marketing", href: "/services" },
-  { label: "Business Consulting", href: "/services" },
+  { label: "Digital Marketing", href: "/digital-marketing" },
+  { label: "Business Consulting", href: "/business-advisory" },
   { label: "Website Development", href: "/website-development" },
-  { label: "Branding & Growth", href: "/services" },
+  { label: "Branding & Growth", href: "/branding-growth" },
   { label: "Sales & Lead Gen", href: "/services" },
-  { label: "Talent & Staffing", href: "/services" },
+  { label: "Talent & Staffing", href: "/talent-staffing" },
   { label: "AI Automation", href: "/ai-automation" },
 ];
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Reveal from "@/components/ui/Reveal";
-import CtaCard from "@/components/resources/CtaCard";
+import CtaBand from "@/components/home/CtaBand";
 import { useInView } from "@/lib/useInView";
 import { usePointerSpot } from "@/lib/usePointerSpot";
 import { useTiltCards } from "@/lib/useTilt";
@@ -359,16 +359,20 @@ export default function CareersView() {
         </div>
       </section>
 
-      <CtaCard
+      <CtaBand
         eyebrow="Join the team"
         heading="Think you'd fit? Show us."
-        solid={{ label: "See open roles", href: "#roles" }}
-        line={{ label: "Send a general application", href: "#apply", arrow: "↗" }}
+        copy={
+          <>
+            Pick a role, or send a general application with the best thing you&apos;ve built.{" "}
+            <strong>We read every one.</strong>
+          </>
+        }
+        primaryLabel="See open roles"
+        primaryHref="#roles"
+        secondary={{ label: "Send a general application", href: "mailto:hello@simplifiedstartup.com", arrow: "↗" }}
         id="apply"
-      >
-        Pick a role, or send a general application with the best thing you&apos;ve built.{" "}
-        <strong>We read every one.</strong>
-      </CtaCard>
+      />
     </>
   );
 }

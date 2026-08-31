@@ -5,12 +5,13 @@ import { useInView } from "@/lib/useInView";
 import "./footer.css";
 
 const SERVICE_LINKS = [
-  "Digital Marketing",
-  "Business Consulting",
-  "Website Development",
-  "Branding & Growth",
-  "Sales & Lead Gen",
-  "Talent & Staffing",
+  { label: "Digital Marketing", href: "/services" },
+  { label: "Business Consulting", href: "/services" },
+  { label: "Website Development", href: "/website-development" },
+  { label: "Branding & Growth", href: "/services" },
+  { label: "Sales & Lead Gen", href: "/services" },
+  { label: "Talent & Staffing", href: "/services" },
+  { label: "AI Automation", href: "/ai-automation" },
 ];
 
 const COMPANY_LINKS = [
@@ -46,9 +47,9 @@ export default function Footer() {
           <div className={revealClass}>
             <h4>Services</h4>
             <ul>
-              {SERVICE_LINKS.map((label) => (
-                <li key={label}>
-                  <Link href="/services">{label}</Link>
+              {SERVICE_LINKS.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
               <li>

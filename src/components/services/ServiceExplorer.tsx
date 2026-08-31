@@ -33,6 +33,7 @@ const SERVICES: Service[] = [
   {
     title: "Website Development",
     sub: "A site that sells while you sleep",
+    href: "/website-development",
     is: "Fast, modern, conversion-focused websites and landing pages — designed from your brand and engineered to turn visitors into customers.",
     included: [
       { b: "Wireframes & mockups", rest: "layout and navigation signed off before a line of code." },
@@ -72,6 +73,7 @@ const SERVICES: Service[] = [
   {
     title: "AI Automation",
     sub: "Automate the busywork",
+    href: "/ai-automation",
     is: "Custom AI workflows and agents that handle the repetitive work across your stack — with humans kept on every judgment call.",
     included: [
       { b: "Workflow audit", rest: "we map where the hours actually go and score what's worth automating." },

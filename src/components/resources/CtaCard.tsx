@@ -14,10 +14,12 @@ type CtaCardProps = {
   solid: CtaAction;
   line: CtaAction;
   id?: string;
+  /** Render the wrapping band with the tinted background. */
+  tint?: boolean;
 };
 
 /** The rounded gradient closing-CTA card used by the resource pages. */
-export default function CtaCard({ eyebrow, heading, children, solid, line, id = "cta" }: CtaCardProps) {
+export default function CtaCard({ eyebrow, heading, children, solid, line, id = "cta", tint }: CtaCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [revealRef, inView] = useInView<HTMLElement>({ threshold: 0.14 });
 
@@ -38,7 +40,7 @@ export default function CtaCard({ eyebrow, heading, children, solid, line, id = 
   }, []);
 
   return (
-    <section className="band" id={id} ref={revealRef}>
+    <section className={`band${tint ? " tint" : ""}`} id={id} ref={revealRef}>
       <div className="wrap">
         <div className={`cta-card reveal${inView ? " in" : ""}`} ref={cardRef}>
           <span className="cta-sheen" aria-hidden="true"></span>

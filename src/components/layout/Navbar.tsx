@@ -71,11 +71,13 @@ export default function Navbar() {
     };
   }, [resourcesOpen]);
 
+  const SERVICE_DETAIL_ROUTES = ["/bookkeeping", "/website-development", "/ai-automation"];
+
   function isActive(href: string) {
     if (href.startsWith("/#")) return false;
     if (href === "/") return pathname === "/";
     // service detail pages highlight the Services item
-    if (href === "/services") return pathname === "/services" || pathname === "/bookkeeping";
+    if (href === "/services") return pathname === "/services" || SERVICE_DETAIL_ROUTES.includes(pathname);
     return pathname === href || pathname.startsWith(`${href}/`);
   }
 

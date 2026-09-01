@@ -62,6 +62,7 @@ const SERVICES: Service[] = [
   {
     title: "Sales & Lead Generation",
     sub: "A pipeline you can predict",
+    href: "/sales-lead-gen",
     is: "Researched, personalized outbound that books real conversations with the buyers you actually want.",
     included: [
       { b: "Ideal-customer profile & list building", rest: "verified prospects matched to a written ICP." },

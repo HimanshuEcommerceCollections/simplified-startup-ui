@@ -9,7 +9,7 @@ const SERVICE_LINKS = [
   { label: "Business Consulting", href: "/business-advisory" },
   { label: "Website Development", href: "/website-development" },
   { label: "Branding & Growth", href: "/branding-growth" },
-  { label: "Sales & Lead Gen", href: "/services" },
+  { label: "Sales & Lead Gen", href: "/sales-lead-gen" },
   { label: "Talent & Staffing", href: "/talent-staffing" },
   { label: "AI Automation", href: "/ai-automation" },
 ];

@@ -150,20 +150,7 @@ export default function Navbar() {
           </div>
         </nav>
         <div className="nav-right">
-          <div className="nav-phone">
-            <span className="ico" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-            <div>
-              <div className="q">Have a question?</div>
-              <div className="num">+91 00000 00000</div>
-            </div>
-          </div>
+          {/* "Have a question?" phone block hidden until a real number exists — see git history to restore */}
           <div className="nav-cta">
             <Link href="/growth-plan" ref={ctaRef} className="btn magnetic">
               Start Project

@@ -79,6 +79,7 @@ export default function Navbar() {
     "/digital-marketing",
     "/business-advisory",
     "/branding-growth",
+    "/sales-lead-gen",
   ];
 
   function isActive(href: string) {

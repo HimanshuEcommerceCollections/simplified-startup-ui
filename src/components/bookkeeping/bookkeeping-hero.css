@@ -3,6 +3,12 @@
 .bk-sub { font-size: clamp(16px, 1.3vw, 18px); color: var(--muted-ink); line-height: 1.65; max-width: 62ch; margin: 14px 0 0; }
 
 .bk-hero { position: relative; overflow: hidden; }
+/* the band rule sets the effective 72px padding; top also absorbs the
+   86px fixed-header offset (80px ≤620px) so the hero runs behind the pill */
+.page-bookkeeping .band.bk-hero { padding-top: 158px; }
+@media (max-width: 620px) {
+  .page-bookkeeping .band.bk-hero { padding-top: 152px; }
+}
 .bk-hero::before {
   content: "";
   position: absolute;

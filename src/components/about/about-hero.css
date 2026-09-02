@@ -1,5 +1,9 @@
 /* ---------------- ABOUT HERO — copy + "Blueprint -> Built" visual ---------------- */
-.ab-hero { padding: clamp(48px, 7vw, 86px) 0 clamp(56px, 7vw, 92px); overflow: hidden; background: var(--surface); color: var(--ink); }
+/* top padding includes the 86px fixed-header offset (80px ≤620px) */
+.ab-hero { padding: calc(clamp(48px, 7vw, 86px) + 86px) 0 clamp(56px, 7vw, 92px); overflow: hidden; background: var(--surface); color: var(--ink); }
+@media (max-width: 620px) {
+  .ab-hero { padding-top: calc(clamp(48px, 7vw, 86px) + 80px); }
+}
 .ab-hero-inner { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: clamp(30px, 5vw, 64px); align-items: center; }
 .ab-hero-h1 {
   font-family: var(--display);

@@ -8,7 +8,11 @@
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: none; }
 }
-.wu-hero { position: relative; overflow: hidden; isolation: isolate; padding: 72px 0 92px; }
+/* top padding includes the 86px fixed-header offset (80px ≤620px) */
+.wu-hero { position: relative; overflow: hidden; isolation: isolate; padding: 158px 0 92px; }
+@media (max-width: 620px) {
+  .wu-hero { padding-top: 152px; }
+}
 .wu-ledger-bg {
   position: absolute;
   inset: 0;

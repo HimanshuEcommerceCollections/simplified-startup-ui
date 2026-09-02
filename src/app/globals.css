@@ -56,12 +56,9 @@ button { font-family: inherit; }
 /* Page scopes — the two designs use slightly different token values */
 .page-home { background: var(--ink); }
 .page-about { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); }
-/* the header is fixed and transparent; light pages need the offset the
-   in-flow header used to provide (the dark home hero runs underneath it) */
-.page-about { padding-top: 86px; }
-@media (max-width: 620px) {
-  .page-about { padding-top: 80px; }
-}
+/* The header is fixed and transparent. Each page's HERO absorbs the 86px
+   (80px ≤620px) offset in its own top padding, so the hero background runs
+   up behind the floating pill — no white strip above the first section. */
 
 /* Resource pages (faq / blog / glossary / why-us / careers) share one design system */
 .page-resource {
@@ -73,10 +70,6 @@ button { font-family: inherit; }
   --ease: cubic-bezier(0.16, 0.84, 0.44, 1);
   background: var(--surface);
   color: var(--ink);
-  padding-top: 86px;
-}
-@media (max-width: 620px) {
-  .page-resource { padding-top: 80px; }
 }
 .page-resource ::selection { background: var(--teal); color: #fff; }
 .page-resource :focus-visible { outline-color: var(--teal); }
@@ -115,10 +108,7 @@ button { font-family: inherit; }
 .page-about ::selection { background: var(--teal); color: #fff; }
 
 /* Services page — light scope, same token family as about */
-.page-services { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); padding-top: 86px; }
-@media (max-width: 620px) {
-  .page-services { padding-top: 80px; }
-}
+.page-services { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); }
 .page-services :focus-visible { outline-color: var(--teal); }
 .page-services ::selection { background: var(--teal); color: #fff; }
 .page-services .eyebrow { color: var(--teal-ink); }
@@ -137,10 +127,7 @@ button { font-family: inherit; }
 .page-services .sec-head.reveal.in { transform: none; }
 
 /* Bookkeeping page — light scope, same token family as about/services */
-.page-bookkeeping { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); padding-top: 86px; }
-@media (max-width: 620px) {
-  .page-bookkeeping { padding-top: 80px; }
-}
+.page-bookkeeping { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); }
 .page-bookkeeping :focus-visible { outline-color: var(--teal); }
 .page-bookkeeping ::selection { background: var(--teal); color: #fff; }
 .page-bookkeeping .eyebrow { color: var(--teal-ink); }
@@ -159,10 +146,7 @@ button { font-family: inherit; }
 .page-bookkeeping .sec-head.reveal.in { transform: none; }
 
 /* Pricing page — light scope; content visible by default (no scroll reveals) */
-.page-pricing { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); padding-top: 86px; }
-@media (max-width: 620px) {
-  .page-pricing { padding-top: 80px; }
-}
+.page-pricing { --wrap: 1180px; --line: rgba(15, 23, 42, 0.12); background: var(--surface); }
 .page-pricing :focus-visible { outline-color: var(--teal); }
 .page-pricing ::selection { background: var(--teal); color: #fff; }
 .page-pricing .eyebrow { color: var(--teal-ink); }

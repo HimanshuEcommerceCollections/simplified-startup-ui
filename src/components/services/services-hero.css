@@ -1,5 +1,11 @@
 /* ---------------- Services hero — live signal graph ---------------- */
 .svc-hero { padding: 64px 0 40px; position: relative; overflow: hidden; }
+/* the band rule sets the effective 72px padding; top also absorbs the
+   86px fixed-header offset (80px ≤620px) so the hero runs behind the pill */
+.page-services .band.svc-hero { padding-top: 158px; }
+@media (max-width: 620px) {
+  .page-services .band.svc-hero { padding-top: 152px; }
+}
 .svc-hero::before {
   content: "";
   position: absolute;

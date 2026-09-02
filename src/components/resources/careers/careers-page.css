@@ -5,7 +5,11 @@
 }
 
 /* -------- HERO -------- */
-.cr-hero { position: relative; overflow: hidden; padding: 66px 0 88px; isolation: isolate; }
+/* top padding includes the 86px fixed-header offset (80px ≤620px) */
+.cr-hero { position: relative; overflow: hidden; padding: 152px 0 88px; isolation: isolate; }
+@media (max-width: 620px) {
+  .cr-hero { padding-top: 146px; }
+}
 .cr-hero::before {
   content: "";
   position: absolute;

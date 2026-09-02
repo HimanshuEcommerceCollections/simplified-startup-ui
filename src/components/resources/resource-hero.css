@@ -7,9 +7,13 @@
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  padding: 70px 0 78px;
+  /* top padding includes the 86px fixed-header offset (80px ≤620px) */
+  padding: 156px 0 78px;
   background: radial-gradient(60% 70% at 100% 0%, rgba(37, 99, 235, 0.07), transparent 60%),
     radial-gradient(55% 70% at 0% 100%, rgba(20, 184, 166, 0.07), transparent 60%), #f8fafc;
+}
+@media (max-width: 620px) {
+  .rh-hero { padding-top: 150px; }
 }
 .rh-hero--blog { padding-bottom: 44px; }
 .rh-hero--glossary { padding-bottom: 74px; }

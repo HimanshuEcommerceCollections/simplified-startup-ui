@@ -1,5 +1,9 @@
 /* ---------------- Pricing hero — aurora + cursor light + masked headline ---------------- */
-.pr-hero { position: relative; overflow: hidden; padding: 74px 0 58px; isolation: isolate; }
+/* top padding includes the 86px fixed-header offset (80px ≤620px) */
+.pr-hero { position: relative; overflow: hidden; padding: 160px 0 58px; isolation: isolate; }
+@media (max-width: 620px) {
+  .pr-hero { padding-top: 154px; }
+}
 .pr-hero::before {
   content: "";
   position: absolute;
@@ -145,7 +149,7 @@
 .pr-trust .pr-chip:nth-child(4) { animation-delay: 0.86s; }
 
 @media (max-width: 560px) {
-  .pr-hero { padding: 56px 0 46px; }
+  .pr-hero { padding: 136px 0 46px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .pr-hero::before, .pr-hero::after, .pr-pub, .pr-doc-tag .sep { animation: none !important; }

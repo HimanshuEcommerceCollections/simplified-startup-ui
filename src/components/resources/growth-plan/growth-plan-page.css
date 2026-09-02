@@ -17,9 +17,13 @@
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  padding: 70px 0 88px;
+  /* top padding includes the 86px fixed-header offset (80px ≤620px) */
+  padding: 156px 0 88px;
   background: radial-gradient(60% 60% at 100% 0%, rgba(37, 99, 235, 0.07), transparent 60%),
     radial-gradient(55% 60% at 0% 100%, rgba(20, 184, 166, 0.07), transparent 60%), #f8fafc;
+}
+@media (max-width: 620px) {
+  .gp-hero { padding-top: 150px; }
 }
 .gp-hero-bg {
   position: absolute;

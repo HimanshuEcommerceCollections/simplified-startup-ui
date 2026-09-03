@@ -1,5 +1,10 @@
-export type Role = { title: string; type: string; desc: string };
+export type Role = { id?: string; title: string; type: string; desc: string; location?: string | null };
 
+/**
+ * Fallback postings — used when the careers API is unreachable at build time.
+ * The live list comes from simplifiedstartup-server (GET /api/v1/content/career-roles),
+ * managed in the dashboard's Careers screen.
+ */
 export const ROLES: Role[] = [
   { title: "Growth Marketer", type: "Full-time", desc: "Own SEO, paid, and content programs for a handful of startups end to end." },
   { title: "Web Developer (Front-end)", type: "Full-time", desc: "Design-minded builder shipping fast, conversion-focused sites." },

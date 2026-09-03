@@ -8,7 +8,8 @@ import { usePointerSpot } from "@/lib/usePointerSpot";
 import { useTiltCards } from "@/lib/useTilt";
 import RoleCard from "./RoleCard";
 import DodTracker from "./DodTracker";
-import { ROLES } from "./careers-data";
+import ApplyModal from "./ApplyModal";
+import { ROLES, type Role } from "./careers-data";
 import "./careers-page.css";
 
 const FEATURES: { icon: ReactNode; h: string; p: ReactNode }[] = [
@@ -104,8 +105,9 @@ const PROCESS = [
   { h: "Offer", p: "A clear offer, fast. If it's a no, you'll hear that too — quickly." },
 ];
 
-export default function CareersView() {
+export default function CareersView({ roles = ROLES }: { roles?: Role[] }) {
   const [heroIn, setHeroIn] = useState(false);
+  const [applyFor, setApplyFor] = useState<{ role: Role | null } | null>(null);
   const { sectionRef, spotRef } = usePointerSpot<HTMLElement, HTMLSpanElement>();
   const featGridRef = useTiltCards<HTMLDivElement>();
   const [wtRef, wtIn] = useInView<HTMLElement>({ threshold: 0.28 });
@@ -310,17 +312,20 @@ export default function CareersView() {
             <h2>Open roles.</h2>
           </Reveal>
           <Reveal as="p" className="roles-intro">
-            Hiring across the stack. Don&apos;t see your exact role? <strong>Send a general application</strong> — we
-            make room for great people.
+            Hiring across the stack. Don&apos;t see your exact role?{" "}
+            <button type="button" className="roles-general-btn" onClick={() => setApplyFor({ role: null })}>
+              Send a general application
+            </button>{" "}
+            — we make room for great people.
           </Reveal>
 
           <Reveal className="role-list">
-            {ROLES.map((role) => (
-              <a className="role" href="#apply" key={role.title}>
+            {roles.map((role) => (
+              <button type="button" className="role" onClick={() => setApplyFor({ role })} key={role.id ?? role.title}>
                 <div className="role-main">
                   <div className="role-head">
                     <span className="role-title">{role.title}</span>
-                    <span className="role-pill">Remote</span>
+                    <span className="role-pill">{role.location || "Remote"}</span>
                     <span className="role-pill type">{role.type}</span>
                   </div>
                   <p className="role-desc">{role.desc}</p>
@@ -328,7 +333,7 @@ export default function CareersView() {
                 <span className="role-go">
                   Apply <span className="arw">↗</span>
                 </span>
-              </a>
+              </button>
             ))}
           </Reveal>
         </div>
@@ -373,6 +378,8 @@ export default function CareersView() {
         secondary={{ label: "Send a general application", href: "mailto:hello@simplifiedstartup.com", arrow: "↗" }}
         id="apply"
       />
+
+      {applyFor && <ApplyModal role={applyFor.role} onClose={() => setApplyFor(null)} />}
     </>
   );
 }

@@ -80,6 +80,8 @@ export default function ApplyModal({ role, onClose }: { role: Role | null; onClo
                 {role.location || "Remote"} · {role.type}
               </p>
             )}
+            {/* rich description authored in the dashboard; sanitized server-side */}
+            {role?.body && <div className="cr-apply-body" dangerouslySetInnerHTML={{ __html: role.body }} />}
             <form className="cr-apply-form" onSubmit={onSubmit}>
               <div className="cr-apply-grid">
                 <label>

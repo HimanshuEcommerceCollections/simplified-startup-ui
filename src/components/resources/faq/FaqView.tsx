@@ -6,12 +6,11 @@ import ResourceHero from "@/components/resources/ResourceHero";
 import CtaBand from "@/components/home/CtaBand";
 import Highlight from "@/components/resources/Highlight";
 import FaqDemoCard from "./FaqDemoCard";
-import { FAQ_CATEGORIES, FAQ_CATEGORY_TITLES, FAQ_CHIP_LABELS } from "./faq-data";
+import { FAQ_CATEGORIES, FAQ_CATEGORY_TITLES, FAQ_CHIP_LABELS, type FaqCategory } from "./faq-data";
 import "./faq-page.css";
 
-const TOTAL = FAQ_CATEGORIES.reduce((n, c) => n + c.items.length, 0);
-
-export default function FaqView() {
+export default function FaqView({ categories = FAQ_CATEGORIES }: { categories?: FaqCategory[] }) {
+  const TOTAL = categories.reduce((n, c) => n + c.items.length, 0);
   const [query, setQuery] = useState("");
   const [activeCat, setActiveCat] = useState("all");
   const [openKey, setOpenKey] = useState<string | null>(null);
@@ -44,7 +43,7 @@ export default function FaqView() {
   const { visible, shown } = useMemo(() => {
     let count = 0;
     const map = new Map<string, boolean>();
-    FAQ_CATEGORIES.forEach((cat) => {
+    categories.forEach((cat) => {
       cat.items.forEach((item, i) => {
         const inCat = activeCat === "all" || cat.key === activeCat;
         const match = q ? `${item.q} ${item.a}`.toLowerCase().includes(q) : true;
@@ -54,7 +53,7 @@ export default function FaqView() {
       });
     });
     return { visible: map, shown: count };
-  }, [q, activeCat]);
+  }, [q, activeCat, categories]);
 
   const countText = q
     ? shown === 1
@@ -100,13 +99,13 @@ export default function FaqView() {
               <button className={`fq-chip${activeCat === "all" ? " is-active" : ""}`} onClick={() => selectCat("all")}>
                 All
               </button>
-              {FAQ_CATEGORIES.map((cat) => (
+              {categories.map((cat) => (
                 <button
                   key={cat.key}
                   className={`fq-chip${activeCat === cat.key ? " is-active" : ""}`}
                   onClick={() => selectCat(cat.key)}
                 >
-                  {FAQ_CHIP_LABELS[cat.key]}
+                  {FAQ_CHIP_LABELS[cat.key] ?? cat.label}
                 </button>
               ))}
             </div>
@@ -116,7 +115,7 @@ export default function FaqView() {
           </p>
 
           <div className="fq-list">
-            {FAQ_CATEGORIES.map((cat) => {
+            {categories.map((cat) => {
               const anyVisible = cat.items.some((_, i) => visible.get(`${cat.key}-${i}`));
               const catAllowed = q ? true : activeCat === "all" || activeCat === cat.key;
               if (!anyVisible || !catAllowed) return null;
@@ -124,7 +123,7 @@ export default function FaqView() {
                 <div className="fq-cat" key={cat.key}>
                   <Reveal as="h2" className="fq-cat-title">
                     <span className="fq-cat-i">{cat.num}</span>
-                    {FAQ_CATEGORY_TITLES[cat.key]}
+                    {FAQ_CATEGORY_TITLES[cat.key] ?? cat.label}
                   </Reveal>
                   <div className="fq-acc">
                     {cat.items.map((item, i) => {

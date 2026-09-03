@@ -772,3 +772,33 @@
 }
 .cr-apply-done h3 { font-family: var(--display); font-weight: 700; font-size: 24px; color: var(--ink); }
 .cr-apply-done p { margin: 12px auto 22px; max-width: 40ch; font-size: 15px; line-height: 1.6; color: var(--muted-ink); }
+
+/* rich role description inside the apply dialog (sanitized HTML) */
+.cr-apply-body {
+  margin-top: 16px;
+  padding: 16px 18px;
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  border-radius: 12px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--muted-ink);
+  max-height: 260px;
+  overflow-y: auto;
+}
+.cr-apply-body h2, .cr-apply-body h3, .cr-apply-body h4 {
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 15.5px;
+  margin: 12px 0 6px;
+}
+.cr-apply-body h2:first-child, .cr-apply-body h3:first-child, .cr-apply-body p:first-child { margin-top: 0; }
+.cr-apply-body p { margin: 0 0 10px; }
+.cr-apply-body strong, .cr-apply-body b { color: var(--ink); font-weight: 600; }
+.cr-apply-body ul, .cr-apply-body ol { margin: 0 0 10px; padding-left: 20px; }
+.cr-apply-body li { margin-bottom: 5px; }
+.cr-apply-body a { color: var(--blue); font-weight: 600; }
+.cr-apply-body img { max-width: 100%; border-radius: 8px; }
+.cr-apply-body blockquote { border-left: 3px solid var(--teal); padding-left: 12px; margin: 10px 0; }
+.cr-apply-body hr { border: 0; height: 1px; background: var(--peach-line); margin: 14px 0; }

@@ -6,10 +6,10 @@ import ResourceHero from "@/components/resources/ResourceHero";
 import CtaBand from "@/components/home/CtaBand";
 import Highlight from "@/components/resources/Highlight";
 import GlossaryHeroCard from "./GlossaryHeroCard";
-import { ACTIVE_LETTERS, ALPHABET, GLOSSARY, TOTAL_TERMS } from "./glossary-data";
+import { ALPHABET, GLOSSARY, type GlossaryLetter } from "./glossary-data";
 import "./glossary-page.css";
 
-export default function GlossaryView() {
+export default function GlossaryView({ glossary = GLOSSARY }: { glossary?: GlossaryLetter[] }) {
   const [query, setQuery] = useState("");
   const [activeLetter, setActiveLetter] = useState<string | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
@@ -17,11 +17,14 @@ export default function GlossaryView() {
 
   const q = query.trim().toLowerCase();
 
+  const ACTIVE_LETTERS = useMemo(() => new Set(glossary.map((g) => g.letter)), [glossary]);
+  const TOTAL_TERMS = useMemo(() => glossary.reduce((n, g) => n + g.terms.length, 0), [glossary]);
+
   const { matches, shown, lettersWithMatches } = useMemo(() => {
     const map = new Map<string, boolean>();
     const letters = new Set<string>();
     let count = 0;
-    GLOSSARY.forEach((group) => {
+    glossary.forEach((group) => {
       group.terms.forEach((term) => {
         const match = q ? `${term.name} ${term.def}`.toLowerCase().includes(q) : true;
         map.set(term.name, match);
@@ -32,7 +35,7 @@ export default function GlossaryView() {
       });
     });
     return { matches: map, shown: count, lettersWithMatches: letters };
-  }, [q]);
+  }, [q, glossary]);
 
   // scroll-spy: highlight the letter currently in view
   useEffect(() => {
@@ -115,7 +118,7 @@ export default function GlossaryView() {
         <div className="wrap">
           <p className="gl-count">{countText}</p>
           <div className="gl-list" ref={listRef}>
-            {GLOSSARY.map((group) => {
+            {glossary.map((group) => {
               const visibleTerms = group.terms.filter((t) => matches.get(t.name));
               if (visibleTerms.length === 0) return null;
               return (

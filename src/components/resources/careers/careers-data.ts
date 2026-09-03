@@ -1,4 +1,4 @@
-export type Role = { id?: string; title: string; type: string; desc: string; location?: string | null };
+export type Role = { id?: string; title: string; type: string; desc: string; location?: string | null; body?: string | null };
 
 /**
  * Fallback postings — used when the careers API is unreachable at build time.

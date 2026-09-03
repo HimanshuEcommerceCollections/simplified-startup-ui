@@ -271,3 +271,8 @@
   .bl-hb.new { opacity: 1; position: static; }
   .bl-pillbg, .bl-card, .bl-card-link, .bl-art { transition: none !important; }
 }
+
+/* uploaded cover image (overrides the artwork preset) */
+.bl-cover-photo { background: var(--surface-2); position: relative; }
+.bl-cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.bl-cover-photo .bl-cover-tag { z-index: 1; }

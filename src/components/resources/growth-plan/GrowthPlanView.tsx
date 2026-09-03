@@ -89,10 +89,14 @@ const FAQS = [
 
 const d = (ms: number): CSSProperties => ({ "--d": ms } as CSSProperties);
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
+
 export default function GrowthPlanView() {
   const [heroIn, setHeroIn] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const [errors, setErrors] = useState<{ name?: boolean; email?: boolean }>({});
   const { sectionRef, spotRef } = usePointerSpot<HTMLElement, HTMLSpanElement>();
   const [stepsRef, stepsIn] = useInView<HTMLDivElement>({ threshold: 0.4 });
@@ -153,11 +157,12 @@ export default function GrowthPlanView() {
     return () => wrap.removeEventListener("pointermove", onMove);
   }, []);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const name = (form.elements.namedItem("name") as HTMLInputElement).value.trim();
-    const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
+    const field = (n: string) => (form.elements.namedItem(n) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement).value;
+    const name = field("name").trim();
+    const email = field("email").trim();
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const next = { name: !name, email: !emailOk };
     setErrors(next);
@@ -165,7 +170,30 @@ export default function GrowthPlanView() {
       (form.elements.namedItem(next.name ? "name" : "email") as HTMLInputElement).focus();
       return;
     }
-    setSubmitted(true);
+
+    setSending(true);
+    setSubmitError(false);
+    try {
+      const res = await fetch(`${API_URL}/api/v1/leads`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          business: field("business").trim(),
+          stage: field("stage"),
+          need: field("need"),
+          message: field("message").trim(),
+          company: field("company"), // honeypot — humans never fill it
+        }),
+      });
+      if (!res.ok) throw new Error(`request failed (${res.status})`);
+      setSubmitted(true);
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -459,9 +487,19 @@ export default function GrowthPlanView() {
                       placeholder="How the business makes money, what you've tried, what a good year looks like…"
                     ></textarea>
                   </div>
-                  <button className="btn btn-primary gp-submit" type="submit">
-                    Request my free growth plan <span className="arw">↗</span>
+                  <div className="gp-hp" aria-hidden="true">
+                    <label htmlFor="gpCompany">Company</label>
+                    <input id="gpCompany" name="company" type="text" tabIndex={-1} autoComplete="off" defaultValue="" />
+                  </div>
+                  <button className="btn btn-primary gp-submit" type="submit" disabled={sending}>
+                    {sending ? "Sending…" : "Request my free growth plan"} <span className="arw">↗</span>
                   </button>
+                  {submitError && (
+                    <p className="gp-form-error" role="alert">
+                      Something went wrong sending your request. Please try again — or email us at{" "}
+                      <a href="mailto:hello@simplifiedstartup.com">hello@simplifiedstartup.com</a>.
+                    </p>
+                  )}
                   <p className="gp-form-fine">No card. No obligation. We send the plan once — the next step is yours.</p>
 
                   {submitted && (

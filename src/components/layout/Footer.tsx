@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useState, type FormEvent } from "react";
+import { usePathname } from "next/navigation";
 import { useInView } from "@/lib/useInView";
 import "./footer.css";
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
 
 const SERVICE_LINKS = [
   { label: "Digital Marketing", href: "/digital-marketing" },
@@ -23,6 +27,60 @@ const COMPANY_LINKS = [
   { label: "Contact", href: "/#book" },
 ];
 
+function NewsletterForm() {
+  const pathname = usePathname();
+  const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
+    const honeypot = (form.elements.namedItem("company") as HTMLInputElement).value;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setState("error");
+      return;
+    }
+    setState("sending");
+    try {
+      const res = await fetch(`${API_URL}/api/v1/subscribers`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, sourcePage: pathname, company: honeypot }),
+      });
+      if (!res.ok) throw new Error(`request failed (${res.status})`);
+      setState("done");
+    } catch {
+      setState("error");
+    }
+  }
+
+  if (state === "done") {
+    return <p className="news-done">You&apos;re in — thanks for subscribing.</p>;
+  }
+  return (
+    <form className="news" onSubmit={onSubmit}>
+      <input
+        type="email"
+        name="email"
+        placeholder="you@company.com"
+        aria-label="Email for newsletter"
+        onInput={() => state === "error" && setState("idle")}
+      />
+      <span className="news-hp" aria-hidden="true">
+        <input name="company" type="text" tabIndex={-1} autoComplete="off" defaultValue="" aria-label="Company" />
+      </span>
+      <button type="submit" disabled={state === "sending"}>
+        {state === "sending" ? "…" : "Join"}
+      </button>
+      {state === "error" && (
+        <span className="news-err" role="alert">
+          Couldn&apos;t subscribe — check the address and try again.
+        </span>
+      )}
+    </form>
+  );
+}
+
 export default function Footer() {
   const [ref, inView] = useInView<HTMLElement>({ threshold: 0.15 });
   const revealClass = `reveal${inView ? " in" : ""}`;
@@ -39,10 +97,7 @@ export default function Footer() {
               Simplified&nbsp;Startup
             </Link>
             <p>One partner, every step. Everything your startup needs to go from idea to scale.</p>
-            <form className="news" onSubmit={(e) => e.preventDefault()}>
-              <input type="email" placeholder="you@company.com" aria-label="Email for newsletter" />
-              <button type="submit">Join</button>
-            </form>
+            <NewsletterForm />
           </div>
           <div className={revealClass}>
             <h4>Services</h4>

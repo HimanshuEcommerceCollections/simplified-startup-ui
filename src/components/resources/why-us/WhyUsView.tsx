@@ -510,7 +510,7 @@ export default function WhyUsView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/growth-plan"
+        primaryHref="/start-project"
         secondary={{ label: "See pricing", href: "/pricing" }}
         id="apply"
       />

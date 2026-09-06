@@ -366,7 +366,7 @@ export default function DigitalMarketingView() {
             you can actually read. Built for owners who’ve been burned by an agency before.
           </>
         }
-        primary={{ label: "Get a written plan", href: "/growth-plan" }}
+        primary={{ label: "Get a written plan", href: "/start-project" }}
         secondary={{ label: "See published pricing", href: "#pricing" }}
         chips={[
           "Published pricing — every plan, on this page",
@@ -621,7 +621,7 @@ export default function DigitalMarketingView() {
         heading="Find out what’s actually worth doing."
         copy="You’ll get a written marketing plan — the channels worth your money, the scope, the price, and the number we’d judge it by. No retainer required to get it, and no chasing afterward if the answer is no."
         primaryLabel="Get your written plan"
-        primaryHref="/growth-plan"
+        primaryHref="/start-project"
         secondary={{ label: "See published pricing", href: "#pricing" }}
         id="book"
       />
@@ -655,7 +655,7 @@ function DmTiers() {
             ))}
           </ul>
           <div className="dm-tier-cta">
-            <a className={`btn ${tier.cta.primary ? "btn-primary" : "btn-ghost"}`} href="/growth-plan">
+            <a className={`btn ${tier.cta.primary ? "btn-primary" : "btn-ghost"}`} href="/start-project">
               {tier.cta.label}
               {tier.cta.primary && <span className="arw"> ↗</span>}
             </a>

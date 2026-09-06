@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import "./floating.css";
 
 export const OPEN_AI_ADVISOR_EVENT = "open-ai-advisor";
@@ -13,7 +12,6 @@ export function openAiAdvisor() {
 
 export default function FloatingActions() {
   const [chatOpen, setChatOpen] = useState(false);
-  const [showSticky, setShowSticky] = useState(false);
 
   useEffect(() => {
     function onOpen() {
@@ -23,34 +21,8 @@ export default function FloatingActions() {
     return () => window.removeEventListener(OPEN_AI_ADVISOR_EVENT, onOpen);
   }, []);
 
-  useEffect(() => {
-    let ticking = false;
-    function onScroll() {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const h = document.documentElement;
-        const max = h.scrollHeight - h.clientHeight;
-        const p = max > 0 ? window.scrollY / max : 0;
-        setShowSticky(p > 0.25);
-        ticking = false;
-      });
-    }
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll, { passive: true });
-    onScroll();
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
-
   return (
     <>
-      <Link href="/#book" className={`sticky-cta${showSticky ? " show" : ""}`}>
-        Book a consult <span className="arw">↗</span>
-      </Link>
-
       <button className="fab" aria-label="Open AI Advisor" onClick={() => setChatOpen((o) => !o)}>
         <span className="dot"></span> AI Advisor
       </button>

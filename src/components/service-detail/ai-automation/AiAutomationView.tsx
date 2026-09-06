@@ -262,7 +262,7 @@ export default function AiAutomationView() {
             checks, the follow-ups that slip. <strong>Automated, documented, and owned by you.</strong>
           </>
         }
-        primary={{ label: "Get your free growth plan", href: "/growth-plan" }}
+        primary={{ label: "Get your free growth plan", href: "/start-project" }}
         secondary={{ label: "See what it costs", href: "#pricing" }}
         sign="AI where it earns its place — humans where judgment lives"
       >
@@ -425,7 +425,7 @@ export default function AiAutomationView() {
           </Reveal>
           <Reveal className="aa-subs">
             {SUBS.map((sub) => (
-              <a className="aa-sub" href="/growth-plan" key={sub.n}>
+              <a className="aa-sub" href="/start-project" key={sub.n}>
                 <span className="sn">{sub.n}</span>
                 <div className="st">
                   <h3>{sub.h}</h3>
@@ -492,7 +492,7 @@ export default function AiAutomationView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/growth-plan"
+        primaryHref="/start-project"
         secondary={{ label: "See what it costs", href: "#pricing", arrow: "↗" }}
         id="plan"
       />

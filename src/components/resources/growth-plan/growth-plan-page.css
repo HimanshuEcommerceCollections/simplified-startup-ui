@@ -347,6 +347,11 @@
 .gp-field input:focus, .gp-field select:focus, .gp-field textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14); }
 .gp-field input.err, .gp-field .err { border-color: var(--gp-red) !important; box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.12) !important; }
 .gp-submit { width: 100%; justify-content: center; margin-top: 6px; }
+.gp-submit:disabled { opacity: 0.7; cursor: progress; transform: none !important; }
+/* honeypot — visually removed, still in the form for bots */
+.gp-hp { position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.gp-form-error { margin-top: 12px; text-align: center; font-size: 14px; line-height: 1.5; color: #b91c1c; }
+.gp-form-error a { color: #b91c1c; font-weight: 600; text-decoration: underline; }
 .gp-form-fine { margin-top: 12px; text-align: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
 .gp-success {
   position: absolute;

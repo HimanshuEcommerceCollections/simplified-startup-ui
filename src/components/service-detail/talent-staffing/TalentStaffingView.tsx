@@ -552,7 +552,7 @@ export default function TalentStaffingView() {
             with the flexibility to scale up, down, or swap anytime.
           </>
         }
-        primary={{ label: "Book a free talent call", href: "/growth-plan" }}
+        primary={{ label: "Book a free talent call", href: "/start-project" }}
         secondary={{ label: "See rates & roles ↓", href: "#pricing" }}
       >
         <RosterCard />
@@ -710,7 +710,7 @@ export default function TalentStaffingView() {
           </>
         }
         primaryLabel="Book a free talent call"
-        primaryHref="/growth-plan"
+        primaryHref="/start-project"
         secondary={{ label: "See full pricing", href: "/pricing", arrow: "↗" }}
         id="start"
       />

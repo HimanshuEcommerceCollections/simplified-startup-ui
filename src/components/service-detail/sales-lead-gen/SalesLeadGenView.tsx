@@ -321,7 +321,7 @@ export default function SalesLeadGenView() {
             <strong>the activity counts verified every single week.</strong>
           </>
         }
-        primary={{ label: "Get your free growth plan", href: "/growth-plan" }}
+        primary={{ label: "Get your free growth plan", href: "/start-project" }}
         secondary={{ label: "See the difference", href: "#compare" }}
         sign="We commit to activity we can count — not outcomes we can’t control"
       >
@@ -461,7 +461,7 @@ export default function SalesLeadGenView() {
           </Reveal>
           <Reveal className="slg-subs">
             {SUBS.map((sub) => (
-              <a className="slg-sub" href="/growth-plan" key={sub.n}>
+              <a className="slg-sub" href="/start-project" key={sub.n}>
                 <span className="sn">{sub.n}</span>
                 <div className="st">
                   <h3>{sub.h}</h3>
@@ -536,7 +536,7 @@ export default function SalesLeadGenView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/growth-plan"
+        primaryHref="/start-project"
         secondary={{ label: "See the difference", href: "#compare", arrow: "↗" }}
         id="plan"
       />

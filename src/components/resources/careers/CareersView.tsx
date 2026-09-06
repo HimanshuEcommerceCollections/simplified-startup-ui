@@ -375,7 +375,7 @@ export default function CareersView({ roles = ROLES }: { roles?: Role[] }) {
         }
         primaryLabel="See open roles"
         primaryHref="#roles"
-        secondary={{ label: "Send a general application", href: "mailto:hello@simplifiedstartup.com", arrow: "↗" }}
+        secondary={{ label: "Send a general application", href: "mailto:simplifiedstartupllc@gmail.com", arrow: "↗" }}
         id="apply"
       />
 

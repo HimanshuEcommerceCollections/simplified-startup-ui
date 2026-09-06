@@ -497,7 +497,7 @@ export default function GrowthPlanView() {
                   {submitError && (
                     <p className="gp-form-error" role="alert">
                       Something went wrong sending your request. Please try again — or email us at{" "}
-                      <a href="mailto:hello@simplifiedstartup.com">hello@simplifiedstartup.com</a>.
+                      <a href="mailto:simplifiedstartupllc@gmail.com">simplifiedstartupllc@gmail.com</a>.
                     </p>
                   )}
                   <p className="gp-form-fine">No card. No obligation. We send the plan once — the next step is yours.</p>

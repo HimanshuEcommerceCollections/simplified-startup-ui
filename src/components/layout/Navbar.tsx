@@ -152,7 +152,7 @@ export default function Navbar() {
         <div className="nav-right">
           {/* "Have a question?" phone block hidden until a real number exists — see git history to restore */}
           <div className="nav-cta">
-            <Link href="/growth-plan" ref={ctaRef} className="btn magnetic">
+            <Link href="/start-project" ref={ctaRef} className="btn magnetic">
               Start Project
             </Link>
           </div>

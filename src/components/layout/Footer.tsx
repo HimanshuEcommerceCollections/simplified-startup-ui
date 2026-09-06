@@ -132,10 +132,10 @@ export default function Footer() {
                 <Link href="/#book">Try the AI Advisor</Link>
               </li>
               <li>
-                <Link href="/growth-plan">Get Started form</Link>
+                <Link href="/start-project">Get Started form</Link>
               </li>
               <li>
-                <a href="mailto:hello@simplifiedstartup.com">hello@simplifiedstartup.com</a>
+                <a href="mailto:simplifiedstartupllc@gmail.com">simplifiedstartupllc@gmail.com</a>
               </li>
             </ul>
           </div>

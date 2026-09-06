@@ -376,7 +376,7 @@ export default function BusinessAdvisoryView() {
             <strong>launch faster and pitch stronger,</strong> without paying enterprise consulting rates for it.
           </>
         }
-        primary={{ label: "Book a free founder call", href: "/growth-plan" }}
+        primary={{ label: "Book a free founder call", href: "/start-project" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <FplanCard />
@@ -488,7 +488,7 @@ export default function BusinessAdvisoryView() {
           </>
         }
         primaryLabel="Book a free founder call"
-        primaryHref="/growth-plan"
+        primaryHref="/start-project"
         secondary={{ label: "See full pricing", href: "/pricing", arrow: "↗" }}
         id="start"
       />

@@ -333,7 +333,7 @@ export default function BrandingGrowthView() {
             Instagram, in an email, or on a proposal.
           </>
         }
-        primary={{ label: "Book a free branding call", href: "/growth-plan" }}
+        primary={{ label: "Book a free branding call", href: "/start-project" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <BsysCard />
@@ -515,7 +515,7 @@ export default function BrandingGrowthView() {
           </>
         }
         primaryLabel="Book a free branding call"
-        primaryHref="/growth-plan"
+        primaryHref="/start-project"
         secondary={{ label: "See full pricing", href: "/pricing", arrow: "↗" }}
         id="start"
       />

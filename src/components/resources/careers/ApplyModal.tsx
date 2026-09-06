@@ -123,7 +123,7 @@ export default function ApplyModal({ role, onClose }: { role: Role | null; onClo
                   {errorMsg ?? (
                     <>
                       Something went wrong sending your application. Please try again — or email{" "}
-                      <a href="mailto:hello@simplifiedstartup.com">hello@simplifiedstartup.com</a>.
+                      <a href="mailto:simplifiedstartupllc@gmail.com">simplifiedstartupllc@gmail.com</a>.
                     </>
                   )}
                 </p>

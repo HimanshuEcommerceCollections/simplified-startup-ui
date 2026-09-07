@@ -9,9 +9,8 @@ export const metadata: Metadata = {
     "Every marketing term you've nodded along to, defined in plain English — the way we'd explain it to a friend.",
 };
 
-// static page, fresh data each build: force-static + no-store re-fetches instead of
-// reusing Next's persistent fetch cache from a previous build
-export const dynamic = "force-static";
+// rendered per request: dashboard edits show up immediately, no publish/rebuild needed
+export const dynamic = "force-dynamic";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
 

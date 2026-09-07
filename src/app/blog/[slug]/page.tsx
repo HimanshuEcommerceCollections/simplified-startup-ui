@@ -18,22 +18,8 @@ type FullArticle = {
   images: { url: string; alt: string; isCover: boolean }[];
 };
 
-/** Article pages exist only for published articles that have a body. */
-export async function generateStaticParams() {
-  try {
-    const res = await fetch(`${API_URL}/api/v1/content/articles`, { cache: "no-store", signal: AbortSignal.timeout(5000) });
-    if (!res.ok) return [];
-    const data = (await res.json()) as { ok: boolean; items: { slug: string; hasBody: boolean }[] };
-    if (!data.ok) return [];
-    return data.items.filter((a) => a.hasBody).map((a) => ({ slug: a.slug }));
-  } catch {
-    return [];
-  }
-}
-
-export const dynamicParams = false;
-// static pages, fresh data each build (no persistent fetch-cache reuse)
-export const dynamic = "force-static";
+// rendered per request: article edits show up immediately; unknown slugs 404 via notFound()
+export const dynamic = "force-dynamic";
 
 async function fetchArticle(slug: string): Promise<FullArticle | null> {
   try {

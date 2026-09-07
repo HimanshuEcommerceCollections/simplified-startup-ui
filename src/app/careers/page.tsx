@@ -9,9 +9,8 @@ export const metadata: Metadata = {
     "We're a senior, remote team that builds and grows real startups — no bloat, no busywork, no black box. See open roles.",
 };
 
-// static page, fresh data each build: force-static + no-store re-fetches instead of
-// reusing Next's persistent fetch cache from a previous build
-export const dynamic = "force-static";
+// rendered per request: dashboard edits show up immediately, no publish/rebuild needed
+export const dynamic = "force-dynamic";
 
 export default async function CareersPage() {
   // Slugs computed here so each row can link to its /careers/[slug] apply page.

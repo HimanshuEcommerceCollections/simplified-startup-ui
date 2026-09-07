@@ -8,15 +8,8 @@ import { GENERAL_APPLICATION_SLUG, fetchRoles, withSlugs, type RoleWithSlug } fr
 import "@/components/resources/careers/careers-page.css"; // shared cr-apply-* form + JD-body styles
 import "./apply-page.css";
 
-/** One apply page per published role, plus the general application. */
-export async function generateStaticParams() {
-  const roles = withSlugs(await fetchRoles());
-  return [...roles.map((r) => ({ slug: r.slug })), { slug: GENERAL_APPLICATION_SLUG }];
-}
-
-export const dynamicParams = false;
-// static pages, fresh data each build (no persistent fetch-cache reuse)
-export const dynamic = "force-static";
+// rendered per request: role edits show up immediately; unknown slugs 404 via notFound()
+export const dynamic = "force-dynamic";
 
 async function findRole(slug: string): Promise<RoleWithSlug | null> {
   const roles = withSlugs(await fetchRoles());

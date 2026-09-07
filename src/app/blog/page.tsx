@@ -14,9 +14,8 @@ export const metadata: Metadata = {
     "SEO, social media, ads, and AI — written for business owners, not marketers. No jargon we won't explain, no fluff to hit a word count.",
 };
 
-// static page, fresh data each build: force-static + no-store re-fetches instead of
-// reusing Next's persistent fetch cache from a previous build
-export const dynamic = "force-static";
+// rendered per request: dashboard edits show up immediately, no publish/rebuild needed
+export const dynamic = "force-dynamic";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
 

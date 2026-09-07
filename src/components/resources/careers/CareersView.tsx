@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import CtaBand from "@/components/home/CtaBand";
 import { useInView } from "@/lib/useInView";
@@ -8,8 +9,7 @@ import { usePointerSpot } from "@/lib/usePointerSpot";
 import { useTiltCards } from "@/lib/useTilt";
 import RoleCard from "./RoleCard";
 import DodTracker from "./DodTracker";
-import ApplyModal from "./ApplyModal";
-import type { Role } from "./careers-data";
+import { GENERAL_APPLICATION_SLUG, type RoleWithSlug } from "./careers-api";
 import "./careers-page.css";
 
 const FEATURES: { icon: ReactNode; h: string; p: ReactNode }[] = [
@@ -105,9 +105,8 @@ const PROCESS = [
   { h: "Offer", p: "A clear offer, fast. If it's a no, you'll hear that too — quickly." },
 ];
 
-export default function CareersView({ roles }: { roles: Role[] }) {
+export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
   const [heroIn, setHeroIn] = useState(false);
-  const [applyFor, setApplyFor] = useState<{ role: Role | null } | null>(null);
   const { sectionRef, spotRef } = usePointerSpot<HTMLElement, HTMLSpanElement>();
   const featGridRef = useTiltCards<HTMLDivElement>();
   const [wtRef, wtIn] = useInView<HTMLElement>({ threshold: 0.28 });
@@ -313,15 +312,15 @@ export default function CareersView({ roles }: { roles: Role[] }) {
           </Reveal>
           <Reveal as="p" className="roles-intro">
             Hiring across the stack. Don&apos;t see your exact role?{" "}
-            <button type="button" className="roles-general-btn" onClick={() => setApplyFor({ role: null })}>
+            <Link className="roles-general-btn" href={`/careers/${GENERAL_APPLICATION_SLUG}`}>
               Send a general application
-            </button>{" "}
+            </Link>{" "}
             — we make room for great people.
           </Reveal>
 
           <Reveal className="role-list">
             {roles.map((role) => (
-              <button type="button" className="role" onClick={() => setApplyFor({ role })} key={role.id ?? role.title}>
+              <Link className="role" href={`/careers/${role.slug}`} key={role.id ?? role.title}>
                 <div className="role-main">
                   <div className="role-head">
                     <span className="role-title">{role.title}</span>
@@ -333,7 +332,7 @@ export default function CareersView({ roles }: { roles: Role[] }) {
                 <span className="role-go">
                   Apply <span className="arw">↗</span>
                 </span>
-              </button>
+              </Link>
             ))}
           </Reveal>
         </div>
@@ -378,8 +377,6 @@ export default function CareersView({ roles }: { roles: Role[] }) {
         secondary={{ label: "Send a general application", href: "mailto:simplifiedstartupllc@gmail.com", arrow: "↗" }}
         id="apply"
       />
-
-      {applyFor && <ApplyModal role={applyFor.role} onClose={() => setApplyFor(null)} />}
     </>
   );
 }

@@ -683,9 +683,91 @@
   .proc.in .proc-line { width: 88%; }
 }
 
-/* ---------------- application form (used on the /careers/[slug] apply pages) ---------------- */
+/* ---------------- application modal — JD left (70%), form right (30%) ---------------- */
+.cr-apply-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(11, 18, 32, 0.58);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.cr-apply-card {
+  position: relative;
+  width: 64vw;
+  max-width: 1280px;
+  max-height: 88vh;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 34px;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  padding: 34px 36px;
+  overflow: hidden; /* the two columns scroll independently */
+}
+.cr-apply-jd { min-height: 0; overflow-y: auto; padding-right: 10px; }
+.cr-apply-side {
+  min-height: 0;
+  overflow-y: auto;
+  border-left: 1px solid var(--peach-line);
+  padding-left: 28px;
+}
+.cr-apply-side-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  padding-right: 34px; /* clear the close button */
+}
+.cr-apply-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--peach-line);
+  background: var(--surface);
+  color: var(--muted-ink);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.cr-apply-close:hover { color: var(--ink); border-color: var(--blue); }
+.cr-apply-title { font-family: var(--display); font-weight: 700; font-size: clamp(24px, 2.6vw, 34px); color: var(--ink); margin-top: 10px; letter-spacing: -0.01em; }
+.cr-apply-sub { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-ink); margin-top: 8px; }
+.cr-apply-desc { margin-top: 16px; font-size: 15.5px; line-height: 1.65; color: var(--muted-ink); max-width: 68ch; }
+.cr-apply-hint { display: block; margin-top: 6px; font-size: 12.5px; font-weight: 400; line-height: 1.5; color: var(--muted); }
+
+@media (max-width: 1100px) {
+  .cr-apply-card { width: 86vw; }
+}
+@media (max-width: 820px) {
+  .cr-apply-overlay { padding: 14px; }
+  .cr-apply-card {
+    width: 100%;
+    max-width: 640px;
+    max-height: 92vh;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 26px 22px;
+    overflow-y: auto; /* single scroll when stacked */
+  }
+  .cr-apply-jd, .cr-apply-side { overflow: visible; padding-right: 0; }
+  .cr-apply-side { border-left: 0; border-top: 1px solid var(--peach-line); padding-left: 0; padding-top: 20px; }
+}
+
 .cr-apply-form { margin-top: 20px; display: flex; flex-direction: column; gap: 14px; }
 .cr-apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+/* the 30% side column is too narrow for two-up fields */
+.cr-apply-side .cr-apply-grid { grid-template-columns: 1fr; }
 @media (max-width: 560px) {
   .cr-apply-grid { grid-template-columns: 1fr; }
 }
@@ -735,16 +817,14 @@
 
 /* rich role description inside the apply dialog (sanitized HTML) */
 .cr-apply-body {
-  margin-top: 16px;
-  padding: 16px 18px;
-  background: var(--surface-2);
-  border: 1px solid var(--peach-line);
-  border-radius: 12px;
-  font-size: 14.5px;
-  line-height: 1.65;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--peach-line);
+  font-size: 15px;
+  line-height: 1.68;
   color: var(--muted-ink);
-  max-height: 260px;
-  overflow-y: auto;
+  max-width: 72ch;
+  /* flows naturally — the whole JD column scrolls, not an inner box */
 }
 .cr-apply-body h2, .cr-apply-body h3, .cr-apply-body h4 {
   font-family: var(--display);

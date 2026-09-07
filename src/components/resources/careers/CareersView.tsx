@@ -6,10 +6,10 @@ import CtaBand from "@/components/home/CtaBand";
 import { useInView } from "@/lib/useInView";
 import { usePointerSpot } from "@/lib/usePointerSpot";
 import { useTiltCards } from "@/lib/useTilt";
-import Link from "next/link";
 import RoleCard from "./RoleCard";
 import DodTracker from "./DodTracker";
-import { GENERAL_APPLICATION_SLUG, type RoleWithSlug } from "./careers-api";
+import ApplyModal from "./ApplyModal";
+import type { Role } from "./careers-data";
 import "./careers-page.css";
 
 const FEATURES: { icon: ReactNode; h: string; p: ReactNode }[] = [
@@ -105,8 +105,9 @@ const PROCESS = [
   { h: "Offer", p: "A clear offer, fast. If it's a no, you'll hear that too — quickly." },
 ];
 
-export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
+export default function CareersView({ roles }: { roles: Role[] }) {
   const [heroIn, setHeroIn] = useState(false);
+  const [applyFor, setApplyFor] = useState<{ role: Role | null } | null>(null);
   const { sectionRef, spotRef } = usePointerSpot<HTMLElement, HTMLSpanElement>();
   const featGridRef = useTiltCards<HTMLDivElement>();
   const [wtRef, wtIn] = useInView<HTMLElement>({ threshold: 0.28 });
@@ -312,15 +313,15 @@ export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
           </Reveal>
           <Reveal as="p" className="roles-intro">
             Hiring across the stack. Don&apos;t see your exact role?{" "}
-            <Link className="roles-general-btn" href={`/careers/${GENERAL_APPLICATION_SLUG}`}>
+            <button type="button" className="roles-general-btn" onClick={() => setApplyFor({ role: null })}>
               Send a general application
-            </Link>{" "}
+            </button>{" "}
             — we make room for great people.
           </Reveal>
 
           <Reveal className="role-list">
             {roles.map((role) => (
-              <Link className="role" href={`/careers/${role.slug}`} key={role.id ?? role.title}>
+              <button type="button" className="role" onClick={() => setApplyFor({ role })} key={role.id ?? role.title}>
                 <div className="role-main">
                   <div className="role-head">
                     <span className="role-title">{role.title}</span>
@@ -332,7 +333,7 @@ export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
                 <span className="role-go">
                   Apply <span className="arw">↗</span>
                 </span>
-              </Link>
+              </button>
             ))}
           </Reveal>
         </div>
@@ -374,9 +375,11 @@ export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
         }
         primaryLabel="See open roles"
         primaryHref="#roles"
-        secondary={{ label: "Send a general application", href: `/careers/${GENERAL_APPLICATION_SLUG}`, arrow: "↗" }}
+        secondary={{ label: "Send a general application", href: "mailto:simplifiedstartupllc@gmail.com", arrow: "↗" }}
         id="apply"
       />
+
+      {applyFor && <ApplyModal role={applyFor.role} onClose={() => setApplyFor(null)} />}
     </>
   );
 }

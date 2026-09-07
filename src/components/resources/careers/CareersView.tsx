@@ -9,7 +9,7 @@ import { useTiltCards } from "@/lib/useTilt";
 import RoleCard from "./RoleCard";
 import DodTracker from "./DodTracker";
 import ApplyModal from "./ApplyModal";
-import { ROLES, type Role } from "./careers-data";
+import type { Role } from "./careers-data";
 import "./careers-page.css";
 
 const FEATURES: { icon: ReactNode; h: string; p: ReactNode }[] = [
@@ -105,7 +105,7 @@ const PROCESS = [
   { h: "Offer", p: "A clear offer, fast. If it's a no, you'll hear that too — quickly." },
 ];
 
-export default function CareersView({ roles = ROLES }: { roles?: Role[] }) {
+export default function CareersView({ roles }: { roles: Role[] }) {
   const [heroIn, setHeroIn] = useState(false);
   const [applyFor, setApplyFor] = useState<{ role: Role | null } | null>(null);
   const { sectionRef, spotRef } = usePointerSpot<HTMLElement, HTMLSpanElement>();

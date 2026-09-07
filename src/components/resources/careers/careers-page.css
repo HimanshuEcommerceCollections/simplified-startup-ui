@@ -580,7 +580,8 @@
   padding: 26px 8px;
   border-bottom: 1px solid var(--peach-line);
   transition: padding-left 0.28s var(--ease), background 0.28s ease;
-  /* the row is a <button> now — undo UA styles, keep the design */
+  /* the row is a link to the apply page — undo UA styles, keep the design */
+  text-decoration: none;
   width: 100%;
   text-align: left;
   background: none;
@@ -682,48 +683,7 @@
   .proc.in .proc-line { width: 88%; }
 }
 
-/* ---------------- application modal ---------------- */
-.cr-apply-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: rgba(11, 18, 32, 0.58);
-  backdrop-filter: blur(6px);
-  display: grid;
-  place-items: center;
-  padding: 18px;
-  overflow-y: auto;
-}
-.cr-apply-card {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  max-height: calc(100vh - 36px);
-  overflow-y: auto;
-  background: var(--surface);
-  border: 1px solid var(--peach-line);
-  border-radius: 20px;
-  box-shadow: var(--shadow-lg);
-  padding: 30px 30px 26px;
-}
-.cr-apply-close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1px solid var(--peach-line);
-  background: var(--surface);
-  color: var(--muted-ink);
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-.cr-apply-close:hover { color: var(--ink); border-color: var(--blue); }
-.cr-apply-title { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 3vw, 28px); color: var(--ink); margin-top: 10px; letter-spacing: -0.01em; }
-.cr-apply-sub { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-ink); margin-top: 6px; }
+/* ---------------- application form (used on the /careers/[slug] apply pages) ---------------- */
 .cr-apply-form { margin-top: 20px; display: flex; flex-direction: column; gap: 14px; }
 .cr-apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 @media (max-width: 560px) {

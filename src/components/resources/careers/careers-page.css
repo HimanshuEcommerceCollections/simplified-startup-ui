@@ -696,9 +696,14 @@
 }
 .cr-apply-card {
   position: relative;
-  width: 64vw;
-  max-width: 1280px;
-  max-height: 88vh;
+  /* 80% of the viewport in both dimensions. The height must be DEFINITE (not
+     max-height): the two columns scroll independently via min-height:0 +
+     overflow-y:auto, and that only engages when their grid track is
+     constrained — with max-height alone the row grew to its content and the
+     card's overflow:hidden clipped the JD instead of scrolling it. */
+  width: 80vw;
+  max-width: 1600px;
+  height: 80vh;
   display: grid;
   grid-template-columns: 7fr 3fr;
   gap: 34px;
@@ -754,6 +759,7 @@
   .cr-apply-card {
     width: 100%;
     max-width: 640px;
+    height: auto; /* stacked layout scrolls as one — natural height, capped below */
     max-height: 92vh;
     grid-template-columns: 1fr;
     gap: 22px;

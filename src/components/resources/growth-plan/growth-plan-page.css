@@ -21,6 +21,9 @@
   padding: 156px 0 88px;
   background: radial-gradient(60% 60% at 100% 0%, rgba(37, 99, 235, 0.07), transparent 60%),
     radial-gradient(55% 60% at 0% 100%, rgba(20, 184, 166, 0.07), transparent 60%), #f8fafc;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: var(--bleed-bg);
 }
 @media (max-width: 620px) {
   .gp-hero { padding-top: 150px; }
@@ -28,6 +31,8 @@
 .gp-hero-bg {
   position: absolute;
   inset: 0;
+  left: var(--bleed-0);
+  right: var(--bleed-0);
   z-index: -2;
   pointer-events: none;
   opacity: 0.55;

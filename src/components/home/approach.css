@@ -3,7 +3,9 @@
 .approach-band {
   position: relative;
   background: var(--peach);
-  clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+  /* the diagonal cut sits at 82% of a 1920px canvas (aligned with the content
+     edge), and stays there instead of sliding right on wider viewports */
+  clip-path: polygon(0 0, 100% 0, min(82%, calc(50% + var(--site-max) * 0.32)) 100%, 0 100%);
   padding: 56px 0 46px;
   margin-bottom: 50px;
 }

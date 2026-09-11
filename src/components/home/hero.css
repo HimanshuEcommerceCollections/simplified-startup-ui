@@ -3,7 +3,9 @@
 
 .hero-inner {
   position: relative;
-  min-height: 92vh;
+  /* Capped so a tall CSS viewport (zoomed-out browser, 4K) does not stretch
+     the hero into a near-square box that crops the video heavily. */
+  min-height: min(92vh, 1000px);
   display: flex;
   align-items: center;
   gap: 52px;
@@ -167,7 +169,7 @@
 }
 
 @media (max-width: 760px) {
-  .hero-inner { min-height: 82vh; padding: 104px 22px 64px; align-items: center; flex-direction: column; gap: 30px; }
+  .hero-inner { min-height: min(82vh, 900px); padding: 104px 22px 64px; align-items: center; flex-direction: column; gap: 30px; }
   .hero-card-wrap { width: 100%; max-width: none; margin: 0; flex: none; }
   .hero-card h1 { font-size: clamp(32px, 9vw, 44px); }
 }

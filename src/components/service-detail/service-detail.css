@@ -18,6 +18,8 @@
   content: "";
   position: absolute;
   inset: -12%;
+  left: var(--bleed-12);
+  right: var(--bleed-12);
   z-index: -2;
   pointer-events: none;
   background: radial-gradient(38% 44% at 80% 16%, rgba(37, 99, 235, 0.16), transparent 70%),
@@ -29,6 +31,8 @@
   content: "";
   position: absolute;
   inset: -12%;
+  left: var(--bleed-12);
+  right: var(--bleed-12);
   z-index: -2;
   pointer-events: none;
   background: radial-gradient(28% 32% at 58% 66%, rgba(20, 184, 166, 0.11), transparent 70%),
@@ -47,6 +51,8 @@
 .sd-grid-bg {
   position: absolute;
   inset: 0;
+  left: var(--bleed-0);
+  right: var(--bleed-0);
   z-index: -3;
   pointer-events: none;
   opacity: 0.5;

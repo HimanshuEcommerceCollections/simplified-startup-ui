@@ -1,8 +1,10 @@
 /* ---------------- Floating AI chatbot + sticky CTA ---------------- */
+/* Fixed elements ignore the body's max-width, so hug the page frame edge
+   rather than the screen edge when the viewport is wider than --site-max. */
 .fab {
   position: fixed;
   bottom: 26px;
-  right: 26px;
+  right: max(26px, calc((100vw - var(--site-max)) / 2 + 26px));
   z-index: 80;
   display: flex;
   align-items: center;
@@ -30,7 +32,7 @@
 .chat {
   position: fixed;
   bottom: 92px;
-  right: 26px;
+  right: max(26px, calc((100vw - var(--site-max)) / 2 + 26px));
   z-index: 80;
   width: 340px;
   max-width: calc(100vw - 40px);

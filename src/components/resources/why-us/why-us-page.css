@@ -16,6 +16,8 @@
 .wu-ledger-bg {
   position: absolute;
   inset: 0;
+  left: var(--bleed-0);
+  right: var(--bleed-0);
   z-index: -2;
   pointer-events: none;
   opacity: 0.6;
@@ -32,6 +34,8 @@
   content: "";
   position: absolute;
   inset: -15%;
+  left: var(--bleed-15);
+  right: var(--bleed-15);
   z-index: -3;
   pointer-events: none;
   background: radial-gradient(36% 40% at 82% 12%, rgba(37, 99, 235, 0.14), transparent 70%),

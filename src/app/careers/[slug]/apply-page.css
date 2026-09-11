@@ -38,6 +38,19 @@
 
 /* Right column — the form card */
 .ap-form-col { position: sticky; top: 110px; }
+/* Short viewports (small laptops, browser zoom): the card is ~670px tall, so
+   let the sticky column scroll internally instead of hiding the submit button
+   below the fold. Negative margin + padding keep the card's shadow unclipped. */
+@media (max-height: 820px) {
+  .ap-form-col {
+    max-height: calc(100vh - 126px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    margin: 0 -24px;
+    padding: 0 24px 60px;
+  }
+}
 .ap-form-card {
   background: var(--surface);
   border: 1px solid var(--peach-line);

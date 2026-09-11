@@ -5,7 +5,9 @@
   position: relative;
   width: 100%;
   height: 0;
-  padding-top: 66.7%;
+  /* Aspect-ratio box, capped so the sticky image can never outgrow the
+     viewport (browser zoom shrinks the CSS viewport height as well as width). */
+  padding-top: min(66.7%, calc(100vh - 140px));
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid #e2e8f0;
@@ -25,7 +27,9 @@
 .why-media .wm-img.active { opacity: 1; transform: scale(1); }
 .why-steps { display: flex; flex-direction: column; }
 .why-step {
-  min-height: 66vh;
+  /* vh keeps the scroll-story pacing; the px cap stops each step from
+     becoming a near-empty screen when the CSS viewport is very tall. */
+  min-height: min(66vh, 720px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,8 +44,10 @@
 @media (max-width: 860px) {
   .why-scroll { grid-template-columns: 1fr; gap: 22px; }
   .why-sticky { top: 64px; z-index: 1; }
-  .why-media { padding-top: 62%; }
-  .why-step { min-height: 44vh; }
+  /* Stacked layout: the image sits on top of the text steps, so it must leave
+     room below it for the copy to be read while it is stuck. */
+  .why-media { padding-top: min(62%, 38vh); }
+  .why-step { min-height: min(44vh, 440px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .why-step { opacity: 1; }

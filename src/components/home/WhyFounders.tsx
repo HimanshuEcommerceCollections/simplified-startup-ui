@@ -39,18 +39,39 @@ export default function WhyFounders() {
     const root = stepsRef.current;
     if (!root) return;
     const steps = Array.from(root.querySelectorAll<HTMLElement>(".why-step"));
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(steps.indexOf(entry.target as HTMLElement));
-          }
-        });
-      },
-      { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
-    );
-    steps.forEach((s) => io.observe(s));
-    return () => io.disconnect();
+
+    // Tall viewports show every step at once (see why-founders.css), so the
+    // one-at-a-time observer is switched off and the first image is shown.
+    const tall = window.matchMedia("(min-height: 1300px) and (min-width: 861px)");
+    let io: IntersectionObserver | null = null;
+
+    const start = () => {
+      if (io) return;
+      io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActive(steps.indexOf(entry.target as HTMLElement));
+            }
+          });
+        },
+        { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+      );
+      steps.forEach((s) => io!.observe(s));
+    };
+    const stop = () => {
+      io?.disconnect();
+      io = null;
+      setActive(0);
+    };
+    const apply = () => (tall.matches ? stop() : start());
+
+    apply();
+    tall.addEventListener("change", apply);
+    return () => {
+      io?.disconnect();
+      tall.removeEventListener("change", apply);
+    };
   }, []);
 
   return (

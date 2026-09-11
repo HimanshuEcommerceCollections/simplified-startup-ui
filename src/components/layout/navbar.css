@@ -262,6 +262,13 @@
     padding: 8px 28px 20px;
     border-radius: 18px;
     z-index: 5;
+    /* The header is fixed, so a menu taller than the viewport would be
+       unreachable — cap it to the space below the pill and scroll inside. */
+    max-height: calc(100vh - 104px);
+    max-height: calc(100dvh - 104px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
   }
   .nav-links.show a { padding: 13px 0; border-bottom: 1px solid var(--peach-line); width: 100%; }
   .hamburger { display: block; }

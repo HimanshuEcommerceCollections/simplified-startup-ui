@@ -5,16 +5,25 @@
   background: radial-gradient(ellipse 56% 60% at 14% 8%, rgba(37, 99, 235, 0.32), transparent 62%),
     radial-gradient(ellipse 46% 56% at 88% 94%, rgba(20, 184, 166, 0.22), transparent 60%),
     linear-gradient(158deg, #0f172a 0%, #16233f 100%);
+  /* the two glows stay on a centred 1920px canvas; the dark base fills edge to edge */
+  background-repeat: no-repeat;
+  background-position: 50% 0, 50% 0, 0 0;
+  background-size: var(--bleed-bg), var(--bleed-bg), auto;
 }
 .page-about .band.cf-band {
   background: radial-gradient(ellipse 56% 60% at 14% 8%, rgba(37, 99, 235, 0.32), transparent 62%),
     radial-gradient(ellipse 46% 56% at 88% 94%, rgba(20, 184, 166, 0.22), transparent 60%),
     linear-gradient(158deg, #0f172a 0%, #16233f 100%);
+  background-repeat: no-repeat;
+  background-position: 50% 0, 50% 0, 0 0;
+  background-size: var(--bleed-bg), var(--bleed-bg), auto;
 }
 .cf-band::before {
   content: "";
   position: absolute;
   inset: 0;
+  left: var(--bleed-0);
+  right: var(--bleed-0);
   pointer-events: none;
   opacity: 0.45;
   background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),

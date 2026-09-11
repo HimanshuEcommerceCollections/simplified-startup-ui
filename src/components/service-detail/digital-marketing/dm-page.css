@@ -220,6 +220,8 @@
   content: "";
   position: absolute;
   inset: -12%;
+  left: var(--bleed-12);
+  right: var(--bleed-12);
   z-index: 0;
   pointer-events: none;
   background: radial-gradient(38% 46% at 82% 18%, rgba(37, 99, 235, 0.22), transparent 66%),
@@ -231,6 +233,8 @@
   content: "";
   position: absolute;
   inset: 0;
+  left: var(--bleed-0);
+  right: var(--bleed-0);
   z-index: 0;
   pointer-events: none;
   opacity: 0.55;

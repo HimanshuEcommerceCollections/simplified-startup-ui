@@ -74,8 +74,13 @@
   border-radius: 18px;
   box-shadow: var(--shadow-md);
   padding: 34px 34px 32px;
-  min-height: 420px;
-  overflow: hidden;
+  /* Never taller than the viewport it is stuck in — scroll inside instead of
+     clipping the bottom of the panel (short laptops, browser zoom). */
+  min-height: min(420px, calc(100vh - 124px));
+  max-height: calc(100vh - 124px);
+  overflow: hidden auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
 }
 .cap-panel::after {
   content: "";

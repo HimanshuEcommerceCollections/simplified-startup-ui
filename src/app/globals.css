@@ -36,8 +36,27 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+/* Page frame. Every page is laid out on a canvas no wider than 1920px,
+   centred, with one common gutter colour (the loader's dark navy) beyond it.
+   On 4K / ultrawide monitors, or when the browser is zoomed out, the CSS
+   viewport is far wider than any design was made for; the frame keeps every
+   section composed exactly as it is at 1920px.
+   The --bleed-* helpers additionally pin composed decorations (aurora
+   gradients, grid textures, blobs, diagonal wedges) to a centred 1920px
+   canvas; inside the frame they resolve to their original values. */
+:root {
+  --site-max: 1920px;
+  --bleed-0: max(0px, calc(50% - var(--site-max) / 2));
+  --bleed-10: max(-10%, calc(50% - var(--site-max) * 0.6));
+  --bleed-12: max(-12%, calc(50% - var(--site-max) * 0.62));
+  --bleed-15: max(-15%, calc(50% - var(--site-max) * 0.65));
+  /* background-size for section-level gradient layers */
+  --bleed-bg: min(100%, var(--site-max)) 100%;
+}
+html { scroll-behavior: smooth; background: var(--ink); }
 body {
+  max-width: var(--site-max);
+  margin: 0 auto;
   font-family: var(--body);
   background: var(--paper);
   color: var(--ink);

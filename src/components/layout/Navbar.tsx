@@ -50,19 +50,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<Menu | null>(null);
   const [scrolled, setScrolled] = useState(false);
-  const [canHover, setCanHover] = useState(false);
   const ctaRef = useMagnetic<HTMLAnchorElement>();
   const navRef = useRef<HTMLElement>(null);
-
-  // touch devices fire mouseenter before click, which would immediately
-  // re-toggle a dropdown — only let hover drive it where hover exists
-  useEffect(() => {
-    const mql = window.matchMedia("(hover: hover)");
-    const update = () => setCanHover(mql.matches);
-    update();
-    mql.addEventListener("change", update);
-    return () => mql.removeEventListener("change", update);
-  }, []);
+  // whether the open dropdown was opened by a mouse (hover) or by a tap / click
+  const openedByMouse = useRef(false);
 
   useEffect(() => {
     let ticking = false;
@@ -79,7 +70,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // close an open dropdown on Escape or an outside click/tap
+  // close an open dropdown on Escape, an outside click/tap, or (when it was
+  // opened by a tap rather than hover) on scroll
   useEffect(() => {
     if (!openMenu) return;
     function onKey(e: KeyboardEvent) {
@@ -89,11 +81,16 @@ export default function Navbar() {
       const target = e.target as Element | null;
       if (navRef.current && target && !target.closest(".nav-drop")) setOpenMenu(null);
     }
+    function onScroll() {
+      if (!openedByMouse.current) setOpenMenu(null);
+    }
     document.addEventListener("keydown", onKey);
     document.addEventListener("pointerdown", onPointerDown);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       document.removeEventListener("keydown", onKey);
       document.removeEventListener("pointerdown", onPointerDown);
+      window.removeEventListener("scroll", onScroll);
     };
   }, [openMenu]);
 
@@ -111,9 +108,24 @@ export default function Navbar() {
     setOpen(false);
     setOpenMenu(null);
   }
-  const toggleMenu = (menu: Menu) => setOpenMenu((m) => (m === menu ? null : menu));
-  const hoverProps = (menu: Menu) =>
-    canHover ? { onMouseEnter: () => setOpenMenu(menu), onMouseLeave: () => setOpenMenu(null) } : {};
+  const toggleMenu = (menu: Menu) => {
+    openedByMouse.current = false;
+    setOpenMenu((m) => (m === menu ? null : menu));
+  };
+  // Hover is decided per pointer, not per device: a mouse always gets
+  // hover-to-open / leave-to-close, even on a touchscreen laptop whose browser
+  // reports "(hover: none)". Fingers and pens ignore these and use the toggle.
+  const hoverProps = (menu: Menu) => ({
+    onPointerEnter: (e: React.PointerEvent) => {
+      if (e.pointerType !== "mouse") return;
+      openedByMouse.current = true;
+      setOpenMenu(menu);
+    },
+    onPointerLeave: (e: React.PointerEvent) => {
+      if (e.pointerType !== "mouse") return;
+      setOpenMenu((m) => (m === menu ? null : m));
+    },
+  });
 
   const renderLink = (link: NavLink) => (
     <Link key={link.label} href={link.href} className={isActive(link.href) ? "active" : undefined} onClick={closeAll}>

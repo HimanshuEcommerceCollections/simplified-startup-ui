@@ -148,6 +148,35 @@
 .nav-drop-btn.active::after { right: 0; }
 .nav-drop-caret { transition: transform 0.25s var(--ease-premium); }
 .nav-drop.open .nav-drop-caret { transform: rotate(180deg); }
+
+/* Services: a link label plus a separate caret button (so the label itself
+   navigates to /services while hover / the caret reveals the list) */
+.nav-drop-head { display: inline-flex; align-items: center; gap: 4px; }
+.nav-drop-head .nav-drop-btn { text-decoration: none; }
+.nav-drop-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: #2a2a2a;
+  cursor: pointer;
+  transition: color 0.16s, background 0.2s ease;
+}
+.nav-drop-toggle:hover,
+.nav-drop.open .nav-drop-toggle { color: var(--teal); }
+.nav-drop-head .nav-drop-btn.active + .nav-drop-toggle { color: var(--teal); }
+
+/* eight services: two columns */
+.nav-drop-panel--wide {
+  min-width: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 8px;
+}
 .nav-drop-panel {
   position: absolute;
   top: calc(100% + 18px);
@@ -201,6 +230,12 @@
   }
   .nav-links.show .nav-drop.open .nav-drop-panel { display: block; opacity: 1; visibility: visible; pointer-events: auto; }
   .nav-links.show .nav-drop-panel::before { content: none; }
+  /* inside the mobile menu the Services row is label + caret on one line, list below */
+  .nav-links.show .nav-drop-head { width: 100%; justify-content: space-between; padding: 0; border-bottom: 1px solid var(--peach-line); }
+  .nav-links.show .nav-drop-head .nav-drop-btn { width: auto; flex: 1; border-bottom: 0; }
+  .nav-links.show .nav-drop-toggle { width: 44px; height: 44px; color: #2a2a2a; }
+  .nav-links.show .nav-drop-panel--wide { display: none; grid-template-columns: 1fr; min-width: 0; gap: 0; }
+  .nav-links.show .nav-drop.open .nav-drop-panel--wide { display: block; }
   .nav-links.show .nav-drop-panel a { padding: 12px 0; border-bottom: 1px solid var(--peach-line); border-radius: 0; }
   .nav-links.show .nav-drop-panel a small { display: none; }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, useState } from "react";
+import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import "./services-gallery.css";
 
@@ -14,54 +15,63 @@ const CATEGORIES = [
   { key: "accounting", label: "Accounting" },
 ];
 
+/** Each tile links straight to that service's full page (same routes the services-page explorer uses). */
 const SERVICES = [
   {
     category: "web",
     title: "Website Development",
     description: "Fast, modern, conversion-focused sites and landing pages.",
     video: "/assets/videos/service-website-development.mp4",
+    href: "/website-development",
   },
   {
     category: "advisory",
     title: "Business Consulting",
     description: "Go-to-market, positioning, pricing, and business model.",
     video: "/assets/videos/service-business-consulting.mp4",
+    href: "/business-advisory",
   },
   {
     category: "marketing",
     title: "Digital Marketing",
     description: "Paid, SEO, content, and email that generate real pipeline.",
     video: "/assets/videos/service-digital-marketing.mp4",
+    href: "/digital-marketing",
   },
   {
     category: "brand",
     title: "Branding & Growth",
     description: "Identity systems and the strategy behind them.",
     video: "/assets/videos/service-branding-growth.mp4",
+    href: "/branding-growth",
   },
   {
     category: "marketing",
     title: "Sales & Lead Generation",
     description: "A measurable pipeline, plugged into your business.",
     video: "/assets/videos/service-sales-leadgen.mp4",
+    href: "/sales-lead-gen",
   },
   {
     category: "advisory",
     title: "Talent & Staffing",
     description: "Senior capability, without a full-time hire.",
     video: "/assets/videos/service-talent-staffing.mp4",
+    href: "/talent-staffing",
   },
   {
     category: "ai",
     title: "AI Automation",
     description: "Custom AI workflows and agents that automate the busywork across your stack.",
     video: "/assets/videos/service-ai-automation.mp4",
+    href: "/ai-automation",
   },
   {
     category: "accounting",
     title: "Bookkeeping & Accounting",
     description: "Clean books, reporting, and month-end close — finance handled end to end.",
     video: "/assets/videos/service-accounting.mp4",
+    href: "/bookkeeping",
   },
 ];
 
@@ -100,20 +110,21 @@ export default function ServicesGallery() {
       <div className="wrap">
         <Reveal className="works-grid">
           {SERVICES.map((service) => (
-            <a
+            <Link
               key={service.title}
               className="work"
-              href="#book"
+              href={service.href}
+              aria-label={`${service.title} — view service`}
               style={{
                 display: activeCat === "all" || service.category === activeCat ? undefined : "none",
               }}
             >
-              <video src={service.video} autoPlay muted loop playsInline preload="metadata" aria-label={service.title}></video>
+              <video src={service.video} autoPlay muted loop playsInline preload="metadata" aria-hidden="true"></video>
               <div className="cap">
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </Reveal>
       </div>

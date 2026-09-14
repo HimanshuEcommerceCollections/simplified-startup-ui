@@ -36,14 +36,14 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-/* Page frame. Every page is laid out on a canvas no wider than 1920px,
-   centred, with one common gutter colour (the loader's dark navy) beyond it.
-   On 4K / ultrawide monitors, or when the browser is zoomed out, the CSS
-   viewport is far wider than any design was made for; the frame keeps every
-   section composed exactly as it is at 1920px.
-   The --bleed-* helpers additionally pin composed decorations (aurora
-   gradients, grid textures, blobs, diagonal wedges) to a centred 1920px
-   canvas; inside the frame they resolve to their original values. */
+/* Wide-viewport composition. Section background COLOURS run edge to edge at
+   any width, but the composed decorations inside them (hero video, aurora
+   gradients, blurred blobs, grid textures, diagonal wedges) were designed
+   around a 1920px-wide canvas. On 4K / ultrawide monitors, or when the
+   browser is zoomed out, the CSS viewport is far wider and those decorations
+   would drift away from the content column. The --bleed-* helpers give a
+   left/right inset that keeps a decoration centred and no wider than a
+   1920px canvas, while resolving to exactly the original inset at ≤1920px. */
 :root {
   --site-max: 1920px;
   --bleed-0: max(0px, calc(50% - var(--site-max) / 2));
@@ -53,10 +53,8 @@
   /* background-size for section-level gradient layers */
   --bleed-bg: min(100%, var(--site-max)) 100%;
 }
-html { scroll-behavior: smooth; background: var(--ink); }
+html { scroll-behavior: smooth; }
 body {
-  max-width: var(--site-max);
-  margin: 0 auto;
   font-family: var(--body);
   background: var(--paper);
   color: var(--ink);

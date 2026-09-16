@@ -16,6 +16,8 @@ export const d = (ms: number): CSSProperties => ({ "--d": ms } as CSSProperties)
 /* -------- HERO -------- */
 
 type HeroProps = {
+  /** Sub-service pages: a "Part of <parent service>" link rendered above the eyebrow. */
+  crumb?: { label: string; href: string };
   eyebrow?: string;
   /** Rendered above the h1 in place of / after the eyebrow (e.g. the crossed-out clichés list). */
   aboveTitle?: ReactNode;
@@ -34,7 +36,7 @@ type HeroProps = {
   children: ReactNode;
 };
 
-export function ServiceDetailHero({ eyebrow, aboveTitle, line1, line2, lead, primary, secondary, sign, chips, compact, className, children }: HeroProps) {
+export function ServiceDetailHero({ crumb, eyebrow, aboveTitle, line1, line2, lead, primary, secondary, sign, chips, compact, className, children }: HeroProps) {
   const [heroIn, setHeroIn] = useState(false);
   const { sectionRef, spotRef } = usePointerSpot<HTMLElement, HTMLSpanElement>();
 
@@ -55,6 +57,13 @@ export function ServiceDetailHero({ eyebrow, aboveTitle, line1, line2, lead, pri
       <div className="wrap">
         <div className="sd-hero-inner">
           <div>
+            {crumb && (
+              <nav className="sd-crumb" aria-label="Breadcrumb">
+                <a href={crumb.href}>
+                  <span className="sd-crumb-arw" aria-hidden="true">←</span> Part of {crumb.label}
+                </a>
+              </nav>
+            )}
             {eyebrow && <span className="eyebrow sd-hero-tag">{eyebrow}</span>}
             {aboveTitle}
             <h1 className="sd-h1">

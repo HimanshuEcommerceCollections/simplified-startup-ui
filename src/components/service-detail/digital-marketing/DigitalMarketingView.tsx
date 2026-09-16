@@ -92,6 +92,7 @@ const SERVICES = [
       "Keyword architecture built around what your buyers actually search",
       "Not what’s easy to rank for — what’s worth ranking for",
     ],
+    text: <a className="dm-svc-link" href="/digital-marketing/seo">See the SEO service <span aria-hidden="true">↗</span></a>,
   },
   {
     icon: (
@@ -106,6 +107,7 @@ const SERVICES = [
       "Tracking verified firing before a dollar of spend — no exceptions",
       "You pay platforms directly, so you own the account and its history",
     ],
+    text: <a className="dm-svc-link" href="/digital-marketing/google-ads">See Google Ads management <span aria-hidden="true">↗</span></a>,
     delay: 80,
   },
   {
@@ -122,6 +124,7 @@ const SERVICES = [
       "Written by a person, finished by a person, in your voice",
       "If a reader could tell it was machine-made, it doesn’t ship",
     ],
+    text: <a className="dm-svc-link" href="/digital-marketing/social-media-management">See social media management <span aria-hidden="true">↗</span></a>,
     delay: 160,
   },
   {
@@ -274,7 +277,7 @@ const HOOD_GROUPS = [
     label: "Get found",
     full: false,
     items: [
-      { name: "SEO", desc: "Technical, on-page, and content — built around what buyers actually search." },
+      { name: "SEO", desc: "Technical, on-page, and content — built around what buyers actually search.", href: "/digital-marketing/seo" },
       { name: "Local SEO", desc: "Show up where your customers are standing — maps, local packs, citations." },
       { name: "Technical SEO", desc: "Speed, structure, indexing, and the plumbing rankings quietly depend on." },
       { name: "Google Business Profile", desc: "The listing customers see first, kept accurate, active, and answering." },
@@ -286,7 +289,7 @@ const HOOD_GROUPS = [
     full: false,
     delay: 80,
     items: [
-      { name: "Google Ads", desc: "Search intent captured — tracking verified before a dollar of spend." },
+      { name: "Google Ads", desc: "Search intent captured — tracking verified before a dollar of spend.", href: "/digital-marketing/google-ads" },
       { name: "Meta Ads", desc: "Facebook and Instagram campaigns with creative that earns the stop-scroll." },
       { name: "LinkedIn Ads", desc: "For when your buyer is a title, not a demographic." },
       { name: "YouTube Ads", desc: "Video reach with frequency caps and measurement, not spray-and-pray." },
@@ -297,7 +300,7 @@ const HOOD_GROUPS = [
     label: "Social & content",
     full: false,
     items: [
-      { name: "Social media management", desc: "Calendar, creation, posting, and community — run as one service, on a stated cadence." },
+      { name: "Social media management", desc: "Calendar, creation, posting, and community — run as one service, on a stated cadence.", href: "/digital-marketing/social-media-management" },
       { name: "Influencer marketing", desc: "Creator partnerships with disclosure requirements built into every brief." },
       { name: "Content marketing", desc: "Articles and resources that answer what your buyers are already asking." },
       { name: "Copywriting", desc: "Pages, ads, and emails written for your buyer, in your voice." },
@@ -555,15 +558,28 @@ export default function DigitalMarketingView() {
             {HOOD_GROUPS.map((group) => (
               <Reveal className={`dm-hood-group${group.full ? " full" : ""}`} key={group.label} style={d(group.delay ?? 0)}>
                 <div className="hg-label">{group.label}</div>
-                {group.items.map((item) => (
-                  <div className="dm-hood-item" key={item.name}>
-                    <span className="hi-dot"></span>
-                    <div>
-                      <div className="hi-name">{item.name}</div>
-                      <div className="hi-desc">{item.desc}</div>
+                {group.items.map((item) =>
+                  // items with their own sub-service page link through to it
+                  "href" in item && item.href ? (
+                    <a className="dm-hood-item dm-hood-link" href={item.href} key={item.name}>
+                      <span className="hi-dot"></span>
+                      <div>
+                        <div className="hi-name">
+                          {item.name} <span className="hi-go" aria-hidden="true">↗</span>
+                        </div>
+                        <div className="hi-desc">{item.desc}</div>
+                      </div>
+                    </a>
+                  ) : (
+                    <div className="dm-hood-item" key={item.name}>
+                      <span className="hi-dot"></span>
+                      <div>
+                        <div className="hi-name">{item.name}</div>
+                        <div className="hi-desc">{item.desc}</div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                )}
               </Reveal>
             ))}
           </div>

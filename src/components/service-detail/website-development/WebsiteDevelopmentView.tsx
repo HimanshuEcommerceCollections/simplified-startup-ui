@@ -143,13 +143,16 @@ const CHECKS: ReactNode[] = [
   <>Every claim, number, and image is <b>real and sourced.</b> No placeholder ships, ever.</>,
 ];
 
+/** Catalogue entries with an `href` have their own sub-service page; the rest go to the growth plan. */
 const CATALOGUE = [
   { icon: <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M3 8h18" stroke="currentColor" strokeWidth="2" /></svg>, h: "Custom website build", p: "A new site designed and built to convert — tracking installed before launch, code yours to keep." },
+  { icon: <svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>, h: "Local business websites", p: "Built to turn “near me” searches into calls, bookings, and reviews — for anyone who serves a city or service area.", href: "/website-development/local-business-websites" },
+  { icon: <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9l5 3 3-7 3 7 5-3v10z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /></svg>, h: "B2B & SaaS websites", p: "Sites for long sales cycles and buying committees — structured to generate pipeline, not compliments.", href: "/website-development/b2b-saas-websites" },
   { icon: <svg viewBox="0 0 24 24" fill="none"><path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><circle cx="9" cy="20" r="1.5" fill="currentColor" /><circle cx="18" cy="20" r="1.5" fill="currentColor" /><path d="M6 6 5 3H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>, h: "Ecommerce build", p: "A store engineered around product pages and checkout — where the sale actually happens." },
-  { icon: <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M9 7h6M9 11h6M9 15h3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>, h: "Landing pages", p: "One page for one campaign — the fastest honest fix for paid traffic that isn't converting." },
+  { icon: <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M9 7h6M9 11h6M9 15h3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>, h: "Landing pages", p: "One page for one campaign — the fastest honest fix for paid traffic that isn't converting.", href: "/website-development/landing-page-design" },
   { icon: <svg viewBox="0 0 24 24" fill="none"><path d="M4 18V9M10 18V5M16 18v-6M22 18H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>, h: "Conversion optimization", p: "More from the visitors you already have — structured testing, honestly reported." },
-  { icon: <svg viewBox="0 0 24 24" fill="none"><path d="M4 4v6h6M20 20v-6h-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /><path d="M20 10a8 8 0 0 0-14-4M4 14a8 8 0 0 0 14 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>, h: "Redesign & migration", p: "Rebuild or replatform without losing rankings — the redirect map is the deliverable." },
-  { icon: <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M8 20h8M12 16v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>, h: "Web applications", p: "Internal tools and portals, scoped tightly — with an honest build-versus-buy answer first." },
+  { icon: <svg viewBox="0 0 24 24" fill="none"><path d="M4 4v6h6M20 20v-6h-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /><path d="M20 10a8 8 0 0 0-14-4M4 14a8 8 0 0 0 14 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>, h: "Redesign & migration", p: "Rebuild or replatform without losing rankings — the redirect map is the deliverable.", href: "/website-development/website-redesign-migration" },
+  { icon: <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M8 20h8M12 16v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>, h: "Web applications", p: "Internal tools and portals, scoped tightly — with an honest build-versus-buy answer first.", href: "/website-development/web-applications" },
   { icon: <svg viewBox="0 0 24 24" fill="none"><path d="M5 12a7 7 0 0 1 14 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /><rect x="4" y="12" width="16" height="7" rx="2" stroke="currentColor" strokeWidth="2" /><circle cx="12" cy="15.5" r="1.5" fill="currentColor" /></svg>, h: "Managed hosting", p: "Monitoring, tested backups, staged updates — uptime measured and reported, not promised." },
   { icon: <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5-2.9 1-5.5-4-3.9 5.5-.8z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" /></svg>, h: "Care plans", p: "Updates, checks, and small changes within stated hours — so the site ages instead of rotting." },
 ];
@@ -364,7 +367,7 @@ export default function WebsiteDevelopmentView() {
           </Reveal>
           <Reveal className="wd-cat-grid">
             {CATALOGUE.map((cat) => (
-              <a className="wd-cat" href="/start-project" key={cat.h}>
+              <a className="wd-cat" href={cat.href ?? "/start-project"} key={cat.h}>
                 <span className="di">{cat.icon}</span>
                 <div>
                   <h3>{cat.h}</h3>

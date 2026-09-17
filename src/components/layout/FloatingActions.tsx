@@ -42,7 +42,6 @@ export default function FloatingActions() {
             Hi 👋 Tell me your business stage and biggest bottleneck, and I&apos;ll point you to the
             right service — or a human, if you want to take it further.
           </div>
-          <div className="hint">{"// UI placeholder — wire this to your AI Advisor endpoint on deploy."}</div>
         </div>
       </div>
     </>

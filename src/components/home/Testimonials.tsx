@@ -6,32 +6,32 @@ import "./testimonials.css";
 
 const TESTIMONIALS = [
   {
-    name: "Anish",
+    name: "Michael Anderson",
     quote:
       "Ninety days in and we had a live site, campaigns running, and a real pipeline. Zero stress, all senior hands from start to finish.",
   },
   {
-    name: "Aman",
+    name: "Sarah Mitchell",
     quote:
       "They exceeded our expectations on every front. The strategy and the execution both felt genuinely world-class.",
   },
   {
-    name: "Prajwal",
+    name: "David Thompson",
     quote:
       "The journey from first brief to launch was seamless. We could see everything coming together weeks before go-live instead of guessing.",
   },
   {
-    name: "Meera",
+    name: "Emily Carter",
     quote:
       "It feels like an in-house growth team we could never have afforded to hire this early. Genuinely a partner, not a vendor.",
   },
   {
-    name: "Rohan",
+    name: "Ryan Cooper",
     quote:
       "Predictable pricing, senior operators, and things that actually ship. No endless decks that just sit in a drive.",
   },
   {
-    name: "Sana",
+    name: "Lauren Bennett",
     quote:
       "One team, one plan, one person to call. The handoff gaps we used to lose weeks to are simply gone.",
   },

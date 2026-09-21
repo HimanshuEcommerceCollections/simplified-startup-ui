@@ -143,12 +143,14 @@ const MATRIX_ROWS: { axis: string; cells: string[] }[] = [
   { axis: "Price signal", cells: ["Advertised $20/mo often 20–40% of real first-year cost.", "Strategy engagements $3,000–$15,000.", "Single automations from $2,000; packages $8,000–$20,000; managed $1,000–$3,000/mo."] },
 ];
 
+/** Sub-services with an `href` have their own page; the rest go to the growth plan. */
 const SUBS = [
   { n: "01", h: "Workflow automation", p: "Repetitive processes mapped and automated, with the human-judgment steps kept explicit." },
-  { n: "02", h: "AI chatbot development", p: "Disclosed bots grounded in your real content, escalating to humans by design." },
-  { n: "03", h: "Document automation", p: "Proposals, invoices, and reports assembled from live data — reviewed where judgment lives." },
-  { n: "04", h: "Reporting automation", p: "Your weekly numbers delivered on schedule, validated against manual pulls before trust." },
-  { n: "05", h: "Systems integration", p: "Your tools connected so data entered once is correct everywhere — documented and monitored." },
+  { n: "02", h: "AI chatbot development", p: "Disclosed bots grounded in your real content, escalating to humans by design.", href: "/ai-automation/ai-chatbots" },
+  { n: "03", h: "AI voice agents", p: "An AI receptionist that answers every call 24/7 — books, qualifies, and hands off to a human when it should.", href: "/ai-automation/ai-voice-agents" },
+  { n: "04", h: "Document automation", p: "Proposals, invoices, and reports assembled from live data — reviewed where judgment lives." },
+  { n: "05", h: "Reporting automation", p: "Your weekly numbers delivered on schedule, validated against manual pulls before trust." },
+  { n: "06", h: "Systems integration", p: "Your tools connected so data entered once is correct everywhere — documented and monitored." },
 ];
 
 const FAQS = [
@@ -425,7 +427,7 @@ export default function AiAutomationView() {
           </Reveal>
           <Reveal className="aa-subs">
             {SUBS.map((sub) => (
-              <a className="aa-sub" href="/start-project" key={sub.n}>
+              <a className="aa-sub" href={sub.href ?? "/start-project"} key={sub.n}>
                 <span className="sn">{sub.n}</span>
                 <div className="st">
                   <h3>{sub.h}</h3>

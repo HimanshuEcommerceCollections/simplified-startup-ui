@@ -285,10 +285,11 @@ function VsMatrix() {
 
 /* -------- services index / faq / adjacent -------- */
 
+/** Sub-services with an `href` have their own page; the rest go to the growth plan. */
 const SUBS = [
-  { n: "01", h: "Cold email outreach", p: "Verified lists, warmed domains, and sequences in your voice — deliverability watched daily." },
-  { n: "02", h: "LinkedIn outreach", p: "Connection and conversation sequences from your profile — human replies, never a bot pretending to be you." },
-  { n: "03", h: "Appointment setting", p: "Interested replies worked and booked onto your calendar, with context attached to every meeting." },
+  { n: "01", h: "Cold email outreach", p: "Verified lists, warmed domains, and sequences in your voice — deliverability watched daily.", href: "/sales-lead-gen/cold-email" },
+  { n: "02", h: "LinkedIn outreach", p: "Connection and conversation sequences from your profile — human replies, never a bot pretending to be you.", href: "/sales-lead-gen/linkedin-outreach" },
+  { n: "03", h: "Appointment setting", p: "Interested replies worked and booked onto your calendar, with context attached to every meeting.", href: "/sales-lead-gen/appointment-setting" },
   { n: "04", h: "Lead lists & research", p: "Ideal-customer lists researched and verified — exported to your CRM, yours to keep." },
   { n: "05", h: "CRM setup & pipeline", p: "Your pipeline wired so every reply, booking, and follow-up lands somewhere you can see it." },
 ];
@@ -461,7 +462,7 @@ export default function SalesLeadGenView() {
           </Reveal>
           <Reveal className="slg-subs">
             {SUBS.map((sub) => (
-              <a className="slg-sub" href="/start-project" key={sub.n}>
+              <a className="slg-sub" href={sub.href ?? "/start-project"} key={sub.n}>
                 <span className="sn">{sub.n}</span>
                 <div className="st">
                   <h3>{sub.h}</h3>

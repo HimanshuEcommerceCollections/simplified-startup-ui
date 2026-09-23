@@ -170,13 +170,55 @@
 .nav-drop.open .nav-drop-toggle { color: var(--teal); }
 .nav-drop-head .nav-drop-btn.active + .nav-drop-toggle { color: var(--teal); }
 
-/* eight services: two columns */
-.nav-drop-panel--wide {
-  min-width: 560px;
+/* Services mega-menu: one column per service (service page + its built internal
+   pages). The panel spans the pill, so the Services item is `static` and the
+   panel positions against `.nav` instead of the Services word. */
+.nav-drop--mega { position: static; }
+.nav-drop--mega .nav-drop-panel {
+  left: 12px;
+  right: 12px;
+  min-width: 0;
+  transform: translateY(8px);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px 8px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px 20px;
+  padding: 16px 18px 12px;
 }
+/* beat `.nav-drop.open .nav-drop-panel`'s translateX(-50%) centring, which would push a full-width panel off-screen */
+.nav-links .nav-drop--mega .nav-drop-panel { transform: translateY(8px); }
+.nav-links .nav-drop--mega.open .nav-drop-panel { transform: translateY(0); }
+/* The mega panel hangs off the pill, not the Services word, so its hover bridge
+   must reach up through the pill's bottom padding to just under the link row
+   (18px gap + 20px padding − 2px so it never sits over the sibling links), or
+   the pointer leaves the item on its way down and the menu closes. */
+.nav-drop--mega .nav-drop-panel::before { top: -36px; height: 36px; }
+.nav-mega-col { min-width: 0; padding: 4px 0 8px; }
+.nav-mega-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px; }
+.nav-mega-head .nav-mega-svc { flex: 1; min-width: 0; }
+.nav-links .nav-drop-panel--mega a.nav-mega-svc { padding: 9px 10px 7px; }
+.nav-mega-toggle { display: none; } /* mobile only */
+.nav-mega-list { list-style: none; margin: 0; padding: 0 0 0 10px; display: flex; flex-direction: column; }
+.nav-links .nav-drop-panel--mega .nav-mega-list a {
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted-ink);
+  border-radius: 8px;
+}
+.nav-links .nav-drop-panel--mega .nav-mega-list a:hover,
+.nav-links .nav-drop-panel--mega .nav-mega-list a.active { color: var(--blue); background: var(--peach); }
+.nav-links .nav-drop-panel--mega a.nav-mega-all {
+  grid-column: 1 / -1;
+  margin-top: 6px;
+  padding: 12px 10px 6px;
+  border-top: 1px solid var(--peach-line);
+  border-radius: 0;
+  font-size: 14px;
+  color: var(--blue);
+}
+.nav-links .nav-drop-panel--mega a.nav-mega-all:hover { background: none; color: var(--teal-ink); }
+.nav-mega-all span { display: inline-block; transition: transform 0.25s var(--ease-premium); }
+.nav-mega-all:hover span { transform: translateX(3px); }
 .nav-drop-panel {
   position: absolute;
   top: calc(100% + 18px);
@@ -234,8 +276,30 @@
   .nav-links.show .nav-drop-head { width: 100%; justify-content: space-between; padding: 0; border-bottom: 1px solid var(--peach-line); }
   .nav-links.show .nav-drop-head .nav-drop-btn { width: auto; flex: 1; border-bottom: 0; }
   .nav-links.show .nav-drop-toggle { width: 44px; height: 44px; color: #2a2a2a; }
-  .nav-links.show .nav-drop-panel--wide { display: none; grid-template-columns: 1fr; min-width: 0; gap: 0; }
-  .nav-links.show .nav-drop.open .nav-drop-panel--wide { display: block; }
+  /* mega-menu flattens to a nested list: service rows, each with its own caret
+     that expands the internal pages one level further */
+  .nav-links.show .nav-drop--mega .nav-drop-panel { display: none; left: auto; right: auto; grid-template-columns: 1fr; gap: 0; padding: 0 0 0 14px; }
+  .nav-links.show .nav-drop--mega.open .nav-drop-panel { display: block; }
+  .nav-links.show .nav-mega-col { padding: 0; }
+  .nav-links.show .nav-mega-head { align-items: center; border-bottom: 1px solid var(--peach-line); }
+  .nav-links.show .nav-mega-head a { border-bottom: 0; }
+  .nav-links.show .nav-mega-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex: none;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #2a2a2a;
+    cursor: pointer;
+  }
+  .nav-links.show .nav-mega-col.open .nav-mega-toggle .nav-drop-caret { transform: rotate(180deg); }
+  .nav-links.show .nav-mega-list { display: none; padding-left: 14px; }
+  .nav-links.show .nav-mega-col.open .nav-mega-list { display: block; }
+  .nav-links.show .nav-mega-list a { font-size: 14px; }
+  .nav-links.show a.nav-mega-all { margin-top: 0; border-top: 0; padding: 13px 0; }
   .nav-links.show .nav-drop-panel a { padding: 12px 0; border-bottom: 1px solid var(--peach-line); border-radius: 0; }
   .nav-links.show .nav-drop-panel a small { display: none; }
 }

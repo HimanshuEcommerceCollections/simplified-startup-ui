@@ -525,6 +525,7 @@
 .dm-svc-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-family: var(--display); font-weight: 600; font-size: 14px; color: var(--blue); }
 .dm-svc-link span { display: inline-block; transition: transform 0.25s var(--ease); }
 .dm-svc-link:hover span { transform: translate(3px, -3px); }
+.dm-svc-links { display: flex; flex-wrap: wrap; gap: 0 18px; }
 .dm-hood-group.full { grid-column: 1 / -1; }
 @media (max-width: 820px) {
   .dm-hood { grid-template-columns: 1fr; gap: 22px; }

@@ -107,7 +107,12 @@ const SERVICES = [
       "Tracking verified firing before a dollar of spend — no exceptions",
       "You pay platforms directly, so you own the account and its history",
     ],
-    text: <a className="dm-svc-link" href="/digital-marketing/google-ads">See Google Ads management <span aria-hidden="true">↗</span></a>,
+    text: (
+      <span className="dm-svc-links">
+        <a className="dm-svc-link" href="/digital-marketing/google-ads">See Google Ads management <span aria-hidden="true">↗</span></a>
+        <a className="dm-svc-link" href="/digital-marketing/meta-ads">See Meta Ads management <span aria-hidden="true">↗</span></a>
+      </span>
+    ),
     delay: 80,
   },
   {
@@ -290,7 +295,7 @@ const HOOD_GROUPS = [
     delay: 80,
     items: [
       { name: "Google Ads", desc: "Search intent captured — tracking verified before a dollar of spend.", href: "/digital-marketing/google-ads" },
-      { name: "Meta Ads", desc: "Facebook and Instagram campaigns with creative that earns the stop-scroll." },
+      { name: "Meta Ads", desc: "Facebook and Instagram campaigns with creative that earns the stop-scroll.", href: "/digital-marketing/meta-ads" },
       { name: "LinkedIn Ads", desc: "For when your buyer is a title, not a demographic." },
       { name: "YouTube Ads", desc: "Video reach with frequency caps and measurement, not spray-and-pray." },
       { name: "Retargeting", desc: "Reminding warm visitors, with frequency capping mandatory — never stalking." },
@@ -321,7 +326,7 @@ const HOOD_GROUPS = [
     label: "Lifecycle & measurement",
     full: true,
     items: [
-      { name: "Email marketing", desc: "Opted-in lists only — welcome flows, campaigns, and lifecycle sends." },
+      { name: "Email marketing", desc: "Opted-in lists only — welcome flows, campaigns, and lifecycle sends.", href: "/digital-marketing/email-marketing" },
       { name: "Analytics & reporting", desc: "The monthly report that leads with numbers — what we did, what it moved, what changes." },
       { name: "Reputation management", desc: "Review generation done right — never bought, written, incentivized, or gated." },
     ],

@@ -102,6 +102,13 @@ export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
   // whether the open dropdown was opened by a mouse (hover) or by a tap / click
   const openedByMouse = useRef(false);
+  // pending hover-close; cancelled if the mouse comes back before it fires
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    return () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+    };
+  }, []);
 
   useEffect(() => {
     let ticking = false;
@@ -153,26 +160,39 @@ export default function Navbar() {
   const resourcesActive = RESOURCE_LINKS.some((link) => isActive(link.href));
 
   function closeAll() {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = null;
     setOpen(false);
     setOpenMenu(null);
     setOpenCol(null);
   }
   const toggleMenu = (menu: Menu) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = null;
     openedByMouse.current = false;
     setOpenMenu((m) => (m === menu ? null : menu));
   };
   // Hover is decided per pointer, not per device: a mouse always gets
   // hover-to-open / leave-to-close, even on a touchscreen laptop whose browser
   // reports "(hover: none)". Fingers and pens ignore these and use the toggle.
+  // Leaving closes after a short grace period so brushing the panel's edge or
+  // crossing the gap between the pill and the panel doesn't snap it shut.
+  const HOVER_CLOSE_DELAY = 150;
   const hoverProps = (menu: Menu) => ({
     onPointerEnter: (e: React.PointerEvent) => {
       if (e.pointerType !== "mouse") return;
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+      closeTimer.current = null;
       openedByMouse.current = true;
       setOpenMenu(menu);
     },
     onPointerLeave: (e: React.PointerEvent) => {
       if (e.pointerType !== "mouse") return;
-      setOpenMenu((m) => (m === menu ? null : m));
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+      closeTimer.current = setTimeout(() => {
+        closeTimer.current = null;
+        setOpenMenu((m) => (m === menu ? null : m));
+      }, HOVER_CLOSE_DELAY);
     },
   });
 

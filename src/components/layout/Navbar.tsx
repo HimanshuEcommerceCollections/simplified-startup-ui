@@ -35,6 +35,7 @@ const SERVICE_LINKS: ServiceLink[] = [
       { label: "B2B & SaaS websites", href: "/website-development/b2b-saas-websites" },
       { label: "Web applications", href: "/website-development/web-applications" },
       { label: "Redesign & migration", href: "/website-development/website-redesign-migration" },
+      { label: "Startup & MVP websites", href: "/website-development/startup-mvp-websites" },
     ],
   },
   {
@@ -44,6 +45,8 @@ const SERVICE_LINKS: ServiceLink[] = [
     children: [
       { label: "SEO", href: "/digital-marketing/seo" },
       { label: "Google Ads", href: "/digital-marketing/google-ads" },
+      { label: "Meta Ads", href: "/digital-marketing/meta-ads" },
+      { label: "Email marketing", href: "/digital-marketing/email-marketing" },
       { label: "Social media management", href: "/digital-marketing/social-media-management" },
     ],
   },

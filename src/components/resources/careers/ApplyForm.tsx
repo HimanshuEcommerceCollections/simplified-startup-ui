@@ -89,7 +89,7 @@ export default function ApplyForm({ role }: { role: Role | null }) {
           {errorMsg ?? (
             <>
               Something went wrong sending your application. Please try again — or email{" "}
-              <a href="mailto:simplifiedstartupllc@gmail.com">simplifiedstartupllc@gmail.com</a>.
+              <a href="mailto:contact@simplifiedstartup.com">contact@simplifiedstartup.com</a>.
             </>
           )}
         </p>

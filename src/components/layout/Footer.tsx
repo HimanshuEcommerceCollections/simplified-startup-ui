@@ -135,7 +135,7 @@ export default function Footer() {
                 <Link href="/start-project">Get Started form</Link>
               </li>
               <li>
-                <a href="mailto:simplifiedstartupllc@gmail.com">simplifiedstartupllc@gmail.com</a>
+                <a href="mailto:contact@simplifiedstartup.com">contact@simplifiedstartup.com</a>
               </li>
             </ul>
           </div>

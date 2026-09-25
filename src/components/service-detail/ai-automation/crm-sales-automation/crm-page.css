@@ -1,0 +1,501 @@
+/* ---------------- CRM & Sales Automation sub-page (namespaced .crm-) ---------------- */
+
+/* the design's amber tokens are not in globals */
+.crm-page { --amber: #d97706; --amber-bg: #fef3e2; }
+
+/* ---------------- hero signature: automated pipeline card ---------------- */
+/* the design's pipe-flow has 6px bottom padding + a 6px foot margin; the kit foot has no margin */
+.crm-pipe-flow { padding: 16px 18px 12px; display: flex; flex-direction: column; gap: 0; }
+.crm-pstep {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 11px;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-8px);
+}
+.crm-pipe.run .crm-pstep { animation: crmPstepIn 0.45s var(--ease) forwards; }
+.crm-pipe.run .crm-pstep:nth-child(1) { animation-delay: 0.95s; }
+.crm-pipe.run .crm-pstep:nth-child(2) { animation-delay: 1.25s; }
+.crm-pipe.run .crm-pstep:nth-child(3) { animation-delay: 1.55s; }
+.crm-pipe.run .crm-pstep:nth-child(4) { animation-delay: 1.85s; }
+.crm-pipe.run .crm-pstep:nth-child(5) { animation-delay: 2.15s; }
+@keyframes crmPstepIn {
+  to { opacity: 1; transform: none; }
+}
+.crm-pstep:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 38px;
+  bottom: -4px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--teal-bright), transparent);
+}
+.crm-pstep .pnode {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  color: var(--blue);
+  z-index: 1;
+}
+.crm-pstep .pnode svg { width: 16px; height: 16px; }
+.crm-pstep.done .pnode { background: var(--grad); color: #fff; border-color: transparent; }
+.crm-pstep .pt b { display: block; font-family: var(--display); font-weight: 600; font-size: 13px; color: var(--ink); }
+.crm-pstep .pt small { font-size: 10.5px; color: var(--muted); }
+.crm-pstep .ptag {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 5px 8px;
+  flex: none;
+  white-space: nowrap;
+}
+.crm-pstep .ptag.auto { color: var(--blue); background: rgba(37, 99, 235, 0.1); }
+.crm-pstep .ptag.score { color: #fff; background: var(--grad-fill); }
+.crm-pstep .ptag.won { color: var(--teal-ink); background: rgba(20, 184, 166, 0.14); }
+
+/* ---------------- stats (dark, count-ups) ---------------- */
+.crm-stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 760px) {
+  .crm-stat-grid { grid-template-columns: 1fr; }
+}
+.crm-stat {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  padding: 32px 28px;
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), border-color 0.3s ease;
+}
+.crm-stat:hover { transform: translateY(-5px); border-color: rgba(94, 234, 212, 0.4); }
+.crm-stat::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #60a5fa, #5eead4);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s var(--ease) 0.1s;
+}
+.crm-stat.in::before { transform: scaleX(1); }
+.crm-stat .sv {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-size: clamp(38px, 5vw, 54px);
+  line-height: 1;
+  background: linear-gradient(135deg, #60a5fa, #5eead4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0.7);
+  opacity: 0.001;
+  transition: transform 0.6s var(--ease) 0.2s, opacity 0.5s ease 0.2s;
+}
+.crm-stat.in .sv { transform: none; opacity: 1; }
+.crm-stat .sk {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-bright);
+  margin-top: 12px;
+  display: block;
+}
+.crm-stat p { font-size: 13.5px; line-height: 1.5; color: #9fb0c9; margin-top: 10px; }
+.crm-stat-note { margin-top: 24px; font-size: 15.5px; line-height: 1.6; color: #c7d3e6; }
+.crm-stat-note strong { color: #fff; font-weight: 600; }
+
+/* ---------------- 5-stage framework ---------------- */
+.crm-fw-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+@media (max-width: 960px) {
+  .crm-fw-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .crm-fw-grid { grid-template-columns: 1fr 1fr; }
+}
+.crm-fw {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 22px 18px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.crm-fw:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.crm-fw::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--ease) 0.12s;
+}
+/* the design keys these on `.fw.in`, but only the grid ever receives `.in` — keyed on the grid here */
+.crm-fw-grid.in .crm-fw::before { transform: scaleX(1); }
+.crm-fw .fn { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--teal-ink); }
+.crm-fw .fi {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--grad);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  margin: 10px 0 12px;
+  box-shadow: 0 10px 22px -10px rgba(37, 99, 235, 0.75);
+  transform: scale(0.5) rotate(-10deg);
+  opacity: 0.001;
+  transition: transform 0.55s var(--ease) 0.15s, opacity 0.4s ease 0.15s;
+}
+.crm-fw-grid.in .crm-fw .fi { transform: none; opacity: 1; }
+.crm-fw-grid.in .crm-fw:nth-child(2) .fi { transition-delay: 0.22s; }
+.crm-fw-grid.in .crm-fw:nth-child(3) .fi { transition-delay: 0.29s; }
+.crm-fw-grid.in .crm-fw:nth-child(4) .fi { transition-delay: 0.36s; }
+.crm-fw-grid.in .crm-fw:nth-child(5) .fi { transition-delay: 0.43s; }
+.crm-fw .fi svg { width: 20px; height: 20px; }
+.crm-fw h3 { font-family: var(--display); font-weight: 700; font-size: 15.5px; color: var(--ink); margin-bottom: 6px; }
+.crm-fw .fd { font-size: 12px; line-height: 1.45; color: var(--muted-ink); margin-bottom: 12px; }
+.crm-fw ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.crm-fw ul li { position: relative; padding-left: 16px; font-size: 11.5px; line-height: 1.4; color: var(--muted-ink); }
+.crm-fw ul li::before { content: ""; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: var(--grad-fill); }
+.crm-fw-note { margin-top: 24px; font-size: 15.5px; line-height: 1.6; color: var(--muted-ink); text-align: center; }
+.crm-fw-note strong { color: var(--ink); font-weight: 600; }
+
+/* ---------------- CRM comparison table ---------------- */
+.crm-tbl {
+  border: 1px solid var(--peach-line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--surface);
+}
+.crm-row { display: grid; grid-template-columns: 1fr 1.3fr 1fr 1.3fr 1.2fr; gap: 0; border-bottom: 1px solid var(--peach-line); }
+.crm-row:last-child { border-bottom: 0; }
+.crm-row.head {
+  background: var(--surface-2);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.crm-row.head > div { padding: 13px 16px; }
+.crm-row > div { padding: 16px; font-size: 13px; color: var(--muted-ink); display: flex; align-items: center; line-height: 1.45; min-width: 0; }
+.crm-row .cn { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 14.5px; }
+.crm-row .cprice { font-family: var(--mono); font-size: 11.5px; color: var(--teal-ink); }
+.crm-row .cwin { color: var(--ink); }
+@media (max-width: 820px) {
+  .crm-row { grid-template-columns: 1fr 1.4fr; }
+  .crm-row .cc3, .crm-row .cc4, .crm-row .cc5 { display: none; }
+}
+.crm-note { margin-top: 22px; font-size: 15px; line-height: 1.6; color: var(--muted-ink); }
+.crm-note strong { color: var(--ink); font-weight: 600; }
+
+/* ---------------- automations (interactive tabs) ---------------- */
+.crm-wb-wrap { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 26px; align-items: start; }
+.crm-wb-list { display: flex; flex-direction: column; gap: 6px; max-height: 460px; overflow-y: auto; padding-right: 6px; }
+.crm-wb-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--peach-line);
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 13px 15px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s var(--ease);
+  white-space: nowrap;
+}
+.crm-wb-btn:hover { border-color: rgba(37, 99, 235, 0.4); }
+.crm-wb-btn .di {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  flex: none;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.crm-wb-btn .di svg { width: 18px; height: 18px; }
+.crm-wb-btn .dn b { display: block; font-family: var(--display); font-weight: 600; font-size: 14px; color: var(--ink); }
+.crm-wb-btn .dn small { font-size: 11px; color: var(--muted); }
+.crm-wb-btn[aria-selected="true"] {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(20, 184, 166, 0.08));
+  border-color: transparent;
+  transform: translateX(3px);
+}
+.crm-wb-btn[aria-selected="true"] .di { background: var(--grad); color: #fff; border-color: transparent; }
+.crm-wb-panel {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  min-height: 340px;
+}
+.crm-wb-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1.4px;
+  background: var(--grad);
+  opacity: 0.4;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.crm-wp-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 26px 28px;
+  border-bottom: 1px dashed var(--peach-line);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.04), transparent);
+}
+.crm-wp-top .big {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--grad);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex: none;
+  box-shadow: 0 12px 26px -12px rgba(37, 99, 235, 0.7);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 20px;
+}
+.crm-wp-top .big svg { width: 24px; height: 24px; }
+.crm-wp-top h3 { font-family: var(--display); font-weight: 700; font-size: clamp(19px, 2.4vw, 25px); color: var(--ink); }
+.crm-wp-body { padding: 24px 28px 28px; }
+.crm-wp-body .k {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin: 18px 0 14px;
+}
+.crm-trg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+  background: var(--amber-bg);
+  border-radius: 100px;
+  padding: 7px 12px;
+  width: fit-content;
+  margin-bottom: 6px;
+}
+.crm-trg svg { width: 12px; height: 12px; }
+.crm-trg-txt { font-size: 14.5px; line-height: 1.5; color: var(--ink); font-weight: 500; margin-bottom: 2px; }
+.crm-wp-list { display: grid; grid-template-columns: 1fr 1fr; gap: 11px 22px; }
+.crm-wp-list div { position: relative; padding-left: 26px; font-size: 14px; line-height: 1.5; color: var(--muted-ink); }
+.crm-wp-list div::before { content: ""; position: absolute; left: 0; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: rgba(20, 184, 166, 0.15); }
+.crm-wp-list div::after { content: "✓"; position: absolute; left: 3.5px; top: 0.5px; font-size: 10px; font-weight: 700; color: var(--teal-ink); }
+.crm-wp-fade { animation: crmWpIn 0.4s var(--ease); }
+@keyframes crmWpIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@media (max-width: 820px) {
+  .crm-wb-wrap { grid-template-columns: 1fr; gap: 18px; }
+  .crm-wb-list { flex-direction: row; flex-wrap: nowrap; overflow-x: auto; max-height: none; padding-bottom: 8px; }
+  .crm-wb-btn { width: auto; }
+}
+@media (max-width: 560px) {
+  .crm-wp-list { grid-template-columns: 1fr; }
+  .crm-wp-top { padding: 22px 20px; }
+  .crm-wp-body { padding: 20px 20px 24px; }
+}
+
+/* ---------------- what's included (8) ----------------
+   the design ships this markup without any CSS; styled after the
+   ai-voice-agents port's included grid (same markup, same family) */
+.crm-inc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--peach-line);
+  border: 1px solid var(--peach-line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+@media (max-width: 960px) {
+  .crm-inc-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .crm-inc-grid { grid-template-columns: 1fr; }
+}
+.crm-inc { background: var(--surface); padding: 24px; transition: background 0.25s ease; }
+.crm-inc:hover { background: var(--surface-2); }
+.crm-inc .ihead { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.crm-inc .ii {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  flex: none;
+  transition: transform 0.55s var(--ease), opacity 0.45s ease, background 0.3s ease, color 0.3s ease;
+  transform: scale(0.6) rotate(-8deg);
+  opacity: 0.001;
+}
+.crm-inc-grid.in .ii { transform: none; opacity: 1; }
+.crm-inc-grid.in .crm-inc:nth-child(1) .ii { transition-delay: 0.08s; }
+.crm-inc-grid.in .crm-inc:nth-child(2) .ii { transition-delay: 0.15s; }
+.crm-inc-grid.in .crm-inc:nth-child(3) .ii { transition-delay: 0.22s; }
+.crm-inc-grid.in .crm-inc:nth-child(4) .ii { transition-delay: 0.29s; }
+.crm-inc-grid.in .crm-inc:nth-child(5) .ii { transition-delay: 0.36s; }
+.crm-inc-grid.in .crm-inc:nth-child(6) .ii { transition-delay: 0.43s; }
+.crm-inc-grid.in .crm-inc:nth-child(7) .ii { transition-delay: 0.5s; }
+.crm-inc-grid.in .crm-inc:nth-child(8) .ii { transition-delay: 0.57s; }
+.crm-inc:hover .ii { background: var(--grad); color: #fff; border-color: transparent; }
+.crm-inc .ii svg { width: 19px; height: 19px; }
+.crm-inc .in-no { font-family: var(--mono); font-size: 10.5px; color: var(--teal-ink); font-weight: 700; display: block; }
+.crm-inc h3 { font-family: var(--display); font-weight: 700; font-size: 15.5px; color: var(--ink); }
+.crm-inc p { font-size: 13px; line-height: 1.5; color: var(--muted-ink); }
+
+/* ---------------- who this is for (light, icon + copy) ---------------- */
+.crm-who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 860px) {
+  .crm-who-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .crm-who-grid { grid-template-columns: 1fr; }
+}
+.crm-who {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.crm-who:hover { transform: translateY(-4px); border-color: rgba(37, 99, 235, 0.34); }
+.crm-who .wi {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(20, 184, 166, 0.14);
+  color: var(--teal-ink);
+  display: grid;
+  place-items: center;
+  flex: none;
+  transform: scale(0.55);
+  opacity: 0.001;
+  transition: transform 0.5s var(--ease) 0.12s, opacity 0.4s ease 0.12s;
+}
+.crm-who.in .wi { transform: none; opacity: 1; }
+.crm-who .wi svg { width: 18px; height: 18px; }
+.crm-who p { font-size: 14px; line-height: 1.55; color: var(--muted-ink); }
+.crm-who p strong { color: var(--ink); font-weight: 600; }
+
+/* ---------------- how it works (5-up, week pills) ---------------- */
+.crm-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+@media (max-width: 960px) {
+  .crm-steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .crm-steps { grid-template-columns: 1fr; }
+}
+.crm-step {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.crm-step:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.crm-step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s var(--ease) 0.12s;
+}
+.crm-step.in::before { transform: scaleX(1); }
+.crm-step-no {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 6px 11px;
+  border-radius: 100px;
+  background: var(--grad);
+  display: inline-block;
+  box-shadow: 0 10px 22px -10px rgba(37, 99, 235, 0.75);
+  margin-bottom: 14px;
+  transform: scale(0.6);
+  opacity: 0.001;
+  transition: transform 0.5s var(--ease) 0.2s, opacity 0.4s ease 0.2s;
+}
+.crm-step.in .crm-step-no { transform: none; opacity: 1; }
+.crm-step h3 { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--ink); margin-bottom: 8px; }
+.crm-step p { font-size: 12.5px; line-height: 1.5; color: var(--muted-ink); }
+
+/* ---------------- reduced motion: animation-driven copy must stay visible ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .crm-pstep { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .crm-stat .sv, .crm-fw .fi, .crm-who .wi, .crm-step-no, .crm-inc-grid .ii {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .crm-stat::before, .crm-fw::before, .crm-step::before { transform: scaleX(1) !important; }
+  .crm-wp-fade { animation: none !important; }
+}

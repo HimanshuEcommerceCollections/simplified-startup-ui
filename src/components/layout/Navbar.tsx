@@ -57,6 +57,8 @@ const SERVICE_LINKS: ServiceLink[] = [
     children: [
       { label: "AI chatbots", href: "/ai-automation/ai-chatbots" },
       { label: "AI voice agents", href: "/ai-automation/ai-voice-agents" },
+      { label: "CRM & sales automation", href: "/ai-automation/crm-sales-automation" },
+      { label: "AI content & marketing", href: "/ai-automation/ai-content-marketing" },
     ],
   },
   {

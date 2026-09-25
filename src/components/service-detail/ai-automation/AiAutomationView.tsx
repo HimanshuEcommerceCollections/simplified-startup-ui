@@ -151,6 +151,8 @@ const SUBS = [
   { n: "04", h: "Document automation", p: "Proposals, invoices, and reports assembled from live data — reviewed where judgment lives." },
   { n: "05", h: "Reporting automation", p: "Your weekly numbers delivered on schedule, validated against manual pulls before trust." },
   { n: "06", h: "Systems integration", p: "Your tools connected so data entered once is correct everywhere — documented and monitored." },
+  { n: "07", h: "CRM & sales automation", p: "HubSpot, Salesforce, GoHighLevel, or Pipedrive set up so leads get scored, routed, and followed up without a human touch.", href: "/ai-automation/crm-sales-automation" },
+  { n: "08", h: "AI content & marketing automation", p: "Blog, social, and email produced at scale in your voice — AI drafts, a human editor finishes, every time.", href: "/ai-automation/ai-content-marketing" },
 ];
 
 const FAQS = [

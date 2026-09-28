@@ -46,8 +46,11 @@ const SERVICE_LINKS: ServiceLink[] = [
       { label: "SEO", href: "/digital-marketing/seo" },
       { label: "Google Ads", href: "/digital-marketing/google-ads" },
       { label: "Meta Ads", href: "/digital-marketing/meta-ads" },
+      { label: "LinkedIn Ads", href: "/digital-marketing/linkedin-ads" },
       { label: "Email marketing", href: "/digital-marketing/email-marketing" },
       { label: "Social media management", href: "/digital-marketing/social-media-management" },
+      { label: "Content marketing", href: "/digital-marketing/content-marketing" },
+      { label: "AI search & GEO", href: "/digital-marketing/ai-search-geo" },
     ],
   },
   {

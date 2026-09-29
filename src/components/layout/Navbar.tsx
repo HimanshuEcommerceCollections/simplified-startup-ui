@@ -31,6 +31,7 @@ const SERVICE_LINKS: ServiceLink[] = [
     hint: "A site that sells while you sleep",
     children: [
       { label: "Landing pages", href: "/website-development/landing-page-design" },
+      { label: "E-commerce websites", href: "/website-development/ecommerce" },
       { label: "Local business websites", href: "/website-development/local-business-websites" },
       { label: "B2B & SaaS websites", href: "/website-development/b2b-saas-websites" },
       { label: "Web applications", href: "/website-development/web-applications" },

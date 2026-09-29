@@ -31,6 +31,7 @@ const SERVICE_LINKS: ServiceLink[] = [
     hint: "A site that sells while you sleep",
     children: [
       { label: "Landing pages", href: "/website-development/landing-page-design" },
+      { label: "E-commerce websites", href: "/website-development/ecommerce" },
       { label: "Local business websites", href: "/website-development/local-business-websites" },
       { label: "B2B & SaaS websites", href: "/website-development/b2b-saas-websites" },
       { label: "Web applications", href: "/website-development/web-applications" },
@@ -46,8 +47,11 @@ const SERVICE_LINKS: ServiceLink[] = [
       { label: "SEO", href: "/digital-marketing/seo" },
       { label: "Google Ads", href: "/digital-marketing/google-ads" },
       { label: "Meta Ads", href: "/digital-marketing/meta-ads" },
+      { label: "LinkedIn Ads", href: "/digital-marketing/linkedin-ads" },
       { label: "Email marketing", href: "/digital-marketing/email-marketing" },
       { label: "Social media management", href: "/digital-marketing/social-media-management" },
+      { label: "Content marketing", href: "/digital-marketing/content-marketing" },
+      { label: "AI search & GEO", href: "/digital-marketing/ai-search-geo" },
     ],
   },
   {

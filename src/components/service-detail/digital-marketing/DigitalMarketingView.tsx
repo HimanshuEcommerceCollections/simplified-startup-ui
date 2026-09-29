@@ -92,7 +92,12 @@ const SERVICES = [
       "Keyword architecture built around what your buyers actually search",
       "Not what’s easy to rank for — what’s worth ranking for",
     ],
-    text: <a className="dm-svc-link" href="/digital-marketing/seo">See the SEO service <span aria-hidden="true">↗</span></a>,
+    text: (
+      <span className="dm-svc-links">
+        <a className="dm-svc-link" href="/digital-marketing/seo">See the SEO service <span aria-hidden="true">↗</span></a>
+        <a className="dm-svc-link" href="/digital-marketing/ai-search-geo">See AI search & GEO <span aria-hidden="true">↗</span></a>
+      </span>
+    ),
   },
   {
     icon: (
@@ -111,6 +116,7 @@ const SERVICES = [
       <span className="dm-svc-links">
         <a className="dm-svc-link" href="/digital-marketing/google-ads">See Google Ads management <span aria-hidden="true">↗</span></a>
         <a className="dm-svc-link" href="/digital-marketing/meta-ads">See Meta Ads management <span aria-hidden="true">↗</span></a>
+        <a className="dm-svc-link" href="/digital-marketing/linkedin-ads">See LinkedIn Ads management <span aria-hidden="true">↗</span></a>
       </span>
     ),
     delay: 80,
@@ -129,7 +135,12 @@ const SERVICES = [
       "Written by a person, finished by a person, in your voice",
       "If a reader could tell it was machine-made, it doesn’t ship",
     ],
-    text: <a className="dm-svc-link" href="/digital-marketing/social-media-management">See social media management <span aria-hidden="true">↗</span></a>,
+    text: (
+      <span className="dm-svc-links">
+        <a className="dm-svc-link" href="/digital-marketing/social-media-management">See social media management <span aria-hidden="true">↗</span></a>
+        <a className="dm-svc-link" href="/digital-marketing/content-marketing">See content marketing <span aria-hidden="true">↗</span></a>
+      </span>
+    ),
     delay: 160,
   },
   {
@@ -286,7 +297,7 @@ const HOOD_GROUPS = [
       { name: "Local SEO", desc: "Show up where your customers are standing — maps, local packs, citations." },
       { name: "Technical SEO", desc: "Speed, structure, indexing, and the plumbing rankings quietly depend on." },
       { name: "Google Business Profile", desc: "The listing customers see first, kept accurate, active, and answering." },
-      { name: "AI search optimization", desc: "Structured, extractable answers for the search engines that now write answers." },
+      { name: "AI search optimization", desc: "Structured, extractable answers for the search engines that now write answers.", href: "/digital-marketing/ai-search-geo" },
     ],
   },
   {
@@ -296,7 +307,7 @@ const HOOD_GROUPS = [
     items: [
       { name: "Google Ads", desc: "Search intent captured — tracking verified before a dollar of spend.", href: "/digital-marketing/google-ads" },
       { name: "Meta Ads", desc: "Facebook and Instagram campaigns with creative that earns the stop-scroll.", href: "/digital-marketing/meta-ads" },
-      { name: "LinkedIn Ads", desc: "For when your buyer is a title, not a demographic." },
+      { name: "LinkedIn Ads", desc: "For when your buyer is a title, not a demographic.", href: "/digital-marketing/linkedin-ads" },
       { name: "YouTube Ads", desc: "Video reach with frequency caps and measurement, not spray-and-pray." },
       { name: "Retargeting", desc: "Reminding warm visitors, with frequency capping mandatory — never stalking." },
     ],
@@ -307,7 +318,7 @@ const HOOD_GROUPS = [
     items: [
       { name: "Social media management", desc: "Calendar, creation, posting, and community — run as one service, on a stated cadence.", href: "/digital-marketing/social-media-management" },
       { name: "Influencer marketing", desc: "Creator partnerships with disclosure requirements built into every brief." },
-      { name: "Content marketing", desc: "Articles and resources that answer what your buyers are already asking." },
+      { name: "Content marketing", desc: "Articles and resources that answer what your buyers are already asking.", href: "/digital-marketing/content-marketing" },
       { name: "Copywriting", desc: "Pages, ads, and emails written for your buyer, in your voice." },
       { name: "Video marketing", desc: "Short-form and explainer video, planned for the platforms it runs on." },
     ],

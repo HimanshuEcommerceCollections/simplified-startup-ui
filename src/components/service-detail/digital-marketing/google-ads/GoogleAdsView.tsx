@@ -506,7 +506,6 @@ export default function GoogleAdsView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="Search · Shopping · Performance Max · YouTube"
         line1="Turn ad spend into"
         line2={
           <>

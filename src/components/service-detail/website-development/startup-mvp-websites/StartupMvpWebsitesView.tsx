@@ -409,7 +409,6 @@ export default function StartupMvpWebsitesView() {
     <div className="mvp-page">
       <ServiceDetailHero
         crumb={{ label: "Website Development", href: "/website-development" }}
-        eyebrow="Built for founders · Launch in 2–4 weeks · Fixed price"
         className="mvp-hero"
         compact
         line1="A startup site that’s"

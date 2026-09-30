@@ -570,7 +570,6 @@ export default function AppointmentSettingView() {
         compact
         className="apt-hero"
         crumb={{ label: "Sales & Lead Generation", href: "/sales-lead-gen" }}
-        eyebrow="Qualified meetings · On your calendar · Done-for-you"
         line1="Qualified meetings, booked"
         line2={
           <>

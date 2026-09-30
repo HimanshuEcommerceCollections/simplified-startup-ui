@@ -376,7 +376,6 @@ export default function ContentMarketingView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="SEO content · Topic clusters · E-E-A-T · AI Overviews"
         line1="Content that ranks"
         line2={
           <>

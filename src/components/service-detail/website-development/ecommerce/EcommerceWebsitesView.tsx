@@ -466,7 +466,6 @@ export default function EcommerceWebsitesView() {
     <>
       <ServiceDetailHero
         crumb={{ label: "Website Development", href: "/website-development" }}
-        eyebrow="Shopify · WooCommerce · Built to convert"
         className="ecw-hero"
         compact
         line1="An online store built"

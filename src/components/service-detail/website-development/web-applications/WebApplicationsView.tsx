@@ -634,7 +634,6 @@ export default function WebApplicationsView() {
         compact
         className="wa-hero"
         crumb={{ label: "Website Development", href: "/website-development" }}
-        eyebrow="Web apps · SaaS · Internal tools · Portals"
         line1="Custom software,"
         line2={
           <>

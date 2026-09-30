@@ -550,7 +550,6 @@ export default function AiContentMarketingView() {
     <div className="acm-page">
       <ServiceDetailHero
         crumb={{ label: "AI Automation", href: "/ai-automation" }}
-        eyebrow="AI content at scale · Human editorial · Brand-voice trained"
         line1="AI content that doesn’t"
         line2={
           <>

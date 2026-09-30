@@ -393,7 +393,6 @@ export default function LandingPageDesignView() {
     <div className="lp-page">
       <ServiceDetailHero
         crumb={{ label: "Website Development", href: "/website-development" }}
-        eyebrow="Single-goal pages · Built to convert · Live in days"
         line1="Landing pages designed"
         line2={
           <>

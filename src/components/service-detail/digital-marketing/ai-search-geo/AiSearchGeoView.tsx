@@ -447,7 +447,6 @@ export default function AiSearchGeoView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="GEO · AI Overviews · ChatGPT · Perplexity · Claude · Gemini"
         line1="Get cited in the AI answers"
         line2={
           <>

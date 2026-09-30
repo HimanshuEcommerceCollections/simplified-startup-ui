@@ -527,7 +527,6 @@ export default function AiChatbotsView() {
     <div className="cb-page">
       <ServiceDetailHero
         crumb={{ label: "AI Automation", href: "/ai-automation" }}
-        eyebrow="AI chatbots for websites · Custom-trained · Live in 2–4 weeks"
         line1="An AI chatbot trained"
         line2={
           <>

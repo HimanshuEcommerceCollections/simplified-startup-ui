@@ -449,7 +449,6 @@ export default function EmailMarketingView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="Campaigns · Automations · List growth · Deliverability"
         line1="The $42-per-$1 channel"
         line2={
           <>

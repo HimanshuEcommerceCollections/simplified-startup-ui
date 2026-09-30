@@ -707,7 +707,6 @@ export default function LinkedinOutreachView() {
         compact
         className="lio-hero"
         crumb={{ label: "Sales & Lead Generation", href: "/sales-lead-gen" }}
-        eyebrow="Profile · Outreach · Content · One complete system"
         line1="LinkedIn lead gen that"
         line2={
           <>

@@ -584,7 +584,6 @@ export default function LocalBusinessWebsitesView() {
     <>
       <ServiceDetailHero
         crumb={{ label: "Website Development", href: "/website-development" }}
-        eyebrow="Local business · Bookings · Calls · Reviews"
         line1="A website that turns local"
         line2={
           <>

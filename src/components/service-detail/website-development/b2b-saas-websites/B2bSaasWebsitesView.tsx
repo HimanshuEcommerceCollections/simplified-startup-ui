@@ -729,7 +729,6 @@ export default function B2bSaasWebsitesView() {
     <>
       <ServiceDetailHero
         crumb={{ label: "Website Development", href: "/website-development" }}
-        eyebrow="B2B · SaaS · Pipeline-focused · Webflow or WordPress"
         className="b2b-hero"
         compact
         line1="Your website should be your"

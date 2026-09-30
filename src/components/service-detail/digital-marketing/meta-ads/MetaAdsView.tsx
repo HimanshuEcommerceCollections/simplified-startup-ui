@@ -549,7 +549,6 @@ export default function MetaAdsView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="Facebook · Instagram · Reels · Messenger · WhatsApp"
         line1="Ads people actually"
         line2={
           <>

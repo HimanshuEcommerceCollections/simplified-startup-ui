@@ -471,7 +471,6 @@ export default function LinkedInAdsView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="LinkedIn Ads for B2B · SaaS · Consulting · ABM"
         line1="LinkedIn Ads that reach"
         line2={
           <>

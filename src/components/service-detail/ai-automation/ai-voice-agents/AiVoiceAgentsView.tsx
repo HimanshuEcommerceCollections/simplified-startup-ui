@@ -482,7 +482,6 @@ export default function AiVoiceAgentsView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "AI Automation", href: "/ai-automation" }}
-        eyebrow="AI receptionist · 24/7 call answering · Live in days"
         line1="An AI receptionist that"
         line2={
           <>

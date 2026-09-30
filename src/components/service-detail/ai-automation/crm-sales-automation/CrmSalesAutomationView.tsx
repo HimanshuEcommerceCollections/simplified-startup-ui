@@ -474,7 +474,6 @@ export default function CrmSalesAutomationView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "AI Automation", href: "/ai-automation" }}
-        eyebrow="HubSpot · Salesforce · GoHighLevel · Pipedrive · AI-powered"
         line1="A sales pipeline that"
         line2={
           <>

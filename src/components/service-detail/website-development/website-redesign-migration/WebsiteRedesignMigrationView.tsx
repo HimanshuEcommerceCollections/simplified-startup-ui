@@ -446,7 +446,6 @@ export default function WebsiteRedesignMigrationView() {
     <>
       <ServiceDetailHero
         crumb={{ label: "Website Development", href: "/website-development" }}
-        eyebrow="Redesign · Replatform · Migration"
         line1="Redesign or migrate"
         line2={
           <>

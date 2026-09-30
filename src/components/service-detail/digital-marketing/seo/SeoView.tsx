@@ -454,7 +454,6 @@ export default function SeoView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="Organic search · Content · AI discoverability"
         line1="Show up where your"
         line2={
           <>

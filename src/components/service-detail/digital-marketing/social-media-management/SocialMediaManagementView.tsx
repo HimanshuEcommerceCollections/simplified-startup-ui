@@ -702,7 +702,6 @@ export default function SocialMediaManagementView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="Strategy · Content · Posting · Community · Growth"
         line1="Show up on social every day"
         line2={
           <>

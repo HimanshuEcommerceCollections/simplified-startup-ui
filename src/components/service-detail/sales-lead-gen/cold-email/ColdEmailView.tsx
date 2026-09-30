@@ -681,7 +681,6 @@ export default function ColdEmailView() {
         compact
         className="ce-hero"
         crumb={{ label: "Sales & Lead Generation", href: "/sales-lead-gen" }}
-        eyebrow="Deliverability-first · Done-for-you · Qualified replies"
         line1="Cold email that lands"
         line2={
           <>

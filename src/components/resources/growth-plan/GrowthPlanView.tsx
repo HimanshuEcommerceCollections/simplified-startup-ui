@@ -246,160 +246,7 @@ export default function GrowthPlanView() {
         </div>
       </section>
 
-      {/* 2 · WHAT THE PLAN IS */}
-      <section className="band gp-what" id="what">
-        <div className="wrap">
-          <div className="gp-split">
-            <Reveal className="sec-head gp-split-l">
-              <span className="eyebrow">What the plan is</span>
-              <h2>One page, written for your business.</h2>
-              <p>
-                By the person you spoke with — not a template. Short on purpose. A forty-page deck is easy to make and
-                hard to use.
-              </p>
-            </Reveal>
-            <ul className="gp-list gp-split-r">
-              {PLAN_ITEMS.map((item, i) => (
-                <Reveal as="li" className="gp-li" key={i} style={d(i * 90)}>
-                  {CHECK}
-                  <p>{item}</p>
-                </Reveal>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* 3 · HOW IT WORKS */}
-      <section className="band tint gp-how" id="how">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">How it works</span>
-            <h2>Three steps. Then the next move is yours.</h2>
-            <p>Two minutes on the form, forty-five in a session, a few working days for the plan. We don&apos;t chase.</p>
-          </Reveal>
-          <div className={`gp-steps${stepsIn ? " in" : ""}`} ref={stepsRef}>
-            <div className="gp-line-track" aria-hidden="true">
-              <span className="gp-line-fill"></span>
-            </div>
-            {STEPS.map((step, i) => (
-              <Reveal className="gp-stepcard" key={step.h} style={d(i * 140)}>
-                <span className="gp-num">{String(i + 1).padStart(2, "0")}</span>
-                <h3>{step.h}</h3>
-                <p>{step.p}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4 · WHAT YOU GET BACK */}
-      <section className="band gp-get" id="get">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">What you get back</span>
-            <h2>Everything you need to decide — nothing you don&apos;t.</h2>
-          </Reveal>
-          <div className="gp-get-grid">
-            {GETS.map((get, i) => (
-              <Reveal className="gp-getcard" key={get.h} style={d(i * 80)}>
-                <span className="gp-getico">{get.ico}</span>
-                <h3>{get.h}</h3>
-                <p>{get.p}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5 · WHERE PLANS USUALLY LEAD */}
-      <section className="band tint gp-services" id="services">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">Where plans usually lead</span>
-            <h2>Six services. Fixed scope, published prices.</h2>
-            <p>Nothing quoted by the hour. Most plans recommend two or three — rarely all six at once.</p>
-          </Reveal>
-          <div className="gp-svc-grid" ref={svcGridRef}>
-            {SERVICES.map((svc, i) => (
-              <Reveal as="article" className="gp-svc" key={svc.h} style={d(i * 80)}>
-                <span className="gp-svc-mx"></span>
-                <h3>{svc.h}</h3>
-                <p>{svc.p}</p>
-                <span className="gp-when">{svc.when}</span>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6 · WHY IT'S FREE */}
-      <section className="band dark gp-free" id="free">
-        <div className="gp-free-glow" aria-hidden="true"></div>
-        <div className="wrap">
-          <Reveal className="gp-free-inner">
-            <span className="eyebrow">Why it&apos;s free</span>
-            <h2 style={{ color: "#fff" }}>Openly self-interested.</h2>
-            <p>
-              Some founders read their plan and ask us to run it. That only works if the plan is good on its own.
-              Everyone else keeps a document worth keeping.
-            </p>
-            <p className="gp-free-kicker">Thin free advice costs us more than none.</p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 7 · WHATEVER STAGE */}
-      <section className="band gp-stage" id="stage">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">Whatever stage you&apos;re at</span>
-            <h2>The process doesn&apos;t change. The emphasis does.</h2>
-          </Reveal>
-          <div className="gp-stage-grid">
-            {STAGES.map((stage, i) => (
-              <Reveal as="article" className="gp-stagecard" key={stage.k} style={d(i * 120)}>
-                <span className="gp-stage-k">{stage.k}</span>
-                <p>{stage.p}</p>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal as="p" className="gp-stage-note">
-            Not sure which one you are? That&apos;s fine — say so in the form. Placing you is part of the session, not
-            something you need to work out first.
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 8 · FAQ */}
-      <section className="band tint gp-faq" id="faq">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">Frequently asked</span>
-            <h2>The straight answers.</h2>
-          </Reveal>
-          <Reveal className="gp-acc">
-            {FAQS.map((faq, i) => {
-              const open = openFaq === i;
-              return (
-                <div className={`gp-item${open ? " open" : ""}`} key={faq.q}>
-                  <button className="gp-summary" aria-expanded={open} onClick={() => setOpenFaq(open ? -1 : i)}>
-                    <span>{faq.q}</span>
-                    <span className="gp-chev" aria-hidden="true"></span>
-                  </button>
-                  {open && (
-                    <div className="gp-a">
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 9 · REQUEST */}
+      {/* 2 · REQUEST */}
       <section className="band gp-request" id="request" ref={formInViewRef}>
         <div className="wrap">
           <div className={`gp-form-wrap reveal${formIn ? " in" : ""}`} ref={formWrapRef}>
@@ -515,6 +362,159 @@ export default function GrowthPlanView() {
               </div>
             </>
           </div>
+        </div>
+      </section>
+
+      {/* 3 · WHAT THE PLAN IS */}
+      <section className="band gp-what" id="what">
+        <div className="wrap">
+          <div className="gp-split">
+            <Reveal className="sec-head gp-split-l">
+              <span className="eyebrow">What the plan is</span>
+              <h2>One page, written for your business.</h2>
+              <p>
+                By the person you spoke with — not a template. Short on purpose. A forty-page deck is easy to make and
+                hard to use.
+              </p>
+            </Reveal>
+            <ul className="gp-list gp-split-r">
+              {PLAN_ITEMS.map((item, i) => (
+                <Reveal as="li" className="gp-li" key={i} style={d(i * 90)}>
+                  {CHECK}
+                  <p>{item}</p>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 4 · HOW IT WORKS */}
+      <section className="band tint gp-how" id="how">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">How it works</span>
+            <h2>Three steps. Then the next move is yours.</h2>
+            <p>Two minutes on the form, forty-five in a session, a few working days for the plan. We don&apos;t chase.</p>
+          </Reveal>
+          <div className={`gp-steps${stepsIn ? " in" : ""}`} ref={stepsRef}>
+            <div className="gp-line-track" aria-hidden="true">
+              <span className="gp-line-fill"></span>
+            </div>
+            {STEPS.map((step, i) => (
+              <Reveal className="gp-stepcard" key={step.h} style={d(i * 140)}>
+                <span className="gp-num">{String(i + 1).padStart(2, "0")}</span>
+                <h3>{step.h}</h3>
+                <p>{step.p}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5 · WHAT YOU GET BACK */}
+      <section className="band gp-get" id="get">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">What you get back</span>
+            <h2>Everything you need to decide — nothing you don&apos;t.</h2>
+          </Reveal>
+          <div className="gp-get-grid">
+            {GETS.map((get, i) => (
+              <Reveal className="gp-getcard" key={get.h} style={d(i * 80)}>
+                <span className="gp-getico">{get.ico}</span>
+                <h3>{get.h}</h3>
+                <p>{get.p}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6 · WHERE PLANS USUALLY LEAD */}
+      <section className="band tint gp-services" id="services">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">Where plans usually lead</span>
+            <h2>Six services. Fixed scope, published prices.</h2>
+            <p>Nothing quoted by the hour. Most plans recommend two or three — rarely all six at once.</p>
+          </Reveal>
+          <div className="gp-svc-grid" ref={svcGridRef}>
+            {SERVICES.map((svc, i) => (
+              <Reveal as="article" className="gp-svc" key={svc.h} style={d(i * 80)}>
+                <span className="gp-svc-mx"></span>
+                <h3>{svc.h}</h3>
+                <p>{svc.p}</p>
+                <span className="gp-when">{svc.when}</span>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7 · WHY IT'S FREE */}
+      <section className="band dark gp-free" id="free">
+        <div className="gp-free-glow" aria-hidden="true"></div>
+        <div className="wrap">
+          <Reveal className="gp-free-inner">
+            <span className="eyebrow">Why it&apos;s free</span>
+            <h2 style={{ color: "#fff" }}>Openly self-interested.</h2>
+            <p>
+              Some founders read their plan and ask us to run it. That only works if the plan is good on its own.
+              Everyone else keeps a document worth keeping.
+            </p>
+            <p className="gp-free-kicker">Thin free advice costs us more than none.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 8 · WHATEVER STAGE */}
+      <section className="band gp-stage" id="stage">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">Whatever stage you&apos;re at</span>
+            <h2>The process doesn&apos;t change. The emphasis does.</h2>
+          </Reveal>
+          <div className="gp-stage-grid">
+            {STAGES.map((stage, i) => (
+              <Reveal as="article" className="gp-stagecard" key={stage.k} style={d(i * 120)}>
+                <span className="gp-stage-k">{stage.k}</span>
+                <p>{stage.p}</p>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal as="p" className="gp-stage-note">
+            Not sure which one you are? That&apos;s fine — say so in the form. Placing you is part of the session, not
+            something you need to work out first.
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 9 · FAQ */}
+      <section className="band tint gp-faq" id="faq">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">Frequently asked</span>
+            <h2>The straight answers.</h2>
+          </Reveal>
+          <Reveal className="gp-acc">
+            {FAQS.map((faq, i) => {
+              const open = openFaq === i;
+              return (
+                <div className={`gp-item${open ? " open" : ""}`} key={faq.q}>
+                  <button className="gp-summary" aria-expanded={open} onClick={() => setOpenFaq(open ? -1 : i)}>
+                    <span>{faq.q}</span>
+                    <span className="gp-chev" aria-hidden="true"></span>
+                  </button>
+                  {open && (
+                    <div className="gp-a">
+                      <p>{faq.a}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </Reveal>
         </div>
       </section>
 

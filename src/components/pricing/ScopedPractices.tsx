@@ -56,7 +56,7 @@ export default function ScopedPractices() {
     <section className="band" id="scoped" aria-label="Scoped practices">
       <div className="wrap">
         <div className="sec-head">
-          <span className="eyebrow">— Six practices, one pricing model</span>
+          <span className="eyebrow">Six practices, one pricing model</span>
           <h2>Scoped practices</h2>
         </div>
         <p className="scoped-lead">

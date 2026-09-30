@@ -96,7 +96,7 @@ export default function HowItRuns() {
     <section className="band" aria-label="How it runs">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— How it runs</span>
+          <span className="eyebrow">How it runs</span>
           <h2>Three steps. No mysteries.</h2>
         </Reveal>
         <div className="bk-steps" ref={stepsRef}>

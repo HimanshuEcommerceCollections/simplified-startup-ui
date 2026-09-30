@@ -149,7 +149,7 @@ export default function ServiceExplorer() {
     <section className="band" id="services" aria-label="The services">
       <div className="wrap">
         <Reveal className="sec-head cap-head">
-          <span className="eyebrow">— Everything, in detail</span>
+          <span className="eyebrow">Everything, in detail</span>
           <h2 className="cap-title">Eight services. One team that runs them.</h2>
           <p className="svc-sub">
             Take one, take a bundle, or take the whole stack. Each is named, scoped, and priced up

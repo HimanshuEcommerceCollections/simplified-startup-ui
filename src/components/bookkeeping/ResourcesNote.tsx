@@ -6,7 +6,7 @@ export default function ResourcesNote() {
     <section className="band" aria-label="From the resources desk">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— From the resources desk</span>
+          <span className="eyebrow">From the resources desk</span>
           <h2>Read before you decide.</h2>
         </Reveal>
         <Reveal anim="pop" className="bk-res">

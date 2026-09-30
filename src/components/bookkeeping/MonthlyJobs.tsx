@@ -42,7 +42,7 @@ export default function MonthlyJobs() {
     <section className="band" aria-label="What's in monthly bookkeeping">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— Plain answer</span>
+          <span className="eyebrow">Plain answer</span>
           <h2>What&apos;s in monthly bookkeeping.</h2>
           <p className="bk-sub">
             Six jobs, every month, on a date you can circle. That&apos;s it, no mystery line items.

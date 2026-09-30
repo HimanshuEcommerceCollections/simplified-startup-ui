@@ -95,7 +95,7 @@ export default function PricingTiers() {
     <section className="band" id="packages" aria-label="Monthly marketing packages">
       <div className="wrap">
         <div className="sec-head">
-          <span className="eyebrow">— Ongoing marketing, handled</span>
+          <span className="eyebrow">Ongoing marketing, handled</span>
           <h2>Monthly marketing packages</h2>
           <p>
             Our recurring digital marketing plans, three tiers, month to month after a 3-month

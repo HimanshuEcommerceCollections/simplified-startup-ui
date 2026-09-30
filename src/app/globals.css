@@ -91,7 +91,6 @@ button { font-family: inherit; }
 .page-resource ::selection { background: var(--teal); color: #fff; }
 .page-resource :focus-visible { outline-color: var(--teal); }
 .page-resource .eyebrow { color: var(--teal-ink); }
-.page-resource .eyebrow::before { background: var(--teal-ink); opacity: 0.85; }
 .page-resource h1, .page-resource h2, .page-resource h3 { line-height: 1.08; }
 .page-resource .grad-text {
   background: var(--grad);
@@ -104,7 +103,6 @@ button { font-family: inherit; }
 .page-resource .band.tint { background: var(--surface-2); }
 .page-resource .band.dark { background: #0b1220; color: #e8eef8; }
 .page-resource .band.dark .eyebrow { color: #5eead4; }
-.page-resource .band.dark .eyebrow::before { background: #5eead4; }
 .page-resource .sec-head { max-width: 680px; margin-bottom: 52px; }
 .page-resource .sec-head h2 { font-size: clamp(29px, 3.8vw, 46px); margin-top: 16px; }
 .page-resource .sec-head p { margin-top: 18px; font-size: 16.5px; color: var(--muted); line-height: 1.62; }
@@ -129,7 +127,6 @@ button { font-family: inherit; }
 .page-services :focus-visible { outline-color: var(--teal); }
 .page-services ::selection { background: var(--teal); color: #fff; }
 .page-services .eyebrow { color: var(--teal-ink); }
-.page-services .eyebrow::before { background: var(--teal-ink); opacity: 0.85; }
 .page-services h1, .page-services h2, .page-services h3 { line-height: 1.08; }
 .page-services .band { padding: 72px 0; background: var(--surface); color: var(--ink); }
 .page-services .band.light { background: var(--surface-2); }
@@ -148,7 +145,6 @@ button { font-family: inherit; }
 .page-bookkeeping :focus-visible { outline-color: var(--teal); }
 .page-bookkeeping ::selection { background: var(--teal); color: #fff; }
 .page-bookkeeping .eyebrow { color: var(--teal-ink); }
-.page-bookkeeping .eyebrow::before { background: var(--teal-ink); opacity: 0.85; }
 .page-bookkeeping h1, .page-bookkeeping h2, .page-bookkeeping h3 { line-height: 1.08; }
 .page-bookkeeping .band { padding: 72px 0; background: var(--surface); color: var(--ink); }
 .page-bookkeeping .band.light { background: var(--surface-2); }
@@ -167,7 +163,6 @@ button { font-family: inherit; }
 .page-pricing :focus-visible { outline-color: var(--teal); }
 .page-pricing ::selection { background: var(--teal); color: #fff; }
 .page-pricing .eyebrow { color: var(--teal-ink); }
-.page-pricing .eyebrow::before { background: var(--teal-ink); opacity: 0.85; }
 .page-pricing h1, .page-pricing h2, .page-pricing h3 { line-height: 1.08; }
 .page-pricing .band { padding: 80px 0; background: var(--surface); color: var(--ink); }
 .page-pricing .band.light { background: var(--surface-2); }
@@ -191,10 +186,9 @@ button { font-family: inherit; }
   align-items: center;
   gap: 10px;
 }
-.eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--teal); opacity: 0.8; }
+.eyebrow::before { display: none; } /* the 22px rule before section labels was removed on request (2026-10-01) */
 .eyebrow.on-light { color: #c24b12; }
 .page-about .eyebrow { color: var(--teal-ink); }
-.page-about .eyebrow::before { background: var(--teal-ink); opacity: 0.85; }
 
 h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.02; }
 .page-about h1, .page-about h2, .page-about h3 { line-height: 1.08; }

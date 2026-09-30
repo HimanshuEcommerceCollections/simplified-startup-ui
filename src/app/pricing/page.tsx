@@ -55,7 +55,7 @@ export default function PricingPage() {
         <ScopedPractices />
         <BundleDiscounts />
         <TermsGrid />
-        <Faq title="About the numbers" eyebrow="— Fair questions" items={PRICING_FAQS} />
+        <Faq title="About the numbers" eyebrow="Fair questions" items={PRICING_FAQS} />
         <ResourcesDesk />
         <CtaBand />
       </main>

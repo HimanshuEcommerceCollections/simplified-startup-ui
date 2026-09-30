@@ -53,7 +53,7 @@ export default function CostBand() {
     <section className="band light" id="cost" aria-label="What it costs">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— What it costs</span>
+          <span className="eyebrow">What it costs</span>
           <h2>Priced by scope band, set before work starts.</h2>
         </Reveal>
         <Reveal anim="pop" className="bk-price">

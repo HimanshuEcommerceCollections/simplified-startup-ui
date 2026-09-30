@@ -81,7 +81,7 @@ export default function EngagementAccordion() {
     <section className="band light" aria-label="What the engagement includes">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— Named product · fixed scope</span>
+          <span className="eyebrow">Named product · fixed scope</span>
           <h2>What the engagement includes, in writing.</h2>
           <p className="bk-sub">
             One named product, one fixed scope, one price fixed in your plan before work starts.

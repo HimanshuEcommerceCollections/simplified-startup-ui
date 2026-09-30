@@ -62,7 +62,7 @@ export default function AdjacentPractices() {
     <section className="band light" aria-label="Often bought together">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— Adjacent practices</span>
+          <span className="eyebrow">Adjacent practices</span>
           <h2>Often bought together.</h2>
         </Reveal>
         <div className="bk-adj" ref={gridRef}>

@@ -66,7 +66,7 @@ export default function BundleCards() {
     <section className="band light" id="bundling" aria-label="How bundling works">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— Pricing that rewards scope</span>
+          <span className="eyebrow">Pricing that rewards scope</span>
           <h2 className="bn-title">Bundle the services, not the invoices.</h2>
           <p className="bn-lead">
             The more of the stack you run with us, the more the pieces compound, and the better

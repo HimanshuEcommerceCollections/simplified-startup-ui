@@ -69,7 +69,7 @@ export default function BookkeepingPage() {
         <CatchupCallout />
         <ServiceLines />
         <CostBand />
-        <Faq title="Asked by every smart buyer." eyebrow="— Fair questions" items={BOOKKEEPING_FAQS} />
+        <Faq title="Asked by every smart buyer." eyebrow="Fair questions" items={BOOKKEEPING_FAQS} />
         <AdjacentPractices />
         <ResourcesNote />
         <CtaBand

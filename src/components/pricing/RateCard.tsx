@@ -59,7 +59,7 @@ export default function RateCard() {
     <section className="band light" id="standalone" aria-label="Standalone services">
       <div className="wrap">
         <div className="sec-head">
-          <span className="eyebrow">— The rate card, in plain sight</span>
+          <span className="eyebrow">The rate card, in plain sight</span>
           <h2>Standalone services</h2>
           <p>
             Take a single service on its own. These are the declared rates for search, brand, and

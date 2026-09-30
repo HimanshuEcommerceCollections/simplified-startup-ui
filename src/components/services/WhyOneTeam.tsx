@@ -72,7 +72,7 @@ export default function WhyOneTeam() {
         <div className="wrap hc-inner">
           <div className="hc-grid">
             <div className="hc-left">
-              <span className="eyebrow">— Why one team beats six vendors</span>
+              <span className="eyebrow">Why one team beats six vendors</span>
               <h2 className="hc-bold">
                 Right now, you&apos;re the one <span className="kw">holding it all together</span>.
               </h2>

@@ -66,7 +66,7 @@ export default function ServicesPage() {
         <ConnectionMap />
         <ProcessFlow />
         <FitCheck />
-        <Faq title="Questions founders ask." eyebrow="— FAQ" items={SERVICES_FAQS} />
+        <Faq title="Questions founders ask." eyebrow="FAQ" items={SERVICES_FAQS} />
         <CtaBand
           copy="Book a free strategy call and we'll map the fastest path across the services that matter first. No decks, no pressure, the plan is yours to keep either way."
           primaryLabel="Book a free strategy call"

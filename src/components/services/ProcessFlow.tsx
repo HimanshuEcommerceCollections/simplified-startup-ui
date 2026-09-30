@@ -275,7 +275,7 @@ export default function ProcessFlow() {
     <section className="band light" id="process" aria-label="How it works">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— The same process, every service</span>
+          <span className="eyebrow">The same process, every service</span>
           <h2 className="jr-title">Four phases. No mysteries.</h2>
           <p className="jr-lead">
             The same process behind every service, whichever you buy, plus the rule most agencies

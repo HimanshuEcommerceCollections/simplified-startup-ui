@@ -106,7 +106,7 @@ export default function TermsGrid() {
     <section className="band" id="terms" aria-label="Terms">
       <div className="wrap">
         <div className="sec-head">
-          <span className="eyebrow">— The fine print, unhidden</span>
+          <span className="eyebrow">The fine print, unhidden</span>
           <h2>Terms you can read before the call</h2>
         </div>
         <div className="terms-grid" ref={gridRef}>

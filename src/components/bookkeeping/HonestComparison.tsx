@@ -6,7 +6,7 @@ export default function HonestComparison() {
     <section className="band light" aria-label="The honest comparison">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— The honest comparison</span>
+          <span className="eyebrow">The honest comparison</span>
           <h2>Outsourced, in-house, or DIY?</h2>
           <p className="bk-sub">
             All three are real choices. Here&apos;s the straight version, including when not to hire

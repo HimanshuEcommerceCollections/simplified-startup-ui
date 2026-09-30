@@ -79,7 +79,7 @@ const PROBLEMS = [
       </svg>
     ),
     title: "It takes months",
-    text: "Job posts, interviews, offers, notice periods — by the time your hire starts, the campaign you needed them for is over.",
+    text: "Job posts, interviews, offers, notice periods, by the time your hire starts, the campaign you needed them for is over.",
   },
   {
     icon: (
@@ -109,7 +109,7 @@ const PROBLEMS = [
       </svg>
     ),
     title: "Freelancers work alone",
-    text: "Cheaper, yes — but when something big comes up, they don’t have a team behind them to lean on.",
+    text: "Cheaper, yes, but when something big comes up, they don’t have a team behind them to lean on.",
     delay: 70,
   },
 ];
@@ -126,7 +126,7 @@ const FEATURES = [
     ),
     kicker: "Vetted, not a marketplace",
     title: "The right person, brought to you",
-    text: <>Every specialist is screened by our team and has hit real results on real accounts. <strong>You’re not scrolling a marketplace hoping</strong> — we bring you the match.</>,
+    text: <>Every specialist is screened by our team and has hit real results on real accounts. <strong>You’re not scrolling a marketplace hoping</strong>, we bring you the match.</>,
   },
   {
     icon: (
@@ -139,7 +139,7 @@ const FEATURES = [
     ),
     kicker: "Backed by the full agency",
     title: "A whole team behind them",
-    text: <>When your embedded specialist hits a hard question, they pull in our senior team, developers, or strategists — <strong>at no extra cost.</strong> A freelancer works alone; ours don’t.</>,
+    text: <>When your embedded specialist hits a hard question, they pull in our senior team, developers, or strategists, <strong>at no extra cost.</strong> A freelancer works alone; ours don’t.</>,
     delay: 60,
   },
   {
@@ -161,7 +161,7 @@ const FEATURES = [
     ),
     kicker: "Month-to-month",
     title: "No lock-in, no drama",
-    text: <>If it’s not working, you swap or stop. <strong>No long contracts, no cancellation fees</strong> — the flexibility freelancing promised and rarely delivered.</>,
+    text: <>If it’s not working, you swap or stop. <strong>No long contracts, no cancellation fees</strong>, the flexibility freelancing promised and rarely delivered.</>,
     delay: 60,
   },
   {
@@ -183,7 +183,7 @@ const FEATURES = [
     ),
     kicker: "Direct access",
     title: "In your Slack, your meetings",
-    text: <>They join your tools and work to your priorities like any team member — <strong>with the whole agency quietly behind them.</strong></>,
+    text: <>They join your tools and work to your priorities like any team member, <strong>with the whole agency quietly behind them.</strong></>,
     delay: 60,
   },
 ];
@@ -385,7 +385,7 @@ function RolesExplorer() {
             </div>
           </div>
           <div className="ts-rp-backed">
-            <span className="b">{SHIELD}</span> Backed by the full agency — senior team on call at no extra cost.
+            <span className="b">{SHIELD}</span> Backed by the full agency, senior team on call at no extra cost.
           </div>
         </div>
       </div>
@@ -397,10 +397,10 @@ function RolesExplorer() {
 
 const HIW_STEPS = [
   { no: "1", hn: "Tell us what you need", title: "A quick scoping call", text: "The role, the goals, the tools you use, and how the person will fit into your team." },
-  { no: "2", hn: "We match you", title: "The right person, in days", text: "Within a few days we come back with a vetted specialist who fits — background and rate attached.", delay: 60 },
-  { no: "3", hn: "Meet before you commit", title: "A short intro call", text: "If it’s a fit, you move forward. If not, we bring another option — no pressure.", delay: 120 },
-  { no: "4", hn: "Onboarding handled", title: "They walk in productive", text: "Contract, tool access, security setup, and first-week ramp-up — all handled for you." },
-  { no: "5", hn: "They join your team", title: "Part of the crew", text: "Your Slack, your meetings, your tools, your priorities — with the whole agency backing them.", delay: 60 },
+  { no: "2", hn: "We match you", title: "The right person, in days", text: "Within a few days we come back with a vetted specialist who fits, background and rate attached.", delay: 60 },
+  { no: "3", hn: "Meet before you commit", title: "A short intro call", text: "If it’s a fit, you move forward. If not, we bring another option, no pressure.", delay: 120 },
+  { no: "4", hn: "Onboarding handled", title: "They walk in productive", text: "Contract, tool access, security setup, and first-week ramp-up, all handled for you." },
+  { no: "5", hn: "They join your team", title: "Part of the crew", text: "Your Slack, your meetings, your tools, your priorities, with the whole agency backing them.", delay: 60 },
   { no: "6", hn: "Scale, cut, or swap", title: "Anytime, no penalty", text: "More hours? Add them. Slower month? Cut back. Wrong fit? Swap. Month-to-month.", delay: 120 },
 ];
 
@@ -470,7 +470,7 @@ const INCLUDED = [
       </svg>
     ),
     title: "A dedicated specialist",
-    text: "Working to your priorities — not shared across ten other accounts.",
+    text: "Working to your priorities, not shared across ten other accounts.",
   },
   {
     icon: (
@@ -482,7 +482,7 @@ const INCLUDED = [
       </svg>
     ),
     title: "Backup from the full team",
-    text: "Developers, strategists, and senior specialists on call — at no extra cost.",
+    text: "Developers, strategists, and senior specialists on call, at no extra cost.",
     delay: 50,
   },
   {
@@ -493,7 +493,7 @@ const INCLUDED = [
       </svg>
     ),
     title: "Fully managed onboarding",
-    text: "Tool access, first-week ramp, and intros to your team — handled.",
+    text: "Tool access, first-week ramp, and intros to your team, handled.",
     delay: 100,
   },
   { icon: SHIELD, title: "Monthly account check-in", text: "A regular sync with your account manager to keep things on track." },
@@ -504,7 +504,7 @@ const INCLUDED = [
       </svg>
     ),
     title: "Direct access",
-    text: "Slack, email, meetings — however your team already works.",
+    text: "Slack, email, meetings, however your team already works.",
     delay: 50,
   },
   {
@@ -521,15 +521,15 @@ const INCLUDED = [
 ];
 
 const FAQS = [
-  { q: "How is this different from a freelancer?", a: <>Freelancers work in isolation. Our talent is <strong>backed by the whole team,</strong> vetted through real client work, and comes with managed onboarding — freelancer flexibility with agency-level backup.</> },
-  { q: "How is this different from hiring your agency?", a: <>Agency clients get us running the work our way, in the background. Staffing clients get one of us <strong>sitting inside their team</strong> — their Slack, their meetings, their priorities. Some want one, some want both.</> },
-  { q: "Can I try someone before committing?", a: <>Yes. Every engagement starts with an intro call, and everything is month-to-month — <strong>if it’s not the fit, swap or stop with no penalty.</strong></> },
-  { q: "What if I need someone for a few weeks?", a: "That works — short-term and project-based engagements are available at hourly or fixed project rates." },
+  { q: "How is this different from a freelancer?", a: <>Freelancers work in isolation. Our talent is <strong>backed by the whole team,</strong> vetted through real client work, and comes with managed onboarding, freelancer flexibility with agency-level backup.</> },
+  { q: "How is this different from hiring your agency?", a: <>Agency clients get us running the work our way, in the background. Staffing clients get one of us <strong>sitting inside their team</strong>, their Slack, their meetings, their priorities. Some want one, some want both.</> },
+  { q: "Can I try someone before committing?", a: <>Yes. Every engagement starts with an intro call, and everything is month-to-month, <strong>if it’s not the fit, swap or stop with no penalty.</strong></> },
+  { q: "What if I need someone for a few weeks?", a: "That works, short-term and project-based engagements are available at hourly or fixed project rates." },
   { q: "On-site or remote?", a: "Fully remote. Our talent joins your tools and meetings the same way any remote team member would." },
-  { q: "Can I hire them full-time later?", a: <>In most cases, yes. If a placement is going great and you want them permanently, we’ll talk it through — <strong>clear terms, no surprise fees.</strong></> },
-  { q: "How quickly can someone start?", a: <>Usually <strong>within 5–10 business days</strong> from the first call — faster for common roles, slightly longer for very specialized ones.</> },
+  { q: "Can I hire them full-time later?", a: <>In most cases, yes. If a placement is going great and you want them permanently, we’ll talk it through, <strong>clear terms, no surprise fees.</strong></> },
+  { q: "How quickly can someone start?", a: <>Usually <strong>within 5–10 business days</strong> from the first call, faster for common roles, slightly longer for very specialized ones.</> },
   { q: "What if the match isn’t right?", a: <>Tell us. We swap them at no cost. <strong>Getting the fit right is our job, not yours.</strong></> },
-  { q: "What tools do they work with?", a: "Whatever you use — trained across Google Ads, Meta Business, HubSpot, Mailchimp, Klaviyo, Semrush, Ahrefs, Figma, WordPress, Shopify, and more." },
+  { q: "What tools do they work with?", a: "Whatever you use, trained across Google Ads, Meta Business, HubSpot, Mailchimp, Klaviyo, Semrush, Ahrefs, Figma, WordPress, Shopify, and more." },
   { q: "Is there a minimum engagement?", a: <>For part-time and full-time roles, a one-month minimum. <strong>Hourly work has no minimum.</strong></> },
 ];
 
@@ -548,7 +548,7 @@ export default function TalentStaffingView() {
         lead={
           <>
             Hiring a marketer takes months, costs a fortune, and often lands the wrong fit. We give you{" "}
-            <strong>vetted specialists ready to plug into your team in days</strong> — at rates you can see up front,
+            <strong>vetted specialists ready to plug into your team in days</strong>, at rates you can see up front,
             with the flexibility to scale up, down, or swap anytime.
           </>
         }
@@ -598,7 +598,7 @@ export default function TalentStaffingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Roles we staff</span>
             <h2>Pick a role. See the fit.</h2>
-            <p>Every role can be embedded part-time, full-time, or on a project basis — and every one comes with the full agency behind them.</p>
+            <p>Every role can be embedded part-time, full-time, or on a project basis, and every one comes with the full agency behind them.</p>
           </Reveal>
           <RolesExplorer />
         </div>
@@ -609,7 +609,7 @@ export default function TalentStaffingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">How it works</span>
-            <h2>From “we need help” to working — usually within a week.</h2>
+            <h2>From “we need help” to working, usually within a week.</h2>
           </Reveal>
           <div className="ts-hiw">
             {HIW_STEPS.map((step) => (
@@ -631,7 +631,7 @@ export default function TalentStaffingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Engagement models</span>
             <h2>Four ways to work with us.</h2>
-            <p>Pick whatever fits — and change it whenever your needs do.</p>
+            <p>Pick whatever fits, and change it whenever your needs do.</p>
           </Reveal>
           <div className="ts-models">
             {MODELS.map((model) => (
@@ -652,7 +652,7 @@ export default function TalentStaffingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Pricing</span>
             <h2>Every role, a published rate.</h2>
-            <p>No “book a call to hear our pricing.” Rates vary by role and seniority — here’s the structure, with exact numbers on the pricing page.</p>
+            <p>No “book a call to hear our pricing.” Rates vary by role and seniority, here’s the structure, with exact numbers on the pricing page.</p>
           </Reveal>
           <div className="ts-tiers">
             {TIERS.map((tier) => (
@@ -673,7 +673,7 @@ export default function TalentStaffingView() {
             ))}
           </div>
           <NoteCallout style={{ marginTop: 24 }}>
-            Every role and tier has an <strong>exact number published</strong> — see the full <a href="/pricing">pricing page</a>.
+            Every role and tier has an <strong>exact number published</strong>, see the full <a href="/pricing">pricing page</a>.
             Bundling is automatic across practices: 10% off any two services, 15% off three or more.
           </NoteCallout>
         </div>

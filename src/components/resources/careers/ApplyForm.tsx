@@ -41,7 +41,7 @@ export default function ApplyForm({ role }: { role: Role | null }) {
         </svg>
         <h3>Application received.</h3>
         <p>
-          Thanks — a real person reads every application. If it&apos;s a fit, we&apos;ll reach out to book an intro
+          Thanks, a real person reads every application. If it&apos;s a fit, we&apos;ll reach out to book an intro
           call.
         </p>
       </div>
@@ -68,7 +68,7 @@ export default function ApplyForm({ role }: { role: Role | null }) {
         CV / Resume link
         <input name="cvUrl" type="url" required placeholder="https://drive.google.com/…" />
         <small className="cr-apply-hint">
-          Share a Google Drive (or similar) link — set it to “anyone with the link can view”.
+          Share a Google Drive (or similar) link, set it to “anyone with the link can view”.
         </small>
       </label>
       <label>
@@ -88,7 +88,7 @@ export default function ApplyForm({ role }: { role: Role | null }) {
         <p className="cr-apply-error" role="alert">
           {errorMsg ?? (
             <>
-              Something went wrong sending your application. Please try again — or email{" "}
+              Something went wrong sending your application. Please try again, or email{" "}
               <a href="mailto:contact@simplifiedstartup.com">contact@simplifiedstartup.com</a>.
             </>
           )}

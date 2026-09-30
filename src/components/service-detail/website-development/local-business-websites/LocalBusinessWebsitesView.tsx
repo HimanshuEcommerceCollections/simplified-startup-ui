@@ -127,7 +127,7 @@ const WHY_CARDS = [
     title: "A lead machine",
     text: (
       <>
-        Done right, your local website <strong>pays for itself in weeks — not months.</strong>
+        Done right, your local website <strong>pays for itself in weeks, not months.</strong>
       </>
     ),
     delay: 120,
@@ -350,7 +350,7 @@ const WHO = [
     icon: ICON_PHONE,
     text: (
       <>
-        <strong>A local service business</strong> — plumbers, electricians, HVAC — where the phone ringing is what matters.
+        <strong>A local service business</strong>, plumbers, electricians, HVAC, where the phone ringing is what matters.
       </>
     ),
     delay: 0,
@@ -363,7 +363,7 @@ const WHO = [
     ),
     text: (
       <>
-        <strong>A professional practice</strong> — lawyer, dentist, doctor, accountant — where trust and credibility drive bookings.
+        <strong>A professional practice</strong>, lawyer, dentist, doctor, accountant, where trust and credibility drive bookings.
       </>
     ),
     delay: 60,
@@ -372,7 +372,7 @@ const WHO = [
     icon: ICON_FORK,
     text: (
       <>
-        <strong>A hospitality or lifestyle business</strong> — restaurant, salon, gym, spa — where visuals and booking are the game.
+        <strong>A hospitality or lifestyle business</strong>, restaurant, salon, gym, spa, where visuals and booking are the game.
       </>
     ),
     delay: 120,
@@ -396,7 +396,7 @@ const WHO = [
     ),
     text: (
       <>
-        <strong>Running Google Ads or LSAs</strong> to a site that doesn&apos;t convert — paying for clicks that bounce.
+        <strong>Running Google Ads or LSAs</strong> to a site that doesn&apos;t convert, paying for clicks that bounce.
       </>
     ),
     delay: 60,
@@ -410,7 +410,7 @@ const WHO = [
     ),
     text: (
       <>
-        <strong>Ready to leave a proprietary CMS</strong> — we build on standard platforms you own forever.
+        <strong>Ready to leave a proprietary CMS</strong>, we build on standard platforms you own forever.
       </>
     ),
     delay: 120,
@@ -430,24 +430,24 @@ const STEPS = [
 /* -------- pricing -------- */
 
 const TIERS = [
-  { name: "Starter Local Site", best: "Single-location — up to 5 pages, essential local SEO, booking or lead form, launch in 3 weeks.", price: "Published" },
-  { name: "Growth Local Site", best: "Up to 10 pages — multiple service pages, booking integration, review widgets, call tracking.", price: "Published", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Multi-Location Site", best: "2+ locations or service areas — location pages, area content, multi-location schema.", price: "Published", delay: 140 },
+  { name: "Starter Local Site", best: "Single-location, up to 5 pages, essential local SEO, booking or lead form, launch in 3 weeks.", price: "Published" },
+  { name: "Growth Local Site", best: "Up to 10 pages, multiple service pages, booking integration, review widgets, call tracking.", price: "Published", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Multi-Location Site", best: "2+ locations or service areas, location pages, area content, multi-location schema.", price: "Published", delay: 140 },
   { name: "Maintenance", best: "Monthly updates, security, backups, content edits, and small changes.", price: "Published /mo", delay: 210 },
 ];
 
 /* -------- faq -------- */
 
 const FAQS = [
-  { q: "How long does it take?", a: <>Starter sites: 3 weeks. Growth: 4 weeks. Multi-location: 4–5 weeks. <strong>Timelines depend on how quickly you review and approve</strong> — the fastest projects have decisive clients.</> },
-  { q: "Do I need a separate SEO service?", a: <>The site comes with <strong>local SEO built in</strong> — schema, service-area pages, GBP integration, content structure. For ongoing ranking/content work, that&apos;s our separate Local SEO service most clients add.</> },
-  { q: "Can you handle multi-location?", a: <>Yes — individual location pages for each service area, city-specific content, correct schema, and GBP integration for each.</> },
-  { q: "What if I already have a GBP?", a: <>We connect it and make sure all NAP details <strong>match exactly</strong> — critical for local rankings. Don&apos;t have one? We&apos;ll set it up.</> },
-  { q: "Do you handle online booking?", a: <>Yes — whatever fits your industry: <strong>Calendly, Acuity, Jane, Vagaro, Booksy, OpenTable,</strong> or your own custom system.</> },
-  { q: "Will my site work on mobile?", a: <>Every site is <strong>mobile-first</strong> — designed for phone screens first, then desktop. That&apos;s where 80%+ of local searches happen. Phone number is sticky on every page.</> },
-  { q: "Do I own the site?", a: <>Yes, completely — standard platforms, no proprietary CMS. <strong>All logins, source files, and docs handed over.</strong> Leave anytime.</> },
-  { q: "Can you migrate my current site?", a: <>Yes — full migrations from any platform, including proprietary trade CMSs. <strong>Includes content, images, redirects (to protect SEO), and testimonials.</strong></> },
-  { q: "Do you show my Google reviews?", a: <>Yes — a <strong>live Google reviews widget</strong> so your latest reviews show automatically, plus review-request automation for new customers.</> },
+  { q: "How long does it take?", a: <>Starter sites: 3 weeks. Growth: 4 weeks. Multi-location: 4–5 weeks. <strong>Timelines depend on how quickly you review and approve</strong>, the fastest projects have decisive clients.</> },
+  { q: "Do I need a separate SEO service?", a: <>The site comes with <strong>local SEO built in</strong>, schema, service-area pages, GBP integration, content structure. For ongoing ranking/content work, that&apos;s our separate Local SEO service most clients add.</> },
+  { q: "Can you handle multi-location?", a: <>Yes, individual location pages for each service area, city-specific content, correct schema, and GBP integration for each.</> },
+  { q: "What if I already have a GBP?", a: <>We connect it and make sure all NAP details <strong>match exactly</strong>, critical for local rankings. Don&apos;t have one? We&apos;ll set it up.</> },
+  { q: "Do you handle online booking?", a: <>Yes, whatever fits your industry: <strong>Calendly, Acuity, Jane, Vagaro, Booksy, OpenTable,</strong> or your own custom system.</> },
+  { q: "Will my site work on mobile?", a: <>Every site is <strong>mobile-first</strong>, designed for phone screens first, then desktop. That&apos;s where 80%+ of local searches happen. Phone number is sticky on every page.</> },
+  { q: "Do I own the site?", a: <>Yes, completely, standard platforms, no proprietary CMS. <strong>All logins, source files, and docs handed over.</strong> Leave anytime.</> },
+  { q: "Can you migrate my current site?", a: <>Yes, full migrations from any platform, including proprietary trade CMSs. <strong>Includes content, images, redirects (to protect SEO), and testimonials.</strong></> },
+  { q: "Do you show my Google reviews?", a: <>Yes, a <strong>live Google reviews widget</strong> so your latest reviews show automatically, plus review-request automation for new customers.</> },
   { q: "What about running Google Ads?", a: <>We handle Google Ads (including Local Services Ads) as a separate service. <strong>Many bundle the build with ads</strong> so the phone rings the day the site goes live.</> },
 ];
 
@@ -487,7 +487,7 @@ function PhoneMockup() {
                 </span>
               </div>
             </div>
-            <div className="lb-pcall">{ICON_PHONE} Call now — (555) 012-3456</div>
+            <div className="lb-pcall">{ICON_PHONE} Call now, (555) 012-3456</div>
             <div className="lb-pcall ghost">
               <svg viewBox="0 0 24 24" fill="none">
                 <rect x="3" y="5" width="18" height="15" rx="2" stroke="currentColor" strokeWidth="2" />
@@ -593,8 +593,8 @@ export default function LocalBusinessWebsitesView() {
         }
         lead={
           <>
-            Websites for plumbers, dentists, lawyers, salons, restaurants, gyms — anyone who serves a city or service
-            area. <strong>Mobile-first, phone-number-first, review-first</strong> — designed to convert the “near me”
+            Websites for plumbers, dentists, lawyers, salons, restaurants, gyms, anyone who serves a city or service
+            area. <strong>Mobile-first, phone-number-first, review-first</strong>, designed to convert the “near me”
             search into a booked appointment or ringing phone.
           </>
         }
@@ -614,7 +614,7 @@ export default function LocalBusinessWebsitesView() {
             <span className="eyebrow">Why your local website matters</span>
             <h2>46% of every Google search is local.</h2>
             <p>
-              That&apos;s half of all searches — people looking for a business near them, right now, ready to buy. Your
+              That&apos;s half of all searches, people looking for a business near them, right now, ready to buy. Your
               website either catches that intent or loses it.
             </p>
           </Reveal>
@@ -628,7 +628,7 @@ export default function LocalBusinessWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">The problem with most local sites</span>
             <h2>Chances are a few of these apply.</h2>
-            <p>If you have a website today — and we built our service to fix every one of these.</p>
+            <p>If you have a website today, and we built our service to fix every one of these.</p>
           </Reveal>
           <div className="lb-pain-grid">
             {PAINS.map((pain) => (
@@ -654,7 +654,7 @@ export default function LocalBusinessWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What&apos;s included</span>
             <h2>Everything to turn “near me” into customers.</h2>
-            <p>Strategy, design, development, local SEO, and booking/lead-capture — all from one team.</p>
+            <p>Strategy, design, development, local SEO, and booking/lead-capture, all from one team.</p>
           </Reveal>
           <Reveal className="lb-inc-grid">
             {INCLUDED.map((inc) => (
@@ -675,11 +675,11 @@ export default function LocalBusinessWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Industries we build for</span>
             <h2>Every kind of local business.</h2>
-            <p>Different trades need different features. Pick yours — see what we build in.</p>
+            <p>Different trades need different features. Pick yours, see what we build in.</p>
           </Reveal>
           <IndustryTabs />
           <Reveal as="p" className="lb-in-note">
-            Don&apos;t see your industry? <strong>We build for pretty much every kind of local business</strong> — just
+            Don&apos;t see your industry? <strong>We build for pretty much every kind of local business</strong>, just
             ask.
           </Reveal>
         </div>
@@ -733,7 +733,7 @@ export default function LocalBusinessWebsitesView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Project fees paid in two installments — <strong>50% at kickoff, 50% at launch.</strong> Hosting, domain,
+            Project fees paid in two installments, <strong>50% at kickoff, 50% at launch.</strong> Hosting, domain,
             booking platforms, and call tracking are separate. Every exact number is on the{" "}
             <a href="/pricing">pricing page</a>.
           </NoteCallout>
@@ -748,7 +748,7 @@ export default function LocalBusinessWebsitesView() {
         copy={
           <>
             Book a free website call. We&apos;ll look at what you have, what your local competitors are doing, and what
-            it&apos;d take to build a site that actually converts —{" "}
+            it&apos;d take to build a site that actually converts,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>with a clear price at the end. No obligation, no lock-in.</strong>
           </>
         }

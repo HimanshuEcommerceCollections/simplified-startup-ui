@@ -14,7 +14,7 @@ export default function WhyCards() {
           <span className="eyebrow">Why Simplified Startup</span>
           <h2 className="ab-h2">Starting a business means doing ten jobs you never trained for.</h2>
           <p className="sec-lead">
-            You&apos;re an expert at your craft — not necessarily at branding, websites, funnels, or
+            You&apos;re an expert at your craft, not necessarily at branding, websites, funnels, or
             the back office. Those pieces get patched together from freelancers and half-finished
             tools, and the business stalls in the gaps.
           </p>
@@ -37,7 +37,7 @@ export default function WhyCards() {
             </svg>
             <h3>The gaps cost you</h3>
             <p>
-              Every missing skill is a job you take on yourself — or a vendor you have to find,
+              Every missing skill is a job you take on yourself, or a vendor you have to find,
               brief, and manage. Momentum leaks out between them.
             </p>
           </Reveal>
@@ -96,8 +96,8 @@ export default function WhyCards() {
             </svg>
             <h3>The fix</h3>
             <p>
-              One team that covers the pieces you&apos;re missing — strategy, brand, tech, marketing,
-              and the back office — so you can focus on the work you&apos;re great at.
+              One team that covers the pieces you&apos;re missing, strategy, brand, tech, marketing,
+              and the back office, so you can focus on the work you&apos;re great at.
             </p>
           </Reveal>
         </div>

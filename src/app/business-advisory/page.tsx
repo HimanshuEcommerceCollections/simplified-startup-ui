@@ -5,7 +5,7 @@ import BusinessAdvisoryView from "@/components/service-detail/business-advisory/
 export const metadata: Metadata = {
   title: "Business & Startup Advisory | Simplified Startup",
   description:
-    "Business plans, pitch decks, market research, and financial models for founders — investor-ready deliverables at published prices, with no equity taken.",
+    "Business plans, pitch decks, market research, and financial models for founders, investor-ready deliverables at published prices, with no equity taken.",
 };
 
 export default function BusinessAdvisoryPage() {

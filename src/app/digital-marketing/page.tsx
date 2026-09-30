@@ -5,7 +5,7 @@ import DigitalMarketingView from "@/components/service-detail/digital-marketing/
 export const metadata: Metadata = {
   title: "Digital Marketing for Small Business | Simplified Startup",
   description:
-    "Digital marketing with the black box removed — fixed scope, published pricing, and a monthly report that says what we did, what it cost, and what it moved.",
+    "Digital marketing with the black box removed, fixed scope, published pricing, and a monthly report that says what we did, what it cost, and what it moved.",
 };
 
 export default function DigitalMarketingPage() {

@@ -11,7 +11,7 @@ export default function CatchupCallout() {
             <h3>Catch-up and cleanup.</h3>
             <p>
               Months behind, or inherited a mess? Common, and fixable. We bring the books current
-              before monthly service starts — no lecture.
+              before monthly service starts, no lecture.
             </p>
           </div>
           <a href="#book" className="btn">

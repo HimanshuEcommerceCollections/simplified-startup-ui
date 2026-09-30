@@ -5,7 +5,7 @@ import BrandingGrowthView from "@/components/service-detail/branding-growth/Bran
 export const metadata: Metadata = {
   title: "Branding & Growth | Simplified Startup",
   description:
-    "Positioning-led brand identity — discovery, messaging framework, full logo suite, and brand guidelines you own, delivered in a structured 4–6 week process.",
+    "Positioning-led brand identity, discovery, messaging framework, full logo suite, and brand guidelines you own, delivered in a structured 4–6 week process.",
 };
 
 export default function BrandingGrowthPage() {

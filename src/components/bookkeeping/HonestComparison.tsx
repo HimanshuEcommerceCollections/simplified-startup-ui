@@ -28,7 +28,7 @@ export default function HonestComparison() {
               $3,000–$5,000<span className="bk-cost-per">/mo</span>
             </div>
             <p>
-              With salary, benefits, and overhead. Makes sense at real transaction volume — overkill
+              With salary, benefits, and overhead. Makes sense at real transaction volume, overkill
               for most small businesses.
             </p>
           </Reveal>
@@ -37,7 +37,7 @@ export default function HonestComparison() {
             <div className="bk-cost grad-cost">
               $300–$900<span className="bk-cost-per">/mo</span>
             </div>
-            <p>By volume, published below. Same clean, CPA-ready books — without a hire.</p>
+            <p>By volume, published below. Same clean, CPA-ready books, without a hire.</p>
           </Reveal>
         </div>
         <div className="bk-test">

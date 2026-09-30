@@ -85,7 +85,7 @@ export default function GpPlanCard() {
       <div className="gp-plan-sec" style={r(2)}>
         <span className="gp-plan-label">Skip for now</span>
         <div className="gp-line skip">
-          <span>Hiring help — revisit at revenue</span>
+          <span>Hiring help, revisit at revenue</span>
         </div>
       </div>
 

@@ -34,7 +34,7 @@ const LEDGER = [
     burn: "A junior learned on a client's budget while the partner who sold the deal was never seen again.",
     fix: (
       <>
-        A named senior specialist owns your account — and <strong>you meet them before you sign.</strong>
+        A named senior specialist owns your account, and <strong>you meet them before you sign.</strong>
       </>
     ),
   },
@@ -59,38 +59,38 @@ const LEDGER = [
 ];
 
 const CHECKLIST = [
-  { h: "On the record", p: "Prices, scope, and the full 14-point quality bar are published on the site — before a sales call, not after one." },
+  { h: "On the record", p: "Prices, scope, and the full 14-point quality bar are published on the site, before a sales call, not after one." },
   { h: "Checkable work", p: "Every deliverable clears a written definition of done. Read the checklist and hold the finished work up against it yourself." },
-  { h: "Advice against our interest", p: "We'll tell you what to skip, what to delay until you have revenue, and when a cheaper route serves you better — even when it costs us the sale." },
+  { h: "Advice against our interest", p: "We'll tell you what to skip, what to delay until you have revenue, and when a cheaper route serves you better, even when it costs us the sale." },
   { h: "No hostage contracts", p: "A short initial term, then month to month. No auto-renew, no notice-period games, no exit fee. You stay because it's working." },
-  { h: "See the thinking first", p: "The free growth plan is a real, written document you keep — so you can judge our thinking before any money changes hands." },
+  { h: "See the thinking first", p: "The free growth plan is a real, written document you keep, so you can judge our thinking before any money changes hands." },
 ];
 
 const LEVERS = [
   { h: "Flat, scoped pricing", p: "No hourly meter, so we're never paid to be slow or to pad the work. A fixed scope makes efficiency our problem, not your invoice." },
-  { h: "We don't profit from your spend", p: "No percentage-of-ad-spend model, so we recommend the budget that works — not the one that inflates our cut." },
+  { h: "We don't profit from your spend", p: "No percentage-of-ad-spend model, so we recommend the budget that works, not the one that inflates our cut." },
   { h: "Outcome over activity", p: "No booked-meeting or activity quotas, so we chase the outcome that helps your business instead of numbers that look busy." },
-  { h: "Earn it every month", p: "Retainers renew monthly. Being worth keeping every single month is the whole business model — no long contract to coast on." },
+  { h: "Earn it every month", p: "Retainers renew monthly. Being worth keeping every single month is the whole business model, no long contract to coast on." },
 ];
 
 const RISKS = [
-  { h: "Free plan first", p: "You get the full plan — scope, price, and sequence — before committing a cent, and it's yours to keep whether you hire us or not." },
+  { h: "Free plan first", p: "You get the full plan, scope, price, and sequence, before committing a cent, and it's yours to keep whether you hire us or not." },
   { h: "We fix our own misses", p: "If a deliverable misses the brief, we re-brief and rebuild on our time. A third revision round is our error to absorb, never your line item." },
   { h: "Walk away clean", p: "Leave whenever, with every account, asset, and login intact. Nothing for us to claw back, nothing for you to rebuild." },
-  { h: "No lock-in cushion", p: "We'd rather earn month two than lock in month one — so the incentive to keep the first month's work genuinely good is entirely on us." },
+  { h: "No lock-in cushion", p: "We'd rather earn month two than lock in month one, so the incentive to keep the first month's work genuinely good is entirely on us." },
 ];
 
 const TEAM = [
   { h: "One team, your hours", p: "A tight blend of US and international specialists who keep your business hours, not just their own time zone." },
-  { h: "Operators, not theorists", p: "People who've built and run companies of their own — not career deck-writers. They've made the expensive mistakes already, on their own dime." },
+  { h: "Operators, not theorists", p: "People who've built and run companies of their own, not career deck-writers. They've made the expensive mistakes already, on their own dime." },
   { h: "Same face throughout", p: "The specialist who scopes your work is the one who does it and reports on it. No handoff, no telephone game." },
   { h: "Named accountability", p: "Because the roster is small, everyone is accountable by name. There's nowhere for weak work to hide." },
 ];
 
 const WINS = [
-  { h: "Your metrics, not vanity", p: "Enquiries, booked calls, closed sales, clean books — the numbers that change your bank balance, not our portfolio." },
-  { h: "The bad news too", p: "Reports name what didn't work and what changes next month, not just a highlight reel — including the parts we'd rather not show." },
-  { h: "We'll cut our own scope", p: "If a channel isn't earning its keep, we'll recommend cutting it — even if it shrinks our scope — before you have to ask." },
+  { h: "Your metrics, not vanity", p: "Enquiries, booked calls, closed sales, clean books, the numbers that change your bank balance, not our portfolio." },
+  { h: "The bad news too", p: "Reports name what didn't work and what changes next month, not just a highlight reel, including the parts we'd rather not show." },
+  { h: "We'll cut our own scope", p: "If a channel isn't earning its keep, we'll recommend cutting it, even if it shrinks our scope, before you have to ask." },
   { h: "Tied to outcomes", p: "Every number ties back to a business outcome, so “good month” always means good for you, not just busy for us." },
 ];
 
@@ -101,15 +101,15 @@ const OBJECTIONS = [
   },
   {
     q: "“No big-brand logos yet.”",
-    a: "True — we're early, and we won't fake a wall of logos. But the pricing, the process, and the quality bar are all public and checkable today, which most established agencies still won't do.",
+    a: "True, we're early, and we won't fake a wall of logos. But the pricing, the process, and the quality bar are all public and checkable today, which most established agencies still won't do.",
   },
   {
     q: "“Cheaper options exist.”",
-    a: "Also true. We're not the cheapest; we're the most accountable. If the only goal is lowest price, a freelancer will beat us — and we'll say so honestly rather than pretend otherwise.",
+    a: "Also true. We're not the cheapest; we're the most accountable. If the only goal is lowest price, a freelancer will beat us, and we'll say so honestly rather than pretend otherwise.",
   },
   {
     q: "“How do I know you'll deliver?”",
-    a: "Fair worry — so we don't pretend. No guaranteed rankings or lead counts; those depend on your market and offer. We commit to the things we control and put them in writing.",
+    a: "Fair worry, so we don't pretend. No guaranteed rankings or lead counts; those depend on your market and offer. We commit to the things we control and put them in writing.",
   },
 ];
 
@@ -155,7 +155,7 @@ export default function WhyUsView() {
                 </span>
               </h1>
               <p className="wu-hero-lead">
-                Everything here is a fix for something that burned us — as founders, and as operators.{" "}
+                Everything here is a fix for something that burned us, as founders, and as operators.{" "}
                 <strong>Full stop.</strong>
               </p>
               <div className="wu-hero-actions">
@@ -182,7 +182,7 @@ export default function WhyUsView() {
             <h2>Every rule here came from a bad experience elsewhere.</h2>
             <p>
               We didn&apos;t invent our principles at a strategy offsite. Each one replaces a specific thing that burns
-              founders — and we&apos;ve been the burned founder more than once. The agency model is quietly broken for
+              founders, and we&apos;ve been the burned founder more than once. The agency model is quietly broken for
               small businesses: billable hours over outcomes, a pitch team that&apos;s never the delivery team, pricing
               hidden behind a phone call. Here&apos;s the direct line from what went wrong to what we now do.
             </p>
@@ -224,7 +224,7 @@ export default function WhyUsView() {
             <span className="eyebrow">Trust, by design</span>
             <h2>We made honesty structural, not aspirational.</h2>
             <p>
-              “Transparent” and “trustworthy” are the two most over-claimed words in this industry. Talk is free — so we
+              “Transparent” and “trustworthy” are the two most over-claimed words in this industry. Talk is free, so we
               wired honesty into how the work runs, where you can verify it. The test we hold ourselves to:{" "}
               <strong>could a sceptical founder check the claim without trusting us at all?</strong> If not, it
               doesn&apos;t belong on this page.
@@ -257,7 +257,7 @@ export default function WhyUsView() {
             <span className="eyebrow">Aligned incentives</span>
             <h2 style={{ color: "#fff" }}>We only win when you renew.</h2>
             <p>
-              Most agency models quietly reward the wrong behaviour — more billable hours, more ad spend, more months
+              Most agency models quietly reward the wrong behaviour, more billable hours, more ad spend, more months
               locked in. Follow the money at a typical agency and its interests point away from yours. We removed each of
               those levers on purpose.
             </p>
@@ -289,7 +289,7 @@ export default function WhyUsView() {
             <h2>We take the risk you&apos;re usually asked to carry.</h2>
             <p>
               The standard agency deal asks you to pay up front and hope. We flipped it: the first move costs you
-              nothing, the exit costs you nothing, and the pressure to perform sits with us — where it belongs. Risk is
+              nothing, the exit costs you nothing, and the pressure to perform sits with us, where it belongs. Risk is
               really about who pays when things don&apos;t go to plan. We moved each of those costs onto our side of the
               table.
             </p>
@@ -326,10 +326,10 @@ export default function WhyUsView() {
             <span className="eyebrow">Who actually does the work</span>
             <h2>Senior operators, not a sales team with a fulfilment floor.</h2>
             <p>
-              At most agencies, the people who win the work and the people who do the work are different — and you only
+              At most agencies, the people who win the work and the people who do the work are different, and you only
               meet the first group. Here they&apos;re the same small, senior team, and you&apos;ll know them by name. We
               stay deliberately small because average quality is a function of who&apos;s actually touching the work.
-              Growth, for us, means better clients and sharper work — not a bigger org chart.
+              Growth, for us, means better clients and sharper work, not a bigger org chart.
             </p>
           </Reveal>
 
@@ -353,7 +353,7 @@ export default function WhyUsView() {
             <h2>We measure results in your business, not ours.</h2>
             <p>
               Plenty of agencies are thriving while their clients quietly aren&apos;t. There are two scoreboards in this
-              industry, and they rarely match. When they diverge, we optimise for yours — because if your scoreboard
+              industry, and they rarely match. When they diverge, we optimise for yours, because if your scoreboard
               doesn&apos;t move, ours shouldn&apos;t either.
             </p>
           </Reveal>
@@ -398,10 +398,10 @@ export default function WhyUsView() {
             <div className="wu-obj-main">
               <Reveal className="sec-head">
                 <span className="eyebrow">The honest objections</span>
-                <h2>The fair pushback — answered straight.</h2>
+                <h2>The fair pushback, answered straight.</h2>
                 <p>
                   You should be sceptical of any agency, us included. So here&apos;s the strongest case against hiring
-                  us, and our honest reply to each — no spin.
+                  us, and our honest reply to each, no spin.
                 </p>
               </Reveal>
 
@@ -446,7 +446,7 @@ export default function WhyUsView() {
                   <i key={obj.q} className={i === openObjection ? "on" : undefined}></i>
                 ))}
               </div>
-              <span className="wu-lens-note">Every reply is checkable — before you pay.</span>
+              <span className="wu-lens-note">Every reply is checkable, before you pay.</span>
             </Reveal>
           </div>
         </div>
@@ -457,7 +457,7 @@ export default function WhyUsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Proof, not promises</span>
-            <h2>We&apos;d rather show than tell — so we&apos;re honest about what we can show today.</h2>
+            <h2>We&apos;d rather show than tell, so we&apos;re honest about what we can show today.</h2>
             <p>
               We&apos;re early, and we won&apos;t borrow credibility we haven&apos;t earned. No stock photos of “the
               team,” no invented testimonials. A lot of agency proof is theatre. We&apos;d rather under-claim and be
@@ -469,7 +469,7 @@ export default function WhyUsView() {
             <Reveal className="wu-proof-card real" style={d(0)}>
               <span className="wu-ptag ok">Live now</span>
               <p>
-                This very website is the sample — designed, built, measured, and documented against the same{" "}
+                This very website is the sample, designed, built, measured, and documented against the same{" "}
                 <strong>14-point bar</strong> we sell to you.
               </p>
             </Reveal>
@@ -483,13 +483,13 @@ export default function WhyUsView() {
             <Reveal className="wu-proof-card slot" style={d(180)}>
               <span className="wu-ptag reserved">Reserved</span>
               <p>
-                Case-study slot — publishes the moment a client signs off, with their{" "}
+                Case-study slot, publishes the moment a client signs off, with their{" "}
                 <strong>real name and real numbers</strong>, never a day before.
               </p>
             </Reveal>
             <Reveal className="wu-proof-card slot" style={d(270)}>
               <span className="wu-ptag reserved">Reserved</span>
-              <p>Attributed results, in context — not anonymised “a client saw +300%” with no way to check it.</p>
+              <p>Attributed results, in context, not anonymised “a client saw +300%” with no way to check it.</p>
             </Reveal>
           </div>
 

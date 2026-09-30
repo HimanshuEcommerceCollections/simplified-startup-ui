@@ -4,9 +4,9 @@ import GlossaryView from "@/components/resources/glossary/GlossaryView";
 import { GLOSSARY, type GlossaryLetter } from "@/components/resources/glossary/glossary-data";
 
 export const metadata: Metadata = {
-  title: "Marketing Glossary — Plain-English Definitions | Simplified Startup",
+  title: "Marketing Glossary: Plain-English Definitions | Simplified Startup",
   description:
-    "Every marketing term you've nodded along to, defined in plain English — the way we'd explain it to a friend.",
+    "Every marketing term you've nodded along to, defined in plain English, the way we'd explain it to a friend.",
 };
 
 // rendered per request: dashboard edits show up immediately, no publish/rebuild needed
@@ -33,7 +33,7 @@ async function fetchGlossary(): Promise<GlossaryLetter[]> {
     if (!data.ok || data.items.length === 0) throw new Error("empty");
     return groupByLetter(data.items);
   } catch {
-    console.warn("[glossary] falling back to bundled terms — API unreachable at build time");
+    console.warn("[glossary] falling back to bundled terms: API unreachable at build time");
     return GLOSSARY;
   }
 }

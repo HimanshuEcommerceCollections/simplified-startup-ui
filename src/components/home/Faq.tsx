@@ -10,7 +10,7 @@ const FAQS: FaqEntry[] = [
   {
     question: "What do I actually get with one partner?",
     answer:
-      "Strategy, brand and product design, web and app development, and growth marketing — under a single roster. You brief one team instead of stitching together five freelancers and an agency.",
+      "Strategy, brand and product design, web and app development, and growth marketing, under a single roster. You brief one team instead of stitching together five freelancers and an agency.",
   },
   {
     question: "How fast can we launch?",
@@ -20,22 +20,22 @@ const FAQS: FaqEntry[] = [
   {
     question: "How does pricing work?",
     answer:
-      "A flat monthly rate for a dedicated team — no hourly billing and no surprise change-orders. You can pause or scale the engagement as your roadmap shifts.",
+      "A flat monthly rate for a dedicated team, no hourly billing and no surprise change-orders. You can pause or scale the engagement as your roadmap shifts.",
   },
   {
     question: "Do you work with pre-revenue, early-stage founders?",
     answer:
-      "Yes — a large share of our work is zero-to-one: validating the idea, shaping the MVP, and getting the first users and first revenue in the door.",
+      "Yes, a large share of our work is zero-to-one: validating the idea, shaping the MVP, and getting the first users and first revenue in the door.",
   },
   {
     question: "Who owns the work and the code?",
     answer:
-      "You do — fully. Every design file, repository, and asset is handed over to you with clean documentation, so your future team can pick it up without friction.",
+      "You do, fully. Every design file, repository, and asset is handed over to you with clean documentation, so your future team can pick it up without friction.",
   },
   {
     question: "What's the AI Advisor?",
     answer:
-      "It's the assistant in the corner of this page. Tell it where your startup is today and it suggests which services move the needle first — a fast, no-pressure way to scope a project before you book a call.",
+      "It's the assistant in the corner of this page. Tell it where your startup is today and it suggests which services move the needle first, a fast, no-pressure way to scope a project before you book a call.",
   },
 ];
 

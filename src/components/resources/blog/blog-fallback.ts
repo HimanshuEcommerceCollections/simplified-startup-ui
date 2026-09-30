@@ -43,7 +43,7 @@ export const FALLBACK_ARTICLES: BlogCard[] = [
     slug: "what-marketing-actually-costs-in-2026",
     title: "What Marketing Actually Costs in 2026 (With Real Numbers)",
     summary:
-      "A transparent breakdown of typical SEO, social, and ad-management pricing across the industry — so you know whether a quote you received is fair.",
+      "A transparent breakdown of typical SEO, social, and ad-management pricing across the industry, so you know whether a quote you received is fair.",
     readTime: "7 min read",
     artwork: "cost-bars",
     featured: false,
@@ -56,7 +56,7 @@ export const FALLBACK_ARTICLES: BlogCard[] = [
     slug: "seo-checklist-for-small-businesses",
     title: "SEO Checklist for Small Businesses",
     summary:
-      "The exact on-page, technical, and local SEO basics every small-business site needs — a step-by-step list a non-technical owner can follow.",
+      "The exact on-page, technical, and local SEO basics every small-business site needs, a step-by-step list a non-technical owner can follow.",
     readTime: "8 min read",
     artwork: "seo-scope",
     featured: false,
@@ -69,7 +69,7 @@ export const FALLBACK_ARTICLES: BlogCard[] = [
     slug: "5-social-media-mistakes-quietly-hurting-local-businesses",
     title: "5 Social Media Mistakes Quietly Hurting Local Businesses",
     summary:
-      "Common, fixable mistakes seen across every industry — posting without a goal, ignoring comments, inconsistent branding, and more.",
+      "Common, fixable mistakes seen across every industry, posting without a goal, ignoring comments, inconsistent branding, and more.",
     readTime: "5 min read",
     artwork: "social-chat",
     featured: false,

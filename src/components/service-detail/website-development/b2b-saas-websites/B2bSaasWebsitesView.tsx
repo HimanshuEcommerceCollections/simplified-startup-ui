@@ -181,11 +181,11 @@ function StatsGrid() {
 /* -------- problem (dark) -------- */
 
 const PAINS = [
-  { title: "Beautiful, zero pipeline", text: "The site wins Awwwards, ships — and demo requests don’t move. Everyone claps, nobody buys.", delay: 0 },
+  { title: "Beautiful, zero pipeline", text: "The site wins Awwwards, ships, and demo requests don’t move. Everyone claps, nobody buys.", delay: 0 },
   { title: "One persona, one message", text: "Deals have 5–7 stakeholders. Your site talks to the CMO; the VP Ops, security lead, and CFO leave confused.", delay: 60 },
   { title: "No product visuals", text: "Every screenshot is a generic dashboard. Buyers can’t picture using it, so they don’t book the demo.", delay: 120 },
   { title: "Hidden pricing", text: "Serious buyers screen you out. Only tire-kickers fill out the “request pricing” form.", delay: 0 },
-  { title: "No comparison or integration pages", text: "The two searches that convert best — “you vs competitor” and “you integrations” — and nothing ranks.", delay: 60 },
+  { title: "No comparison or integration pages", text: "The two searches that convert best: “you vs competitor” and “you integrations”, and nothing ranks.", delay: 60 },
   { title: "$150K, 6 months, locked in", text: "And a proprietary CMS your team can’t edit without a $250/hour developer.", delay: 120 },
 ];
 
@@ -214,7 +214,7 @@ const PAGES: PageDef[] = [
     tab: "Product / Features",
     name: "Product / Features",
     role: "Show, don’t tell",
-    job: "Show the product with real screenshots or video — not stock hero images. Explain how, not just what.",
+    job: "Show the product with real screenshots or video, not stock hero images. Explain how, not just what.",
     items: ["Real interface visuals", "How it works, step by step", "Feature-to-benefit clarity", "Preview that replaces a demo"],
   },
   {
@@ -228,7 +228,7 @@ const PAGES: PageDef[] = [
     tab: "Use Cases / Solutions",
     name: "Use Cases / Solutions",
     role: "“This is for me”",
-    job: "Speak to specific buyer types — by industry, role, or job-to-be-done — so each persona sees themselves.",
+    job: "Speak to specific buyer types, by industry, role, or job-to-be-done, so each persona sees themselves.",
     items: ["Segmented by industry / role", "Job-to-be-done framing", "Persona-specific proof", "Programmatic-page ready"],
   },
   {
@@ -237,7 +237,7 @@ const PAGES: PageDef[] = [
     tab: "Pricing",
     name: "Pricing",
     role: "Screen in serious buyers",
-    job: "Real numbers, real tiers. No “book a call for pricing” — unless you’re enterprise-only, then a range.",
+    job: "Real numbers, real tiers. No “book a call for pricing”, unless you’re enterprise-only, then a range.",
     items: ["Transparent tiers", "Value framing per plan", "Clear upgrade path", "FAQ to remove objections"],
   },
   {
@@ -246,7 +246,7 @@ const PAGES: PageDef[] = [
     tab: "Comparison / vs",
     name: "Comparison / vs Pages",
     role: "Highest-intent search",
-    job: "Rank for “you vs competitor” — one of the highest-intent B2B searches there is.",
+    job: "Rank for “you vs competitor”, one of the highest-intent B2B searches there is.",
     items: ["Honest side-by-side", "Where you genuinely win", "Template for many competitors", "SEO-structured & schema-ready"],
   },
   {
@@ -279,7 +279,7 @@ const PAGES: PageDef[] = [
     tab: "Resources / Blog",
     name: "Resources / Blog",
     role: "Feeds every channel",
-    job: "Content that ranks for buyer questions and feeds every other channel — SEO, ads, social, email.",
+    job: "Content that ranks for buyer questions and feeds every other channel: SEO, ads, social, email.",
     items: ["Ranks for buyer questions", "Fuels SEO & email", "Content clusters by topic", "CMS your team can run"],
   },
   {
@@ -466,7 +466,7 @@ function PillarsGrid() {
 const PRINCIPLES = [
   {
     no: "01",
-    title: "Clarity beats cleverness — every time",
+    title: "Clarity beats cleverness: every time",
     text: (
       <>
         If a buyer can’t explain what you do to their boss after 30 seconds, the site failed. We optimize for{" "}
@@ -481,7 +481,7 @@ const PRINCIPLES = [
     text: (
       <>
         Real screenshots, real interface, real workflow.{" "}
-        <strong>Enterprise buyers won’t take a demo if they can’t picture the product first</strong> — they’re protecting
+        <strong>Enterprise buyers won’t take a demo if they can’t picture the product first</strong>, they’re protecting
         their time. Give them a preview.
       </>
     ),
@@ -504,7 +504,7 @@ const PRINCIPLES = [
     title: "The site is a system, not a project",
     text: (
       <>
-        The best-converting sites are edited every week — new comparison pages, use cases, resources.{" "}
+        The best-converting sites are edited every week, new comparison pages, use cases, resources.{" "}
         <strong>We build sites your marketing team can ship on</strong> without waiting for developers.
       </>
     ),
@@ -538,7 +538,7 @@ const WHO = [
     ),
     text: (
       <>
-        <strong>A B2B services company</strong> with a long sales cycle and higher-ticket deals — consulting, agencies, pro
+        <strong>A B2B services company</strong> with a long sales cycle and higher-ticket deals, consulting, agencies, pro
         services.
       </>
     ),
@@ -566,7 +566,7 @@ const WHO = [
     ),
     text: (
       <>
-        <strong>An AI or ML product</strong> in a category buyers don’t fully understand yet — clarity is everything.
+        <strong>An AI or ML product</strong> in a category buyers don’t fully understand yet, clarity is everything.
       </>
     ),
     delay: 0,
@@ -581,7 +581,7 @@ const WHO = [
     ),
     text: (
       <>
-        <strong>Running paid ads or ABM</strong> to a homepage that isn’t converting — the site is bleeding budget.
+        <strong>Running paid ads or ABM</strong> to a homepage that isn’t converting, the site is bleeding budget.
       </>
     ),
     delay: 60,
@@ -605,7 +605,7 @@ const WHO = [
 /* -------- how it works -------- */
 
 const STEPS = [
-  { no: "1", dur: "Weeks 1–2", title: "Strategy & positioning", text: "Category & competitor teardown, persona mapping, messaging framework, content strategy — approved doc.", delay: 0 },
+  { no: "1", dur: "Weeks 1–2", title: "Strategy & positioning", text: "Category & competitor teardown, persona mapping, messaging framework, content strategy, approved doc.", delay: 0 },
   { no: "2", dur: "Weeks 2–3", title: "Wireframes", text: "Wireframes for every core page, content outlined and approved. You sign off before design.", delay: 70 },
   { no: "3", dur: "Weeks 3–5", title: "Design", text: "Custom visual design in Figma with real product visuals. Two rounds of feedback and revisions.", delay: 140 },
   { no: "4", dur: "Weeks 5–8", title: "Development", text: "Build on Webflow, WordPress, or Next.js. CMS collections, integrations, full QA.", delay: 210 },
@@ -615,17 +615,17 @@ const STEPS = [
 /* -------- pricing -------- */
 
 const TIERS = [
-  { name: "Launch Site", best: "Seed-stage SaaS or new B2B brand — up to 8 pages, positioning + messaging + custom design, Webflow build.", price: "Published" },
+  { name: "Launch Site", best: "Seed-stage SaaS or new B2B brand, up to 8 pages, positioning + messaging + custom design, Webflow build.", price: "Published" },
   {
     name: "Growth Site",
-    best: "Series A/B — up to 15 pages, full architecture (product, pricing, comparison, use cases, integrations), CMS.",
+    best: "Series A/B, up to 15 pages, full architecture (product, pricing, comparison, use cases, integrations), CMS.",
     price: "Published",
     featured: true,
     badge: "Most popular",
     delay: 70,
   },
-  { name: "Scale Site", best: "Larger B2B/SaaS — 20+ pages, custom development, headless CMS, complex integrations, migration.", price: "Published", delay: 140 },
-  { name: "Growth Retainer", best: "Ongoing pages, A/B testing, CRO — a flat monthly fee.", price: "Published /mo", delay: 210 },
+  { name: "Scale Site", best: "Larger B2B/SaaS: 20+ pages, custom development, headless CMS, complex integrations, migration.", price: "Published", delay: 140 },
+  { name: "Growth Retainer", best: "Ongoing pages, A/B testing, CRO, a flat monthly fee.", price: "Published /mo", delay: 210 },
 ];
 
 /* -------- faq -------- */
@@ -635,7 +635,7 @@ const FAQS = [
     q: "How is this different from a regular build?",
     a: (
       <>
-        B2B SaaS sites work harder — multiple personas, long cycles, technical buyers, complex products, and a{" "}
+        B2B SaaS sites work harder, multiple personas, long cycles, technical buyers, complex products, and a{" "}
         <strong>“demo request” instead of “buy now”</strong> as the goal. Every decision is built around that reality.
       </>
     ),
@@ -644,7 +644,7 @@ const FAQS = [
     q: "Webflow, WordPress, or custom?",
     a: (
       <>
-        <strong>Webflow for most</strong> — marketing can ship pages without developers. WordPress if content-heavy or you
+        <strong>Webflow for most</strong>, marketing can ship pages without developers. WordPress if content-heavy or you
         have a WP-savvy team. Custom (Next.js) if you need performance off-the-shelf can’t deliver.
       </>
     ),
@@ -653,8 +653,8 @@ const FAQS = [
     q: "Do you write the content?",
     a: (
       <>
-        Yes — messaging, positioning, and page copy are core deliverables.{" "}
-        <strong>You provide product expertise; we handle the writing</strong> — or give you approved briefs so it stays
+        Yes, messaging, positioning, and page copy are core deliverables.{" "}
+        <strong>You provide product expertise; we handle the writing</strong>, or give you approved briefs so it stays
         on-strategy.
       </>
     ),
@@ -664,7 +664,7 @@ const FAQS = [
     a: (
       <>
         No. The build is a one-time project. The optional growth retainer is{" "}
-        <strong>month-to-month with 30 days’ notice</strong> — no lock-in.
+        <strong>month-to-month with 30 days’ notice</strong>, no lock-in.
       </>
     ),
   },
@@ -672,7 +672,7 @@ const FAQS = [
     q: "Can you migrate our current site?",
     a: (
       <>
-        Yes — from Squarespace, Wix, HubSpot CMS, WordPress, Framer, or custom.{" "}
+        Yes, from Squarespace, Wix, HubSpot CMS, WordPress, Framer, or custom.{" "}
         <strong>Includes 301 redirects to protect SEO,</strong> content migration, and zero-downtime launch.
       </>
     ),
@@ -681,7 +681,7 @@ const FAQS = [
     q: "Do you set up demo scheduling & lead routing?",
     a: (
       <>
-        Yes — Chili Piper, Calendly, HubSpot Meetings, or whatever you use,{" "}
+        Yes: Chili Piper, Calendly, HubSpot Meetings, or whatever you use,{" "}
         <strong>with lead scoring and round-robin routing</strong> built in.
       </>
     ),
@@ -699,7 +699,7 @@ const FAQS = [
     q: "Can you help with “vs” comparison pages?",
     a: (
       <>
-        Yes — some of the <strong>highest-converting pages</strong> a B2B SaaS site can have. We build the template and
+        Yes, some of the <strong>highest-converting pages</strong> a B2B SaaS site can have. We build the template and
         structure, and can write the first few or hand over frameworks.
       </>
     ),
@@ -708,7 +708,7 @@ const FAQS = [
     q: "Do you build PLG (self-serve) sites?",
     a: (
       <>
-        Yes — trial signup flow, in-product education, pricing calculator, self-serve conversion tracking.{" "}
+        Yes, trial signup flow, in-product education, pricing calculator, self-serve conversion tracking.{" "}
         <strong>The structure changes; the pillars stay the same.</strong>
       </>
     ),
@@ -717,7 +717,7 @@ const FAQS = [
     q: "What about custom animations?",
     a: (
       <>
-        Fine — but only where they help clarity or conversion. <strong>We don’t bolt on animation for its own sake.</strong>{" "}
+        Fine, but only where they help clarity or conversion. <strong>We don’t bolt on animation for its own sake.</strong>{" "}
         When a scroll-triggered animation helps explain a complex product, we build it.
       </>
     ),
@@ -729,9 +729,9 @@ export default function B2bSaasWebsitesView() {
     <>
       <ServiceDetailHero
         crumb={{ label: "Website Development", href: "/website-development" }}
+        eyebrow="B2B · SaaS · Pipeline-focused · Webflow or WordPress"
         className="b2b-hero"
         compact
-        eyebrow="B2B · SaaS · Pipeline-focused · Webflow or WordPress"
         line1="Your website should be your"
         line2={
           <>
@@ -740,7 +740,7 @@ export default function B2bSaasWebsitesView() {
         }
         lead={
           <>
-            Websites for SaaS, AI, fintech, and B2B — where the deal takes six months, the buying committee has five
+            Websites for SaaS, AI, fintech, and B2B, where the deal takes six months, the buying committee has five
             people, and the site has <strong>10 seconds to prove you’re worth a demo.</strong> Built to convert
             pipeline, not just win design awards.
           </>
@@ -758,14 +758,14 @@ export default function B2bSaasWebsitesView() {
         <div className="wrap">
           <Reveal className="sec-head" style={{ marginBottom: 34 }}>
             <span className="eyebrow">A different way to think about your site</span>
-            <h2>Treat it like a design project — it’ll act like one.</h2>
+            <h2>Treat it like a design project, it’ll act like one.</h2>
           </Reveal>
           <Reveal className="b2b-stmt">
             <p>
-              Your website isn’t a brochure. <b>It’s the most patient, always-on, never-sick sales rep on your team</b> —
+              Your website isn’t a brochure. <b>It’s the most patient, always-on, never-sick sales rep on your team</b>,
               and it works while you sleep.{" "}
               <span className="mut">
-                The best B2B SaaS sites in 2026 aren’t the prettiest — they answer buyer questions before the buyer has
+                The best B2B SaaS sites in 2026 aren’t the prettiest, they answer buyer questions before the buyer has
                 to ask, show the product without a demo call, and make “book a demo” feel like the obvious next step.
               </span>{" "}
               That’s what we build.
@@ -779,7 +779,7 @@ export default function B2bSaasWebsitesView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What a great B2B SaaS site does</span>
-            <h2>Not what it looks like — what it does.</h2>
+            <h2>Not what it looks like, what it does.</h2>
             <p>Four things that separate a real revenue-generating site from a nice-looking one.</p>
           </Reveal>
           <StatsGrid />
@@ -792,7 +792,7 @@ export default function B2bSaasWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What goes wrong on most B2B SaaS sites</span>
             <h2>You’ve probably lived a few of these.</h2>
-            <p>If you’ve worked with a B2B SaaS agency before — and we built our service so none of it happens on our watch.</p>
+            <p>If you’ve worked with a B2B SaaS agency before, and we built our service so none of it happens on our watch.</p>
           </Reveal>
           <div className="b2b-pain-grid">
             {PAINS.map((pain) => (
@@ -822,11 +822,11 @@ export default function B2bSaasWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">The pages every B2B SaaS site needs</span>
             <h2>Structure beats style.</h2>
-            <p>Here’s the page architecture that actually converts pipeline — pick a page to see what it has to do.</p>
+            <p>Here’s the page architecture that actually converts pipeline, pick a page to see what it has to do.</p>
           </Reveal>
           <PagesExplorer />
           <Reveal as="p" className="b2b-pg-note">
-            Not every SaaS site needs all 10. <strong>Every site we build starts here</strong> — then we prioritize by
+            Not every SaaS site needs all 10. <strong>Every site we build starts here</strong>, then we prioritize by
             your stage, buyer, and sales motion.
           </Reveal>
         </div>
@@ -837,7 +837,7 @@ export default function B2bSaasWebsitesView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
-            <h2>Four pillars — how great B2B SaaS sites are built.</h2>
+            <h2>Four pillars, how great B2B SaaS sites are built.</h2>
           </Reveal>
           <PillarsGrid />
         </div>
@@ -899,7 +899,7 @@ export default function B2bSaasWebsitesView() {
             ))}
           </div>
           <NoteCallout style={{ marginTop: 22 }}>
-            Ongoing (optional) — <strong>Growth retainer:</strong> new comparison pages, use-case pages, and A/B tests
+            Ongoing (optional), <strong>Growth retainer:</strong> new comparison pages, use-case pages, and A/B tests
             monthly. The site keeps compounding instead of stagnating.
           </NoteCallout>
         </div>
@@ -915,7 +915,7 @@ export default function B2bSaasWebsitesView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Project fees paid in three installments — <strong>30% at kickoff, 40% at design signoff, 30% at launch.</strong>{" "}
+            Project fees paid in three installments, <strong>30% at kickoff, 40% at design signoff, 30% at launch.</strong>{" "}
             Platform fees (Webflow, hosting) are separate. Every exact number is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
         </div>
@@ -925,11 +925,11 @@ export default function B2bSaasWebsitesView() {
 
       <CtaBand
         eyebrow="B2B & SaaS Websites"
-        heading="A site that generates pipeline — not compliments."
+        heading="A site that generates pipeline, not compliments."
         copy={
           <>
             Book a free website strategy call. We’ll look at your current site, your competitors, your buyer, and what
-            it’d take to build a site that pulls its weight —{" "}
+            it’d take to build a site that pulls its weight,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>with a clear price at the end. No obligation.</strong>
           </>
         }

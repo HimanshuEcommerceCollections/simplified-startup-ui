@@ -38,7 +38,7 @@ const DATA: NodeData[] = [
     ),
     title: "Senior operators, not interns",
     tags: ["Founders", "Operators", "Proven"],
-    desc: "Every engagement is led by people who've done the work — for their own companies and for clients.",
+    desc: "Every engagement is led by people who've done the work, for their own companies and for clients.",
     pos: [0.81, 0.3],
   },
   {
@@ -66,7 +66,7 @@ const DATA: NodeData[] = [
     ),
     title: "Ship-focused, always",
     tags: ["Live sites", "Campaigns", "Real output"],
-    desc: "Measurable outputs — live sites, running campaigns, booked meetings, clean books — not endless strategy decks.",
+    desc: "Measurable outputs, live sites, running campaigns, booked meetings, clean books, not endless strategy decks.",
     pos: [0.2, 0.73],
   },
 ];

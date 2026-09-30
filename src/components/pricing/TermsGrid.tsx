@@ -7,12 +7,12 @@ const TERMS = [
   {
     label: "Initial term",
     title: "Short, then flexible",
-    copy: "Growth plans run a 3-month initial term, then month to month. SEO has a 6-month minimum — search compounds, and shorter engagements waste your money.",
+    copy: "Growth plans run a 3-month initial term, then month to month. SEO has a 6-month minimum, search compounds, and shorter engagements waste your money.",
   },
   {
     label: "Ownership",
     title: "You own everything",
-    copy: "Site, content, accounts, and creative — all in your name. If we part ways, everything stays with you.",
+    copy: "Site, content, accounts, and creative, all in your name. If we part ways, everything stays with you.",
   },
   {
     label: "Media",
@@ -27,12 +27,12 @@ const TERMS = [
   {
     label: "Pricing",
     title: "Locked once planned",
-    copy: "Your exact price is fixed in your plan before work starts. Scope changes are re-scoped in writing — never absorbed silently, never surprise-billed.",
+    copy: "Your exact price is fixed in your plan before work starts. Scope changes are re-scoped in writing, never absorbed silently, never surprise-billed.",
   },
   {
     label: "Guarantees",
     title: "Honest guarantees",
-    copy: "We guarantee the work — scope, schedule, and a quality checklist, in writing. We never guarantee a market outcome; no honest agency can.",
+    copy: "We guarantee the work, scope, schedule, and a quality checklist, in writing. We never guarantee a market outcome; no honest agency can.",
   },
 ];
 

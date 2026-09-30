@@ -8,7 +8,7 @@ const TIERS = [
     name: "Starter",
     price: "$1,000–1,500",
     per: "/mo",
-    desc: "Consistent marketing, handled — content, social, and the basics done right, every month.",
+    desc: "Consistent marketing, handled, content, social, and the basics done right, every month.",
     list: ["Core channel management", "Monthly content calendar, written and shipped", "Monthly results report"],
     cta: { label: "Start with Starter", primary: false },
     feature: false,
@@ -30,7 +30,7 @@ const TIERS = [
     name: "Full-Service",
     price: "$4,000–8,000",
     per: "/mo",
-    desc: "The entire growth engine, ready for you — strategy, execution, and reporting, all under one roof.",
+    desc: "The entire growth engine, ready for you, strategy, execution, and reporting, all under one roof.",
     list: ["Everything in Growth", "Paid campaigns and full-funnel measurement", "A senior team across every channel"],
     cta: { label: "Go Full-Service", primary: false },
     feature: false,
@@ -98,7 +98,7 @@ export default function PricingTiers() {
           <span className="eyebrow">— Ongoing marketing, handled</span>
           <h2>Monthly marketing packages</h2>
           <p>
-            Our recurring digital marketing plans — three tiers, month to month after a 3-month
+            Our recurring digital marketing plans, three tiers, month to month after a 3-month
             introductory term. Software and tool costs are included, so the price below is the
             total price.
           </p>

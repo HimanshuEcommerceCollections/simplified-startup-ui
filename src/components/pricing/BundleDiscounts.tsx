@@ -120,7 +120,7 @@ export default function BundleDiscounts() {
               </span>
             </div>
             <p style={{ marginTop: 16 }}>
-              Working with us across service areas — say, a website plus staffing plus bookkeeping —
+              Working with us across service areas, say, a website plus staffing plus bookkeeping,
               carries its own 10–15% cross-area discount, calculated separately.
             </p>
           </div>

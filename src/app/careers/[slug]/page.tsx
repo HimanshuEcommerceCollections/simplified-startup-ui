@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (slug === GENERAL_APPLICATION_SLUG) {
     return {
       title: "General Application | Simplified Startup",
-      description: "Don't see your exact role? Tell us what you're great at — we make room for great people.",
+      description: "Don't see your exact role? Tell us what you're great at, we make room for great people.",
     };
   }
   const role = await findRole(slug);
   if (!role) return { title: "Apply | Simplified Startup" };
-  return { title: `${role.title} — Apply | Simplified Startup`, description: role.desc };
+  return { title: `${role.title}: Apply | Simplified Startup`, description: role.desc };
 }
 
 export default async function ApplyPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -55,7 +55,7 @@ export default async function ApplyPage({ params }: { params: Promise<{ slug: st
               </div>
               <p className="ap-desc">
                 {general
-                  ? "Don't see your exact role on the openings list? Send us the best thing you've built, shipped, or grown — we read every application and make room for great people."
+                  ? "Don't see your exact role on the openings list? Send us the best thing you've built, shipped, or grown, we read every application and make room for great people."
                   : role!.desc}
               </p>
               {/* rich description authored in the dashboard; sanitized server-side */}

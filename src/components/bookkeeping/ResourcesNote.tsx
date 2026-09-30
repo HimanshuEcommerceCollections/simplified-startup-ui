@@ -16,7 +16,7 @@ export default function ResourcesNote() {
           </svg>
           <p>
             <b>Starting from zero?</b> Bookkeeping basics for new businesses covers what to put in
-            place before you need a bookkeeper — and what you need one for. Educational, not advice.
+            place before you need a bookkeeper, and what you need one for. Educational, not advice.
           </p>
         </Reveal>
       </div>

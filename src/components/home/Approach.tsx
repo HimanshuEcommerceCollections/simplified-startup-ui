@@ -74,7 +74,7 @@ export default function Approach() {
               Most founders <span className="grad">coordinate several specialists.</span>
             </h2>
             <p>
-              Each route below works well for certain needs. Here&apos;s where each one fits — and
+              Each route below works well for certain needs. Here&apos;s where each one fits, and
               where a single trusted partner brings it all together.
             </p>
           </Reveal>

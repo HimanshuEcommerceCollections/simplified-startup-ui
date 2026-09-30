@@ -17,7 +17,7 @@ const PANELS = [
     title: "Setup & catch-up",
     items: [
       "Chart of accounts built for how your business actually runs.",
-      "Historical cleanup scoped honestly — you'll know the size of the mess before we start.",
+      "Historical cleanup scoped honestly, you'll know the size of the mess before we start.",
       "Works with the major platforms: QuickBooks, Xero, or what you already use.",
     ],
   },
@@ -26,7 +26,7 @@ const PANELS = [
     title: "Monthly close",
     items: [
       "Transactions categorized and accounts reconciled every month.",
-      'A written close date you can circle — not "sometime after the 15th."',
+      'A written close date you can circle, not "sometime after the 15th."',
       "A reconciliation checklist behind every close, same discipline every month.",
     ],
   },
@@ -36,14 +36,14 @@ const PANELS = [
     items: [
       "Monthly P&L and cash view with plain-English notes on what changed.",
       "Flags raised when a number moves in a way you should know about.",
-      "No jargon walls — if you can't read the report, the report failed.",
+      "No jargon walls, if you can't read the report, the report failed.",
     ],
   },
   {
     num: "04",
     title: "Tax-season ready",
     items: [
-      "Clean, organized books handed to your CPA — we do the books, they do the tax.",
+      "Clean, organized books handed to your CPA, we do the books, they do the tax.",
       "Year-end without archaeology: everything categorized, reconciled, documented.",
       "Your CPA will notice the difference, and so will their invoice.",
     ],
@@ -82,7 +82,7 @@ export default function EngagementAccordion() {
       <div className="wrap">
         <Reveal className="sec-head">
           <span className="eyebrow">— Named product · fixed scope</span>
-          <h2>What the engagement includes — in writing.</h2>
+          <h2>What the engagement includes, in writing.</h2>
           <p className="bk-sub">
             One named product, one fixed scope, one price fixed in your plan before work starts.
           </p>

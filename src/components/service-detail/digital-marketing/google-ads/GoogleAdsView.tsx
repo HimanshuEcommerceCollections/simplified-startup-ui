@@ -267,23 +267,23 @@ const FEATURES = [
 /* -------- the problem with most ads agencies -------- */
 
 const PAINS = [
-  { title: "Hidden pricing", text: "“Book a call for a quote” — then $3K–$15K/mo minimum on a 12-month contract." },
-  { title: "High minimum spend", text: "Many won’t take you under $10K+/mo on ads — which kills small-business budgets.", delay: 60 },
+  { title: "Hidden pricing", text: "“Book a call for a quote”, then $3K–$15K/mo minimum on a 12-month contract." },
+  { title: "High minimum spend", text: "Many won’t take you under $10K+/mo on ads, which kills small-business budgets.", delay: 60 },
   { title: "“Set and forget”", text: "Built in month one, then coasting on autopilot while you’re invoiced monthly.", delay: 120 },
-  { title: "Vanity reports", text: "Full of impressions and clicks — zero mention of leads, revenue, or ROAS." },
-  { title: "Wasted spend", text: "Broad match with no negative lists eats budget — and most agencies never clean it up.", delay: 60 },
+  { title: "Vanity reports", text: "Full of impressions and clicks, zero mention of leads, revenue, or ROAS." },
+  { title: "Wasted spend", text: "Broad match with no negative lists eats budget, and most agencies never clean it up.", delay: 60 },
   { title: "No landing page work", text: "Great ad, weak homepage. Ads team blames the site; site team blames the ads.", delay: 120 },
 ];
 
 /* -------- what's included -------- */
 
 const INCLUDED = [
-  { icon: ICON_SEARCH, no: "01 · Free", title: "Ads account audit", text: <>Structure, wasted spend, search terms, tracking accuracy, and Quality Score — <strong>a prioritized fix list before we ever charge you.</strong></> },
-  { icon: ICON_LAYOUT, no: "02", title: "Strategy & campaign build", text: <>Goals and KPIs defined, buyer-intent keywords, brand vs non-brand separation, bid strategy, and budget pacing — <strong>not a template.</strong></> },
-  { icon: ICON_LINES, no: "03", title: "Ad creation & copywriting", text: <>Responsive search ads, extensions, A/B testing, plus display, video, and Shopping copy — <strong>written to match intent.</strong></> },
-  { icon: ICON_SHIELD_CHECK, no: "04", title: "Conversion tracking", text: <>GA4, enhanced conversions, call tracking, CRM/offline imports, Consent Mode v2 — <strong>the #1 reason accounts underperform, fixed.</strong></> },
-  { icon: ICON_REFRESH, no: "05", title: "Ongoing optimization", text: <>Smart Bidding tuning, search-term mining, negative keywords, audience testing, and budget shifts — <strong>weekly, not autopilot.</strong></> },
-  { icon: ICON_DOC_CHECK, no: "06", title: "Landing pages & CRO", text: "We optimize the destination alongside the ad — audits, new builds, and A/B testing of headlines, offers, and CTAs." },
+  { icon: ICON_SEARCH, no: "01 · Free", title: "Ads account audit", text: <>Structure, wasted spend, search terms, tracking accuracy, and Quality Score, <strong>a prioritized fix list before we ever charge you.</strong></> },
+  { icon: ICON_LAYOUT, no: "02", title: "Strategy & campaign build", text: <>Goals and KPIs defined, buyer-intent keywords, brand vs non-brand separation, bid strategy, and budget pacing, <strong>not a template.</strong></> },
+  { icon: ICON_LINES, no: "03", title: "Ad creation & copywriting", text: <>Responsive search ads, extensions, A/B testing, plus display, video, and Shopping copy, <strong>written to match intent.</strong></> },
+  { icon: ICON_SHIELD_CHECK, no: "04", title: "Conversion tracking", text: <>GA4, enhanced conversions, call tracking, CRM/offline imports, Consent Mode v2, <strong>the #1 reason accounts underperform, fixed.</strong></> },
+  { icon: ICON_REFRESH, no: "05", title: "Ongoing optimization", text: <>Smart Bidding tuning, search-term mining, negative keywords, audience testing, and budget shifts, <strong>weekly, not autopilot.</strong></> },
+  { icon: ICON_DOC_CHECK, no: "06", title: "Landing pages & CRO", text: "We optimize the destination alongside the ad, audits, new builds, and A/B testing of headlines, offers, and CTAs." },
 ];
 
 /* -------- business types (interactive) -------- */
@@ -313,7 +313,7 @@ const TYPES: BusinessType[] = [
     btnName: "Local businesses",
     btnSub: "Service-area",
     name: "Google Ads for Local Businesses",
-    tag: "For plumbers, dentists, lawyers, salons — anyone with a service area.",
+    tag: "For plumbers, dentists, lawyers, salons, anyone with a service area.",
     items: [
       "Local Services Ads (Google Guaranteed)",
       "High-intent local keyword targeting",
@@ -377,7 +377,7 @@ const TYPES: BusinessType[] = [
     btnName: "Ads audit",
     btnSub: "One-off review",
     name: "Google Ads Audit",
-    tag: "A deep, one-off review of your existing account — no commitment.",
+    tag: "A deep, one-off review of your existing account, no commitment.",
     items: [
       "Full account structure review",
       "Wasted spend & search-term analysis",
@@ -458,12 +458,12 @@ function TypesExplorer() {
 /* -------- who it's for -------- */
 
 const WHO = [
-  { icon: ICON_PIN, text: <><strong>A local service business</strong> — plumbers, HVAC, legal, dental. High-intent local searches convert fast.</> },
+  { icon: ICON_PIN, text: <><strong>A local service business</strong>, plumbers, HVAC, legal, dental. High-intent local searches convert fast.</> },
   { icon: ICON_CART_PLAIN, text: <><strong>An e-commerce store</strong> with a real catalog and margins to support paid traffic. Shopping is especially strong.</>, delay: 60 },
   { icon: ICON_LIST, text: <><strong>A lead-gen business</strong> with a defined cost-per-lead you can pay and still hit margin.</>, delay: 120 },
   { icon: ICON_BRIEFCASE, text: <><strong>A B2B or SaaS company</strong> with buyers who search for solutions to a known problem.</> },
   { icon: ICON_ROCKET_PLAIN, text: <><strong>A new business</strong> that needs immediate visibility while SEO builds in the background.</>, delay: 60 },
-  { icon: ICON_REFRESH, text: <><strong>Already running ads</strong> with mediocre results — and want a real audit, not another monthly report.</>, delay: 120 },
+  { icon: ICON_REFRESH, text: <><strong>Already running ads</strong> with mediocre results, and want a real audit, not another monthly report.</>, delay: 120 },
 ];
 
 /* -------- how it works -------- */
@@ -479,25 +479,25 @@ const STEPS = [
 /* -------- pricing -------- */
 
 const TIERS = [
-  { name: "Starter Ads", best: "Under $2K/mo on ads — one campaign type, monthly reporting.", price: "Published /mo" },
-  { name: "Growth Ads", best: "Growing accounts — multiple campaign types, remarketing, weekly optimization.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale Ads", best: "Larger accounts & e-commerce — Shopping/PMax, feed management, daily optimization.", price: "Published /mo", delay: 140 },
-  { name: "One-off Audit", best: "A deep audit + strategy doc for your existing account — no ongoing commitment.", price: "Published", delay: 210 },
+  { name: "Starter Ads", best: "Under $2K/mo on ads, one campaign type, monthly reporting.", price: "Published /mo" },
+  { name: "Growth Ads", best: "Growing accounts, multiple campaign types, remarketing, weekly optimization.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Scale Ads", best: "Larger accounts & e-commerce: Shopping/PMax, feed management, daily optimization.", price: "Published /mo", delay: 140 },
+  { name: "One-off Audit", best: "A deep audit + strategy doc for your existing account, no ongoing commitment.", price: "Published", delay: 210 },
 ];
 
 /* -------- faq -------- */
 
 const FAQS = [
   { q: "How much should I spend on Google Ads?", a: <>Enough to generate <strong>15–30 conversions/month per campaign</strong> so Google’s AI has data to optimize. For most small businesses that’s $1K–$3K/mo; for e-commerce or competitive B2B, $5K–$50K+.</> },
-  { q: "Do you have a minimum ad spend?", a: <>No. Most agencies won’t take clients under $5K–$10K/mo. <strong>We’ll work with whatever spend makes sense</strong> — including under $1K/mo.</> },
+  { q: "Do you have a minimum ad spend?", a: <>No. Most agencies won’t take clients under $5K–$10K/mo. <strong>We’ll work with whatever spend makes sense</strong>, including under $1K/mo.</> },
   { q: "How long before I see results?", a: <>Traffic and clicks day one. Real conversion data usually takes <strong>30–90 days;</strong> meaningful ROAS improvements typically compound from month 2 onward.</> },
-  { q: "Do you take a percentage of ad spend?", a: <>No. A <strong>flat monthly management fee,</strong> published on our pricing page. Your ad spend goes directly to Google — we never mark it up.</> },
-  { q: "Already running ads with another agency?", a: <>Start with our free audit. Most accounts waste <strong>20–40% of spend</strong> on preventable issues — the savings alone often cover our fee.</> },
-  { q: "Do I own the account?", a: <>Yes. Every account is <strong>under your ownership</strong> — you’re the primary holder, we’re a manager. If you leave, you keep everything.</> },
-  { q: "Google Ads vs SEO?", a: <>Ads are paid — instant, but stop when you stop paying. SEO is organic — slower to build but compounds. <strong>Most businesses do both.</strong></> },
-  { q: "Do you work with e-commerce?", a: <>Yes — Shopping and Performance Max are core, including <strong>feed optimization, Merchant Center setup, and ROAS-focused bidding.</strong></> },
-  { q: "Do you handle landing pages?", a: <>Yes — landing pages are part of every engagement. We review, recommend, and (if needed) <strong>build new pages designed to convert paid traffic.</strong></> },
-  { q: "Can you run Microsoft (Bing) Ads too?", a: <>Yes — often underused with <strong>lower CPCs.</strong> We can add it to any engagement at a reduced fee since much of the setup mirrors Google.</> },
+  { q: "Do you take a percentage of ad spend?", a: <>No. A <strong>flat monthly management fee,</strong> published on our pricing page. Your ad spend goes directly to Google, we never mark it up.</> },
+  { q: "Already running ads with another agency?", a: <>Start with our free audit. Most accounts waste <strong>20–40% of spend</strong> on preventable issues, the savings alone often cover our fee.</> },
+  { q: "Do I own the account?", a: <>Yes. Every account is <strong>under your ownership</strong>, you’re the primary holder, we’re a manager. If you leave, you keep everything.</> },
+  { q: "Google Ads vs SEO?", a: <>Ads are paid, instant, but stop when you stop paying. SEO is organic, slower to build but compounds. <strong>Most businesses do both.</strong></> },
+  { q: "Do you work with e-commerce?", a: <>Yes: Shopping and Performance Max are core, including <strong>feed optimization, Merchant Center setup, and ROAS-focused bidding.</strong></> },
+  { q: "Do you handle landing pages?", a: <>Yes, landing pages are part of every engagement. We review, recommend, and (if needed) <strong>build new pages designed to convert paid traffic.</strong></> },
+  { q: "Can you run Microsoft (Bing) Ads too?", a: <>Yes, often underused with <strong>lower CPCs.</strong> We can add it to any engagement at a reduced fee since much of the setup mirrors Google.</> },
 ];
 
 export default function GoogleAdsView() {
@@ -515,8 +515,8 @@ export default function GoogleAdsView() {
         }
         lead={
           <>
-            Google Ads measured in <strong>leads, revenue, and ROAS</strong> — not impressions and CPCs no one can spend.
-            Search, Shopping, Performance Max, YouTube, and remarketing — one team, published prices, no minimum spend, no
+            Google Ads measured in <strong>leads, revenue, and ROAS</strong>, not impressions and CPCs no one can spend.
+            Search, Shopping, Performance Max, YouTube, and remarketing, one team, published prices, no minimum spend, no
             long lock-in.
           </>
         }
@@ -534,7 +534,7 @@ export default function GoogleAdsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Why Google Ads still wins</span>
             <h2>The highest-intent traffic on the internet.</h2>
-            <p>Someone typing “emergency plumber Raleigh” isn’t browsing — they’re ready to buy. Google Ads puts you in front of that person immediately.</p>
+            <p>Someone typing “emergency plumber Raleigh” isn’t browsing, they’re ready to buy. Google Ads puts you in front of that person immediately.</p>
           </Reveal>
           <div className="ads-why">
             <FeatureGrid cards={FEATURES} columns={3} />
@@ -548,7 +548,7 @@ export default function GoogleAdsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">The problem with most ads agencies</span>
             <h2>You’ve probably seen a few of these.</h2>
-            <p>If you’ve worked with an ads agency before, these will look familiar — and we built our service to fix every one.</p>
+            <p>If you’ve worked with an ads agency before, these will look familiar, and we built our service to fix every one.</p>
           </Reveal>
           <div className="ads-pain-grid">
             {PAINS.map((pain) => (
@@ -574,7 +574,7 @@ export default function GoogleAdsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
             <h2>The whole program, run by one team.</h2>
-            <p>Strategy, campaign build, optimization, tracking, and reporting — nothing handed off, nothing on autopilot.</p>
+            <p>Strategy, campaign build, optimization, tracking, and reporting, nothing handed off, nothing on autopilot.</p>
           </Reveal>
           <Reveal className="ads-inc-grid">
             {INCLUDED.map((item) => (
@@ -589,7 +589,7 @@ export default function GoogleAdsView() {
             ))}
           </Reveal>
           <NoteCallout style={{ marginTop: 22 }}>
-            07 — <strong>Reporting & strategy reviews:</strong> monthly plain-language reports (revenue, leads, ROAS, CPA),
+            07, <strong>Reporting & strategy reviews:</strong> monthly plain-language reports (revenue, leads, ROAS, CPA),
             live dashboard access, quarterly strategy reviews, and direct Slack or email access to your account manager.
             Never just “here’s the dashboard.”
           </NoteCallout>
@@ -602,7 +602,7 @@ export default function GoogleAdsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Built for your business type</span>
             <h2>Google Ads works differently for everyone.</h2>
-            <p>It depends on who you’re selling to and what you’re selling. Pick your type — see the package built for it.</p>
+            <p>It depends on who you’re selling to and what you’re selling. Pick your type, see the package built for it.</p>
           </Reveal>
           <TypesExplorer />
         </div>
@@ -631,7 +631,7 @@ export default function GoogleAdsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">How it works</span>
-            <h2>Wins fast — built for durable performance.</h2>
+            <h2>Wins fast, built for durable performance.</h2>
           </Reveal>
           <div className="ads-steps">
             {STEPS.map((step) => (
@@ -657,7 +657,7 @@ export default function GoogleAdsView() {
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
             Retainers are <strong>month-to-month.</strong> Ad spend is separate from management fees and paid directly to
-            Google — we never mark it up or take a cut. Every exact number is on the <a href="/pricing">pricing page</a>.
+            Google, we never mark it up or take a cut. Every exact number is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
         </div>
       </section>
@@ -670,7 +670,7 @@ export default function GoogleAdsView() {
         copy={
           <>
             Book a free Google Ads audit. We’ll show where your budget goes, what’s working, what’s wasting spend, and what
-            it’d take to grow —{" "}
+            it’d take to grow,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>with a clear price at the end. No obligation, no minimum spend.</strong>
           </>
         }

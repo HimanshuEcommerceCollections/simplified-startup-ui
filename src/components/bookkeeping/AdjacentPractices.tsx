@@ -11,15 +11,15 @@ const CARDS = [
   },
   {
     title: "AI automation strategy",
-    desc: "The first step of the Operate bundle — books, staffing, and AI strategy together, 15% off.",
+    desc: "The first step of the Operate bundle, books, staffing, and AI strategy together, 15% off.",
   },
   {
     title: "Hire without the headache",
-    desc: "The other half of a calm back office — sourcing and screening run for you.",
+    desc: "The other half of a calm back office, sourcing and screening run for you.",
   },
   {
     title: "Know what AI is worth to you",
-    desc: "A ranked read on where AI would actually save you money — including where it would not.",
+    desc: "A ranked read on where AI would actually save you money, including where it would not.",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function AdjacentPractices() {
           ))}
         </div>
         <p className="bk-adj-note">
-          Eight practices, one firm, one relationship owner — <a href="/services">see all eight</a>.
+          Eight practices, one firm, one relationship owner, <a href="/services">see all eight</a>.
           Any two services together save 10%, three or more save 15%.
         </p>
       </div>

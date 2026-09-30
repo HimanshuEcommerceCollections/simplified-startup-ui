@@ -5,9 +5,9 @@ import { useReducedMotion } from "@/lib/useReducedMotion";
 
 const DEMOS: [string, string][] = [
   ["How long does SEO take?", "Usually 3–6 months for meaningful movement. Anyone promising rankings in 30 days isn't being honest."],
-  ["Do I have to sign a long contract?", "No lock-in. Most services are month-to-month — cancel with about 30 days' notice."],
+  ["Do I have to sign a long contract?", "No lock-in. Most services are month-to-month, cancel with about 30 days' notice."],
   ["Where can I see your prices?", "On every service page, publicly. No “book a call to hear our rates.”"],
-  ["Who owns the work you create?", "You do — content, designs, ad and social accounts all belong to you."],
+  ["Who owns the work you create?", "You do, content, designs, ad and social accounts all belong to you."],
 ];
 
 /** Hero signature: cycling typewriter Q → thinking dots → A demo. */

@@ -107,7 +107,7 @@ export default function WhatWeDo() {
           <h2 className="ab-h2">All your business needs, covered.</h2>
           <p className="sec-lead">
             From strategy and branding to technology, marketing, and growth, we bring the expertise
-            you need to build and move your business forward — as one connected team, not a
+            you need to build and move your business forward, as one connected team, not a
             scattered set of vendors.
           </p>
         </Reveal>
@@ -120,7 +120,7 @@ export default function WhatWeDo() {
             </Reveal>
           ))}
         </div>
-        <p className="eco-note">One connected ecosystem — take what you need now, add the rest as you grow.</p>
+        <p className="eco-note">One connected ecosystem, take what you need now, add the rest as you grow.</p>
       </div>
     </section>
   );

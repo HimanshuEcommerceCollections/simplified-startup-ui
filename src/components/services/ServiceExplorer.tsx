@@ -21,7 +21,7 @@ const SERVICES: Service[] = [
     title: "Digital Marketing",
     sub: "Get found and get pipeline",
     href: "/digital-marketing",
-    is: "Full-funnel demand generation — the channels that turn strangers into booked calls, run as one coordinated program instead of disconnected tactics.",
+    is: "Full-funnel demand generation, the channels that turn strangers into booked calls, run as one coordinated program instead of disconnected tactics.",
     included: [
       { b: "SEO & AI-search", rest: "technical fixes, on-page work, content, and authority so you rank in Google and get cited in AI answers." },
       { b: "Paid ads", rest: "Google, Meta, LinkedIn, and YouTube campaigns, with conversion tracking verified before a dollar of spend." },
@@ -35,21 +35,21 @@ const SERVICES: Service[] = [
     title: "Website Development",
     sub: "A site that sells while you sleep",
     href: "/website-development",
-    is: "Fast, modern, conversion-focused websites and landing pages — designed from your brand and engineered to turn visitors into customers.",
+    is: "Fast, modern, conversion-focused websites and landing pages, designed from your brand and engineered to turn visitors into customers.",
     included: [
       { b: "Wireframes & mockups", rest: "layout and navigation signed off before a line of code." },
       { b: "Custom design & build", rest: "mobile-first, on brand, no cookie-cutter template." },
       { b: "Conversion & SEO foundations", rest: "speed, schema, analytics, and a clear next step on every page." },
       { b: "Launch & handoff", rest: "QA against a published checklist, plus docs and full ownership of the site." },
     ],
-    get: "a website that loads fast, ranks, and converts — and that you own outright, code and all.",
+    get: "a website that loads fast, ranks, and converts, and that you own outright, code and all.",
     for: "For founders whose current site is slow, dated, or quietly losing them customers.",
   },
   {
     title: "Branding & Growth",
     sub: "Look like the leader in your space",
     href: "/branding-growth",
-    is: "Identity systems and the positioning behind them — the message and look that make the shortlist decision go your way.",
+    is: "Identity systems and the positioning behind them, the message and look that make the shortlist decision go your way.",
     included: [
       { b: "Brand discovery", rest: "audience, competitors, positioning, and voice, captured in a findings doc." },
       { b: "Messaging framework", rest: "brand promise, value props, and the words your whole team uses." },
@@ -77,7 +77,7 @@ const SERVICES: Service[] = [
     title: "AI Automation",
     sub: "Automate the busywork",
     href: "/ai-automation",
-    is: "Custom AI workflows and agents that handle the repetitive work across your stack — with humans kept on every judgment call.",
+    is: "Custom AI workflows and agents that handle the repetitive work across your stack, with humans kept on every judgment call.",
     included: [
       { b: "Workflow audit", rest: "we map where the hours actually go and score what's worth automating." },
       { b: "Build & integrate", rest: "automations across your tools (CRM, email, docs, reporting)." },
@@ -85,7 +85,7 @@ const SERVICES: Service[] = [
       { b: "Monitoring & handoff", rest: "error alerts, documentation, and every credential in your name." },
     ],
     get: "hours back every week, fewer manual errors, and a documented system you control.",
-    for: "For teams drowning in repetitive ops — reporting, data entry, follow-ups, onboarding.",
+    for: "For teams drowning in repetitive ops, reporting, data entry, follow-ups, onboarding.",
   },
   {
     title: "Business & Startup Advisory",
@@ -98,14 +98,14 @@ const SERVICES: Service[] = [
       { b: "Go-to-market", rest: "who you sell to first, the message, the channel, the dated launch." },
       { b: "Funding readiness", rest: "the model and story a bank or investor needs, if you're raising." },
     ],
-    get: "a written plan you can execute — and, unlike advice-only firms, a team that can execute it.",
+    get: "a written plan you can execute, and, unlike advice-only firms, a team that can execute it.",
     for: "For pre-launch and early founders who want an honest plan plus execution muscle.",
   },
   {
     title: "Talent & Staffing",
     sub: "Senior capability without the full-time hire",
     href: "/talent-staffing",
-    is: "Vetted virtual assistants and specialists, scoped to a role scorecard and managed for you — on your business hours.",
+    is: "Vetted virtual assistants and specialists, scoped to a role scorecard and managed for you, on your business hours.",
     included: [
       { b: "Role scorecard", rest: "the five tasks and the standard, written down before we source." },
       { b: "Vetting & work samples", rest: "structured screening, not two hundred résumés on your desk." },
@@ -119,7 +119,7 @@ const SERVICES: Service[] = [
     title: "Bookkeeping & Accounting",
     sub: "Finance handled, end to end",
     href: "/bookkeeping",
-    is: "Clean monthly books, plain-English reporting, and a dated close — organized so tax season is a handoff, not a scramble.",
+    is: "Clean monthly books, plain-English reporting, and a dated close, organized so tax season is a handoff, not a scramble.",
     included: [
       { b: "Categorize & reconcile", rest: "every transaction sorted, accounts matched to the penny." },
       { b: "Month-end close", rest: "a dated close each month, so you always know the books are final." },
@@ -186,7 +186,7 @@ export default function ServiceExplorer() {
                 <ul className="cap-incl">
                   {svc.included.map((item) => (
                     <li key={item.b}>
-                      <b>{item.b}</b> — {item.rest}
+                      <b>{item.b}</b>, {item.rest}
                     </li>
                   ))}
                 </ul>

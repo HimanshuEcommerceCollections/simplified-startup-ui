@@ -83,7 +83,7 @@ export default function BlogDefluffCard() {
             <svg className="bl-df-check" viewBox="0 0 24 24">
               <path d="M4 12.5l5 5L20 6" />
             </svg>
-            <p>We help you get more customers — and tell you exactly how.</p>
+            <p>We help you get more customers, and tell you exactly how.</p>
           </div>
         </div>
 

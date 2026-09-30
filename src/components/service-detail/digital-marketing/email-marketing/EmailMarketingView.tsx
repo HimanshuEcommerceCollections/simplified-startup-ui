@@ -183,7 +183,7 @@ function RoiCard() {
           <small>avg return</small>
         </span>
       </div>
-      <p className="em-roi-cap">Industry average ROI — nothing else comes close.</p>
+      <p className="em-roi-cap">Industry average ROI, nothing else comes close.</p>
       <div className="em-roi-flow">
         {FLOWS.map((flow) => (
           <div className="em-rf" key={flow.name}>
@@ -221,12 +221,12 @@ const WHY = [
 /* -------- problem -------- */
 
 const PAINS = [
-  { title: "One newsletter = “strategy”", text: "Real email is 20+ touches a month across campaigns, flows, and segments — not one send." },
+  { title: "One newsletter = “strategy”", text: "Real email is 20+ touches a month across campaigns, flows, and segments, not one send." },
   { title: "Zero attention to deliverability", text: "Emails land in spam and nobody notices until opens crater. It’s a working list vs a dead one.", delay: 60 },
-  { title: "Set-and-forget automations", text: "Welcome flow built once, never updated — revenue-per-email quietly drops every month.", delay: 120 },
+  { title: "Set-and-forget automations", text: "Welcome flow built once, never updated, revenue-per-email quietly drops every month.", delay: 120 },
   { title: "No segmentation", text: "Same email to everyone. New subscriber gets the same as your best customer. Both unsubscribe." },
-  { title: "They ignore SMS", text: "Email + SMS together can 2× campaign revenue — most agencies only handle email.", delay: 60 },
-  { title: "Reports of “opens” & “clicks”", text: "Not revenue-per-email, list churn, or LTV — the numbers that actually matter.", delay: 120 },
+  { title: "They ignore SMS", text: "Email + SMS together can 2× campaign revenue, most agencies only handle email.", delay: 60 },
+  { title: "Reports of “opens” & “clicks”", text: "Not revenue-per-email, list churn, or LTV, the numbers that actually matter.", delay: 120 },
 ];
 
 /* -------- what's included (interactive, 9 parts) -------- */
@@ -246,7 +246,7 @@ const INCLUDED: Included[] = [
     btnName: "Audit & strategy",
     btnSub: "Revenue baseline",
     name: "Email Audit & Strategy",
-    tag: "Every engagement starts here — a clear look at your list, deliverability, campaigns, and flows.",
+    tag: "Every engagement starts here, a clear look at your list, deliverability, campaigns, and flows.",
     items: ["List health check (deliverability, engagement, churn)", "Existing campaign & flow audit", "Competitor & category benchmarking", "Revenue-per-email baseline", "Segmentation opportunity analysis", "90-day + 12-month strategy"],
   },
   {
@@ -254,7 +254,7 @@ const INCLUDED: Included[] = [
     btnName: "Platform setup / migration",
     btnSub: "The right ESP",
     name: "Platform Setup & Migration",
-    tag: "We set up or migrate to the ESP that fits your business — not the one that pays us.",
+    tag: "We set up or migrate to the ESP that fits your business, not the one that pays us.",
     items: ["Platform recommendation for your needs", "New setup or migration", "Domain authentication (SPF, DKIM, DMARC)", "IP warm-up for sender reputation", "Website, CRM & store integration", "Team access, permissions, templates"],
   },
   {
@@ -262,7 +262,7 @@ const INCLUDED: Included[] = [
     btnName: "List building & growth",
     btnSub: "Grow it right",
     name: "List Building & Growth",
-    tag: "A dying list is a dying business — we grow it every month with subscribers who engage.",
+    tag: "A dying list is a dying business, we grow it every month with subscribers who engage.",
     items: ["Sign-up forms & pop-ups (A/B tested)", "Lead magnets & content upgrades", "Landing page opt-ins", "Referral & viral loops", "List cleaning of disengaged contacts", "List sourcing (for cold programs)"],
   },
   {
@@ -270,7 +270,7 @@ const INCLUDED: Included[] = [
     btnName: "Campaign design & copy",
     btnSub: "Opened & clicked",
     name: "Campaign Design & Copywriting",
-    tag: "The emails your subscribers actually open — human copy, mobile-first design, one clear action.",
+    tag: "The emails your subscribers actually open, human copy, mobile-first design, one clear action.",
     items: ["Weekly / bi-weekly campaign strategy", "Subject line & preview text", "Copy (promo, educational, story-driven)", "Mobile-first email design", "Branded template library", "A/B testing subject, time, content"],
   },
   {
@@ -278,7 +278,7 @@ const INCLUDED: Included[] = [
     btnName: "Automation flows",
     btnSub: "Revenue on autopilot",
     name: "Automation Flows",
-    tag: "Revenue on autopilot — built once, refined monthly, generating sales every day.",
+    tag: "Revenue on autopilot, built once, refined monthly, generating sales every day.",
     items: ["Welcome series for new subscribers", "Abandoned cart & browse abandonment", "Post-purchase + upsell / cross-sell", "Win-back for disengaged subscribers", "Birthday, anniversary, lifecycle triggers", "B2B lead-nurture sequences"],
   },
   {
@@ -286,7 +286,7 @@ const INCLUDED: Included[] = [
     btnName: "Segmentation",
     btnSub: "Biggest lever",
     name: "Segmentation & Personalization",
-    tag: "The single biggest lever — the right message to the right subscriber.",
+    tag: "The single biggest lever, the right message to the right subscriber.",
     items: ["Behavior-based segments (open, click, buy)", "Purchase-history & LTV segments", "Engagement-level segmentation", "Dynamic content blocks per segment", "Personalized product recommendations", "Predictive send-time optimization"],
   },
   {
@@ -294,7 +294,7 @@ const INCLUDED: Included[] = [
     btnName: "Deliverability",
     btnSub: "Inbox, not spam",
     name: "Deliverability & Compliance",
-    tag: "The invisible work that decides inbox vs spam. Most agencies skip it — we start with it.",
+    tag: "The invisible work that decides inbox vs spam. Most agencies skip it, we start with it.",
     items: ["Sender authentication (SPF, DKIM, DMARC)", "IP reputation monitoring", "Inbox placement testing", "Bounce & unsubscribe management", "GDPR, CAN-SPAM, CCPA compliance", "Ongoing list hygiene"],
   },
   {
@@ -302,7 +302,7 @@ const INCLUDED: Included[] = [
     btnName: "SMS & WhatsApp",
     btnSub: "Add-on channel",
     name: "SMS & WhatsApp (Add-on)",
-    tag: "Email + SMS together drive dramatically better revenue — one platform, one strategy.",
+    tag: "Email + SMS together drive dramatically better revenue, one platform, one strategy.",
     items: ["SMS campaign strategy & copywriting", "WhatsApp Business setup & campaigns", "SMS automation flows (cart, updates, promos)", "Compliance (TCPA, opt-in / opt-out)", "Unified email + SMS reporting"],
   },
   {
@@ -310,7 +310,7 @@ const INCLUDED: Included[] = [
     btnName: "Reporting & reviews",
     btnSub: "Tied to revenue",
     name: "Reporting & Strategy Reviews",
-    tag: "Never just “here’s the dashboard” — a plain-language report tied to real revenue.",
+    tag: "Never just “here’s the dashboard”, a plain-language report tied to real revenue.",
     items: ["Monthly report (revenue-per-email, growth)", "Campaign & flow performance breakdown", "Segmentation health & opportunities", "Live dashboard access", "Quarterly strategy review", "Direct Slack / email to your manager"],
   },
 ];
@@ -388,31 +388,31 @@ const TYPES: { icon: ReactNode; title: string; desc: string; items: string[] }[]
   { icon: ICON_BRIEFCASE, title: "B2B & SaaS", desc: "For long sales cycles and high customer values.", items: ["Lead-nurture sequences", "Sales-triggered email flows", "Segment-specific content tracks", "Trial & onboarding sequences", "CRM integration + pipeline reporting"] },
   { icon: ICON_PHONE, title: "Cold email & outbound", desc: "Booking meetings from cold outreach.", items: ["Prospect list building", "Domain warm-up + deliverability", "Multi-step sequence design", "Personalized copy at scale", "Reply management + booked-meeting reporting"] },
   { icon: ICON_ENVELOPE, title: "Newsletter & content", desc: "For creators & media growing a real audience.", items: ["Editorial content strategy", "Weekly / bi-weekly newsletter writing", "Sponsorship & monetization setup", "Beehiiv / Substack / ConvertKit setup", "Referral + cross-promo growth"] },
-  { icon: ICON_AUDIT, title: "Email Marketing Audit", desc: "A deep one-off review — no commitment.", items: ["Full list health & deliverability check", "Campaign & flow review", "Segmentation & personalization audit", "Design & copy critique", "Revenue-per-email + prioritized fix list"] },
+  { icon: ICON_AUDIT, title: "Email Marketing Audit", desc: "A deep one-off review, no commitment.", items: ["Full list health & deliverability check", "Campaign & flow review", "Segmentation & personalization audit", "Design & copy critique", "Revenue-per-email + prioritized fix list"] },
 ];
 
 /* -------- platforms -------- */
 
 const PLATFORMS = [
-  { name: "Klaviyo", best: "E-commerce (especially Shopify) — the industry standard for online stores" },
-  { name: "HubSpot", best: "B2B & SaaS — tight CRM + email integration" },
-  { name: "Brevo", best: "Small businesses — 200 emails/day free, great value at scale" },
-  { name: "Mailchimp", best: "Established brands — easy templates, wide integrations" },
-  { name: "ActiveCampaign", best: "Automation-heavy campaigns — strong flow logic" },
+  { name: "Klaviyo", best: "E-commerce (especially Shopify), the industry standard for online stores" },
+  { name: "HubSpot", best: "B2B & SaaS, tight CRM + email integration" },
+  { name: "Brevo", best: "Small businesses: 200 emails/day free, great value at scale" },
+  { name: "Mailchimp", best: "Established brands, easy templates, wide integrations" },
+  { name: "ActiveCampaign", best: "Automation-heavy campaigns, strong flow logic" },
   { name: "ConvertKit", best: "Creators, coaches, and newsletter brands" },
   { name: "Beehiiv & Substack", best: "Content-first newsletters with built-in growth features" },
-  { name: "Constant Contact", best: "Small local businesses — simple and affordable" },
+  { name: "Constant Contact", best: "Small local businesses, simple and affordable" },
 ];
 
 /* -------- who / steps / pricing / faq -------- */
 
 const WHO = [
-  { icon: ICON_CART, text: <><strong>An e-commerce store</strong> with regular customers — email is the highest-ROI channel for online sales, hands down.</> },
-  { icon: ICON_PIN, text: <><strong>A local business</strong> with repeat customers — email fills booking calendars and drives referrals cheaply.</>, delay: 60 },
-  { icon: ICON_BRIEFCASE, text: <><strong>A B2B or SaaS company</strong> with long sales cycles — nurture keeps you top-of-mind through the buying process.</>, delay: 120 },
-  { icon: ICON_SHIELD, text: <><strong>A service business</strong> with an existing customer base — email drives repeat bookings, upsells, and referrals.</> },
+  { icon: ICON_CART, text: <><strong>An e-commerce store</strong> with regular customers, email is the highest-ROI channel for online sales, hands down.</> },
+  { icon: ICON_PIN, text: <><strong>A local business</strong> with repeat customers, email fills booking calendars and drives referrals cheaply.</>, delay: 60 },
+  { icon: ICON_BRIEFCASE, text: <><strong>A B2B or SaaS company</strong> with long sales cycles, nurture keeps you top-of-mind through the buying process.</>, delay: 120 },
+  { icon: ICON_SHIELD, text: <><strong>A service business</strong> with an existing customer base, email drives repeat bookings, upsells, and referrals.</> },
   { icon: ICON_ENVELOPE, text: <><strong>A creator or media brand</strong> building a newsletter as a real audience asset.</>, delay: 60 },
-  { icon: ICON_TREND, text: <><strong>Any business with a neglected list</strong> — there’s usually 10–30% of monthly revenue sitting in it, unused.</>, delay: 120 },
+  { icon: ICON_TREND, text: <><strong>Any business with a neglected list</strong>, there’s usually 10–30% of monthly revenue sitting in it, unused.</>, delay: 120 },
 ];
 
 const STEPS = [
@@ -424,23 +424,23 @@ const STEPS = [
 ];
 
 const TIERS = [
-  { name: "Starter Email", best: "Small businesses — 1–2 campaigns/week, welcome flow, monthly reporting.", price: "Published /mo" },
-  { name: "Growth Email", best: "Growing brands — weekly campaigns, full flow suite, segmentation, A/B testing.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale Email", best: "E-commerce & high-volume — multiple weekly campaigns, advanced flows, SMS layer, deep personalization.", price: "Published /mo", delay: 140 },
+  { name: "Starter Email", best: "Small businesses: 1–2 campaigns/week, welcome flow, monthly reporting.", price: "Published /mo" },
+  { name: "Growth Email", best: "Growing brands, weekly campaigns, full flow suite, segmentation, A/B testing.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Scale Email", best: "E-commerce & high-volume, multiple weekly campaigns, advanced flows, SMS layer, deep personalization.", price: "Published /mo", delay: 140 },
   { name: "One-off Email Audit", best: "A deep audit + 90-day roadmap for your existing program, no commitment.", price: "Published", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "Which email platform should I use?", a: <>Depends on your business — <strong>Klaviyo</strong> for e-commerce, <strong>HubSpot</strong> for B2B, Brevo/Mailchimp for small businesses, ConvertKit/Beehiiv for creators. We’ll recommend the right one on the strategy call — no upsell to the priciest tool.</> },
-  { q: "How big does my list need to be?", a: <>No hard minimum. Even a few hundred can generate real revenue with the right automations. <strong>Engagement matters more — an engaged 500 beats a stale 50,000.</strong></> },
-  { q: "Email marketing vs email automation?", a: <>Email marketing is the whole program — campaigns, automations, list growth. <strong>Automation is one part:</strong> the flows (welcome, cart, post-purchase) that send themselves based on behavior.</> },
+  { q: "Which email platform should I use?", a: <>Depends on your business, <strong>Klaviyo</strong> for e-commerce, <strong>HubSpot</strong> for B2B, Brevo/Mailchimp for small businesses, ConvertKit/Beehiiv for creators. We’ll recommend the right one on the strategy call, no upsell to the priciest tool.</> },
+  { q: "How big does my list need to be?", a: <>No hard minimum. Even a few hundred can generate real revenue with the right automations. <strong>Engagement matters more, an engaged 500 beats a stale 50,000.</strong></> },
+  { q: "Email marketing vs email automation?", a: <>Email marketing is the whole program, campaigns, automations, list growth. <strong>Automation is one part:</strong> the flows (welcome, cart, post-purchase) that send themselves based on behavior.</> },
   { q: "How long before I see results?", a: <>For e-commerce with traffic: automation-flow revenue usually shows in the <strong>first 30 days,</strong> campaign revenue in 60. Segmentation and testing gains compound from month 3.</> },
-  { q: "Do you handle SMS too?", a: <>Yes — email + SMS together significantly outperform email alone. We run them from the same platform on a combined strategy (see the SMS &amp; WhatsApp Marketing service).</> },
-  { q: "What if my emails land in spam?", a: <>A deliverability problem — usually fixable in 2–4 weeks. We audit sender authentication, list hygiene, engagement, and content triggers. <strong>Deliverability is included, not a paid add-on.</strong></> },
-  { q: "Do I own my list and account?", a: <>Yes — every list, account, template, and piece of content stays under your ownership. <strong>If you leave, you keep everything.</strong></> },
-  { q: "Do you write the emails or do I?", a: <>We handle it — copy, subject lines, and design included at every tier. You always get final approval, and you can write your own with our templates and strategy if you prefer.</> },
-  { q: "Can you help grow my list, not just email it?", a: <>Yes — list growth is core to every package: <strong>sign-up forms, pop-ups, lead magnets, referral loops, and landing-page opt-ins.</strong></> },
-  { q: "Do you do cold email / outbound?", a: <>Yes — a separate specialized service (see Cold Email &amp; Outbound). It uses <strong>different tools, domains, and rules</strong> than opt-in email marketing.</> },
+  { q: "Do you handle SMS too?", a: <>Yes, email + SMS together significantly outperform email alone. We run them from the same platform on a combined strategy (see the SMS &amp; WhatsApp Marketing service).</> },
+  { q: "What if my emails land in spam?", a: <>A deliverability problem, usually fixable in 2–4 weeks. We audit sender authentication, list hygiene, engagement, and content triggers. <strong>Deliverability is included, not a paid add-on.</strong></> },
+  { q: "Do I own my list and account?", a: <>Yes, every list, account, template, and piece of content stays under your ownership. <strong>If you leave, you keep everything.</strong></> },
+  { q: "Do you write the emails or do I?", a: <>We handle it, copy, subject lines, and design included at every tier. You always get final approval, and you can write your own with our templates and strategy if you prefer.</> },
+  { q: "Can you help grow my list, not just email it?", a: <>Yes, list growth is core to every package: <strong>sign-up forms, pop-ups, lead magnets, referral loops, and landing-page opt-ins.</strong></> },
+  { q: "Do you do cold email / outbound?", a: <>Yes, a separate specialized service (see Cold Email &amp; Outbound). It uses <strong>different tools, domains, and rules</strong> than opt-in email marketing.</> },
 ];
 
 export default function EmailMarketingView() {
@@ -458,7 +458,7 @@ export default function EmailMarketingView() {
         }
         lead={
           <>
-            Email marketing that turns your list into predictable revenue — not just newsletters no one reads. Campaign
+            Email marketing that turns your list into predictable revenue, not just newsletters no one reads. Campaign
             strategy, automation flows, copy, design, and deliverability,{" "}
             <strong>all handled by one team at published prices with no long lock-in.</strong>
           </>
@@ -476,7 +476,7 @@ export default function EmailMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Why email still beats everything else</span>
-            <h2>The oldest digital channel — still the most profitable.</h2>
+            <h2>The oldest digital channel, still the most profitable.</h2>
             <p>Every study puts email ROI between $36 and $45 for every $1 spent. Nothing else comes close. Here’s why.</p>
           </Reveal>
           <div className="em-why">
@@ -491,7 +491,7 @@ export default function EmailMarketingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">The problem with most email agencies</span>
             <h2>Most treat email like a checkbox.</h2>
-            <p>Here’s what we see over and over — and what we built our service to fix.</p>
+            <p>Here’s what we see over and over, and what we built our service to fix.</p>
           </Reveal>
           <div className="em-pain-grid">
             {PAINS.map((pain) => (
@@ -516,8 +516,8 @@ export default function EmailMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
-            <h2>A revenue program — not monthly newsletters.</h2>
-            <p>Everything an email program needs to actually generate revenue, run by one team. Nine parts — pick one to see inside.</p>
+            <h2>A revenue program, not monthly newsletters.</h2>
+            <p>Everything an email program needs to actually generate revenue, run by one team. Nine parts, pick one to see inside.</p>
           </Reveal>
           <IncludedExplorer />
         </div>
@@ -555,7 +555,7 @@ export default function EmailMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Platforms we work with</span>
-            <h2>The right tool — not the one that pays us.</h2>
+            <h2>The right tool, not the one that pays us.</h2>
             <p>We’re platform-agnostic. Common ESPs we set up, migrate to, and run campaigns in:</p>
           </Reveal>
           <Reveal className="em-esp-tbl">
@@ -571,7 +571,7 @@ export default function EmailMarketingView() {
             ))}
           </Reveal>
           <Reveal as="p" className="em-esp-note">
-            Not sure which is right for you? <strong>We’ll recommend one during the strategy call — no upsell to the priciest option.</strong>
+            Not sure which is right for you? <strong>We’ll recommend one during the strategy call, no upsell to the priciest option.</strong>
           </Reveal>
         </div>
       </section>
@@ -599,8 +599,8 @@ export default function EmailMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">How it works</span>
-            <h2>Revenue in month one — not “trust us for six.”</h2>
-            <p>A structured process — every step ends with a deliverable and your sign-off.</p>
+            <h2>Revenue in month one, not “trust us for six.”</h2>
+            <p>A structured process, every step ends with a deliverable and your sign-off.</p>
           </Reveal>
           <div className="em-steps">
             {STEPS.map((step) => (
@@ -638,7 +638,7 @@ export default function EmailMarketingView() {
         copy={
           <>
             Book a free email marketing audit. We’ll look at your list, your current campaigns, your automations, and what
-            it would take to grow —{" "}
+            it would take to grow,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>
               with a clear price at the end. No obligation, no jargon, no minimum list size.
             </strong>

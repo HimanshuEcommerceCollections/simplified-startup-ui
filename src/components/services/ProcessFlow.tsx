@@ -18,7 +18,7 @@ const STAGES: Stage[] = [
     kicker: "Align",
     idx: "01",
     name: "Map",
-    desc: "A working session and an audit, then a written plan — services, sequence, fixed price, and the one metric we're judged by.",
+    desc: "A working session and an audit, then a written plan, services, sequence, fixed price, and the one metric we're judged by.",
     vars: {
       "--nc": "linear-gradient(135deg,#1e3a8a,#2563eb)",
       "--ncs": "rgba(30,58,138,.5)",
@@ -73,7 +73,7 @@ const STAGES: Stage[] = [
     kicker: "Keep",
     idx: "04",
     name: "Own",
-    desc: "Every account, asset, and login stays in your name from day one. Leave whenever — you keep all of it.",
+    desc: "Every account, asset, and login stays in your name from day one. Leave whenever, you keep all of it.",
     vars: {
       "--nc": "linear-gradient(135deg,#14b8a6,#2dd4bf)",
       "--ncs": "rgba(20,184,166,.5)",
@@ -278,7 +278,7 @@ export default function ProcessFlow() {
           <span className="eyebrow">— The same process, every service</span>
           <h2 className="jr-title">Four phases. No mysteries.</h2>
           <p className="jr-lead">
-            The same process behind every service, whichever you buy — plus the rule most agencies
+            The same process behind every service, whichever you buy, plus the rule most agencies
             skip: you own everything.
           </p>
         </Reveal>

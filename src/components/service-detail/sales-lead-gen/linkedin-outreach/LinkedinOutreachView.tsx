@@ -91,7 +91,7 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "Signal-based targeting",
-    text: <>Job changes, funding, competitor engagement, hiring — LinkedIn shows you <strong>exactly who’s in-market right now.</strong></>,
+    text: <>Job changes, funding, competitor engagement, hiring: LinkedIn shows you <strong>exactly who’s in-market right now.</strong></>,
   },
   {
     icon: (
@@ -110,7 +110,7 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "Right 100, not most DMs",
-    text: <>The teams winning in 2026 aren’t sending more — they’re <strong>sending to the right people, from a profile worth trusting.</strong></>,
+    text: <>The teams winning in 2026 aren’t sending more, they’re <strong>sending to the right people, from a profile worth trusting.</strong></>,
     delay: 120,
   },
 ];
@@ -126,15 +126,15 @@ type Stat = {
 };
 
 const STATS: Stat[] = [
-  { target: 100, suffix: "/wk", label: "Connection cap", text: "LinkedIn now hard-caps connection requests — quality beats quantity by design.", delay: 0 },
+  { target: 100, suffix: "/wk", label: "Connection cap", text: "LinkedIn now hard-caps connection requests, quality beats quantity by design.", delay: 0 },
   { value: "18–25%", label: "Acceptance rate", text: "What personalized, targeted requests achieve. Generic requests: 5–10%.", delay: 80 },
-  { value: "40–60", label: "Signal-triggered conns", text: "New connections/week targeting post-engagers — vs 10–20 from cold Sales Nav lists.", delay: 160 },
+  { value: "40–60", label: "Signal-triggered conns", text: "New connections/week targeting post-engagers, vs 10–20 from cold Sales Nav lists.", delay: 160 },
 ];
 
 const FAILS = [
   { title: "Profiles that scream “sales rep”", text: "Lead with a quota-chasing job title and nobody accepts. The profile has to earn the connection.", delay: 0 },
   { title: "Static lists + spray", text: "Export 5,000 prospects, send everyone the same message, watch acceptance crater at 5%.", delay: 60 },
-  { title: "Aggressive automation", text: "Cloud tools that mimic behavior still violate ToS. Ban risk is real — and permanent.", delay: 120 },
+  { title: "Aggressive automation", text: "Cloud tools that mimic behavior still violate ToS. Ban risk is real, and permanent.", delay: 120 },
   { title: "Pitching in the request", text: "The fastest way to get declined. The request opens the door; it doesn’t make the sale.", delay: 0 },
   { title: "No content behind it", text: "Prospects click your profile, see zero posts, decide you’re just another cold DM, and ignore you.", delay: 60 },
   { title: "Reply management drops it", text: "Hot leads sit for 3 days. By the time you reply, they’ve already moved on.", delay: 120 },
@@ -144,14 +144,14 @@ const PILLARS = [
   {
     n: "1",
     title: "Profile",
-    desc: "A profile that earns the click, the accept, and the reply — before you send anything.",
+    desc: "A profile that earns the click, the accept, and the reply, before you send anything.",
     items: ["Headline rewrite (results, not job title)", "About section optimized", "Featured section built out", "Banner + photo refresh", "Recommendations strategy"],
     delay: 0,
   },
   {
     n: "2",
     title: "Outreach",
-    desc: "Signal-based prospecting + personalized sequences — sent safely from your profile.",
+    desc: "Signal-based prospecting + personalized sequences, sent safely from your profile.",
     items: ["Sales Nav prospecting", "Signal-based targeting", "Connection request writing", "Follow-up sequences", "InMail campaigns"],
     delay: 80,
   },
@@ -183,7 +183,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Audit & strategy",
     sub: "SSI baseline, ICP",
     name: "LinkedIn Audit & Strategy",
-    tag: "Every engagement starts here — a full look at your profile, activity, ICP, and offer.",
+    tag: "Every engagement starts here, a full look at your profile, activity, ICP, and offer.",
     items: ["Profile audit + Social Selling Index (SSI) baseline", "Existing outreach activity review", "ICP definition and refinement", "Offer and messaging audit", "90-day roadmap in plain language", "Meeting and connection targets locked"],
   },
   {
@@ -192,7 +192,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Profile optimization",
     sub: "Earn the click",
     name: "Profile Optimization",
-    tag: "Before any outreach, we make your profile earn the click — because a weak profile sinks every campaign.",
+    tag: "Before any outreach, we make your profile earn the click, because a weak profile sinks every campaign.",
     items: ["Headline rewrite (results, not job title)", "About section rewrite (buyer-focused)", "Experience section optimization", "Featured section (lead magnets / case studies)", "Custom banner design", "Recommendations request strategy"],
   },
   {
@@ -201,7 +201,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Sales Nav prospecting",
     sub: "The right 100",
     name: "Sales Navigator Prospecting",
-    tag: "The right 100 prospects per week — not just any 100.",
+    tag: "The right 100 prospects per week, not just any 100.",
     items: ["Sales Navigator setup and search build", "ICP-precise lists (50+ filters)", "Boolean search strings", "Signal-based lists (job change, funding, hiring)", "Group + Event member sourcing", "Suppression list management"],
   },
   {
@@ -210,7 +210,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Requests & sequences",
     sub: "Accepted & replied",
     name: "Connection Requests & Sequences",
-    tag: "The words that get you accepted and get a reply — personalized, human-approved.",
+    tag: "The words that get you accepted and get a reply, personalized, human-approved.",
     items: ["Personalized connection request (with note)", "3–4 touch DM sequence", "InMail for 2nd/3rd-degree targets", "Voice note templates for warm threads", "Video message support (Vidyard, Loom)", "A/B testing hooks, angles, CTAs"],
   },
   {
@@ -219,7 +219,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Content & branding",
     sub: "Warm before outreach",
     name: "Content & Personal Branding",
-    tag: "Content is what makes outreach work — prospects check your profile before they reply.",
+    tag: "Content is what makes outreach work, prospects check your profile before they reply.",
     items: ["Weekly ghostwritten posts (2–4/week)", "Content pillars aligned to ICP pain points", "Comment campaigns on prospect posts", "Engagement pods coordination (optional)", "Repurposing top posts into DM openers", "Founder / exec content development"],
   },
   {
@@ -228,7 +228,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Compliant sending",
     sub: "Account safety",
     name: "Safe LinkedIn-Compliant Sending",
-    tag: "Account safety is non-negotiable — healthy profile, not aggressive automation.",
+    tag: "Account safety is non-negotiable, healthy profile, not aggressive automation.",
     items: ["Under-the-cap sending (80–100/week max)", "Human-approved messaging (no auto-send)", "Dedicated residential IPs when tools are used", "SSI score monitoring", "Warm-up for new or dormant profiles", "Full compliance with LinkedIn ToS"],
   },
   {
@@ -237,7 +237,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Reply management",
     sub: "Hot leads, routed",
     name: "Reply Management & Lead Routing",
-    tag: "Every reply reviewed and either progressed or handed to you — hot leads never sit for days.",
+    tag: "Every reply reviewed and either progressed or handed to you, hot leads never sit for days.",
     items: ["Daily reply monitoring & classification", "Interested-lead escalation same day", "Calendar link delivery for qualified prospects", "Nurture sequences for “not now”", "CRM logging (HubSpot, Salesforce, Pipedrive, GHL)", "Meeting booking direct to your calendar"],
   },
   {
@@ -246,7 +246,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Reporting",
     sub: "Real outcomes",
     name: "Reporting & Optimization",
-    tag: "Reports tied to real outcomes — connections, replies, meetings, pipeline.",
+    tag: "Reports tied to real outcomes, connections, replies, meetings, pipeline.",
     items: ["Weekly snapshot (connects, replies, meetings)", "Monthly campaign report + strategy review", "A/B test results and winning sequences", "SSI tracking", "Cost-per-meeting reporting", "Live dashboard access"],
   },
 ];
@@ -325,7 +325,7 @@ const STEPS = [
 const WHO = [
   {
     icon: SHIELD,
-    text: <><strong>A B2B services business</strong> — agency, consultant, freelancer, staffing — selling to decision-makers who live on LinkedIn.</>,
+    text: <><strong>A B2B services business</strong>, agency, consultant, freelancer, staffing, selling to decision-makers who live on LinkedIn.</>,
     delay: 0,
   },
   {
@@ -364,30 +364,30 @@ const WHO = [
         <path d="m9 12 2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    text: <><strong>A team burned by risky automation</strong> that wants LinkedIn done right — without a banned account.</>,
+    text: <><strong>A team burned by risky automation</strong> that wants LinkedIn done right, without a banned account.</>,
     delay: 120,
   },
 ];
 
 const TIERS = [
-  { name: "Starter LinkedIn", best: "Solo founders + small teams — profile optimization, outreach only, 1 profile.", price: "Published /mo" },
-  { name: "Growth LinkedIn", best: "Growing teams — outreach + weekly content, up to 3 profiles, signal-based targeting.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale LinkedIn", best: "Larger teams — full 3-pillar system, 5+ profiles, comment & InMail campaigns, multi-persona.", price: "Published /mo", delay: 140 },
-  { name: "LinkedIn Audit", best: "Deep audit of your profile, content, and outreach — no commitment.", price: "Published", delay: 210 },
+  { name: "Starter LinkedIn", best: "Solo founders + small teams, profile optimization, outreach only, 1 profile.", price: "Published /mo" },
+  { name: "Growth LinkedIn", best: "Growing teams, outreach + weekly content, up to 3 profiles, signal-based targeting.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Scale LinkedIn", best: "Larger teams, full 3-pillar system, 5+ profiles, comment & InMail campaigns, multi-persona.", price: "Published /mo", delay: 140 },
+  { name: "LinkedIn Audit", best: "Deep audit of your profile, content, and outreach, no commitment.", price: "Published", delay: 210 },
 ];
 
 const FAQS = [
   { q: "How many meetings per month?", a: <>Rough benchmark: 100 well-targeted connections/week + 20% acceptance + 15% reply = <strong>3–6 meetings/month.</strong> Growth and Scale tiers with content and signal-based targeting typically book <strong>8–15+</strong>.</> },
-  { q: "Will my account get banned?", a: <>Not if it’s done right. We stay well under the cap (<strong>80–100 requests/week,</strong> not the 200 hard limit), use compliant patterns, approved tools, and residential IPs. Bans happen when agencies push volume — we don’t.</> },
-  { q: "Do you post on my behalf?", a: <>Yes — that’s the Content pillar. We ghostwrite posts in your voice, aligned to your ICP’s pain points. <strong>You review and approve before anything goes live.</strong></> },
-  { q: "Do I need Sales Navigator?", a: <>Yes — it’s essential for advanced prospecting, filters, and lead alerts. Roughly <strong>$99/mo per profile, paid directly to LinkedIn</strong> (not marked up). We set it up during onboarding.</> },
-  { q: "Do you take over my account?", a: <>We use secure access (approved tools or shared access if you prefer). <strong>You retain full ownership and control</strong> — we never change your password or lock you out.</> },
-  { q: "How is this different from cold email?", a: <>LinkedIn wins when your buyer is spam-suspicious of email or checks LinkedIn more. Email wins on volume and inbox placement. <strong>Best answer: run both together</strong> — they outperform either alone.</> },
-  { q: "I already have a strong presence — still useful?", a: <>Great — we build on it. If your profile and content are solid, we focus on <strong>Sales Nav prospecting, signal-based targeting, and DM sequences,</strong> priced accordingly.</> },
+  { q: "Will my account get banned?", a: <>Not if it’s done right. We stay well under the cap (<strong>80–100 requests/week,</strong> not the 200 hard limit), use compliant patterns, approved tools, and residential IPs. Bans happen when agencies push volume, we don’t.</> },
+  { q: "Do you post on my behalf?", a: <>Yes, that’s the Content pillar. We ghostwrite posts in your voice, aligned to your ICP’s pain points. <strong>You review and approve before anything goes live.</strong></> },
+  { q: "Do I need Sales Navigator?", a: <>Yes, it’s essential for advanced prospecting, filters, and lead alerts. Roughly <strong>$99/mo per profile, paid directly to LinkedIn</strong> (not marked up). We set it up during onboarding.</> },
+  { q: "Do you take over my account?", a: <>We use secure access (approved tools or shared access if you prefer). <strong>You retain full ownership and control</strong>, we never change your password or lock you out.</> },
+  { q: "How is this different from cold email?", a: <>LinkedIn wins when your buyer is spam-suspicious of email or checks LinkedIn more. Email wins on volume and inbox placement. <strong>Best answer: run both together</strong>, they outperform either alone.</> },
+  { q: "I already have a strong presence, still useful?", a: <>Great, we build on it. If your profile and content are solid, we focus on <strong>Sales Nav prospecting, signal-based targeting, and DM sequences,</strong> priced accordingly.</> },
   { q: "Do you use aggressive automation?", a: <>No. Cloud tools that mimic behavior still violate ToS and risk permanent bans. We use <strong>manual review, human approval, under-cap sending, and residential IPs</strong> when tools are needed.</> },
-  { q: "Can this work for my whole team?", a: <>Yes — Growth covers up to 3 profiles, Scale covers 5+. <strong>Each profile gets its own optimization, prospecting, and messaging</strong> — great for founder + sales team or multi-persona.</> },
-  { q: "What if my profile gets restricted?", a: <>Rare with our compliant approach — but if it happens we <strong>pause immediately, work with LinkedIn to lift it, and adjust.</strong> Ban risk is exactly why we don’t use aggressive automation.</> },
-  { q: "Do I own everything if I leave?", a: <>Yes — you keep every tool subscription, account, and all your data. <strong>No lock-in.</strong></> },
+  { q: "Can this work for my whole team?", a: <>Yes: Growth covers up to 3 profiles, Scale covers 5+. <strong>Each profile gets its own optimization, prospecting, and messaging</strong>, great for founder + sales team or multi-persona.</> },
+  { q: "What if my profile gets restricted?", a: <>Rare with our compliant approach, but if it happens we <strong>pause immediately, work with LinkedIn to lift it, and adjust.</strong> Ban risk is exactly why we don’t use aggressive automation.</> },
+  { q: "Do I own everything if I leave?", a: <>Yes, you keep every tool subscription, account, and all your data. <strong>No lock-in.</strong></> },
 ];
 
 /* -------- motion helpers -------- */
@@ -520,7 +520,7 @@ function ProfileCard() {
         <div className="lio-lf">
           <span className="lfi">{PERSON_ADD}</span>
           <span className="lft">
-            Connection request — <b>Sarah, VP Ops</b>
+            Connection request, <b>Sarah, VP Ops</b>
             <small>personalized, signal-based</small>
           </span>
           <span className="lst ok">Accepted</span>
@@ -531,13 +531,13 @@ function ProfileCard() {
               <path d="M4 6h16v11H7l-3 3z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
             </svg>
           </span>
-          <span className="lft">“Saw your post on RevOps — would love to compare notes.”</span>
+          <span className="lft">“Saw your post on RevOps, would love to compare notes.”</span>
           <span className="lst ok">Replied</span>
         </div>
         <div className="lio-lf">
           <span className="lfi">{CALENDAR}</span>
           <span className="lft">
-            Meeting — <b>Thu 2:00 PM</b>
+            Meeting, <b>Thu 2:00 PM</b>
           </span>
           <span className="lst book">Booked</span>
         </div>
@@ -719,7 +719,7 @@ export default function LinkedinOutreachView() {
         }
         lead={
           <>
-            Managed LinkedIn outreach for B2B teams — profile optimization, Sales Navigator prospecting, signal-based
+            Managed LinkedIn outreach for B2B teams, profile optimization, Sales Navigator prospecting, signal-based
             targeting, personalized messaging, and content behind every campaign.{" "}
             <strong>Run safely from your own profile. Flat monthly fee, no risk-your-account automation.</strong>
           </>
@@ -738,7 +738,7 @@ export default function LinkedinOutreachView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Why LinkedIn is still your best B2B channel</span>
             <h2>
-              <Words text="1.3 billion members — your buyer is one of them." />
+              <Words text="1.3 billion members, your buyer is one of them." />
             </h2>
             <p>
               They’re checking the feed every morning, reviewing profiles before meetings, judging vendors by their
@@ -778,7 +778,7 @@ export default function LinkedinOutreachView() {
               <Words text="Most agencies still run the 2021 playbook." />
             </h2>
             <p>
-              Here’s what goes wrong — and what actually works in 2026. We fix every one of these; that’s the whole
+              Here’s what goes wrong, and what actually works in 2026. We fix every one of these; that’s the whole
               service.
             </p>
           </Reveal>
@@ -808,7 +808,7 @@ export default function LinkedinOutreachView() {
           <Reveal className="sec-head">
             <span className="eyebrow">The 3-pillar LinkedIn system</span>
             <h2>
-              <Words text="Profile + outreach + content — together." />
+              <Words text="Profile + outreach + content, together." />
             </h2>
             <p>Any one on its own underperforms. All three together compound. That’s the whole point.</p>
           </Reveal>
@@ -828,7 +828,7 @@ export default function LinkedinOutreachView() {
             <h2>
               <Words text="Every part, run by one team." />
             </h2>
-            <p>Profile, prospecting, messaging, content, replies — eight parts, nothing handed off. Pick one to see inside.</p>
+            <p>Profile, prospecting, messaging, content, replies, eight parts, nothing handed off. Pick one to see inside.</p>
           </Reveal>
           <Included />
         </div>
@@ -840,10 +840,10 @@ export default function LinkedinOutreachView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Tools &amp; platforms we use</span>
             <h2>
-              <Words text="Only LinkedIn-compliant tools — no black-hat." />
+              <Words text="Only LinkedIn-compliant tools, no black-hat." />
             </h2>
             <p>
-              The stack we run every program on. You keep ownership of every subscription — leave and you keep the
+              The stack we run every program on. You keep ownership of every subscription, leave and you keep the
               accounts and data.
             </p>
           </Reveal>
@@ -864,8 +864,8 @@ export default function LinkedinOutreachView() {
             ))}
           </Reveal>
           <Reveal as="p" className="lio-stack-note">
-            <strong>You keep ownership of every tool subscription.</strong> If you leave, you keep the accounts and data
-            — no lock-in.
+            <strong>You keep ownership of every tool subscription.</strong> If you leave, you keep the accounts and data,
+            no lock-in.
           </Reveal>
         </div>
       </section>
@@ -940,7 +940,7 @@ export default function LinkedinOutreachView() {
         copy={
           <>
             Book a free LinkedIn audit. We’ll review your profile, your ICP, and your current activity, and come back with
-            a clear plan and price —{" "}
+            a clear plan and price,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>
               usually within 48 hours. No obligation, no jargon, no risk-your-account tactics.
             </strong>

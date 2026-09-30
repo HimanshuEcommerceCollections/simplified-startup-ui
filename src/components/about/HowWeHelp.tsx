@@ -9,7 +9,7 @@ import "./how-we-help.css";
 const STAGES = [
   {
     label: "Strategy",
-    intro: "We map the plan — what to build, in what order, and the one result we're aiming at.",
+    intro: "We map the plan, what to build, in what order, and the one result we're aiming at.",
     items: [
       "A working session to understand the business",
       "A written plan with the order of work",
@@ -18,7 +18,7 @@ const STAGES = [
   },
   {
     label: "Build",
-    intro: "Senior specialists make it real — brand, site, systems, and content, built to a standard.",
+    intro: "Senior specialists make it real, brand, site, systems, and content, built to a standard.",
     items: [
       "Brand and site handled by senior specialists",
       "Systems and content set up properly",
@@ -27,7 +27,7 @@ const STAGES = [
   },
   {
     label: "Launch",
-    intro: "We get it live and working — set up, tested, and handed over in your name.",
+    intro: "We get it live and working, set up, tested, and handed over in your name.",
     items: [
       "Everything tested before it goes live",
       "Accounts and access in your name",
@@ -36,7 +36,7 @@ const STAGES = [
   },
   {
     label: "Grow",
-    intro: "We keep it moving — marketing, iteration, and support on a steady cadence.",
+    intro: "We keep it moving, marketing, iteration, and support on a steady cadence.",
     items: [
       "Marketing on a set cadence",
       "A regular review of what's working",
@@ -107,7 +107,7 @@ export default function HowWeHelp() {
             <span className="eyebrow">How we help</span>
             <h2 className="ab-h2">A clear path from idea to growing business.</h2>
             <p className="sec-lead">
-              Four stages, the same every time. Tap a stage on the path — or use the arrows — to see
+              Four stages, the same every time. Tap a stage on the path, or use the arrows, to see
               what happens at each one.
             </p>
           </Reveal>

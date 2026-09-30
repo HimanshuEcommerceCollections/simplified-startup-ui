@@ -58,11 +58,11 @@ export default function ServicesHero() {
         <div className="svc-hero-copy">
           <span {...heroEl("eyebrow", 0)}>One partner. Every service.</span>
           <h1 {...heroEl("svc-h1", 1)}>
-            Everything your business needs — <span className="grad-text">under one roof.</span>
+            Everything your business needs, <span className="grad-text">under one roof.</span>
           </h1>
           <p {...heroEl("svc-lead", 2)}>
             Eight services, one senior team, one plan. Instead of hiring, briefing, and babysitting
-            six vendors, you get an integrated partner that runs the whole stack — from first idea
+            six vendors, you get an integrated partner that runs the whole stack, from first idea
             to steady growth.
           </p>
           <div {...heroEl("svc-hero-cta", 3)}>

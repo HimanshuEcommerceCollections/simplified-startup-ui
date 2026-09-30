@@ -194,7 +194,7 @@ function SerpCard() {
             <span className="src">google.com</span>
           </div>
           <div className="rt2">
-            <span className="you">Northform Plumbing</span> — 4.9 ★ · Open now
+            <span className="you">Northform Plumbing</span>, 4.9 ★ · Open now
           </div>
         </div>
         <div className="seo-res blue">
@@ -202,7 +202,7 @@ function SerpCard() {
             <span className="badge">Organic</span>
             <span className="src">northform.com</span>
           </div>
-          <div className="rt2">Emergency Plumbing in Raleigh — Same-Day…</div>
+          <div className="rt2">Emergency Plumbing in Raleigh: Same-Day…</div>
         </div>
       </div>
     </SignatureCard>
@@ -216,7 +216,7 @@ const WHY = [
   { icon: ICON_SPARK, title: "Google is now AI-first", text: <>AI Overviews sit above the traditional links. <strong>Getting cited there is the new page-1 rank.</strong></>, delay: 60 },
   { icon: ICON_CHAT, title: "ChatGPT is the new Google", text: <>People ask AI for recommendations directly. <strong>If your business isn’t mentioned, you don’t exist to them.</strong></>, delay: 120 },
   { icon: ICON_TREND, title: "SEO traffic compounds", text: <>A page you rank today can bring leads for years. <strong>Paid ads stop the moment the budget stops.</strong></> },
-  { icon: ICON_SHIELD, title: "Search trust beats ad trust", text: <>Users skip ads and click organic — <strong>a real ranking looks like a recommendation,</strong> not a sales pitch.</>, delay: 60 },
+  { icon: ICON_SHIELD, title: "Search trust beats ad trust", text: <>Users skip ads and click organic, <strong>a real ranking looks like a recommendation,</strong> not a sales pitch.</>, delay: 60 },
   { icon: ICON_BARS, title: "Bigger, not dead", text: <>More competitive and more valuable than ever. <strong>The upside goes to whoever does it right.</strong></>, delay: 120 },
 ];
 
@@ -226,22 +226,22 @@ const PAINS = [
   { title: "Hidden pricing", text: "Book a call, sit through a pitch, get a “custom quote” of $3K–$10K/mo." },
   { title: "Vanity reports", text: "Rankings for keywords no one searches; traffic that never turns into leads.", delay: 60 },
   { title: "12-month lock-ins", text: "Because they know it takes them six months to do anything worth showing.", delay: 120 },
-  { title: "Siloed teams", text: "Content, technical, and links as separate teams and invoices — nothing works together." },
-  { title: "They ignore AI search", text: "Retooling for GEO is hard — so they keep doing what worked in 2019.", delay: 60 },
-  { title: "Six months of “trust us”", text: "No quick wins, no transparency — just an invoice and a promise.", delay: 120 },
+  { title: "Siloed teams", text: "Content, technical, and links as separate teams and invoices, nothing works together." },
+  { title: "They ignore AI search", text: "Retooling for GEO is hard, so they keep doing what worked in 2019.", delay: 60 },
+  { title: "Six months of “trust us”", text: "No quick wins, no transparency, just an invoice and a promise.", delay: 120 },
 ];
 
 /* -------- what's included (9) -------- */
 
 const INCLUDED: { no: string; icon: ReactNode; title: string; text: string; geo?: boolean; tag?: string }[] = [
-  { no: "01", icon: ICON_SEARCH, title: "Audit & strategy", text: "Full site crawl, ranking audit, backlink and content-gap review — a prioritized 90-day and 12-month plan." },
-  { no: "02", icon: ICON_LINES_SHORT, title: "Keyword research", text: "Buyer-intent keywords grouped by intent, mapped to pages, and prioritized by revenue — not just volume." },
-  { no: "03", icon: ICON_DOC3, title: "On-page SEO", text: "Titles, meta, headers, content, internal links, alt text, and URLs — so Google and AI understand every page." },
-  { no: "04", icon: ICON_CODE, title: "Technical SEO", text: "Core Web Vitals, crawlability, indexation, schema, redirects, and architecture — the foundation everything rests on." },
-  { no: "05", icon: ICON_LINK, title: "Off-page & authority", text: "White-hat link building, digital PR, citations, and toxic-link disavow — quality and relevance, not volume." },
-  { no: "06", icon: ICON_PIN, title: "Local SEO", text: "Google Business Profile, the map pack, NAP consistency, location pages, and reviews — often the fastest wins." },
+  { no: "01", icon: ICON_SEARCH, title: "Audit & strategy", text: "Full site crawl, ranking audit, backlink and content-gap review, a prioritized 90-day and 12-month plan." },
+  { no: "02", icon: ICON_LINES_SHORT, title: "Keyword research", text: "Buyer-intent keywords grouped by intent, mapped to pages, and prioritized by revenue, not just volume." },
+  { no: "03", icon: ICON_DOC3, title: "On-page SEO", text: "Titles, meta, headers, content, internal links, alt text, and URLs, so Google and AI understand every page." },
+  { no: "04", icon: ICON_CODE, title: "Technical SEO", text: "Core Web Vitals, crawlability, indexation, schema, redirects, and architecture, the foundation everything rests on." },
+  { no: "05", icon: ICON_LINK, title: "Off-page & authority", text: "White-hat link building, digital PR, citations, and toxic-link disavow, quality and relevance, not volume." },
+  { no: "06", icon: ICON_PIN, title: "Local SEO", text: "Google Business Profile, the map pack, NAP consistency, location pages, and reviews, often the fastest wins." },
   { no: "07", icon: ICON_SPARK, title: "AI Search / GEO", text: "Content structured for AI extraction, entity signals, and mention monitoring across ChatGPT, Gemini, Claude, Perplexity.", geo: true, tag: "The 2026 differentiator" },
-  { no: "08", icon: ICON_LINES_LONG, title: "Content SEO", text: "Pillar and cluster planning, blog and money-page writing, and refreshes — built to rank and get cited." },
+  { no: "08", icon: ICON_LINES_LONG, title: "Content SEO", text: "Pillar and cluster planning, blog and money-page writing, and refreshes, built to rank and get cited." },
   { no: "09", icon: ICON_REPORT, title: "Analytics & reporting", text: "GA4 and Search Console, conversion tracking, AI-referral tracking, and plain-language monthly reports." },
 ];
 
@@ -412,40 +412,40 @@ function ServicesExplorer() {
 /* -------- who / steps / pricing / faq -------- */
 
 const WHO = [
-  { icon: ICON_PIN, text: <><strong>A local business</strong> — restaurants, salons, home services, medical, professional services. Show up when nearby customers search.</> },
+  { icon: ICON_PIN, text: <><strong>A local business</strong>, restaurants, salons, home services, medical, professional services. Show up when nearby customers search.</> },
   { icon: ICON_CART, text: <><strong>An e-commerce store</strong> competing for product searches, category rankings, and buyer-intent traffic.</>, delay: 60 },
   { icon: ICON_CHAT_PLAIN, text: <><strong>A service business</strong> with a long sales cycle where educational content and trust-building drive leads.</>, delay: 120 },
   { icon: ICON_BRIEFCASE, text: <><strong>A B2B or SaaS company</strong> whose buyers research extensively before buying, and where comparison content ranks.</> },
   { icon: ICON_LAUNCH, text: <><strong>A new site</strong> that wants to launch with SEO built in from day one, not bolted on later.</>, delay: 60 },
-  { icon: ICON_REFRESH, text: <><strong>Doing “SEO” for years</strong> with nothing to show — and wants a real strategy, not another vanity report.</>, delay: 120 },
+  { icon: ICON_REFRESH, text: <><strong>Doing “SEO” for years</strong> with nothing to show, and wants a real strategy, not another vanity report.</>, delay: 120 },
 ];
 
 const STEPS = [
   { no: "1", dur: "Month 1", title: "Audit, strategy & quick wins", text: "Full audit, a prioritized 90-day/12-month plan, and technical quick wins that move rankings in weeks." },
   { no: "2", dur: "Month 2", title: "On-page & content foundation", text: "Core pages rewritten, first SEO content launched, internal linking fixed so authority flows right.", delay: 70 },
-  { no: "3", dur: "Months 3–6", title: "Content engine & authority", text: "Consistent publishing, link building and digital PR begin — first real ranking gains land here.", delay: 140 },
-  { no: "4", dur: "Month 6+", title: "Compounding growth", text: "Content refreshed, clusters expanded, AI search deepened — rankings and leads compound month over month.", delay: 210 },
+  { no: "3", dur: "Months 3–6", title: "Content engine & authority", text: "Consistent publishing, link building and digital PR begin, first real ranking gains land here.", delay: 140 },
+  { no: "4", dur: "Month 6+", title: "Compounding growth", text: "Content refreshed, clusters expanded, AI search deepened, rankings and leads compound month over month.", delay: 210 },
   { no: "5", dur: "Every month", title: "Report & review", text: "Plain-language monthly report on what we did and what’s next, plus a quarterly strategy call.", delay: 280 },
 ];
 
 const TIERS = [
-  { name: "Starter SEO", best: "Small local businesses — audit, on-page, GBP, monthly reporting.", price: "Published /mo" },
+  { name: "Starter SEO", best: "Small local businesses, audit, on-page, GBP, monthly reporting.", price: "Published /mo" },
   { name: "Growth SEO", best: "Everything in Starter plus content SEO, link building, and AI search optimization.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale SEO", best: "Larger sites & competitive markets — advanced technical, e-commerce, multi-location.", price: "Published /mo", delay: 140 },
+  { name: "Scale SEO", best: "Larger sites & competitive markets, advanced technical, e-commerce, multi-location.", price: "Published /mo", delay: 140 },
   { name: "One-off Audit", best: "A deep audit + strategy doc, no ongoing commitment.", price: "Published", delay: 210 },
 ];
 
 const FAQS = [
   { q: "How long does SEO take to work?", a: <>Some technical and on-page wins move rankings <strong>within weeks.</strong> Meaningful traffic growth usually starts around month 3–6, with compounding growth from month 6 on. Anyone promising rankings in 30 days is lying.</> },
-  { q: "Do you guarantee #1 rankings?", a: <>No — and neither should anyone else. Google explicitly says no one can guarantee rankings. <strong>We guarantee the work and the strategy,</strong> not the algorithm.</> },
+  { q: "Do you guarantee #1 rankings?", a: <>No, and neither should anyone else. Google explicitly says no one can guarantee rankings. <strong>We guarantee the work and the strategy,</strong> not the algorithm.</> },
   { q: "SEO vs Google Ads?", a: <>SEO is free organic traffic that compounds but takes months; Ads show up immediately but stop when you stop paying. <strong>Most businesses do both.</strong></> },
   { q: "How is AI search / GEO different?", a: <>Regular SEO ranks in Google’s blue links; GEO gets you <strong>cited when ChatGPT, Gemini, Claude, or Perplexity answer</strong> a question. Same content skills, different structuring and measurement.</> },
-  { q: "Do I need a long contract?", a: <>No. All retainers are <strong>month-to-month</strong> — 30 days’ notice to wrap up cleanly, no 12-month lock-in.</> },
-  { q: "Will you show me the actual work?", a: <>Yes — every month, a plain-language report showing exactly what we did and what’s next, <strong>not a dashboard of vanity metrics.</strong></> },
-  { q: "What if I have an in-house SEO?", a: <>Great — we work alongside them, delivering specialist work they don’t have time for or providing briefs their team executes. <strong>An extension of your team, not a replacement.</strong></> },
-  { q: "Do you do link building?", a: <>Yes, but <strong>only white-hat</strong> — guest posts, digital PR, resource placements, citation cleanup. No PBNs, no link farms, nothing that gets sites penalized.</> },
+  { q: "Do I need a long contract?", a: <>No. All retainers are <strong>month-to-month</strong>, 30 days’ notice to wrap up cleanly, no 12-month lock-in.</> },
+  { q: "Will you show me the actual work?", a: <>Yes, every month, a plain-language report showing exactly what we did and what’s next, <strong>not a dashboard of vanity metrics.</strong></> },
+  { q: "What if I have an in-house SEO?", a: <>Great, we work alongside them, delivering specialist work they don’t have time for or providing briefs their team executes. <strong>An extension of your team, not a replacement.</strong></> },
+  { q: "Do you do link building?", a: <>Yes, but <strong>only white-hat</strong>, guest posts, digital PR, resource placements, citation cleanup. No PBNs, no link farms, nothing that gets sites penalized.</> },
   { q: "Can you fix a penalized site?", a: <>In most cases, yes. We audit the cause (usually toxic backlinks or thin content), clean it up, submit reconsideration where appropriate, and <strong>rebuild authority the right way.</strong></> },
-  { q: "Does SEO still work for small business?", a: <>Especially well — particularly local SEO, where you’re not competing with national brands. <strong>More leads per dollar than almost any other channel.</strong></> },
+  { q: "Does SEO still work for small business?", a: <>Especially well, particularly local SEO, where you’re not competing with national brands. <strong>More leads per dollar than almost any other channel.</strong></> },
 ];
 
 export default function SeoView() {
@@ -463,9 +463,9 @@ export default function SeoView() {
         }
         lead={
           <>
-            SEO built for how people search in 2026 — not just Google’s blue links, but{" "}
+            SEO built for how people search in 2026, not just Google’s blue links, but{" "}
             <strong>Google’s AI Overviews, ChatGPT, Gemini, Claude, and Perplexity.</strong> One team on the content,
-            the technical, the local, and the AI side — at published prices.
+            the technical, the local, and the AI side, at published prices.
           </>
         }
         primary={{ label: "Book a free SEO audit", href: "/start-project" }}
@@ -481,8 +481,8 @@ export default function SeoView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Why SEO matters more than ever</span>
-            <h2>“SEO is dead” — every year for ten years.</h2>
-            <p>In reality it’s bigger, more competitive, and more valuable than ever — which is exactly why doing it right matters more than ever.</p>
+            <h2>“SEO is dead”, every year for ten years.</h2>
+            <p>In reality it’s bigger, more competitive, and more valuable than ever, which is exactly why doing it right matters more than ever.</p>
           </Reveal>
           <div className="seo-why">
             <FeatureGrid cards={WHY} columns={3} />
@@ -496,7 +496,7 @@ export default function SeoView() {
           <Reveal className="sec-head">
             <span className="eyebrow">The problem with most SEO agencies</span>
             <h2>You’ve probably heard the horror stories.</h2>
-            <p>Most SEO buyers have too — and we built our service to fix every one of these.</p>
+            <p>Most SEO buyers have too, and we built our service to fix every one of these.</p>
           </Reveal>
           <div className="seo-pain-grid">
             {PAINS.map((pain) => (
@@ -549,7 +549,7 @@ export default function SeoView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Explore each SEO service</span>
-            <h2>SEO isn’t one thing — it’s a set.</h2>
+            <h2>SEO isn’t one thing, it’s a set.</h2>
             <p>Specialist services that work together. Pick one to see exactly what’s inside.</p>
           </Reveal>
           <ServicesExplorer />
@@ -579,7 +579,7 @@ export default function SeoView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">How it works</span>
-            <h2>Wins in month one — not “trust us for six.”</h2>
+            <h2>Wins in month one, not “trust us for six.”</h2>
           </Reveal>
           <div className="seo-steps">
             {STEPS.map((step) => (
@@ -604,7 +604,7 @@ export default function SeoView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Retainers are <strong>month-to-month</strong> — cancel anytime with 30 days’ notice. No 12-month lock-in, no
+            Retainers are <strong>month-to-month</strong>, cancel anytime with 30 days’ notice. No 12-month lock-in, no
             setup fee. Every exact number is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
         </div>
@@ -618,7 +618,7 @@ export default function SeoView() {
         copy={
           <>
             Book a free SEO audit call. We’ll look at where your site stands, what’s holding it back, and what it’d take
-            to grow —{" "}
+            to grow,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>with a clear price at the end. No obligation, no long contract.</strong>
           </>
         }

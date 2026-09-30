@@ -10,7 +10,7 @@ const LINES = [
   },
   {
     kw: "Things fall between the cracks.",
-    rest: "When something isn't clearly anyone's job, it doesn't get done — and you find out too late.",
+    rest: "When something isn't clearly anyone's job, it doesn't get done, and you find out too late.",
   },
   {
     kw: "No one owns the results.",
@@ -84,7 +84,7 @@ export default function WhyOneTeam() {
             </div>
             <div className="hc-right">
               <p className="hc-intro">
-                Most business owners don&apos;t plan a fragmented setup. It just happens — one person
+                Most business owners don&apos;t plan a fragmented setup. It just happens, one person
                 builds the website, someone else runs the ads, another handles design and social.
                 Then the job of tying it all together lands on you.
               </p>

@@ -77,9 +77,9 @@ export default function Hero() {
               </span>
             </h1>
             <p className="sub">
-              Your startup team — without building one. Founders usually coordinate a dozen
+              Your startup team, without building one. Founders usually coordinate a dozen
               specialists; we bring strategy, brand, product, engineering, and growth together under
-              one trusted operating partner — from first idea to scale.
+              one trusted operating partner, from first idea to scale.
             </p>
             <div className="hero-cta">
               <a href="#book" ref={primaryRef} className="btn-primary magnetic">

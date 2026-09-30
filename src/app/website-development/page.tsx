@@ -5,7 +5,7 @@ import WebsiteDevelopmentView from "@/components/service-detail/website-developm
 export const metadata: Metadata = {
   title: "Small Business Web Design & Development | Simplified Startup",
   description:
-    "Small business web design that sells — custom-designed, conversion-built websites with a published 14-point checklist and prices set before work starts.",
+    "Small business web design that sells, custom-designed, conversion-built websites with a published 14-point checklist and prices set before work starts.",
 };
 
 export default function WebsiteDevelopmentPage() {

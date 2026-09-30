@@ -18,26 +18,26 @@ import AdjacentPractices from "@/components/bookkeeping/AdjacentPractices";
 import ResourcesNote from "@/components/bookkeeping/ResourcesNote";
 
 export const metadata: Metadata = {
-  title: "Bookkeeping & Accounting — Books, Handled | Simplified Startup",
+  title: "Bookkeeping & Accounting: Books, Handled | Simplified Startup",
   description:
-    "Small business bookkeeping services with a close date you can circle. Transactions categorized, accounts reconciled, reports in plain English — CPA-ready when tax season comes.",
+    "Small business bookkeeping services with a close date you can circle. Transactions categorized, accounts reconciled, reports in plain English: CPA-ready when tax season comes.",
 };
 
 const BOOKKEEPING_FAQS = [
   {
     question: "Which software do you work with?",
     answer:
-      "The major platforms — QuickBooks, Xero, and the ecosystem around them. If you're already on something, we work in it; if you're starting fresh, your plan recommends the fit and the setup is part of the scope.",
+      "The major platforms: QuickBooks, Xero, and the ecosystem around them. If you're already on something, we work in it; if you're starting fresh, your plan recommends the fit and the setup is part of the scope.",
   },
   {
     question: "Do you replace my CPA?",
     answer:
-      "No — we complement them. We keep the books clean and current all year; your CPA handles tax strategy and filing. They get organized, reconciled books instead of a shoebox, which typically makes their work faster and their bill smaller.",
+      "No, we complement them. We keep the books clean and current all year; your CPA handles tax strategy and filing. They get organized, reconciled books instead of a shoebox, which typically makes their work faster and their bill smaller.",
   },
   {
     question: "My books are a disaster. How bad is too bad?",
     answer:
-      'We\'ve yet to meet too bad — but we scope catch-up honestly before touching it, in writing, so you know the size of the cleanup before you commit. No discovering the "real" scope three invoices in.',
+      'We\'ve yet to meet too bad, but we scope catch-up honestly before touching it, in writing, so you know the size of the cleanup before you commit. No discovering the "real" scope three invoices in.',
   },
   {
     question: "How much do small business bookkeeping services cost?",
@@ -75,7 +75,7 @@ export default function BookkeepingPage() {
         <CtaBand
           eyebrow="End of file · SS-WEB-10"
           heading="Get your free growth plan."
-          copy="A working session on your goals, then a written plan with the exact scope, price, and sequence we'd recommend — free, and yours to keep whether or not you hire us."
+          copy="A working session on your goals, then a written plan with the exact scope, price, and sequence we'd recommend, free, and yours to keep whether or not you hire us."
           primaryLabel="Get your free growth plan"
           secondary={{ label: "See pricing", href: "/pricing" }}
           fine="Flat, published pricing. You own everything. No lock-in."

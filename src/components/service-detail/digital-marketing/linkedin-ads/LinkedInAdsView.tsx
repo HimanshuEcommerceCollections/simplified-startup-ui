@@ -155,12 +155,12 @@ function CampaignCard() {
 /* -------- why LinkedIn -------- */
 
 const FEATURES = [
-  { icon: ICON_PERSON, title: "Reach decision-makers directly", text: <>CEOs, VPs, Directors, Founders — <strong>on a platform they actually check every morning.</strong></> },
+  { icon: ICON_PERSON, title: "Reach decision-makers directly", text: <>CEOs, VPs, Directors, Founders, <strong>on a platform they actually check every morning.</strong></> },
   { icon: ICON_TARGET, title: "Target by role, not keyword", text: <>You’re not hoping the right person sees the ad. <strong>You’re guaranteeing it.</strong></>, delay: 60 },
   { icon: ICON_CHART, title: "Bigger deals per lead", text: <>LinkedIn-sourced deals are <strong>28–35% larger</strong> than Google Ads-sourced deals on average.</>, delay: 120 },
-  { icon: ICON_SHIELD, title: "Higher intent than social", text: <>People come to LinkedIn to <strong>solve business problems</strong> — not to scroll cat videos.</> },
+  { icon: ICON_SHIELD, title: "Higher intent than social", text: <>People come to LinkedIn to <strong>solve business problems</strong>, not to scroll cat videos.</> },
   { icon: ICON_BRIEFCASE, title: "Perfect for ABM", text: <>Upload your 500 target accounts and <strong>only serve ads to people at those companies.</strong></>, delay: 60 },
-  { icon: ICON_DOLLAR, title: "CPCs look expensive — until deal size", text: <>A $200 lead that becomes a $50K contract <strong>beats a $30 lead that becomes a $500 sale, every time.</strong></>, delay: 120 },
+  { icon: ICON_DOLLAR, title: "CPCs look expensive: until deal size", text: <>A $200 lead that becomes a $50K contract <strong>beats a $30 lead that becomes a $500 sale, every time.</strong></>, delay: 120 },
 ];
 
 /* -------- ad formats (8) -------- */
@@ -168,12 +168,12 @@ const FEATURES = [
 type Format = { name: string; tag?: string; best: string; ctr: string; note: string; win?: boolean };
 
 const FORMATS: Format[] = [
-  { name: "Single Image", best: "Everyday feed — all objectives", ctr: "0.44–0.55%", note: "Most-used format, solid baseline" },
+  { name: "Single Image", best: "Everyday feed, all objectives", ctr: "0.44–0.55%", note: "Most-used format, solid baseline" },
   { name: "Video", best: "Brand awareness, product demos", ctr: "0.44–0.65%", note: "Great for view-through recall" },
   { name: "Carousel", best: "Multi-message storytelling", ctr: "0.55%+", note: "Higher engagement per impression" },
   { name: "Document Ads", best: "Mid-funnel lead gen (reports, guides)", ctr: "1.2–2.5%", note: "CPL 30–40% lower than generic forms" },
   { name: "Thought Leader Ads", tag: "2026 winner", best: "Boost an exec’s organic post", ctr: "2.0–5.0%", note: "⚡ ~6× more efficient than standard ads", win: true },
-  { name: "Message / Conversation", best: "1-to-1 DM campaigns", ctr: "2–3% open", note: "High-intent — great for demo requests" },
+  { name: "Message / Conversation", best: "1-to-1 DM campaigns", ctr: "2–3% open", note: "High-intent, great for demo requests" },
   { name: "Lead Gen Forms", best: "Pre-filled native forms", ctr: "6–12% conv.", note: "2–4× higher conversion than landing pages" },
   { name: "Dynamic / Follower", best: "Grow page followers, employer brand", ctr: "0.3–0.6%", note: "Best for talent / employer campaigns" },
 ];
@@ -209,12 +209,12 @@ function FormatsTable() {
 /* -------- what we don't do (dark) -------- */
 
 const DONTS = [
-  { icon: X_ICON, title: "Charge a % of ad spend", text: <>That model incentivizes agencies to spend more of your money — <strong>not to make it work harder.</strong></> },
+  { icon: X_ICON, title: "Charge a % of ad spend", text: <>That model incentivizes agencies to spend more of your money, <strong>not to make it work harder.</strong></> },
   { icon: X_ICON, title: "Use Audience Expansion by default", text: <>It broadens targeting past your ICP and <strong>quietly wastes budget.</strong></>, delay: 60 },
   { icon: X_ICON, title: "Send a dashboard and disappear", text: <>Weekly Loom walkthroughs, monthly plain-language reports, <strong>real conversations.</strong></>, delay: 120 },
   { icon: X_ICON, title: "Optimize for CTR alone", text: <>High CTR usually means broad targeting = bad leads. We optimize for <strong>cost per SQL and pipeline value.</strong></> },
   { icon: X_ICON, title: "Lock you into long contracts", text: <>Month-to-month, cancel anytime. <strong>If we’re not producing, we shouldn’t be your agency.</strong></>, delay: 60 },
-  { icon: X_ICON, title: "Keep the ad account", text: <>It’s yours from day one — login, billing, campaign history. <strong>If you leave, everything stays with you.</strong></>, delay: 120 },
+  { icon: X_ICON, title: "Keep the ad account", text: <>It’s yours from day one, login, billing, campaign history. <strong>If you leave, everything stays with you.</strong></>, delay: 120 },
 ];
 
 /* -------- what's included (interactive, 6) -------- */
@@ -228,7 +228,7 @@ const INCLUDED: Included[] = [
     btnName: "Strategy & setup",
     btnSub: "Tracking done right",
     name: "Strategy & Account Setup",
-    tag: "The foundation — including the 2026 server-side tracking most agencies skip.",
+    tag: "The foundation, including the 2026 server-side tracking most agencies skip.",
     items: [
       "LinkedIn Ads audit (if you have campaigns)",
       "ICP + persona mapping",
@@ -244,14 +244,14 @@ const INCLUDED: Included[] = [
     btnName: "Audience building",
     btnSub: "ICP-tight + ABM",
     name: "Audience Building",
-    tag: "ICP-tight targeting + ABM — not broad audiences that quietly waste budget.",
+    tag: "ICP-tight targeting + ABM, not broad audiences that quietly waste budget.",
     items: [
       "Title, seniority, function, industry, size targeting",
       "Matched Audiences (upload account lists for ABM)",
       "Website retargeting from Insight Tag",
       "Lookalike + Predictive Audience testing",
       "Suppression lists (customers, past leads)",
-      "Intent data integration (6sense, Bombora — optional)",
+      "Intent data integration (6sense, Bombora, optional)",
     ],
   },
   {
@@ -307,7 +307,7 @@ const INCLUDED: Included[] = [
     btnName: "Reporting & optimization",
     btnSub: "Pipeline metrics",
     name: "Reporting & Optimization",
-    tag: "Weekly Loom walkthroughs and reports tied to pipeline — not vanity metrics.",
+    tag: "Weekly Loom walkthroughs and reports tied to pipeline, not vanity metrics.",
     items: [
       "Weekly Loom walkthrough (5–10 min, plain language)",
       "Monthly report tied to pipeline metrics",
@@ -386,18 +386,18 @@ function IncludedExplorer() {
 /* -------- who / fit -------- */
 
 const FIT_GOOD: ReactNode[] = [
-  <><strong>B2B SaaS</strong> with an ACV over $5K/year — the math almost always works.</>,
+  <><strong>B2B SaaS</strong> with an ACV over $5K/year, the math almost always works.</>,
   <><strong>Consulting &amp; professional services</strong> with a defined ideal client (industry, revenue, title).</>,
   <><strong>B2B agencies &amp; staffing firms</strong> reaching hiring managers, CMOs, or founders at target companies.</>,
-  <><strong>Enterprise tech, cybersecurity, fintech</strong> — large deals, ABM strategy essential.</>,
+  <><strong>Enterprise tech, cybersecurity, fintech</strong>, large deals, ABM strategy essential.</>,
   <><strong>B2B event marketers</strong> promoting webinars, summits, conferences to specific audiences.</>,
-  <><strong>Talent acquisition &amp; employer branding</strong> — LinkedIn is the only game in town.</>,
+  <><strong>Talent acquisition &amp; employer branding</strong>, LinkedIn is the only game in town.</>,
 ];
 
 const FIT_BAD: ReactNode[] = [
-  <><strong>B2C / consumer brands</strong> — use Meta Ads or Google Ads instead.</>,
-  <><strong>Low-ticket products (&lt;$500 ACV)</strong> — the CPC math doesn’t hold up.</>,
-  <><strong>Local service businesses</strong> without a B2B arm — Google Local &amp; Meta convert cheaper.</>,
+  <><strong>B2C / consumer brands</strong>, use Meta Ads or Google Ads instead.</>,
+  <><strong>Low-ticket products (&lt;$500 ACV)</strong>, the CPC math doesn’t hold up.</>,
+  <><strong>Local service businesses</strong> without a B2B arm: Google Local &amp; Meta convert cheaper.</>,
 ];
 
 function FitGrid() {
@@ -440,7 +440,7 @@ function FitGrid() {
 const STEPS = [
   { when: "Week 1", title: "Strategy + setup", text: "Discovery call, ICP + persona mapping, account audit, Insight Tag + conversion tracking, a 90-day roadmap in plain language." },
   { when: "Week 2", title: "Audiences + creative", text: "Target audiences built (title, company, matched accounts). Ad copy written per persona. Static + video ads designed. Forms configured.", delay: 70 },
-  { when: "Week 3", title: "Soft launch", text: "First campaigns at controlled budget. Daily monitoring during ramp. Early leads reviewed with your sales team — feedback loop opened.", delay: 140 },
+  { when: "Week 3", title: "Soft launch", text: "First campaigns at controlled budget. Daily monitoring during ramp. Early leads reviewed with your sales team, feedback loop opened.", delay: 140 },
   { when: "Week 4", title: "Optimize + scale", text: "Kill underperformers, scale winning creatives, refine audiences on early signals. First monthly report + strategy review.", delay: 210 },
   { when: "Ongoing", title: "Weekly cycles", text: "Weekly A/B tests, monthly reports, quarterly deep dives + budget reallocation, creative refresh every 2–4 weeks.", delay: 280 },
 ];
@@ -448,21 +448,21 @@ const STEPS = [
 /* -------- pricing -------- */
 
 const TIERS = [
-  { name: "Starter LinkedIn Ads", best: "Small B2B teams testing LinkedIn — single audience, 1–2 ad formats. Ad spend $2K–5K/mo.", price: "Published /mo" },
-  { name: "Growth LinkedIn Ads", best: "Most B2B businesses — 3–5 audiences, multi-format, full-funnel with retargeting. Spend $5K–20K/mo.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale LinkedIn Ads", best: "Enterprise + ABM — 10+ audiences, matched account lists, Thought Leader Ads, dedicated strategist. Spend $20K+/mo.", price: "Published /mo", delay: 140 },
-  { name: "LinkedIn Ads Audit", best: "One-off deep audit of your existing account — no commitment.", price: "Published", delay: 210 },
+  { name: "Starter LinkedIn Ads", best: "Small B2B teams testing LinkedIn, single audience, 1–2 ad formats. Ad spend $2K–5K/mo.", price: "Published /mo" },
+  { name: "Growth LinkedIn Ads", best: "Most B2B businesses: 3–5 audiences, multi-format, full-funnel with retargeting. Spend $5K–20K/mo.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Scale LinkedIn Ads", best: "Enterprise + ABM: 10+ audiences, matched account lists, Thought Leader Ads, dedicated strategist. Spend $20K+/mo.", price: "Published /mo", delay: 140 },
+  { name: "LinkedIn Ads Audit", best: "One-off deep audit of your existing account, no commitment.", price: "Published", delay: 210 },
 ];
 
 /* -------- faq -------- */
 
 const FAQS = [
-  { q: "How much do LinkedIn Ads actually cost?", a: <>Two costs: <strong>ad spend + management.</strong> Ad spend starts around $2K/mo minimum for meaningful data — most B2B teams land in $5K–20K/mo. Management fees are published here (Starter/Growth/Scale). <strong>No % of ad spend, ever.</strong></> },
-  { q: "What deal size makes it worth it?", a: <>Typically <strong>$5K+ ACV</strong> per customer. Below that the math rarely works — LinkedIn CPCs are 2–3× Google’s. For sub-$5K deals, Google or Meta usually convert better.</> },
+  { q: "How much do LinkedIn Ads actually cost?", a: <>Two costs: <strong>ad spend + management.</strong> Ad spend starts around $2K/mo minimum for meaningful data, most B2B teams land in $5K–20K/mo. Management fees are published here (Starter/Growth/Scale). <strong>No % of ad spend, ever.</strong></> },
+  { q: "What deal size makes it worth it?", a: <>Typically <strong>$5K+ ACV</strong> per customer. Below that the math rarely works: LinkedIn CPCs are 2–3× Google’s. For sub-$5K deals, Google or Meta usually convert better.</> },
   { q: "How is it different from Google Ads?", a: <>Google captures people <strong>actively searching;</strong> LinkedIn reaches people <strong>by job title / company.</strong> LinkedIn CPCs are higher but deals close 28–35% larger. Best answer: run both.</> },
-  { q: "Can you run ABM campaigns?", a: <>Yes — one of LinkedIn’s strongest features. Upload a list of <strong>100–2,000 target accounts</strong> and only serve ads to people at those companies. We build ABM for enterprise clients regularly.</> },
-  { q: "What are Thought Leader Ads (TLAs)?", a: <>TLAs boost an executive’s organic post as an ad. In 2026 they’re the highest-performing format — <strong>2–5% CTR, ~6× more efficient</strong> than standard image ads. Requires your exec to post regularly.</> },
-  { q: "Do I own the ad account?", a: <>Yes — from day one. Login, billing, campaign history all yours. <strong>If you leave, everything stays with you.</strong></> },
+  { q: "Can you run ABM campaigns?", a: <>Yes, one of LinkedIn’s strongest features. Upload a list of <strong>100–2,000 target accounts</strong> and only serve ads to people at those companies. We build ABM for enterprise clients regularly.</> },
+  { q: "What are Thought Leader Ads (TLAs)?", a: <>TLAs boost an executive’s organic post as an ad. In 2026 they’re the highest-performing format, <strong>2–5% CTR, ~6× more efficient</strong> than standard image ads. Requires your exec to post regularly.</> },
+  { q: "Do I own the ad account?", a: <>Yes, from day one. Login, billing, campaign history all yours. <strong>If you leave, everything stays with you.</strong></> },
 ];
 
 export default function LinkedInAdsView() {
@@ -481,7 +481,7 @@ export default function LinkedInAdsView() {
         lead={
           <>
             Managed LinkedIn Ads for B2B, SaaS, consulting, and professional services. We build the campaigns, write the
-            ads, launch the funnels, and manage the spend —{" "}
+            ads, launch the funnels, and manage the spend,{" "}
             <strong>with flat monthly fees, transparent reporting, and pipeline metrics that mean something.</strong>
           </>
         }
@@ -498,10 +498,10 @@ export default function LinkedInAdsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Why LinkedIn is the best B2B paid channel</span>
-            <h2>Target by role — not by keyword.</h2>
+            <h2>Target by role, not by keyword.</h2>
             <p>
               LinkedIn is the only place you can target by job title, seniority, industry, company size, and skills all at
-              once. That precision costs more per click — but the leads are dramatically more qualified.
+              once. That precision costs more per click, but the leads are dramatically more qualified.
             </p>
           </Reveal>
           <div className="lia-why">
@@ -515,9 +515,9 @@ export default function LinkedInAdsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">LinkedIn ad formats we run</span>
-            <h2>Eight formats — each solves a different problem.</h2>
+            <h2>Eight formats, each solves a different problem.</h2>
             <p>
-              We pick the right mix based on your goals, not what’s trending — usually launching 2–3 formats, testing, and
+              We pick the right mix based on your goals, not what’s trending, usually launching 2–3 formats, testing, and
               scaling the winners.
             </p>
           </Reveal>
@@ -532,7 +532,7 @@ export default function LinkedInAdsView() {
       <section className="band dark" id="dont">
         <div className="wrap">
           <Reveal className="sec-head">
-            <span className="eyebrow">What we don’t do — and why that matters</span>
+            <span className="eyebrow">What we don’t do, and why that matters</span>
             <h2>The LinkedIn Ads space is full of budget-wasting shortcuts.</h2>
             <p>We don’t take any of them.</p>
           </Reveal>
@@ -543,7 +543,7 @@ export default function LinkedInAdsView() {
               draw
               solve={
                 <>
-                  Flat fee, ICP-tight targeting, real reporting, and <strong>your account — always.</strong>
+                  Flat fee, ICP-tight targeting, real reporting, and <strong>your account, always.</strong>
                 </>
               }
             />
@@ -557,7 +557,7 @@ export default function LinkedInAdsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
             <h2>End-to-end LinkedIn Ads management.</h2>
-            <p>Every piece a working B2B paid program needs — six parts, one team. Pick one to see inside.</p>
+            <p>Every piece a working B2B paid program needs, six parts, one team. Pick one to see inside.</p>
           </Reveal>
           <IncludedExplorer />
         </div>
@@ -569,7 +569,7 @@ export default function LinkedInAdsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Who LinkedIn Ads is built for</span>
             <h2>Not every business belongs on LinkedIn Ads.</h2>
-            <p>Here’s where it works best — and where we’ll honestly point you elsewhere.</p>
+            <p>Here’s where it works best, and where we’ll honestly point you elsewhere.</p>
           </Reveal>
           <FitGrid />
         </div>
@@ -601,11 +601,11 @@ export default function LinkedInAdsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Pricing</span>
             <h2>Flat monthly management fee. No % of spend.</h2>
-            <p>Published up front. Ad spend paid directly to LinkedIn from your card — no markup, no hidden fees.</p>
+            <p>Published up front. Ad spend paid directly to LinkedIn from your card, no markup, no hidden fees.</p>
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Retainers are <strong>month-to-month.</strong> Ad spend is paid directly to LinkedIn from your card — no spend
+            Retainers are <strong>month-to-month.</strong> Ad spend is paid directly to LinkedIn from your card, no spend
             markup, no hidden fees. Every management fee is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
         </div>
@@ -615,11 +615,11 @@ export default function LinkedInAdsView() {
 
       <CtaBand
         eyebrow="LinkedIn Ads Services"
-        heading="Book a free LinkedIn Ads audit — no obligation."
+        heading="Book a free LinkedIn Ads audit, no obligation."
         copy={
           <>
             We’ll review your current account (or your goals if starting fresh), share honest feedback in plain language,
-            and give you a clear 90-day plan with pricing —{" "}
+            and give you a clear 90-day plan with pricing,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>
               usually within 48 hours. If we’re not the right fit, we’ll tell you.
             </strong>

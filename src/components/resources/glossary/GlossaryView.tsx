@@ -76,7 +76,7 @@ export default function GlossaryView({ glossary = GLOSSARY }: { glossary?: Gloss
             without the <span className="grad-text">jargon.</span>
           </>
         }
-        lead="If you've ever nodded along in a meeting without knowing what a term meant, start here. Every definition is written in plain English — the way we'd explain it to a friend."
+        lead="If you've ever nodded along in a meeting without knowing what a term meant, start here. Every definition is written in plain English, the way we'd explain it to a friend."
         search={{
           placeholder: `Search ${TOTAL_TERMS} terms…`,
           ariaLabel: "Search terms",
@@ -157,7 +157,7 @@ export default function GlossaryView({ glossary = GLOSSARY }: { glossary?: Gloss
 
       <CtaBand
         eyebrow="Have a term we missed?"
-        heading="Ask — we'll explain it plainly."
+        heading="Ask, we'll explain it plainly."
         copy={
           <>
             Marketing changes fast, and we add new terms as they come up.{" "}

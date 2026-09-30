@@ -146,7 +146,7 @@ const ICON_REFRESH = (
 
 const PIPE_STEPS: { icon: ReactNode; title: ReactNode; sub: ReactNode; tag: string; tagClass: "auto" | "score" | "won" }[] = [
   { icon: ICON_CAPTURE, title: "Lead captured", sub: "Website form → CRM", tag: "Auto", tagClass: "auto" },
-  { icon: ICON_STAR, title: "AI scored — Tier A", sub: "ICP fit + intent signals", tag: "Hot", tagClass: "score" },
+  { icon: ICON_STAR, title: "AI scored: Tier A", sub: "ICP fit + intent signals", tag: "Hot", tagClass: "score" },
   { icon: ICON_LIST_CHECK, title: "Routed to senior rep", sub: "+ Slack alert & SMS", tag: "Auto", tagClass: "auto" },
   { icon: ICON_CALENDAR, title: "Meeting booked & nurtured", sub: "Sequence + reminders", tag: "Auto", tagClass: "auto" },
   { icon: ICON_CHECK, title: "Deal won", sub: "E-sign → onboarding kickoff", tag: "Won", tagClass: "won" },
@@ -196,7 +196,7 @@ type Stat = { count: number; suffix: string; label: string; text: string; delay:
 const STATS: Stat[] = [
   { count: 48, suffix: "%", label: "Leads never touched", text: "Of inbound leads that never receive a single follow-up call or email.", delay: 0 },
   { count: 5, suffix: "min", label: "Response window", text: "Leads contacted within 5 minutes are 21× more likely to convert than after 30.", delay: 80 },
-  { count: 80, suffix: "%", label: "Deals need 5+ follow-ups", text: "Of sales require five or more follow-ups — but 44% of reps give up after one.", delay: 160 },
+  { count: 80, suffix: "%", label: "Deals need 5+ follow-ups", text: "Of sales require five or more follow-ups, but 44% of reps give up after one.", delay: 160 },
 ];
 
 /* the design fires the count-ups once #stats scrolls past 85% of the viewport */
@@ -250,11 +250,11 @@ function StatsGrid() {
 /* -------- 5-stage framework -------- */
 
 const FRAMEWORK: { no: string; icon: ReactNode; title: string; desc: string; items: string[] }[] = [
-  { no: "01", icon: ICON_CAPTURE, title: "Capture", desc: "Every lead into the CRM — no matter the source.", items: ["Website forms", "Ad platforms", "Calls + SMS", "Email replies"] },
+  { no: "01", icon: ICON_CAPTURE, title: "Capture", desc: "Every lead into the CRM, no matter the source.", items: ["Website forms", "Ad platforms", "Calls + SMS", "Email replies"] },
   { no: "02", icon: ICON_STAR, title: "Score", desc: "AI + rule-based scoring separates hot from cold.", items: ["ICP fit scoring", "Behavior signals", "Intent data", "Auto-priority"] },
-  { no: "03", icon: ICON_LIST_CHECK, title: "Route", desc: "Right lead, right rep, right time — automatically.", items: ["Round-robin", "Territory rules", "Skill-based", "Load balancing"] },
+  { no: "03", icon: ICON_LIST_CHECK, title: "Route", desc: "Right lead, right rep, right time, automatically.", items: ["Round-robin", "Territory rules", "Skill-based", "Load balancing"] },
   { no: "04", icon: ICON_CHAT, title: "Nurture", desc: "Follow-up sequences that fire when reps forget.", items: ["Email drip", "SMS follow-up", "Task reminders", "Re-engagement"] },
-  { no: "05", icon: ICON_CHECK, title: "Close", desc: "Proposals, contracts, e-sign — triggered from the pipeline.", items: ["Proposal automation", "E-sign integration", "Payment collection", "Onboarding trigger"] },
+  { no: "05", icon: ICON_CHECK, title: "Close", desc: "Proposals, contracts, e-sign, triggered from the pipeline.", items: ["Proposal automation", "E-sign integration", "Payment collection", "Onboarding trigger"] },
 ];
 
 /* -------- CRM comparison -------- */
@@ -417,23 +417,23 @@ function AutomationsExplorer() {
 /* -------- included / who / steps / pricing / faq -------- */
 
 const INCLUDED: { no: string; icon: ReactNode; title: string; text: string }[] = [
-  { no: "01", icon: ICON_SEARCH, title: "CRM & process audit", text: "Map your sales process, find where deals leak, and design the automation that fixes it — with a 30-60-90 roadmap." },
-  { no: "02", icon: ICON_TABLE, title: "Setup or migration", text: "Full implementation on HubSpot / Salesforce / GHL / Pipedrive — pipeline stages, custom fields, roles, clean data migration." },
-  { no: "03", icon: ICON_CAPTURE, title: "Lead capture & routing", text: "Every lead into the CRM in seconds — forms, ad platforms, funnels, call/SMS logging, round-robin & territory routing." },
-  { no: "04", icon: ICON_STAR, title: "AI lead scoring", text: "The 2026 differentiator — AI scores every lead against your ICP + behavior + intent, in real time. A/B/C tiers, score decay." },
+  { no: "01", icon: ICON_SEARCH, title: "CRM & process audit", text: "Map your sales process, find where deals leak, and design the automation that fixes it, with a 30-60-90 roadmap." },
+  { no: "02", icon: ICON_TABLE, title: "Setup or migration", text: "Full implementation on HubSpot / Salesforce / GHL / Pipedrive, pipeline stages, custom fields, roles, clean data migration." },
+  { no: "03", icon: ICON_CAPTURE, title: "Lead capture & routing", text: "Every lead into the CRM in seconds, forms, ad platforms, funnels, call/SMS logging, round-robin & territory routing." },
+  { no: "04", icon: ICON_STAR, title: "AI lead scoring", text: "The 2026 differentiator: AI scores every lead against your ICP + behavior + intent, in real time. A/B/C tiers, score decay." },
   { no: "05", icon: ICON_CHAT, title: "Sequence & follow-up", text: "Multi-step email + SMS sequences per stage, task creation, AI-drafted replies, re-engagement and win-back flows." },
-  { no: "06", icon: ICON_ROUTE, title: "Sales stack integration", text: "Email & calendar two-way sync, meetings, e-sign, Slack, accounting — your CRM becomes the center, nothing in silos." },
-  { no: "07", icon: ICON_TREND, title: "Reporting & dashboards", text: "Dashboards your team actually opens — pipeline health, rep performance, forecast, attribution, deal velocity." },
-  { no: "08", icon: ICON_USER, title: "Training & documentation", text: "If the team doesn’t use it, none of it matters — recorded training per role, cheat sheets, docs, ongoing support." },
+  { no: "06", icon: ICON_ROUTE, title: "Sales stack integration", text: "Email & calendar two-way sync, meetings, e-sign, Slack, accounting, your CRM becomes the center, nothing in silos." },
+  { no: "07", icon: ICON_TREND, title: "Reporting & dashboards", text: "Dashboards your team actually opens, pipeline health, rep performance, forecast, attribution, deal velocity." },
+  { no: "08", icon: ICON_USER, title: "Training & documentation", text: "If the team doesn’t use it, none of it matters, recorded training per role, cheat sheets, docs, ongoing support." },
 ];
 
 const WHO: { icon: ReactNode; text: ReactNode; delay: number }[] = [
   { icon: ICON_SCREEN, text: <><strong>A SaaS or B2B software company</strong> with a growing sales team that needs a real pipeline, not a shared spreadsheet.</>, delay: 0 },
   { icon: ICON_BRIEFCASE, text: <><strong>An agency or service business</strong> using (or wanting) GoHighLevel to unify CRM, funnels, SMS, and client work.</>, delay: 60 },
   { icon: ICON_PHONE, text: <><strong>A local service business</strong> losing leads because response times are slow and follow-ups slip.</>, delay: 120 },
-  { icon: ICON_ROWS, text: <><strong>A team stuck in spreadsheets</strong> — you bought HubSpot/Salesforce but nobody uses it because it was never set up right.</>, delay: 0 },
+  { icon: ICON_ROWS, text: <><strong>A team stuck in spreadsheets</strong>, you bought HubSpot/Salesforce but nobody uses it because it was never set up right.</>, delay: 0 },
   { icon: ICON_BARS, text: <><strong>A business scaling past 5–10 reps</strong> where the “founder in their inbox” model has broken and you need real systems.</>, delay: 60 },
-  { icon: ICON_REFRESH, text: <><strong>A team migrating CRMs</strong> — outgrown Pipedrive, moving off Salesforce, or consolidating tools onto GoHighLevel.</>, delay: 120 },
+  { icon: ICON_REFRESH, text: <><strong>A team migrating CRMs</strong>, outgrown Pipedrive, moving off Salesforce, or consolidating tools onto GoHighLevel.</>, delay: 120 },
 ];
 
 const STEPS = [
@@ -445,25 +445,25 @@ const STEPS = [
 ];
 
 const TIERS = [
-  { name: "CRM Audit", best: "One-off audit + roadmap of your CRM setup and sales process — no commitment.", price: "Published" },
-  { name: "Starter CRM Setup", best: "Small teams — implementation, pipeline design, 3–5 core automations, basic integrations.", price: "Published", delay: 70 },
-  { name: "Growth CRM & Automation", best: "Growing teams — full setup, 10+ automations, AI lead scoring, sales stack integration.", price: "Published", featured: true, badge: "Most popular", delay: 140 },
-  { name: "Scale & Optimization", best: "Larger teams & complex pipelines — multi-pipeline, advanced AI, custom objects. Optional monthly optimization.", price: "Published", delay: 210 },
+  { name: "CRM Audit", best: "One-off audit + roadmap of your CRM setup and sales process, no commitment.", price: "Published" },
+  { name: "Starter CRM Setup", best: "Small teams, implementation, pipeline design, 3–5 core automations, basic integrations.", price: "Published", delay: 70 },
+  { name: "Growth CRM & Automation", best: "Growing teams, full setup, 10+ automations, AI lead scoring, sales stack integration.", price: "Published", featured: true, badge: "Most popular", delay: 140 },
+  { name: "Scale & Optimization", best: "Larger teams & complex pipelines, multi-pipeline, advanced AI, custom objects. Optional monthly optimization.", price: "Published", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "Which CRM is best?", a: <><strong>HubSpot</strong> for inbound-heavy mid-market, <strong>Salesforce</strong> for enterprise, <strong>GoHighLevel</strong> for agencies/local all-in-one, <strong>Pipedrive</strong> for simple pipeline UX. We’re certified across all four and recommend per business — not per commission.</> },
-  { q: "How much does it cost?", a: <>Depends on scope. The CRM Audit shows what you actually need. Starter covers 3–5 core automations; Growth (10+ automations, AI scoring) is most popular; Scale handles complex multi-pipeline. <strong>Full pricing is published — no “custom quote” wall.</strong></> },
-  { q: "Can you migrate us between CRMs?", a: <>Yes — a core part of what we do. HubSpot ↔ Salesforce, either ↔ GoHighLevel, Pipedrive → anything. <strong>Data migration, deduplication, pipeline rebuild, and team re-training</strong> on the new platform.</> },
+  { q: "Which CRM is best?", a: <><strong>HubSpot</strong> for inbound-heavy mid-market, <strong>Salesforce</strong> for enterprise, <strong>GoHighLevel</strong> for agencies/local all-in-one, <strong>Pipedrive</strong> for simple pipeline UX. We’re certified across all four and recommend per business, not per commission.</> },
+  { q: "How much does it cost?", a: <>Depends on scope. The CRM Audit shows what you actually need. Starter covers 3–5 core automations; Growth (10+ automations, AI scoring) is most popular; Scale handles complex multi-pipeline. <strong>Full pricing is published, no “custom quote” wall.</strong></> },
+  { q: "Can you migrate us between CRMs?", a: <>Yes, a core part of what we do. HubSpot ↔ Salesforce, either ↔ GoHighLevel, Pipedrive → anything. <strong>Data migration, deduplication, pipeline rebuild, and team re-training</strong> on the new platform.</> },
   { q: "How long does setup take?", a: <>Starter 3–4 weeks, Growth 5–6, Scale 6–8. Migrations add 1–2 weeks. <strong>Timelines depend on how quickly your team provides access, signs off, and attends training.</strong></> },
-  { q: "Do you build AI lead scoring?", a: <>Yes — the 2026 differentiator. We combine ICP-fit signals (Clearbit, ZoomInfo, RB2B) with behavior signals and <strong>score every lead in real time,</strong> so reps know who to call first.</> },
-  { q: "Do you set up follow-up automation?", a: <>Yes — one of the biggest revenue-recoverable areas. Multi-step email sequences per stage, SMS follow-ups (Twilio/GHL), task creation, and <strong>AI-drafted reply suggestions.</strong></> },
-  { q: "Can you integrate my whole sales stack?", a: <>Yes — email two-way sync, calendars (Calendly/Chili Piper), meetings (Zoom/Meet/Teams), e-sign (DocuSign/PandaDoc), and accounting (QuickBooks/Xero). <strong>Whatever you use, we integrate.</strong></> },
-  { q: "What if my team won’t use the CRM?", a: <>Adoption is the #1 killer of CRM projects — so we build training into every engagement. If reps still resist, it usually means it was over-configured. <strong>We simplify until they use it.</strong></> },
-  { q: "Can you set up GoHighLevel white-label?", a: <>Yes — a specialty. Sub-account structure, white-label branding, snapshots for client onboarding, agency-level automations, and reseller pricing. <strong>Perfect for agencies serving multiple clients on GHL.</strong></> },
-  { q: "Custom Salesforce Flow or Apex?", a: <>For Growth &amp; Scale — custom Flow, custom objects, permission sets, and lightweight Apex where declarative tools can’t. For heavy Apex/LWC, <strong>we partner with certified Salesforce developers.</strong></> },
-  { q: "Do I own everything?", a: <>Yes, 100% — all configs, automations, dashboards, and docs are built in your accounts with full admin access. <strong>If you leave, you keep everything.</strong> No lock-in.</> },
-  { q: "Ours is already a mess — can you fix it?", a: <>That’s the most common situation we walk into. Our audit maps what’s working, broken, and worth fixing. <strong>Most clients don’t need to switch platforms — they need theirs done right.</strong></> },
+  { q: "Do you build AI lead scoring?", a: <>Yes, the 2026 differentiator. We combine ICP-fit signals (Clearbit, ZoomInfo, RB2B) with behavior signals and <strong>score every lead in real time,</strong> so reps know who to call first.</> },
+  { q: "Do you set up follow-up automation?", a: <>Yes, one of the biggest revenue-recoverable areas. Multi-step email sequences per stage, SMS follow-ups (Twilio/GHL), task creation, and <strong>AI-drafted reply suggestions.</strong></> },
+  { q: "Can you integrate my whole sales stack?", a: <>Yes, email two-way sync, calendars (Calendly/Chili Piper), meetings (Zoom/Meet/Teams), e-sign (DocuSign/PandaDoc), and accounting (QuickBooks/Xero). <strong>Whatever you use, we integrate.</strong></> },
+  { q: "What if my team won’t use the CRM?", a: <>Adoption is the #1 killer of CRM projects, so we build training into every engagement. If reps still resist, it usually means it was over-configured. <strong>We simplify until they use it.</strong></> },
+  { q: "Can you set up GoHighLevel white-label?", a: <>Yes, a specialty. Sub-account structure, white-label branding, snapshots for client onboarding, agency-level automations, and reseller pricing. <strong>Perfect for agencies serving multiple clients on GHL.</strong></> },
+  { q: "Custom Salesforce Flow or Apex?", a: <>For Growth &amp; Scale, custom Flow, custom objects, permission sets, and lightweight Apex where declarative tools can’t. For heavy Apex/LWC, <strong>we partner with certified Salesforce developers.</strong></> },
+  { q: "Do I own everything?", a: <>Yes, 100%, all configs, automations, dashboards, and docs are built in your accounts with full admin access. <strong>If you leave, you keep everything.</strong> No lock-in.</> },
+  { q: "Ours is already a mess, can you fix it?", a: <>That’s the most common situation we walk into. Our audit maps what’s working, broken, and worth fixing. <strong>Most clients don’t need to switch platforms, they need theirs done right.</strong></> },
 ];
 
 /* -------- page -------- */
@@ -484,7 +484,7 @@ export default function CrmSalesAutomationView() {
         lead={
           <>
             Done-for-you CRM setup and sales automation. We build the pipeline, automate the follow-up, add AI-powered
-            lead scoring, and integrate the whole stack —{" "}
+            lead scoring, and integrate the whole stack,{" "}
             <strong>so leads stop falling through the cracks and reps stop living in spreadsheets.</strong>{" "}
             Platform-agnostic, transparent, and you own everything.
           </>
@@ -505,13 +505,13 @@ export default function CrmSalesAutomationView() {
             <h2>You don’t have a pipeline problem. You have a system problem.</h2>
             <p>
               Leads come in and disappear. Follow-ups slip. Reports nobody trusts. Every leak in your CRM costs closed
-              deals — here’s where the money goes.
+              deals, here’s where the money goes.
             </p>
           </Reveal>
           <StatsGrid />
           <Reveal as="p" className="crm-stat-note">
             A CRM without automation is a spreadsheet with more buttons.{" "}
-            <strong>Sales automation is what turns it into a revenue machine</strong> — by automating capture, scoring,
+            <strong>Sales automation is what turns it into a revenue machine</strong>, by automating capture, scoring,
             routing, follow-up, and reporting, so your team does the part that closes deals.
           </Reveal>
         </div>
@@ -524,7 +524,7 @@ export default function CrmSalesAutomationView() {
             <span className="eyebrow">The 5-stage sales automation framework</span>
             <h2>Every high-performing pipeline runs on the same five.</h2>
             <p>
-              We build automation into each stage — so leads flow through without dropping. Miss one and leads leak;
+              We build automation into each stage, so leads flow through without dropping. Miss one and leads leak;
               build all five and revenue compounds.
             </p>
           </Reveal>
@@ -544,7 +544,7 @@ export default function CrmSalesAutomationView() {
             ))}
           </Reveal>
           <Reveal as="p" className="crm-fw-note">
-            Miss any one stage — leads leak. <strong>Build all five right — revenue compounds.</strong>
+            Miss any one stage, leads leak. <strong>Build all five right, revenue compounds.</strong>
           </Reveal>
         </div>
       </section>
@@ -556,7 +556,7 @@ export default function CrmSalesAutomationView() {
             <span className="eyebrow">Which CRM is right for you?</span>
             <h2>HubSpot vs Salesforce vs GoHighLevel vs Pipedrive.</h2>
             <p>
-              The four dominant platforms for small &amp; mid-market in 2026. We’re certified across all four — and
+              The four dominant platforms for small &amp; mid-market in 2026. We’re certified across all four, and
               recommend based on your business, not our commission.
             </p>
           </Reveal>
@@ -579,7 +579,7 @@ export default function CrmSalesAutomationView() {
             ))}
           </Reveal>
           <Reveal as="p" className="crm-note">
-            Not sure which fits? <strong>Our free CRM audit answers this in plain language</strong> — no upsell to
+            Not sure which fits? <strong>Our free CRM audit answers this in plain language</strong>, no upsell to
             whichever pays the biggest commission.
           </Reveal>
         </div>
@@ -595,7 +595,7 @@ export default function CrmSalesAutomationView() {
           </Reveal>
           <AutomationsExplorer />
           <Reveal as="p" className="crm-note">
-            Every automation is built to your process — not a generic template.{" "}
+            Every automation is built to your process, not a generic template.{" "}
             <strong>Most clients start with 3–5 and add more as they see the ROI.</strong>
           </Reveal>
         </div>
@@ -607,7 +607,7 @@ export default function CrmSalesAutomationView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
             <h2>Audit to adoption, one team.</h2>
-            <p>Everything a CRM &amp; sales-automation program needs to deliver revenue — eight parts.</p>
+            <p>Everything a CRM &amp; sales-automation program needs to deliver revenue, eight parts.</p>
           </Reveal>
           <Reveal className="crm-inc-grid">
             {INCLUDED.map((item) => (
@@ -674,7 +674,7 @@ export default function CrmSalesAutomationView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Project fees paid in two installments — <strong>50% at kickoff, 50% at launch.</strong> CRM platform
+            Project fees paid in two installments, <strong>50% at kickoff, 50% at launch.</strong> CRM platform
             licenses (HubSpot / Salesforce / GHL / Pipedrive) are separate, paid to the vendor. AI usage costs (if any)
             passed through at cost. Every rate is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
@@ -690,7 +690,7 @@ export default function CrmSalesAutomationView() {
         copy={
           <>
             Book a free CRM audit. We’ll look at your current setup (or where you’re starting), map your revenue leaks,
-            and come back with a clear plan and price —{" "}
+            and come back with a clear plan and price,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>usually within 48 hours. No obligation, no jargon, no commission-driven upsell.</strong>
           </>
         }

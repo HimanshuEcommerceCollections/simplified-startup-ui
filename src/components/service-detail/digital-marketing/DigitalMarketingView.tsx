@@ -52,7 +52,7 @@ function LedgerCard() {
         <div className="dm-lrow">
           <div>
             <span className="lr-k">What it cost</span>
-            <div className="lr-v">Growth retainer — fixed in your plan</div>
+            <div className="lr-v">Growth retainer, fixed in your plan</div>
           </div>
           <span className="lr-amt">$2,400/mo</span>
         </div>
@@ -90,7 +90,7 @@ const SERVICES = [
     items: [
       "Technical SEO, on-page work, local search, and Google Business Profile",
       "Keyword architecture built around what your buyers actually search",
-      "Not what’s easy to rank for — what’s worth ranking for",
+      "Not what’s easy to rank for, what’s worth ranking for",
     ],
     text: (
       <span className="dm-svc-links">
@@ -109,7 +109,7 @@ const SERVICES = [
     title: "Paid campaigns, tracked first",
     items: [
       "Google, Meta, LinkedIn, and YouTube campaigns",
-      "Tracking verified firing before a dollar of spend — no exceptions",
+      "Tracking verified firing before a dollar of spend, no exceptions",
       "You pay platforms directly, so you own the account and its history",
     ],
     text: (
@@ -163,7 +163,7 @@ const SERVICES = [
 /* -------- five jobs -------- */
 
 const JOBS = [
-  { n: "01", title: "Being findable", text: "Search rankings, local results, and your Google Business Profile — showing up when someone types the problem you solve." },
+  { n: "01", title: "Being findable", text: "Search rankings, local results, and your Google Business Profile, showing up when someone types the problem you solve." },
   { n: "02", title: "Being visible", text: "Paid campaigns on Google, Meta, LinkedIn, or YouTube that put you in front of buyers you haven’t met yet.", delay: 90 },
   { n: "03", title: "Being credible", text: "Content, reviews, and a brand that make the shortlist decision go your way.", delay: 180 },
   { n: "04", title: "Staying in touch", text: "Email and lifecycle sends to the people who said yes to hearing from you.", delay: 270 },
@@ -206,7 +206,7 @@ const STEPS = [
     title: "Build",
     blocks: [
       { k: "What happens", v: <><strong>Tracking and analytics first, always.</strong> Then the assets: pages, campaigns, content, creative. Everything runs through the checklist for its type before it goes live.</> },
-      { k: "You get", v: "Working assets — and you see them before your customers do." },
+      { k: "You get", v: "Working assets, and you see them before your customers do." },
     ],
   },
   {
@@ -215,7 +215,7 @@ const STEPS = [
     title: "Grow",
     blocks: [
       { k: "What happens", v: <>The work runs on a published cadence. <strong>Underperformance gets named by us first,</strong> in plain language, with what changes next month.</> },
-      { k: "You get", v: "A report that leads with the numbers and a call to walk it — not a list of tasks performed." },
+      { k: "You get", v: "A report that leads with the numbers and a call to walk it, not a list of tasks performed." },
     ],
   },
 ];
@@ -224,10 +224,10 @@ const STEPS = [
 
 const SEQUENCE = [
   { t: "Fix the offer and the tracking", s: "Before spend goes anywhere, make sure there’s something worth selling and a way to measure it." },
-  { t: "Be findable for existing demand", s: "Capture the buyers already searching — SEO, local, and Google Business Profile." },
+  { t: "Be findable for existing demand", s: "Capture the buyers already searching: SEO, local, and Google Business Profile." },
   { t: "Turn the site into a place that converts", s: "Traffic is wasted if the page can’t catch it." },
   { t: "Build credibility with content and brand", s: "Win the shortlist decision before the sales conversation starts." },
-  { t: "Buy visibility once the funnel holds", s: "Paid campaigns amplify a machine that already works — not a leaky one." },
+  { t: "Buy visibility once the funnel holds", s: "Paid campaigns amplify a machine that already works, not a leaky one." },
   { t: "Keep in touch and compound", s: "Email, lifecycle, and reporting turn one-time wins into a repeatable engine." },
 ];
 
@@ -263,15 +263,15 @@ const TIERS = [
 
 const RATE_GROUPS = [
   {
-    label: "SEO, standalone — if search is the only thing you need",
+    label: "SEO, standalone, if search is the only thing you need",
     rows: [
       { title: "SEO Audit", desc: "One-time. Technical, on-page, and content gaps, with a prioritized fix list.", price: "$1,500–3,000" },
-      { title: "Monthly SEO", desc: "Ongoing optimization and content. Six-month minimum — real search work needs runway.", price: "$1,500–3,000", per: "/mo" },
+      { title: "Monthly SEO", desc: "Ongoing optimization and content. Six-month minimum, real search work needs runway.", price: "$1,500–3,000", per: "/mo" },
       { title: "Aggressive SEO", desc: "For competitive markets: more content, more targets, faster cycles.", price: "$3,000–6,000", per: "/mo" },
     ],
   },
   {
-    label: "Brand — if you need to look like a business first",
+    label: "Brand, if you need to look like a business first",
     rows: [
       { title: "Brand Foundation", desc: "Logo suite, color and type systems, voice guide, starter templates.", price: "$2,000–3,500" },
       { title: "Full Brand Identity", desc: "Everything above plus extended applications and a complete asset library.", price: "$3,500–5,000" },
@@ -280,7 +280,7 @@ const RATE_GROUPS = [
 ];
 
 const TERMS = [
-  { label: "Runway", text: <><strong>Three-month minimum</strong> on retainers, six months on standalone SEO — real work needs runway to show.</> },
+  { label: "Runway", text: <><strong>Three-month minimum</strong> on retainers, six months on standalone SEO, real work needs runway to show.</> },
   { label: "Ownership", text: <>You pay ad platforms directly, so you own the account and the history. <strong>You own everything we make.</strong></> },
   { label: "Tools", text: <>Tools are <strong>included in the price.</strong> No separate software line item to reconcile later.</> },
   { label: "No surprises", text: <>No lock-in past the initial term, <strong>no setup fee,</strong> no surprises on the invoice.</> },
@@ -293,8 +293,8 @@ const HOOD_GROUPS = [
     label: "Get found",
     full: false,
     items: [
-      { name: "SEO", desc: "Technical, on-page, and content — built around what buyers actually search.", href: "/digital-marketing/seo" },
-      { name: "Local SEO", desc: "Show up where your customers are standing — maps, local packs, citations." },
+      { name: "SEO", desc: "Technical, on-page, and content, built around what buyers actually search.", href: "/digital-marketing/seo" },
+      { name: "Local SEO", desc: "Show up where your customers are standing, maps, local packs, citations." },
       { name: "Technical SEO", desc: "Speed, structure, indexing, and the plumbing rankings quietly depend on." },
       { name: "Google Business Profile", desc: "The listing customers see first, kept accurate, active, and answering." },
       { name: "AI search optimization", desc: "Structured, extractable answers for the search engines that now write answers.", href: "/digital-marketing/ai-search-geo" },
@@ -305,18 +305,18 @@ const HOOD_GROUPS = [
     full: false,
     delay: 80,
     items: [
-      { name: "Google Ads", desc: "Search intent captured — tracking verified before a dollar of spend.", href: "/digital-marketing/google-ads" },
+      { name: "Google Ads", desc: "Search intent captured, tracking verified before a dollar of spend.", href: "/digital-marketing/google-ads" },
       { name: "Meta Ads", desc: "Facebook and Instagram campaigns with creative that earns the stop-scroll.", href: "/digital-marketing/meta-ads" },
       { name: "LinkedIn Ads", desc: "For when your buyer is a title, not a demographic.", href: "/digital-marketing/linkedin-ads" },
       { name: "YouTube Ads", desc: "Video reach with frequency caps and measurement, not spray-and-pray." },
-      { name: "Retargeting", desc: "Reminding warm visitors, with frequency capping mandatory — never stalking." },
+      { name: "Retargeting", desc: "Reminding warm visitors, with frequency capping mandatory, never stalking." },
     ],
   },
   {
     label: "Social & content",
     full: false,
     items: [
-      { name: "Social media management", desc: "Calendar, creation, posting, and community — run as one service, on a stated cadence.", href: "/digital-marketing/social-media-management" },
+      { name: "Social media management", desc: "Calendar, creation, posting, and community, run as one service, on a stated cadence.", href: "/digital-marketing/social-media-management" },
       { name: "Influencer marketing", desc: "Creator partnerships with disclosure requirements built into every brief." },
       { name: "Content marketing", desc: "Articles and resources that answer what your buyers are already asking.", href: "/digital-marketing/content-marketing" },
       { name: "Copywriting", desc: "Pages, ads, and emails written for your buyer, in your voice." },
@@ -328,27 +328,27 @@ const HOOD_GROUPS = [
     full: false,
     delay: 80,
     items: [
-      { name: "Branding", desc: "Foundation to full identity — the published bands are above." },
+      { name: "Branding", desc: "Foundation to full identity, the published bands are above." },
       { name: "Logo design", desc: "A mark built to work at every size, delivered as a full suite." },
-      { name: "Graphic design", desc: "The assets that keep everything consistent — social, print, presentation." },
+      { name: "Graphic design", desc: "The assets that keep everything consistent, social, print, presentation." },
     ],
   },
   {
     label: "Lifecycle & measurement",
     full: true,
     items: [
-      { name: "Email marketing", desc: "Opted-in lists only — welcome flows, campaigns, and lifecycle sends.", href: "/digital-marketing/email-marketing" },
-      { name: "Analytics & reporting", desc: "The monthly report that leads with numbers — what we did, what it moved, what changes." },
-      { name: "Reputation management", desc: "Review generation done right — never bought, written, incentivized, or gated." },
+      { name: "Email marketing", desc: "Opted-in lists only, welcome flows, campaigns, and lifecycle sends.", href: "/digital-marketing/email-marketing" },
+      { name: "Analytics & reporting", desc: "The monthly report that leads with numbers, what we did, what it moved, what changes." },
+      { name: "Reputation management", desc: "Review generation done right, never bought, written, incentivized, or gated." },
     ],
   },
 ];
 
 const FAQS = [
-  { q: "Why do you publish prices when nobody else does?", a: <>Because hiding them wastes your time and ours. You should be able to tell in ninety seconds whether we’re in your range. The published number is <strong>a band, not a bait</strong> — the exact price gets fixed in writing before any work starts, and it doesn’t move unless you change the scope.</> },
+  { q: "Why do you publish prices when nobody else does?", a: <>Because hiding them wastes your time and ours. You should be able to tell in ninety seconds whether we’re in your range. The published number is <strong>a band, not a bait</strong>, the exact price gets fixed in writing before any work starts, and it doesn’t move unless you change the scope.</> },
   { q: "You’re a remote team. Who’s actually accountable?", a: <><strong>One named person owns your account</strong> and is named in your written plan before you sign. You’re not managing a pool of contractors. The team works US Eastern hours, and every deliverable passes a written checklist you’re allowed to read.</> },
-  { q: "What if it doesn’t work?", a: <>You’ll know early, because the report leads with numbers rather than activity. If a channel is underperforming, we say so and change it — that’s the monthly call. What we won’t do is promise a result no honest agency can promise. <strong>We commit to the scope, the cadence, and the quality bar,</strong> and we hold to those.</> },
-  { q: "What do digital marketing services for small business cost?", a: <>Here, the numbers are published: retainers run $1,000–1,500/mo (Starter), $2,000–4,000/mo (Growth), or $4,000–8,000/mo (Full-Service). Standalone SEO runs $1,500–6,000/mo by intensity, and brand work is $2,000–5,000 as a project. <strong>Your exact figure is fixed in a written plan before work starts</strong> — the market’s typical “it depends, book a call” is exactly what this page was built to avoid.</> },
+  { q: "What if it doesn’t work?", a: <>You’ll know early, because the report leads with numbers rather than activity. If a channel is underperforming, we say so and change it, that’s the monthly call. What we won’t do is promise a result no honest agency can promise. <strong>We commit to the scope, the cadence, and the quality bar,</strong> and we hold to those.</> },
+  { q: "What do digital marketing services for small business cost?", a: <>Here, the numbers are published: retainers run $1,000–1,500/mo (Starter), $2,000–4,000/mo (Growth), or $4,000–8,000/mo (Full-Service). Standalone SEO runs $1,500–6,000/mo by intensity, and brand work is $2,000–5,000 as a project. <strong>Your exact figure is fixed in a written plan before work starts</strong>, the market’s typical “it depends, book a call” is exactly what this page was built to avoid.</> },
   { q: "Do I need a marketing consultant or a full agency?", a: <>A consultant tells you what to do; an agency does it. If you have a team to execute, our Map phase works as exactly that, and the plan is yours to run with anyone. If you don’t have executing hands, the retainer is the consultant and the execution together: senior-led strategy, then the same team ships the work. <strong>You shouldn’t pay twice for thinking and doing.</strong></> },
 ];
 
@@ -356,7 +356,7 @@ const ADJACENT = [
   { title: "A website that converts", desc: "Marketing sends the traffic; the site has to catch it. Built to a published checklist." },
   { title: "Outbound to go with the inbound", desc: "We bring them to you; that team goes and gets them. Coordinated, not competing." },
   { title: "Automate what’s repetitive", desc: "Reporting, follow-up, and lifecycle work that shouldn’t need a human every time." },
-  { title: "Two bundles marketing belongs to", desc: "Launch (plan, build, market — in that order) and Scale (inbound, outbound, and automation together).", tag: "Three services — 15% off" },
+  { title: "Two bundles marketing belongs to", desc: "Launch (plan, build, market, in that order) and Scale (inbound, outbound, and automation together).", tag: "Three services: 15% off" },
 ];
 
 export default function DigitalMarketingView() {
@@ -381,14 +381,14 @@ export default function DigitalMarketingView() {
         lead={
           <>
             Digital marketing for small business, with the black box removed. You’ll know{" "}
-            <strong>what we did, what it cost, and what it moved</strong> — fixed scope, published prices, and a report
+            <strong>what we did, what it cost, and what it moved</strong>, fixed scope, published prices, and a report
             you can actually read. Built for owners who’ve been burned by an agency before.
           </>
         }
         primary={{ label: "Get a written plan", href: "/start-project" }}
         secondary={{ label: "See published pricing", href: "#pricing" }}
         chips={[
-          "Published pricing — every plan, on this page",
+          "Published pricing, every plan, on this page",
           "A written checklist per deliverable",
           "Results published only with client sign-off",
         ]}
@@ -401,13 +401,13 @@ export default function DigitalMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Named services · Fixed scope</span>
-            <h2>What’s included — in writing.</h2>
+            <h2>What’s included, in writing.</h2>
             <p>Our digital marketing services for small business are a fixed set of named products. You pick what you need, we price it before we start, and you get a monthly report tied to the goal.</p>
           </Reveal>
           <div className="dm-svc">
             <FeatureGrid cards={SERVICES} />
           </div>
-          <Callout label="Explicitly out of scope — and we’ll say so on the call">
+          <Callout label="Explicitly out of scope, and we’ll say so on the call">
             We don’t manage your sales calls, we don’t write your legal or medical copy without your review, we don’t
             buy followers or reviews, and we <strong>don’t run campaigns for claims we can’t substantiate.</strong>
           </Callout>
@@ -427,7 +427,7 @@ export default function DigitalMarketingView() {
           </Reveal>
           <JobsGrid />
           <Reveal as="p" className="dm-meaning-foot">
-            A small business rarely needs all five at once — which is why the plan{" "}
+            A small business rarely needs all five at once, which is why the plan{" "}
             <strong>names the two or three worth doing first,</strong> prices them, and skips the rest until the numbers
             say otherwise.
           </Reveal>
@@ -459,18 +459,18 @@ export default function DigitalMarketingView() {
               <p>Most agencies sell you a retainer and a vibe. You never learn what the scope actually was, so you can never tell whether you got it.</p>
               <p>
                 We publish the scope before you sign, we publish the price, and we publish the checklist each deliverable
-                has to pass. When something underperforms, <strong>you hear it from us first</strong> — in the monthly
+                has to pass. When something underperforms, <strong>you hear it from us first</strong>, in the monthly
                 report, in plain language, with what we’re changing.
               </p>
               <div className="dm-diff-marks">
                 <div className="dm-diff-mark">
-                  <span className="mk">{CHECK}</span>Scope, price, and quality bar — all published before you sign.
+                  <span className="mk">{CHECK}</span>Scope, price, and quality bar, all published before you sign.
                 </div>
                 <div className="dm-diff-mark">
                   <span className="mk">{CHECK}</span>We commit to activities and a cadence, and we hit them.
                 </div>
                 <div className="dm-diff-mark">
-                  <span className="mk">{CHECK}</span>Nobody honest guarantees a ranking or lead volume — we won’t pretend otherwise.
+                  <span className="mk">{CHECK}</span>Nobody honest guarantees a ranking or lead volume, we won’t pretend otherwise.
                 </div>
               </div>
             </Reveal>
@@ -486,7 +486,7 @@ export default function DigitalMarketingView() {
             <h2>What’s worth doing first.</h2>
           </Reveal>
           <Reveal as="p" className="dm-strat-lead">
-            A marketing strategy for a small business isn’t a 40-page deck — <strong>it’s an honest sequence.</strong>{" "}
+            A marketing strategy for a small business isn’t a 40-page deck, <strong>it’s an honest sequence.</strong>{" "}
             Ours usually runs in this order, and your written plan says which steps apply to you and which to skip:
           </Reveal>
           <Reveal as="ol" className="dm-seq">
@@ -501,7 +501,7 @@ export default function DigitalMarketingView() {
             ))}
           </Reveal>
           <Reveal as="p" className="dm-strat-note">
-            If a step doesn’t apply to your business, the plan says so — the same way it says if you don’t need marketing
+            If a step doesn’t apply to your business, the plan says so, the same way it says if you don’t need marketing
             yet. <strong>That’s what a strategy is for.</strong>
           </Reveal>
         </div>
@@ -513,7 +513,7 @@ export default function DigitalMarketingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Published pricing</span>
             <h2>What marketing costs here.</h2>
-            <p>The Monthly Growth Retainer is the recurring engine. Three tiers — and your exact number is fixed in your plan before work starts.</p>
+            <p>The Monthly Growth Retainer is the recurring engine. Three tiers, and your exact number is fixed in your plan before work starts.</p>
           </Reveal>
 
           <DmTiers />
@@ -542,7 +542,7 @@ export default function DigitalMarketingView() {
             <div className="dm-bnd">
               <div className="pct">10% off</div>
               <h3>Any two services</h3>
-              <p>Bundling is automatic — inside marketing or across every other practice.</p>
+              <p>Bundling is automatic, inside marketing or across every other practice.</p>
             </div>
             <div className="dm-bnd">
               <div className="pct">15% off</div>
@@ -568,7 +568,7 @@ export default function DigitalMarketingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Everything under the hood</span>
             <h2>The full service list, grouped.</h2>
-            <p>Every service is delivered inside the retainer tiers or as scoped standalone work — each with a written scope and a defined finish line.</p>
+            <p>Every service is delivered inside the retainer tiers or as scoped standalone work, each with a written scope and a defined finish line.</p>
           </Reveal>
           <div className="dm-hood">
             {HOOD_GROUPS.map((group) => (
@@ -621,14 +621,14 @@ export default function DigitalMarketingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">From the resources desk</span>
             <h2>Read before you decide.</h2>
-            <p>Two guides worth the read before any agency conversation — including this one.</p>
+            <p>Two guides worth the read before any agency conversation, including this one.</p>
           </Reveal>
           <div className="dm-res-grid">
             <Reveal>
               <Link className="dm-res-card" href="/blog">
                 <span className="r-kicker">Guide</span>
                 <h3>How to choose a marketing agency</h3>
-                <p>The four questions that matter — run on us at the end.</p>
+                <p>The four questions that matter, run on us at the end.</p>
                 <span className="r-go">
                   Read the guide <span className="arw">↗</span>
                 </span>
@@ -638,7 +638,7 @@ export default function DigitalMarketingView() {
               <Link className="dm-res-card" href="/blog">
                 <span className="r-kicker">Guide</span>
                 <h3>What marketing actually costs</h3>
-                <p>Every market figure sourced and dated — so you can sanity-check any quote.</p>
+                <p>Every market figure sourced and dated, so you can sanity-check any quote.</p>
                 <span className="r-go">
                   Read the guide <span className="arw">↗</span>
                 </span>
@@ -651,7 +651,7 @@ export default function DigitalMarketingView() {
       <CtaBand
         eyebrow="End of file · SS-WEB-13"
         heading="Find out what’s actually worth doing."
-        copy="You’ll get a written marketing plan — the channels worth your money, the scope, the price, and the number we’d judge it by. No retainer required to get it, and no chasing afterward if the answer is no."
+        copy="You’ll get a written marketing plan, the channels worth your money, the scope, the price, and the number we’d judge it by. No retainer required to get it, and no chasing afterward if the answer is no."
         primaryLabel="Get your written plan"
         primaryHref="/start-project"
         secondary={{ label: "See published pricing", href: "#pricing" }}

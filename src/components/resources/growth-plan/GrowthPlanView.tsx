@@ -32,11 +32,11 @@ const PLAN_ITEMS: ReactNode[] = [
 const STEPS = [
   {
     h: "Fill in the form",
-    p: "Two minutes. No prep, no deck, no tidy numbers needed. Not sure what you need? Pick “not sure yet” — that's what the plan is for.",
+    p: "Two minutes. No prep, no deck, no tidy numbers needed. Not sure what you need? Pick “not sure yet”, that's what the plan is for.",
   },
   {
     h: "A 45-minute session",
-    p: "On video, with a senior team member — not a sales rep. We ask how the business makes money, who your best customer is, what you've tried, and what a good year looks like.",
+    p: "On video, with a senior team member, not a sales rep. We ask how the business makes money, who your best customer is, what you've tried, and what a good year looks like.",
   },
   {
     h: "Your plan, in writing",
@@ -46,7 +46,7 @@ const STEPS = [
 
 const GETS = [
   { ico: "$", h: "Named services", p: "No “from” pricing, no mystery hours." },
-  { ico: "→", h: "A dated sequence", p: "First, next, later — with real dates." },
+  { ico: "→", h: "A dated sequence", p: "First, next, later, with real dates." },
   { ico: "−", h: "A skip list", p: "What not to pay for yet." },
   { ico: "14", h: "Our quality bar", p: "The 14 points every deliverable must pass." },
   { ico: "?", h: "An honest fit call", p: "If we're wrong for you, the plan says so." },
@@ -54,32 +54,32 @@ const GETS = [
 
 const SERVICES = [
   { h: "Launch your business", p: "Idea to open. Business plan, entity setup, brand, and the first paying customers.", when: "Usually when the idea is solid but nothing is registered or built yet." },
-  { h: "A website that sells", p: "Design and build, engineered to convert rather than just look current.", when: "Usually when traffic arrives but doesn't turn into enquiries — or there's no site at all." },
-  { h: "Automate the busywork", p: "Data entry, follow-ups, reporting, handoffs between tools — handled.", when: "Usually when you can name the task you do every week and hate every week." },
+  { h: "A website that sells", p: "Design and build, engineered to convert rather than just look current.", when: "Usually when traffic arrives but doesn't turn into enquiries, or there's no site at all." },
+  { h: "Automate the busywork", p: "Data entry, follow-ups, reporting, handoffs between tools, handled.", when: "Usually when you can name the task you do every week and hate every week." },
   { h: "Fill your pipeline", p: "Qualified prospects researched, verified, and delivered ready to contact.", when: "Usually when you can close well but run out of people to talk to." },
-  { h: "Hiring help", p: "Sourcing, screening, and onboarding run for you — interview a shortlist, not a stack.", when: "Usually when the bottleneck is you, and the fix is another pair of hands." },
+  { h: "Hiring help", p: "Sourcing, screening, and onboarding run for you, interview a shortlist, not a stack.", when: "Usually when the bottleneck is you, and the fix is another pair of hands." },
   { h: "Bookkeeping", p: "Clean monthly financials, closed on time, in a format you can actually read.", when: "Usually when you're guessing at margins or dreading tax season." },
 ];
 
 const STAGES = [
   {
     k: "Pre-launch",
-    p: "Nothing's live yet, and the risk is spending in the wrong order. Your plan leans on sequence — what to set up first, what to postpone until money comes in, and what to skip. Most pre-launch founders are being sold things they don't need for another year.",
+    p: "Nothing's live yet, and the risk is spending in the wrong order. Your plan leans on sequence, what to set up first, what to postpone until money comes in, and what to skip. Most pre-launch founders are being sold things they don't need for another year.",
   },
   {
     k: "Early revenue",
-    p: "Customers exist, but growth feels accidental rather than repeatable. Your plan focuses on making what already works happen on purpose — usually the path from stranger to customer, and where it leaks.",
+    p: "Customers exist, but growth feels accidental rather than repeatable. Your plan focuses on making what already works happen on purpose, usually the path from stranger to customer, and where it leaks.",
   },
   {
     k: "Established & stuck",
-    p: "Revenue is steady, but the business has stopped moving. Your plan goes after the bottleneck — nine times out of ten it's pipeline, delivery capacity, or hours vanishing into work nobody should do by hand.",
+    p: "Revenue is steady, but the business has stopped moving. Your plan goes after the bottleneck, nine times out of ten it's pipeline, delivery capacity, or hours vanishing into work nobody should do by hand.",
   },
 ];
 
 const FAQS = [
   { q: "Is the plan really free? What's the catch?", a: "No card, no invoice, no obligation. The catch is plain self-interest: some founders read their plan and ask us to run it. The rest keep a document worth keeping. That's a trade we're happy with." },
-  { q: "I haven't launched yet — is this for me?", a: "Yes. Pre-launch plans lean harder on sequence and on what to skip. Write “pre-launch” in the form and we'll build it that way." },
-  { q: "Who will I actually be speaking to?", a: "Someone senior who does the work — not a sales rep with a script. That's why it's a conversation rather than a qualification call." },
+  { q: "I haven't launched yet, is this for me?", a: "Yes. Pre-launch plans lean harder on sequence and on what to skip. Write “pre-launch” in the form and we'll build it that way." },
+  { q: "Who will I actually be speaking to?", a: "Someone senior who does the work, not a sales rep with a script. That's why it's a conversation rather than a qualification call." },
   { q: "How long does it take end to end?", a: "Two minutes on the form, 45 minutes in the session, and a few working days before the plan lands." },
   { q: "Do I need to prepare anything?", a: "No deck, no financials, no tidy numbers. If you have figures to hand they help, but the session works without them." },
   { q: "Do I have to buy anything afterwards?", a: "No. The plan is yours to act on yourself, sit on, or take to another firm. We send it once. The next step is yours." },
@@ -184,7 +184,7 @@ export default function GrowthPlanView() {
           stage: field("stage"),
           need: field("need"),
           message: field("message").trim(),
-          company: field("company"), // honeypot — humans never fill it
+          company: field("company"), // honeypot, humans never fill it
         }),
       });
       if (!res.ok) throw new Error(`request failed (${res.status})`);
@@ -217,7 +217,7 @@ export default function GrowthPlanView() {
                 </span>
               </h1>
               <p className="gp-lead">
-                A short conversation, then a written plan you keep — <strong>whether you hire us or not.</strong>
+                A short conversation, then a written plan you keep, <strong>whether you hire us or not.</strong>
               </p>
               <div className="gp-hero-actions">
                 <a className="btn btn-primary" href="#request">
@@ -265,7 +265,7 @@ export default function GrowthPlanView() {
                   <ul className="gp-form-assure">
                     <li>A one-page plan, written for you</li>
                     <li>Named services &amp; fixed prices</li>
-                    <li>Yours to keep — hire us or not</li>
+                    <li>Yours to keep, hire us or not</li>
                   </ul>
                 </div>
 
@@ -305,8 +305,8 @@ export default function GrowthPlanView() {
                   <div className="gp-field">
                     <label htmlFor="gpStage">What stage are you at?</label>
                     <select id="gpStage" name="stage" defaultValue="early">
-                      <option value="pre-launch">Pre-launch — nothing live yet</option>
-                      <option value="early">Early revenue — growing, but accidental</option>
+                      <option value="pre-launch">Pre-launch, nothing live yet</option>
+                      <option value="early">Early revenue, growing, but accidental</option>
                       <option value="established">Established &amp; stuck</option>
                       <option value="not-sure">Not sure yet</option>
                     </select>
@@ -314,7 +314,7 @@ export default function GrowthPlanView() {
                   <div className="gp-field">
                     <label htmlFor="gpNeed">What do you think you need?</label>
                     <select id="gpNeed" name="need" defaultValue="not-sure">
-                      <option value="not-sure">Not sure yet — that&apos;s what the plan is for</option>
+                      <option value="not-sure">Not sure yet, that&apos;s what the plan is for</option>
                       <option>Launch your business</option>
                       <option>A website that sells</option>
                       <option>Automate the busywork</option>
@@ -343,11 +343,11 @@ export default function GrowthPlanView() {
                   </button>
                   {submitError && (
                     <p className="gp-form-error" role="alert">
-                      Something went wrong sending your request. Please try again — or email us at{" "}
+                      Something went wrong sending your request. Please try again, or email us at{" "}
                       <a href="mailto:contact@simplifiedstartup.com">contact@simplifiedstartup.com</a>.
                     </p>
                   )}
-                  <p className="gp-form-fine">No card. No obligation. We send the plan once — the next step is yours.</p>
+                  <p className="gp-form-fine">No card. No obligation. We send the plan once, the next step is yours.</p>
 
                   {submitted && (
                     <div className="gp-success" role="status">
@@ -355,7 +355,7 @@ export default function GrowthPlanView() {
                         <path d="M4 12.5l5 5L20 6" />
                       </svg>
                       <h3>Request received.</h3>
-                      <p>A real person will reply to book your 45-minute session. Check your inbox — no spam, promise.</p>
+                      <p>A real person will reply to book your 45-minute session. Check your inbox, no spam, promise.</p>
                     </div>
                   )}
                 </form>
@@ -373,7 +373,7 @@ export default function GrowthPlanView() {
               <span className="eyebrow">What the plan is</span>
               <h2>One page, written for your business.</h2>
               <p>
-                By the person you spoke with — not a template. Short on purpose. A forty-page deck is easy to make and
+                By the person you spoke with, not a template. Short on purpose. A forty-page deck is easy to make and
                 hard to use.
               </p>
             </Reveal>
@@ -417,7 +417,7 @@ export default function GrowthPlanView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What you get back</span>
-            <h2>Everything you need to decide — nothing you don&apos;t.</h2>
+            <h2>Everything you need to decide, nothing you don&apos;t.</h2>
           </Reveal>
           <div className="gp-get-grid">
             {GETS.map((get, i) => (
@@ -437,7 +437,7 @@ export default function GrowthPlanView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Where plans usually lead</span>
             <h2>Six services. Fixed scope, published prices.</h2>
-            <p>Nothing quoted by the hour. Most plans recommend two or three — rarely all six at once.</p>
+            <p>Nothing quoted by the hour. Most plans recommend two or three, rarely all six at once.</p>
           </Reveal>
           <div className="gp-svc-grid" ref={svcGridRef}>
             {SERVICES.map((svc, i) => (
@@ -484,7 +484,7 @@ export default function GrowthPlanView() {
             ))}
           </div>
           <Reveal as="p" className="gp-stage-note">
-            Not sure which one you are? That&apos;s fine — say so in the form. Placing you is part of the session, not
+            Not sure which one you are? That&apos;s fine, say so in the form. Placing you is part of the session, not
             something you need to work out first.
           </Reveal>
         </div>
@@ -523,14 +523,14 @@ export default function GrowthPlanView() {
         heading="Not ready to fill a form? Just talk to us."
         copy={
           <>
-            A 45-minute working session, then the plan lands in your inbox —{" "}
+            A 45-minute working session, then the plan lands in your inbox,{" "}
             <strong>free, and yours to keep whether or not you hire us.</strong>
           </>
         }
         primaryLabel="Request my free growth plan"
         primaryHref="#request"
         secondary={{ label: "See services & pricing", href: "/pricing" }}
-        fine="No card. No obligation. We send the plan once — the next step is yours."
+        fine="No card. No obligation. We send the plan once, the next step is yours."
         id="talk"
       />
     </>

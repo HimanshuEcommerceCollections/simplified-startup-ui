@@ -57,7 +57,7 @@ const FEATURES: { icon: ReactNode; h: string; p: ReactNode }[] = [
     h: "Remote, always",
     p: (
       <>
-        Work from anywhere, on your schedule — a US + India team that keeps <strong>client hours, not office hours.</strong>
+        Work from anywhere, on your schedule, a US + India team that keeps <strong>client hours, not office hours.</strong>
       </>
     ),
   },
@@ -78,14 +78,14 @@ const FEATURES: { icon: ReactNode; h: string; p: ReactNode }[] = [
 
 const DOD_ROWS = [
   { p: "Clear scope and a written definition of done", s: "You always know what “finished” means before you start." },
-  { p: "Two revision rounds, honest feedback", s: "No endless spinning — we get to done and move on." },
+  { p: "Two revision rounds, honest feedback", s: "No endless spinning, we get to done and move on." },
   { p: "Direct communication over meetings", s: "We write things down so nobody's ever blocked waiting on a call." },
   { p: "Your growth is scoped like a project", s: "Real feedback, real progression, no politics." },
 ];
 
 const TRAITS: ReactNode[] = [
   <>
-    <strong>Senior in skill or hungry to get there fast</strong> — and honest about which.
+    <strong>Senior in skill or hungry to get there fast</strong>, and honest about which.
   </>,
   <>
     A self-starter who needs <strong>a goal, not a babysitter.</strong>
@@ -94,15 +94,15 @@ const TRAITS: ReactNode[] = [
     Clear in writing and <strong>calm under a deadline.</strong>
   </>,
   <>
-    Allergic to fluff — you&apos;d rather <strong>ship than posture.</strong>
+    Allergic to fluff, you&apos;d rather <strong>ship than posture.</strong>
   </>,
 ];
 
 const PROCESS = [
-  { h: "Apply", p: "A short form and your work — no cover-letter theatre." },
+  { h: "Apply", p: "A short form and your work, no cover-letter theatre." },
   { h: "Intro call", p: "30 minutes on you, the role, and how we work." },
-  { h: "Paid work sample", p: "A small, real, paid task — because talk is cheap and work isn't." },
-  { h: "Offer", p: "A clear offer, fast. If it's a no, you'll hear that too — quickly." },
+  { h: "Paid work sample", p: "A small, real, paid task, because talk is cheap and work isn't." },
+  { h: "Offer", p: "A clear offer, fast. If it's a no, you'll hear that too, quickly." },
 ];
 
 export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
@@ -158,7 +158,7 @@ export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
                 </span>
               </h1>
               <p className="cr-lead">
-                We&apos;re a senior, remote team that builds and grows real startups —{" "}
+                We&apos;re a senior, remote team that builds and grows real startups,{" "}
                 <strong>no bloat, no busywork, no black box.</strong> If you&apos;d rather own outcomes than sit in
                 status meetings, you&apos;ll fit right in.
               </p>
@@ -172,7 +172,7 @@ export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
               </div>
               <div className="cr-meta">
                 <span className="hm">
-                  <span className="d"></span> Remote — US + India
+                  <span className="d"></span> Remote: US + India
                 </span>
                 <span className="hm">
                   <span className="d"></span> Senior peers only
@@ -193,7 +193,7 @@ export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
           <Reveal className="sec-head">
             <span className="eyebrow">Why work here</span>
             <h2>Small team. Real ownership. Zero bureaucracy.</h2>
-            <p>Four reasons people join us — and stay.</p>
+            <p>Four reasons people join us, and stay.</p>
           </Reveal>
           <div className="feat-grid">
             {FEATURES.map((feat, i) => (
@@ -314,8 +314,8 @@ export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
             Hiring across the stack. Don&apos;t see your exact role?{" "}
             <Link className="roles-general-btn" href={`/careers/${GENERAL_APPLICATION_SLUG}`}>
               Send a general application
-            </Link>{" "}
-            — we make room for great people.
+            </Link>
+            . We make room for great people.
           </Reveal>
 
           <Reveal className="role-list">
@@ -358,7 +358,7 @@ export default function CareersView({ roles }: { roles: RoleWithSlug[] }) {
             ))}
           </div>
           <Reveal as="p" className="proc-note">
-            <strong>You&apos;ll always know where you stand</strong> — every step, in plain language.
+            <strong>You&apos;ll always know where you stand</strong>, every step, in plain language.
           </Reveal>
         </div>
       </section>

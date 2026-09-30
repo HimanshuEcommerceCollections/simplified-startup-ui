@@ -10,7 +10,7 @@ const RESOURCES = [
   {
     kicker: "Structure",
     title: "Retainer vs project",
-    copy: "When a monthly plan is the right structure — and when it isn't, including for us.",
+    copy: "When a monthly plan is the right structure, and when it isn't, including for us.",
     go: "See when each fits",
   },
 ];

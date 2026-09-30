@@ -79,7 +79,7 @@ const PAINS = [
   { title: "Too much on one page", text: "Trying to sell three things at once, so the page sells nothing.", delay: 0 },
   { title: "Ad says one thing, page another", text: <>Buyer clicked &quot;free demo&quot; and lands on &quot;our company.&quot; They bounce.</>, delay: 60 },
   { title: "Slow to load", text: "Every second over 3s drops conversions ~7%. Most pages take 5+.", delay: 120 },
-  { title: "Weak headline", text: "The most-read line on the page — vague or generic. Visitors gone in 5 seconds.", delay: 0 },
+  { title: "Weak headline", text: "The most-read line on the page, vague or generic. Visitors gone in 5 seconds.", delay: 0 },
   { title: "Long forms", text: "Asking for 12 fields when 3 would do. Every extra field drops conversion.", delay: 60 },
   { title: "No testing", text: "One version launched, never touched. No idea what would work better.", delay: 120 },
 ];
@@ -96,11 +96,11 @@ const ANAT_PAGE: { no: string; width?: string; cls?: string }[] = [
 ];
 
 const ANAT_ROWS = [
-  { b: "Above-the-fold hero", s: "Land the message in 5 seconds — headline, sub, visual, primary CTA." },
-  { b: "Trust bar", s: "Logos, review count, guarantees — so visitors know you’re legit." },
+  { b: "Above-the-fold hero", s: "Land the message in 5 seconds, headline, sub, visual, primary CTA." },
+  { b: "Trust bar", s: "Logos, review count, guarantees, so visitors know you’re legit." },
   { b: "The problem / pain point", s: "Show you understand what they’re trying to solve." },
   { b: "The solution / offer", s: "What you’re offering and why it fixes the problem." },
-  { b: "Benefits or features", s: "What they get — expressed as outcomes, not features." },
+  { b: "Benefits or features", s: "What they get, expressed as outcomes, not features." },
   { b: "Social proof", s: "Testimonials, case studies, data, or press mentions." },
   { b: "Objection handling", s: "Address the top 2–3 reasons visitors don’t convert." },
   { b: "Second CTA", s: "A reminder to act, after the persuasion has done its work." },
@@ -176,7 +176,7 @@ const TYPES: { key: TypeKey; icon: ReactNode; label: string; sub: string; name: 
     label: "PPC / Google Ads",
     sub: "1:1 message match",
     name: "PPC / Google Ads Pages",
-    tag: "One page per ad group with 1:1 message match — lift Quality Score, cut CPC.",
+    tag: "One page per ad group with 1:1 message match, lift Quality Score, cut CPC.",
     items: ["Message match to specific ad copy", "Landing page per audience", "Ad-to-page tracking baked in", "Speed-optimized for Quality Score", "A/B tested vs your current page"],
   },
   {
@@ -204,7 +204,7 @@ const TYPES: { key: TypeKey; icon: ReactNode; label: string; sub: string; name: 
     label: "Webinar & event",
     sub: "Signups + attendance",
     name: "Webinar & Event Pages",
-    tag: "For webinars, live events, and summits — signups plus attendance.",
+    tag: "For webinars, live events, and summits, signups plus attendance.",
     items: ["Date, time, and countdown timer", "Speaker bios & topic breakdown", "Signup form with calendar invite", "Reminder email + SMS automation", "Replay-page setup for post-event"],
   },
   {
@@ -234,30 +234,30 @@ const TYPES: { key: TypeKey; icon: ReactNode; label: string; sub: string; name: 
 
 const STEPS = [
   { no: "Day 1", title: "Kickoff & strategy", text: "One-hour call to lock the goal, audience, offer, and destination. Structure and CTA confirmed.", delay: 0 },
-  { no: "Days 1–2", title: "Copywriting", text: "Full page copy delivered for review — headline, subhead, body, CTAs. One round of revisions.", delay: 70 },
+  { no: "Days 1–2", title: "Copywriting", text: "Full page copy delivered for review, headline, subhead, body, CTAs. One round of revisions.", delay: 70 },
   { no: "Days 2–4", title: "Design & build", text: "Custom design + development on your platform. Mobile-first, load-time optimized, integrations connected.", delay: 140 },
   { no: "Days 4–5", title: "QA & testing setup", text: "Cross-browser QA, mobile & form testing, A/B variant setup, tracking verified. Ready for traffic.", delay: 210 },
-  { no: "Day 5+", title: "Launch & optimize", text: "Page goes live — 30 days of optimization support: A/B tests, form changes, headline swaps.", delay: 280 },
+  { no: "Day 5+", title: "Launch & optimize", text: "Page goes live: 30 days of optimization support: A/B tests, form changes, headline swaps.", delay: 280 },
 ];
 
 const TIERS = [
-  { name: "Single Landing Page", best: "One campaign, one page — lead-gen, PPC, webinar, or waitlist.", price: "Published" },
-  { name: "3-Page Bundle", best: "Multiple ad groups or campaigns — one message match per audience.", price: "Published", featured: true, badge: "Best value", delay: 70 },
-  { name: "5-Page Bundle", best: "Full paid-ads program — variants per persona, product, or offer.", price: "Published", delay: 140 },
-  { name: "Landing Page Retainer", best: "Ongoing monthly pages + A/B testing — for teams shipping campaigns every month.", price: "Published /mo", delay: 210 },
+  { name: "Single Landing Page", best: "One campaign, one page, lead-gen, PPC, webinar, or waitlist.", price: "Published" },
+  { name: "3-Page Bundle", best: "Multiple ad groups or campaigns, one message match per audience.", price: "Published", featured: true, badge: "Best value", delay: 70 },
+  { name: "5-Page Bundle", best: "Full paid-ads program, variants per persona, product, or offer.", price: "Published", delay: 140 },
+  { name: "Landing Page Retainer", best: "Ongoing monthly pages + A/B testing, for teams shipping campaigns every month.", price: "Published /mo", delay: 210 },
 ];
 
 const FAQS = [
   { q: "How long to get a page live?", a: <>Most single pages: <strong>2–5 business days</strong> from kickoff to launch. Complex pages (long-form, custom integrations) can take 5–7. On a deadline? Tell us up front and we&apos;ll confirm before starting.</> },
   { q: "Do I need a tool like Unbounce?", a: <>Not necessarily. We build on whatever fits: <strong>Unbounce, Instapage, Landingi, Webflow, WordPress/Elementor, Framer, or custom code.</strong> Tell us what you use and we&apos;ll work with it.</> },
-  { q: "Do you write the copy?", a: <>Yes — headline, subhead, body, and CTAs all included. Prefer to write it yourself? We give you a <strong>copy brief with structure and formulas</strong> and design around your text.</> },
-  { q: "How is this different from a website page?", a: <>A website page has navigation and multiple exit paths. A landing page has <strong>one goal and one CTA</strong> — everything else stripped out. Different design, copy, and measurement. Built to convert, not educate.</> },
-  { q: "Will you A/B test after launch?", a: <>Yes — every page includes <strong>one tested variant plus 30 days of optimization.</strong> For ongoing weekly/monthly tests, see the Landing Page Retainer.</> },
-  { q: "What if I need a lot of pages?", a: <>Bulk pricing kicks in at 3 pages — same design system, message match per audience, <strong>faster per-page turnaround</strong> because we build at scale. Ask about the 3- and 5-page bundles.</> },
+  { q: "Do you write the copy?", a: <>Yes, headline, subhead, body, and CTAs all included. Prefer to write it yourself? We give you a <strong>copy brief with structure and formulas</strong> and design around your text.</> },
+  { q: "How is this different from a website page?", a: <>A website page has navigation and multiple exit paths. A landing page has <strong>one goal and one CTA</strong>, everything else stripped out. Different design, copy, and measurement. Built to convert, not educate.</> },
+  { q: "Will you A/B test after launch?", a: <>Yes, every page includes <strong>one tested variant plus 30 days of optimization.</strong> For ongoing weekly/monthly tests, see the Landing Page Retainer.</> },
+  { q: "What if I need a lot of pages?", a: <>Bulk pricing kicks in at 3 pages, same design system, message match per audience, <strong>faster per-page turnaround</strong> because we build at scale. Ask about the 3- and 5-page bundles.</> },
   { q: "Do you handle the ads too?", a: <>That&apos;s a separate service (Google Ads / Meta Ads). <strong>Many clients bundle a landing page with an ads engagement</strong> so page + traffic launch together.</> },
-  { q: "Can you integrate my CRM / email?", a: <>Yes — HubSpot, Salesforce, Mailchimp, Klaviyo, Brevo, ConvertKit, Zapier, or anything with a form webhook. <strong>Connected during the build.</strong></> },
-  { q: "What if my page doesn’t convert?", a: <>That&apos;s what the 30 days of support is for — we A/B test headlines, offers, and forms until we find what works. <strong>Landing pages almost always need iteration; it&apos;s baked in.</strong></> },
-  { q: "Do I own the page?", a: <>Yes — whatever platform we build on, <strong>you&apos;re the account owner.</strong> All files, source, and access handed over. Leave anytime and keep everything.</> },
+  { q: "Can you integrate my CRM / email?", a: <>Yes: HubSpot, Salesforce, Mailchimp, Klaviyo, Brevo, ConvertKit, Zapier, or anything with a form webhook. <strong>Connected during the build.</strong></> },
+  { q: "What if my page doesn’t convert?", a: <>That&apos;s what the 30 days of support is for, we A/B test headlines, offers, and forms until we find what works. <strong>Landing pages almost always need iteration; it&apos;s baked in.</strong></> },
+  { q: "Do I own the page?", a: <>Yes, whatever platform we build on, <strong>you&apos;re the account owner.</strong> All files, source, and access handed over. Leave anytime and keep everything.</> },
 ];
 
 /* -------- hero signature: homepage vs landing conversion card -------- */
@@ -402,7 +402,7 @@ export default function LandingPageDesignView() {
         }
         lead={
           <>
-            One page, one message, one call-to-action — built to turn ad clicks, email traffic, and campaign visitors
+            One page, one message, one call-to-action, built to turn ad clicks, email traffic, and campaign visitors
             into leads and customers. <strong>Live in 2–5 business days,</strong> tested from launch, and priced by the
             page, not the hour.
           </>
@@ -424,16 +424,16 @@ export default function LandingPageDesignView() {
             <h2>A homepage is a mall. A landing page is a checkout.</h2>
             <p>
               Sending paid traffic to your homepage asks visitors to figure out what to buy. Landing pages remove every
-              distraction and point at one action — which is why they convert 3–10× better.
+              distraction and point at one action, which is why they convert 3–10× better.
             </p>
           </Reveal>
           <div className="lp-why-wrap">
             <Reveal className="lp-stmt">
               <p>
-                <b>A doubled conversion rate is the same as doubling your ad budget</b> — without spending another dollar.{" "}
+                <b>A doubled conversion rate is the same as doubling your ad budget</b>, without spending another dollar.{" "}
                 <span className="mut">
                   If your homepage converts at 2% and a proper landing page converts at 5%, you&apos;ve just made every ad
-                  dollar 2.5× more valuable. That&apos;s the entire ROI story — and unlike ads or SEO, a good page keeps
+                  dollar 2.5× more valuable. That&apos;s the entire ROI story, and unlike ads or SEO, a good page keeps
                   compounding across every campaign, launch, and audience test.
                 </span>
               </p>
@@ -441,7 +441,7 @@ export default function LandingPageDesignView() {
             <Reveal className="lp-why-stat" style={d(120)}>
               <div className="big">2.5×</div>
               <div className="lab">
-                <strong>more value per ad dollar</strong> — from the same traffic, just a better page.
+                <strong>more value per ad dollar</strong>, from the same traffic, just a better page.
               </div>
             </Reveal>
           </div>
@@ -473,7 +473,7 @@ export default function LandingPageDesignView() {
           <Reveal className="sec-head">
             <span className="eyebrow">The problem with most landing pages</span>
             <h2>They fail for the same handful of reasons.</h2>
-            <p>Every one of them is fixable — and we fix them before the page ever goes live, then keep testing after.</p>
+            <p>Every one of them is fixable, and we fix them before the page ever goes live, then keep testing after.</p>
           </Reveal>
           <div className="lp-pain-grid">
             {PAINS.map((pain) => (
@@ -487,7 +487,7 @@ export default function LandingPageDesignView() {
           <Reveal className="lp-pain-note">
             <span className="mk">{ICON_CHECK}</span>
             <p>
-              We fix every one before launch — <span className="gt">then keep testing after.</span>
+              We fix every one before launch, <span className="gt">then keep testing after.</span>
             </p>
           </Reveal>
         </div>
@@ -498,7 +498,7 @@ export default function LandingPageDesignView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Anatomy of a page that converts</span>
-            <h2>Not creativity — structure.</h2>
+            <h2>Not creativity, structure.</h2>
             <p>Every section has a specific job. Here&apos;s the anatomy we build to.</p>
           </Reveal>
           <Reveal className="lp-anat-wrap">
@@ -540,7 +540,7 @@ export default function LandingPageDesignView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What&apos;s included in every page</span>
             <h2>One flat price. Everything below.</h2>
-            <p>No upsells, no line-item invoices — every page ships with all of it.</p>
+            <p>No upsells, no line-item invoices, every page ships with all of it.</p>
           </Reveal>
           <Reveal className="lp-inc-grid">
             {INCLUDED.map((inc) => (
@@ -564,11 +564,11 @@ export default function LandingPageDesignView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Landing pages we build most</span>
             <h2>Different goals, different structures.</h2>
-            <p>Six common types — each with a distinct structure, form design, and copy approach. Pick one.</p>
+            <p>Six common types, each with a distinct structure, form design, and copy approach. Pick one.</p>
           </Reveal>
           <TypesExplorer />
           <Reveal as="p" className="lp-ty-note">
-            Not seeing your exact use case? <strong>We build for pretty much any single-goal campaign</strong> — just tell
+            Not seeing your exact use case? <strong>We build for pretty much any single-goal campaign</strong>, just tell
             us what you&apos;re trying to convert.
           </Reveal>
         </div>
@@ -619,7 +619,7 @@ export default function LandingPageDesignView() {
         heading="Need a landing page that actually converts?"
         copy={
           <>
-            Book a free call. Tell us what you&apos;re running — ads, launch, webinar, waitlist — and we&apos;ll come back
+            Book a free call. Tell us what you&apos;re running, ads, launch, webinar, waitlist, and we&apos;ll come back
             with a clear plan, price, and timeline, <strong>usually with the page live within a week. No obligation.</strong>
           </>
         }

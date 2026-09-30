@@ -4,7 +4,7 @@ import "./service-lines.css";
 const LINES = [
   {
     title: "Monthly bookkeeping",
-    desc: "The recurring close — categorised, reconciled, and delivered on a date you can circle.",
+    desc: "The recurring close, categorised, reconciled, and delivered on a date you can circle.",
   },
   {
     title: "Catch-up bookkeeping",

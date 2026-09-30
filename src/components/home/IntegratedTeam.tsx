@@ -99,11 +99,11 @@ export default function IntegratedTeam() {
           </div>
         </Reveal>
         <Reveal className="opt4-copy">
-          <span className="eyebrow on-light">Option 04 — the one we built</span>
+          <span className="eyebrow on-light">Option 04, the one we built</span>
           <h2 className="grad">An integrated team, as one partnership.</h2>
           <p className="lead">Senior operators. Transparent bundles. One point of contact.</p>
           <p className="body4">
-            Strategy, brand, web, marketing, and sales — working as a single engagement, not five
+            Strategy, brand, web, marketing, and sales, working as a single engagement, not five
             separate vendors. No handoff gaps, no &quot;that&apos;s not our department.&quot;
             Predictable bundle pricing built for startup budgets, so senior work is finally within
             reach this early.

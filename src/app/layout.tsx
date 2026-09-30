@@ -22,9 +22,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Simplified Startup — Everything your startup needs. One partner, every step.",
+  title: "Simplified Startup: Everything your startup needs. One partner, every step.",
   description:
-    "Everything your startup needs, from one trusted partner. Strategy, brand, product, engineering, and growth — your startup team without building one.",
+    "Everything your startup needs, from one trusted partner. Strategy, brand, product, engineering, and growth, your startup team without building one.",
 };
 
 export default function RootLayout({

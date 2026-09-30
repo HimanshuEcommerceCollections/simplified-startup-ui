@@ -51,7 +51,7 @@ export default function Discipline() {
           <span className="eyebrow">— The discipline</span>
           <h2 className="bk-disc-h2">A close date you can circle.</h2>
           <p className="bk-disc-lead">
-            Bad bookkeeping isn&apos;t usually wrong numbers — it&apos;s late ones. The whole
+            Bad bookkeeping isn&apos;t usually wrong numbers, it&apos;s late ones. The whole
             product is discipline.
           </p>
         </Reveal>

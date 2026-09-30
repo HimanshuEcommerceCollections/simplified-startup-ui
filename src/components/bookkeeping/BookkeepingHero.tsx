@@ -47,7 +47,7 @@ export default function BookkeepingHero() {
           </h1>
           <p {...heroEl("bk-lead", 2)}>
             Small business bookkeeping services with a close date you can circle. Transactions
-            categorized, accounts reconciled, reports in plain English — CPA-ready when tax season
+            categorized, accounts reconciled, reports in plain English: CPA-ready when tax season
             comes. Priced up front, so you always know the number.
           </p>
           <div {...heroEl("bk-hero-cta", 3)}>
@@ -91,7 +91,7 @@ export default function BookkeepingHero() {
               ))}
             </div>
             <div className="bk-cal-foot">
-              <span className="dot" aria-hidden="true"></span>Close date, met — every month.
+              <span className="dot" aria-hidden="true"></span>Close date, met, every month.
             </div>
           </div>
           <span className="bk-chip c2">

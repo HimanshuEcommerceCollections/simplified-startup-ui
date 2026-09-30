@@ -9,9 +9,9 @@ import {
 } from "@/components/resources/blog/blog-fallback";
 
 export const metadata: Metadata = {
-  title: "The Blog — Straight Talk on SEO, Social, Ads & AI | Simplified Startup",
+  title: "The Blog: Straight Talk on SEO, Social, Ads & AI | Simplified Startup",
   description:
-    "SEO, social media, ads, and AI — written for business owners, not marketers. No jargon we won't explain, no fluff to hit a word count.",
+    "SEO, social media, ads, and AI, written for business owners, not marketers. No jargon we won't explain, no fluff to hit a word count.",
 };
 
 // rendered per request: dashboard edits show up immediately, no publish/rebuild needed
@@ -27,7 +27,7 @@ async function fetchBlog(): Promise<{ categories: BlogCategory[]; articles: Blog
     if (!data.ok || data.items.length === 0) throw new Error("empty");
     return { categories: data.categories, articles: data.items };
   } catch {
-    console.warn("[blog] falling back to bundled articles — API unreachable at build time");
+    console.warn("[blog] falling back to bundled articles: API unreachable at build time");
     return { categories: FALLBACK_CATEGORIES, articles: FALLBACK_ARTICLES };
   }
 }

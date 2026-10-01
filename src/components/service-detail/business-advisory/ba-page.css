@@ -151,3 +151,7 @@
   .ba-fplan .ba-pl-row .rd { animation: none !important; opacity: 1 !important; transform: none !important; }
   .ba-dp-fade { animation: none !important; }
 }
+
+.ba-dp-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-family: var(--display); font-weight: 600; font-size: 14px; color: var(--blue); }
+.ba-dp-link span { display: inline-block; transition: transform 0.25s var(--ease); }
+.ba-dp-link:hover span { transform: translate(3px, -3px); }

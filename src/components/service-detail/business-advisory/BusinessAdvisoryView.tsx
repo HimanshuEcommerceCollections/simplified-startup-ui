@@ -128,7 +128,8 @@ const PROBLEMS = [
 
 /* -------- deliverables explorer -------- */
 
-type Deliverable = { key: string; icon: ReactNode; btnName: string; btnSub: string; name: string; tag: string; items: string[] };
+/** `href` marks a deliverable that has its own sub-service page. */
+type Deliverable = { key: string; icon: ReactNode; btnName: string; btnSub: string; name: string; tag: string; items: string[]; href?: string };
 
 const DELIVERABLES: Deliverable[] = [
   {
@@ -204,6 +205,7 @@ const DELIVERABLES: Deliverable[] = [
     btnSub: "First 100 customers",
     name: "Go-to-Market Strategy",
     tag: "How you get your first hundred customers.",
+    href: "/business-advisory/go-to-market-strategy",
     items: [
       "Target customer definition",
       "Positioning & messaging",
@@ -278,6 +280,11 @@ function DeliverablesExplorer() {
           <div className="ba-dp-own">
             <span className="b">{SHIELD}</span> Editable and yours to keep, no equity, no lock-in.
           </div>
+          {dv.href && (
+            <a className="ba-dp-link" href={dv.href}>
+              See the full {dv.name} page <span aria-hidden="true">↗</span>
+            </a>
+          )}
         </div>
       </div>
     </Reveal>

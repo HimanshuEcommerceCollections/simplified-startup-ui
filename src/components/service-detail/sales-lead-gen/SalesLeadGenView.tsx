@@ -290,8 +290,10 @@ const SUBS = [
   { n: "01", h: "Cold email outreach", p: "Verified lists, warmed domains, and sequences in your voice, deliverability watched daily.", href: "/sales-lead-gen/cold-email" },
   { n: "02", h: "LinkedIn outreach", p: "Connection and conversation sequences from your profile, human replies, never a bot pretending to be you.", href: "/sales-lead-gen/linkedin-outreach" },
   { n: "03", h: "Appointment setting", p: "Interested replies worked and booked onto your calendar, with context attached to every meeting.", href: "/sales-lead-gen/appointment-setting" },
-  { n: "04", h: "Lead lists & research", p: "Ideal-customer lists researched and verified, exported to your CRM, yours to keep." },
+  { n: "04", h: "B2B prospect lists", p: "Ideal-customer lists researched, verified through a five-step waterfall, exported to your CRM, yours to keep.", href: "/sales-lead-gen/b2b-prospect-lists" },
   { n: "05", h: "CRM setup & pipeline", p: "Your pipeline wired so every reply, booking, and follow-up lands somewhere you can see it." },
+  { n: "06", h: "Multi-channel outreach", p: "Email, LinkedIn, phone, and video in one coordinated cadence that reacts to what buyers do.", href: "/sales-lead-gen/multi-channel-outreach" },
+  { n: "07", h: "Lead gen audit", p: "A 10-day review of your targeting, data, deliverability, messaging, and follow-up, with a prioritized plan you keep.", href: "/sales-lead-gen/lead-gen-audit" },
 ];
 
 const FAQS = [

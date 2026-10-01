@@ -6,7 +6,7 @@ import "./scoped-practices.css";
 const PRACTICES = [
   {
     title: "Startup Consulting",
-    desc: "Research, planning, formation coordination, and launch — banded by depth and stage.",
+    desc: "Research, planning, formation coordination, and launch, banded by depth and stage.",
   },
   {
     title: "AI & Automation",
@@ -56,11 +56,11 @@ export default function ScopedPractices() {
     <section className="band" id="scoped" aria-label="Scoped practices">
       <div className="wrap">
         <div className="sec-head">
-          <span className="eyebrow">— Six practices, one pricing model</span>
+          <span className="eyebrow">Six practices, one pricing model</span>
           <h2>Scoped practices</h2>
         </div>
         <p className="scoped-lead">
-          These engagements vary too much by situation for a single published amount to be honest —
+          These engagements vary too much by situation for a single published amount to be honest,
           so we publish the model instead. Your free growth plan scopes the work and sets the exact
           price in writing before anything begins, and it doesn&apos;t shift after that.
         </p>

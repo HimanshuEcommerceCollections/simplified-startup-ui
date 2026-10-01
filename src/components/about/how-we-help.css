@@ -130,7 +130,7 @@
   align-items: center;
   gap: 10px;
 }
-.jr-eyebrow::before { content: ""; width: 20px; height: 1px; background: var(--teal-ink); opacity: 0.85; }
+.jr-eyebrow::before { display: none; }
 .jr-card h3 {
   font-family: var(--display);
   font-weight: 700;

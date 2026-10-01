@@ -262,9 +262,7 @@
 /* the two columns act only as reveal triggers; their children animate */
 .dm-diff .dm-diff-wrap > .reveal { opacity: 1; transform: none; transition: none; }
 .dm-diff .eyebrow { opacity: 0; transform: translateY(8px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); transition-delay: 0.05s; }
-.dm-diff .eyebrow::before { width: 0; transition: width 0.6s var(--ease); transition-delay: 0.05s; }
 .dm-diff .reveal.in .eyebrow { opacity: 1; transform: none; }
-.dm-diff .reveal.in .eyebrow::before { width: 22px; }
 .dm-diff .dm-diff-h {
   opacity: 0;
   clip-path: inset(0 0 105% 0);
@@ -567,7 +565,6 @@
     clip-path: none !important;
     transition: none !important;
   }
-  .dm-diff .eyebrow::before { width: 22px !important; transition: none !important; }
   .dm-diff .dm-diff-body strong::before { transform: scaleX(1) !important; transition: none !important; }
   .dm-diff .dm-diff-mark .mk svg path { stroke-dashoffset: 0 !important; transition: none !important; }
 }

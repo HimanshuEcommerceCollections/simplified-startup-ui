@@ -13,16 +13,16 @@ import ProcessFlow from "@/components/services/ProcessFlow";
 import FitCheck from "@/components/services/FitCheck";
 
 export const metadata: Metadata = {
-  title: "Startup Services — Marketing, Web, Brand, AI & More | Simplified Startup",
+  title: "Startup Services: Marketing, Web, Brand, AI & More | Simplified Startup",
   description:
-    "Every service your startup needs from one partner — marketing, web, brand, sales, AI automation, bookkeeping, and advisory. Senior operators, bundled pricing, one team.",
+    "Every service your startup needs from one partner, marketing, web, brand, sales, AI automation, bookkeeping, and advisory. Senior operators, bundled pricing, one team.",
 };
 
 const SERVICES_FAQS = [
   {
     question: "Do I have to take all the services?",
     answer:
-      "No. Start with one, add more when it makes sense. The bundle discount grows as you add services, but there's no minimum stack — a single-service engagement is fully supported.",
+      "No. Start with one, add more when it makes sense. The bundle discount grows as you add services, but there's no minimum stack, a single-service engagement is fully supported.",
   },
   {
     question: "How is this priced?",
@@ -32,7 +32,7 @@ const SERVICES_FAQS = [
   {
     question: "Who actually does the work?",
     answer:
-      "Senior operators, named in your plan before you sign — not a rotating pool of juniors. One team runs every service in your engagement.",
+      "Senior operators, named in your plan before you sign, not a rotating pool of juniors. One team runs every service in your engagement.",
   },
   {
     question: "What if I already have a vendor for one service?",
@@ -66,9 +66,9 @@ export default function ServicesPage() {
         <ConnectionMap />
         <ProcessFlow />
         <FitCheck />
-        <Faq title="Questions founders ask." eyebrow="— FAQ" items={SERVICES_FAQS} />
+        <Faq title="Questions founders ask." eyebrow="FAQ" items={SERVICES_FAQS} />
         <CtaBand
-          copy="Book a free strategy call and we'll map the fastest path across the services that matter first. No decks, no pressure — the plan is yours to keep either way."
+          copy="Book a free strategy call and we'll map the fastest path across the services that matter first. No decks, no pressure, the plan is yours to keep either way."
           primaryLabel="Book a free strategy call"
           secondary={{ label: "See pricing", href: "/pricing" }}
           fine="Flat, published pricing. You own everything. No lock-in."

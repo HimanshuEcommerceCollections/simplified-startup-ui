@@ -13,7 +13,7 @@ const STEPS = [
   },
   {
     title: "Senior operators, not interns",
-    body: "Every engagement is led by experienced practitioners who have done the work before — not learning on your budget.",
+    body: "Every engagement is led by experienced practitioners who have done the work before, not learning on your budget.",
     image: "/assets/images/why-roadmap.jpg",
     alt: "Strategy-to-execution roadmap session",
   },
@@ -25,7 +25,7 @@ const STEPS = [
   },
   {
     title: "Ship-focused, always",
-    body: "Measurable outputs — live sites, running campaigns, booked meetings. Not endless strategy decks that sit in a drive.",
+    body: "Measurable outputs, live sites, running campaigns, booked meetings. Not endless strategy decks that sit in a drive.",
     image: "/assets/images/why-launch.jpg",
     alt: "Shipping and launching the product",
   },

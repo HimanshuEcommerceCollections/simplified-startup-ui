@@ -43,7 +43,6 @@
 }
 .bk-callout .bk-co-txt { position: relative; z-index: 1; max-width: 60ch; }
 .bk-callout .bk-co-eyebrow { color: rgba(255, 255, 255, 0.85); }
-.bk-callout .bk-co-eyebrow::before { background: rgba(255, 255, 255, 0.7); }
 .bk-callout h3 { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); color: #fff; margin: 0; }
 .bk-callout p { font-size: 16px; color: rgba(255, 255, 255, 0.9); margin: 12px 0 0; line-height: 1.6; }
 .bk-callout .btn { position: relative; z-index: 1; background: #fff; color: var(--ink); border-radius: 10px; padding: 15px 28px; white-space: nowrap; }

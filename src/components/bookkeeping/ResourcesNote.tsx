@@ -6,7 +6,7 @@ export default function ResourcesNote() {
     <section className="band" aria-label="From the resources desk">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— From the resources desk</span>
+          <span className="eyebrow">From the resources desk</span>
           <h2>Read before you decide.</h2>
         </Reveal>
         <Reveal anim="pop" className="bk-res">
@@ -16,7 +16,7 @@ export default function ResourcesNote() {
           </svg>
           <p>
             <b>Starting from zero?</b> Bookkeeping basics for new businesses covers what to put in
-            place before you need a bookkeeper — and what you need one for. Educational, not advice.
+            place before you need a bookkeeper, and what you need one for. Educational, not advice.
           </p>
         </Reveal>
       </div>

@@ -10,7 +10,7 @@ const RESOURCES = [
   {
     kicker: "Structure",
     title: "Retainer vs project",
-    copy: "When a monthly plan is the right structure — and when it isn't, including for us.",
+    copy: "When a monthly plan is the right structure, and when it isn't, including for us.",
     go: "See when each fits",
   },
 ];
@@ -20,7 +20,7 @@ export default function ResourcesDesk() {
     <section className="band" id="resources" aria-label="From the resources desk">
       <div className="wrap">
         <div className="sec-head">
-          <span className="eyebrow">— From the resources desk</span>
+          <span className="eyebrow">From the resources desk</span>
           <h2>Read before you decide</h2>
           <p>Weighing marketing packages for your business? Two honest companions to this page.</p>
         </div>

@@ -38,7 +38,7 @@ const DATA: NodeData[] = [
     ),
     title: "Senior operators, not interns",
     tags: ["Founders", "Operators", "Proven"],
-    desc: "Every engagement is led by people who've done the work — for their own companies and for clients.",
+    desc: "Every engagement is led by people who've done the work, for their own companies and for clients.",
     pos: [0.81, 0.3],
   },
   {
@@ -66,7 +66,7 @@ const DATA: NodeData[] = [
     ),
     title: "Ship-focused, always",
     tags: ["Live sites", "Campaigns", "Real output"],
-    desc: "Measurable outputs — live sites, running campaigns, booked meetings, clean books — not endless strategy decks.",
+    desc: "Measurable outputs, live sites, running campaigns, booked meetings, clean books, not endless strategy decks.",
     pos: [0.2, 0.73],
   },
 ];
@@ -248,7 +248,7 @@ export default function ConnectionMap() {
       <div className="wrap">
         <div className="cn-wrap">
           <div className="cn-copy">
-            <span className="eyebrow">— The case for connected</span>
+            <span className="eyebrow">The case for connected</span>
             <h2 className="why-title">What you get that a stack of freelancers can&apos;t.</h2>
             <p className="cn-lead">
               The four things that only exist when one senior team owns the whole engagement.

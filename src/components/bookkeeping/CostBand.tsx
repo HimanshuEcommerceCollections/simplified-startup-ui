@@ -53,14 +53,14 @@ export default function CostBand() {
     <section className="band light" id="cost" aria-label="What it costs">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— What it costs</span>
-          <h2>Priced by scope band — set before work starts.</h2>
+          <span className="eyebrow">What it costs</span>
+          <h2>Priced by scope band, set before work starts.</h2>
         </Reveal>
         <Reveal anim="pop" className="bk-price">
           <div ref={priceRef}>
             <p className="bk-price-lead">
               Your free growth plan scopes the work and fixes the exact price in writing before
-              anything begins — no hourly meter, no surprise line items, and the number doesn&apos;t
+              anything begins, no hourly meter, no surprise line items, and the number doesn&apos;t
               move after that. Combine services and the discount is automatic:
             </p>
             <div className="bk-tiers">
@@ -71,7 +71,7 @@ export default function CostBand() {
                   </span>
                   % off
                 </div>
-                <p>Any two services together — applied to both.</p>
+                <p>Any two services together, applied to both.</p>
               </div>
               <div className="bk-tier">
                 <div className="bk-off">
@@ -80,11 +80,11 @@ export default function CostBand() {
                   </span>
                   % off
                 </div>
-                <p>Three or more services together — applied across all of them.</p>
+                <p>Three or more services together, applied across all of them.</p>
               </div>
             </div>
             <p className="bk-price-foot">
-              The full pricing model — published bands, terms, and how ranges work — is on the{" "}
+              The full pricing model, published bands, terms, and how ranges work, is on the{" "}
               <a href="/pricing">price list</a>.
             </p>
           </div>

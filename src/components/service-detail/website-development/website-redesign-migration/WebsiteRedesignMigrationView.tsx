@@ -58,7 +58,7 @@ type Stat = {
 
 const STATS: Stat[] = [
   { count: { target: 25, prefix: "10–", suffix: "%" }, label: "Traffic drop", text: "The typical organic dip in the first 30 days after a botched migration.", delay: 0 },
-  { value: "2–8mo", label: "Recovery time", text: "How long it takes rankings to stabilize — if they recover at all.", delay: 80 },
+  { value: "2–8mo", label: "Recovery time", text: "How long it takes rankings to stabilize, if they recover at all.", delay: 80 },
   { count: { target: 40, suffix: "%+" }, label: "Never recover", text: "Portion of sites that permanently lose top rankings after a bad migration.", delay: 160 },
 ];
 
@@ -74,7 +74,7 @@ const WRONG = [
 ];
 
 const RIGHT = [
-  "SEO involved from day one — before wireframes",
+  "SEO involved from day one, before wireframes",
   "Full URL inventory + 1:1 redirect matrix",
   "Every page audited for content parity",
   "Full staging environment with QA sign-off",
@@ -92,7 +92,7 @@ const WHEN: { icon: ReactNode; text: ReactNode; delay: number }[] = [
         <path d="M20 10a8 8 0 0 0-14-4M4 14a8 8 0 0 0 14 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
-    text: <>You&apos;re <strong>replatforming</strong> — WordPress ↔ Webflow, Shopify ↔ WooCommerce, or off Squarespace/Wix.</>,
+    text: <>You&apos;re <strong>replatforming</strong>, WordPress ↔ Webflow, Shopify ↔ WooCommerce, or off Squarespace/Wix.</>,
     delay: 0,
   },
   {
@@ -112,7 +112,7 @@ const WHEN: { icon: ReactNode; text: ReactNode; delay: number }[] = [
         <path d="M12 3a9 9 0 0 1 0 18M3 12h18" stroke="currentColor" strokeWidth="2" />
       </svg>
     ),
-    text: <>You&apos;re <strong>changing your domain</strong> — rebrand, acquisition, or consolidating multiple sites into one.</>,
+    text: <>You&apos;re <strong>changing your domain</strong>, rebrand, acquisition, or consolidating multiple sites into one.</>,
     delay: 0,
   },
   {
@@ -141,7 +141,7 @@ const WHEN: { icon: ReactNode; text: ReactNode; delay: number }[] = [
         <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" strokeWidth="2" />
       </svg>
     ),
-    text: <>You&apos;re migrating <strong>off a proprietary CMS</strong> — locked in and paying too much for every update.</>,
+    text: <>You&apos;re migrating <strong>off a proprietary CMS</strong>, locked in and paying too much for every update.</>,
     delay: 60,
   },
 ];
@@ -184,7 +184,7 @@ const PHASES: Phase[] = [
     n: "03",
     name: "Migrate",
     small: "Build, test, launch",
-    role: "Build, test, and launch — with no surprises",
+    role: "Build, test, and launch, with no surprises",
     items: [
       "Full staging environment for QA",
       "Design + development on new platform",
@@ -254,7 +254,7 @@ const INCLUDED: { icon: ReactNode; title: string; items: string[] }[] = [
 ];
 
 const TIMELINE = [
-  { no: "Weeks 1–2", title: "Discover", text: "Full audit, URL inventory, ranking snapshot, backlink audit, content scoring — ends with an audit report.", delay: 0 },
+  { no: "Weeks 1–2", title: "Discover", text: "Full audit, URL inventory, ranking snapshot, backlink audit, content scoring, ends with an audit report.", delay: 0 },
   { no: "Weeks 2–3", title: "Map", text: "Redirect matrix built, content plan approved, URL structure locked, analytics plan signed off.", delay: 70 },
   { no: "Weeks 3–7", title: "Migrate", text: "New site built on staging, content moved, redirects implemented & tested, QA on every device.", delay: 140 },
   { no: "Weeks 7–8", title: "Launch", text: "Go live mid-week, live monitoring for 72 hours, immediate fixes for anything unexpected.", delay: 210 },
@@ -262,23 +262,23 @@ const TIMELINE = [
 ];
 
 const TIERS = [
-  { name: "Starter Migration", best: "Small sites (up to 50 pages) — design refresh, same platform, redirects & SEO preservation.", price: "Published" },
-  { name: "Growth Migration", best: "Mid-size (up to 250 pages) — full redesign, platform switch, complete migration + 60-day monitoring.", price: "Published", featured: true, badge: "Most common", delay: 70 },
-  { name: "Scale Migration", best: "Large sites (up to 2,000 pages) — e-commerce or content-heavy, complex integrations, phased launch.", price: "Published", delay: 140 },
-  { name: "Enterprise / Custom", best: "Over 2,000 pages, multi-domain consolidations, or multi-language — scoped per project.", price: "Contact for quote", delay: 210 },
+  { name: "Starter Migration", best: "Small sites (up to 50 pages), design refresh, same platform, redirects & SEO preservation.", price: "Published" },
+  { name: "Growth Migration", best: "Mid-size (up to 250 pages), full redesign, platform switch, complete migration + 60-day monitoring.", price: "Published", featured: true, badge: "Most common", delay: 70 },
+  { name: "Scale Migration", best: "Large sites (up to 2,000 pages), e-commerce or content-heavy, complex integrations, phased launch.", price: "Published", delay: 140 },
+  { name: "Enterprise / Custom", best: "Over 2,000 pages, multi-domain consolidations, or multi-language, scoped per project.", price: "Contact for quote", delay: 210 },
 ];
 
 const FAQS = [
   { q: "How long does a migration take?", a: <>Small sites: 4–6 weeks. Mid-size with a redesign: 6–10 weeks. Large and multi-domain: 10–16 weeks. <strong>The 60-day monitoring runs after that</strong> on top.</> },
-  { q: "Will my rankings drop after migration?", a: <>Some short-term movement is normal — usually 1–5% in the first 2 weeks. A properly-run migration <strong>recovers within 30–60 days and often ends up better,</strong> because we also improve speed, schema, and internal linking.</> },
-  { q: "Do you handle e-commerce migrations?", a: <>Yes — <strong>product catalog, customer accounts, order history, payment integrations, and shipping rules</strong> all migrate. Cart data usually stays with the platform; everything else moves.</> },
-  { q: "Can we keep our design and just replatform?", a: <>Yes — pure replatforms (e.g. WordPress → Webflow) where the design stays similar and only the platform changes. <strong>Usually faster and cheaper</strong> than a full redesign.</> },
-  { q: "What if a migration goes wrong?", a: <>That&apos;s exactly why the 60-day monitoring exists. If something goes wrong, <strong>we&apos;re on it within 48 hours and fix it as part of the engagement</strong> — no extra invoice.</> },
+  { q: "Will my rankings drop after migration?", a: <>Some short-term movement is normal, usually 1–5% in the first 2 weeks. A properly-run migration <strong>recovers within 30–60 days and often ends up better,</strong> because we also improve speed, schema, and internal linking.</> },
+  { q: "Do you handle e-commerce migrations?", a: <>Yes, <strong>product catalog, customer accounts, order history, payment integrations, and shipping rules</strong> all migrate. Cart data usually stays with the platform; everything else moves.</> },
+  { q: "Can we keep our design and just replatform?", a: <>Yes, pure replatforms (e.g. WordPress → Webflow) where the design stays similar and only the platform changes. <strong>Usually faster and cheaper</strong> than a full redesign.</> },
+  { q: "What if a migration goes wrong?", a: <>That&apos;s exactly why the 60-day monitoring exists. If something goes wrong, <strong>we&apos;re on it within 48 hours and fix it as part of the engagement</strong>, no extra invoice.</> },
   { q: "Will my site be down during migration?", a: <>No. We use a staging environment throughout; the old site stays live until launch day, when we swap DNS and redirects in one window. <strong>Downtime is usually zero,</strong> occasionally 5–10 minutes.</> },
-  { q: "Do you migrate blog content and comments?", a: <>Yes — all posts, categories, tags, author profiles, and usually comments migrate. Proprietary comment systems (like Disqus) can be migrated or kept as-is.</> },
-  { q: "Do we own the new site?", a: <>Yes, completely — built on standard platforms (WordPress, Webflow, Shopify) that you own. <strong>All source files, logins, and documentation are handed over.</strong></> },
-  { q: "Can you migrate off a proprietary CMS?", a: <>Yes — HubSpot CMS, Squarespace, Wix, Weebly, Duda, and industry-specific systems. <strong>We rebuild on a standard platform where you&apos;re never locked in again.</strong></> },
-  { q: "What if I need to keep the same URLs?", a: <>That&apos;s the easiest scenario — <strong>URL parity means minimal redirect risk.</strong> We still run the full audit and monitoring, but the migration itself is smoother.</> },
+  { q: "Do you migrate blog content and comments?", a: <>Yes, all posts, categories, tags, author profiles, and usually comments migrate. Proprietary comment systems (like Disqus) can be migrated or kept as-is.</> },
+  { q: "Do we own the new site?", a: <>Yes, completely, built on standard platforms (WordPress, Webflow, Shopify) that you own. <strong>All source files, logins, and documentation are handed over.</strong></> },
+  { q: "Can you migrate off a proprietary CMS?", a: <>Yes: HubSpot CMS, Squarespace, Wix, Weebly, Duda, and industry-specific systems. <strong>We rebuild on a standard platform where you&apos;re never locked in again.</strong></> },
+  { q: "What if I need to keep the same URLs?", a: <>That&apos;s the easiest scenario, <strong>URL parity means minimal redirect risk.</strong> We still run the full audit and monitoring, but the migration itself is smoother.</> },
 ];
 
 /* -------- hero signature: redirect map -------- */
@@ -446,8 +446,7 @@ export default function WebsiteRedesignMigrationView() {
     <>
       <ServiceDetailHero
         crumb={{ label: "Website Development", href: "/website-development" }}
-        eyebrow="Redesign · Replatform · Migration"
-        line1="Redesign or migrate —"
+        line1="Redesign or migrate"
         line2={
           <>
             without losing <span className="grad-text">rankings.</span>
@@ -456,7 +455,7 @@ export default function WebsiteRedesignMigrationView() {
         lead={
           <>
             A bad redesign can wipe out years of organic growth in a single weekend. We&apos;ve seen it happen. This
-            service exists so it doesn&apos;t happen to you —{" "}
+            service exists so it doesn&apos;t happen to you,{" "}
             <strong>SEO-first planning, a complete redirect strategy, zero-downtime launch,</strong> and 60 days of
             post-launch monitoring.
           </>
@@ -479,11 +478,11 @@ export default function WebsiteRedesignMigrationView() {
           </Reveal>
           <Reveal className="rm-stmt">
             <p>
-              A migration done wrong can <span className="warn">wipe out years of SEO growth in a single weekend</span>{" "}
-              — and take 2–8 months to recover.{" "}
+              A migration done wrong can <span className="warn">wipe out years of SEO growth in a single weekend</span>,{" "}
+              and take 2–8 months to recover.{" "}
               <span className="mut">
                 That&apos;s not a scare tactic; it&apos;s the industry data. Most botched migrations cause 10–25% organic
-                traffic drops in the first 30 days, and some sites never fully recover — they permanently lose rankings
+                traffic drops in the first 30 days, and some sites never fully recover, they permanently lose rankings
                 on top pages because the redirect map missed a few dozen URLs.
               </span>{" "}
               <b>This service exists so that doesn&apos;t happen to you.</b>
@@ -498,7 +497,7 @@ export default function WebsiteRedesignMigrationView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What&apos;s actually at risk</span>
             <h2>Three numbers to know before you start.</h2>
-            <p>The cost of a mishandled migration — and exactly what this service is built to prevent.</p>
+            <p>The cost of a mishandled migration, and exactly what this service is built to prevent.</p>
           </Reveal>
           <StatsGrid />
         </div>
@@ -509,7 +508,7 @@ export default function WebsiteRedesignMigrationView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Done wrong vs done right</span>
-            <h2>The difference is in the planning — not launch day.</h2>
+            <h2>The difference is in the planning, not launch day.</h2>
             <p>Every migration we run follows the &quot;done right&quot; column. Every step.</p>
           </Reveal>
           <div className="rm-vs2">
@@ -570,7 +569,7 @@ export default function WebsiteRedesignMigrationView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Our 4-phase methodology</span>
             <h2>Nothing skipped, nothing improvised.</h2>
-            <p>Every migration follows the same four phases — refined across every project we&apos;ve run. Pick a phase.</p>
+            <p>Every migration follows the same four phases, refined across every project we&apos;ve run. Pick a phase.</p>
           </Reveal>
           <MethodTabs />
         </div>
@@ -581,7 +580,7 @@ export default function WebsiteRedesignMigrationView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What&apos;s included in every engagement</span>
-            <h2>The full methodology — plus these deliverables.</h2>
+            <h2>The full methodology, plus these deliverables.</h2>
           </Reveal>
           <Reveal className="rm-inc-grid">
             {INCLUDED.map((group) => (
@@ -631,7 +630,7 @@ export default function WebsiteRedesignMigrationView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Project fees paid in three installments — <strong>30% at kickoff, 40% at staging sign-off, 30% at launch.</strong>{" "}
+            Project fees paid in three installments, <strong>30% at kickoff, 40% at staging sign-off, 30% at launch.</strong>{" "}
             Hosting, platform fees, and premium plugins are separate. Every exact number is on the{" "}
             <a href="/pricing">pricing page</a>.
           </NoteCallout>
@@ -642,11 +641,11 @@ export default function WebsiteRedesignMigrationView() {
 
       <CtaBand
         eyebrow="Website Redesign & Migration"
-        heading="Migrate or redesign — without the traffic disaster."
+        heading="Migrate or redesign, without the traffic disaster."
         copy={
           <>
-            Book a free migration audit. We&apos;ll look at your current site, your goals, and where the risk points are
-            — <strong>with a clear plan and price at the end. No obligation, no fear tactics.</strong>
+            Book a free migration audit. We&apos;ll look at your current site, your goals, and where the risk points are,
+            <strong>with a clear plan and price at the end. No obligation, no fear tactics.</strong>
           </>
         }
         primaryLabel="Book a free migration audit"

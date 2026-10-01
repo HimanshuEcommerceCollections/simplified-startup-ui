@@ -195,15 +195,15 @@ function CallCard() {
       <div className="va-call-body">
         <div className="va-cline">
           <span className="lb you">Caller</span>
-          <p>“My water heater’s leaking — can someone come today?”</p>
+          <p>“My water heater’s leaking, can someone come today?”</p>
         </div>
         <div className="va-cline">
           <span className="lb ai">Ava</span>
-          <p>“Absolutely — I can get a tech out this afternoon. What’s the address and best number?”</p>
+          <p>“Absolutely: I can get a tech out this afternoon. What’s the address and best number?”</p>
         </div>
         <div className="va-cline">
           <span className="lb you">Caller</span>
-          <p>“12 Oak St — 555-0182.”</p>
+          <p>“12 Oak St: 555-0182.”</p>
         </div>
         <span className="va-call-chip">
           {ICON_CHECK_BOLD} Booked 2:00 PM &nbsp;·&nbsp; Lead → CRM &nbsp;·&nbsp; SMS sent
@@ -219,7 +219,7 @@ type Stat = { count: number; prefix?: string; suffix?: string; label: string; te
 
 const STATS: Stat[] = [
   { count: 126, prefix: "$", suffix: "K", label: "Lost per year", text: "Average revenue lost annually by small businesses from missed calls alone.", delay: 0 },
-  { count: 85, suffix: "%", label: "Don’t call back", text: "Callers who hit voicemail and never dial your number again — they call a competitor.", delay: 80 },
+  { count: 85, suffix: "%", label: "Don’t call back", text: "Callers who hit voicemail and never dial your number again, they call a competitor.", delay: 80 },
   { count: 62, suffix: "%", label: "Missed at peak", text: "Of inbound calls to small businesses go unanswered during peak business hours.", delay: 160 },
 ];
 
@@ -288,7 +288,7 @@ const DONTS = [
   { title: "Robotic phone trees", text: "“Press 1 for sales, press 2 for support.” The 1990s want their IVR back. Modern AI agents hold real conversations.", delay: 0 },
   { title: "Generic off-the-shelf bots", text: "The $49/mo tools work for solopreneurs. For real businesses with services, pricing, and industry terms, they fall apart on the first tricky call.", delay: 70 },
   { title: "Obvious robot voices", text: "If customers can tell it’s AI in the first five seconds, they hang up. We use ElevenLabs and modern voice models that sound human.", delay: 0 },
-  { title: "No human backup & surprise bills", text: "The AI handles 80–90%; the rest should transfer to a real person with context. And flat monthly pricing — not a $600 bill after a busy week.", delay: 70 },
+  { title: "No human backup & surprise bills", text: "The AI handles 80–90%; the rest should transfer to a real person with context. And flat monthly pricing, not a $600 bill after a busy week.", delay: 70 },
 ];
 
 /* -------- capabilities explorer -------- */
@@ -320,7 +320,7 @@ const CAPABILITIES: Capability[] = [
     btnName: "Customer service",
     btnSub: "FAQs, hours, pricing",
     name: "AI Customer Service",
-    tag: "Answers FAQs, hours, service area, and pricing — without a human.",
+    tag: "Answers FAQs, hours, service area, and pricing, without a human.",
     items: ["Trained on your website, docs, FAQs", "Service area + hours + location", "Pricing and package information", "Policy and process questions", "Multi-language support"],
   },
   {
@@ -329,7 +329,7 @@ const CAPABILITIES: Capability[] = [
     btnName: "Call screening & routing",
     btnSub: "Right person, context",
     name: "AI Call Screening & Routing",
-    tag: "Screens callers, identifies intent, and routes to the right person — with context.",
+    tag: "Screens callers, identifies intent, and routes to the right person, with context.",
     items: ["Intent detection (sales / support / billing)", "Team-member routing by inquiry type", "Warm transfer with conversation summary", "Priority handling for VIP callers", "Spam / robocall filtering"],
   },
   {
@@ -338,7 +338,7 @@ const CAPABILITIES: Capability[] = [
     btnName: "Order taking",
     btnSub: "To POS",
     name: "AI Order Taking",
-    tag: "For restaurants, delivery, and repeat-order businesses — takes orders, sends to POS.",
+    tag: "For restaurants, delivery, and repeat-order businesses, takes orders, sends to POS.",
     items: ["Menu / product catalog knowledge", "Order confirmation and modifications", "Payment collection (Stripe, Square)", "POS integration (Toast, Square, Clover)", "Delivery vs pickup handling"],
   },
   {
@@ -347,7 +347,7 @@ const CAPABILITIES: Capability[] = [
     btnName: "Outbound calls",
     btnSub: "Reminders & win-back",
     name: "AI Outbound Voice Agent",
-    tag: "Makes outbound calls — reminders, follow-ups, review requests, win-backs.",
+    tag: "Makes outbound calls, reminders, follow-ups, review requests, win-backs.",
     items: ["Appointment reminders and confirmations", "Post-service follow-up calls", "Review request calls", "Win-back campaigns for lapsed customers", "Survey and feedback calls"],
   },
 ];
@@ -424,10 +424,10 @@ function CapabilitiesExplorer() {
 
 const INCLUDED: { no: string; icon: ReactNode; title: string; text: string }[] = [
   { no: "01", icon: ICON_GLOBE, title: "Strategy & scoping", text: "Call-flow mapping, use-case priorities, success metrics, escalation rules, and after-hours handling defined." },
-  { no: "02", icon: ICON_STAR, title: "Custom AI training", text: "Trained on your services, pricing, hours, availability, policies, and industry-specific language — with ongoing sync." },
+  { no: "02", icon: ICON_STAR, title: "Custom AI training", text: "Trained on your services, pricing, hours, availability, policies, and industry-specific language, with ongoing sync." },
   { no: "03", icon: ICON_MIC, title: "Voice & persona", text: "A name, a natural human voice (50+), and a personality that matches your brand. Multi-language. ElevenLabs / OpenAI / Deepgram." },
   { no: "04", icon: ICON_PHONE, title: "Phone number & routing", text: "Use your existing number (forwarding) or a new one. Unlimited simultaneous calls, overflow routing, recording + transcripts." },
-  { no: "05", icon: ICON_CALENDAR, title: "Booking integration", text: "Google/Outlook/Apple, Calendly, Acuity, Vagaro, Jane, OpenTable, ServiceTitan, Jobber — with confirmations & reschedules." },
+  { no: "05", icon: ICON_CALENDAR, title: "Booking integration", text: "Google/Outlook/Apple, Calendly, Acuity, Vagaro, Jane, OpenTable, ServiceTitan, Jobber, with confirmations & reschedules." },
   { no: "06", icon: ICON_LIST_CHECK, title: "CRM & lead capture", text: "Every caller’s name, reason, and full transcript lands in your CRM (HubSpot, Salesforce, GHL, industry CRMs) with hot-lead alerts." },
   { no: "07", icon: ICON_HANDOFF, title: "Human handoff & transfer", text: "Warm transfer with an AI-generated call summary, routing by inquiry type, after-hours message capture, emergency protocols." },
   { no: "08", icon: ICON_TREND, title: "Analytics & optimization", text: "Weekly call review, stuck-conversation retraining, monthly report (calls handled, booked, transferred, leads) + cost-per-recovered-call." },
@@ -447,31 +447,31 @@ const INDUSTRIES: { icon: ReactNode; title: string; text: string }[] = [
 const STEPS = [
   { no: "Week 1", title: "Strategy & call flows", text: "Discovery locks use cases, KPIs, and escalation. We ingest your site, services, hours, pricing. Voice & persona chosen.", delay: 0 },
   { no: "Week 2", title: "Build & voice setup", text: "AI trained, voice configured, number provisioned (or forwarding set), calendar + CRM connected, call flows built.", delay: 70 },
-  { no: "Week 3", title: "Testing & rehearsal", text: "Dozens of real-world call scenarios tested — booking, edge cases, transfers. Retrain on gaps. You approve recordings.", delay: 140 },
+  { no: "Week 3", title: "Testing & rehearsal", text: "Dozens of real-world call scenarios tested, booking, edge cases, transfers. Retrain on gaps. You approve recordings.", delay: 140 },
   { no: "Week 4", title: "Launch & handover", text: "Go live on your number. Team trained on transfers & dashboard. Analytics set up. 30 days of monitoring included.", delay: 210 },
   { no: "Ongoing", title: "Optimize & scale", text: "Weekly call reviews, monthly retraining, new use cases, performance reports, continuous accuracy gains.", delay: 280 },
 ];
 
 const TIERS = [
-  { name: "Starter Voice Agent", best: "Solo operators & micro-businesses — 1 use case (booking OR lead capture), up to 500 minutes/month.", price: "Published /mo" },
-  { name: "Growth Voice Agent", best: "Small businesses & practices — 2–3 use cases, up to 2,000 minutes/month, CRM integration, human transfer.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale Voice Agent", best: "Multi-location & higher volume — full use-case suite, unlimited minutes, multi-language, custom integrations.", price: "Published /mo", delay: 140 },
-  { name: "Setup Fee", best: "One-time — custom training, voice setup, phone provisioning, and integrations, charged at kickoff.", price: "Published", delay: 210 },
+  { name: "Starter Voice Agent", best: "Solo operators & micro-businesses: 1 use case (booking OR lead capture), up to 500 minutes/month.", price: "Published /mo" },
+  { name: "Growth Voice Agent", best: "Small businesses & practices: 2–3 use cases, up to 2,000 minutes/month, CRM integration, human transfer.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Scale Voice Agent", best: "Multi-location & higher volume, full use-case suite, unlimited minutes, multi-language, custom integrations.", price: "Published /mo", delay: 140 },
+  { name: "Setup Fee", best: "One-time, custom training, voice setup, phone provisioning, and integrations, charged at kickoff.", price: "Published", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "How much does an AI receptionist cost?", a: <>Depends on call volume and use cases. Starter suits solo operators; Growth is most popular for small businesses and practices; Scale handles multi-location. <strong>Full pricing is published on this page</strong> — no runaround, no per-minute surprise bills.</> },
-  { q: "Will it sound like a robot?", a: <>No — we use ElevenLabs, OpenAI Realtime, and Deepgram voice models. <strong>Most callers can’t tell in the first 30 seconds.</strong> We’ll play live demo recordings on the strategy call so you can hear for yourself.</> },
-  { q: "Can I use my existing phone number?", a: <>Yes — we set up call forwarding from your existing number, no port required, no disruption. Or provision a new local/toll-free number if you prefer.</> },
+  { q: "How much does an AI receptionist cost?", a: <>Depends on call volume and use cases. Starter suits solo operators; Growth is most popular for small businesses and practices; Scale handles multi-location. <strong>Full pricing is published on this page</strong>, no runaround, no per-minute surprise bills.</> },
+  { q: "Will it sound like a robot?", a: <>No, we use ElevenLabs, OpenAI Realtime, and Deepgram voice models. <strong>Most callers can’t tell in the first 30 seconds.</strong> We’ll play live demo recordings on the strategy call so you can hear for yourself.</> },
+  { q: "Can I use my existing phone number?", a: <>Yes, we set up call forwarding from your existing number, no port required, no disruption. Or provision a new local/toll-free number if you prefer.</> },
   { q: "What if the AI can’t answer?", a: <>It transfers to a real person with a <strong>warm handoff and full call summary.</strong> Or, after hours, it captures a message and promises a callback. Nothing gets lost.</> },
-  { q: "Can it book appointments directly?", a: <>Yes — one of the most popular use cases. It walks callers through your real-time calendar (Google, Outlook, Calendly, Vagaro, Jane, ServiceTitan…), books the slot, and sends confirmation email + SMS.</> },
-  { q: "Is it HIPAA-compliant?", a: <>Yes — we can configure HIPAA compliance including <strong>BAAs with underlying vendors,</strong> encrypted recordings, PHI handling, and secure CRM integration. Not every tool supports this — we do.</> },
-  { q: "Can it handle multiple calls at once?", a: <>Yes — <strong>unlimited simultaneous calls,</strong> no busy signals, no hold music. If 20 people call at once, all 20 get an immediate answer — a huge advantage over voicemail and human receptionists.</> },
-  { q: "Does it work for Spanish speakers?", a: <>Yes — and 30+ other languages. It can <strong>auto-detect the caller’s language</strong> and respond in kind. Great for Spanish-speaking markets across the Southwest and Southeast.</> },
-  { q: "How is this different from Rosie or Smith.ai?", a: <>Those are off-the-shelf platforms you configure yourself. This is <strong>done-for-you</strong> — custom-trained on your business, integrated with your CRM and calendar, optimized monthly.</> },
-  { q: "What if it misbooks something?", a: <>That’s what monthly optimization catches — we review conversations weekly and retrain on gaps. Plus <strong>you get every call transcript</strong> in your dashboard, so nothing happens in a black box.</> },
-  { q: "Can I listen to calls afterwards?", a: <>Yes — every call is recorded (with legal disclosure) and transcribed. A dashboard lets you filter, search, and listen — great for QA, sales training, and catching concerns.</> },
-  { q: "What happens to my old phone system?", a: <>Nothing changes — same phone, number, and team. The AI just picks up calls that would go to voicemail or ring endlessly at peak. <strong>A receptionist who never sleeps — not a replacement.</strong></> },
+  { q: "Can it book appointments directly?", a: <>Yes, one of the most popular use cases. It walks callers through your real-time calendar (Google, Outlook, Calendly, Vagaro, Jane, ServiceTitan…), books the slot, and sends confirmation email + SMS.</> },
+  { q: "Is it HIPAA-compliant?", a: <>Yes, we can configure HIPAA compliance including <strong>BAAs with underlying vendors,</strong> encrypted recordings, PHI handling, and secure CRM integration. Not every tool supports this, we do.</> },
+  { q: "Can it handle multiple calls at once?", a: <>Yes, <strong>unlimited simultaneous calls,</strong> no busy signals, no hold music. If 20 people call at once, all 20 get an immediate answer, a huge advantage over voicemail and human receptionists.</> },
+  { q: "Does it work for Spanish speakers?", a: <>Yes, and 30+ other languages. It can <strong>auto-detect the caller’s language</strong> and respond in kind. Great for Spanish-speaking markets across the Southwest and Southeast.</> },
+  { q: "How is this different from Rosie or Smith.ai?", a: <>Those are off-the-shelf platforms you configure yourself. This is <strong>done-for-you</strong>, custom-trained on your business, integrated with your CRM and calendar, optimized monthly.</> },
+  { q: "What if it misbooks something?", a: <>That’s what monthly optimization catches, we review conversations weekly and retrain on gaps. Plus <strong>you get every call transcript</strong> in your dashboard, so nothing happens in a black box.</> },
+  { q: "Can I listen to calls afterwards?", a: <>Yes, every call is recorded (with legal disclosure) and transcribed. A dashboard lets you filter, search, and listen, great for QA, sales training, and catching concerns.</> },
+  { q: "What happens to my old phone system?", a: <>Nothing changes, same phone, number, and team. The AI just picks up calls that would go to voicemail or ring endlessly at peak. <strong>A receptionist who never sleeps, not a replacement.</strong></> },
 ];
 
 /* -------- page -------- */
@@ -482,7 +482,6 @@ export default function AiVoiceAgentsView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "AI Automation", href: "/ai-automation" }}
-        eyebrow="AI receptionist · 24/7 call answering · Live in days"
         line1="An AI receptionist that"
         line2={
           <>
@@ -491,7 +490,7 @@ export default function AiVoiceAgentsView() {
         }
         lead={
           <>
-            Done-for-you AI voice agents for local services, dental &amp; medical, law firms, real estate — any business
+            Done-for-you AI voice agents for local services, dental &amp; medical, law firms, real estate, any business
             that loses money when the phone rings and nobody answers.{" "}
             <strong>Trained on your business, works with your existing number,</strong> and pays for itself in the first
             recovered missed call.
@@ -513,12 +512,12 @@ export default function AiVoiceAgentsView() {
             <h2>When nobody picks up, 85% don’t call back.</h2>
             <p>
               They call your competitor instead. Missed calls quietly cost small businesses more than almost any other
-              single problem — and the math is brutal.
+              single problem, and the math is brutal.
             </p>
           </Reveal>
           <StatsGrid />
           <Reveal as="p" className="va-stat-note">
-            Miss six calls a day and you’re losing <strong>$26,000+ every year</strong> — walking straight out the door to
+            Miss six calls a day and you’re losing <strong>$26,000+ every year</strong>, walking straight out the door to
             your competitor. An AI receptionist answers every call, 24/7, in a natural human voice.
           </Reveal>
         </div>
@@ -529,7 +528,7 @@ export default function AiVoiceAgentsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Your options for answering the phone</span>
-            <h2>Four ways to answer — honestly compared.</h2>
+            <h2>Four ways to answer, honestly compared.</h2>
             <p>If your business gets more than a handful of calls a day, here’s how they really stack up.</p>
           </Reveal>
           <Reveal className="va-opt-tbl">
@@ -558,7 +557,7 @@ export default function AiVoiceAgentsView() {
           </Reveal>
           <Reveal as="p" className="va-opt-note">
             For most small businesses, an AI receptionist{" "}
-            <strong>replaces voicemail entirely and handles 80–90% of calls</strong> without any human touch — at a
+            <strong>replaces voicemail entirely and handles 80–90% of calls</strong> without any human touch, at a
             fraction of the cost of a live receptionist.
           </Reveal>
         </div>
@@ -571,7 +570,7 @@ export default function AiVoiceAgentsView() {
             <span className="eyebrow">What we don’t build</span>
             <h2>Most of what’s sold isn’t usable.</h2>
             <p>
-              The AI voice market in 2026 is crowded. Being honest about what we <em>don’t</em> build — so you know what
+              The AI voice market in 2026 is crowded. Being honest about what we <em>don’t</em> build, so you know what
               you’re getting.
             </p>
           </Reveal>
@@ -602,7 +601,7 @@ export default function AiVoiceAgentsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What your AI receptionist can do</span>
             <h2>Full front-desk, not just “answer the phone.”</h2>
-            <p>Pick the ones that matter — most clients start with booking + qualification + basic support, then add more.</p>
+            <p>Pick the ones that matter, most clients start with booking + qualification + basic support, then add more.</p>
           </Reveal>
           <CapabilitiesExplorer />
         </div>
@@ -614,7 +613,7 @@ export default function AiVoiceAgentsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
             <h2>Everything the voice agent needs to work.</h2>
-            <p>Strategy, custom training, voice setup, integrations, and ongoing optimization — one team, eight parts.</p>
+            <p>Strategy, custom training, voice setup, integrations, and ongoing optimization, one team, eight parts.</p>
           </Reveal>
           <Reveal className="va-inc-grid">
             {INCLUDED.map((item) => (
@@ -638,7 +637,7 @@ export default function AiVoiceAgentsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Industries we build for</span>
-            <h2>Fastest ROI — often pays for itself in month one.</h2>
+            <h2>Fastest ROI, often pays for itself in month one.</h2>
           </Reveal>
           <Reveal className="va-ind-grid">
             {INDUSTRIES.map((item) => (
@@ -658,7 +657,7 @@ export default function AiVoiceAgentsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">How it works</span>
             <h2>Kickoff to a live receptionist in 2–4 weeks.</h2>
-            <p>A structured process — every step ends with a deliverable and your sign-off.</p>
+            <p>A structured process, every step ends with a deliverable and your sign-off.</p>
           </Reveal>
           <div className="va-steps">
             {STEPS.map((step) => (
@@ -682,8 +681,8 @@ export default function AiVoiceAgentsView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Retainers are <strong>month-to-month.</strong> AI platform costs (voice, LLM, telephony) are usage-based —
-            typically $50–$300/mo depending on call volume — passed through at cost with no markup. Every rate is on the{" "}
+            Retainers are <strong>month-to-month.</strong> AI platform costs (voice, LLM, telephony) are usage-based,
+            typically $50–$300/mo depending on call volume, passed through at cost with no markup. Every rate is on the{" "}
             <a href="/pricing">pricing page</a>.
           </NoteCallout>
         </div>
@@ -698,7 +697,7 @@ export default function AiVoiceAgentsView() {
         copy={
           <>
             Book a free AI receptionist demo. We’ll walk through your call volume, your typical missed calls, and play a
-            live demo of what a custom-trained AI voice agent could do —{" "}
+            live demo of what a custom-trained AI voice agent could do,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>with a clear price at the end. No obligation, no per-minute pricing games.</strong>
           </>
         }

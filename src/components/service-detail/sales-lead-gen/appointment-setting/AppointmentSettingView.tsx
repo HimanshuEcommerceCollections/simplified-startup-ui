@@ -98,7 +98,7 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "Works where cold outreach is hard",
-    text: <>Complex products, senior buyers, regulated industries — the ones that need <strong>real qualification, not spray-and-pray.</strong></>,
+    text: <>Complex products, senior buyers, regulated industries, the ones that need <strong>real qualification, not spray-and-pray.</strong></>,
     delay: 60,
   },
   {
@@ -110,17 +110,17 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "Quality over volume",
-    text: <>It’s not about the number of meetings — it’s about <strong>meetings your reps actually want on their calendar.</strong></>,
+    text: <>It’s not about the number of meetings, it’s about <strong>meetings your reps actually want on their calendar.</strong></>,
     delay: 120,
   },
 ];
 
 const BANTF = [
   { letter: "B", title: "Budget", text: "Can they afford it? Qualified against price range or company revenue that supports your solution." },
-  { letter: "A", title: "Authority", text: "Decision-maker — or influences one? Job title + reporting structure verified." },
+  { letter: "A", title: "Authority", text: "Decision-maker, or influences one? Job title + reporting structure verified." },
   { letter: "N", title: "Need", text: "Do they have the pain you solve? Verified against buying signals or explicit stated need." },
   { letter: "T", title: "Timeline", text: "Buying now, next quarter, or “someday”? A time-window filter is applied." },
-  { letter: "F", title: "Fit", text: "Match your ICP — industry, size, tech stack, geography? No wrong-fit meetings." },
+  { letter: "F", title: "Fit", text: "Match your ICP, industry, size, tech stack, geography? No wrong-fit meetings." },
 ];
 
 type PricingModel = { kind: "bad" | "good"; title: string; how: string; prob: ReactNode; tag?: string; delay: number };
@@ -129,22 +129,22 @@ const PRICING_MODELS: PricingModel[] = [
   {
     kind: "bad",
     title: "Pay-per-meeting",
-    how: "$200–$800 per meeting — you pay only for meetings booked.",
-    prob: <>Agency is incentivized to book <strong>anything that vaguely fits</strong> — volume over quality. You end up paying for junk meetings your reps hate.</>,
+    how: "$200–$800 per meeting, you pay only for meetings booked.",
+    prob: <>Agency is incentivized to book <strong>anything that vaguely fits</strong>, volume over quality. You end up paying for junk meetings your reps hate.</>,
     delay: 0,
   },
   {
     kind: "bad",
     title: "% of closed deals",
     how: "You pay a percentage of revenue closed.",
-    prob: <>Sounds fair — but agencies <strong>cherry-pick easy deals,</strong> ignore complex ones, and attribution disputes kill the relationship by month 3.</>,
+    prob: <>Sounds fair, but agencies <strong>cherry-pick easy deals,</strong> ignore complex ones, and attribution disputes kill the relationship by month 3.</>,
     delay: 80,
   },
   {
     kind: "good",
     title: "Flat monthly retainer",
     how: "Fixed fee regardless of meeting count.",
-    prob: <><strong>No misaligned incentive.</strong> We focus on quality because the contract renews on your success — not on booking volume.</>,
+    prob: <><strong>No misaligned incentive.</strong> We focus on quality because the contract renews on your success, not on booking volume.</>,
     tag: "Our model",
     delay: 160,
   },
@@ -169,7 +169,7 @@ const WB_ITEMS: WbItem[] = [
     label: "ICP & qualification",
     sub: "Define “qualified”",
     name: "ICP & Qualification Framework",
-    tag: "The most important step, usually skipped — we define who counts as a qualified meeting before any outreach.",
+    tag: "The most important step, usually skipped, we define who counts as a qualified meeting before any outreach.",
     items: ["Ideal Customer Profile (industry, size, tech, geo, role)", "BANT-F qualification criteria agreed & locked", "Wrong-fit exclusion list", "Meeting quality scoring model", "Handoff process designed with your sales team"],
   },
   {
@@ -178,7 +178,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Research & list building",
     sub: "Custom, verified",
     name: "Prospect Research & List Building",
-    tag: "Custom lists that match your ICP exactly — no random data dumps, no bought lists.",
+    tag: "Custom lists that match your ICP exactly, no random data dumps, no bought lists.",
     items: ["Custom list to your ICP (1,000–5,000+/month)", "Apollo, LinkedIn Sales Nav, ZoomInfo, Clay", "Contact verification and enrichment", "Title + seniority + department mapping", "Intent signals (tech installs, hiring, funding)", "Suppression list management"],
   },
   {
@@ -187,7 +187,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Multi-channel outreach",
     sub: "Email + LinkedIn + phone",
     name: "Multi-Channel Outreach",
-    tag: "Email + LinkedIn + phone, coordinated as one sequence — not three separate blasts.",
+    tag: "Email + LinkedIn + phone, coordinated as one sequence, not three separate blasts.",
     items: ["Cold email sequences (4–7 per prospect)", "LinkedIn (connection requests + follow-ups)", "Cold calling for high-value accounts (optional)", "Coordinated timing across channels", "Reply tracking across every touchpoint", "Full deliverability infrastructure"],
   },
   {
@@ -214,7 +214,7 @@ const WB_ITEMS: WbItem[] = [
     label: "No-show reduction",
     sub: "Under 15%",
     name: "No-Show Reduction",
-    tag: "Industry no-shows run 30–40%. Our target is under 15% — here’s how.",
+    tag: "Industry no-shows run 30–40%. Our target is under 15%, here’s how.",
     items: ["Confirmation email immediately after booking", "24-hour reminder email", "2-hour reminder SMS (with consent)", "One-click reschedule link", "Weekly no-show audit + follow-up", "Re-engagement flow for no-shows"],
   },
   {
@@ -238,7 +238,7 @@ const NO_SHOW = [
 ];
 
 const STEPS = [
-  { no: "Week 1", title: "ICP + qualification workshop", text: "Define ICP, criteria, and handoff. Lock the “what counts as qualified” definition — a signed-off framework.", delay: 0 },
+  { no: "Week 1", title: "ICP + qualification workshop", text: "Define ICP, criteria, and handoff. Lock the “what counts as qualified” definition, a signed-off framework.", delay: 0 },
   { no: "Weeks 2–3", title: "Infrastructure + list build", text: "Sending domains & warm-up, custom prospect list built and verified, LinkedIn profiles optimized for outreach.", delay: 70 },
   { no: "Week 4", title: "Soft launch", text: "First campaign live at controlled volume. First qualified meetings usually book by day 25–35.", delay: 140 },
   { no: "Month 2", title: "Ramp", text: "Volume scaled on deliverability + reply quality. Multi-channel fully engaged. Meeting flow becomes predictable.", delay: 210 },
@@ -290,34 +290,34 @@ const WHO = [
         <path d="M4 20V10M10 20V4M16 20v-7M20 20H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
-    text: <><strong>A team scaling faster than they can hire SDRs</strong> — needs qualified pipeline now, not in 6 months.</>,
+    text: <><strong>A team scaling faster than they can hire SDRs</strong>, needs qualified pipeline now, not in 6 months.</>,
     delay: 60,
   },
   {
     icon: CHECK_HEAD,
-    text: <><strong>A business tired of “leads” that never convert</strong> — wants real qualified meetings, not database dumps.</>,
+    text: <><strong>A business tired of “leads” that never convert</strong>, wants real qualified meetings, not database dumps.</>,
     delay: 120,
   },
 ];
 
 const TIERS = [
-  { name: "Starter Appointments", best: "Small B2B teams — 5–10 qualified meetings/month, single channel (email OR LinkedIn).", price: "Published /mo" },
-  { name: "Growth Appointments", best: "Established B2B — 15–25 qualified meetings/month, multi-channel (email + LinkedIn).", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale Appointments", best: "Larger teams & complex ICPs — 30+ qualified meetings/month, multi-channel + optional phone, multi-persona.", price: "Published /mo", delay: 140 },
-  { name: "Appointment Setting Audit", best: "Deep audit of your existing SDR / appointment-setting program — no commitment.", price: "Published", delay: 210 },
+  { name: "Starter Appointments", best: "Small B2B teams: 5–10 qualified meetings/month, single channel (email OR LinkedIn).", price: "Published /mo" },
+  { name: "Growth Appointments", best: "Established B2B: 15–25 qualified meetings/month, multi-channel (email + LinkedIn).", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Scale Appointments", best: "Larger teams & complex ICPs: 30+ qualified meetings/month, multi-channel + optional phone, multi-persona.", price: "Published /mo", delay: 140 },
+  { name: "Appointment Setting Audit", best: "Deep audit of your existing SDR / appointment-setting program, no commitment.", price: "Published", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "How many meetings per month?", a: <>Depends on ICP, offer, and tier: Starter targets <strong>5–10</strong>, Growth <strong>15–25</strong>, Scale <strong>30+</strong> qualified meetings/month. We commit to a target — miss it and we add work until we catch up, no extra charge.</> },
+  { q: "How many meetings per month?", a: <>Depends on ICP, offer, and tier: Starter targets <strong>5–10</strong>, Growth <strong>15–25</strong>, Scale <strong>30+</strong> qualified meetings/month. We commit to a target, miss it and we add work until we catch up, no extra charge.</> },
   { q: "How is “qualified” defined?", a: <>Using our <strong>BANT-F framework</strong> (Budget, Authority, Need, Timeline, Fit). Every criterion is locked with you before campaigns start; meetings that don’t meet all five don’t get booked (edge cases flagged transparently).</> },
-  { q: "Why not charge per meeting?", a: <>Because it creates the wrong incentive — per-meeting rewards volume, so agencies book anything vaguely qualifying and you pay for junk. <strong>Our flat retainer keeps us focused on quality,</strong> which is what makes the model renew.</> },
+  { q: "Why not charge per meeting?", a: <>Because it creates the wrong incentive, per-meeting rewards volume, so agencies book anything vaguely qualifying and you pay for junk. <strong>Our flat retainer keeps us focused on quality,</strong> which is what makes the model renew.</> },
   { q: "How long before meetings book?", a: <>First qualified meetings usually book in <strong>weeks 4–5</strong> (after ICP workshop + infrastructure + first campaign). Predictable flow starts month 2; compounding from month 3.</> },
-  { q: "Email/LinkedIn only, or phone too?", a: <>Email + LinkedIn is standard in every package. <strong>Phone is optional at Scale</strong> for high-value accounts — US-based callers briefed on your criteria. Not every business needs it; we’ll advise.</> },
-  { q: "Do I own the infrastructure?", a: <>Yes, 100% — domains registered to you, inboxes on your accounts, lists delivered monthly. <strong>If you leave, you keep everything</strong> — unusual in this industry.</> },
+  { q: "Email/LinkedIn only, or phone too?", a: <>Email + LinkedIn is standard in every package. <strong>Phone is optional at Scale</strong> for high-value accounts: US-based callers briefed on your criteria. Not every business needs it; we’ll advise.</> },
+  { q: "Do I own the infrastructure?", a: <>Yes, 100%, domains registered to you, inboxes on your accounts, lists delivered monthly. <strong>If you leave, you keep everything</strong>, unusual in this industry.</> },
   { q: "What if the meetings aren’t good enough?", a: <>That’s why the feedback loop matters. Each week your reps tell us what worked; <strong>we tighten qualification based on which meetings actually close.</strong> Quality improves month over month.</> },
   { q: "What about no-shows?", a: <>Industry average is 30–40%; our target is <strong>under 15%.</strong> Confirmation emails, 24-hour reminders, 2-hour SMS (with consent), one-click reschedule, and a re-engagement flow.</> },
-  { q: "Can you integrate with my CRM?", a: <>Yes — HubSpot, Salesforce, Pipedrive, GoHighLevel, Zoho, and more. Every booked meeting is logged with <strong>full context</strong> (prospect data, buying signals, prep notes) so reps walk in prepared.</> },
-  { q: "I already have SDRs — still useful?", a: <>Great as a complement — we handle top-of-funnel outreach and hand off qualified meetings; <strong>your SDRs focus on deeper qualification, demos, and account-specific outreach.</strong></> },
+  { q: "Can you integrate with my CRM?", a: <>Yes: HubSpot, Salesforce, Pipedrive, GoHighLevel, Zoho, and more. Every booked meeting is logged with <strong>full context</strong> (prospect data, buying signals, prep notes) so reps walk in prepared.</> },
+  { q: "I already have SDRs, still useful?", a: <>Great as a complement, we handle top-of-funnel outreach and hand off qualified meetings; <strong>your SDRs focus on deeper qualification, demos, and account-specific outreach.</strong></> },
 ];
 
 /* -------- motion helpers -------- */
@@ -570,7 +570,6 @@ export default function AppointmentSettingView() {
         compact
         className="apt-hero"
         crumb={{ label: "Sales & Lead Generation", href: "/sales-lead-gen" }}
-        eyebrow="Qualified meetings · On your calendar · Done-for-you"
         line1="Qualified meetings, booked"
         line2={
           <>
@@ -601,7 +600,7 @@ export default function AppointmentSettingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Why appointment setting exists</span>
             <h2>
-              <Words text="Your reps should close — not chase." />
+              <Words text="Your reps should close, not chase." />
             </h2>
             <p>
               Most B2B teams don’t struggle because the product is weak. They struggle because sales spends 70% of every
@@ -624,7 +623,7 @@ export default function AppointmentSettingView() {
             </h2>
             <p>
               The biggest failure in appointment setting is booking meetings that aren’t qualified. We define what
-              “qualified” means for you with a 5-criterion framework — and only meetings that meet all five get booked.
+              “qualified” means for you with a 5-criterion framework, and only meetings that meet all five get booked.
             </p>
           </Reveal>
           <Reveal className="apt-bantf-grid">
@@ -638,7 +637,7 @@ export default function AppointmentSettingView() {
           </Reveal>
           <Reveal as="p" className="apt-bantf-note">
             Every criterion is agreed with you before any campaign starts.{" "}
-            <strong>Meetings that don’t meet all five don’t get booked</strong> — or if an edge case arises, it’s disclosed
+            <strong>Meetings that don’t meet all five don’t get booked</strong>, or if an edge case arises, it’s disclosed
             transparently.
           </Reveal>
         </div>
@@ -650,7 +649,7 @@ export default function AppointmentSettingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Why we charge a flat fee</span>
             <h2>
-              <Words text="Three pricing models — one has aligned incentives." />
+              <Words text="Three pricing models, one has aligned incentives." />
             </h2>
             <p>The industry offers three ways to pay. Only one keeps the agency focused on quality instead of volume. The honest breakdown:</p>
           </Reveal>
@@ -685,7 +684,7 @@ export default function AppointmentSettingView() {
             <h2>
               <Words text="Research to booking, one team." />
             </h2>
-            <p>Everything an appointment-setting program needs — seven parts, nothing handed off. Pick one to see what’s inside.</p>
+            <p>Everything an appointment-setting program needs, seven parts, nothing handed off. Pick one to see what’s inside.</p>
           </Reveal>
           <Included />
         </div>
@@ -700,7 +699,7 @@ export default function AppointmentSettingView() {
               <Words text="Industry no-shows run 30–40%. Ours: under 15%." />
             </h2>
             <p>
-              A booked meeting that doesn’t show is worse than no meeting — it wastes a closer’s prepared hour. Here’s how
+              A booked meeting that doesn’t show is worse than no meeting, it wastes a closer’s prepared hour. Here’s how
               we keep the seat filled.
             </p>
           </Reveal>
@@ -775,7 +774,7 @@ export default function AppointmentSettingView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Retainers are <strong>month-to-month.</strong> Infrastructure costs (domains, inboxes) passed through at cost —
+            Retainers are <strong>month-to-month.</strong> Infrastructure costs (domains, inboxes) passed through at cost,
             typically $50–$150/mo. First month includes a setup fee for the ICP workshop and infrastructure build. Every
             rate is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
@@ -791,7 +790,7 @@ export default function AppointmentSettingView() {
         copy={
           <>
             Book a free strategy call. We’ll define your ICP, agree on qualification criteria, and come back with a clear
-            plan and price —{" "}
+            plan and price,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>
               usually within 48 hours. No obligation, no jargon, no misaligned incentives.
             </strong>

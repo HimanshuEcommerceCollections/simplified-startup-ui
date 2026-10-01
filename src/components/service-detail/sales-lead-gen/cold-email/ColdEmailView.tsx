@@ -85,7 +85,7 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "Scales without hiring",
-    text: <>One well-run system can <strong>outperform 3–4 SDRs</strong> at 20% of the cost — no headcount, no ramp.</>,
+    text: <>One well-run system can <strong>outperform 3–4 SDRs</strong> at 20% of the cost, no headcount, no ramp.</>,
     delay: 120,
   },
   {
@@ -130,12 +130,12 @@ const STATS: Stat[] = [
 
 const WRONG = [
   "Sending from your primary company domain (kills reputation)",
-  "One inbox, one domain — no scale",
+  "One inbox, one domain, no scale",
   "Skipped warm-up, straight into cold sends",
   "No SPF / DKIM / DMARC setup",
   "Bought a random list from a “lead vendor”",
   "Templated, generic copy sent to everyone",
-  "No reply management — hot leads go cold",
+  "No reply management, hot leads go cold",
   "80%+ of emails land in spam within 2 weeks",
 ];
 
@@ -169,7 +169,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Audit & strategy",
     sub: "ICP, offer, roadmap",
     name: "Cold Email Audit & Strategy",
-    tag: "Every engagement starts here — goals, ICP, offer, and a plan to hit real reply targets.",
+    tag: "Every engagement starts here, goals, ICP, offer, and a plan to hit real reply targets.",
     items: ["ICP definition and refinement", "Offer and messaging audit", "Existing infrastructure & domain review", "Volume + reply-rate targets by month", "90-day roadmap in plain language"],
   },
   {
@@ -178,7 +178,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Deliverability infra",
     sub: "The 80% that matters",
     name: "Deliverability Infrastructure",
-    tag: "The 80% of the work that decides whether every email lands — where competitors cut corners.",
+    tag: "The 80% of the work that decides whether every email lands, where competitors cut corners.",
     items: ["Secondary sending domains (never your primary)", "SPF, DKIM, and DMARC authentication", "Google Workspace / Microsoft 365 inboxes", "3-week warm-up period per domain", "Multi-domain, multi-inbox setup for scale", "Ongoing deliverability & blacklist monitoring"],
   },
   {
@@ -187,7 +187,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Prospect list building",
     sub: "Custom, verified",
     name: "Prospect List Building",
-    tag: "No bought lists. A custom list matching your ICP exactly — verified, enriched, clean.",
+    tag: "No bought lists. A custom list matching your ICP exactly, verified, enriched, clean.",
     items: ["Custom list build (up to 5,000/campaign)", "Apollo, Sales Nav, ZoomInfo, Clay sourcing", "Contact verification (bounces under 3%)", "Enrichment: title, size, tech stack, industry", "Intent-signal targeting when available", "Suppression list management"],
   },
   {
@@ -196,7 +196,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Copy & sequences",
     sub: "Written to be opened",
     name: "Copywriting & Sequence Design",
-    tag: "The emails prospects actually open — written for the person, not the persona.",
+    tag: "The emails prospects actually open, written for the person, not the persona.",
     items: ["4–7 email sequence structure", "Personalized subject & opening lines", "Custom copy per persona / industry", "Value-first messaging (not pitchy)", "Multiple variations for A/B testing", "CTA optimization (soft ask, hard ask, calendar)"],
   },
   {
@@ -205,7 +205,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Launch & sending",
     sub: "Monitored daily",
     name: "Campaign Launch & Sending",
-    tag: "Launched, monitored, and adjusted daily — no “set it and forget it.”",
+    tag: "Launched, monitored, and adjusted daily, no “set it and forget it.”",
     items: ["Platform setup (Instantly, Smartlead, Lemlist, Apollo)", "Volume ramp-up over first 2 weeks", "Daily sending caps per inbox", "Signal-based sending (right time, right prospect)", "Sequence pacing & follow-up automation", "Real-time delivery + open + reply tracking"],
   },
   {
@@ -214,7 +214,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Reply management",
     sub: "Hot leads, routed",
     name: "Reply Management & Routing",
-    tag: "The most-skipped step — so hot leads never sit in an inbox for 3 days.",
+    tag: "The most-skipped step, so hot leads never sit in an inbox for 3 days.",
     items: ["Reply monitoring & classification", "Hot-lead alerts to your team in real-time", "Calendar link delivery for interested replies", "Follow-up sequences for “not now”", "Automatic suppression of unsubscribes", "CRM logging (HubSpot, Pipedrive, Salesforce)"],
   },
   {
@@ -322,7 +322,7 @@ const WHO = [
         <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="currentColor" strokeWidth="2" />
       </svg>
     ),
-    text: <><strong>A B2B services business</strong> — agency, consultant, freelancer, staffing — booking meetings with target accounts.</>,
+    text: <><strong>A B2B services business</strong>, agency, consultant, freelancer, staffing, booking meetings with target accounts.</>,
     delay: 0,
   },
   {
@@ -369,7 +369,7 @@ const WHO = [
         <path d="M20 10a8 8 0 0 0-14-4M4 14a8 8 0 0 0 14 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
-    text: <><strong>A team with a strong offer but no engine</strong> — sending manually, on a burned domain, or “doing it in-house” with poor results.</>,
+    text: <><strong>A team with a strong offer but no engine</strong>, sending manually, on a burned domain, or “doing it in-house” with poor results.</>,
     delay: 120,
   },
 ];
@@ -383,23 +383,23 @@ const STEPS = [
 ];
 
 const TIERS = [
-  { name: "Starter Cold Email", best: "Small businesses or first-time outbound — 2 domains, 4 inboxes, 500 prospects/month.", price: "Published /mo" },
-  { name: "Growth Cold Email", best: "Established B2B — 5 domains, 10 inboxes, 2,000 prospects/month, weekly A/B testing.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale Cold Email", best: "High-volume outbound — 10+ domains, 20+ inboxes, 5,000+ prospects/month, multi-persona campaigns.", price: "Published /mo", delay: 140 },
-  { name: "Cold Email Audit", best: "Deep audit of your existing program — deliverability, copy, list, sequences — no commitment.", price: "Published", delay: 210 },
+  { name: "Starter Cold Email", best: "Small businesses or first-time outbound: 2 domains, 4 inboxes, 500 prospects/month.", price: "Published /mo" },
+  { name: "Growth Cold Email", best: "Established B2B: 5 domains, 10 inboxes, 2,000 prospects/month, weekly A/B testing.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Scale Cold Email", best: "High-volume outbound: 10+ domains, 20+ inboxes, 5,000+ prospects/month, multi-persona campaigns.", price: "Published /mo", delay: 140 },
+  { name: "Cold Email Audit", best: "Deep audit of your existing program, deliverability, copy, list, sequences, no commitment.", price: "Published", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "How long before I see results?", a: <>First meetings usually book in <strong>weeks 4–6</strong> (after warm-up + first campaign). Steady monthly flow starts in month 2. Compounding results — better reply rates as sequences optimize — kick in from month 3 onward.</> },
+  { q: "How long before I see results?", a: <>First meetings usually book in <strong>weeks 4–6</strong> (after warm-up + first campaign). Steady monthly flow starts in month 2. Compounding results, better reply rates as sequences optimize, kick in from month 3 onward.</> },
   { q: "How many meetings will I book per month?", a: <>Depends on ICP, offer, and volume. Rough benchmark: <strong>2,000 prospects/month at a 3–5% reply rate + 30% meeting conversion = 20–30 booked meetings.</strong> Better ICPs and offers can double this.</> },
-  { q: "Won’t cold email hurt my domain reputation?", a: <>Not if it&apos;s done right. We use <strong>secondary sending domains — never your primary company domain</strong> — so your main reputation is protected. If a secondary domain ever burns out, we rotate it with no impact on your business.</> },
+  { q: "Won’t cold email hurt my domain reputation?", a: <>Not if it&apos;s done right. We use <strong>secondary sending domains, never your primary company domain</strong>, so your main reputation is protected. If a secondary domain ever burns out, we rotate it with no impact on your business.</> },
   { q: "Do you buy lists?", a: <>Never. Bought lists are the fastest way to get spam-flagged and destroy your infrastructure. <strong>We build every list custom,</strong> from verified sources (Apollo, LinkedIn Sales Nav, ZoomInfo, Clay), and verify every contact before sending.</> },
-  { q: "Is cold email legal?", a: <>In the US, yes — under CAN-SPAM. In the EU, GDPR has strict rules. <strong>We follow the legal requirements for every region we send to</strong> — clear identification, opt-out language, opt-outs honored immediately, no deception.</> },
+  { q: "Is cold email legal?", a: <>In the US, yes, under CAN-SPAM. In the EU, GDPR has strict rules. <strong>We follow the legal requirements for every region we send to</strong>, clear identification, opt-out language, opt-outs honored immediately, no deception.</> },
   { q: "What if my emails still go to spam?", a: <>That&apos;s the deliverability layer we handle constantly. If placement drops, we adjust: <strong>rotate inboxes, refresh warm-up, tighten copy, or swap domains.</strong> It&apos;s baked into the service, not a separate fee.</> },
   { q: "Do I own the domains and lists?", a: <>Yes, 100%. Every domain is registered under your name and paid on your card (at cost). Every list is delivered to you monthly. <strong>If you leave, you keep the entire infrastructure.</strong></> },
-  { q: "Can I use my own sending platform?", a: <>Yes — we work with <strong>Instantly, Smartlead, Apollo, Lemlist,</strong> and most modern cold email platforms. Already have a subscription? We plug into it. If not, we&apos;ll recommend one.</> },
-  { q: "My current program is underperforming — can you help?", a: <>Start with our audit. Most programs we review have preventable issues — no warm-up, weak SPF/DKIM, terrible copy, bought lists. <strong>The fix list alone usually justifies the audit fee.</strong></> },
-  { q: "Do you handle LinkedIn outreach too?", a: <>Yes, as a separate service. Many clients bundle both — <strong>email + LinkedIn together outperforms either channel alone,</strong> especially for high-ticket B2B.</> },
+  { q: "Can I use my own sending platform?", a: <>Yes, we work with <strong>Instantly, Smartlead, Apollo, Lemlist,</strong> and most modern cold email platforms. Already have a subscription? We plug into it. If not, we&apos;ll recommend one.</> },
+  { q: "My current program is underperforming, can you help?", a: <>Start with our audit. Most programs we review have preventable issues, no warm-up, weak SPF/DKIM, terrible copy, bought lists. <strong>The fix list alone usually justifies the audit fee.</strong></> },
+  { q: "Do you handle LinkedIn outreach too?", a: <>Yes, as a separate service. Many clients bundle both, <strong>email + LinkedIn together outperforms either channel alone,</strong> especially for high-ticket B2B.</> },
 ];
 
 /* -------- motion helpers -------- */
@@ -516,7 +516,7 @@ function InboxCard() {
       <div className="ce-mail">
         <span className="av">A</span>
         <span className="mt">
-          <b>Alex — Simplified</b>
+          <b>Alex: Simplified</b>
           <small>Quick question about your Q3 pipeline…</small>
         </span>
         <span className="land">{CHECK}Inbox</span>
@@ -540,7 +540,7 @@ function InboxCard() {
       <div className="ce-inbox-reply">
         <span className="ri">{REPLY_ICON}</span>
         <span className="rtx">
-          <b>“Happy to chat — how’s Thursday?”</b>
+          <b>“Happy to chat, how’s Thursday?”</b>
         </span>
         <span className="rtag">Interested</span>
       </div>
@@ -681,7 +681,6 @@ export default function ColdEmailView() {
         compact
         className="ce-hero"
         crumb={{ label: "Sales & Lead Generation", href: "/sales-lead-gen" }}
-        eyebrow="Deliverability-first · Done-for-you · Qualified replies"
         line1="Cold email that lands"
         line2={
           <>
@@ -693,9 +692,9 @@ export default function ColdEmailView() {
         }
         lead={
           <>
-            End-to-end cold email programs — domain setup, inbox warm-up, list building, personalized copy, sequence
+            End-to-end cold email programs, domain setup, inbox warm-up, list building, personalized copy, sequence
             management, and reply handling.{" "}
-            <strong>Built on deliverability, priced transparently, month-to-month with no lock-in</strong> — and qualified
+            <strong>Built on deliverability, priced transparently, month-to-month with no lock-in</strong>, and qualified
             replies you can actually close.
           </>
         }
@@ -713,7 +712,7 @@ export default function ColdEmailView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Why cold email still works</span>
             <h2>
-              <Words text="The highest-ROI outbound channel — when done right." />
+              <Words text="The highest-ROI outbound channel, when done right." />
             </h2>
             <p>
               Cold email got a bad reputation because most people do it badly. With the right infrastructure, targeting, and
@@ -738,7 +737,7 @@ export default function ColdEmailView() {
           </Reveal>
           <StatsGrid />
           <Reveal as="p" className="ce-stat-note">
-            Our target: get every client into the <strong>top decile</strong> — which requires doing the work most agencies
+            Our target: get every client into the <strong>top decile</strong>, which requires doing the work most agencies
             skip.
           </Reveal>
         </div>
@@ -750,10 +749,10 @@ export default function ColdEmailView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Why most campaigns fail</span>
             <h2>
-              <Words text="Cold email doesn’t stop working — it stops landing." />
+              <Words text="Cold email doesn’t stop working, it stops landing." />
             </h2>
             <p>
-              Most campaigns just stop reaching the inbox. Here&apos;s how the two paths look — we run every campaign the
+              Most campaigns just stop reaching the inbox. Here&apos;s how the two paths look, we run every campaign the
               &ldquo;done right&rdquo; way.
             </p>
           </Reveal>
@@ -788,7 +787,7 @@ export default function ColdEmailView() {
             </Reveal>
           </div>
           <Reveal className="ce-vs-note">
-            Every campaign we run follows the <strong>&ldquo;done right&rdquo; column.</strong> Every step — because inbox
+            Every campaign we run follows the <strong>&ldquo;done right&rdquo; column.</strong> Every step, because inbox
             placement is the whole game.
           </Reveal>
         </div>
@@ -803,7 +802,7 @@ export default function ColdEmailView() {
               <Words text="The whole program, run by one team." />
             </h2>
             <p>
-              Infrastructure, targeting, messaging, sequences, replies — seven parts, nothing handed off. Pick one to see
+              Infrastructure, targeting, messaging, sequences, replies, seven parts, nothing handed off. Pick one to see
               what&apos;s inside.
             </p>
           </Reveal>
@@ -819,7 +818,7 @@ export default function ColdEmailView() {
             <h2>
               <Words text="The technical foundation, managed for you." />
             </h2>
-            <p>Everything below is set up and run for you — no DIY, no separate vendor bills. You own it all at the end.</p>
+            <p>Everything below is set up and run for you, no DIY, no separate vendor bills. You own it all at the end.</p>
           </Reveal>
           <Reveal className="ce-stack-grid">
             {STACK.map((item) => (
@@ -838,7 +837,7 @@ export default function ColdEmailView() {
             ))}
           </Reveal>
           <Reveal as="p" className="ce-stack-note">
-            <strong>You own everything at the end</strong> — domains, inboxes, lists, and sequences — if you ever want to
+            <strong>You own everything at the end</strong>, domains, inboxes, lists, and sequences, if you ever want to
             bring it in-house.
           </Reveal>
         </div>
@@ -914,7 +913,7 @@ export default function ColdEmailView() {
         copy={
           <>
             Book a free cold email audit. We&apos;ll look at your current setup (or start fresh), review your ICP and offer,
-            and come back with a clear plan and price —{" "}
+            and come back with a clear plan and price,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>
               usually within 48 hours. No obligation, no jargon, no minimum commitment.
             </strong>

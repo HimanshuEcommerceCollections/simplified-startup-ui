@@ -9,7 +9,7 @@ type Principle = { title: string; body: string; icon: ReactNode };
 const PRINCIPLES: Principle[] = [
   {
     title: "Practical",
-    body: "Real outputs — a live site, a running campaign, clean books — not a deck full of theory.",
+    body: "Real outputs, a live site, a running campaign, clean books, not a deck full of theory.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M14.5 6.5a3.5 3.5 0 1 0 4 4L21 8V4h-4l-2.5 2.5Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
@@ -41,7 +41,7 @@ const PRINCIPLES: Principle[] = [
   },
   {
     title: "Experienced",
-    body: "Senior operators who've built and run businesses — for themselves and for clients.",
+    body: "Senior operators who've built and run businesses, for themselves and for clients.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="14.5" r="5.5" stroke="currentColor" strokeWidth="1.7" />
@@ -179,7 +179,7 @@ export default function OurApproach() {
           <span className="eyebrow">Our approach</span>
           <h2 className="ab-h2">A strategic partner, not just another agency.</h2>
           <p className="sec-lead">
-            We work the way a good business partner would — invested in the outcome, not just the
+            We work the way a good business partner would, invested in the outcome, not just the
             deliverable.
           </p>
         </Reveal>

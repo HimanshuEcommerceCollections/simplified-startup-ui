@@ -69,7 +69,7 @@ export default function BundleDiscounts() {
     <section className="band light" id="bundles" aria-label="Combining services">
       <div className="wrap">
         <div className="sec-head">
-          <span className="eyebrow">— Bundles, stated up front</span>
+          <span className="eyebrow">Bundles, stated up front</span>
           <h2>Combining services</h2>
           <p>
             Work with us across more than one service and the discount is applied automatically.
@@ -120,7 +120,7 @@ export default function BundleDiscounts() {
               </span>
             </div>
             <p style={{ marginTop: 16 }}>
-              Working with us across service areas — say, a website plus staffing plus bookkeeping —
+              Working with us across service areas, say, a website plus staffing plus bookkeeping,
               carries its own 10–15% cross-area discount, calculated separately.
             </p>
           </div>

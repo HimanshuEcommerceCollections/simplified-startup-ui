@@ -197,9 +197,9 @@ const ICON_CHECK = (
 /* -------- content -------- */
 
 const WHY = [
-  { icon: ICON_BUBBLE_LINES, title: "Handles 50–70% of support", text: <>Common questions answered automatically — <strong>cutting ticket volume</strong> and freeing your team for real conversations.</> },
-  { icon: ICON_LIST_CHECK, title: "Qualifies & routes leads", text: <>Captures emails, scores prospects, and <strong>routes hot leads to sales</strong> — while you sleep, on weekends, in every timezone.</>, delay: 60 },
-  { icon: ICON_SEARCH, title: "Instant answers, no waiting", text: <>Services, pricing, hours, availability — answered instantly. <strong>No form submissions, no 24-hour wait.</strong></>, delay: 120 },
+  { icon: ICON_BUBBLE_LINES, title: "Handles 50–70% of support", text: <>Common questions answered automatically, <strong>cutting ticket volume</strong> and freeing your team for real conversations.</> },
+  { icon: ICON_LIST_CHECK, title: "Qualifies & routes leads", text: <>Captures emails, scores prospects, and <strong>routes hot leads to sales</strong>, while you sleep, on weekends, in every timezone.</>, delay: 60 },
+  { icon: ICON_SEARCH, title: "Instant answers, no waiting", text: <>Services, pricing, hours, availability, answered instantly. <strong>No form submissions, no 24-hour wait.</strong></>, delay: 120 },
   { icon: ICON_CLOCK, title: "A salesperson that never clocks out", text: <>24/7 coverage catches after-hours visitors <strong>who would otherwise just disappear.</strong></> },
   { icon: ICON_CALENDAR_CHECK, title: "Books appointments directly", text: <>Walks visitors through your calendar, books the meeting, and <strong>confirms by email or SMS.</strong></>, delay: 60 },
   { icon: ICON_SHIELD, title: "Win the visitor, not lose them", text: <>It’s the difference between capturing a visitor and <strong>losing them to the competitor whose site answered first.</strong></>, delay: 120 },
@@ -208,16 +208,16 @@ const WHY = [
 type Stat = { value?: string; count?: { target: number; suffix?: string }; label: string; text: string; delay: number };
 
 const STATS: Stat[] = [
-  { value: "50–70%", label: "Tickets resolved", text: "Of common support questions handled automatically — without a human touching them.", delay: 0 },
+  { value: "50–70%", label: "Tickets resolved", text: "Of common support questions handled automatically, without a human touching them.", delay: 0 },
   { count: { target: 4, suffix: "x" }, label: "Faster qualification", text: "Vs. contact forms + manual follow-up, AI chatbots qualify leads 4× faster.", delay: 80 },
-  { value: "24/7", label: "Always working", text: "Nights, weekends, holidays — your chatbot catches every visitor, every time.", delay: 160 },
+  { value: "24/7", label: "Always working", text: "Nights, weekends, holidays, your chatbot catches every visitor, every time.", delay: 160 },
 ];
 
 const DONT = [
   { title: "Generic bots trained on nothing", text: <>Off-the-shelf chatbots that don’t know your business, hallucinate wrong answers, and make you look worse than having no chatbot at all.</>, delay: 0 },
-  { title: "Rule-based decision trees", text: <>The old “click A or B” flowcharts — frustrating for users, limited by design, and outdated the moment ChatGPT-style AI took over.</>, delay: 70 },
-  { title: "$50K enterprise custom LLMs", text: <>Real for banks, overkill for 99% of businesses. We use proven platforms (OpenAI, Claude, Gemini) trained on your business — <strong>same result at 1/10th the cost.</strong></>, delay: 0 },
-  { title: "Bots with no human handoff", text: <>When the bot can’t help, it should hand off to your team — with full history. Most agencies skip this. It’s the difference between “AI experiment” and “actually works.”</>, delay: 70 },
+  { title: "Rule-based decision trees", text: <>The old “click A or B” flowcharts, frustrating for users, limited by design, and outdated the moment ChatGPT-style AI took over.</>, delay: 70 },
+  { title: "$50K enterprise custom LLMs", text: <>Real for banks, overkill for 99% of businesses. We use proven platforms (OpenAI, Claude, Gemini) trained on your business, <strong>same result at 1/10th the cost.</strong></>, delay: 0 },
+  { title: "Bots with no human handoff", text: <>When the bot can’t help, it should hand off to your team, with full history. Most agencies skip this. It’s the difference between “AI experiment” and “actually works.”</>, delay: 70 },
 ];
 
 type CapKey = "support" | "leadgen" | "booking" | "sales" | "ecom" | "internal";
@@ -229,7 +229,7 @@ const CAPS: { key: CapKey; icon: ReactNode; label: string; sub: string; name: st
     label: "Customer support",
     sub: "FAQs, 24/7",
     name: "AI Customer Support Chatbot",
-    tag: "Answer FAQs, order status, return policies, and common tickets — 24/7.",
+    tag: "Answer FAQs, order status, return policies, and common tickets: 24/7.",
     items: ["FAQ auto-answer (trained on your docs)", "Order status + tracking lookups", "Return + refund policy questions", "Escalation to human when needed", "Multi-language support"],
   },
   {
@@ -265,7 +265,7 @@ const CAPS: { key: CapKey; icon: ReactNode; label: string; sub: string; name: st
     label: "Ecommerce",
     sub: "Shopify / Woo",
     name: "AI Ecommerce Chatbot",
-    tag: "Built for Shopify, WooCommerce, and BigCommerce — products, orders, support.",
+    tag: "Built for Shopify, WooCommerce, and BigCommerce, products, orders, support.",
     items: ["Shopify / WooCommerce native integration", "Product Q&A from your catalog", "Order tracking and status", "Upsell and cross-sell prompts", "Multi-channel (web + Instagram DM)"],
   },
   {
@@ -274,19 +274,19 @@ const CAPS: { key: CapKey; icon: ReactNode; label: string; sub: string; name: st
     label: "Internal knowledge",
     sub: "Team Q&A",
     name: "AI Internal Knowledge Bot",
-    tag: "Trained on your internal docs, wiki, or SOPs — instant answers instead of Slack pings.",
+    tag: "Trained on your internal docs, wiki, or SOPs, instant answers instead of Slack pings.",
     items: ["Trained on Notion, Google Drive, docs", "Employee Q&A (HR, IT, policies)", "Slack + Microsoft Teams integration", "Permission-based access control", "Ongoing content sync"],
   },
 ];
 
 const INCLUDED = [
   { no: "01", icon: ICON_GLOBE, title: "Strategy & scoping", text: "Business + audience discovery, use-case prioritization, success metrics, conversation flow, and escalation rules." },
-  { no: "02", icon: ICON_STAR, title: "Custom AI training", text: "Trained on your actual business — website, docs, FAQs, policies, PDFs — with ongoing sync as content updates." },
-  { no: "03", icon: ICON_APERTURE, title: "Design & branding", text: "Your colors, fonts, avatar, and voice — not a generic widget. Mobile-optimized, with custom conversation starters." },
+  { no: "02", icon: ICON_STAR, title: "Custom AI training", text: "Trained on your actual business, website, docs, FAQs, policies, PDFs, with ongoing sync as content updates." },
+  { no: "03", icon: ICON_APERTURE, title: "Design & branding", text: "Your colors, fonts, avatar, and voice, not a generic widget. Mobile-optimized, with custom conversation starters." },
   { no: "04", icon: ICON_LIST_CHECK, title: "Lead capture & CRM", text: "Email/phone capture, qualifying questions, lead scoring, CRM push (HubSpot, Salesforce, Pipedrive, GHL), real-time alerts." },
   { no: "05", icon: ICON_CALENDAR, title: "Appointment booking", text: "Calendly / Google Calendar / HubSpot Meetings, timezone detection, confirmations, SMS reminders, reschedule flows." },
   { no: "06", icon: ICON_HANDOFF, title: "Human handoff & live chat", text: "One-click escalation with full history preserved, team availability detection, and help-desk integration (Intercom, Zendesk)." },
-  { no: "07", icon: ICON_LINK, title: "Multi-channel deployment", text: "One brain, many channels — website widget, WhatsApp, Instagram DM, Messenger, SMS, and in-app chat." },
+  { no: "07", icon: ICON_LINK, title: "Multi-channel deployment", text: "One brain, many channels, website widget, WhatsApp, Instagram DM, Messenger, SMS, and in-app chat." },
   { no: "08", icon: ICON_TREND, title: "Optimization & reporting", text: "Weekly conversation review, accuracy scoring, failed-chat retraining, and a monthly report on tickets, leads, and meetings." },
 ];
 
@@ -321,25 +321,25 @@ const STEPS = [
 ];
 
 const TIERS = [
-  { name: "Starter Chatbot", best: "Small businesses — 1 use case (support OR lead gen), website only, up to 200 pages of training content.", price: "Published" },
+  { name: "Starter Chatbot", best: "Small businesses: 1 use case (support OR lead gen), website only, up to 200 pages of training content.", price: "Published" },
   { name: "Growth Chatbot", best: "2–3 use cases, website + 1 messaging channel (WhatsApp, Instagram, or Messenger), CRM integration.", price: "Published", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale Chatbot", best: "Ecommerce & larger businesses — full use-case suite, multi-channel deployment, custom integrations, multi-language.", price: "Published", delay: 140 },
-  { name: "Monthly Optimization", best: "Optional — ongoing retraining, content updates, new use cases, and monthly reporting.", price: "Published /mo", delay: 210 },
+  { name: "Scale Chatbot", best: "Ecommerce & larger businesses, full use-case suite, multi-channel deployment, custom integrations, multi-language.", price: "Published", delay: 140 },
+  { name: "Monthly Optimization", best: "Optional, ongoing retraining, content updates, new use cases, and monthly reporting.", price: "Published /mo", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "How much does an AI chatbot cost?", a: <>Depends on complexity. Simple support bots start at Starter; lead-capture + booking + CRM bots (Growth) are most popular; multi-channel builds land in Scale. <strong>Full pricing is published on this page</strong> — no hidden fees, no “custom quote” runaround.</> },
+  { q: "How much does an AI chatbot cost?", a: <>Depends on complexity. Simple support bots start at Starter; lead-capture + booking + CRM bots (Growth) are most popular; multi-channel builds land in Scale. <strong>Full pricing is published on this page</strong>, no hidden fees, no “custom quote” runaround.</> },
   { q: "How long does it take to build?", a: <>Starter: 2 weeks. Growth: 3 weeks. Scale (multi-channel + complex integrations): 3–4 weeks. <strong>Timelines depend on how quickly you review and approve</strong> at each stage.</> },
-  { q: "Will it actually know my business?", a: <>Yes — it’s trained specifically on YOUR business: website, product docs, FAQs, policies, PDFs, knowledge base. <strong>Every answer comes from your content,</strong> not a generic AI dataset. That’s the difference between helping and hallucinating.</> },
-  { q: "Can it handle booking and lead capture?", a: <>Yes — both are core in Growth and Scale. Appointments book directly to your calendar (Calendly, Google, HubSpot); leads capture into your CRM with <strong>real-time alerts.</strong></> },
-  { q: "Which AI platforms do you use?", a: <>Whichever fits best — usually <strong>OpenAI (GPT-4/GPT-5) or Claude.</strong> For data-sensitive businesses we can deploy on Azure OpenAI or self-hosted models. We recommend during the strategy call.</> },
-  { q: "What if it doesn’t know the answer?", a: <>It escalates to a human on your team with <strong>full conversation history preserved</strong> — or offers to email/call back, capture contact info, or book a time. We configure the rules to your use case.</> },
-  { q: "Can I install it on WordPress, Shopify, Webflow, Wix?", a: <>Yes — all of them, plus Squarespace, Framer, and any custom site via JavaScript embed. See the platforms section for the full list.</> },
-  { q: "Does it work on WhatsApp, Instagram, Messenger?", a: <>Yes — same AI brain across channels. Growth includes 1 messaging channel; Scale includes all. <strong>Unified conversation history in one dashboard.</strong></> },
-  { q: "Will the chatbot get better over time?", a: <>Yes — with the Monthly Optimization retainer. Every week we review conversations, catch gaps, retrain, and add content. <strong>Without optimization, bots drift; with it, they sharpen every month.</strong></> },
-  { q: "Do I own the chatbot and data?", a: <>Yes, 100% — the chatbot, training data, and conversation history, deployed on your accounts. <strong>If you leave, you keep everything.</strong> No proprietary lock-ins.</> },
-  { q: "Can it integrate with my CRM?", a: <>Yes — every captured lead pushes into your CRM with full context. Native integrations with <strong>HubSpot, Salesforce, Pipedrive, GoHighLevel, Zoho;</strong> others via Zapier or custom webhooks.</> },
-  { q: "Is this different from Intercom, Drift, or Tidio?", a: <>Those are platforms you configure yourself. This is <strong>done-for-you</strong> — we build, train, deploy, and optimize on your behalf. We can even deploy on top of Intercom or Drift if you already use them.</> },
+  { q: "Will it actually know my business?", a: <>Yes, it’s trained specifically on YOUR business: website, product docs, FAQs, policies, PDFs, knowledge base. <strong>Every answer comes from your content,</strong> not a generic AI dataset. That’s the difference between helping and hallucinating.</> },
+  { q: "Can it handle booking and lead capture?", a: <>Yes, both are core in Growth and Scale. Appointments book directly to your calendar (Calendly, Google, HubSpot); leads capture into your CRM with <strong>real-time alerts.</strong></> },
+  { q: "Which AI platforms do you use?", a: <>Whichever fits best, usually <strong>OpenAI (GPT-4/GPT-5) or Claude.</strong> For data-sensitive businesses we can deploy on Azure OpenAI or self-hosted models. We recommend during the strategy call.</> },
+  { q: "What if it doesn’t know the answer?", a: <>It escalates to a human on your team with <strong>full conversation history preserved</strong>, or offers to email/call back, capture contact info, or book a time. We configure the rules to your use case.</> },
+  { q: "Can I install it on WordPress, Shopify, Webflow, Wix?", a: <>Yes, all of them, plus Squarespace, Framer, and any custom site via JavaScript embed. See the platforms section for the full list.</> },
+  { q: "Does it work on WhatsApp, Instagram, Messenger?", a: <>Yes, same AI brain across channels. Growth includes 1 messaging channel; Scale includes all. <strong>Unified conversation history in one dashboard.</strong></> },
+  { q: "Will the chatbot get better over time?", a: <>Yes, with the Monthly Optimization retainer. Every week we review conversations, catch gaps, retrain, and add content. <strong>Without optimization, bots drift; with it, they sharpen every month.</strong></> },
+  { q: "Do I own the chatbot and data?", a: <>Yes, 100%, the chatbot, training data, and conversation history, deployed on your accounts. <strong>If you leave, you keep everything.</strong> No proprietary lock-ins.</> },
+  { q: "Can it integrate with my CRM?", a: <>Yes, every captured lead pushes into your CRM with full context. Native integrations with <strong>HubSpot, Salesforce, Pipedrive, GoHighLevel, Zoho;</strong> others via Zapier or custom webhooks.</> },
+  { q: "Is this different from Intercom, Drift, or Tidio?", a: <>Those are platforms you configure yourself. This is <strong>done-for-you</strong>, we build, train, deploy, and optimize on your behalf. We can even deploy on top of Intercom or Drift if you already use them.</> },
 ];
 
 /* -------- hero signature: sample chatbot conversation -------- */
@@ -373,10 +373,10 @@ function ChatCard() {
         <span className="rt">TRAINED ON YOU</span>
       </div>
       <div className="cb-chat-body">
-        <div className="cb-msg bot">Hi! I’m the Rapid Rooter assistant — how can I help? 👋</div>
+        <div className="cb-msg bot">Hi! I’m the Rapid Rooter assistant, how can I help? 👋</div>
         <div className="cb-msg user">Do you cover the 90210 area? And can I book same-day?</div>
         <div className="cb-msg bot">
-          Yes — we serve 90210 with <b>same-day service</b>. I can book you right now. What’s the best email for the
+          Yes, we serve 90210 with <b>same-day service</b>. I can book you right now. What’s the best email for the
           confirmation?
         </div>
         <div className="cb-msg user">alex@example.com</div>
@@ -527,7 +527,6 @@ export default function AiChatbotsView() {
     <div className="cb-page">
       <ServiceDetailHero
         crumb={{ label: "AI Automation", href: "/ai-automation" }}
-        eyebrow="AI chatbots for websites · Custom-trained · Live in 2–4 weeks"
         line1="An AI chatbot trained"
         line2={
           <>
@@ -536,7 +535,7 @@ export default function AiChatbotsView() {
         }
         lead={
           <>
-            Done-for-you AI chatbot development — custom-trained on your website, docs, and FAQs. It answers customer
+            Done-for-you AI chatbot development, custom-trained on your website, docs, and FAQs. It answers customer
             questions, qualifies leads, books appointments, and hands hot conversations to your team.{" "}
             <strong>Live 24/7, without the enterprise price tag.</strong>
           </>
@@ -555,9 +554,9 @@ export default function AiChatbotsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Why every business needs one in 2026</span>
-            <h2>Visitors want answers now — not a contact form.</h2>
+            <h2>Visitors want answers now, not a contact form.</h2>
             <p>
-              They’re asking about pricing, checking your service area, comparing your product, or trying to book — right
+              They’re asking about pricing, checking your service area, comparing your product, or trying to book, right
               now. An AI chatbot answers instantly, 24/7, on their terms.
             </p>
           </Reveal>
@@ -572,12 +571,12 @@ export default function AiChatbotsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What a well-built chatbot delivers</span>
-            <h2>Real 2026 benchmarks — not enterprise-only.</h2>
-            <p>What businesses using custom-trained AI chatbots for support and lead gen actually hit — every week.</p>
+            <h2>Real 2026 benchmarks, not enterprise-only.</h2>
+            <p>What businesses using custom-trained AI chatbots for support and lead gen actually hit, every week.</p>
           </Reveal>
           <StatsGrid />
           <Reveal as="p" className="cb-stat-note">
-            Small businesses, local services, and agencies hit these <strong>with the right chatbot setup</strong> — that’s
+            Small businesses, local services, and agencies hit these <strong>with the right chatbot setup</strong>, that’s
             what we build.
           </Reveal>
         </div>
@@ -590,7 +589,7 @@ export default function AiChatbotsView() {
             <span className="eyebrow">What we don’t build</span>
             <h2>Most “AI chatbot” services are broken.</h2>
             <p>
-              Being honest about what we <em>don’t</em> build — so you know exactly what you’re getting.
+              Being honest about what we <em>don’t</em> build, so you know exactly what you’re getting.
             </p>
           </Reveal>
           <div className="cb-dont-grid">
@@ -621,7 +620,7 @@ export default function AiChatbotsView() {
             <span className="eyebrow">What your chatbot can do</span>
             <h2>Not just support anymore.</h2>
             <p>
-              Pick the ones that matter for your business — most clients start with two or three, and add more as the
+              Pick the ones that matter for your business, most clients start with two or three, and add more as the
               chatbot proves its worth.
             </p>
           </Reveal>
@@ -635,7 +634,7 @@ export default function AiChatbotsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
             <h2>Everything the chatbot needs to actually work.</h2>
-            <p>Strategy, training, build, integrations, and ongoing optimization — run by one team, eight parts.</p>
+            <p>Strategy, training, build, integrations, and ongoing optimization, run by one team, eight parts.</p>
           </Reveal>
           <Reveal className="cb-inc-grid">
             {INCLUDED.map((item) => (
@@ -661,7 +660,7 @@ export default function AiChatbotsView() {
             <span className="eyebrow">Platforms we deploy on</span>
             <h2>Wherever your customers already are.</h2>
             <p>
-              We deploy on the platforms you already use — no forced migration. Most start with website + one messaging
+              We deploy on the platforms you already use, no forced migration. Most start with website + one messaging
               channel.
             </p>
           </Reveal>
@@ -706,7 +705,7 @@ export default function AiChatbotsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">How it works</span>
             <h2>Kickoff to a live chatbot in 2–4 weeks.</h2>
-            <p>A structured process — every step ends with a clear deliverable and your sign-off.</p>
+            <p>A structured process, every step ends with a clear deliverable and your sign-off.</p>
           </Reveal>
           <div className="cb-steps">
             {STEPS.map((step) => (
@@ -730,8 +729,8 @@ export default function AiChatbotsView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Project fees paid in two installments — <strong>50% at kickoff, 50% at launch.</strong> AI platform costs
-            (OpenAI, Claude API usage) are separate, usage-based — typically $20–$200/mo — passed through at cost. Every
+            Project fees paid in two installments, <strong>50% at kickoff, 50% at launch.</strong> AI platform costs
+            (OpenAI, Claude API usage) are separate, usage-based, typically $20–$200/mo, passed through at cost. Every
             rate is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
         </div>
@@ -746,7 +745,7 @@ export default function AiChatbotsView() {
         copy={
           <>
             Book a free AI chatbot demo. We’ll look at your website, walk through the use cases that fit, and show a live
-            demo of what a custom-trained chatbot could do for you —{" "}
+            demo of what a custom-trained chatbot could do for you,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>
               with a clear price at the end. No obligation, no jargon, no enterprise sales cycle.
             </strong>

@@ -51,9 +51,9 @@ export default function PricingHero() {
           </span>
         </h1>
         <p className="pr-lead">
-          Digital marketing packages and service pricing for business — published in full. The
+          Digital marketing packages and service pricing for business, published in full. The
           number you see is the number we mean. <strong>Ranges reflect scope</strong>, and
-          they&apos;re set together in your plan before work starts — not discovered later.
+          they&apos;re set together in your plan before work starts, not discovered later.
         </p>
         <div className="pr-trust">
           {CHIPS.map((chip) => (

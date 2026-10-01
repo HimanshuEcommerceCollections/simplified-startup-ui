@@ -8,7 +8,7 @@ const BUNDLES = [
   {
     tag: "Single service",
     feature: false,
-    best: "one clear gap — you need a site, or SEO, or the books cleaned up.",
+    best: "one clear gap, you need a site, or SEO, or the books cleaned up.",
     get: "that service, fully scoped and owned, with published pricing.",
     backLabel: "One service",
     backTitle: "Start with one.",
@@ -18,7 +18,7 @@ const BUNDLES = [
   {
     tag: "Growth bundle",
     feature: true,
-    best: "most startups — usually web + marketing, or marketing + sales.",
+    best: "most startups, usually web + marketing, or marketing + sales.",
     get: "coordinated channels, one plan, one report, and a bundle discount.",
     backLabel: "Most popular",
     backTitle: "Compound the wins.",
@@ -29,7 +29,7 @@ const BUNDLES = [
     tag: "Full stack",
     feature: false,
     best: "founders who'd rather run the company than run vendors.",
-    get: "the whole team — strategy through execution — as one engagement, at the best per-service rate.",
+    get: "the whole team, strategy through execution, as one engagement, at the best per-service rate.",
     backLabel: "Whole team",
     backTitle: "Run the company, not vendors.",
     backList: ["Strategy through execution", "One team, one engagement", "Best per-service rate"],
@@ -66,10 +66,10 @@ export default function BundleCards() {
     <section className="band light" id="bundling" aria-label="How bundling works">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— Pricing that rewards scope</span>
+          <span className="eyebrow">Pricing that rewards scope</span>
           <h2 className="bn-title">Bundle the services, not the invoices.</h2>
           <p className="bn-lead">
-            The more of the stack you run with us, the more the pieces compound — and the better
+            The more of the stack you run with us, the more the pieces compound, and the better
             the per-service price. Three ways founders start.
           </p>
         </Reveal>
@@ -83,7 +83,7 @@ export default function BundleCards() {
               className={`bn-card${b.feature ? " is-feature" : ""}${flipped[i] ? " flipped" : ""}`}
               tabIndex={0}
               role="button"
-              aria-label={`${b.tag} — flip for details`}
+              aria-label={`${b.tag}, flip for details`}
               aria-pressed={flipped[i]}
               onClick={onCardClick(i)}
               onKeyDown={onCardKey(i)}

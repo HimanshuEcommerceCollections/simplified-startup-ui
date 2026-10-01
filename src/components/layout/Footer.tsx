@@ -55,7 +55,7 @@ function NewsletterForm() {
   }
 
   if (state === "done") {
-    return <p className="news-done">You&apos;re in — thanks for subscribing.</p>;
+    return <p className="news-done">You&apos;re in, thanks for subscribing.</p>;
   }
   return (
     <form className="news" onSubmit={onSubmit}>
@@ -74,7 +74,7 @@ function NewsletterForm() {
       </button>
       {state === "error" && (
         <span className="news-err" role="alert">
-          Couldn&apos;t subscribe — check the address and try again.
+          Couldn&apos;t subscribe, check the address and try again.
         </span>
       )}
     </form>

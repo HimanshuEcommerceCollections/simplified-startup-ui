@@ -80,7 +80,7 @@ export default function FaqView({ categories = FAQ_CATEGORIES }: { categories?: 
             We&apos;ve got <span className="grad-text">answers.</span>
           </>
         }
-        lead="Everything people commonly ask — about our services, pricing, process, and how we work. In plain language, not sales pitches."
+        lead="Everything people commonly ask, about our services, pricing, process, and how we work. In plain language, not sales pitches."
         search={{
           placeholder: "Search questions…",
           ariaLabel: "Search questions",
@@ -181,7 +181,7 @@ export default function FaqView({ categories = FAQ_CATEGORIES }: { categories?: 
         copy={
           <>
             Didn&apos;t find what you were looking for?{" "}
-            <strong>We answer real questions in plain language — not sales pitches.</strong>
+            <strong>We answer real questions in plain language, not sales pitches.</strong>
           </>
         }
         primaryLabel="Contact us"

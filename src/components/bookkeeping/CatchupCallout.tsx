@@ -7,11 +7,11 @@ export default function CatchupCallout() {
       <div className="wrap">
         <Reveal anim="pop" className="bk-callout">
           <div className="bk-co-txt">
-            <span className="eyebrow bk-co-eyebrow">— Behind on the books?</span>
+            <span className="eyebrow bk-co-eyebrow">Behind on the books?</span>
             <h3>Catch-up and cleanup.</h3>
             <p>
               Months behind, or inherited a mess? Common, and fixable. We bring the books current
-              before monthly service starts — no lecture.
+              before monthly service starts, no lecture.
             </p>
           </div>
           <a href="#book" className="btn">

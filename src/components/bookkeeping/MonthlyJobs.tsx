@@ -5,10 +5,10 @@ import Reveal from "@/components/ui/Reveal";
 import "./monthly-jobs.css";
 
 const JOBS = [
-  { num: "01", title: "Categorize", back: "Every transaction sorted to the right account — not a guess, a rule you can see." },
+  { num: "01", title: "Categorize", back: "Every transaction sorted to the right account, not a guess, a rule you can see." },
   { num: "02", title: "Reconcile", back: "Bank and card accounts matched to the penny, so the books equal reality." },
   { num: "03", title: "Month-end close", back: "A dated close each month. You know exactly when the books are final." },
-  { num: "04", title: "Financial statements", back: "P&L, balance sheet, cash flow — in plain English, not accountant-speak." },
+  { num: "04", title: "Financial statements", back: "P&L, balance sheet, cash flow, in plain English, not accountant-speak." },
   { num: "05", title: "Resolve issues", back: 'Odd transactions flagged and chased down, not buried in "ask my client."' },
   { num: "06", title: "CPA-ready file", back: "Everything organized so tax time is a handoff, not a scramble." },
 ];
@@ -42,10 +42,10 @@ export default function MonthlyJobs() {
     <section className="band" aria-label="What's in monthly bookkeeping">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— Plain answer</span>
+          <span className="eyebrow">Plain answer</span>
           <h2>What&apos;s in monthly bookkeeping.</h2>
           <p className="bk-sub">
-            Six jobs, every month, on a date you can circle. That&apos;s it — no mystery line items.
+            Six jobs, every month, on a date you can circle. That&apos;s it, no mystery line items.
           </p>
         </Reveal>
         <div className="bk-jobs">
@@ -58,7 +58,7 @@ export default function MonthlyJobs() {
               className={`bk-job${flipped[i] ? " flipped" : ""}`}
               tabIndex={0}
               role="button"
-              aria-label={`${job.title} — flip for details`}
+              aria-label={`${job.title}, flip for details`}
               onClick={onClick(i)}
               onKeyDown={onKey(i)}
             >

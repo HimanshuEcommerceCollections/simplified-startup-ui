@@ -139,7 +139,7 @@ function ClusterCard() {
       </div>
       <div className="cmb-clus-rank">
         <span className="rk">
-          “revops guide” — position <b>#1</b>
+          “revops guide”, position <b>#1</b>
         </span>
         <span className="mv">{ICON_UP}#8 → #1</span>
       </div>
@@ -155,16 +155,16 @@ function ClusterCard() {
 const WHY = [
   { icon: ICON_TREND, title: "Compounds over time", text: <>Paid ads stop when the budget stops. Ranking content <strong>keeps producing traffic and leads month after month.</strong></> },
   { icon: ICON_BOLT, title: "Feeds AI search too", text: <>Google AI Overviews, ChatGPT search, and Perplexity all cite well-structured content. <strong>GEO is the new SEO.</strong></>, delay: 80 },
-  { icon: ICON_SHIELD, title: "Builds real E-E-A-T", text: <>Experience, Expertise, Authoritativeness, Trust — <strong>the factors Google now weights above raw keywords.</strong></>, delay: 160 },
+  { icon: ICON_SHIELD, title: "Builds real E-E-A-T", text: <>Experience, Expertise, Authoritativeness, Trust, <strong>the factors Google now weights above raw keywords.</strong></>, delay: 160 },
 ];
 
 /* -------- content types table -------- */
 
 const CONTENT_TYPES = [
-  { name: "Pillar Pages", intent: "Informational (broad)", purpose: "Anchor a topic cluster — comprehensive, definitive resource", len: "2,500–5,000+" },
+  { name: "Pillar Pages", intent: "Informational (broad)", purpose: "Anchor a topic cluster, comprehensive, definitive resource", len: "2,500–5,000+" },
   { name: "Cluster Articles", intent: "Informational (narrow)", purpose: "Long-tail keywords + internal linking to pillar", len: "1,000–2,000" },
   { name: "Product / Solution", intent: "Commercial + transactional", purpose: "BOFU conversion pages tied to buyer-intent keywords", len: "800–1,500" },
-  { name: "Comparison Pages", intent: "Commercial investigation", purpose: "“X vs Y”, “alternatives to X” — late-stage decision content", len: "1,500–2,500" },
+  { name: "Comparison Pages", intent: "Commercial investigation", purpose: "“X vs Y”, “alternatives to X”, late-stage decision content", len: "1,500–2,500" },
   { name: "Listicles & How-To", intent: "Informational", purpose: "Featured snippet + rich result targets", len: "1,500–3,000" },
   { name: "Case Studies", intent: "Trust + BOFU", purpose: "E-E-A-T signals, real results, social proof", len: "1,000–2,000" },
   { name: "Landing Page Copy", intent: "Transactional", purpose: "Paid ad landing pages, offer pages, lead magnets", len: "500–1,200" },
@@ -174,9 +174,9 @@ const CONTENT_TYPES = [
 /* -------- what we don't do (dark) -------- */
 
 const DONTS = [
-  { title: "Publish unedited AI content", text: <>AI drafts fast — but shipping raw output triggers Google’s spam updates and <strong>destroys E-E-A-T.</strong></> },
+  { title: "Publish unedited AI content", text: <>AI drafts fast, but shipping raw output triggers Google’s spam updates and <strong>destroys E-E-A-T.</strong></> },
   { title: "Chase keyword volume alone", text: <>High volume with wrong intent brings traffic that never converts. <strong>We prioritize intent match over raw volume.</strong></>, delay: 60 },
-  { title: "Stuff keywords", text: <>Modern search is semantic. We optimize for <strong>entities, topical depth, and natural language</strong> — not density.</>, delay: 120 },
+  { title: "Stuff keywords", text: <>Modern search is semantic. We optimize for <strong>entities, topical depth, and natural language</strong>, not density.</>, delay: 120 },
   { title: "Ignore internal linking", text: <>An orphan article ranks for nothing. <strong>Every piece slots into a cluster with strategic anchor text.</strong></> },
   { title: "Buy backlinks from PBNs", text: <>Google penalizes it. We build authority through <strong>digital PR, guest contributions, and link-worthy content.</strong></>, delay: 60 },
   { title: "Lock you into long contracts", text: <>Month-to-month. Cancel anytime. <strong>If content isn’t compounding by month 6, we shouldn’t be your agency.</strong></>, delay: 120 },
@@ -207,7 +207,7 @@ const INCLUDED: Included[] = [
     btnName: "Keyword & SERP research",
     btnSub: "Intent-first",
     name: "Keyword & SERP Research",
-    tag: "Intent-first research — every brief starts with a teardown of the current top 10.",
+    tag: "Intent-first research, every brief starts with a teardown of the current top 10.",
     items: ["Semrush, Ahrefs, SurferSEO research", "Search volume + keyword difficulty (KD)", "Search-intent mapping", "SERP feature analysis (snippets, PAA, AI Overviews)", "Full SERP teardown of top 10 results"],
   },
   {
@@ -215,7 +215,7 @@ const INCLUDED: Included[] = [
     btnName: "Briefs & SME interviews",
     btnSub: "Real expertise",
     name: "Content Briefs & SME Interviews",
-    tag: "Detailed briefs before a word is written — with real expertise injected.",
+    tag: "Detailed briefs before a word is written, with real expertise injected.",
     items: ["Target keywords + semantic entities", "Search intent + competitor coverage", "Headline + H2 structure", "Internal linking targets", "E-E-A-T signals to include", "SME interviews for real experience"],
   },
   {
@@ -223,7 +223,7 @@ const INCLUDED: Included[] = [
     btnName: "Production (human-edited)",
     btnSub: "Ranks, not penalized",
     name: "Production (AI-Assisted, Human-Edited)",
-    tag: "Fast first drafts, then a human editor — the difference between ranking and penalized.",
+    tag: "Fast first drafts, then a human editor, the difference between ranking and penalized.",
     items: ["First drafts via Claude, GPT-5, Jasper (your voice)", "Human editor fact-checks against sources", "Structure tightened, original examples added", "E-E-A-T signals layered in", "Brand-voice consistency enforced"],
   },
   {
@@ -231,7 +231,7 @@ const INCLUDED: Included[] = [
     btnName: "On-page SEO & schema",
     btnSub: "Rich results",
     name: "On-Page SEO & Structured Data",
-    tag: "Every piece ships fully optimized — eligible for rich results and AI citations.",
+    tag: "Every piece ships fully optimized, eligible for rich results and AI citations.",
     items: ["Title tags + meta descriptions", "Header hierarchy (H1–H4)", "Image alt text", "Internal linking with strategic anchors", "Schema (Article, FAQPage, HowTo, BreadcrumbList)"],
   },
   {
@@ -239,7 +239,7 @@ const INCLUDED: Included[] = [
     btnName: "Publishing & CMS",
     btnSub: "Any platform",
     name: "Publishing & CMS Integration",
-    tag: "Direct publishing to your CMS — formatted, imaged, and ready. You approve every piece.",
+    tag: "Direct publishing to your CMS, formatted, imaged, and ready. You approve every piece.",
     items: ["WordPress, Webflow, Framer, Shopify, HubSpot, Ghost", "Image sourcing or AI generation (Midjourney/DALL-E)", "Featured image design", "Readability formatting", "Your approval before anything goes live"],
   },
   {
@@ -247,7 +247,7 @@ const INCLUDED: Included[] = [
     btnName: "Distribution & repurposing",
     btnSub: "1 → many",
     name: "Distribution & Repurposing",
-    tag: "One long-form piece becomes many assets — automated so content works harder.",
+    tag: "One long-form piece becomes many assets, automated so content works harder.",
     items: ["Email newsletter (Klaviyo, HubSpot, Brevo, ConvertKit)", "LinkedIn + X + Threads posts from pillar content", "Short-form video scripts (Reels, Shorts, TikTok)", "Podcast outlines from top posts", "Repurposing automation"],
   },
   {
@@ -255,7 +255,7 @@ const INCLUDED: Included[] = [
     btnName: "Refresh & pruning",
     btnSub: "+30–50% traffic",
     name: "Content Refresh & Pruning",
-    tag: "Old content decays — refresh alone can lift organic traffic 30–50% in 90 days.",
+    tag: "Old content decays, refresh alone can lift organic traffic 30–50% in 90 days.",
     items: ["Continuous ranking + traffic monitoring", "Refresh top-of-funnel every 6–12 months", "Prune / consolidate underperforming pages", "Boost overall site authority", "Date-signal updates"],
   },
   {
@@ -263,7 +263,7 @@ const INCLUDED: Included[] = [
     btnName: "Reporting & attribution",
     btnSub: "Tied to pipeline",
     name: "Reporting & Attribution",
-    tag: "Monthly reports tied to real outcomes — not just “here’s the dashboard.”",
+    tag: "Monthly reports tied to real outcomes, not just “here’s the dashboard.”",
     items: ["Organic traffic growth", "Keyword ranking movement", "Backlinks earned", "Pipeline / revenue attribution", "Live dashboards (GA4, GSC, Semrush)", "Quarterly strategy reviews"],
   },
 ];
@@ -337,16 +337,16 @@ function IncludedExplorer() {
 /* -------- who / fit -------- */
 
 const FIT_GOOD = [
-  <><strong>B2B SaaS</strong> with a defined ICP and considered sales cycle — SEO content is the #1 lowest-CAC channel long-term.</>,
+  <><strong>B2B SaaS</strong> with a defined ICP and considered sales cycle: SEO content is the #1 lowest-CAC channel long-term.</>,
   <><strong>Agencies &amp; consultants</strong> using thought leadership to attract inbound and shorten sales cycles.</>,
   <><strong>E-commerce brands</strong> needing category pages, product education, buying guides, and comparison content.</>,
-  <><strong>Professional services</strong> (legal, financial, healthcare) — where E-E-A-T signals directly affect lead quality.</>,
-  <><strong>Startups building an audience pre-launch</strong> — seed a market with authority before the product ships.</>,
+  <><strong>Professional services</strong> (legal, financial, healthcare), where E-E-A-T signals directly affect lead quality.</>,
+  <><strong>Startups building an audience pre-launch</strong>, seed a market with authority before the product ships.</>,
 ];
 
 const FIT_BAD = [
-  <><strong>Need pipeline in 30 days?</strong> Content is a 6–12 month investment — paid ads are the answer.</>,
-  <><strong>Impulse-purchase products</strong> or audiences that don’t search Google — paid social / influencer converts better.</>,
+  <><strong>Need pipeline in 30 days?</strong> Content is a 6–12 month investment, paid ads are the answer.</>,
+  <><strong>Impulse-purchase products</strong> or audiences that don’t search Google, paid social / influencer converts better.</>,
 ];
 
 /* -------- how it works -------- */
@@ -363,11 +363,11 @@ const STEPS = [
 
 const FAQS = [
   { q: "How long before I see results?", a: <>First long-tail rankings in <strong>30–60 days;</strong> meaningful traffic growth around month 3–4; compounding organic (where it really pays off) from <strong>month 6 onward.</strong> Anyone promising faster is buying links or misleading you.</> },
-  { q: "Will Google penalize AI-generated content?", a: <>Only low-quality AI slop with no human editing. Google rewards high-quality content regardless of how it’s produced. <strong>Our human editorial layer adds fact-checking, original examples, and E-E-A-T</strong> — the difference between ranking and penalized.</> },
-  { q: "What is GEO / AI Overview optimization?", a: <>GEO structures content to be cited by Google AI Overviews, ChatGPT search, and Perplexity — it needs clear entities, semantic structure, schema, and E-E-A-T. <strong>We optimize every piece for both traditional SERPs and GEO.</strong></> },
-  { q: "Do you handle keyword research and clusters?", a: <>Everything — full research via <strong>Semrush, Ahrefs, and SurferSEO,</strong> mapped to intent and competition. Topic clusters designed to build topical authority. You just approve the roadmap.</> },
-  { q: "Do you publish to my CMS?", a: <>Yes — WordPress, Webflow, Framer, Shopify, HubSpot, Ghost, or custom. Includes image sourcing/generation, featured-image design, and formatting. <strong>You approve every piece before it goes live.</strong></> },
-  { q: "Do I own the content?", a: <>Yes, 100% — all content, brand-voice training, research, and editorial assets, published on your domain and accounts. <strong>If you leave, you keep everything.</strong></> },
+  { q: "Will Google penalize AI-generated content?", a: <>Only low-quality AI slop with no human editing. Google rewards high-quality content regardless of how it’s produced. <strong>Our human editorial layer adds fact-checking, original examples, and E-E-A-T</strong>, the difference between ranking and penalized.</> },
+  { q: "What is GEO / AI Overview optimization?", a: <>GEO structures content to be cited by Google AI Overviews, ChatGPT search, and Perplexity, it needs clear entities, semantic structure, schema, and E-E-A-T. <strong>We optimize every piece for both traditional SERPs and GEO.</strong></> },
+  { q: "Do you handle keyword research and clusters?", a: <>Everything, full research via <strong>Semrush, Ahrefs, and SurferSEO,</strong> mapped to intent and competition. Topic clusters designed to build topical authority. You just approve the roadmap.</> },
+  { q: "Do you publish to my CMS?", a: <>Yes: WordPress, Webflow, Framer, Shopify, HubSpot, Ghost, or custom. Includes image sourcing/generation, featured-image design, and formatting. <strong>You approve every piece before it goes live.</strong></> },
+  { q: "Do I own the content?", a: <>Yes, 100%, all content, brand-voice training, research, and editorial assets, published on your domain and accounts. <strong>If you leave, you keep everything.</strong></> },
 ];
 
 export default function ContentMarketingView() {
@@ -376,8 +376,7 @@ export default function ContentMarketingView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="SEO content · Topic clusters · E-E-A-T · AI Overviews"
-        line1="Content that ranks —"
+        line1="Content that ranks"
         line2={
           <>
             and keeps <ScrambleWord text="compounding." />
@@ -404,14 +403,14 @@ export default function ContentMarketingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Why content still wins in 2026</span>
             <h2>The only channel where the asset keeps working after you stop paying.</h2>
-            <p>A well-optimized pillar page can rank for years, generate compounding organic traffic, feed retargeting, and get cited in AI Overviews — all from one investment.</p>
+            <p>A well-optimized pillar page can rank for years, generate compounding organic traffic, feed retargeting, and get cited in AI Overviews, all from one investment.</p>
           </Reveal>
           <div className="cmb-why">
             <FeatureGrid cards={WHY} columns={3} />
           </div>
           <Reveal as="p" className="cmb-ct-note" style={{ marginTop: 26 }}>
             Every business that stopped writing after ChatGPT launched lost their organic pipeline. The ones that doubled
-            down — <strong>with human-edited, E-E-A-T-first content — are dominating SERPs.</strong>
+            down, <strong>with human-edited, E-E-A-T-first content, are dominating SERPs.</strong>
           </Reveal>
         </div>
       </section>
@@ -421,7 +420,7 @@ export default function ContentMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Content types we produce</span>
-            <h2>The full funnel — no generic “blog posts.”</h2>
+            <h2>The full funnel, no generic “blog posts.”</h2>
             <p>Different search intents need different formats. We produce the full mix across TOFU, MOFU, and BOFU so nothing in your organic strategy is missing.</p>
           </Reveal>
           <Reveal className="cmb-ct-tbl">
@@ -468,7 +467,7 @@ export default function ContentMarketingView() {
           <Reveal className="cmb-dont-note">
             <span className="mk">{ICON_CHECK}</span>
             <p>
-              Human-edited, intent-matched, E-E-A-T-first content — <strong>the kind that actually compounds.</strong>
+              Human-edited, intent-matched, E-E-A-T-first content, <strong>the kind that actually compounds.</strong>
             </p>
           </Reveal>
         </div>
@@ -479,8 +478,8 @@ export default function ContentMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
-            <h2>Strategy to attribution — one system.</h2>
-            <p>End-to-end content marketing: strategy, production, optimization, distribution, and measurement. Nine parts — pick one to see inside.</p>
+            <h2>Strategy to attribution, one system.</h2>
+            <p>End-to-end content marketing: strategy, production, optimization, distribution, and measurement. Nine parts, pick one to see inside.</p>
           </Reveal>
           <IncludedExplorer />
         </div>
@@ -551,11 +550,11 @@ export default function ContentMarketingView() {
 
       <CtaBand
         eyebrow="Content Marketing & Blogging"
-        heading="Book a free content marketing audit — no obligation."
+        heading="Book a free content marketing audit, no obligation."
         copy={
           <>
-            We’ll review your existing content, your topical footprint, and your competitor landscape — then deliver a
-            clear 90-day content roadmap with topic clusters, keyword targets, and publishing cadence —{" "}
+            We’ll review your existing content, your topical footprint, and your competitor landscape, then deliver a
+            clear 90-day content roadmap with topic clusters, keyword targets, and publishing cadence,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>usually within 48 hours of the call.</strong>
           </>
         }

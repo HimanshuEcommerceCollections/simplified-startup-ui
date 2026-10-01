@@ -18,7 +18,7 @@ const CARDS = [
   {
     kicker: "Team shape",
     title: "Small teams",
-    copy: "A marketer but no designer, a dev but no strategist — we fill the gaps.",
+    copy: "A marketer but no designer, a dev but no strategist, we fill the gaps.",
   },
 ];
 
@@ -98,10 +98,10 @@ export default function FitCheck() {
     <section className="band" id="who" aria-label="Who it's for">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— Fit check</span>
+          <span className="eyebrow">Fit check</span>
           <h2 className="who-title">Built for founders who&apos;d rather build the business.</h2>
           <p className="who-lead">
-            The stack fits best if you&apos;re one of these — and we&apos;ll tell you honestly if
+            The stack fits best if you&apos;re one of these, and we&apos;ll tell you honestly if
             you&apos;re not.
           </p>
         </Reveal>
@@ -130,7 +130,7 @@ export default function FitCheck() {
             </span>
             <p>
               <span className="fc-not-label">Not for</span> anyone shopping purely on lowest price,
-              or expecting overnight results on a real growth channel. We commit to the work —
+              or expecting overnight results on a real growth channel. We commit to the work,
               scope, cadence, and the quality bar.
             </p>
           </div>

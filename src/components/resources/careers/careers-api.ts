@@ -24,7 +24,7 @@ export async function fetchRoles(): Promise<Role[]> {
     if (!data.ok || !Array.isArray(data.items) || data.items.length === 0) return ROLES;
     return data.items.map((r) => ({ id: r.id, title: r.title, type: r.type, desc: r.description, location: r.location, body: r.body }));
   } catch {
-    console.warn("[careers] falling back to bundled roles — API unreachable at build time");
+    console.warn("[careers] falling back to bundled roles: API unreachable at build time");
     return ROLES;
   }
 }

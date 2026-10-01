@@ -200,8 +200,8 @@ function CampaignCard() {
           <span className="pl">{ICON_PLAY}</span>
         </span>
         <span className="cc">
-          <span className="adname">Summer Drop — UGC video</span>
-          <span className="adtxt">“The tote everyone’s asking about — back in stock.”</span>
+          <span className="adname">Summer Drop: UGC video</span>
+          <span className="adtxt">“The tote everyone’s asking about, back in stock.”</span>
           <span className="cta">Shop now</span>
         </span>
       </div>
@@ -232,10 +232,10 @@ function CampaignCard() {
 const FEATURES = [
   { icon: ICON_TARGET, title: "Massive reach, precise targeting", text: <>Reach almost any US audience by <strong>interest, behavior, location, or lookalike.</strong></> },
   { icon: ICON_BOLT, title: "Creative is the unfair advantage", text: <>Great creative beats a big budget with weak creative. <strong>Small brands win here every day.</strong></>, delay: 60 },
-  { icon: ICON_LINES, title: "Full-funnel in one platform", text: <>Awareness with Reels, consideration with carousels, conversion with retargeting — <strong>one ad account.</strong></>, delay: 120 },
+  { icon: ICON_LINES, title: "Full-funnel in one platform", text: <>Awareness with Reels, consideration with carousels, conversion with retargeting, <strong>one ad account.</strong></>, delay: 120 },
   { icon: ICON_CLOCK, title: "Fast feedback loop", text: <>Test five creatives Monday, know the winner by Friday. <strong>Nothing compares for speed.</strong></> },
   { icon: ICON_REFRESH, title: "Retargeting that closes", text: <>80% don’t buy on the first visit. Retargeting brings them back <strong>at a fraction of the CPC.</strong></>, delay: 60 },
-  { icon: ICON_CHART, title: "Fastest way to scale", text: <>Sales for e-commerce, leads for services, awareness for new brands — <strong>done right, nothing’s faster.</strong></>, delay: 120 },
+  { icon: ICON_CHART, title: "Fastest way to scale", text: <>Sales for e-commerce, leads for services, awareness for new brands, <strong>done right, nothing’s faster.</strong></>, delay: 120 },
 ];
 
 /* -------- stats (dark, count-up) -------- */
@@ -251,8 +251,8 @@ type Stat = {
 };
 
 const STATS: Stat[] = [
-  { target: 3, suffix: "B+", label: "Monthly reach", text: "People on Facebook & Instagram every month — whatever your buyer looks like, they’re here.", delay: 0 },
-  { target: 76, suffix: "%", label: "Of spend wasted", text: "By Meta’s own numbers — because most agencies set campaigns once and let the algorithm coast.", delay: 80 },
+  { target: 3, suffix: "B+", label: "Monthly reach", text: "People on Facebook & Instagram every month, whatever your buyer looks like, they’re here.", delay: 0 },
+  { target: 76, suffix: "%", label: "Of spend wasted", text: "By Meta’s own numbers, because most agencies set campaigns once and let the algorithm coast.", delay: 80 },
   { value: "30–50%", label: "Data lost since iOS 14", text: "The Pixel alone loses this much conversion data. Only a proper Conversions API setup recovers it.", delay: 160 },
 ];
 
@@ -311,11 +311,11 @@ function StatsGrid() {
 /* -------- the problem with most Meta ads agencies -------- */
 
 const PROBLEMS = [
-  { icon: X_ICON, title: "They charge % of ad spend", text: <>They win when you <strong>spend more</strong> — not when you make more. Misaligned incentives by design.</> },
+  { icon: X_ICON, title: "They charge % of ad spend", text: <>They win when you <strong>spend more</strong>, not when you make more. Misaligned incentives by design.</> },
   { icon: X_ICON, title: "76% of spend wasted", text: <>Meta’s own number. Most agencies set campaigns up once and <strong>let the algorithm coast.</strong></>, delay: 60 },
   { icon: X_ICON, title: "Creative split from media buying", text: <>Two agencies who <strong>blame each other</strong> when performance drops. Nobody owns the result.</>, delay: 120 },
   { icon: X_ICON, title: "They ignore iOS / CAPI tracking", text: <>The Pixel alone loses 30–50% of conversion data. <strong>Most never set up the Conversions API properly.</strong></> },
-  { icon: X_ICON, title: "They report vanity metrics", text: <>Reach, impressions, CPMs — numbers that look big but <strong>don’t pay the bills.</strong></>, delay: 60 },
+  { icon: X_ICON, title: "They report vanity metrics", text: <>Reach, impressions, CPMs, numbers that look big but <strong>don’t pay the bills.</strong></>, delay: 60 },
   { icon: X_ICON, title: "$5K–$10K minimum spends", text: <>Which <strong>prices out most small businesses</strong> that could actually benefit from Meta ads.</>, delay: 120 },
 ];
 
@@ -324,11 +324,11 @@ const PROBLEMS = [
 const INCLUDED = [
   { icon: ICON_AUDIT, no: "01", title: "Free ads account audit", text: "Structure review, wasted-spend + audience-overlap analysis, Pixel/CAPI accuracy check, and a plain-language fix list." },
   { icon: ICON_LINES_TAPER, no: "02", title: "Strategy & structure", text: "KPI definition, full-funnel campaign structure, audience segmentation, budget allocation, bid strategy, testing framework." },
-  { icon: ICON_BOLT, no: "03", title: "Creative production", text: "Creative is 80% of performance — static, carousel, video, Reels-native, UGC-style ads, hooks, and weekly refresh." },
+  { icon: ICON_BOLT, no: "03", title: "Creative production", text: "Creative is 80% of performance, static, carousel, video, Reels-native, UGC-style ads, hooks, and weekly refresh." },
   { icon: ICON_PERSON_PLUS, no: "04", title: "Audience & targeting", text: "Custom + lookalike audiences, interest/behavior targeting, retargeting layers, Advantage+ testing, and exclusions." },
-  { icon: ICON_SHIELD_CHECK, no: "05", title: "Tracking (Pixel + CAPI)", text: "The #1 reason ads underperform — Pixel + Conversions API, server-side tracking, enhanced match, GA4 + CRM." },
+  { icon: ICON_SHIELD_CHECK, no: "05", title: "Tracking (Pixel + CAPI)", text: "The #1 reason ads underperform: Pixel + Conversions API, server-side tracking, enhanced match, GA4 + CRM." },
   { icon: ICON_REFRESH, no: "06", title: "Ongoing optimization", text: "Weekly creative rotation, audience scaling, bid/budget adjustments, ad-set consolidation, placement optimization." },
-  { icon: ICON_PHONE, no: "07", title: "Landing pages & post-click", text: "The best ad can’t save a bad landing page — audit, optional build, A/B testing, mobile-first (90% of traffic)." },
+  { icon: ICON_PHONE, no: "07", title: "Landing pages & post-click", text: "The best ad can’t save a bad landing page, audit, optional build, A/B testing, mobile-first (90% of traffic)." },
   { icon: ICON_CHART, no: "08", title: "Reporting & reviews", text: "Monthly plain-language report (revenue, leads, ROAS, CPA), creative breakdown, live dashboard, quarterly reviews." },
 ];
 
@@ -359,7 +359,7 @@ const TYPES: BusinessType[] = [
     btnName: "Local businesses",
     btnSub: "Bookings & walk-ins",
     name: "Meta Ads for Local Businesses",
-    tag: "For salons, gyms, restaurants, clinics — anyone drawing local customers.",
+    tag: "For salons, gyms, restaurants, clinics, anyone drawing local customers.",
     items: [
       "Radius & location-based targeting",
       "Click-to-message & lead form ads",
@@ -423,7 +423,7 @@ const TYPES: BusinessType[] = [
     btnName: "Meta Ads Audit",
     btnSub: "One-off review",
     name: "Meta Ads Audit",
-    tag: "A deep one-off review of your existing account — no commitment.",
+    tag: "A deep one-off review of your existing account, no commitment.",
     items: [
       "Full account structure review",
       "Wasted spend & audience overlap analysis",
@@ -501,12 +501,12 @@ function TypesExplorer() {
 /* -------- who it's for -------- */
 
 const WHO = [
-  { icon: ICON_CART, text: <><strong>An e-commerce brand</strong> with a real product and margins — Meta is the top channel for scaling online sales.</> },
-  { icon: ICON_PIN, text: <><strong>A local service business</strong> — gym, salon, restaurant, clinic — where visual, location-based ads drive bookings.</>, delay: 60 },
+  { icon: ICON_CART, text: <><strong>An e-commerce brand</strong> with a real product and margins: Meta is the top channel for scaling online sales.</> },
+  { icon: ICON_PIN, text: <><strong>A local service business</strong>, gym, salon, restaurant, clinic, where visual, location-based ads drive bookings.</>, delay: 60 },
   { icon: ICON_PERSON, text: <><strong>A B2C or DTC brand</strong> selling to consumers who make lifestyle-driven purchase decisions.</>, delay: 120 },
   { icon: ICON_LINES, text: <><strong>A lead-gen business</strong> with a defined CPL you can pay and still hit margin.</> },
-  { icon: ICON_ROCKET_PLAIN, text: <><strong>A new brand or product</strong> that needs to build awareness fast — nothing scales reach like Meta.</>, delay: 60 },
-  { icon: ICON_REFRESH, text: <><strong>“Already running Meta ads”</strong> with mediocre results — and want a real audit and creative strategy, not another report.</>, delay: 120 },
+  { icon: ICON_ROCKET_PLAIN, text: <><strong>A new brand or product</strong> that needs to build awareness fast, nothing scales reach like Meta.</>, delay: 60 },
+  { icon: ICON_REFRESH, text: <><strong>“Already running Meta ads”</strong> with mediocre results, and want a real audit and creative strategy, not another report.</>, delay: 120 },
 ];
 
 /* -------- how it works -------- */
@@ -522,9 +522,9 @@ const STEPS = [
 /* -------- pricing -------- */
 
 const TIERS = [
-  { name: "Starter Meta", best: "Under $2K/month on ads — one funnel stage, monthly creative refresh.", price: "Published /mo" },
-  { name: "Growth Meta", best: "Growing accounts — full funnel, weekly creative testing, retargeting layer.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale Meta", best: "Larger accounts & e-commerce — Advantage+ Shopping, catalog work, daily optimization, high creative volume.", price: "Published /mo", delay: 140 },
+  { name: "Starter Meta", best: "Under $2K/month on ads, one funnel stage, monthly creative refresh.", price: "Published /mo" },
+  { name: "Growth Meta", best: "Growing accounts, full funnel, weekly creative testing, retargeting layer.", price: "Published /mo", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Scale Meta", best: "Larger accounts & e-commerce: Advantage+ Shopping, catalog work, daily optimization, high creative volume.", price: "Published /mo", delay: 140 },
   { name: "One-off Meta Ads Audit", best: "A deep audit + strategy doc for your existing account, no commitment.", price: "Published", delay: 210 },
 ];
 
@@ -532,15 +532,15 @@ const TIERS = [
 
 const FAQS = [
   { q: "How much should I spend on Meta ads?", a: <>Enough to generate <strong>50+ conversions per week per campaign</strong> so the algorithm can optimize. For most small businesses that’s $1K–$3K/month; for e-commerce or scaling brands, $5K–$100K+.</> },
-  { q: "Do you have a minimum ad spend?", a: <>No. Most agencies won’t take clients under $5K–$10K/month. <strong>We work at whatever spend makes sense</strong> — including under $1K/month.</> },
-  { q: "Do you take a percentage of my ad spend?", a: <>No — a flat monthly management fee, published up front. Your ad spend goes directly to Meta; we never mark it up or take a cut. <strong>Our incentives stay aligned with your ROI, not your spend.</strong></> },
+  { q: "Do you have a minimum ad spend?", a: <>No. Most agencies won’t take clients under $5K–$10K/month. <strong>We work at whatever spend makes sense</strong>, including under $1K/month.</> },
+  { q: "Do you take a percentage of my ad spend?", a: <>No, a flat monthly management fee, published up front. Your ad spend goes directly to Meta; we never mark it up or take a cut. <strong>Our incentives stay aligned with your ROI, not your spend.</strong></> },
   { q: "How long before I see results?", a: <>Traffic and engagement day one. Meaningful ROAS/CPL data in <strong>2–4 weeks</strong> as the algorithm learns. Real compounding growth usually starts month 2–3.</> },
-  { q: "Do you handle the creative?", a: <>Yes — strategy, briefs, and production included: static, carousel, video, and Reels-native. If you have brand assets or content, <strong>even better; we work with what you have.</strong></> },
-  { q: "What about the iOS 14 privacy changes?", a: <>Ads still work — but only with correct tracking. The Pixel alone loses 30–50% of data since iOS 14. <strong>We fix it with the Conversions API and server-side tracking</strong> — which most agencies still skip.</> },
-  { q: "Facebook and Instagram both?", a: <>Yes — that’s what “Meta ads” means. Facebook Feed & Stories, Instagram Feed, Reels & Stories, plus Messenger and Audience Network. <strong>We place them where they perform best.</strong></> },
-  { q: "Do you run TikTok or LinkedIn ads?", a: <>LinkedIn Ads is a separate service; TikTok can be added on request. <strong>Meta remains the largest paid social channel</strong> for most businesses — which is why it gets its own service.</> },
-  { q: "I’m already running ads with another agency — switch?", a: <>Start with our free audit. Most accounts have preventable issues — audience overlap, weak CAPI, ad fatigue, wrong bid strategy. <strong>Often the fixes alone cover our fee.</strong></> },
-  { q: "Do I own the ad account?", a: <>Yes — every account we build or manage is under your ownership. You’re the primary owner, we’re a partner. <strong>If you leave, you keep everything.</strong></> },
+  { q: "Do you handle the creative?", a: <>Yes, strategy, briefs, and production included: static, carousel, video, and Reels-native. If you have brand assets or content, <strong>even better; we work with what you have.</strong></> },
+  { q: "What about the iOS 14 privacy changes?", a: <>Ads still work, but only with correct tracking. The Pixel alone loses 30–50% of data since iOS 14. <strong>We fix it with the Conversions API and server-side tracking</strong>, which most agencies still skip.</> },
+  { q: "Facebook and Instagram both?", a: <>Yes, that’s what “Meta ads” means. Facebook Feed & Stories, Instagram Feed, Reels & Stories, plus Messenger and Audience Network. <strong>We place them where they perform best.</strong></> },
+  { q: "Do you run TikTok or LinkedIn ads?", a: <>LinkedIn Ads is a separate service; TikTok can be added on request. <strong>Meta remains the largest paid social channel</strong> for most businesses, which is why it gets its own service.</> },
+  { q: "I’m already running ads with another agency, switch?", a: <>Start with our free audit. Most accounts have preventable issues, audience overlap, weak CAPI, ad fatigue, wrong bid strategy. <strong>Often the fixes alone cover our fee.</strong></> },
+  { q: "Do I own the ad account?", a: <>Yes, every account we build or manage is under your ownership. You’re the primary owner, we’re a partner. <strong>If you leave, you keep everything.</strong></> },
 ];
 
 export default function MetaAdsView() {
@@ -549,16 +549,15 @@ export default function MetaAdsView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="Facebook · Instagram · Reels · Messenger · WhatsApp"
         line1="Ads people actually"
         line2={
           <>
-            watch — that <span className="grad-text">sell.</span>
+            watch, that <span className="grad-text">sell.</span>
           </>
         }
         lead={
           <>
-            Facebook and Instagram ads that drive sales, leads, and repeat customers — not just cheap impressions. Creative
+            Facebook and Instagram ads that drive sales, leads, and repeat customers, not just cheap impressions. Creative
             that stops the scroll, targeting that finds the buyer, tracking that survives iOS updates.{" "}
             <strong>Managed by one team, at published prices, with no minimum spend.</strong>
           </>
@@ -576,8 +575,8 @@ export default function MetaAdsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Why Meta ads still deliver</span>
-            <h2>3+ billion people, every month — your buyer is one of them.</h2>
-            <p>Whatever your customer looks like, they’re there — scrolling, watching Reels, DMing, and shopping. Meta ads show up where their attention already is.</p>
+            <h2>3+ billion people, every month, your buyer is one of them.</h2>
+            <p>Whatever your customer looks like, they’re there, scrolling, watching Reels, DMing, and shopping. Meta ads show up where their attention already is.</p>
           </Reveal>
           <div className="meta-why">
             <FeatureGrid cards={FEATURES} columns={3} />
@@ -590,12 +589,12 @@ export default function MetaAdsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">The numbers behind the platform</span>
-            <h2>Reach is huge — but most spend leaks.</h2>
-            <p>Three numbers that explain why Meta is the top paid channel — and why most accounts still underperform.</p>
+            <h2>Reach is huge, but most spend leaks.</h2>
+            <p>Three numbers that explain why Meta is the top paid channel, and why most accounts still underperform.</p>
           </Reveal>
           <StatsGrid />
           <Reveal as="p" className="meta-stat-note">
-            Done right — clean structure, strong creative, and recovered tracking — Meta is the fastest way to scale.{" "}
+            Done right, clean structure, strong creative, and recovered tracking: Meta is the fastest way to scale.{" "}
             <strong>We built our service to fix the leaks most agencies ignore.</strong>
           </Reveal>
         </div>
@@ -606,8 +605,8 @@ export default function MetaAdsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">The problem with most Meta ads agencies</span>
-            <h2>Overpromise, underdeliver — the pattern we see over and over.</h2>
-            <p>The Meta ads space is full of it. Here’s exactly what goes wrong — and what we built our service to fix.</p>
+            <h2>Overpromise, underdeliver, the pattern we see over and over.</h2>
+            <p>The Meta ads space is full of it. Here’s exactly what goes wrong, and what we built our service to fix.</p>
           </Reveal>
           <div className="meta-problem">
             <ProblemSolve
@@ -616,7 +615,7 @@ export default function MetaAdsView() {
               draw
               solve={
                 <>
-                  We built our Meta Ads service to fix <strong>every one of those</strong> — flat fee, one team, proper tracking, no
+                  We built our Meta Ads service to fix <strong>every one of those</strong>, flat fee, one team, proper tracking, no
                   minimum spend.
                 </>
               }
@@ -630,7 +629,7 @@ export default function MetaAdsView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
-            <h2>Strategy to reporting — one team.</h2>
+            <h2>Strategy to reporting, one team.</h2>
             <p>Everything a Meta ads program needs: strategy, creative, media buying, tracking, and reporting. Eight parts.</p>
           </Reveal>
           <Reveal className="meta-inc-grid">
@@ -656,7 +655,7 @@ export default function MetaAdsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Built for your business type</span>
             <h2>Meta ads work differently for everyone.</h2>
-            <p>It depends on who you’re selling to and what you sell. Pick your type — see the package built for it.</p>
+            <p>It depends on who you’re selling to and what you sell. Pick your type, see the package built for it.</p>
           </Reveal>
           <TypesExplorer />
         </div>
@@ -686,7 +685,7 @@ export default function MetaAdsView() {
           <Reveal className="sec-head">
             <span className="eyebrow">How it works</span>
             <h2>Early wins, then durable compounding performance.</h2>
-            <p>A structured process — every step ends with a deliverable and your sign-off.</p>
+            <p>A structured process, every step ends with a deliverable and your sign-off.</p>
           </Reveal>
           <div className="meta-steps">
             {STEPS.map((step) => (
@@ -710,7 +709,7 @@ export default function MetaAdsView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Retainers are <strong>month-to-month.</strong> Ad spend is separate from management fees — paid directly to Meta,
+            Retainers are <strong>month-to-month.</strong> Ad spend is separate from management fees, paid directly to Meta,
             never marked up. Creative production is included at each tier; heavy video production may be quoted separately.
             Every rate is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
@@ -720,12 +719,12 @@ export default function MetaAdsView() {
       <ServiceFaq items={FAQS} columns={2} numbered={false} eyebrow="Common questions" heading="Asked before every audit." />
 
       <CtaBand
-        eyebrow="Meta Ads — Facebook & Instagram"
+        eyebrow="Meta Ads: Facebook & Instagram"
         heading="Ready for Meta ads that actually deliver customers?"
         copy={
           <>
             Book a free Meta ads audit. We’ll look at where your budget is going, what creative is working, what’s wasting
-            spend, and what it would take to grow —{" "}
+            spend, and what it would take to grow,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>with a clear price at the end. No obligation, no jargon, no minimum spend.</strong>
           </>
         }

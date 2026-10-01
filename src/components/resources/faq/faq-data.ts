@@ -9,7 +9,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         q: "What is Simplified Startup?",
-        a: "We're a digital marketing agency that helps businesses grow online — SEO, ads, social media, websites, AI automation, and more. The whole idea is simple: show prices openly, do great work, and skip the sales games.",
+        a: "We're a digital marketing agency that helps businesses grow online: SEO, ads, social media, websites, AI automation, and more. The whole idea is simple: show prices openly, do great work, and skip the sales games.",
       },
       {
         q: "Where are you based?",
@@ -17,7 +17,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "What size businesses do you work with?",
-        a: "Mostly small and mid-sized businesses — from brand-new startups to established local companies with several locations. If your business fits somewhere in that range, we can help.",
+        a: "Mostly small and mid-sized businesses, from brand-new startups to established local companies with several locations. If your business fits somewhere in that range, we can help.",
       },
       {
         q: "What industries do you work with?",
@@ -25,7 +25,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "What makes you different from other agencies?",
-        a: "Two things. First, our prices are shown publicly — no “book a call to hear our rates.” Second, we lead with AI and automation, so we can do more work faster without cutting quality.",
+        a: "Two things. First, our prices are shown publicly, no “book a call to hear our rates.” Second, we lead with AI and automation, so we can do more work faster without cutting quality.",
       },
     ],
   },
@@ -44,7 +44,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "Do you offer accounting or bookkeeping?",
-        a: "Not yet — it's listed as “coming soon” and we'll launch it once we have the right team in place.",
+        a: "Not yet, it's listed as “coming soon” and we'll launch it once we have the right team in place.",
       },
       {
         q: "Do you build websites?",
@@ -52,7 +52,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "Can you handle just my Google Business Profile or reviews?",
-        a: "Yes — individual services like Google Business Profile setup and review management can be booked on their own.",
+        a: "Yes, individual services like Google Business Profile setup and review management can be booked on their own.",
       },
       {
         q: "Do you do AI-related work?",
@@ -67,11 +67,11 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         q: "Where can I see your prices?",
-        a: "On every service page and on our main Pricing page. Every service and package has a clear price — no hidden fees, no gotcha upsells.",
+        a: "On every service page and on our main Pricing page. Every service and package has a clear price, no hidden fees, no gotcha upsells.",
       },
       {
         q: "Why do you show your prices publicly when most agencies don't?",
-        a: "Because we think it's the right thing to do. It respects your time, and it means the people who reach out already know what things cost — so conversations get straight to the point.",
+        a: "Because we think it's the right thing to do. It respects your time, and it means the people who reach out already know what things cost, so conversations get straight to the point.",
       },
       {
         q: "Do you charge monthly or one-time?",
@@ -79,7 +79,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "Do bundles or packages save money?",
-        a: "Yes — packages come with roughly a 20% discount compared to buying each service on its own.",
+        a: "Yes, packages come with roughly a 20% discount compared to buying each service on its own.",
       },
     ],
   },
@@ -94,7 +94,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "Is the first call really free?",
-        a: "Yes — no charge, no pressure, no obligation. It's a real conversation to see if we're a good fit.",
+        a: "Yes, no charge, no pressure, no obligation. It's a real conversation to see if we're a good fit.",
       },
       {
         q: "What do I need to prepare before we start?",
@@ -113,7 +113,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         q: "How long until I see results?",
-        a: "It depends on the service. Paid ads and social media can produce results within days or weeks. SEO and content take longer — usually 3–6 months to see meaningful movement. We tell you what to expect up front.",
+        a: "It depends on the service. Paid ads and social media can produce results within days or weeks. SEO and content take longer, usually 3–6 months to see meaningful movement. We tell you what to expect up front.",
       },
       {
         q: "Will I be assigned a dedicated point of contact?",
@@ -121,15 +121,15 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "How often will we communicate?",
-        a: "For most clients: weekly or biweekly check-ins by email or short call, plus a monthly report. We're flexible — tell us what works.",
+        a: "For most clients: weekly or biweekly check-ins by email or short call, plus a monthly report. We're flexible, tell us what works.",
       },
       {
         q: "How do you report on results?",
-        a: "You get a plain-language monthly report showing what we did, what changed, and what's next — no dashboard full of jargon you'd need a translator for.",
+        a: "You get a plain-language monthly report showing what we did, what changed, and what's next, no dashboard full of jargon you'd need a translator for.",
       },
       {
         q: "Do you use AI in your work?",
-        a: "Yes — we use AI to speed up research, first drafts, and repetitive tasks. Our marketing team then reviews, edits, and finalizes everything. AI helps us go faster, not lower quality.",
+        a: "Yes, we use AI to speed up research, first drafts, and repetitive tasks. Our marketing team then reviews, edits, and finalizes everything. AI helps us go faster, not lower quality.",
       },
       {
         q: "Can I request changes to my strategy?",
@@ -144,7 +144,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         q: "What is SEO?",
-        a: "Search Engine Optimization — the work that helps your website show up higher in Google's free (unpaid) search results.",
+        a: "Search Engine Optimization, the work that helps your website show up higher in Google's free (unpaid) search results.",
       },
       {
         q: "How long does SEO take?",
@@ -152,7 +152,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "What's the difference between SEO and Google Ads?",
-        a: "SEO is free traffic from Google, but it takes time to build. Google Ads are paid — you show up immediately, but you stop showing up when the budget runs out. Most businesses do both.",
+        a: "SEO is free traffic from Google, but it takes time to build. Google Ads are paid, you show up immediately, but you stop showing up when the budget runs out. Most businesses do both.",
       },
       {
         q: "Do I need to be on every social media platform?",
@@ -160,11 +160,11 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "What is a “money page”?",
-        a: "A page built around one specific service, business type, and location — like “SEO for realtors in Raleigh.” It's designed to rank for very specific searches with strong buying intent.",
+        a: "A page built around one specific service, business type, and location, like “SEO for realtors in Raleigh.” It's designed to rank for very specific searches with strong buying intent.",
       },
       {
         q: "What is AI search / GEO?",
-        a: "“GEO” is Generative Engine Optimization — the work of getting your business mentioned when someone asks ChatGPT, Gemini, Claude, or Perplexity for recommendations. It matters more every year.",
+        a: "“GEO” is Generative Engine Optimization, the work of getting your business mentioned when someone asks ChatGPT, Gemini, Claude, or Perplexity for recommendations. It matters more every year.",
       },
     ],
   },
@@ -197,12 +197,12 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     num: "08",
     items: [
       {
-        q: "I'm an existing client and need help — what's the fastest way to reach you?",
+        q: "I'm an existing client and need help, what's the fastest way to reach you?",
         a: "Email your account contact directly, or reply to your most recent thread. For urgent things, call the number we shared during onboarding.",
       },
       {
         q: "Can I add a new service to my existing account?",
-        a: "Yes — just let your account contact know what you'd like to add and we'll set it up.",
+        a: "Yes, just let your account contact know what you'd like to add and we'll set it up.",
       },
       {
         q: "How do I get access to my reports?",
@@ -217,7 +217,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         q: "Who owns the content and assets you create for me?",
-        a: "You do. Everything we create for your business — content, designs, ad accounts, social accounts — belongs to you.",
+        a: "You do. Everything we create for your business, content, designs, ad accounts, social accounts, belongs to you.",
       },
       {
         q: "What data do you collect?",
@@ -225,7 +225,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         q: "Do you share client information with third parties?",
-        a: "Only with the tools we use to do the work (e.g. Google Ads, Meta, email platforms) — never for marketing or resale.",
+        a: "Only with the tools we use to do the work (e.g. Google Ads, Meta, email platforms), never for marketing or resale.",
       },
       {
         q: "Is my account access secure?",
@@ -240,11 +240,11 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         q: "Are you hiring?",
-        a: "Often, yes. Check the Careers page for current openings. Even if nothing there fits, we like meeting good people early — send us a note.",
+        a: "Often, yes. Check the Careers page for current openings. Even if nothing there fits, we like meeting good people early, send us a note.",
       },
       {
         q: "Do you take interns?",
-        a: "Yes — we currently work with interns across marketing, SEO, and design.",
+        a: "Yes, we currently work with interns across marketing, SEO, and design.",
       },
     ],
   },

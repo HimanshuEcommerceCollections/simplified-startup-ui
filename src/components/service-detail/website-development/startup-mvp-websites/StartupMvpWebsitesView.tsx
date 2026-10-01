@@ -108,7 +108,7 @@ const REALITY = [
     title: "You don’t have six months",
     text: (
       <>
-        Traditional agencies quote 3–6 month timelines — longer than most startups take to pivot.{" "}
+        Traditional agencies quote 3–6 month timelines, longer than most startups take to pivot.{" "}
         <strong>We ship in 2–4 weeks.</strong>
       </>
     ),
@@ -119,7 +119,7 @@ const REALITY = [
     title: "You don’t have $50K",
     text: (
       <>
-        Most “startup web agencies” have $25K–$150K minimums — written for Series A, not founders.{" "}
+        Most “startup web agencies” have $25K–$150K minimums, written for Series A, not founders.{" "}
         <strong>We’re priced for reality.</strong>
       </>
     ),
@@ -141,7 +141,7 @@ const LAUNCH_TYPES = [
   {
     badge: "2 weeks",
     title: "Waitlist / Pre-Launch",
-    lead: "For products still in build — capture demand before you ship.",
+    lead: "For products still in build, capture demand before you ship.",
     items: ["Brand-story hero", "Waitlist email form", "Countdown or launch date", "Referral / share loops", "Auto-confirm email setup", "Social preview cards"],
     delay: 0,
   },
@@ -155,7 +155,7 @@ const LAUNCH_TYPES = [
   {
     badge: "3–4 weeks",
     title: "Product Launch Site",
-    lead: "For live products — shipping the first real marketing site.",
+    lead: "For live products, shipping the first real marketing site.",
     items: ["Homepage + product page", "Pricing (or coming-soon tier)", "Signup / trial flow", "Case study or beta users", "FAQ + integrations", "Analytics from day one"],
     delay: 160,
   },
@@ -170,8 +170,8 @@ const INCLUDED: { key: IncludedKey; icon: ReactNode; label: string; sub: string;
     label: "Strategy",
     sub: "Short, sharp",
     name: "Strategy (short, sharp)",
-    tag: "One call replaces a $10K discovery phase — we lock the goal and move.",
-    items: ["One 60-minute kickoff call: goal, audience, offer", "Positioning and one-line pitch", "Site map — usually one or two pages, no bloat"],
+    tag: "One call replaces a $10K discovery phase, we lock the goal and move.",
+    items: ["One 60-minute kickoff call: goal, audience, offer", "Positioning and one-line pitch", "Site map, usually one or two pages, no bloat"],
   },
   {
     key: "copy",
@@ -179,7 +179,7 @@ const INCLUDED: { key: IncludedKey; icon: ReactNode; label: string; sub: string;
     label: "Copy that sells",
     sub: "Founder voice",
     name: "Copy That Sells",
-    tag: "Full page copy in founder voice — not agency-speak.",
+    tag: "Full page copy in founder voice, not agency-speak.",
     items: ["Headline, subhead, body, and CTAs", "Founder-voice tone, not agency jargon", "One round of revisions"],
   },
   {
@@ -188,7 +188,7 @@ const INCLUDED: { key: IncludedKey; icon: ReactNode; label: string; sub: string;
     label: "Design that ships",
     sub: "Custom, mobile-first",
     name: "Design That Ships",
-    tag: "Custom design, mobile-first, launch-ready — not a template.",
+    tag: "Custom design, mobile-first, launch-ready, not a template.",
     items: ["Custom design (not a template)", "Mobile-first, launch-ready", "One round of revisions"],
   },
   {
@@ -197,7 +197,7 @@ const INCLUDED: { key: IncludedKey; icon: ReactNode; label: string; sub: string;
     label: "Development",
     sub: "Webflow / Framer",
     name: "Development on Webflow / Framer",
-    tag: "Built on a platform you can edit yourself — fast, CMS-ready, no lock-in.",
+    tag: "Built on a platform you can edit yourself, fast, CMS-ready, no lock-in.",
     items: ["Webflow (default) or Framer", "CMS-ready so you can update yourself", "Fast load (Core Web Vitals green from day one)", "Domain, SSL, and hosting setup"],
   },
   {
@@ -212,7 +212,7 @@ const INCLUDED: { key: IncludedKey; icon: ReactNode; label: string; sub: string;
 ];
 
 const DONT = [
-  { title: "Custom 3D / illustration", text: <>Beautiful, but slow — and <strong>nobody signs up because of your animations.</strong></>, delay: 0 },
+  { title: "Custom 3D / illustration", text: <>Beautiful, but slow, and <strong>nobody signs up because of your animations.</strong></>, delay: 0 },
   { title: "20+ pages of content", text: <>You need the front page to work. <strong>Add pages after you have users.</strong></>, delay: 60 },
   { title: "50-page strategy doc", text: <>One 60-minute call replaces a $10K discovery phase. <strong>We move fast.</strong></>, delay: 120 },
   { title: "Full brand identity system", text: <>No logo yet? We’ll use something clean. <strong>Full branding is a separate service</strong> when you’re ready.</>, delay: 0 },
@@ -227,32 +227,32 @@ const SPRINTS = [
 ];
 
 const WHO = [
-  { icon: ICON_ROCKET, text: <><strong>A first-time founder</strong> with a product, an idea, or a pitch — and no time to spend six months on a website.</>, delay: 0 },
+  { icon: ICON_ROCKET, text: <><strong>A first-time founder</strong> with a product, an idea, or a pitch, and no time to spend six months on a website.</>, delay: 0 },
   { icon: ICON_CHAT, text: <><strong>A pre-launch startup</strong> building a waitlist to gauge demand and warm up an audience before shipping.</>, delay: 60 },
-  { icon: ICON_WINDOW, text: <><strong>A SaaS or AI startup</strong> at seed / pre-seed — the site needs to look real, sound clear, and get demos booked.</>, delay: 120 },
+  { icon: ICON_WINDOW, text: <><strong>A SaaS or AI startup</strong> at seed / pre-seed, the site needs to look real, sound clear, and get demos booked.</>, delay: 120 },
   { icon: ICON_SHIELD, text: <><strong>A founder preparing to fundraise</strong> who needs a credible site alongside the pitch deck.</>, delay: 0 },
   { icon: ICON_REFRESH, text: <><strong>A team migrating off a lousy DIY site</strong> (Squarespace, Wix, template) that’s costing them credibility.</>, delay: 60 },
-  { icon: ICON_BOLT_THIN, text: <><strong>A founder who just needs to ship</strong> — and is tired of agencies who schedule a call to schedule the discovery call.</>, delay: 120 },
+  { icon: ICON_BOLT_THIN, text: <><strong>A founder who just needs to ship</strong>, and is tired of agencies who schedule a call to schedule the discovery call.</>, delay: 120 },
 ];
 
 const TIERS = [
-  { name: "Waitlist / Pre-Launch", best: "1 page — waitlist capture. Live in 2 weeks.", price: "Published" },
-  { name: "Demo / Investor Site", best: "1–2 pages — pitch + booking. Live in 2–3 weeks.", price: "Published", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Product Launch Site", best: "3–5 pages — homepage, product, pricing, contact. 3–4 weeks.", price: "Published", delay: 140 },
+  { name: "Waitlist / Pre-Launch", best: "1 page, waitlist capture. Live in 2 weeks.", price: "Published" },
+  { name: "Demo / Investor Site", best: "1–2 pages, pitch + booking. Live in 2–3 weeks.", price: "Published", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Product Launch Site", best: "3–5 pages, homepage, product, pricing, contact. 3–4 weeks.", price: "Published", delay: 140 },
   { name: "Founder + Advisory Bundle", best: "Any package + our Business Startup & Advisory service. Custom scope.", price: "Published", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "Can I really launch in 2 weeks?", a: <>Yes — for a waitlist or pre-launch page, absolutely. Demo sites take 2–3 weeks; full product sites 3–4. <strong>The speed comes from doing exactly the right amount of work</strong> — decisive founders get the fastest results.</> },
-  { q: "Which platform do you build on?", a: <><strong>Webflow by default</strong> — you can edit and add pages yourself without a developer. Framer if you want something more design-driven. Both industry-leading, no proprietary lock-ins.</> },
-  { q: "Do you write the copy?", a: <>Yes — headline, subhead, body, and CTAs, all included. <strong>Founder-voice tone, not agency jargon.</strong> Prefer to write your own? We’ll design around it and give feedback.</> },
-  { q: "What if I don’t have a logo or brand yet?", a: <>We can launch with clean typography and a simple mark. Full brand identity is a separate service — <strong>you don’t need a full brand to launch a waitlist.</strong></> },
-  { q: "Can I add pages later?", a: <>Yes — once on Webflow/Framer, your team can add pages using the components we built. Or we add them as needed. <strong>No lock-in, no forced retainer.</strong></> },
-  { q: "Do you build the actual product / app?", a: <>No — this is the <strong>marketing website only.</strong> Building the product itself needs a product engineering team; we can refer trusted partners in our network.</> },
-  { q: "Do I own the site?", a: <>Yes, 100% — all logins, source files, and access handed over at launch. <strong>If you leave, you keep everything.</strong></> },
-  { q: "Changing the design after launch?", a: <>Small changes are included in the 14 days of post-launch support. Bigger changes or new pages are billed as needed — <strong>no forced monthly retainer.</strong></> },
-  { q: "Help with strategy / investor prep too?", a: <>Yes — that’s our Business Startup &amp; Advisory service. <strong>Bundle it with your site build for a discount</strong> — great for founders raising or clarifying their story.</> },
-  { q: "What if I need to move faster than 2 weeks?", a: <>For urgent launches (48–72 hour turnaround), tell us up front. We can accommodate rush jobs with a rush fee and a locked scope. <strong>Message us first — not every project can be rushed responsibly.</strong></> },
+  { q: "Can I really launch in 2 weeks?", a: <>Yes, for a waitlist or pre-launch page, absolutely. Demo sites take 2–3 weeks; full product sites 3–4. <strong>The speed comes from doing exactly the right amount of work</strong>, decisive founders get the fastest results.</> },
+  { q: "Which platform do you build on?", a: <><strong>Webflow by default</strong>, you can edit and add pages yourself without a developer. Framer if you want something more design-driven. Both industry-leading, no proprietary lock-ins.</> },
+  { q: "Do you write the copy?", a: <>Yes, headline, subhead, body, and CTAs, all included. <strong>Founder-voice tone, not agency jargon.</strong> Prefer to write your own? We’ll design around it and give feedback.</> },
+  { q: "What if I don’t have a logo or brand yet?", a: <>We can launch with clean typography and a simple mark. Full brand identity is a separate service, <strong>you don’t need a full brand to launch a waitlist.</strong></> },
+  { q: "Can I add pages later?", a: <>Yes, once on Webflow/Framer, your team can add pages using the components we built. Or we add them as needed. <strong>No lock-in, no forced retainer.</strong></> },
+  { q: "Do you build the actual product / app?", a: <>No, this is the <strong>marketing website only.</strong> Building the product itself needs a product engineering team; we can refer trusted partners in our network.</> },
+  { q: "Do I own the site?", a: <>Yes, 100%, all logins, source files, and access handed over at launch. <strong>If you leave, you keep everything.</strong></> },
+  { q: "Changing the design after launch?", a: <>Small changes are included in the 14 days of post-launch support. Bigger changes or new pages are billed as needed, <strong>no forced monthly retainer.</strong></> },
+  { q: "Help with strategy / investor prep too?", a: <>Yes, that’s our Business Startup &amp; Advisory service. <strong>Bundle it with your site build for a discount</strong>, great for founders raising or clarifying their story.</> },
+  { q: "What if I need to move faster than 2 weeks?", a: <>For urgent launches (48–72 hour turnaround), tell us up front. We can accommodate rush jobs with a rush fee and a locked scope. <strong>Message us first, not every project can be rushed responsibly.</strong></> },
 ];
 
 /* -------- hero signature: three-sprint ship card -------- */
@@ -411,7 +411,6 @@ export default function StartupMvpWebsitesView() {
         crumb={{ label: "Website Development", href: "/website-development" }}
         className="mvp-hero"
         compact
-        eyebrow="Built for founders · Launch in 2–4 weeks · Fixed price"
         line1="A startup site that’s"
         line2={
           <>
@@ -420,7 +419,7 @@ export default function StartupMvpWebsitesView() {
         }
         lead={
           <>
-            Waitlist pages, investor sites, product launches, MVP marketing sites — built for founders on real deadlines
+            Waitlist pages, investor sites, product launches, MVP marketing sites, built for founders on real deadlines
             and real budgets. <strong>Fixed price, 2–4 week turnaround,</strong> and none of the enterprise agency
             overhead you’re not ready to pay for.
           </>
@@ -439,11 +438,11 @@ export default function StartupMvpWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Founder reality check</span>
             <h2>You’re not a Series B company.</h2>
-            <p>You don’t need a 20-page site. You need something live, credible, and shippable — fast. Three truths we work from.</p>
+            <p>You don’t need a 20-page site. You need something live, credible, and shippable, fast. Three truths we work from.</p>
           </Reveal>
           <FeatureGrid cards={REALITY} columns={3} />
           <Reveal as="p" className="mvp-lt-note" style={{ marginTop: 26 }}>
-            The best startup site is the one that’s <strong>live</strong> — not the one that’s “almost done” for the third
+            The best startup site is the one that’s <strong>live</strong>, not the one that’s “almost done” for the third
             month running.
           </Reveal>
         </div>
@@ -461,7 +460,7 @@ export default function StartupMvpWebsitesView() {
           <Reveal as="p" className="mvp-lt-note">
             Not sure which one you need?{" "}
             <strong>
-              <a href="/start-project">Book a free call — we’ll help you pick.</a>
+              <a href="/start-project">Book a free call, we’ll help you pick.</a>
             </strong>
           </Reveal>
         </div>
@@ -473,7 +472,7 @@ export default function StartupMvpWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What every package includes</span>
             <h2>Whichever type you pick, the foundations are the same.</h2>
-            <p>Five foundations under every founder site — pick one to see what’s inside.</p>
+            <p>Five foundations under every founder site, pick one to see what’s inside.</p>
           </Reveal>
           <IncludedExplorer />
         </div>
@@ -483,10 +482,10 @@ export default function StartupMvpWebsitesView() {
       <section className="band" id="dont">
         <div className="wrap">
           <Reveal className="sec-head">
-            <span className="eyebrow">What you don’t get — and why that’s OK</span>
+            <span className="eyebrow">What you don’t get, and why that’s OK</span>
             <h2>Trying to include everything is what makes agencies slow.</h2>
             <p>
-              Being honest about what we <em>don’t</em> include at launch. Need any of these later? We’ll help — but you
+              Being honest about what we <em>don’t</em> include at launch. Need any of these later? We’ll help, but you
               don’t need them to ship.
             </p>
           </Reveal>
@@ -558,7 +557,7 @@ export default function StartupMvpWebsitesView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Paid in two installments — <strong>50% at kickoff, 50% at launch.</strong> Webflow / Framer platform fees are
+            Paid in two installments, <strong>50% at kickoff, 50% at launch.</strong> Webflow / Framer platform fees are
             separate, paid directly to the platform. Domain and hosting billed to you at cost. Every rate is on the{" "}
             <a href="/pricing">pricing page</a>.
           </NoteCallout>
@@ -574,7 +573,7 @@ export default function StartupMvpWebsitesView() {
         copy={
           <>
             Book a free founder call. Tell us what you’re building, where you are, and what you need shipped. We’ll come
-            back with a clear plan, fixed price, and launch date —{" "}
+            back with a clear plan, fixed price, and launch date,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>usually within the same day. No obligation, no jargon.</strong>
           </>
         }

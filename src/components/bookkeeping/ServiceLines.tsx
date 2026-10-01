@@ -4,7 +4,7 @@ import "./service-lines.css";
 const LINES = [
   {
     title: "Monthly bookkeeping",
-    desc: "The recurring close — categorised, reconciled, and delivered on a date you can circle.",
+    desc: "The recurring close, categorised, reconciled, and delivered on a date you can circle.",
   },
   {
     title: "Catch-up bookkeeping",
@@ -29,7 +29,7 @@ export default function ServiceLines() {
     <section className="band" aria-label="The service lines">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— The service lines</span>
+          <span className="eyebrow">The service lines</span>
           <h2>Five ways this gets bought.</h2>
           <p className="bk-sub">
             Most clients take the monthly close and add from here. Each is scoped and priced on its

@@ -111,7 +111,7 @@ export default function BlogView({
             No <span className="grad-text">fluff.</span>
           </>
         }
-        lead="SEO, social media, ads, and AI — written for business owners, not marketers. No jargon we won't explain, no fluff to hit a word count."
+        lead="SEO, social media, ads, and AI, written for business owners, not marketers. No jargon we won't explain, no fluff to hit a word count."
       >
         <BlogDefluffCard />
       </ResourceHero>
@@ -180,7 +180,7 @@ export default function BlogView({
 
           {shown === 0 && (
             <div className="bl-empty">
-              <p>No articles in this category yet — more are on the way.</p>
+              <p>No articles in this category yet, more are on the way.</p>
               <button className="btn btn-ghost" onClick={() => setActiveCat("all")}>
                 Show all articles
               </button>
@@ -191,7 +191,7 @@ export default function BlogView({
 
       <CtaBand
         eyebrow="Prefer it done for you?"
-        heading="Read all you like — free."
+        heading="Read all you like, free."
         copy={
           <>
             When you&apos;re ready for a team to run it, we&apos;re here.{" "}

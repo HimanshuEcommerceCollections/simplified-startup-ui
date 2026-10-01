@@ -240,12 +240,12 @@ const WHY = [
 /* -------- engines (LLM table) -------- */
 
 const ENGINES = [
-  { name: "Google AI Overviews", source: "Google index + snippets + E-E-A-T", priority: "Highest — 47% of queries", hi: true },
-  { name: "ChatGPT Search", source: "Bing index + high-authority + fresh content", priority: "High — 800M+ weekly users", hi: true },
-  { name: "Perplexity", source: "Live web + academic + citation transparency", priority: "High — researchers & B2B", hi: true },
-  { name: "Claude (web search)", source: "High-quality, well-structured, cited sources", priority: "Medium — enterprise / technical", hi: false },
-  { name: "Google Gemini", source: "Google Search + YouTube + Knowledge Graph", priority: "High — default on Android + Workspace", hi: true },
-  { name: "Microsoft Copilot", source: "Bing index + Microsoft Graph + LinkedIn", priority: "Medium — B2B / enterprise", hi: false },
+  { name: "Google AI Overviews", source: "Google index + snippets + E-E-A-T", priority: "Highest: 47% of queries", hi: true },
+  { name: "ChatGPT Search", source: "Bing index + high-authority + fresh content", priority: "High: 800M+ weekly users", hi: true },
+  { name: "Perplexity", source: "Live web + academic + citation transparency", priority: "High, researchers & B2B", hi: true },
+  { name: "Claude (web search)", source: "High-quality, well-structured, cited sources", priority: "Medium, enterprise / technical", hi: false },
+  { name: "Google Gemini", source: "Google Search + YouTube + Knowledge Graph", priority: "High, default on Android + Workspace", hi: true },
+  { name: "Microsoft Copilot", source: "Bing index + Microsoft Graph + LinkedIn", priority: "Medium: B2B / enterprise", hi: false },
 ];
 
 /* -------- 7 signals -------- */
@@ -254,18 +254,18 @@ const SIGNALS = [
   { no: "01", icon: ICON_SCHEMA, title: "Structured data & schema", text: "Schema.org markup (Article, FAQPage, HowTo, Product, Organization) makes content machine-readable so LLMs understand entities & relationships." },
   { no: "02", icon: ICON_LINES, title: "Direct-answer formatting", text: "TL;DR summaries, clear definitions, short first paragraphs, question-based headers. LLMs favor content that answers in the first 50 words." },
   { no: "03", icon: ICON_TREND, title: "Quotable statistics", text: "Original numbers, data points, named research. LLMs disproportionately cite content with concrete statistics, dates, and specific claims." },
-  { no: "04", icon: ICON_AUTHOR, title: "Author authority & E-E-A-T", text: "Named authors with credentials, bios, and verifiable expertise. LLMs weigh source authority heavily — anonymous content rarely gets cited." },
-  { no: "05", icon: ICON_CLOCK, title: "Freshness signals", text: "Recent publish dates, updated content, current data. LLMs prefer 2025–2026 sources over outdated ones — date signals matter." },
-  { no: "06", icon: ICON_ENTITY, title: "Semantic entity density", text: "Related concepts, entities, and topical breadth. Depth beats keyword stuffing — LLMs measure how completely a source covers a topic." },
-  { no: "07", icon: ICON_LINK, title: "Third-party citations", text: "Being cited on Wikipedia, industry publications, and authority sites. LLMs use external citation graphs as trust — digital PR is now GEO." },
+  { no: "04", icon: ICON_AUTHOR, title: "Author authority & E-E-A-T", text: "Named authors with credentials, bios, and verifiable expertise. LLMs weigh source authority heavily, anonymous content rarely gets cited." },
+  { no: "05", icon: ICON_CLOCK, title: "Freshness signals", text: "Recent publish dates, updated content, current data. LLMs prefer 2025–2026 sources over outdated ones, date signals matter." },
+  { no: "06", icon: ICON_ENTITY, title: "Semantic entity density", text: "Related concepts, entities, and topical breadth. Depth beats keyword stuffing: LLMs measure how completely a source covers a topic." },
+  { no: "07", icon: ICON_LINK, title: "Third-party citations", text: "Being cited on Wikipedia, industry publications, and authority sites. LLMs use external citation graphs as trust, digital PR is now GEO." },
 ];
 
 /* -------- what we don't do (dark) -------- */
 
 const DONTS = [
   { title: "Promise #1 in AI Overviews", text: <>LLMs pick multiple sources per query. <strong>Anyone guaranteeing the top spot is lying.</strong></> },
-  { title: "Chase LLM prompt hacks", text: <>Hidden text, cloaking, “prompt injection” — <strong>get sites blacklisted from AI indexes fast.</strong></>, delay: 60 },
-  { title: "Ignore traditional SEO", text: <>GEO and SEO overlap heavily — same technical foundations. <strong>Selling GEO as fully separate is oversimplifying.</strong></>, delay: 120 },
+  { title: "Chase LLM prompt hacks", text: <>Hidden text, cloaking, “prompt injection”, <strong>get sites blacklisted from AI indexes fast.</strong></>, delay: 60 },
+  { title: "Ignore traditional SEO", text: <>GEO and SEO overlap heavily, same technical foundations. <strong>Selling GEO as fully separate is oversimplifying.</strong></>, delay: 120 },
   { title: "Use tools that fake citations", text: <>Some “GEO tools” generate fake authority signals. <strong>LLMs detect and demote them within weeks.</strong></> },
   { title: "Lock you into long contracts", text: <>Month-to-month. Cancel anytime. <strong>GEO is measurable within 60–90 days.</strong></>, delay: 60 },
   { title: "Keep your assets", text: <>All schema, content, author profiles, and PR placements are yours. <strong>Leave and you keep everything.</strong></>, delay: 120 },
@@ -288,7 +288,7 @@ const INCLUDED: Included[] = [
     btnName: "Full GEO audit",
     btnSub: "7-signal scorecard",
     name: "Full GEO Audit",
-    tag: "Where your brand stands in AI search today — and exactly where the gaps are.",
+    tag: "Where your brand stands in AI search today, and exactly where the gaps are.",
     items: ["LLM citation baseline (ChatGPT, Perplexity, Claude, Gemini, Copilot)", "AI Overview trigger audit for your keywords", "7-signal scorecard for your site", "Competitor GEO benchmarking", "Prioritized 90-day roadmap"],
   },
   {
@@ -312,7 +312,7 @@ const INCLUDED: Included[] = [
     btnName: "Author authority",
     btnSub: "E-E-A-T signals",
     name: "Author Authority & E-E-A-T",
-    tag: "LLMs weigh source authority heavily — anonymous content rarely gets cited.",
+    tag: "LLMs weigh source authority heavily, anonymous content rarely gets cited.",
     items: ["Author bio pages with credentials + social proof", "Author schema markup (Person entity)", "LinkedIn profile optimization for cited authors", "Wikipedia / Wikidata presence audit + correction", "Google Knowledge Panel setup"],
   },
   {
@@ -320,7 +320,7 @@ const INCLUDED: Included[] = [
     btnName: "Freshness cycles",
     btnSub: "Stay current",
     name: "Freshness & Update Cycles",
-    tag: "LLMs prefer current sources — date signals decide which version gets cited.",
+    tag: "LLMs prefer current sources, date signals decide which version gets cited.",
     items: ["Content freshness audit (identify stale pages)", "Quarterly refresh cycles for top pages", "Date signal optimization (published, updated, reviewed)", "Version tracking on statistical claims"],
   },
   {
@@ -328,7 +328,7 @@ const INCLUDED: Included[] = [
     btnName: "Digital PR & citations",
     btnSub: "Third-party trust",
     name: "Digital PR & Third-Party Citations",
-    tag: "External citation graphs are a trust signal — digital PR is now GEO.",
+    tag: "External citation graphs are a trust signal, digital PR is now GEO.",
     items: ["Wikipedia and Wikidata citation strategy", "Industry publication placements (guest posts, quotes)", "HARO / Qwoted / Featured.com pitching", "Podcast interview placements", "Original research & studies for backlinks"],
   },
   {
@@ -410,16 +410,16 @@ function IncludedExplorer() {
 /* -------- who / fit -------- */
 
 const FIT_GOOD: ReactNode[] = [
-  <><strong>B2B SaaS</strong> — buyers query ChatGPT &amp; Perplexity for comparison research before Google.</>,
-  <><strong>Professional services</strong> (legal, financial, healthcare) — where E-E-A-T directly determines citation eligibility.</>,
-  <><strong>E-commerce with research queries</strong> — “best X for Y” now surfaces AI Overviews above listings.</>,
+  <><strong>B2B SaaS</strong>, buyers query ChatGPT &amp; Perplexity for comparison research before Google.</>,
+  <><strong>Professional services</strong> (legal, financial, healthcare), where E-E-A-T directly determines citation eligibility.</>,
+  <><strong>E-commerce with research queries</strong>, “best X for Y” now surfaces AI Overviews above listings.</>,
   <><strong>Agencies &amp; consultants</strong> needing to be cited as the authority before competitors lock it in.</>,
-  <><strong>Content-heavy publishers</strong> watching AI Overviews erode traffic — GEO rebuilds the funnel.</>,
+  <><strong>Content-heavy publishers</strong> watching AI Overviews erode traffic: GEO rebuilds the funnel.</>,
 ];
 
 const FIT_BAD: ReactNode[] = [
-  <><strong>No website content, no domain authority, no editorial capacity</strong> — start with foundational SEO first.</>,
-  <><strong>Audiences that don’t search AI</strong> (rare in 2026) — traditional SEO still delivers most of the ROI.</>,
+  <><strong>No website content, no domain authority, no editorial capacity</strong>, start with foundational SEO first.</>,
+  <><strong>Audiences that don’t search AI</strong> (rare in 2026), traditional SEO still delivers most of the ROI.</>,
 ];
 
 /* -------- how / faq -------- */
@@ -433,12 +433,12 @@ const STEPS = [
 ];
 
 const FAQS = [
-  { q: "What’s the difference between SEO and GEO?", a: <>SEO optimizes for Google’s ranking algorithm; GEO optimizes for <strong>LLM citation logic</strong> — different signals, formats, and sources. There’s overlap (both need strong technical foundations), but GEO adds schema depth, direct-answer formatting, author authority, and third-party citations SEO often skips.</> },
+  { q: "What’s the difference between SEO and GEO?", a: <>SEO optimizes for Google’s ranking algorithm; GEO optimizes for <strong>LLM citation logic</strong>, different signals, formats, and sources. There’s overlap (both need strong technical foundations), but GEO adds schema depth, direct-answer formatting, author authority, and third-party citations SEO often skips.</> },
   { q: "How long before I see LLM citations?", a: <>Technical wins (schema, llms.txt) can show in <strong>30–60 days;</strong> content-driven citations in months 2–4; digital PR compounds from month 3. Perplexity indexes live; Claude &amp; Gemini update more slowly.</> },
-  { q: "Can you guarantee I’ll be in AI Overviews?", a: <>No — anyone who guarantees it is lying. LLMs pick multiple rotating sources per query. <strong>What we guarantee is executing all 7 GEO signals correctly,</strong> which dramatically increases citation frequency across all 6 LLMs.</> },
-  { q: "Do I need GEO if I already have strong SEO?", a: <>Yes. AI Overviews appear on <strong>47% of Google queries</strong> — and being #1 in traditional results no longer guarantees you’re cited in the AI Overview above them. GEO builds on your SEO, but the layers differ.</> },
-  { q: "Do you also do traditional SEO?", a: <>Yes — GEO and SEO share the same technical foundations, and we handle both. <strong>We won’t sell you GEO in isolation if your SEO base isn’t there</strong> — we’ll tell you where to start.</> },
-  { q: "Do I own everything?", a: <>Yes, 100% — all schema, content, author profiles, and PR placements are yours. <strong>If you leave, you keep everything</strong> — no lock-in, no proprietary layer.</> },
+  { q: "Can you guarantee I’ll be in AI Overviews?", a: <>No, anyone who guarantees it is lying. LLMs pick multiple rotating sources per query. <strong>What we guarantee is executing all 7 GEO signals correctly,</strong> which dramatically increases citation frequency across all 6 LLMs.</> },
+  { q: "Do I need GEO if I already have strong SEO?", a: <>Yes. AI Overviews appear on <strong>47% of Google queries</strong>, and being #1 in traditional results no longer guarantees you’re cited in the AI Overview above them. GEO builds on your SEO, but the layers differ.</> },
+  { q: "Do you also do traditional SEO?", a: <>Yes: GEO and SEO share the same technical foundations, and we handle both. <strong>We won’t sell you GEO in isolation if your SEO base isn’t there</strong>, we’ll tell you where to start.</> },
+  { q: "Do I own everything?", a: <>Yes, 100%, all schema, content, author profiles, and PR placements are yours. <strong>If you leave, you keep everything</strong>, no lock-in, no proprietary layer.</> },
 ];
 
 export default function AiSearchGeoView() {
@@ -447,7 +447,6 @@ export default function AiSearchGeoView() {
       <ServiceDetailHero
         compact
         crumb={{ label: "Digital Marketing", href: "/digital-marketing" }}
-        eyebrow="GEO · AI Overviews · ChatGPT · Perplexity · Claude · Gemini"
         line1="Get cited in the AI answers"
         line2={
           <>
@@ -457,7 +456,7 @@ export default function AiSearchGeoView() {
         lead={
           <>
             Generative Engine Optimization (GEO) for B2B, SaaS, e-commerce, and professional services. We optimize your
-            entire digital footprint — schema, entities, citations, freshness, author authority —{" "}
+            entire digital footprint, schema, entities, citations, freshness, author authority,{" "}
             <strong>
               so LLMs surface your brand when buyers ask the questions your competitors still answer with old-school SEO.
             </strong>
@@ -480,7 +479,7 @@ export default function AiSearchGeoView() {
               AI Overviews now appear on <GeoCount target={47} suffix="%" /> of Google queries.
             </h2>
             <p>
-              ChatGPT, Perplexity, Claude, and Gemini answer millions of buyer questions daily — without ever sending a
+              ChatGPT, Perplexity, Claude, and Gemini answer millions of buyer questions daily, without ever sending a
               click to your site. If you’re not cited in those answers, you’re invisible to the audience you spent years
               ranking for.
             </p>
@@ -490,7 +489,7 @@ export default function AiSearchGeoView() {
           </div>
           <NoteCallout>
             If ChatGPT and Perplexity don’t know your brand exists, half your future customers won’t either.{" "}
-            <strong>GEO is how you fix that — before your competitors do.</strong>
+            <strong>GEO is how you fix that, before your competitors do.</strong>
           </NoteCallout>
         </div>
       </section>
@@ -500,7 +499,7 @@ export default function AiSearchGeoView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">The 6 LLM search engines you need to rank in</span>
-            <h2>Every LLM is now a search engine — with its own citation logic.</h2>
+            <h2>Every LLM is now a search engine, with its own citation logic.</h2>
             <p>Buyers no longer search in one place. Here’s where you need to appear, and how each one picks its sources.</p>
           </Reveal>
           <Reveal className="geo-llm-tbl">
@@ -518,7 +517,7 @@ export default function AiSearchGeoView() {
             ))}
           </Reveal>
           <Reveal as="p" className="geo-llm-note">
-            Every LLM has different citation logic. <strong>We optimize for all six — not just Google.</strong>
+            Every LLM has different citation logic. <strong>We optimize for all six, not just Google.</strong>
           </Reveal>
         </div>
       </section>
@@ -552,7 +551,7 @@ export default function AiSearchGeoView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What we don’t do</span>
-            <h2>GEO is new — and shortcuts are everywhere.</h2>
+            <h2>GEO is new, and shortcuts are everywhere.</h2>
             <p>We don’t take any of them.</p>
           </Reveal>
           <div className="geo-dont-grid">
@@ -569,7 +568,7 @@ export default function AiSearchGeoView() {
           <Reveal className="geo-dont-note">
             <span className="mk">{ICON_CHECK}</span>
             <p>
-              All 7 signals, executed properly — the real way to <strong>increase citation frequency across every LLM.</strong>
+              All 7 signals, executed properly, the real way to <strong>increase citation frequency across every LLM.</strong>
             </p>
           </Reveal>
         </div>
@@ -581,7 +580,7 @@ export default function AiSearchGeoView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
             <h2>End-to-end GEO across all 7 signals.</h2>
-            <p>Everything a working GEO program needs — seven parts, one team. Pick one to see inside.</p>
+            <p>Everything a working GEO program needs, seven parts, one team. Pick one to see inside.</p>
           </Reveal>
           <IncludedExplorer />
         </div>
@@ -593,7 +592,7 @@ export default function AiSearchGeoView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Who GEO is built for</span>
             <h2>Highest ROI when your buyers already use AI search.</h2>
-            <p>Here’s where GEO fits — and where we’ll tell you to start with foundational SEO first.</p>
+            <p>Here’s where GEO fits, and where we’ll tell you to start with foundational SEO first.</p>
           </Reveal>
           <Reveal className="geo-fit-grid">
             <div className="geo-fit good">
@@ -652,11 +651,11 @@ export default function AiSearchGeoView() {
 
       <CtaBand
         eyebrow="AI Search & GEO Optimization"
-        heading="Book a free GEO audit — no obligation."
+        heading="Book a free GEO audit, no obligation."
         copy={
           <>
             We’ll query the top 6 LLMs with your target buyer questions, run a full 7-signal audit on your site, and
-            deliver a 90-day GEO roadmap —{" "}
+            deliver a 90-day GEO roadmap,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>
               usually within 48 hours. If we’re not the right fit, we’ll tell you.
             </strong>

@@ -6,8 +6,8 @@ export default function VsAccounting() {
     <section className="band" aria-label="Bookkeeping vs accounting">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— Cleared up</span>
-          <h2>Bookkeeping vs accounting — what&apos;s the difference?</h2>
+          <span className="eyebrow">Cleared up</span>
+          <h2>Bookkeeping vs accounting, what&apos;s the difference?</h2>
           <p className="bk-sub">
             People use the words interchangeably; they&apos;re not the same job. You usually need
             both, at different moments.
@@ -32,7 +32,7 @@ export default function VsAccounting() {
           </Reveal>
         </div>
         <p className="bk-vs-foot">
-          <b>We don&apos;t file your taxes</b> — we make the file your CPA files from. Clean books
+          <b>We don&apos;t file your taxes</b>, we make the file your CPA files from. Clean books
           mean a cheaper, calmer tax season.
         </p>
       </div>

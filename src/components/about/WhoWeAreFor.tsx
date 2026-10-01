@@ -10,14 +10,14 @@ const CARDS = [
     pill: "Starting out",
     title: "First-time founders",
     meta: "Idea to first customers",
-    desc: "Turning a first idea into a real, working business — with a team that's done it before.",
+    desc: "Turning a first idea into a real, working business, with a team that's done it before.",
   },
   {
     badge: "SB",
     pill: "Established",
     title: "Small-business owners",
     meta: "Great at the craft, short on time",
-    desc: "The plumber, the shop, the studio — great at the craft, short on time for the rest.",
+    desc: "The plumber, the shop, the studio, great at the craft, short on time for the rest.",
   },
   {
     badge: "RG",
@@ -31,7 +31,7 @@ const CARDS = [
     pill: "Partial team",
     title: "Anyone filling a gap",
     meta: "One piece missing",
-    desc: "A marketer but no designer, a builder but no strategist — we cover what you're missing.",
+    desc: "A marketer but no designer, a builder but no strategist, we cover what you're missing.",
   },
 ];
 

@@ -95,10 +95,10 @@ function BsysCard() {
 /* -------- why branding matters -------- */
 
 const PROBLEMS = [
-  { icon: X_ICON, title: "Overlooked in the shortlist", text: "Buyers compare 3–5 options before deciding. If yours looks the least polished, you’re out — before the pitch." },
+  { icon: X_ICON, title: "Overlooked in the shortlist", text: "Buyers compare 3–5 options before deciding. If yours looks the least polished, you’re out, before the pitch." },
   { icon: X_ICON, title: "You sound like everyone else", text: "Without clear positioning, your site reads like every competitor’s: “trusted, experienced, results-driven.” Blah.", delay: 70 },
   { icon: X_ICON, title: "Your team says different things", text: "Sales pitches one thing, the website says another, Instagram says a third. Trust erodes with every mismatch." },
-  { icon: X_ICON, title: "You compete on price", text: "When you can’t explain why you’re different, price becomes the only thing that matters — and someone’s always cheaper.", delay: 70 },
+  { icon: X_ICON, title: "You compete on price", text: "When you can’t explain why you’re different, price becomes the only thing that matters, and someone’s always cheaper.", delay: 70 },
 ];
 
 /* -------- included pillars -------- */
@@ -110,7 +110,7 @@ const PILLARS = [
     title: "What makes you actually different",
     items: [
       <><strong>Audience:</strong> who really buys, why, and what they care about</>,
-      <><strong>Competitors:</strong> what everyone says — and where the gaps are</>,
+      <><strong>Competitors:</strong> what everyone says, and where the gaps are</>,
       <><strong>Positioning:</strong> the one space you can own in the buyer’s mind</>,
       <><strong>Voice &amp; findings doc:</strong> captured in one shareable file</>,
     ],
@@ -120,7 +120,7 @@ const PILLARS = [
     kicker: "02 · Messaging framework",
     title: "The words your whole team uses",
     items: [
-      <><strong>Brand promise:</strong> one clear sentence — what, and for whom</>,
+      <><strong>Brand promise:</strong> one clear sentence, what, and for whom</>,
       <><strong>Value props:</strong> the 3–4 concrete reasons someone chooses you</>,
       <><strong>Elevator pitch</strong> &amp; key messages by audience</>,
       <><strong>Approved language:</strong> exact phrases to use (and avoid)</>,
@@ -133,7 +133,7 @@ const PILLARS = [
     title: "Every place your brand shows up",
     items: [
       <><strong>Full logo suite:</strong> primary, stacked, horizontal, icon, favicon</>,
-      <><strong>All formats:</strong> SVG, PNG, EPS, PDF — source files, forever</>,
+      <><strong>All formats:</strong> SVG, PNG, EPS, PDF, source files, forever</>,
       <><strong>Palette &amp; type:</strong> HEX/RGB/CMYK, headline/body/caption</>,
       <><strong>Guidelines PDF:</strong> one file to send any partner or printer</>,
     ],
@@ -229,10 +229,10 @@ const ADDONS = ["Brand naming", "Tagline-only", "Business cards & stationery", "
 const GETS = [
   { text: <><strong>One clear message</strong> that sales, marketing, and product all use.</> },
   { text: <><strong>A polished visual system</strong> that looks intentional, not thrown together.</>, delay: 60 },
-  { text: <><strong>Files you own</strong> — SVG, PNG, EPS, PDF — handed over on completion.</> },
+  { text: <><strong>Files you own</strong>, SVG, PNG, EPS, PDF, handed over on completion.</> },
   { text: <><strong>A guidelines PDF</strong> you can send to anyone who needs to use your brand.</>, delay: 60 },
-  { text: <><strong>Faster future work</strong> — every post, ad, and deck now has clear rules to follow.</> },
-  { text: <><strong>No decisions at every turn</strong> — the system already answered them.</>, delay: 60 },
+  { text: <><strong>Faster future work</strong>, every post, ad, and deck now has clear rules to follow.</> },
+  { text: <><strong>No decisions at every turn</strong>, the system already answered them.</>, delay: 60 },
 ];
 
 const WHO = [
@@ -243,7 +243,7 @@ const WHO = [
       </svg>
     ),
     title: "A new startup",
-    text: "Building identity from scratch — start with a real brand, not a Fiverr logo.",
+    text: "Building identity from scratch, start with a real brand, not a Fiverr logo.",
   },
   {
     icon: (
@@ -291,26 +291,26 @@ const WHO = [
 
 const STEPS = [
   { no: "1", dur: "Week 1", title: "Discovery", text: "Kickoff call, audience & competitor research, a short team workshop, and a findings document." },
-  { no: "2", dur: "Week 2", title: "Positioning & messaging", text: "Draft positioning and messaging framework. You review, we refine — ends with an approved doc.", delay: 80 },
+  { no: "2", dur: "Week 2", title: "Positioning & messaging", text: "Draft positioning and messaging framework. You review, we refine, ends with an approved doc.", delay: 80 },
   { no: "3", dur: "Weeks 3–4", title: "Identity design", text: "Three logo directions, colour & type exploration, then refinement into the full identity suite.", delay: 160 },
   { no: "4", dur: "Week 5", title: "Guidelines & handover", text: "Final guidelines PDF, complete file package, and a handover call so your team can use it all.", delay: 240 },
 ];
 
 const TIERS = [
-  { name: "Starter Brand", best: "The core identity — discovery, logo suite, and basic guidelines.", price: "Published rate" },
-  { name: "Full Brand", best: "The complete package — discovery, positioning, messaging, full identity suite, and detailed guidelines.", price: "Published rate", featured: true, badge: "Most popular", delay: 80 },
+  { name: "Starter Brand", best: "The core identity, discovery, logo suite, and basic guidelines.", price: "Published rate" },
+  { name: "Full Brand", best: "The complete package, discovery, positioning, messaging, full identity suite, and detailed guidelines.", price: "Published rate", featured: true, badge: "Most popular", delay: 80 },
   { name: "Brand + Launch", best: "Full brand plus rollout across website, social, email, and collateral.", price: "Published rate", delay: 160 },
 ];
 
 const FAQS = [
   { q: "How long does the process take?", a: <>Usually <strong>4–6 weeks</strong> from kickoff to handover. Faster for smaller Starter Brand projects; Brand + Launch can run 6–8 weeks.</> },
-  { q: "Do I get the source files?", a: <>Yes — all final logo files (SVG, PNG, EPS, PDF), the guidelines PDF, and working files you need. <strong>You own everything.</strong></> },
-  { q: "How many logo concepts do you show?", a: <><strong>Three distinct directions</strong> in round one — real choices, not “which shade of blue?” You pick one, we refine it through two rounds into the final identity.</> },
-  { q: "Can I keep my logo, just get positioning?", a: "Yes. If the visual identity is fine but the strategy is weak, we do positioning, messaging, and voice without redoing the logo — ask for a scoped quote." },
+  { q: "Do I get the source files?", a: <>Yes, all final logo files (SVG, PNG, EPS, PDF), the guidelines PDF, and working files you need. <strong>You own everything.</strong></> },
+  { q: "How many logo concepts do you show?", a: <><strong>Three distinct directions</strong> in round one, real choices, not “which shade of blue?” You pick one, we refine it through two rounds into the final identity.</> },
+  { q: "Can I keep my logo, just get positioning?", a: "Yes. If the visual identity is fine but the strategy is weak, we do positioning, messaging, and voice without redoing the logo, ask for a scoped quote." },
   { q: "Do you do website design too?", a: <>Yes, but as a separate service. Branding defines the identity; Web Design uses it to build the site. <strong>Some bundle both;</strong> some just want a re-skin.</> },
   { q: "What if I don’t like any direction?", a: <>Rare, because concepts come out of discovery, not thin air. If it happens, <strong>we go back to discovery and present new directions at no extra cost.</strong></> },
-  { q: "Can you refresh an existing brand?", a: <>Yes. A refresh <strong>keeps the equity you’ve built</strong> and updates what isn’t working — often the right choice for established businesses.</> },
-  { q: "Do you help with naming?", a: "On request, as a separate mini-project — idea generation, shortlisting, and trademark/domain checks. Ask us for pricing." },
+  { q: "Can you refresh an existing brand?", a: <>Yes. A refresh <strong>keeps the equity you’ve built</strong> and updates what isn’t working, often the right choice for established businesses.</> },
+  { q: "Do you help with naming?", a: "On request, as a separate mini-project, idea generation, shortlisting, and trademark/domain checks. Ask us for pricing." },
 ];
 
 export default function BrandingGrowthView() {
@@ -323,12 +323,12 @@ export default function BrandingGrowthView() {
         line1="A brand that looks established"
         line2={
           <>
-            — and says <span className="grad-text">one clear thing.</span>
+            and says <span className="grad-text">one clear thing.</span>
           </>
         }
         lead={
           <>
-            Identity systems and the positioning behind them — the message, the look, and the reasoning that{" "}
+            Identity systems and the positioning behind them, the message, the look, and the reasoning that{" "}
             <strong>make the shortlist decision go your way,</strong> whether the buyer sees you on Google, on
             Instagram, in an email, or on a proposal.
           </>
@@ -347,14 +347,14 @@ export default function BrandingGrowthView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Why branding actually matters</span>
             <h2>Most treat branding as “the logo.” That’s not why brands win.</h2>
-            <p>Here’s what actually breaks without a real brand — and what a positioning-led system fixes.</p>
+            <p>Here’s what actually breaks without a real brand, and what a positioning-led system fixes.</p>
           </Reveal>
           <ProblemSolve
             items={PROBLEMS}
             solve={
               <>
                 And every asset takes forever without a system.{" "}
-                <span className="gt">A real brand fixes all of that — one clear promise, consistent everywhere.</span>
+                <span className="gt">A real brand fixes all of that, one clear promise, consistent everywhere.</span>
               </>
             }
           />
@@ -366,7 +366,7 @@ export default function BrandingGrowthView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
-            <h2>Strategy, words, and a system — not just a logo.</h2>
+            <h2>Strategy, words, and a system, not just a logo.</h2>
           </Reveal>
           <div className="bg-inc3">
             <FeatureGrid cards={PILLARS} columns={3} />
@@ -379,8 +379,8 @@ export default function BrandingGrowthView() {
         <div className="wrap">
           <Reveal className="sec-head" style={{ maxWidth: 760 }}>
             <span className="eyebrow">One message, everywhere</span>
-            <h2>The same clear thing — on every surface.</h2>
-            <p>Google, Instagram, email, a proposal — a real system means the buyer sees one consistent brand, not four versions of you.</p>
+            <h2>The same clear thing, on every surface.</h2>
+            <p>Google, Instagram, email, a proposal, a real system means the buyer sees one consistent brand, not four versions of you.</p>
           </Reveal>
           <div className="bg-consist">
             {CHANNELS.map((channel) => (
@@ -409,7 +409,7 @@ export default function BrandingGrowthView() {
             ))}
           </div>
           <Reveal as="p" className="bg-consist-note">
-            Same mark, same promise, same palette — <strong>that repetition is what makes a brand feel established.</strong>
+            Same mark, same promise, same palette, <strong>that repetition is what makes a brand feel established.</strong>
           </Reveal>
         </div>
       </section>
@@ -420,7 +420,7 @@ export default function BrandingGrowthView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Full list of services</span>
             <h2>Everything under Branding &amp; Growth.</h2>
-            <p>Grouped by area — the full set in the Full Brand package. Starter covers the essentials; Brand + Launch adds rollout.</p>
+            <p>Grouped by area, the full set in the Full Brand package. Starter covers the essentials; Brand + Launch adds rollout.</p>
           </Reveal>
           <div className="bg-grp-grid">
             {GROUPS.map((group) => (
@@ -438,7 +438,7 @@ export default function BrandingGrowthView() {
             ))}
           </div>
           <Reveal className="bg-addons">
-            <span className="al">Optional add-ons — on request</span>
+            <span className="al">Optional add-ons, on request</span>
             <div className="chips">
               {ADDONS.map((addon) => (
                 <span key={addon}>{addon}</span>
@@ -480,7 +480,7 @@ export default function BrandingGrowthView() {
           </Reveal>
           <StepCards steps={STEPS} />
           <NoteCallout style={{ marginTop: 22 }}>
-            Optional — <strong>Launch support:</strong> if you want, we roll the new brand out across your website,
+            Optional, <strong>Launch support:</strong> if you want, we roll the new brand out across your website,
             social profiles, email templates, and collateral. Priced separately.
           </NoteCallout>
         </div>
@@ -492,11 +492,11 @@ export default function BrandingGrowthView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Pricing</span>
             <h2>One clear price, published up front.</h2>
-            <p>No “book a call to hear our pricing.” One-time projects — no monthly retainer required.</p>
+            <p>No “book a call to hear our pricing.” One-time projects, no monthly retainer required.</p>
           </Reveal>
           <PricingTiers tiers={TIERS} />
           <NoteCallout>
-            One-time projects, paid in two installments — <strong>50% at kickoff, 50% at handover.</strong> Every exact
+            One-time projects, paid in two installments, <strong>50% at kickoff, 50% at handover.</strong> Every exact
             number is on the <a href="/pricing">pricing page</a>; any two services bundle at 10% off, three or more at 15%.
           </NoteCallout>
         </div>
@@ -510,7 +510,7 @@ export default function BrandingGrowthView() {
         copy={
           <>
             Book a free branding call. We’ll walk through where your brand is today, where it needs to go, and what
-            it’d take to get there —{" "}
+            it’d take to get there,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>with a clear price at the end. No obligation.</strong>
           </>
         }

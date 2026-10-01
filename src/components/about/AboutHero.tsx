@@ -35,7 +35,7 @@ export default function AboutHero() {
           </h1>
           <p className={`ab-hero-lead ${loadClass}`} style={delayStyle(2)}>
             You bring the business. We bring the strategy, brand, technology, and marketing you
-            don&apos;t have in-house — so the whole thing actually works.
+            don&apos;t have in-house, so the whole thing actually works.
           </p>
           <div className={`ab-hero-cta ${loadClass}`} style={delayStyle(3)}>
             <a href="#book" className="btn btn-primary">

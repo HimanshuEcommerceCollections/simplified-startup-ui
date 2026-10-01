@@ -69,7 +69,7 @@ const SERVICES = [
   {
     category: "accounting",
     title: "Bookkeeping & Accounting",
-    description: "Clean books, reporting, and month-end close — finance handled end to end.",
+    description: "Clean books, reporting, and month-end close, finance handled end to end.",
     video: "/assets/videos/service-accounting.mp4",
     href: "/bookkeeping",
   },
@@ -88,7 +88,7 @@ export default function ServicesGallery() {
               <span className="rule"></span>
             </h2>
             <p>
-              One integrated engagement across marketing, web, brand, sales, and talent — not six
+              One integrated engagement across marketing, web, brand, sales, and talent, not six
               vendors stitched together.
             </p>
           </Reveal>
@@ -114,7 +114,7 @@ export default function ServicesGallery() {
               key={service.title}
               className="work"
               href={service.href}
-              aria-label={`${service.title} — view service`}
+              aria-label={`${service.title}, view service`}
               style={{
                 display: activeCat === "all" || service.category === activeCat ? undefined : "none",
               }}

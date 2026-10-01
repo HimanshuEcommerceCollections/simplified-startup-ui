@@ -240,8 +240,8 @@ const WHY = [
   { icon: ICON_TREND, title: "It converts, not just attracts", text: <>Traffic is expensive. A store converting 3% of visitors is worth <strong>3× one that converts 1%.</strong></> },
   { icon: ICON_PHONE, title: "It works mobile-first", text: <>75%+ of e-commerce traffic is mobile. Designed desktop-first? <strong>You’re losing 3 of every 4 visitors.</strong></>, delay: 60 },
   { icon: ICON_SHIELD, title: "It survives ad-driven traffic", text: <>Ads send buyers who don’t know your brand. <strong>Your store has 5 seconds to earn their trust.</strong></>, delay: 120 },
-  { icon: ICON_SEARCH, title: "It ranks in search", text: <>Product and category pages that rank drive <strong>free, compounding revenue — forever.</strong></> },
-  { icon: ICON_BARS, title: "It scales with your catalog", text: <>A store built for 10 products should still work at 500 or 5,000 — <strong>without a rebuild.</strong></>, delay: 60 },
+  { icon: ICON_SEARCH, title: "It ranks in search", text: <>Product and category pages that rank drive <strong>free, compounding revenue, forever.</strong></> },
+  { icon: ICON_BARS, title: "It scales with your catalog", text: <>A store built for 10 products should still work at 500 or 5,000, <strong>without a rebuild.</strong></>, delay: 60 },
   { icon: ICON_CART, title: "The biggest lever you have", text: <>Done right, your store is <strong>the single biggest lever in your business.</strong></>, delay: 120 },
 ];
 
@@ -250,7 +250,7 @@ const WHY = [
 const PAINS = [
   { title: "Beautiful but doesn’t convert", text: <>Design chases awards; buyers just want the buy button. <strong>Conversions tank.</strong></> },
   { title: "Mobile as an afterthought", text: <>Designed on desktop, “made responsive” at the end. <strong>Mobile buyers get a broken experience.</strong></>, delay: 60 },
-  { title: "Checkout not in base package", text: <>The one page that decides whether you make money — <strong>quoted as an upsell.</strong></>, delay: 120 },
+  { title: "Checkout not in base package", text: <>The one page that decides whether you make money, <strong>quoted as an upsell.</strong></>, delay: 120 },
   { title: "No SEO built in", text: <>Generic titles, no schema. <strong>You’ll pay someone else to fix it later.</strong></> },
   { title: "Themes only they can update", text: <>Every small change costs $300. <strong>You’re locked in.</strong></>, delay: 60 },
   { title: "Launch and vanish", text: <>Six months to build, zero support after. <strong>Your first three bugs cost more than you saved.</strong></>, delay: 120 },
@@ -273,7 +273,7 @@ const INCLUDED: Included[] = [
     btnName: "Strategy & planning",
     btnSub: "Before design",
     name: "Strategy & Store Planning",
-    tag: "Every project starts here — catalog, journey, and revenue model before anyone opens a design tool.",
+    tag: "Every project starts here, catalog, journey, and revenue model before anyone opens a design tool.",
     items: ["Business goal + conversion target", "Customer journey mapping (ad click to purchase)", "Competitor store analysis", "Site map & category structure", "Product taxonomy & collection strategy", "Platform recommendation"],
   },
   {
@@ -281,7 +281,7 @@ const INCLUDED: Included[] = [
     btnName: "Custom store design",
     btnSub: "Not a $79 theme",
     name: "Custom Store Design",
-    tag: "Not a $79 theme on your logo — custom design that converts on every page.",
+    tag: "Not a $79 theme on your logo, custom design that converts on every page.",
     items: ["Homepage for first-time & returning buyers", "Product page templates that sell", "Category / collection pages", "Cart, mini-cart, and checkout flow", "Content pages (About, FAQ, Shipping)", "Design system for consistency"],
   },
   {
@@ -289,7 +289,7 @@ const INCLUDED: Included[] = [
     btnName: "Mobile-first design",
     btnSub: "Where buyers are",
     name: "Mobile-First Design",
-    tag: "Not “responsive” — designed for the phone first, where 75%+ of buyers are.",
+    tag: "Not “responsive”, designed for the phone first, where 75%+ of buyers are.",
     items: ["Mobile-first wireframes & layouts", "Touch-optimized buttons & forms", "Sticky mobile cart & checkout CTAs", "Optimized mobile product galleries", "Minimal-field mobile checkout", "Fast load on 4G / weak connections"],
   },
   {
@@ -297,7 +297,7 @@ const INCLUDED: Included[] = [
     btnName: "Cart & checkout",
     btnSub: "Built to convert",
     name: "Cart & Checkout Optimization",
-    tag: "The most important part of your store — built for conversion, not just “it works.”",
+    tag: "The most important part of your store, built for conversion, not just “it works.”",
     items: ["Streamlined 1–2 step checkout", "Guest checkout on by default", "Apple Pay, Google Pay, Shop Pay, PayPal", "Trust signals at checkout", "Address auto-complete & validation", "Post-purchase upsell setup"],
   },
   {
@@ -305,7 +305,7 @@ const INCLUDED: Included[] = [
     btnName: "Product setup & migration",
     btnSub: "Clean catalog",
     name: "Product Setup & Migration",
-    tag: "Your catalog into the store cleanly — whether it’s 20 products or 5,000.",
+    tag: "Your catalog into the store cleanly, whether it’s 20 products or 5,000.",
     items: ["Product uploads or bulk CSV imports", "Photography direction (or optimization)", "SEO-written / optimized descriptions", "Variants, options, inventory setup", "Collections & tag structure", "Migration from Shopify, Woo, Magento, Etsy"],
   },
   {
@@ -321,7 +321,7 @@ const INCLUDED: Included[] = [
     btnName: "SEO foundation",
     btnSub: "Rank as you grow",
     name: "E-commerce SEO Foundation",
-    tag: "Built in from day one — the store ranks as it builds authority, not fixed later at 3× the cost.",
+    tag: "Built in from day one, the store ranks as it builds authority, not fixed later at 3× the cost.",
     items: ["SEO-friendly URL structure", "Meta titles & descriptions on every page", "Product schema markup for rich results", "XML sitemap & robots.txt", "Core Web Vitals (site speed)", "Image compression & alt text"],
   },
   {
@@ -329,7 +329,7 @@ const INCLUDED: Included[] = [
     btnName: "Apps & integrations",
     btnSub: "Revenue machine",
     name: "App & Integration Setup",
-    tag: "The apps that turn a basic store into a revenue machine — selected & configured for you.",
+    tag: "The apps that turn a basic store into a revenue machine, selected & configured for you.",
     items: ["Email marketing (Klaviyo, Omnisend, Brevo)", "Reviews (Judge.me, Yotpo, Loox)", "Upsells & cross-sells (Rebuy, Zipify)", "Live chat & support (Gorgias, Tidio)", "Subscriptions (Recharge, if applicable)", "Analytics (GA4, Meta & TikTok Pixel, CAPI)"],
   },
   {
@@ -337,7 +337,7 @@ const INCLUDED: Included[] = [
     btnName: "Launch & ownership",
     btnSub: "All yours",
     name: "Launch, Training & Ownership",
-    tag: "The store is yours — full access, source files, training, not lock-in.",
+    tag: "The store is yours, full access, source files, training, not lock-in.",
     items: ["Full domain & hosting setup", "SSL & security hardening", "Analytics + conversion tracking", "Team training on products, orders, content", "Documentation & video walk-throughs", "All logins, files, and API keys handed over"],
   },
 ];
@@ -415,8 +415,8 @@ function IncludedExplorer() {
 /* -------- platforms -------- */
 
 const PLATFORMS = [
-  { name: "Shopify", best: "Most e-commerce brands — easy to manage, huge app ecosystem, scales with you." },
-  { name: "Shopify Plus", best: "High-volume brands ($1M+/yr) — checkout customization, wholesale, multi-store." },
+  { name: "Shopify", best: "Most e-commerce brands, easy to manage, huge app ecosystem, scales with you." },
+  { name: "Shopify Plus", best: "High-volume brands ($1M+/yr), checkout customization, wholesale, multi-store." },
   { name: "WooCommerce", best: "WordPress-based stores wanting maximum flexibility and no monthly platform fee." },
   { name: "BigCommerce", best: "Mid-market brands wanting Shopify-like features with more built-in tools." },
   { name: "Custom (Headless)", best: "Advanced brands needing performance beyond off-the-shelf platforms." },
@@ -425,12 +425,12 @@ const PLATFORMS = [
 /* -------- who / steps / pricing / faq -------- */
 
 const WHO: { icon: ReactNode; text: ReactNode; delay?: number }[] = [
-  { icon: ICON_CART, text: <><strong>Launching a new online store</strong> and want it built properly from day one — not on a $200 template you’ll rebuild in 6 months.</> },
-  { icon: ICON_TREND_DOWN, text: <><strong>Running a store that isn’t converting</strong> — traffic’s coming, sales aren’t. Usually a design and checkout problem.</>, delay: 60 },
-  { icon: ICON_REFRESH, text: <><strong>Migrating from Etsy or Amazon</strong> to your own store — keep more margin and own your customers.</>, delay: 120 },
-  { icon: ICON_BARS, text: <><strong>Scaling past your DIY store</strong> — a template got you to $10K/mo, but the design is blocking $50K+.</> },
-  { icon: ICON_TARGET, text: <><strong>Running paid ads to a weak store</strong> — paying for clicks that bounce because it isn’t built to convert.</>, delay: 60 },
-  { icon: ICON_BRIEFCASE, text: <><strong>Launching wholesale / B2B</strong> alongside your DTC store — needs specific catalog and pricing structure.</>, delay: 120 },
+  { icon: ICON_CART, text: <><strong>Launching a new online store</strong> and want it built properly from day one, not on a $200 template you’ll rebuild in 6 months.</> },
+  { icon: ICON_TREND_DOWN, text: <><strong>Running a store that isn’t converting</strong>, traffic’s coming, sales aren’t. Usually a design and checkout problem.</>, delay: 60 },
+  { icon: ICON_REFRESH, text: <><strong>Migrating from Etsy or Amazon</strong> to your own store, keep more margin and own your customers.</>, delay: 120 },
+  { icon: ICON_BARS, text: <><strong>Scaling past your DIY store</strong>, a template got you to $10K/mo, but the design is blocking $50K+.</> },
+  { icon: ICON_TARGET, text: <><strong>Running paid ads to a weak store</strong>, paying for clicks that bounce because it isn’t built to convert.</>, delay: 60 },
+  { icon: ICON_BRIEFCASE, text: <><strong>Launching wholesale / B2B</strong> alongside your DTC store, needs specific catalog and pricing structure.</>, delay: 120 },
 ];
 
 const STEPS = [
@@ -438,27 +438,27 @@ const STEPS = [
   { no: "Week 2", title: "Wireframes & content", text: "Low-fi wireframes for every page. Product data collected. You approve before design starts.", delay: 70 },
   { no: "Weeks 3–4", title: "Design", text: "Custom design for every page, mobile-first. Two rounds of feedback and revisions.", delay: 140 },
   { no: "Weeks 5–7", title: "Development & load", text: "Store built on your platform. Products loaded. Payments, shipping, tax configured. Apps installed. Full QA.", delay: 210 },
-  { no: "Week 8", title: "Launch & training", text: "Go live. Analytics and tracking configured. Team trained. Everything handed over — yours.", delay: 280 },
+  { no: "Week 8", title: "Launch & training", text: "Go live. Analytics and tracking configured. Team trained. Everything handed over, yours.", delay: 280 },
 ];
 
 const TIERS = [
-  { name: "Starter Store", best: "New brands, up to 25 products — Shopify theme customization, essential pages, launch in 3–4 weeks.", price: "Published" },
-  { name: "Growth Store", best: "Growing brands, up to 100 products — fully custom design, advanced checkout, app integrations.", price: "Published", featured: true, badge: "Most popular", delay: 70 },
-  { name: "Scale Store", best: "Established brands & Shopify Plus — 500+ products, custom features, wholesale, migrations.", price: "Published", delay: 140 },
-  { name: "Store Redesign", best: "Existing stores needing a full refresh — design, UX, and CRO overhaul without changing platforms.", price: "Published", delay: 210 },
+  { name: "Starter Store", best: "New brands, up to 25 products: Shopify theme customization, essential pages, launch in 3–4 weeks.", price: "Published" },
+  { name: "Growth Store", best: "Growing brands, up to 100 products, fully custom design, advanced checkout, app integrations.", price: "Published", featured: true, badge: "Most popular", delay: 70 },
+  { name: "Scale Store", best: "Established brands & Shopify Plus: 500+ products, custom features, wholesale, migrations.", price: "Published", delay: 140 },
+  { name: "Store Redesign", best: "Existing stores needing a full refresh, design, UX, and CRO overhaul without changing platforms.", price: "Published", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "Shopify or WooCommerce?", a: <><strong>Shopify</strong> for most brands — easy to manage, huge app ecosystem, reliable hosting. <strong>WooCommerce</strong> if you want more control, no monthly platform fee, and already run WordPress. We’ll recommend the right one.</> },
-  { q: "How long to launch?", a: <>Starter 3–4 weeks, Growth 4–6, Scale & migrations 6–8. <strong>Timelines depend on how quickly you approve at each stage</strong> — fastest projects have decisive clients.</> },
-  { q: "Can you migrate my existing store?", a: <>Yes — full migrations from Shopify ↔ WooCommerce, Magento, BigCommerce, Squarespace, Wix, Etsy, Amazon. <strong>Product data, customers, orders, redirects, and SEO preserved.</strong></> },
-  { q: "Do you handle product uploads?", a: <>Yes — included up to the package limit (25/100/500+). For larger catalogs we use <strong>bulk CSV imports.</strong> Descriptions written by us or provided by you.</> },
-  { q: "Will my store be mobile-friendly?", a: <>Every store is <strong>mobile-first</strong> — designed for the phone first, then adapted for desktop. That’s where 75%+ of your buyers are.</> },
-  { q: "Do I own the store?", a: <>Yes, completely — all logins, source files, and documentation handed over. No proprietary themes, no “you need us to make changes.” <strong>You can leave with the store anytime.</strong></> },
-  { q: "No professional product photos?", a: <>We’ll optimize what you have and give direction to improve them — or refer a product photographer in our network. <strong>Full-service photography can be added.</strong></> },
-  { q: "Do you set up email & reviews?", a: <>Yes — we install and configure the core apps every store needs (<strong>Klaviyo/Brevo, Judge.me/Yotpo, upsells, chat</strong>). Ongoing email management is a separate service.</> },
+  { q: "Shopify or WooCommerce?", a: <><strong>Shopify</strong> for most brands, easy to manage, huge app ecosystem, reliable hosting. <strong>WooCommerce</strong> if you want more control, no monthly platform fee, and already run WordPress. We’ll recommend the right one.</> },
+  { q: "How long to launch?", a: <>Starter 3–4 weeks, Growth 4–6, Scale & migrations 6–8. <strong>Timelines depend on how quickly you approve at each stage</strong>, fastest projects have decisive clients.</> },
+  { q: "Can you migrate my existing store?", a: <>Yes, full migrations from Shopify ↔ WooCommerce, Magento, BigCommerce, Squarespace, Wix, Etsy, Amazon. <strong>Product data, customers, orders, redirects, and SEO preserved.</strong></> },
+  { q: "Do you handle product uploads?", a: <>Yes, included up to the package limit (25/100/500+). For larger catalogs we use <strong>bulk CSV imports.</strong> Descriptions written by us or provided by you.</> },
+  { q: "Will my store be mobile-friendly?", a: <>Every store is <strong>mobile-first</strong>, designed for the phone first, then adapted for desktop. That’s where 75%+ of your buyers are.</> },
+  { q: "Do I own the store?", a: <>Yes, completely, all logins, source files, and documentation handed over. No proprietary themes, no “you need us to make changes.” <strong>You can leave with the store anytime.</strong></> },
+  { q: "No professional product photos?", a: <>We’ll optimize what you have and give direction to improve them, or refer a product photographer in our network. <strong>Full-service photography can be added.</strong></> },
+  { q: "Do you set up email & reviews?", a: <>Yes, we install and configure the core apps every store needs (<strong>Klaviyo/Brevo, Judge.me/Yotpo, upsells, chat</strong>). Ongoing email management is a separate service.</> },
   { q: "What about running ads to the store?", a: <>Handled separately under our Meta Ads and Google Ads services. Many clients <strong>bundle the build with an ads engagement</strong> so traffic flows the day it goes live.</> },
-  { q: "Post-launch support?", a: <>Optional monthly maintenance for updates, new products, and small changes — or one-off updates billed as needed. <strong>No forced retainer, no lock-in.</strong></> },
+  { q: "Post-launch support?", a: <>Optional monthly maintenance for updates, new products, and small changes, or one-off updates billed as needed. <strong>No forced retainer, no lock-in.</strong></> },
 ];
 
 export default function EcommerceWebsitesView() {
@@ -468,7 +468,6 @@ export default function EcommerceWebsitesView() {
         crumb={{ label: "Website Development", href: "/website-development" }}
         className="ecw-hero"
         compact
-        eyebrow="Shopify · WooCommerce · Built to convert"
         line1="An online store built"
         line2={
           <>
@@ -477,7 +476,7 @@ export default function EcommerceWebsitesView() {
         }
         lead={
           <>
-            Custom e-commerce websites on Shopify, WooCommerce, or Shopify Plus — built mobile-first, structured to
+            Custom e-commerce websites on Shopify, WooCommerce, or Shopify Plus, built mobile-first, structured to
             convert, and optimized for search from day one.{" "}
             <strong>Published prices, 4–8 week launch, and you own the store completely.</strong>
           </>
@@ -496,7 +495,7 @@ export default function EcommerceWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Why e-commerce design matters</span>
             <h2>Online buyers decide in seconds.</h2>
-            <p>Your store earns the sale or loses it — usually before they even reach the product page. Here’s what a great store actually does.</p>
+            <p>Your store earns the sale or loses it, usually before they even reach the product page. Here’s what a great store actually does.</p>
           </Reveal>
           <div className="ecw-why">
             <FeatureGrid cards={WHY} columns={3} />
@@ -538,7 +537,7 @@ export default function EcommerceWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
             <h2>Everything to launch and run a real store.</h2>
-            <p>Strategy, design, development, checkout, SEO, and support — nine parts, one team. Pick one to see inside.</p>
+            <p>Strategy, design, development, checkout, SEO, and support, nine parts, one team. Pick one to see inside.</p>
           </Reveal>
           <IncludedExplorer />
         </div>
@@ -550,7 +549,7 @@ export default function EcommerceWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">Platforms we build on</span>
             <h2>The right platform for your catalog and plans.</h2>
-            <p>Every platform has strengths and trade-offs. We recommend based on your business — not what’s easiest for us.</p>
+            <p>Every platform has strengths and trade-offs. We recommend based on your business, not what’s easiest for us.</p>
           </Reveal>
           <Reveal className="ecw-plat-tbl">
             <div className="ecw-plat-row head">
@@ -594,7 +593,7 @@ export default function EcommerceWebsitesView() {
           <Reveal className="sec-head">
             <span className="eyebrow">How it works</span>
             <h2>A structured 4–8 week build.</h2>
-            <p>Clear deliverables at every step — you approve before each stage moves forward.</p>
+            <p>Clear deliverables at every step, you approve before each stage moves forward.</p>
           </Reveal>
           <div className="ecw-steps">
             {STEPS.map((step) => (
@@ -618,7 +617,7 @@ export default function EcommerceWebsitesView() {
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Project fees paid in two installments — <strong>50% at kickoff, 50% at launch.</strong> Optional monthly
+            Project fees paid in two installments, <strong>50% at kickoff, 50% at launch.</strong> Optional monthly
             maintenance for updates, product uploads, and small changes. Hosting, platform fees, and app subscriptions
             are separate. Every rate is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
@@ -633,7 +632,7 @@ export default function EcommerceWebsitesView() {
         copy={
           <>
             Book a free store strategy call. We’ll look at what you have (or need), what it should do, and what it would
-            take to build —{" "}
+            take to build,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>
               with a clear price at the end. No obligation, no jargon, no lock-in.
             </strong>

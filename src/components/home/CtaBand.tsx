@@ -26,7 +26,7 @@ type CtaBandProps = {
 
 export default function CtaBand({
   eyebrow = "Your next step",
-  heading = "The growth team you can't afford to hire — for the price you can.",
+  heading = "The growth team you can't afford to hire, for the price you can.",
   copy = "Book a free consultation and we'll map the fastest path from where you are to real traction. No decks, no pressure.",
   primaryLabel = "Book a free consultation",
   primaryHref = "/start-project",

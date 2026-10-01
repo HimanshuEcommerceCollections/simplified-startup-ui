@@ -41,7 +41,7 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "Scope is the whole game",
-    text: <>Most software projects fail on scope, not code. <strong>We cut hard to a v1 that ships</strong> — then iterate on what you learn.</>,
+    text: <>Most software projects fail on scope, not code. <strong>We cut hard to a v1 that ships</strong>, then iterate on what you learn.</>,
   },
   {
     icon: (
@@ -50,7 +50,7 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "Build-vs-buy, honestly",
-    text: <>Sometimes the right answer is a $50/mo SaaS, not a custom build. <strong>We&apos;ll tell you when</strong> — even if it means less work for us.</>,
+    text: <>Sometimes the right answer is a $50/mo SaaS, not a custom build. <strong>We&apos;ll tell you when</strong>, even if it means less work for us.</>,
     delay: 60,
   },
   {
@@ -60,7 +60,7 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "Boring tech, on purpose",
-    text: <>Proven, well-supported stacks — not whatever&apos;s trending. <strong>Boring means maintainable, hireable, and cheap to run.</strong></>,
+    text: <>Proven, well-supported stacks, not whatever&apos;s trending. <strong>Boring means maintainable, hireable, and cheap to run.</strong></>,
     delay: 120,
   },
   {
@@ -70,7 +70,7 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "You own everything",
-    text: <>Code, infrastructure, accounts, and documentation — <strong>all yours,</strong> so any developer can pick it up later.</>,
+    text: <>Code, infrastructure, accounts, and documentation, <strong>all yours,</strong> so any developer can pick it up later.</>,
   },
   {
     icon: (
@@ -79,7 +79,7 @@ const WHY_CARDS = [
       </svg>
     ),
     title: "Docs a human can read",
-    text: <>Handover docs, architecture notes, and a clean repo — <strong>no black box only we understand.</strong></>,
+    text: <>Handover docs, architecture notes, and a clean repo, <strong>no black box only we understand.</strong></>,
     delay: 60,
   },
   {
@@ -112,7 +112,7 @@ const PAINS = [
   { title: "Scope creep", text: "“Can we also add…” a hundred times, until the v1 never ships.", delay: 0 },
   { title: "Building everything at once", text: "Trying to launch with every feature instead of the smallest useful version.", delay: 60 },
   { title: "Trendy tech", text: "The framework nobody will know how to maintain in two years.", delay: 120 },
-  { title: "No handover", text: "A black box only the original dev understands — and they’ve moved on.", delay: 0 },
+  { title: "No handover", text: "A black box only the original dev understands, and they’ve moved on.", delay: 0 },
   { title: "Should’ve bought SaaS", text: "Six months building what a $50/mo tool already did better.", delay: 60 },
   { title: "Vendor lock-in", text: "You don’t own the code, so you can’t leave the agency that built it.", delay: 120 },
 ];
@@ -154,7 +154,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Customer portals",
     sub: "Client-facing",
     name: "Customer Portals",
-    tag: "A logged-in space for your clients — no more email threads.",
+    tag: "A logged-in space for your clients, no more email threads.",
     items: ["Secure client login", "Documents & file sharing", "Status & project updates", "Messaging / support", "Invoices & payments", "Notifications"],
   },
   {
@@ -213,7 +213,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Workflow automation",
     sub: "Process apps",
     name: "Workflow Automation",
-    tag: "Apps that move a process forward — steps, states, and handoffs.",
+    tag: "Apps that move a process forward, steps, states, and handoffs.",
     items: ["Multi-step workflows", "State machines & statuses", "Task assignment", "Automated notifications", "Integrations & triggers", "SLA & deadline tracking"],
   },
   {
@@ -228,7 +228,7 @@ const WB_ITEMS: WbItem[] = [
     label: "APIs & integrations",
     sub: "Connect systems",
     name: "APIs & Integrations",
-    tag: "Make your systems talk — cleanly, reliably, documented.",
+    tag: "Make your systems talk, cleanly, reliably, documented.",
     items: ["REST / GraphQL APIs", "Third-party integrations", "Webhooks & event handling", "Data sync between systems", "Auth & rate limiting", "API documentation"],
   },
   {
@@ -242,7 +242,7 @@ const WB_ITEMS: WbItem[] = [
     label: "Mobile-web apps",
     sub: "PWA",
     name: "Mobile-Web Apps (PWA)",
-    tag: "App-like experiences on the phone — without an app-store build.",
+    tag: "App-like experiences on the phone, without an app-store build.",
     items: ["Installable PWA", "Offline support", "Push notifications", "Camera / location access", "Responsive, app-like UI", "One codebase, all devices"],
   },
 ];
@@ -296,7 +296,7 @@ const WHO = [
         <path d="M5 15c0-4 3-9 7-11 4 2 7 7 7 11l-3 2H8z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
       </svg>
     ),
-    text: <><strong>A founder with a SaaS idea</strong> who needs an MVP in real users&apos; hands — not a 12-month build.</>,
+    text: <><strong>A founder with a SaaS idea</strong> who needs an MVP in real users&apos; hands, not a 12-month build.</>,
     delay: 0,
   },
   {
@@ -315,7 +315,7 @@ const WHO = [
         <path d="M12 3l8 4v5c0 4.5-3.4 7.7-8 9-4.6-1.3-8-4.5-8-9V7l8-4Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
       </svg>
     ),
-    text: <><strong>A business needing a client portal</strong> — logins, documents, updates — instead of endless email threads.</>,
+    text: <><strong>A business needing a client portal</strong>, logins, documents, updates, instead of endless email threads.</>,
     delay: 120,
   },
   {
@@ -335,7 +335,7 @@ const WHO = [
         <path d="M10 7h7v7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    text: <><strong>A company with systems that don&apos;t talk</strong> — needing APIs and integrations to connect them.</>,
+    text: <><strong>A company with systems that don&apos;t talk</strong>, needing APIs and integrations to connect them.</>,
     delay: 60,
   },
   {
@@ -352,30 +352,30 @@ const WHO = [
 
 const STEPS = [
   { no: "Week 1", title: "Scoping & build-vs-buy", text: "We map the problem, pressure-test build-vs-buy, and define the smallest useful v1. Honest recommendation first.", delay: 0 },
-  { no: "Weeks 1–2", title: "Design & architecture", text: "User flows, wireframes, data model, and tech choices — documented and approved before code.", delay: 70 },
+  { no: "Weeks 1–2", title: "Design & architecture", text: "User flows, wireframes, data model, and tech choices, documented and approved before code.", delay: 70 },
   { no: "Weeks 2–8", title: "Build in sprints", text: "Two-week sprints with working demos each time. You see progress you can click, not status decks.", delay: 140 },
   { no: "Pre-launch", title: "Test & harden", text: "QA, security review, performance testing, and real-user testing before anything goes live.", delay: 210 },
   { no: "Launch+", title: "Ship & hand over", text: "Deploy, document, and hand over the repo and accounts. Optional retainer for iteration & support.", delay: 280 },
 ];
 
 const TIERS = [
-  { name: "Discovery Sprint", best: "A paid scoping engagement — problem mapping, build-vs-buy, architecture, and a fixed build quote.", price: "Published" },
-  { name: "MVP Build", best: "The smallest useful version of your product or tool — scoped to ship, in real hands fast.", price: "From published", featured: true, badge: "Most common", delay: 70 },
-  { name: "Full Build", best: "A complete application — multiple roles, integrations, billing, and a production-grade launch.", price: "Quoted per scope", delay: 140 },
-  { name: "Iteration Retainer", best: "Ongoing features, fixes, and support after launch — a flat monthly engagement.", price: "Published /mo", delay: 210 },
+  { name: "Discovery Sprint", best: "A paid scoping engagement, problem mapping, build-vs-buy, architecture, and a fixed build quote.", price: "Published" },
+  { name: "MVP Build", best: "The smallest useful version of your product or tool, scoped to ship, in real hands fast.", price: "From published", featured: true, badge: "Most common", delay: 70 },
+  { name: "Full Build", best: "A complete application, multiple roles, integrations, billing, and a production-grade launch.", price: "Quoted per scope", delay: 140 },
+  { name: "Iteration Retainer", best: "Ongoing features, fixes, and support after launch, a flat monthly engagement.", price: "Published /mo", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "How much does a custom app cost?", a: <>It depends entirely on scope — which is why we start with a paid <strong>Discovery Sprint</strong> that produces a fixed-price build quote. A tight internal tool is a fraction of a multi-role SaaS. You&apos;ll never get an open-ended hourly meter from us.</> },
-  { q: "Will you tell me not to build it?", a: <>Yes — regularly. <strong>If an off-the-shelf SaaS solves your problem, we&apos;ll say so</strong> and even help you set it up. We only take builds where custom genuinely wins.</> },
+  { q: "How much does a custom app cost?", a: <>It depends entirely on scope, which is why we start with a paid <strong>Discovery Sprint</strong> that produces a fixed-price build quote. A tight internal tool is a fraction of a multi-role SaaS. You&apos;ll never get an open-ended hourly meter from us.</> },
+  { q: "Will you tell me not to build it?", a: <>Yes, regularly. <strong>If an off-the-shelf SaaS solves your problem, we&apos;ll say so</strong> and even help you set it up. We only take builds where custom genuinely wins.</> },
   { q: "How long does an MVP take?", a: <>Most MVPs ship in <strong>6–10 weeks</strong> after the Discovery Sprint. The whole point is to get a small useful version into real hands fast, then iterate on what you learn.</> },
   { q: "Do I own the code?", a: <>Completely. <strong>Repo, infrastructure, and every account are in your name,</strong> with documentation so any developer can maintain it. No lock-in, no black box.</> },
-  { q: "What tech do you build on?", a: <>Proven, hireable stacks — <strong>React/Next.js, TypeScript, Node or Python, PostgreSQL,</strong> hosted on Vercel/AWS/Supabase. Boring on purpose, so it&apos;s cheap to run and easy to hire for.</> },
+  { q: "What tech do you build on?", a: <>Proven, hireable stacks, <strong>React/Next.js, TypeScript, Node or Python, PostgreSQL,</strong> hosted on Vercel/AWS/Supabase. Boring on purpose, so it&apos;s cheap to run and easy to hire for.</> },
   { q: "Can you rescue an existing project?", a: <>Often, yes. We start with a code audit and an honest assessment: <strong>fixable, or better rebuilt.</strong> Either way you get a documented, maintainable result.</> },
-  { q: "Do you build mobile apps?", a: <>We focus on web and mobile-web (PWA) apps that work great on phones. For native iOS/Android, <strong>we&apos;ll tell you honestly whether you need it</strong> — most early products don&apos;t.</> },
+  { q: "Do you build mobile apps?", a: <>We focus on web and mobile-web (PWA) apps that work great on phones. For native iOS/Android, <strong>we&apos;ll tell you honestly whether you need it</strong>, most early products don&apos;t.</> },
   { q: "What happens after launch?", a: <>You own everything and can walk away, keep an in-house dev going, or <strong>put us on an iteration retainer</strong> for features, fixes, and support. Your call, month to month.</> },
-  { q: "Can you integrate AI?", a: <>Yes — where it earns its place. We wire in models like OpenAI for real jobs (search, drafting, classification), <strong>not AI for a press release.</strong> Often it&apos;s a v2 feature, not v1.</> },
-  { q: "Do you work with our in-house devs?", a: <>Yes — we can build alongside your team, hand off cleanly, or take a specific module. <strong>Clean docs and a readable repo make that painless.</strong></> },
+  { q: "Can you integrate AI?", a: <>Yes, where it earns its place. We wire in models like OpenAI for real jobs (search, drafting, classification), <strong>not AI for a press release.</strong> Often it&apos;s a v2 feature, not v1.</> },
+  { q: "Do you work with our in-house devs?", a: <>Yes, we can build alongside your team, hand off cleanly, or take a specific module. <strong>Clean docs and a readable repo make that painless.</strong></> },
 ];
 
 /* -------- motion helpers -------- */
@@ -634,7 +634,6 @@ export default function WebApplicationsView() {
         compact
         className="wa-hero"
         crumb={{ label: "Website Development", href: "/website-development" }}
-        eyebrow="Web apps · SaaS · Internal tools · Portals"
         line1="Custom software,"
         line2={
           <>
@@ -646,7 +645,7 @@ export default function WebApplicationsView() {
         }
         lead={
           <>
-            Web applications, SaaS products, internal tools, portals, and dashboards —{" "}
+            Web applications, SaaS products, internal tools, portals, and dashboards,{" "}
             <strong>scoped tight, built to ship, and owned by you.</strong> We start with an honest build-vs-buy answer,
             build only what earns its place, and hand over everything.
           </>
@@ -663,7 +662,7 @@ export default function WebApplicationsView() {
       <section className="band" id="why">
         <div className="wrap">
           <Reveal className="sec-head">
-            <span className="eyebrow">Why custom software — carefully</span>
+            <span className="eyebrow">Why custom software, carefully</span>
             <h2>
               <Words text="The most expensive thing you can build is the wrong thing." />
             </h2>
@@ -677,7 +676,7 @@ export default function WebApplicationsView() {
       <section className="band tint" id="buildbuy">
         <div className="wrap">
           <Reveal className="sec-head">
-            <span className="eyebrow">Build vs buy — the honest version</span>
+            <span className="eyebrow">Build vs buy, the honest version</span>
             <h2>
               <Words text="We’ll talk you out of it when we should." />
             </h2>
@@ -726,7 +725,7 @@ export default function WebApplicationsView() {
             </Reveal>
           </div>
           <Reveal className="wa-bb-note">
-            Our rule: <strong>if buying solves it, we&apos;ll say so — and help you set the tool up instead.</strong> We only
+            Our rule: <strong>if buying solves it, we&apos;ll say so, and help you set the tool up instead.</strong> We only
             take builds where custom genuinely beats off-the-shelf. It&apos;s cheaper for you and better for our reputation.
           </Reveal>
         </div>
@@ -740,7 +739,7 @@ export default function WebApplicationsView() {
             <h2>
               <Words text="It’s almost never the code." />
             </h2>
-            <p>Six ways custom builds go wrong — and how we&apos;re set up to avoid each one.</p>
+            <p>Six ways custom builds go wrong, and how we&apos;re set up to avoid each one.</p>
           </Reveal>
           <div className="wa-pain-grid">
             {PAINS.map((pain) => (
@@ -776,7 +775,7 @@ export default function WebApplicationsView() {
           </Reveal>
           <WhatWeBuild />
           <Reveal as="p" className="wa-wb-note">
-            Not sure which bucket you&apos;re in? <strong>That&apos;s what the scoping call is for</strong> — we&apos;ll
+            Not sure which bucket you&apos;re in? <strong>That&apos;s what the scoping call is for</strong>, we&apos;ll
             figure out what you actually need (and whether to build it at all).
           </Reveal>
         </div>
@@ -790,7 +789,7 @@ export default function WebApplicationsView() {
             <h2>
               <Words text="Boring, proven, and yours to hire for." />
             </h2>
-            <p>We pick tech by how maintainable and hireable it is — not by what&apos;s trending on tech Twitter.</p>
+            <p>We pick tech by how maintainable and hireable it is, not by what&apos;s trending on tech Twitter.</p>
           </Reveal>
           <Reveal className="wa-stack-grid">
             {STACK.map((group) => (
@@ -860,11 +859,11 @@ export default function WebApplicationsView() {
             <h2>
               <Words text="Scoped and quoted before we start." />
             </h2>
-            <p>Custom software is genuinely custom — so we scope tightly and give you a fixed price per phase. No open-ended hourly meter.</p>
+            <p>Custom software is genuinely custom, so we scope tightly and give you a fixed price per phase. No open-ended hourly meter.</p>
           </Reveal>
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
-            Builds are quoted as fixed-price phases after the Discovery Sprint —{" "}
+            Builds are quoted as fixed-price phases after the Discovery Sprint,{" "}
             <strong>you approve the scope and price before we write production code.</strong> Hosting and third-party
             services are billed at cost in your own accounts. Every rate is on the <a href="/pricing">pricing page</a>.
           </NoteCallout>
@@ -879,7 +878,7 @@ export default function WebApplicationsView() {
         heading="Got an idea? Let’s scope it honestly."
         copy={
           <>
-            Book a free scoping call. Tell us the problem — we&apos;ll tell you whether to build or buy, and if it&apos;s a
+            Book a free scoping call. Tell us the problem, we&apos;ll tell you whether to build or buy, and if it&apos;s a
             build, what the smallest useful version looks like,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>with a clear price at the end. No obligation.</strong>
           </>

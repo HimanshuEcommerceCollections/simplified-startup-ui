@@ -32,11 +32,11 @@ const PLAN_ITEMS: ReactNode[] = [
 const STEPS = [
   {
     h: "Fill in the form",
-    p: "Two minutes. No prep, no deck, no tidy numbers needed. Not sure what you need? Pick “not sure yet” — that's what the plan is for.",
+    p: "Two minutes. No prep, no deck, no tidy numbers needed. Not sure what you need? Pick “not sure yet”, that's what the plan is for.",
   },
   {
     h: "A 45-minute session",
-    p: "On video, with a senior team member — not a sales rep. We ask how the business makes money, who your best customer is, what you've tried, and what a good year looks like.",
+    p: "On video, with a senior team member, not a sales rep. We ask how the business makes money, who your best customer is, what you've tried, and what a good year looks like.",
   },
   {
     h: "Your plan, in writing",
@@ -46,7 +46,7 @@ const STEPS = [
 
 const GETS = [
   { ico: "$", h: "Named services", p: "No “from” pricing, no mystery hours." },
-  { ico: "→", h: "A dated sequence", p: "First, next, later — with real dates." },
+  { ico: "→", h: "A dated sequence", p: "First, next, later, with real dates." },
   { ico: "−", h: "A skip list", p: "What not to pay for yet." },
   { ico: "14", h: "Our quality bar", p: "The 14 points every deliverable must pass." },
   { ico: "?", h: "An honest fit call", p: "If we're wrong for you, the plan says so." },
@@ -54,32 +54,32 @@ const GETS = [
 
 const SERVICES = [
   { h: "Launch your business", p: "Idea to open. Business plan, entity setup, brand, and the first paying customers.", when: "Usually when the idea is solid but nothing is registered or built yet." },
-  { h: "A website that sells", p: "Design and build, engineered to convert rather than just look current.", when: "Usually when traffic arrives but doesn't turn into enquiries — or there's no site at all." },
-  { h: "Automate the busywork", p: "Data entry, follow-ups, reporting, handoffs between tools — handled.", when: "Usually when you can name the task you do every week and hate every week." },
+  { h: "A website that sells", p: "Design and build, engineered to convert rather than just look current.", when: "Usually when traffic arrives but doesn't turn into enquiries, or there's no site at all." },
+  { h: "Automate the busywork", p: "Data entry, follow-ups, reporting, handoffs between tools, handled.", when: "Usually when you can name the task you do every week and hate every week." },
   { h: "Fill your pipeline", p: "Qualified prospects researched, verified, and delivered ready to contact.", when: "Usually when you can close well but run out of people to talk to." },
-  { h: "Hiring help", p: "Sourcing, screening, and onboarding run for you — interview a shortlist, not a stack.", when: "Usually when the bottleneck is you, and the fix is another pair of hands." },
+  { h: "Hiring help", p: "Sourcing, screening, and onboarding run for you, interview a shortlist, not a stack.", when: "Usually when the bottleneck is you, and the fix is another pair of hands." },
   { h: "Bookkeeping", p: "Clean monthly financials, closed on time, in a format you can actually read.", when: "Usually when you're guessing at margins or dreading tax season." },
 ];
 
 const STAGES = [
   {
     k: "Pre-launch",
-    p: "Nothing's live yet, and the risk is spending in the wrong order. Your plan leans on sequence — what to set up first, what to postpone until money comes in, and what to skip. Most pre-launch founders are being sold things they don't need for another year.",
+    p: "Nothing's live yet, and the risk is spending in the wrong order. Your plan leans on sequence, what to set up first, what to postpone until money comes in, and what to skip. Most pre-launch founders are being sold things they don't need for another year.",
   },
   {
     k: "Early revenue",
-    p: "Customers exist, but growth feels accidental rather than repeatable. Your plan focuses on making what already works happen on purpose — usually the path from stranger to customer, and where it leaks.",
+    p: "Customers exist, but growth feels accidental rather than repeatable. Your plan focuses on making what already works happen on purpose, usually the path from stranger to customer, and where it leaks.",
   },
   {
     k: "Established & stuck",
-    p: "Revenue is steady, but the business has stopped moving. Your plan goes after the bottleneck — nine times out of ten it's pipeline, delivery capacity, or hours vanishing into work nobody should do by hand.",
+    p: "Revenue is steady, but the business has stopped moving. Your plan goes after the bottleneck, nine times out of ten it's pipeline, delivery capacity, or hours vanishing into work nobody should do by hand.",
   },
 ];
 
 const FAQS = [
   { q: "Is the plan really free? What's the catch?", a: "No card, no invoice, no obligation. The catch is plain self-interest: some founders read their plan and ask us to run it. The rest keep a document worth keeping. That's a trade we're happy with." },
-  { q: "I haven't launched yet — is this for me?", a: "Yes. Pre-launch plans lean harder on sequence and on what to skip. Write “pre-launch” in the form and we'll build it that way." },
-  { q: "Who will I actually be speaking to?", a: "Someone senior who does the work — not a sales rep with a script. That's why it's a conversation rather than a qualification call." },
+  { q: "I haven't launched yet, is this for me?", a: "Yes. Pre-launch plans lean harder on sequence and on what to skip. Write “pre-launch” in the form and we'll build it that way." },
+  { q: "Who will I actually be speaking to?", a: "Someone senior who does the work, not a sales rep with a script. That's why it's a conversation rather than a qualification call." },
   { q: "How long does it take end to end?", a: "Two minutes on the form, 45 minutes in the session, and a few working days before the plan lands." },
   { q: "Do I need to prepare anything?", a: "No deck, no financials, no tidy numbers. If you have figures to hand they help, but the session works without them." },
   { q: "Do I have to buy anything afterwards?", a: "No. The plan is yours to act on yourself, sit on, or take to another firm. We send it once. The next step is yours." },
@@ -184,7 +184,7 @@ export default function GrowthPlanView() {
           stage: field("stage"),
           need: field("need"),
           message: field("message").trim(),
-          company: field("company"), // honeypot — humans never fill it
+          company: field("company"), // honeypot, humans never fill it
         }),
       });
       if (!res.ok) throw new Error(`request failed (${res.status})`);
@@ -217,7 +217,7 @@ export default function GrowthPlanView() {
                 </span>
               </h1>
               <p className="gp-lead">
-                A short conversation, then a written plan you keep — <strong>whether you hire us or not.</strong>
+                A short conversation, then a written plan you keep, <strong>whether you hire us or not.</strong>
               </p>
               <div className="gp-hero-actions">
                 <a className="btn btn-primary" href="#request">
@@ -246,160 +246,7 @@ export default function GrowthPlanView() {
         </div>
       </section>
 
-      {/* 2 · WHAT THE PLAN IS */}
-      <section className="band gp-what" id="what">
-        <div className="wrap">
-          <div className="gp-split">
-            <Reveal className="sec-head gp-split-l">
-              <span className="eyebrow">What the plan is</span>
-              <h2>One page, written for your business.</h2>
-              <p>
-                By the person you spoke with — not a template. Short on purpose. A forty-page deck is easy to make and
-                hard to use.
-              </p>
-            </Reveal>
-            <ul className="gp-list gp-split-r">
-              {PLAN_ITEMS.map((item, i) => (
-                <Reveal as="li" className="gp-li" key={i} style={d(i * 90)}>
-                  {CHECK}
-                  <p>{item}</p>
-                </Reveal>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* 3 · HOW IT WORKS */}
-      <section className="band tint gp-how" id="how">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">How it works</span>
-            <h2>Three steps. Then the next move is yours.</h2>
-            <p>Two minutes on the form, forty-five in a session, a few working days for the plan. We don&apos;t chase.</p>
-          </Reveal>
-          <div className={`gp-steps${stepsIn ? " in" : ""}`} ref={stepsRef}>
-            <div className="gp-line-track" aria-hidden="true">
-              <span className="gp-line-fill"></span>
-            </div>
-            {STEPS.map((step, i) => (
-              <Reveal className="gp-stepcard" key={step.h} style={d(i * 140)}>
-                <span className="gp-num">{String(i + 1).padStart(2, "0")}</span>
-                <h3>{step.h}</h3>
-                <p>{step.p}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4 · WHAT YOU GET BACK */}
-      <section className="band gp-get" id="get">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">What you get back</span>
-            <h2>Everything you need to decide — nothing you don&apos;t.</h2>
-          </Reveal>
-          <div className="gp-get-grid">
-            {GETS.map((get, i) => (
-              <Reveal className="gp-getcard" key={get.h} style={d(i * 80)}>
-                <span className="gp-getico">{get.ico}</span>
-                <h3>{get.h}</h3>
-                <p>{get.p}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5 · WHERE PLANS USUALLY LEAD */}
-      <section className="band tint gp-services" id="services">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">Where plans usually lead</span>
-            <h2>Six services. Fixed scope, published prices.</h2>
-            <p>Nothing quoted by the hour. Most plans recommend two or three — rarely all six at once.</p>
-          </Reveal>
-          <div className="gp-svc-grid" ref={svcGridRef}>
-            {SERVICES.map((svc, i) => (
-              <Reveal as="article" className="gp-svc" key={svc.h} style={d(i * 80)}>
-                <span className="gp-svc-mx"></span>
-                <h3>{svc.h}</h3>
-                <p>{svc.p}</p>
-                <span className="gp-when">{svc.when}</span>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6 · WHY IT'S FREE */}
-      <section className="band dark gp-free" id="free">
-        <div className="gp-free-glow" aria-hidden="true"></div>
-        <div className="wrap">
-          <Reveal className="gp-free-inner">
-            <span className="eyebrow">Why it&apos;s free</span>
-            <h2 style={{ color: "#fff" }}>Openly self-interested.</h2>
-            <p>
-              Some founders read their plan and ask us to run it. That only works if the plan is good on its own.
-              Everyone else keeps a document worth keeping.
-            </p>
-            <p className="gp-free-kicker">Thin free advice costs us more than none.</p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 7 · WHATEVER STAGE */}
-      <section className="band gp-stage" id="stage">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">Whatever stage you&apos;re at</span>
-            <h2>The process doesn&apos;t change. The emphasis does.</h2>
-          </Reveal>
-          <div className="gp-stage-grid">
-            {STAGES.map((stage, i) => (
-              <Reveal as="article" className="gp-stagecard" key={stage.k} style={d(i * 120)}>
-                <span className="gp-stage-k">{stage.k}</span>
-                <p>{stage.p}</p>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal as="p" className="gp-stage-note">
-            Not sure which one you are? That&apos;s fine — say so in the form. Placing you is part of the session, not
-            something you need to work out first.
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 8 · FAQ */}
-      <section className="band tint gp-faq" id="faq">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <span className="eyebrow">Frequently asked</span>
-            <h2>The straight answers.</h2>
-          </Reveal>
-          <Reveal className="gp-acc">
-            {FAQS.map((faq, i) => {
-              const open = openFaq === i;
-              return (
-                <div className={`gp-item${open ? " open" : ""}`} key={faq.q}>
-                  <button className="gp-summary" aria-expanded={open} onClick={() => setOpenFaq(open ? -1 : i)}>
-                    <span>{faq.q}</span>
-                    <span className="gp-chev" aria-hidden="true"></span>
-                  </button>
-                  {open && (
-                    <div className="gp-a">
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 9 · REQUEST */}
+      {/* 2 · REQUEST */}
       <section className="band gp-request" id="request" ref={formInViewRef}>
         <div className="wrap">
           <div className={`gp-form-wrap reveal${formIn ? " in" : ""}`} ref={formWrapRef}>
@@ -418,7 +265,7 @@ export default function GrowthPlanView() {
                   <ul className="gp-form-assure">
                     <li>A one-page plan, written for you</li>
                     <li>Named services &amp; fixed prices</li>
-                    <li>Yours to keep — hire us or not</li>
+                    <li>Yours to keep, hire us or not</li>
                   </ul>
                 </div>
 
@@ -458,8 +305,8 @@ export default function GrowthPlanView() {
                   <div className="gp-field">
                     <label htmlFor="gpStage">What stage are you at?</label>
                     <select id="gpStage" name="stage" defaultValue="early">
-                      <option value="pre-launch">Pre-launch — nothing live yet</option>
-                      <option value="early">Early revenue — growing, but accidental</option>
+                      <option value="pre-launch">Pre-launch, nothing live yet</option>
+                      <option value="early">Early revenue, growing, but accidental</option>
                       <option value="established">Established &amp; stuck</option>
                       <option value="not-sure">Not sure yet</option>
                     </select>
@@ -467,7 +314,7 @@ export default function GrowthPlanView() {
                   <div className="gp-field">
                     <label htmlFor="gpNeed">What do you think you need?</label>
                     <select id="gpNeed" name="need" defaultValue="not-sure">
-                      <option value="not-sure">Not sure yet — that&apos;s what the plan is for</option>
+                      <option value="not-sure">Not sure yet, that&apos;s what the plan is for</option>
                       <option>Launch your business</option>
                       <option>A website that sells</option>
                       <option>Automate the busywork</option>
@@ -496,11 +343,11 @@ export default function GrowthPlanView() {
                   </button>
                   {submitError && (
                     <p className="gp-form-error" role="alert">
-                      Something went wrong sending your request. Please try again — or email us at{" "}
+                      Something went wrong sending your request. Please try again, or email us at{" "}
                       <a href="mailto:contact@simplifiedstartup.com">contact@simplifiedstartup.com</a>.
                     </p>
                   )}
-                  <p className="gp-form-fine">No card. No obligation. We send the plan once — the next step is yours.</p>
+                  <p className="gp-form-fine">No card. No obligation. We send the plan once, the next step is yours.</p>
 
                   {submitted && (
                     <div className="gp-success" role="status">
@@ -508,7 +355,7 @@ export default function GrowthPlanView() {
                         <path d="M4 12.5l5 5L20 6" />
                       </svg>
                       <h3>Request received.</h3>
-                      <p>A real person will reply to book your 45-minute session. Check your inbox — no spam, promise.</p>
+                      <p>A real person will reply to book your 45-minute session. Check your inbox, no spam, promise.</p>
                     </div>
                   )}
                 </form>
@@ -518,19 +365,172 @@ export default function GrowthPlanView() {
         </div>
       </section>
 
+      {/* 3 · WHAT THE PLAN IS */}
+      <section className="band gp-what" id="what">
+        <div className="wrap">
+          <div className="gp-split">
+            <Reveal className="sec-head gp-split-l">
+              <span className="eyebrow">What the plan is</span>
+              <h2>One page, written for your business.</h2>
+              <p>
+                By the person you spoke with, not a template. Short on purpose. A forty-page deck is easy to make and
+                hard to use.
+              </p>
+            </Reveal>
+            <ul className="gp-list gp-split-r">
+              {PLAN_ITEMS.map((item, i) => (
+                <Reveal as="li" className="gp-li" key={i} style={d(i * 90)}>
+                  {CHECK}
+                  <p>{item}</p>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 4 · HOW IT WORKS */}
+      <section className="band tint gp-how" id="how">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">How it works</span>
+            <h2>Three steps. Then the next move is yours.</h2>
+            <p>Two minutes on the form, forty-five in a session, a few working days for the plan. We don&apos;t chase.</p>
+          </Reveal>
+          <div className={`gp-steps${stepsIn ? " in" : ""}`} ref={stepsRef}>
+            <div className="gp-line-track" aria-hidden="true">
+              <span className="gp-line-fill"></span>
+            </div>
+            {STEPS.map((step, i) => (
+              <Reveal className="gp-stepcard" key={step.h} style={d(i * 140)}>
+                <span className="gp-num">{String(i + 1).padStart(2, "0")}</span>
+                <h3>{step.h}</h3>
+                <p>{step.p}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5 · WHAT YOU GET BACK */}
+      <section className="band gp-get" id="get">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">What you get back</span>
+            <h2>Everything you need to decide, nothing you don&apos;t.</h2>
+          </Reveal>
+          <div className="gp-get-grid">
+            {GETS.map((get, i) => (
+              <Reveal className="gp-getcard" key={get.h} style={d(i * 80)}>
+                <span className="gp-getico">{get.ico}</span>
+                <h3>{get.h}</h3>
+                <p>{get.p}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6 · WHERE PLANS USUALLY LEAD */}
+      <section className="band tint gp-services" id="services">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">Where plans usually lead</span>
+            <h2>Six services. Fixed scope, published prices.</h2>
+            <p>Nothing quoted by the hour. Most plans recommend two or three, rarely all six at once.</p>
+          </Reveal>
+          <div className="gp-svc-grid" ref={svcGridRef}>
+            {SERVICES.map((svc, i) => (
+              <Reveal as="article" className="gp-svc" key={svc.h} style={d(i * 80)}>
+                <span className="gp-svc-mx"></span>
+                <h3>{svc.h}</h3>
+                <p>{svc.p}</p>
+                <span className="gp-when">{svc.when}</span>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7 · WHY IT'S FREE */}
+      <section className="band dark gp-free" id="free">
+        <div className="gp-free-glow" aria-hidden="true"></div>
+        <div className="wrap">
+          <Reveal className="gp-free-inner">
+            <span className="eyebrow">Why it&apos;s free</span>
+            <h2 style={{ color: "#fff" }}>Openly self-interested.</h2>
+            <p>
+              Some founders read their plan and ask us to run it. That only works if the plan is good on its own.
+              Everyone else keeps a document worth keeping.
+            </p>
+            <p className="gp-free-kicker">Thin free advice costs us more than none.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 8 · WHATEVER STAGE */}
+      <section className="band gp-stage" id="stage">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">Whatever stage you&apos;re at</span>
+            <h2>The process doesn&apos;t change. The emphasis does.</h2>
+          </Reveal>
+          <div className="gp-stage-grid">
+            {STAGES.map((stage, i) => (
+              <Reveal as="article" className="gp-stagecard" key={stage.k} style={d(i * 120)}>
+                <span className="gp-stage-k">{stage.k}</span>
+                <p>{stage.p}</p>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal as="p" className="gp-stage-note">
+            Not sure which one you are? That&apos;s fine, say so in the form. Placing you is part of the session, not
+            something you need to work out first.
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 9 · FAQ */}
+      <section className="band tint gp-faq" id="faq">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">Frequently asked</span>
+            <h2>The straight answers.</h2>
+          </Reveal>
+          <Reveal className="gp-acc">
+            {FAQS.map((faq, i) => {
+              const open = openFaq === i;
+              return (
+                <div className={`gp-item${open ? " open" : ""}`} key={faq.q}>
+                  <button className="gp-summary" aria-expanded={open} onClick={() => setOpenFaq(open ? -1 : i)}>
+                    <span>{faq.q}</span>
+                    <span className="gp-chev" aria-hidden="true"></span>
+                  </button>
+                  {open && (
+                    <div className="gp-a">
+                      <p>{faq.a}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </Reveal>
+        </div>
+      </section>
+
       <CtaBand
         eyebrow="One conversation, one written plan"
         heading="Not ready to fill a form? Just talk to us."
         copy={
           <>
-            A 45-minute working session, then the plan lands in your inbox —{" "}
+            A 45-minute working session, then the plan lands in your inbox,{" "}
             <strong>free, and yours to keep whether or not you hire us.</strong>
           </>
         }
         primaryLabel="Request my free growth plan"
         primaryHref="#request"
         secondary={{ label: "See services & pricing", href: "/pricing" }}
-        fine="No card. No obligation. We send the plan once — the next step is yours."
+        fine="No card. No obligation. We send the plan once, the next step is yours."
         id="talk"
       />
     </>

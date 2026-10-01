@@ -2,7 +2,6 @@
 .tst { background: var(--paper); color: var(--ink); overflow: hidden; }
 .tst-head { max-width: none; text-align: center; margin-left: auto; margin-right: auto; margin-bottom: 64px; }
 .tst-head .eyebrow { justify-content: center; }
-.tst-head .eyebrow::before { display: none; }
 .tst-head h2 { font-size: clamp(32px, 5vw, 56px); letter-spacing: 0.02em; margin-top: 14px; }
 
 .tst-carousel { position: relative; max-width: 1180px; margin: 0 auto; }

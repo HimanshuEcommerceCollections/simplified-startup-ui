@@ -201,12 +201,12 @@ const ICON_PIN = (
 /* -------- content -------- */
 
 const WHY = [
-  { icon: ICON_BOLT, title: "Drafts in minutes, not days", text: <>AI produces first drafts of blogs, email sequences, ad copy, and captions <strong>in minutes — not days.</strong></> },
+  { icon: ICON_BOLT, title: "Drafts in minutes, not days", text: <>AI produces first drafts of blogs, email sequences, ad copy, and captions <strong>in minutes, not days.</strong></> },
   { icon: ICON_LINK, title: "Content connects to distribution", text: <>A blog auto-syndicates to email, becomes social posts, and <strong>gets repurposed into ads.</strong></>, delay: 60 },
-  { icon: ICON_PERSON_SPARK, title: "AI + human keeps the speed", text: <>Human editorial catches hallucinations, weak arguments, and <strong>brand-voice drift</strong> — at AI speed.</>, delay: 120 },
+  { icon: ICON_PERSON_SPARK, title: "AI + human keeps the speed", text: <>Human editorial catches hallucinations, weak arguments, and <strong>brand-voice drift</strong>, at AI speed.</>, delay: 120 },
   { icon: ICON_LINES, title: "Personalization per segment", text: <>The same email can look entirely different to a <strong>small-business vs an enterprise buyer.</strong></> },
-  { icon: ICON_TREND, title: "Real-time measurement", text: <>See what’s working live and <strong>reallocate spend automatically</strong> — no more monthly report meetings.</>, delay: 60 },
-  { icon: ICON_SHIELD, title: "The right content, faster", text: <>2026 winners aren’t producing more — they’re producing <strong>the right content, in the right places, faster.</strong></>, delay: 120 },
+  { icon: ICON_TREND, title: "Real-time measurement", text: <>See what’s working live and <strong>reallocate spend automatically</strong>, no more monthly report meetings.</>, delay: 60 },
+  { icon: ICON_SHIELD, title: "The right content, faster", text: <>2026 winners aren’t producing more, they’re producing <strong>the right content, in the right places, faster.</strong></>, delay: 120 },
 ];
 
 type Stat = { value?: string; count?: { target: number; suffix?: string }; label: string; text: ReactNode; delay: number };
@@ -214,7 +214,7 @@ type Stat = { value?: string; count?: { target: number; suffix?: string }; label
 const STATS: Stat[] = [
   { count: { target: 70, suffix: "%" }, label: "Time saved", text: "Teams producing 50+ pieces/month report 70% time savings vs pure human production.", delay: 0 },
   { count: { target: 8, suffix: "x" }, label: "Faster execution", text: "AI-native marketing teams report 8× faster campaign execution vs traditional workflows.", delay: 80 },
-  { value: "$0.12", label: "Per AI article", text: "Median AI article cost — vs $150 freelance. 1,250× cheaper (before editing).", delay: 160 },
+  { value: "$0.12", label: "Per AI article", text: "Median AI article cost, vs $150 freelance. 1,250× cheaper (before editing).", delay: 160 },
 ];
 
 const SLOP = [
@@ -243,7 +243,7 @@ const PATHS = [
   { name: "In-house writer", cost: "$150–$300", speed: "2–5 days", tradeoff: "High quality, but doesn’t scale past 4–8 pieces/mo per writer" },
   { name: "Freelance writer", cost: "$100–$300", speed: "3–7 days", tradeoff: "Quality inconsistent, availability unpredictable" },
   { name: "Pure AI ($99/mo tools)", cost: "$0.12–$5", speed: "5 minutes", tradeoff: "Hallucinations, generic, harms brand & SEO" },
-  { name: "AI + human editorial", cost: "$40–$120", speed: "1–2 days", tradeoff: "High + on-brand — needs editorial oversight (which is why we exist)", win: true },
+  { name: "AI + human editorial", cost: "$40–$120", speed: "1–2 days", tradeoff: "High + on-brand, needs editorial oversight (which is why we exist)", win: true },
 ];
 
 type SystemKey = "blog" | "email" | "social" | "ads" | "repurpose" | "personal";
@@ -255,7 +255,7 @@ const SYSTEMS: { key: SystemKey; icon: ReactNode; label: string; sub: string; na
     label: "Blog content",
     sub: "SEO at scale",
     name: "Blog Content System",
-    tag: "SEO-driven blog content at scale — researched, written, edited, and published.",
+    tag: "SEO-driven blog content at scale, researched, written, edited, and published.",
     items: ["Keyword + topic research", "SEO-structured long-form articles", "Human editorial + fact-check", "Internal linking + on-page SEO", "Featured images (AI-generated)", "Auto-publish to your CMS"],
   },
   {
@@ -264,7 +264,7 @@ const SYSTEMS: { key: SystemKey; icon: ReactNode; label: string; sub: string; na
     label: "Email automation",
     sub: "Flows + campaigns",
     name: "Email Marketing Automation",
-    tag: "Flows and campaigns that nurture and convert — written and automated.",
+    tag: "Flows and campaigns that nurture and convert, written and automated.",
     items: ["Welcome + onboarding sequences", "Nurture + drip campaigns", "Newsletter production", "Segmentation + personalization", "A/B subject-line testing", "Platform setup (Klaviyo, HubSpot, Brevo)"],
   },
   {
@@ -282,7 +282,7 @@ const SYSTEMS: { key: SystemKey; icon: ReactNode; label: string; sub: string; na
     label: "Ad copy & creative",
     sub: "Variations at scale",
     name: "Ad Copy & Creative",
-    tag: "High-volume ad variations for Meta, Google, and LinkedIn — built to test.",
+    tag: "High-volume ad variations for Meta, Google, and LinkedIn, built to test.",
     items: ["Headline + primary-text variations", "Audience-specific angles", "Ad creative direction (AI images)", "Landing-page copy match", "A/B test frameworks", "Refreshed on performance data"],
   },
   {
@@ -291,7 +291,7 @@ const SYSTEMS: { key: SystemKey; icon: ReactNode; label: string; sub: string; na
     label: "Repurposing engine",
     sub: "1 → 10+ assets",
     name: "Content Repurposing Engine",
-    tag: "One piece becomes ten — automatically fanned out across every channel.",
+    tag: "One piece becomes ten, automatically fanned out across every channel.",
     items: ["Blog → email newsletter", "Blog → 5+ social posts", "Webinar / video → blog + clips", "Podcast → quotes + carousels", "Long-form → ad copy", "Automated scheduling across channels"],
   },
   {
@@ -300,20 +300,20 @@ const SYSTEMS: { key: SystemKey; icon: ReactNode; label: string; sub: string; na
     label: "Cross-channel personalization",
     sub: "Per audience",
     name: "Cross-Channel Personalization",
-    tag: "The same campaign, tailored per audience segment — at scale.",
+    tag: "The same campaign, tailored per audience segment, at scale.",
     items: ["Segment-specific messaging", "Dynamic email content blocks", "Persona-based landing variants", "Industry / size / role tailoring", "Behavior-triggered content", "Unified voice across every channel"],
   },
 ];
 
 const INCLUDED = [
   { no: "01", icon: ICON_SEARCH, title: "Strategy & audit", text: "Goals, audience, competitor teardown, content audit, and a 90-day roadmap with a real KPI framework." },
-  { no: "02", icon: ICON_MIC, title: "Brand voice training", text: "The most important part — we train the AI on how you write, what you say, and what you never say." },
-  { no: "03", icon: ICON_BOLT, title: "AI content production", text: "First drafts at AI speed — blogs, emails, social, ad copy, video scripts — all from your voice guidelines." },
-  { no: "04", icon: ICON_EDIT, title: "Human editorial review", text: "The step that separates us from $99/mo tools — fact-check, tighten, add expertise, E-E-A-T signals." },
+  { no: "02", icon: ICON_MIC, title: "Brand voice training", text: "The most important part, we train the AI on how you write, what you say, and what you never say." },
+  { no: "03", icon: ICON_BOLT, title: "AI content production", text: "First drafts at AI speed, blogs, emails, social, ad copy, video scripts, all from your voice guidelines." },
+  { no: "04", icon: ICON_EDIT, title: "Human editorial review", text: "The step that separates us from $99/mo tools, fact-check, tighten, add expertise, E-E-A-T signals." },
   { no: "05", icon: ICON_PUBLISH, title: "Distribution & publishing", text: "Published to WordPress/Webflow/Shopify, emailed, scheduled to social, uploaded to ad platforms, auto-repurposed." },
   { no: "06", icon: ICON_LINK, title: "Marketing automation setup", text: "Email platform, CRM triggers, social scheduling, analytics + attribution, and Zapier/Make between it all." },
   { no: "07", icon: ICON_TREND, title: "Reporting & optimization", text: "Monthly plain-language report by channel, top performers, revenue attribution, and roadmap updates from data." },
-  { no: "08", icon: ICON_REPURPOSE, title: "Cross-channel repurposing", text: "One piece becomes ten — blog → email → social → ads — scheduled automatically across channels." },
+  { no: "08", icon: ICON_REPURPOSE, title: "Cross-channel repurposing", text: "One piece becomes ten, blog → email → social → ads, scheduled automatically across channels." },
 ];
 
 const STACK = [
@@ -330,10 +330,10 @@ const STACK = [
 const WHO = [
   { icon: ICON_LAPTOP, text: <><strong>A SaaS or B2B company</strong> needing consistent blog + email + social to feed SEO, nurture, and pipeline.</>, delay: 0 },
   { icon: ICON_CART, text: <><strong>An ecommerce brand</strong> running Klaviyo flows, product content, and social ads at scale.</>, delay: 60 },
-  { icon: ICON_BRIEFCASE, text: <><strong>An agency</strong> producing content for multiple clients — needs a repeatable system, not just more writers.</>, delay: 120 },
-  { icon: ICON_PIN, text: <><strong>A local business</strong> finally wanting to be consistent on social and blog — without hiring a marketing team.</>, delay: 0 },
-  { icon: ICON_PERSON, text: <><strong>A founder or personal brand</strong> who wants weekly content in their voice — without spending Sundays writing.</>, delay: 60 },
-  { icon: ICON_REPURPOSE, text: <><strong>A team tired of freelance writers</strong> — inconsistent quality, missed deadlines, slow turnaround.</>, delay: 120 },
+  { icon: ICON_BRIEFCASE, text: <><strong>An agency</strong> producing content for multiple clients, needs a repeatable system, not just more writers.</>, delay: 120 },
+  { icon: ICON_PIN, text: <><strong>A local business</strong> finally wanting to be consistent on social and blog, without hiring a marketing team.</>, delay: 0 },
+  { icon: ICON_PERSON, text: <><strong>A founder or personal brand</strong> who wants weekly content in their voice, without spending Sundays writing.</>, delay: 60 },
+  { icon: ICON_REPURPOSE, text: <><strong>A team tired of freelance writers</strong>, inconsistent quality, missed deadlines, slow turnaround.</>, delay: 120 },
 ];
 
 const STEPS = [
@@ -345,25 +345,25 @@ const STEPS = [
 ];
 
 const TIERS = [
-  { name: "Content Audit", best: "One-off audit + roadmap of your existing content and marketing systems — no commitment.", price: "Published" },
-  { name: "Starter Content", best: "Small businesses — 1–2 channels, 4–8 pieces/month, basic automation.", price: "Published /mo", delay: 70 },
-  { name: "Growth Content", best: "Growing brands — 3–4 channels, 15–25 pieces/month, cross-channel automation, personalization.", price: "Published /mo", featured: true, badge: "Most popular", delay: 140 },
-  { name: "Scale Content", best: "Larger teams & ecommerce — all channels, 30+ pieces/month, advanced automation, multi-brand/language.", price: "Published /mo", delay: 210 },
+  { name: "Content Audit", best: "One-off audit + roadmap of your existing content and marketing systems, no commitment.", price: "Published" },
+  { name: "Starter Content", best: "Small businesses: 1–2 channels, 4–8 pieces/month, basic automation.", price: "Published /mo", delay: 70 },
+  { name: "Growth Content", best: "Growing brands: 3–4 channels, 15–25 pieces/month, cross-channel automation, personalization.", price: "Published /mo", featured: true, badge: "Most popular", delay: 140 },
+  { name: "Scale Content", best: "Larger teams & ecommerce, all channels, 30+ pieces/month, advanced automation, multi-brand/language.", price: "Published /mo", delay: 210 },
 ];
 
 const FAQS = [
-  { q: "How much does it cost?", a: <>Depends on channels and volume. The Content Audit shows what to build. Starter covers 1–2 channels; Growth (3–4 channels, 15–25 pieces) is most popular; Scale handles ecommerce and larger teams. <strong>Full pricing is published — no “custom quote” wall.</strong></> },
-  { q: "Will it sound like AI wrote it?", a: <>No — that’s the whole point of the human editorial layer. Every piece is reviewed, tightened, and rewritten where needed. <strong>It reads like a person from your team wrote it</strong> — not a ChatGPT dump.</> },
+  { q: "How much does it cost?", a: <>Depends on channels and volume. The Content Audit shows what to build. Starter covers 1–2 channels; Growth (3–4 channels, 15–25 pieces) is most popular; Scale handles ecommerce and larger teams. <strong>Full pricing is published, no “custom quote” wall.</strong></> },
+  { q: "Will it sound like AI wrote it?", a: <>No, that’s the whole point of the human editorial layer. Every piece is reviewed, tightened, and rewritten where needed. <strong>It reads like a person from your team wrote it</strong>, not a ChatGPT dump.</> },
   { q: "Will Google penalize AI content?", a: <>Only low-quality slop with no human oversight. Google rewards high-quality content regardless of how it’s produced. <strong>Our editorial adds E-E-A-T signals</strong> Google specifically rewards in 2026.</> },
-  { q: "Which AI writing tools do you use?", a: <><strong>Claude and GPT-5</strong> as primary models, Jasper for templates, Perplexity for research, Frase/SurferSEO for SEO. We use whichever performs best per content type — not single-tool loyalty.</> },
-  { q: "Blog, email AND social?", a: <>Yes — that’s cross-channel automation. One piece becomes many: a blog becomes an email, becomes 5 social posts, becomes ad copy. <strong>Growth and Scale cover multiple channels.</strong></> },
-  { q: "How is this different from using ChatGPT ourselves?", a: <>ChatGPT alone is generic, in an obvious AI voice, with hallucinations and no distribution. This adds <strong>brand-voice training, human editorial, SEO, repurposing, distribution, and measurement.</strong> It’s a system — not a prompt.</> },
-  { q: "What if the AI gets facts wrong?", a: <>Exactly what editorial catches. Every piece is <strong>fact-checked against sources before publishing</strong> — statistics verified, claims validated. We’d rather delay a day than publish something inaccurate.</> },
-  { q: "Legal, medical, or finance industries?", a: <>Yes — with extra care. For regulated industries we add <strong>subject-matter-expert review</strong> on top of standard editorial. We’ll discuss the review process on the strategy call.</> },
-  { q: "Can you set up my email platform too?", a: <>Yes — platform setup, flow design, and campaign automation are part of the Email system. Klaviyo, HubSpot, Brevo, Mailchimp, ConvertKit — or starting fresh. <strong>We handle the whole stack.</strong></> },
-  { q: "Do I own the content and setup?", a: <>Yes, 100% — all content, brand-voice training, and system prompts are documented and yours. All platform accounts are yours. <strong>If you leave, you keep everything.</strong></> },
+  { q: "Which AI writing tools do you use?", a: <><strong>Claude and GPT-5</strong> as primary models, Jasper for templates, Perplexity for research, Frase/SurferSEO for SEO. We use whichever performs best per content type, not single-tool loyalty.</> },
+  { q: "Blog, email AND social?", a: <>Yes, that’s cross-channel automation. One piece becomes many: a blog becomes an email, becomes 5 social posts, becomes ad copy. <strong>Growth and Scale cover multiple channels.</strong></> },
+  { q: "How is this different from using ChatGPT ourselves?", a: <>ChatGPT alone is generic, in an obvious AI voice, with hallucinations and no distribution. This adds <strong>brand-voice training, human editorial, SEO, repurposing, distribution, and measurement.</strong> It’s a system, not a prompt.</> },
+  { q: "What if the AI gets facts wrong?", a: <>Exactly what editorial catches. Every piece is <strong>fact-checked against sources before publishing</strong>, statistics verified, claims validated. We’d rather delay a day than publish something inaccurate.</> },
+  { q: "Legal, medical, or finance industries?", a: <>Yes, with extra care. For regulated industries we add <strong>subject-matter-expert review</strong> on top of standard editorial. We’ll discuss the review process on the strategy call.</> },
+  { q: "Can you set up my email platform too?", a: <>Yes, platform setup, flow design, and campaign automation are part of the Email system. Klaviyo, HubSpot, Brevo, Mailchimp, ConvertKit, or starting fresh. <strong>We handle the whole stack.</strong></> },
+  { q: "Do I own the content and setup?", a: <>Yes, 100%, all content, brand-voice training, and system prompts are documented and yours. All platform accounts are yours. <strong>If you leave, you keep everything.</strong></> },
   { q: "How is this different from your SEO / Email pages?", a: <>Those are single-channel services. This is the <strong>AI-powered production and automation layer</strong> that runs across all of them. Many clients bundle it with SEO or Email so the whole operation runs as one system.</> },
-  { q: "Can this replace my content team?", a: <>For most SMB/mid-market: yes. For enterprise with senior writers: no — but it accelerates them 3–5×. <strong>Best answer: pair AI production with your existing editorial + strategy team.</strong></> },
+  { q: "Can this replace my content team?", a: <>For most SMB/mid-market: yes. For enterprise with senior writers: no, but it accelerates them 3–5×. <strong>Best answer: pair AI production with your existing editorial + strategy team.</strong></> },
 ];
 
 /* -------- hero signature: AI draft -> human editorial -> publish -------- */
@@ -389,7 +389,7 @@ function DocCard() {
         <span className="rt">AI + HUMAN</span>
       </div>
       <div className="acm-doc-draft">
-        <span className="dl">AI first draft — from your brand voice</span>
+        <span className="dl">AI first draft, from your brand voice</span>
         <span className="acm-dline w1"></span>
         <span className="acm-dline w2"></span>
         <span className="acm-dline w3"></span>
@@ -550,7 +550,6 @@ export default function AiContentMarketingView() {
     <div className="acm-page">
       <ServiceDetailHero
         crumb={{ label: "AI Automation", href: "/ai-automation" }}
-        eyebrow="AI content at scale · Human editorial · Brand-voice trained"
         line1="AI content that doesn’t"
         line2={
           <>
@@ -559,8 +558,8 @@ export default function AiContentMarketingView() {
         }
         lead={
           <>
-            Done-for-you AI content marketing — blogs, emails, social, ad copy, SEO, and cross-channel campaigns at 10×
-            speed and 1/10th the cost — <strong>but edited by real humans so it stays on-brand and accurate.</strong>{" "}
+            Done-for-you AI content marketing, blogs, emails, social, ad copy, SEO, and cross-channel campaigns at 10×
+            speed and 1/10th the cost, <strong>but edited by real humans so it stays on-brand and accurate.</strong>{" "}
             Trained on your voice, connected to your tools, priced transparently.
           </>
         }
@@ -578,10 +577,10 @@ export default function AiContentMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">Why AI content works now</span>
-            <h2>AI changed the math — one person does what took six.</h2>
+            <h2>AI changed the math, one person does what took six.</h2>
             <p>
               Content was always the highest-ROI channel long-term, and the biggest bottleneck. To feed SEO, email, and
-              social you needed 30–50 pieces a month — a whole team. Now the right systems change that.
+              social you needed 30–50 pieces a month, a whole team. Now the right systems change that.
             </p>
           </Reveal>
           <div className="acm-why">
@@ -595,13 +594,13 @@ export default function AiContentMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What AI content costs and saves</span>
-            <h2>Real 2026 benchmarks — with human editorial.</h2>
+            <h2>Real 2026 benchmarks, with human editorial.</h2>
             <p>What businesses running AI-powered content with a human layer actually see.</p>
           </Reveal>
           <StatsGrid />
           <Reveal as="p" className="acm-stat-note">
             The catch: unedited AI averages <strong>3–5 factual errors and 2–3 brand-voice misses per piece.</strong> Human
-            editorial is what turns “AI slop” into “actually publishable” — the entire difference between this and the
+            editorial is what turns “AI slop” into “actually publishable”, the entire difference between this and the
             $99/mo AI tools.
           </Reveal>
         </div>
@@ -614,7 +613,7 @@ export default function AiContentMarketingView() {
             <span className="eyebrow">AI slop vs AI content done right</span>
             <h2>Your biggest fear about AI content is valid.</h2>
             <p>
-              90% of AI content is generic garbage that hurts your brand. Here’s the difference between the two paths —
+              90% of AI content is generic garbage that hurts your brand. Here’s the difference between the two paths,
               we publish only the right column, every time.
             </p>
           </Reveal>
@@ -659,7 +658,7 @@ export default function AiContentMarketingView() {
         <div className="wrap">
           <Reveal className="sec-head">
             <span className="eyebrow">What you’re really paying for</span>
-            <h2>Four honest paths — the real cost + quality math.</h2>
+            <h2>Four honest paths, the real cost + quality math.</h2>
             <p>
               Content marketing has four paths in 2026, each with trade-offs. Here’s how they compare per 1,500-word
               piece.
@@ -687,8 +686,8 @@ export default function AiContentMarketingView() {
             </div>
           </Reveal>
           <Reveal as="p" className="acm-path-note">
-            At the same monthly budget as one full-time writer, <strong>AI + human editorial delivers 4–10× more content</strong>{" "}
-            — with quality that actually ranks and converts.
+            At the same monthly budget as one full-time writer, <strong>AI + human editorial delivers 4–10× more content</strong>,{" "}
+            with quality that actually ranks and converts.
           </Reveal>
         </div>
       </section>
@@ -711,7 +710,7 @@ export default function AiContentMarketingView() {
           <Reveal className="sec-head">
             <span className="eyebrow">What’s included</span>
             <h2>The full stack, run by one team.</h2>
-            <p>Strategy, brand-voice training, production, editorial, distribution, and measurement — seven parts.</p>
+            <p>Strategy, brand-voice training, production, editorial, distribution, and measurement, seven parts.</p>
           </Reveal>
           <Reveal className="acm-inc-grid">
             {INCLUDED.map((item) => (
@@ -737,7 +736,7 @@ export default function AiContentMarketingView() {
             <span className="eyebrow">The AI content stack we run</span>
             <h2>Best-in-class per category, one system.</h2>
             <p>
-              The tools we use to produce and distribute at scale — platform-agnostic, the right tool per client, not the
+              The tools we use to produce and distribute at scale, platform-agnostic, the right tool per client, not the
               one that pays a commission.
             </p>
           </Reveal>
@@ -753,7 +752,7 @@ export default function AiContentMarketingView() {
             ))}
           </Reveal>
           <Reveal as="p" className="acm-st-note">
-            We’re <strong>platform-agnostic</strong> — we recommend the right tool per client, not the one that pays a
+            We’re <strong>platform-agnostic</strong>, we recommend the right tool per client, not the one that pays a
             commission.
           </Reveal>
         </div>
@@ -808,7 +807,7 @@ export default function AiContentMarketingView() {
           <PricingTiers tiers={TIERS} columns={4} />
           <NoteCallout>
             Retainers are <strong>month-to-month.</strong> AI tool subscriptions (Jasper, Claude API, SEO tools) are
-            separate and passed through at cost — typically $100–$500/mo depending on volume. Every rate is on the{" "}
+            separate and passed through at cost, typically $100–$500/mo depending on volume. Every rate is on the{" "}
             <a href="/pricing">pricing page</a>.
           </NoteCallout>
         </div>
@@ -819,11 +818,11 @@ export default function AiContentMarketingView() {
       <CtaBand
         id="start"
         eyebrow="AI Content & Marketing Automation"
-        heading="Content that works — without hiring a team of five."
+        heading="Content that works, without hiring a team of five."
         copy={
           <>
             Book a free content audit. We’ll review your current content, your channels, and your goals, and come back
-            with a clear plan and price —{" "}
+            with a clear plan and price,{" "}
             <strong style={{ color: "#fff", fontWeight: 600 }}>usually within 48 hours. No obligation, no jargon, no AI slop.</strong>
           </>
         }

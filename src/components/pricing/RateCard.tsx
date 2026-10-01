@@ -5,7 +5,7 @@ type Group = { label: string; rows: Rate[] };
 
 const GROUPS: Group[] = [
   {
-    label: "Search (SEO) — part of digital marketing",
+    label: "Search (SEO), part of digital marketing",
     rows: [
       {
         title: "SEO Audit",
@@ -19,7 +19,7 @@ const GROUPS: Group[] = [
         per: true,
       },
       {
-        title: "SEO — Aggressive",
+        title: "SEO: Aggressive",
         desc: "Speed in a competitive market: more content, more targets, faster cycles.",
         price: "$3,000–6,000",
         per: true,
@@ -46,7 +46,7 @@ const GROUPS: Group[] = [
     rows: [
       {
         title: "Website Build",
-        desc: "Grouped by scope — pages, features, and integrations. Your scope band is set in writing, before work begins, in your free growth plan.",
+        desc: "Grouped by scope, pages, features, and integrations. Your scope band is set in writing, before work begins, in your free growth plan.",
         price: "By scope band",
         scope: true,
       },
@@ -59,7 +59,7 @@ export default function RateCard() {
     <section className="band light" id="standalone" aria-label="Standalone services">
       <div className="wrap">
         <div className="sec-head">
-          <span className="eyebrow">— The rate card, in plain sight</span>
+          <span className="eyebrow">The rate card, in plain sight</span>
           <h2>Standalone services</h2>
           <p>
             Take a single service on its own. These are the declared rates for search, brand, and

@@ -40,7 +40,7 @@ export default function FloatingActions() {
         <div className="chat-body">
           <div className="bubble">
             Hi 👋 Tell me your business stage and biggest bottleneck, and I&apos;ll point you to the
-            right service — or a human, if you want to take it further.
+            right service, or a human, if you want to take it further.
           </div>
         </div>
       </div>

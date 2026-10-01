@@ -16,14 +16,14 @@ const STEPS = [
     n: "2",
     title: "Close",
     when: "Monthly · dated",
-    what: "Categorization, reconciliations, and the checklist — done by the close date written in your plan, every month.",
+    what: "Categorization, reconciliations, and the checklist, done by the close date written in your plan, every month.",
     get: "Books that are actually closed, on a date you can circle.",
   },
   {
     n: "3",
     title: "Report",
     when: "Plain English",
-    what: "The monthly report lands with notes on what moved and why — plus flags on anything you should look at.",
+    what: "The monthly report lands with notes on what moved and why, plus flags on anything you should look at.",
     get: "Numbers you can read, and act on.",
   },
 ];
@@ -96,7 +96,7 @@ export default function HowItRuns() {
     <section className="band" aria-label="How it runs">
       <div className="wrap">
         <Reveal className="sec-head">
-          <span className="eyebrow">— How it runs</span>
+          <span className="eyebrow">How it runs</span>
           <h2>Three steps. No mysteries.</h2>
         </Reveal>
         <div className="bk-steps" ref={stepsRef}>

@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   title: "Simplified Startup: Everything your startup needs. One partner, every step.",
   description:
     "Everything your startup needs, from one trusted partner. Strategy, brand, product, engineering, and growth, your startup team without building one.",
+  verification: {
+    google: "fRfCcy-a2CfTE4UXpDuLP1KD9rJCviK0hugkWVWqV4c",
+  },
 };
 
 export default function RootLayout({

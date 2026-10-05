@@ -481,7 +481,7 @@ export default function LeadGenAuditView() {
           </>
         }
         primaryLabel="Book your lead gen audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See what we audit", href: "#audit", arrow: "↗" }}
       />
     </div>

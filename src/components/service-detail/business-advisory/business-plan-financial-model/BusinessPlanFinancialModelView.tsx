@@ -565,7 +565,7 @@ export default function BusinessPlanFinancialModelView() {
           </>
         }
         primaryLabel="Book a planning call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See our services", href: "#services", arrow: "↗" }}
       />
     </div>

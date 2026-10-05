@@ -559,7 +559,7 @@ export default function ContentMarketingView() {
           </>
         }
         primaryLabel="Book a free content audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See how it works", href: "#how", arrow: "↗" }}
         id="start"
       />

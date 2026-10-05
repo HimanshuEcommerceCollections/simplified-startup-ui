@@ -578,7 +578,7 @@ export default function StartupMvpWebsitesView() {
           </>
         }
         primaryLabel="Book a free founder call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

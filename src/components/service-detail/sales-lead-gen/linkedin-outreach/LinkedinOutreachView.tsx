@@ -952,7 +952,7 @@ export default function LinkedinOutreachView({ crumb = { label: "Sales & Lead Ge
           </>
         }
         primaryLabel="Book a free LinkedIn audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

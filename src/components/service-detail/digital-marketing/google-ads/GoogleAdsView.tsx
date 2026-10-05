@@ -674,7 +674,7 @@ export default function GoogleAdsView() {
           </>
         }
         primaryLabel="Book a free ads audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

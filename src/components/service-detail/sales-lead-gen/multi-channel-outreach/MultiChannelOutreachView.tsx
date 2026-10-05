@@ -838,7 +838,7 @@ export default function MultiChannelOutreachView() {
           </>
         }
         primaryLabel="Book a free strategy call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See the 21-day cadence", href: "#cadence", arrow: "↗" }}
       />
     </div>

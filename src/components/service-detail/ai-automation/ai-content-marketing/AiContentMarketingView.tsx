@@ -827,7 +827,7 @@ export default function AiContentMarketingView() {
           </>
         }
         primaryLabel="Book a free content audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

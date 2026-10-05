@@ -884,7 +884,7 @@ export default function WebApplicationsView() {
           </>
         }
         primaryLabel="Book a free scoping call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

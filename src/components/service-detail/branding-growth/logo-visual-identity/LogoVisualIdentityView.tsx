@@ -730,7 +730,7 @@ export default function LogoVisualIdentityView() {
           </>
         }
         primaryLabel="Start your brand identity"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See how it works", href: "#how", arrow: "↗" }}
       />
     </div>

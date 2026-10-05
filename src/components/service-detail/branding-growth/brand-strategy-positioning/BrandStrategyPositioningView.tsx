@@ -698,7 +698,7 @@ export default function BrandStrategyPositioningView() {
           </>
         }
         primaryLabel="Book a free positioning session"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See how it works", href: "#how", arrow: "↗" }}
       />
     </div>

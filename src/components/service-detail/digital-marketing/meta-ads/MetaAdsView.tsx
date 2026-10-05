@@ -729,7 +729,7 @@ export default function MetaAdsView() {
           </>
         }
         primaryLabel="Book a free ads audit call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

@@ -639,7 +639,7 @@ export default function EcommerceWebsitesView() {
           </>
         }
         primaryLabel="Book a free store strategy call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

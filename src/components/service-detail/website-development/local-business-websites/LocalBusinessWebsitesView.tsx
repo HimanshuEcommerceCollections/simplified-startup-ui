@@ -752,7 +752,7 @@ export default function LocalBusinessWebsitesView() {
           </>
         }
         primaryLabel="Book a free website call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

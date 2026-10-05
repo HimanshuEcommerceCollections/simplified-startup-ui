@@ -623,7 +623,7 @@ export default function LandingPageDesignView() {
           </>
         }
         primaryLabel="Book a free landing page call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

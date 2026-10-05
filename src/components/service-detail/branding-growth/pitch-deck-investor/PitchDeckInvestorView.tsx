@@ -673,7 +673,7 @@ export default function PitchDeckInvestorView() {
           </>
         }
         primaryLabel="Start your pitch deck"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See how it works", href: "#how", arrow: "↗" }}
       />
     </div>

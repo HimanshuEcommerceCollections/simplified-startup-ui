@@ -694,7 +694,7 @@ export default function CrmSalesAutomationView() {
           </>
         }
         primaryLabel="Book a free CRM audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

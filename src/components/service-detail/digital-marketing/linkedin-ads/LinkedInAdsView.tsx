@@ -625,7 +625,7 @@ export default function LinkedInAdsView() {
           </>
         }
         primaryLabel="Book a free LinkedIn Ads audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

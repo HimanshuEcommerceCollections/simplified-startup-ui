@@ -539,7 +539,7 @@ export default function BrandingGrowthView() {
           </>
         }
         primaryLabel="Book a free branding call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "/pricing", arrow: "↗" }}
         id="start"
       />

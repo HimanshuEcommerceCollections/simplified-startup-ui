@@ -752,7 +752,7 @@ export default function AiChatbotsView() {
           </>
         }
         primaryLabel="Book a free AI chatbot demo"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

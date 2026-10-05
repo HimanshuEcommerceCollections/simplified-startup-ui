@@ -165,7 +165,7 @@ export default function GlossaryView({ glossary = GLOSSARY }: { glossary?: Gloss
           </>
         }
         primaryLabel="Contact us"
-        primaryHref="/#book"
+        primaryHref="/contact"
         secondary={{ label: "Back to top", href: "#top" }}
       />
     </>

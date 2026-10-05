@@ -622,7 +622,7 @@ export default function SeoView() {
           </>
         }
         primaryLabel="Book a free SEO audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

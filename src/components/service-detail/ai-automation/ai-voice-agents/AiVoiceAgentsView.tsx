@@ -702,7 +702,7 @@ export default function AiVoiceAgentsView() {
           </>
         }
         primaryLabel="Book a free AI receptionist demo"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

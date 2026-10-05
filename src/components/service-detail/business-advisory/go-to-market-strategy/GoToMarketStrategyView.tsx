@@ -637,7 +637,7 @@ export default function GoToMarketStrategyView() {
           </>
         }
         primaryLabel="Book a GTM strategy call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See our services", href: "#services", arrow: "↗" }}
       />
     </div>

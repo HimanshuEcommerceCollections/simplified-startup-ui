@@ -841,7 +841,7 @@ export default function B2bProspectListsView() {
           </>
         }
         primaryLabel="Get a free sample list"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See how we verify", href: "#verify", arrow: "↗" }}
       />
     </div>

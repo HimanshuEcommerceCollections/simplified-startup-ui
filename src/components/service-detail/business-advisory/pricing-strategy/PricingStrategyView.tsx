@@ -535,7 +535,7 @@ export default function PricingStrategyView() {
           </>
         }
         primaryLabel="Book a pricing call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See our services", href: "#services", arrow: "↗" }}
       />
     </div>

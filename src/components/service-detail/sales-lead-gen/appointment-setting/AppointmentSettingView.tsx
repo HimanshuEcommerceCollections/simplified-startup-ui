@@ -797,7 +797,7 @@ export default function AppointmentSettingView() {
           </>
         }
         primaryLabel="Book a free strategy call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

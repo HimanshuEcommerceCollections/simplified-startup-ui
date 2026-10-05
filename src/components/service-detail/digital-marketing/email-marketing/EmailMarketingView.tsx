@@ -644,7 +644,7 @@ export default function EmailMarketingView() {
           </>
         }
         primaryLabel="Book a free email audit call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

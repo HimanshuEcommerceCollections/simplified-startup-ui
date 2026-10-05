@@ -653,7 +653,7 @@ export default function DigitalMarketingView() {
         heading="Find out what’s actually worth doing."
         copy="You’ll get a written marketing plan, the channels worth your money, the scope, the price, and the number we’d judge it by. No retainer required to get it, and no chasing afterward if the answer is no."
         primaryLabel="Get your written plan"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See published pricing", href: "#pricing" }}
         id="book"
       />

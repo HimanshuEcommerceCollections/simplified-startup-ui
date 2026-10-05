@@ -496,7 +496,7 @@ export default function AiAutomationView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See what it costs", href: "#pricing", arrow: "↗" }}
         id="plan"
       />

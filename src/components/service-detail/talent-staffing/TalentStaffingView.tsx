@@ -710,7 +710,7 @@ export default function TalentStaffingView() {
           </>
         }
         primaryLabel="Book a free talent call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "/pricing", arrow: "↗" }}
         id="start"
       />

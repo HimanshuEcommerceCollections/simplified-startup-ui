@@ -79,7 +79,7 @@ export default function NotFoundView() {
           </>
         }
         primaryLabel="Start a project"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See all services", href: "/services", arrow: "→" }}
         id="book"
       />

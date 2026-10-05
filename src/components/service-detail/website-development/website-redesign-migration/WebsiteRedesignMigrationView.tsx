@@ -649,7 +649,7 @@ export default function WebsiteRedesignMigrationView() {
           </>
         }
         primaryLabel="Book a free migration audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

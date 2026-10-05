@@ -539,7 +539,7 @@ export default function SalesLeadGenView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See the difference", href: "#compare", arrow: "↗" }}
         id="plan"
       />

@@ -920,7 +920,7 @@ export default function ColdEmailView() {
           </>
         }
         primaryLabel="Book a free cold email audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

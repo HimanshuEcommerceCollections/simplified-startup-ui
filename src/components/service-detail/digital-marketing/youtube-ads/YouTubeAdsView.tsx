@@ -626,7 +626,7 @@ export default function YouTubeAdsView() {
           </>
         }
         primaryLabel="Book a free YouTube Ads audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See how it works", href: "#how", arrow: "↗" }}
         id="start"
       />

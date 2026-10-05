@@ -500,7 +500,7 @@ export default function StartupValidationResearchView() {
           </>
         }
         primaryLabel="Book a validation call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See our services", href: "#services", arrow: "↗" }}
       />
     </div>

@@ -933,7 +933,7 @@ export default function B2bSaasWebsitesView() {
           </>
         }
         primaryLabel="Book a free website strategy call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

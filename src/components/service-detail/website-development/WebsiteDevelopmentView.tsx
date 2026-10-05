@@ -535,7 +535,7 @@ export default function WebsiteDevelopmentView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See the checklist", href: "#bar", arrow: "↗" }}
         id="plan"
       />

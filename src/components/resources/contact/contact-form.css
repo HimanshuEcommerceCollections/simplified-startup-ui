@@ -1,0 +1,172 @@
+/* ---------------- inquiry form card (.ct-form), shared by /contact and /start-project ---------------- */
+@keyframes ctUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+.ct-form {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  padding: 30px;
+  opacity: 0;
+  transform: translateY(26px);
+  animation: ctUp 0.9s var(--ease) 0.3s both;
+}
+.ct-form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1.4px;
+  background: var(--grad);
+  opacity: 0.4;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.ct-form h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ct-form h2 .fi { width: 30px; height: 30px; border-radius: 9px; background: var(--grad); color: #fff; display: grid; place-items: center; }
+.ct-form h2 .fi svg { width: 16px; height: 16px; }
+.ct-fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ct-field { display: flex; flex-direction: column; gap: 6px; }
+.ct-field.full { grid-column: 1 / -1; }
+.ct-field > label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+  font-weight: 600;
+}
+.ct-field .req { color: var(--red, #dc2626); }
+.ct-field input:not([type="checkbox"]),
+.ct-field select,
+.ct-field textarea {
+  font-family: var(--body);
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  border-radius: 10px;
+  padding: 11px 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  width: 100%;
+}
+.ct-field textarea { resize: vertical; min-height: 88px; line-height: 1.5; }
+.ct-field input:focus,
+.ct-field select:focus,
+.ct-field textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  background: var(--surface);
+}
+.ct-field input.err,
+.ct-field select.err,
+.ct-field textarea.err { border-color: var(--red, #dc2626); box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1); }
+.ct-fielderr { font-size: 11.5px; color: var(--red, #dc2626); display: none; }
+.ct-fielderr.on { display: block; }
+.ct-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.ct-chip {
+  font-family: var(--body);
+  font-size: 12.5px;
+  color: var(--muted-ink);
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  border-radius: 100px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.ct-chip:hover { border-color: rgba(37, 99, 235, 0.4); color: var(--ink); }
+.ct-chip.on { background: var(--grad); color: #fff; border-color: transparent; box-shadow: 0 8px 18px -8px rgba(37, 99, 235, 0.6); }
+/* the design's `.field label` rule (mono, uppercase, 10px) outranks its `.consent`
+   rule by specificity; the consent sentence is given its intended body styling here */
+.ct-field label.ct-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 12.5px;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.45;
+  color: var(--muted-ink);
+}
+.ct-consent input { width: 17px; height: 17px; flex: none; margin-top: 2px; accent-color: var(--blue); }
+.ct-submit {
+  width: 100%;
+  margin-top: 4px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  background: var(--grad);
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 14px 30px -12px rgba(37, 99, 235, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.ct-submit:hover { transform: translateY(-2px); box-shadow: 0 18px 36px -12px rgba(37, 99, 235, 0.8); }
+.ct-submit:active { transform: translateY(0); }
+.ct-submit:disabled { opacity: 0.7; cursor: progress; transform: none; }
+.ct-fnote { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 2px; }
+/* the two form-level notes sit between the grid and the button in the design */
+.ct-form form > .ct-fgrid { margin-bottom: 14px; }
+.ct-form form > .ct-fnote { margin-top: 12px; }
+.ct-form-error { margin-top: 12px; text-align: center; font-size: 13.5px; line-height: 1.5; color: #b91c1c; }
+.ct-form-error a { color: #b91c1c; font-weight: 600; text-decoration: underline; }
+/* honeypot: visually removed, still in the form for bots */
+.ct-hp { position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; }
+@keyframes ctFsIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes ctPulseMk {
+  0%, 100% { box-shadow: 0 16px 34px -14px rgba(37, 99, 235, 0.8); }
+  50% { box-shadow: 0 16px 34px -14px rgba(37, 99, 235, 0.8), 0 0 0 8px rgba(37, 99, 235, 0.08); }
+}
+.ct-fsuccess { text-align: center; padding: 20px 10px; animation: ctFsIn 0.5s var(--ease); }
+.ct-fsuccess .sk {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--grad);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  box-shadow: 0 16px 34px -14px rgba(37, 99, 235, 0.8);
+  animation: ctPulseMk 2.4s ease-in-out infinite;
+}
+.ct-fsuccess .sk svg { width: 30px; height: 30px; }
+.ct-fsuccess h3 { font-family: var(--display); font-weight: 700; font-size: 22px; color: var(--ink); margin-bottom: 10px; }
+.ct-fsuccess p { font-size: 14.5px; line-height: 1.6; color: var(--muted-ink); max-width: 340px; margin: 0 auto 20px; }
+@media (max-width: 620px) {
+  .ct-form { padding: 22px 18px; }
+  .ct-fgrid { grid-template-columns: 1fr; }
+  .ct-field.full { grid-column: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ct-form, .ct-fsuccess { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .ct-fsuccess .sk { animation: none !important; }
+}

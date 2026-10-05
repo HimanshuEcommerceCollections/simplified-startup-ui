@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState, type CSSProperties, type FormEvent, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Reveal from "@/components/ui/Reveal";
 import { useInView } from "@/lib/useInView";
 import { usePointerSpot } from "@/lib/usePointerSpot";
 import GpPlanCard from "./GpPlanCard";
 import CtaBand from "@/components/home/CtaBand";
+import ContactForm from "@/components/resources/contact/ContactForm";
 import "./growth-plan-page.css";
 
 const CHECK = (
@@ -89,15 +90,9 @@ const FAQS = [
 
 const d = (ms: number): CSSProperties => ({ "--d": ms } as CSSProperties);
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
-
 export default function GrowthPlanView() {
   const [heroIn, setHeroIn] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
-  const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [submitError, setSubmitError] = useState(false);
-  const [errors, setErrors] = useState<{ name?: boolean; email?: boolean }>({});
   const { sectionRef, spotRef } = usePointerSpot<HTMLElement, HTMLSpanElement>();
   const [stepsRef, stepsIn] = useInView<HTMLDivElement>({ threshold: 0.4 });
   const svcGridRef = useRef<HTMLDivElement>(null);
@@ -156,45 +151,6 @@ export default function GrowthPlanView() {
     wrap.addEventListener("pointermove", onMove);
     return () => wrap.removeEventListener("pointermove", onMove);
   }, []);
-
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const field = (n: string) => (form.elements.namedItem(n) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement).value;
-    const name = field("name").trim();
-    const email = field("email").trim();
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    const next = { name: !name, email: !emailOk };
-    setErrors(next);
-    if (next.name || next.email) {
-      (form.elements.namedItem(next.name ? "name" : "email") as HTMLInputElement).focus();
-      return;
-    }
-
-    setSending(true);
-    setSubmitError(false);
-    try {
-      const res = await fetch(`${API_URL}/api/v1/leads`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          business: field("business").trim(),
-          stage: field("stage"),
-          need: field("need"),
-          message: field("message").trim(),
-          company: field("company"), // honeypot, humans never fill it
-        }),
-      });
-      if (!res.ok) throw new Error(`request failed (${res.status})`);
-      setSubmitted(true);
-    } catch {
-      setSubmitError(true);
-    } finally {
-      setSending(false);
-    }
-  }
 
   return (
     <>
@@ -269,96 +225,13 @@ export default function GrowthPlanView() {
                   </ul>
                 </div>
 
-                <form className="gp-form" noValidate onSubmit={onSubmit}>
-                  <div className="gp-field">
-                    <label htmlFor="gpName">Your name</label>
-                    <input
-                      id="gpName"
-                      name="name"
-                      type="text"
-                      autoComplete="name"
-                      placeholder="Jane Founder"
-                      required
-                      className={errors.name ? "err" : undefined}
-                      onInput={() => setErrors((prev) => ({ ...prev, name: false }))}
-                    />
-                  </div>
-                  <div className="gp-field">
-                    <label htmlFor="gpEmail">Email</label>
-                    <input
-                      id="gpEmail"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      placeholder="jane@company.com"
-                      required
-                      className={errors.email ? "err" : undefined}
-                      onInput={() => setErrors((prev) => ({ ...prev, email: false }))}
-                    />
-                  </div>
-                  <div className="gp-field">
-                    <label htmlFor="gpBiz">
-                      Business or website <span>(optional)</span>
-                    </label>
-                    <input id="gpBiz" name="business" type="text" placeholder="company.com" />
-                  </div>
-                  <div className="gp-field">
-                    <label htmlFor="gpStage">What stage are you at?</label>
-                    <select id="gpStage" name="stage" defaultValue="early">
-                      <option value="pre-launch">Pre-launch, nothing live yet</option>
-                      <option value="early">Early revenue, growing, but accidental</option>
-                      <option value="established">Established &amp; stuck</option>
-                      <option value="not-sure">Not sure yet</option>
-                    </select>
-                  </div>
-                  <div className="gp-field">
-                    <label htmlFor="gpNeed">What do you think you need?</label>
-                    <select id="gpNeed" name="need" defaultValue="not-sure">
-                      <option value="not-sure">Not sure yet, that&apos;s what the plan is for</option>
-                      <option>Launch your business</option>
-                      <option>A website that sells</option>
-                      <option>Automate the busywork</option>
-                      <option>Fill your pipeline</option>
-                      <option>Hiring help</option>
-                      <option>Bookkeeping</option>
-                    </select>
-                  </div>
-                  <div className="gp-field">
-                    <label htmlFor="gpMsg">
-                      Anything useful to know? <span>(optional)</span>
-                    </label>
-                    <textarea
-                      id="gpMsg"
-                      name="message"
-                      rows={3}
-                      placeholder="How the business makes money, what you've tried, what a good year looks like…"
-                    ></textarea>
-                  </div>
-                  <div className="gp-hp" aria-hidden="true">
-                    <label htmlFor="gpCompany">Company</label>
-                    <input id="gpCompany" name="company" type="text" tabIndex={-1} autoComplete="off" defaultValue="" />
-                  </div>
-                  <button className="btn btn-primary gp-submit" type="submit" disabled={sending}>
-                    {sending ? "Sending…" : "Request my free growth plan"} <span className="arw">↗</span>
-                  </button>
-                  {submitError && (
-                    <p className="gp-form-error" role="alert">
-                      Something went wrong sending your request. Please try again, or email us at{" "}
-                      <a href="mailto:contact@simplifiedstartup.com">contact@simplifiedstartup.com</a>.
-                    </p>
-                  )}
-                  <p className="gp-form-fine">No card. No obligation. We send the plan once, the next step is yours.</p>
-
-                  {submitted && (
-                    <div className="gp-success" role="status">
-                      <svg className="gp-succ-check" viewBox="0 0 24 24">
-                        <path d="M4 12.5l5 5L20 6" />
-                      </svg>
-                      <h3>Request received.</h3>
-                      <p>A real person will reply to book your 45-minute session. Check your inbox, no spam, promise.</p>
-                    </div>
-                  )}
-                </form>
+                {/* the same inquiry form as /contact; the old plan-only form was retired 2026-10-05 */}
+                <ContactForm
+                  page="/start-project"
+                  heading="Request your free growth plan"
+                  submitLabel="Request my free growth plan"
+                  success={{ text: "Request received. A real person will reply to book your 45-minute session. Check your inbox, no spam, promise.", link: null }}
+                />
               </div>
             </>
           </div>

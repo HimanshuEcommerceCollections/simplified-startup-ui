@@ -478,7 +478,7 @@ export default function BrandStrategyPositioningView() {
             <strong>so your website, ads, sales calls, and pitch deck all tell the same clear story.</strong>
           </>
         }
-        primary={{ label: "Book a free positioning session", href: "/start-project" }}
+        primary={{ label: "Book a free positioning session", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <PositioningCard />

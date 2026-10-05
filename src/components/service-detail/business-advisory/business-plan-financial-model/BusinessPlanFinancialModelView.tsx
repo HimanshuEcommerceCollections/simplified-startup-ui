@@ -388,7 +388,7 @@ export default function BusinessPlanFinancialModelView() {
             their next stage of growth. <strong>Every number traces back to an assumption you can see and change.</strong>
           </>
         }
-        primary={{ label: "Book a planning call", href: "/start-project" }}
+        primary={{ label: "Book a planning call", href: "/contact" }}
         secondary={{ label: "See our services ↓", href: "#services" }}
       >
         <ModelCard />

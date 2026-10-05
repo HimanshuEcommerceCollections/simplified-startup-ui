@@ -484,7 +484,7 @@ export default function LinkedInAdsView() {
             <strong>with flat monthly fees, transparent reporting, and pipeline metrics that mean something.</strong>
           </>
         }
-        primary={{ label: "Book a free LinkedIn Ads audit", href: "/start-project" }}
+        primary={{ label: "Book a free LinkedIn Ads audit", href: "/contact" }}
         secondary={{ label: "See LinkedIn Ads pricing ↓", href: "#pricing" }}
       >
         <CampaignCard />

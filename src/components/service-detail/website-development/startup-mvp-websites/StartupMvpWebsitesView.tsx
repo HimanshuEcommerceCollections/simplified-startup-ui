@@ -424,7 +424,7 @@ export default function StartupMvpWebsitesView() {
             overhead you’re not ready to pay for.
           </>
         }
-        primary={{ label: "Book a free founder call", href: "/start-project" }}
+        primary={{ label: "Book a free founder call", href: "/contact" }}
         secondary={{ label: "See what you get ↓", href: "#included" }}
       >
         <ShipCard />

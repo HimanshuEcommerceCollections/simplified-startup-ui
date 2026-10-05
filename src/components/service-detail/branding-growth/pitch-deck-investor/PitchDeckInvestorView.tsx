@@ -448,7 +448,7 @@ export default function PitchDeckInvestorView() {
             so investors understand your business in minutes.
           </>
         }
-        primary={{ label: "Start your pitch deck", href: "/start-project" }}
+        primary={{ label: "Start your pitch deck", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <DeckCard />

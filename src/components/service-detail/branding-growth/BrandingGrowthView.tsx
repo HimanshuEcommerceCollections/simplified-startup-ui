@@ -346,7 +346,7 @@ export default function BrandingGrowthView() {
             Instagram, in an email, or on a proposal.
           </>
         }
-        primary={{ label: "Book a free branding call", href: "/start-project" }}
+        primary={{ label: "Book a free branding call", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <BsysCard />

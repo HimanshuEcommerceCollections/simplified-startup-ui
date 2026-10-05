@@ -339,7 +339,7 @@ export default function PricingStrategyView() {
             <strong>launching a new offer or rethinking what you charge.</strong>
           </>
         }
-        primary={{ label: "Book a pricing call", href: "/start-project" }}
+        primary={{ label: "Book a pricing call", href: "/contact" }}
         secondary={{ label: "See our services ↓", href: "#services" }}
       >
         <LeverCard />

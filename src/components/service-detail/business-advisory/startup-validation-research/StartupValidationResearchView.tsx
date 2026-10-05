@@ -354,7 +354,7 @@ export default function StartupValidationResearchView() {
             <strong>so you can decide your next step with clearer information,</strong> not a gut feeling.
           </>
         }
-        primary={{ label: "Book a validation call", href: "/start-project" }}
+        primary={{ label: "Book a validation call", href: "/contact" }}
         secondary={{ label: "See our services ↓", href: "#services" }}
       >
         <LadderCard />

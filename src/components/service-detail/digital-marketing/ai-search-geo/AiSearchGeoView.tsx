@@ -462,7 +462,7 @@ export default function AiSearchGeoView() {
             </strong>
           </>
         }
-        primary={{ label: "Book a free GEO audit", href: "/start-project" }}
+        primary={{ label: "Book a free GEO audit", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <AnswerCard />

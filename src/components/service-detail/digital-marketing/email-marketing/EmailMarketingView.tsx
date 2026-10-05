@@ -462,7 +462,7 @@ export default function EmailMarketingView() {
             <strong>all handled by one team at published prices with no long lock-in.</strong>
           </>
         }
-        primary={{ label: "Book a free email audit", href: "/start-project" }}
+        primary={{ label: "Book a free email audit", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <RoiCard />

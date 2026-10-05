@@ -517,7 +517,7 @@ export default function LogoVisualIdentityView() {
             full copyright ownership from the moment you sign off.
           </>
         }
-        primary={{ label: "Start your brand identity", href: "/start-project" }}
+        primary={{ label: "Start your brand identity", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <IdentityCard />

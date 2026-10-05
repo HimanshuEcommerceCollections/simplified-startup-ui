@@ -729,7 +729,7 @@ export default function LinkedinOutreachView({ crumb = { label: "Sales & Lead Ge
             <strong>Run safely from your own profile. Flat monthly fee, no risk-your-account automation.</strong>
           </>
         }
-        primary={{ label: "Book a free LinkedIn audit", href: "/start-project" }}
+        primary={{ label: "Book a free LinkedIn audit", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <ProfileCard />

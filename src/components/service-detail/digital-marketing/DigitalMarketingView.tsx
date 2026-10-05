@@ -385,7 +385,7 @@ export default function DigitalMarketingView() {
             you can actually read. Built for owners who’ve been burned by an agency before.
           </>
         }
-        primary={{ label: "Get a written plan", href: "/start-project" }}
+        primary={{ label: "Get a written plan", href: "/contact" }}
         secondary={{ label: "See published pricing", href: "#pricing" }}
         chips={[
           "Published pricing, every plan, on this page",

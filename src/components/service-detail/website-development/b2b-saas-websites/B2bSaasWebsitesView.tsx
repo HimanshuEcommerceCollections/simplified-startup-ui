@@ -744,7 +744,7 @@ export default function B2bSaasWebsitesView() {
             pipeline, not just win design awards.
           </>
         }
-        primary={{ label: "Book a free website strategy call", href: "/start-project" }}
+        primary={{ label: "Book a free website strategy call", href: "/contact" }}
         secondary={{ label: "See how we do it ↓", href: "#included" }}
       >
         <RevCard />

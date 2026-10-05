@@ -580,7 +580,7 @@ export default function MultiChannelOutreachView() {
             reputation.
           </>
         }
-        primary={{ label: "Book a free outreach strategy call", href: "/start-project" }}
+        primary={{ label: "Book a free outreach strategy call", href: "/contact" }}
         secondary={{ label: "See the 21-day cadence ↓", href: "#cadence" }}
       >
         <SequenceCard />

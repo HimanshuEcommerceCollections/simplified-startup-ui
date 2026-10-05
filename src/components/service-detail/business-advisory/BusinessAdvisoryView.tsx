@@ -410,7 +410,7 @@ export default function BusinessAdvisoryView() {
             <strong>launch faster and pitch stronger,</strong> without paying enterprise consulting rates for it.
           </>
         }
-        primary={{ label: "Book a free founder call", href: "/start-project" }}
+        primary={{ label: "Book a free founder call", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <FplanCard />

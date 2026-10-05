@@ -540,7 +540,7 @@ export default function AiChatbotsView() {
             <strong>Live 24/7, without the enterprise price tag.</strong>
           </>
         }
-        primary={{ label: "Book a free AI chatbot demo", href: "/start-project" }}
+        primary={{ label: "Book a free AI chatbot demo", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#included" }}
         compact
       >

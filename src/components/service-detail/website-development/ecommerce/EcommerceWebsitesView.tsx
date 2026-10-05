@@ -481,7 +481,7 @@ export default function EcommerceWebsitesView() {
             <strong>Published prices, 4–8 week launch, and you own the store completely.</strong>
           </>
         }
-        primary={{ label: "Book a free store strategy call", href: "/start-project" }}
+        primary={{ label: "Book a free store strategy call", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <StoreCard />

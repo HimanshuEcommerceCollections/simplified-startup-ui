@@ -66,7 +66,7 @@ export default function ServicesHero() {
             to steady growth.
           </p>
           <div {...heroEl("svc-hero-cta", 3)}>
-            <a href="#book" className="btn btn-primary">
+            <a href="/contact" className="btn btn-primary">
               Book a strategy call <span className="arw" aria-hidden="true">→</span>
             </a>
             <a href="#bundling" className="btn btn-ghost">

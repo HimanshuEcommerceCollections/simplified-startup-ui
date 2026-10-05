@@ -562,7 +562,7 @@ export default function MetaAdsView() {
             <strong>Managed by one team, at published prices, with no minimum spend.</strong>
           </>
         }
-        primary={{ label: "Book a free ads audit", href: "/start-project" }}
+        primary={{ label: "Book a free ads audit", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <CampaignCard />

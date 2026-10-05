@@ -467,7 +467,7 @@ export default function SeoView() {
             the technical, the local, and the AI side, at published prices.
           </>
         }
-        primary={{ label: "Book a free SEO audit", href: "/start-project" }}
+        primary={{ label: "Book a free SEO audit", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <SerpCard />

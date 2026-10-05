@@ -82,7 +82,7 @@ export default function Hero() {
               one trusted operating partner, from first idea to scale.
             </p>
             <div className="hero-cta">
-              <a href="#book" ref={primaryRef} className="btn-primary magnetic">
+              <a href="/contact" ref={primaryRef} className="btn-primary magnetic">
                 Book a Strategy Call
               </a>
               <button type="button" className="btn-ghost-hero" onClick={openAiAdvisor}>

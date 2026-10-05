@@ -65,6 +65,12 @@ const ICON_GTM = (
     <path d="M12 3a9 9 0 0 1 0 18M3 12h18" stroke="currentColor" strokeWidth="2" />
   </svg>
 );
+const ICON_PRICE = (
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M3 12V4h8l9 9-8 8z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+    <circle cx="7.5" cy="8.5" r="1.5" fill="currentColor" />
+  </svg>
+);
 const ICON_CHAT = (
   <svg viewBox="0 0 24 24" fill="none">
     <path d="M4 5h16v11H7l-3 3z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
@@ -139,6 +145,7 @@ const DELIVERABLES: Deliverable[] = [
     btnSub: "Usable, not a thesis",
     name: "Business Plan Development",
     tag: "A working document, not a 60-page thesis.",
+    href: "/business-advisory/business-plan-financial-model",
     items: [
       "Executive summary",
       "Company, mission & values",
@@ -157,6 +164,7 @@ const DELIVERABLES: Deliverable[] = [
     btnSub: "10–15 slides",
     name: "Pitch Deck Design & Strategy",
     tag: "The 10–15 slides investors actually pay attention to.",
+    href: "/branding-growth/pitch-deck-investor",
     items: [
       "Narrative & story structure",
       "Problem, solution, market, model",
@@ -174,6 +182,7 @@ const DELIVERABLES: Deliverable[] = [
     btnSub: "The evidence base",
     name: "Market & Competitor Research",
     tag: "The evidence base under every good decision.",
+    href: "/business-advisory/startup-validation-research",
     items: [
       "Market size (TAM, SAM, SOM)",
       "Trends, drivers & constraints",
@@ -189,6 +198,7 @@ const DELIVERABLES: Deliverable[] = [
     btnSub: "Numbers that hold up",
     name: "Financial Modeling",
     tag: "Numbers investors trust and you can run on.",
+    href: "/business-advisory/business-plan-financial-model",
     items: [
       "Revenue drivers & pricing",
       "CAC and LTV",
@@ -212,6 +222,23 @@ const DELIVERABLES: Deliverable[] = [
       "Channel selection & priority",
       "Launch plan with milestones",
       "First 90-day roadmap",
+    ],
+  },
+  {
+    key: "pricing",
+    icon: ICON_PRICE,
+    btnName: "Pricing strategy",
+    btnSub: "Value-based, not guesswork",
+    name: "Pricing Strategy",
+    tag: "Set prices on the value you deliver, not guesswork.",
+    href: "/business-advisory/pricing-strategy",
+    items: [
+      "Pricing audit & revenue leak review",
+      "Willingness-to-pay research",
+      "Pricing model selection",
+      "Good / Better / Best packaging",
+      "Discount & negotiation rules",
+      "Rollout & price-change plan",
     ],
   },
   {

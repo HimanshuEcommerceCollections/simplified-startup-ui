@@ -51,7 +51,7 @@ export default function BookkeepingHero() {
             comes. Priced up front, so you always know the number.
           </p>
           <div {...heroEl("bk-hero-cta", 3)}>
-            <a href="#book" className="btn btn-primary">
+            <a href="/contact" className="btn btn-primary">
               Get your free growth plan <span className="arw" aria-hidden="true">→</span>
             </a>
             <a href="#cost" className="btn btn-ghost">

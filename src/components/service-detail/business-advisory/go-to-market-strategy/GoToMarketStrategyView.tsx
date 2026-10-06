@@ -443,7 +443,7 @@ export default function GoToMarketStrategyView() {
             team can actually follow.
           </>
         }
-        primary={{ label: "Book a GTM strategy call", href: "/start-project" }}
+        primary={{ label: "Book a GTM strategy call", href: "/contact" }}
         secondary={{ label: "See our services ↓", href: "#services" }}
       >
         <BoardCard />
@@ -637,7 +637,7 @@ export default function GoToMarketStrategyView() {
           </>
         }
         primaryLabel="Book a GTM strategy call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See our services", href: "#services", arrow: "↗" }}
       />
     </div>

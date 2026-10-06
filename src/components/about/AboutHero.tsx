@@ -38,7 +38,7 @@ export default function AboutHero() {
             don&apos;t have in-house, so the whole thing actually works.
           </p>
           <div className={`ab-hero-cta ${loadClass}`} style={delayStyle(3)}>
-            <a href="#book" className="btn btn-primary">
+            <a href="/contact" className="btn btn-primary">
               Book a strategy call <span aria-hidden="true">→</span>
             </a>
             <a href="#what" className="btn btn-ghost">

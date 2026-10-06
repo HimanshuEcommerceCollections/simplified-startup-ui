@@ -222,7 +222,16 @@ const GROUPS = [
   },
 ];
 
-const ADDONS = ["Brand naming", "Tagline-only", "Business cards & stationery", "Social profile design", "Email signature", "Pitch deck template", "Full brand launch"];
+/** `href` marks an add-on that has its own sub-service page. */
+const ADDONS: { label: string; href?: string }[] = [
+  { label: "Brand naming" },
+  { label: "Tagline-only" },
+  { label: "Business cards & stationery" },
+  { label: "Social profile design" },
+  { label: "Email signature" },
+  { label: "Pitch deck template" },
+  { label: "Full brand launch" },
+];
 
 /* -------- what you get / who / steps / pricing / faq -------- */
 
@@ -333,7 +342,7 @@ export default function BrandingGrowthView() {
             Instagram, in an email, or on a proposal.
           </>
         }
-        primary={{ label: "Book a free branding call", href: "/start-project" }}
+        primary={{ label: "Book a free branding call", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <BsysCard />
@@ -440,9 +449,15 @@ export default function BrandingGrowthView() {
           <Reveal className="bg-addons">
             <span className="al">Optional add-ons, on request</span>
             <div className="chips">
-              {ADDONS.map((addon) => (
-                <span key={addon}>{addon}</span>
-              ))}
+              {ADDONS.map((addon) =>
+                addon.href ? (
+                  <a key={addon.label} href={addon.href}>
+                    {addon.label} <span aria-hidden="true">↗</span>
+                  </a>
+                ) : (
+                  <span key={addon.label}>{addon.label}</span>
+                ),
+              )}
             </div>
           </Reveal>
         </div>
@@ -515,7 +530,7 @@ export default function BrandingGrowthView() {
           </>
         }
         primaryLabel="Book a free branding call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "/pricing", arrow: "↗" }}
         id="start"
       />

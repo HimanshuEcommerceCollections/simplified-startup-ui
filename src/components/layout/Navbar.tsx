@@ -84,7 +84,12 @@ const SERVICE_LINKS: ServiceLink[] = [
     label: "Business & Startup Advisory",
     href: "/business-advisory",
     hint: "A plan, not a pep talk",
-    children: [{ label: "Go-to-market strategy", href: "/business-advisory/go-to-market-strategy" }],
+    children: [
+      { label: "Go-to-market strategy", href: "/business-advisory/go-to-market-strategy" },
+      { label: "Business plan & financial model", href: "/business-advisory/business-plan-financial-model" },
+      { label: "Startup validation & research", href: "/business-advisory/startup-validation-research" },
+      { label: "Pricing strategy", href: "/business-advisory/pricing-strategy" },
+    ],
   },
   { label: "Talent & Staffing", href: "/talent-staffing", hint: "Senior capability, no full-time hire" },
   { label: "Bookkeeping & Accounting", href: "/bookkeeping", hint: "Finance handled, end to end" },

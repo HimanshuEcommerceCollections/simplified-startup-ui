@@ -488,7 +488,7 @@ export default function CrmSalesAutomationView() {
             Platform-agnostic, transparent, and you own everything.
           </>
         }
-        primary={{ label: "Book a free CRM audit", href: "/start-project" }}
+        primary={{ label: "Book a free CRM audit", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <PipeCard />
@@ -694,7 +694,7 @@ export default function CrmSalesAutomationView() {
           </>
         }
         primaryLabel="Book a free CRM audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

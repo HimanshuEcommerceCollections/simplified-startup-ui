@@ -175,7 +175,14 @@
 .bg-addons { margin-top: 22px; background: var(--surface); border: 1px solid var(--peach-line); border-radius: 14px; padding: 22px 26px; box-shadow: var(--shadow-sm); }
 .bg-addons .al { font-family: var(--mono); font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--amber, #d97706); display: block; margin-bottom: 12px; }
 .bg-addons .chips { display: flex; flex-wrap: wrap; gap: 9px; }
-.bg-addons .chips span { font-family: var(--display); font-weight: 600; font-size: 13px; color: var(--muted-ink); background: var(--surface-2); border: 1px solid var(--peach-line); border-radius: 100px; padding: 7px 14px; }
+.bg-addons .chips > span, .bg-addons .chips > a { font-family: var(--display); font-weight: 600; font-size: 13px; color: var(--muted-ink); background: var(--surface-2); border: 1px solid var(--peach-line); border-radius: 100px; padding: 7px 14px; }
+.bg-addons .chips > a { color: var(--blue); text-decoration: none; transition: border-color 0.25s ease; }
+.bg-addons .chips > a:hover { border-color: rgba(37, 99, 235, 0.34); }
+.bg-addons .chips > a span { display: inline-block; transition: transform 0.25s var(--ease); }
+.bg-addons .chips > a:hover span { transform: translate(3px, -3px); }
+.bg-grp-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-family: var(--display); font-weight: 600; font-size: 13.5px; color: var(--blue); }
+.bg-grp-link span { display: inline-block; transition: transform 0.25s var(--ease); }
+.bg-grp-link:hover span { transform: translate(3px, -3px); }
 
 @media (prefers-reduced-motion: reduce) {
   .bg-sw i { animation: none !important; opacity: 1 !important; transform: none !important; }

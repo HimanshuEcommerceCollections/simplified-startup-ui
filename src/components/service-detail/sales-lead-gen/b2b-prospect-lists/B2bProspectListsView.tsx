@@ -586,7 +586,7 @@ export default function B2bProspectListsView() {
             recycled, never resold.
           </>
         }
-        primary={{ label: "Get a free sample list", href: "/start-project" }}
+        primary={{ label: "Get a free sample list", href: "/contact" }}
         secondary={{ label: "See how we verify ↓", href: "#verify" }}
       >
         <RecordCard />
@@ -841,7 +841,7 @@ export default function B2bProspectListsView() {
           </>
         }
         primaryLabel="Get a free sample list"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See how we verify", href: "#verify", arrow: "↗" }}
       />
     </div>

@@ -293,7 +293,7 @@ export default function WebsiteDevelopmentView() {
             and shipped against a <strong>14-point checklist you can read.</strong> You&apos;re on the sample right now.
           </>
         }
-        primary={{ label: "Get your free growth plan", href: "/start-project" }}
+        primary={{ label: "Get your free growth plan", href: "/contact" }}
         secondary={{ label: "See the checklist", href: "#bar" }}
         sign="Priced by scope band from $3,000, set before work starts"
       >
@@ -535,7 +535,7 @@ export default function WebsiteDevelopmentView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See the checklist", href: "#bar", arrow: "↗" }}
         id="plan"
       />

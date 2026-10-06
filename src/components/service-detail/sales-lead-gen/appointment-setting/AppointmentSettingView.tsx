@@ -586,7 +586,7 @@ export default function AppointmentSettingView() {
             <strong>Flat monthly fee, defined qualification criteria, no per-meeting incentive games.</strong>
           </>
         }
-        primary={{ label: "Book a free strategy call", href: "/start-project" }}
+        primary={{ label: "Book a free strategy call", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <CalendarCard />
@@ -797,7 +797,7 @@ export default function AppointmentSettingView() {
           </>
         }
         primaryLabel="Book a free strategy call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

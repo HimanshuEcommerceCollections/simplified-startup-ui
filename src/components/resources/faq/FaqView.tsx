@@ -185,7 +185,7 @@ export default function FaqView({ categories = FAQ_CATEGORIES }: { categories?: 
           </>
         }
         primaryLabel="Contact us"
-        primaryHref="/#book"
+        primaryHref="/contact"
         secondary={{ label: "Back to questions", href: "#faq" }}
       />
     </>

@@ -460,7 +460,7 @@ export default function WebsiteRedesignMigrationView() {
             post-launch monitoring.
           </>
         }
-        primary={{ label: "Book a free migration audit", href: "/start-project" }}
+        primary={{ label: "Book a free migration audit", href: "/contact" }}
         secondary={{ label: "See our process ↓", href: "#method" }}
         compact
       >
@@ -649,7 +649,7 @@ export default function WebsiteRedesignMigrationView() {
           </>
         }
         primaryLabel="Book a free migration audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

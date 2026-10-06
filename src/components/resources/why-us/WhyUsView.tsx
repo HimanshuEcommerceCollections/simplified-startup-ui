@@ -159,7 +159,7 @@ export default function WhyUsView() {
                 <strong>Full stop.</strong>
               </p>
               <div className="wu-hero-actions">
-                <Link className="btn btn-primary" href="/#book">
+                <Link className="btn btn-primary" href="/contact">
                   Book a strategy call <span className="arw">↗</span>
                 </Link>
                 <a className="btn btn-ghost" href="#team">
@@ -510,7 +510,7 @@ export default function WhyUsView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See pricing", href: "/pricing" }}
         id="apply"
       />

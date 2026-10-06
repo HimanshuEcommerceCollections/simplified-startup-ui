@@ -519,7 +519,7 @@ export default function GoogleAdsView() {
             long lock-in.
           </>
         }
-        primary={{ label: "Book a free ads audit", href: "/start-project" }}
+        primary={{ label: "Book a free ads audit", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <PerfCard />
@@ -674,7 +674,7 @@ export default function GoogleAdsView() {
           </>
         }
         primaryLabel="Book a free ads audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

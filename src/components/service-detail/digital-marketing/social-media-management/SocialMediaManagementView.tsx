@@ -715,7 +715,7 @@ export default function SocialMediaManagementView() {
             posting, engagement, and reporting, all handled, at published prices, no long lock-in.
           </>
         }
-        primary={{ label: "Book a free social strategy call", href: "/start-project" }}
+        primary={{ label: "Book a free social strategy call", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
       >
         <CalendarCard />
@@ -892,7 +892,7 @@ export default function SocialMediaManagementView() {
           </>
         }
         primaryLabel="Book a free social strategy call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </>

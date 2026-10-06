@@ -388,7 +388,7 @@ export default function LeadGenAuditView() {
             what to fix first. Channel-agnostic, plain-language, and no obligation to hire us.
           </>
         }
-        primary={{ label: "Book your lead gen audit", href: "/start-project" }}
+        primary={{ label: "Book your lead gen audit", href: "/contact" }}
         secondary={{ label: "What we audit ↓", href: "#audit" }}
       >
         <LeakCard />
@@ -481,7 +481,7 @@ export default function LeadGenAuditView() {
           </>
         }
         primaryLabel="Book your lead gen audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See what we audit", href: "#audit", arrow: "↗" }}
       />
     </div>

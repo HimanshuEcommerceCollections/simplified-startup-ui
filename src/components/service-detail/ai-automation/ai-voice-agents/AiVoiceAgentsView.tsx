@@ -496,7 +496,7 @@ export default function AiVoiceAgentsView() {
             recovered missed call.
           </>
         }
-        primary={{ label: "Book a free AI receptionist demo", href: "/start-project" }}
+        primary={{ label: "Book a free AI receptionist demo", href: "/contact" }}
         secondary={{ label: "Hear what it can do ↓", href: "#can" }}
       >
         <CallCard />
@@ -702,7 +702,7 @@ export default function AiVoiceAgentsView() {
           </>
         }
         primaryLabel="Book a free AI receptionist demo"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

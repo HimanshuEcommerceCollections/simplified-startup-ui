@@ -650,7 +650,7 @@ export default function WebApplicationsView() {
             build only what earns its place, and hand over everything.
           </>
         }
-        primary={{ label: "Book a free scoping call", href: "/start-project" }}
+        primary={{ label: "Book a free scoping call", href: "/contact" }}
         secondary={{ label: "See what we build ↓", href: "#what" }}
       >
         <AppCard />
@@ -884,7 +884,7 @@ export default function WebApplicationsView() {
           </>
         }
         primaryLabel="Book a free scoping call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

@@ -24,7 +24,7 @@ const COMPANY_LINKS = [
   { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog" },
   { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/#book" },
+  { label: "Contact", href: "/contact" },
 ];
 
 function NewsletterForm() {

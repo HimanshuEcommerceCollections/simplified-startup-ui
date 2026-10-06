@@ -563,7 +563,7 @@ export default function AiContentMarketingView() {
             Trained on your voice, connected to your tools, priced transparently.
           </>
         }
-        primary={{ label: "Book a free content audit", href: "/start-project" }}
+        primary={{ label: "Book a free content audit", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
         compact
       >
@@ -827,7 +827,7 @@ export default function AiContentMarketingView() {
           </>
         }
         primaryLabel="Book a free content audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

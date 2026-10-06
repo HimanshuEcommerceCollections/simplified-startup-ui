@@ -483,7 +483,7 @@ export default function YouTubeAdsView() {
             campaign ownership.
           </>
         }
-        primary={{ label: "Book a free YouTube Ads audit", href: "/start-project" }}
+        primary={{ label: "Book a free YouTube Ads audit", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <VideoCard />
@@ -626,7 +626,7 @@ export default function YouTubeAdsView() {
           </>
         }
         primaryLabel="Book a free YouTube Ads audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See how it works", href: "#how", arrow: "↗" }}
         id="start"
       />

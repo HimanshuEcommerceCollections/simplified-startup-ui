@@ -698,7 +698,7 @@ export default function ColdEmailView() {
             replies you can actually close.
           </>
         }
-        primary={{ label: "Book a free cold email audit", href: "/start-project" }}
+        primary={{ label: "Book a free cold email audit", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#included" }}
       >
         <InboxCard />
@@ -920,7 +920,7 @@ export default function ColdEmailView() {
           </>
         }
         primaryLabel="Book a free cold email audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

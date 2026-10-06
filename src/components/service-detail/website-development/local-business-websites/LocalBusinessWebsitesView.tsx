@@ -597,7 +597,7 @@ export default function LocalBusinessWebsitesView() {
             search into a booked appointment or ringing phone.
           </>
         }
-        primary={{ label: "Book a free website call", href: "/start-project" }}
+        primary={{ label: "Book a free website call", href: "/contact" }}
         secondary={{ label: "See what’s included ↓", href: "#included" }}
         compact
       >
@@ -752,7 +752,7 @@ export default function LocalBusinessWebsitesView() {
           </>
         }
         primaryLabel="Book a free website call"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
         id="start"
       />

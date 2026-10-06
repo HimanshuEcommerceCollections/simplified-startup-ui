@@ -266,7 +266,7 @@ export default function AiAutomationView() {
             checks, the follow-ups that slip. <strong>Automated, documented, and owned by you.</strong>
           </>
         }
-        primary={{ label: "Get your free growth plan", href: "/start-project" }}
+        primary={{ label: "Get your free growth plan", href: "/contact" }}
         secondary={{ label: "See what it costs", href: "#pricing" }}
         sign="AI where it earns its place, humans where judgment lives"
       >
@@ -496,7 +496,7 @@ export default function AiAutomationView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See what it costs", href: "#pricing", arrow: "↗" }}
         id="plan"
       />

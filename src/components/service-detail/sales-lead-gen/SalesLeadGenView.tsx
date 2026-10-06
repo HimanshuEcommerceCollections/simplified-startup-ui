@@ -324,7 +324,7 @@ export default function SalesLeadGenView() {
             <strong>the activity counts verified every single week.</strong>
           </>
         }
-        primary={{ label: "Get your free growth plan", href: "/start-project" }}
+        primary={{ label: "Get your free growth plan", href: "/contact" }}
         secondary={{ label: "See the difference", href: "#compare" }}
         sign="We commit to activity we can count, not outcomes we can’t control"
       >
@@ -539,7 +539,7 @@ export default function SalesLeadGenView() {
           </>
         }
         primaryLabel="Get your free growth plan"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See the difference", href: "#compare", arrow: "↗" }}
         id="plan"
       />

@@ -698,7 +698,13 @@ function Included() {
 
 /* -------- page -------- */
 
-export default function LinkedinOutreachView() {
+type Props = {
+  /** Parent shown in the hero crumb. Defaults to Sales & Lead Generation; the
+   *  unlisted /digital-marketing/social-media-management/linkedin-outreach copy passes Digital Marketing. */
+  crumb?: { label: string; href: string };
+};
+
+export default function LinkedinOutreachView({ crumb = { label: "Sales & Lead Generation", href: "/sales-lead-gen" } }: Props = {}) {
   useHeroGridParallax();
 
   return (
@@ -706,7 +712,7 @@ export default function LinkedinOutreachView() {
       <ServiceDetailHero
         compact
         className="lio-hero"
-        crumb={{ label: "Sales & Lead Generation", href: "/sales-lead-gen" }}
+        crumb={crumb}
         line1="LinkedIn lead gen that"
         line2={
           <>
@@ -723,7 +729,7 @@ export default function LinkedinOutreachView() {
             <strong>Run safely from your own profile. Flat monthly fee, no risk-your-account automation.</strong>
           </>
         }
-        primary={{ label: "Book a free LinkedIn audit", href: "/start-project" }}
+        primary={{ label: "Book a free LinkedIn audit", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <ProfileCard />
@@ -946,7 +952,7 @@ export default function LinkedinOutreachView() {
           </>
         }
         primaryLabel="Book a free LinkedIn audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See full pricing", href: "#pricing", arrow: "↗" }}
       />
     </div>

@@ -389,7 +389,7 @@ export default function ContentMarketingView() {
             traditional SERPs and AI Overviews. <strong>Human-edited, E-E-A-T aligned, and built to compound.</strong>
           </>
         }
-        primary={{ label: "Book a free content audit", href: "/start-project" }}
+        primary={{ label: "Book a free content audit", href: "/contact" }}
         secondary={{ label: "See how it works ↓", href: "#how" }}
       >
         <ClusterCard />
@@ -559,7 +559,7 @@ export default function ContentMarketingView() {
           </>
         }
         primaryLabel="Book a free content audit"
-        primaryHref="/start-project"
+        primaryHref="/contact"
         secondary={{ label: "See how it works", href: "#how", arrow: "↗" }}
         id="start"
       />

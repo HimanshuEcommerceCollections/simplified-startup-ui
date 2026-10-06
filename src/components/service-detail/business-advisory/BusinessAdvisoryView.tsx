@@ -164,6 +164,7 @@ const DELIVERABLES: Deliverable[] = [
     btnSub: "10–15 slides",
     name: "Pitch Deck Design & Strategy",
     tag: "The 10–15 slides investors actually pay attention to.",
+    href: "/branding-growth/pitch-deck-investor",
     items: [
       "Narrative & story structure",
       "Problem, solution, market, model",

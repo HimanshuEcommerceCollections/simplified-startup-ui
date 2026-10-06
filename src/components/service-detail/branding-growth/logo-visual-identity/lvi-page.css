@@ -1,0 +1,584 @@
+/* ---------------- Logo & Visual Identity sub-page (namespaced .lvi-) ---------------- */
+
+/* ---------------- hero signature: identity system card ---------------- */
+.lvi-lock { display: flex; align-items: center; gap: 13px; padding: 20px 18px 14px; }
+.lvi-lock .mk {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: var(--grad);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex: none;
+  box-shadow: 0 12px 26px -12px rgba(37, 99, 235, 0.7);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 22px;
+}
+.lvi-lock .wm { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink); }
+.lvi-lock .wm small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 400;
+  margin-top: 2px;
+}
+.lvi-vars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 0 18px 12px; }
+/* the design declares .iv twice; the second only adds position:relative, merged here */
+.lvi-iv {
+  position: relative;
+  aspect-ratio: 1;
+  border: 1px solid var(--peach-line);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 15px;
+  transform: scale(0.6);
+  opacity: 0;
+}
+.lvi-card.run .lvi-iv { animation: lviPop 0.34s var(--ease) forwards; }
+.lvi-card.run .lvi-iv:nth-child(1) { animation-delay: 1s; }
+.lvi-card.run .lvi-iv:nth-child(2) { animation-delay: 1.12s; }
+.lvi-card.run .lvi-iv:nth-child(3) { animation-delay: 1.24s; }
+.lvi-card.run .lvi-iv:nth-child(4) { animation-delay: 1.36s; }
+@keyframes lviPop {
+  to { opacity: 1; transform: none; }
+}
+.lvi-iv.c1 { background: var(--grad); color: #fff; }
+.lvi-iv.c2 { background: var(--surface-2); color: var(--blue); }
+.lvi-iv.c3 { background: var(--ink); color: #fff; }
+.lvi-iv.c4 { background: var(--surface); border-color: var(--peach-line); color: var(--ink); }
+.lvi-iv small {
+  font-family: var(--mono);
+  font-size: 6.5px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  position: absolute;
+  bottom: 5px;
+  opacity: 0.7;
+}
+.lvi-row { padding: 0 18px 12px; }
+.lvi-row .rl {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 7px;
+}
+.lvi-pal { display: flex; gap: 7px; }
+.lvi-pal span { flex: 1; height: 26px; border-radius: 7px; transform: scaleX(0.3); opacity: 0; transform-origin: left; }
+.lvi-card.run .lvi-pal span { animation: lviSw 0.4s var(--ease) forwards; }
+.lvi-card.run .lvi-pal span:nth-child(1) { animation-delay: 1.5s; }
+.lvi-card.run .lvi-pal span:nth-child(2) { animation-delay: 1.6s; }
+.lvi-card.run .lvi-pal span:nth-child(3) { animation-delay: 1.7s; }
+.lvi-card.run .lvi-pal span:nth-child(4) { animation-delay: 1.8s; }
+.lvi-card.run .lvi-pal span:nth-child(5) { animation-delay: 1.9s; }
+@keyframes lviSw {
+  to { transform: none; opacity: 1; }
+}
+.lvi-files { display: flex; gap: 6px; padding: 0 18px 8px; flex-wrap: wrap; }
+.lvi-files span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.03em;
+  color: var(--teal-ink);
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 100px;
+  padding: 5px 10px;
+  opacity: 0;
+  transform: translateY(6px);
+}
+.lvi-card.run .lvi-files span { animation: lviPop 0.3s var(--ease) forwards; }
+.lvi-card.run .lvi-files span:nth-child(1) { animation-delay: 2s; }
+.lvi-card.run .lvi-files span:nth-child(2) { animation-delay: 2.08s; }
+.lvi-card.run .lvi-files span:nth-child(3) { animation-delay: 2.16s; }
+.lvi-card.run .lvi-files span:nth-child(4) { animation-delay: 2.24s; }
+.lvi-card.run .lvi-files span:nth-child(5) { animation-delay: 2.32s; }
+
+/* ---------------- why: three tilt feature cards ----------------
+   the design sets the 3-up column count inline; it lives here instead */
+.lvi-feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 900px) {
+  .lvi-feat-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .lvi-feat-grid { grid-template-columns: 1fr; }
+}
+.lvi-feat {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s ease;
+  isolation: isolate;
+}
+.lvi-feat:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: rgba(37, 99, 235, 0.34); }
+.lvi-feat-spot {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(37, 99, 235, 0.12), transparent 60%);
+}
+.lvi-feat:hover .lvi-feat-spot { opacity: 1; }
+.lvi-feat > * { position: relative; z-index: 1; }
+.lvi-feat .fi {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  margin-bottom: 16px;
+  transition: transform 0.6s var(--ease) 0.12s, opacity 0.5s ease 0.12s, background 0.3s ease, color 0.3s ease;
+  transform: scale(0.6) rotate(-8deg);
+  opacity: 0.001;
+}
+.lvi-feat.in .fi { transform: none; opacity: 1; }
+.lvi-feat:hover .fi { background: var(--grad); color: #fff; transform: rotate(-6deg) scale(1.04); }
+.lvi-feat .fi svg { width: 22px; height: 22px; }
+.lvi-feat h3 { font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--ink); margin-bottom: 10px; }
+.lvi-feat p { font-size: 14px; line-height: 1.6; color: var(--muted-ink); }
+.lvi-feat p strong { color: var(--ink); font-weight: 600; }
+
+/* gradient-rule note (why + compare) */
+.lvi-vs-note {
+  margin-top: 24px;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-left: 3px solid;
+  border-image: var(--grad) 1;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted-ink);
+}
+.lvi-vs-note strong { color: var(--ink); font-weight: 600; }
+/* the why note carries an inline 26px top margin in the design */
+.lvi-why-note { margin-top: 26px; }
+
+/* ---------------- just a logo vs a full system ----------------
+   the design declares this block twice; the later (amber) variant is the one that renders */
+.lvi-vs2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 760px) {
+  .lvi-vs2 { grid-template-columns: 1fr; }
+}
+.lvi-vscol {
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--peach-line);
+  background: var(--surface);
+}
+.lvi-vscol.wrong { border-top: 3px solid; border-image: linear-gradient(90deg, #f59e0b, #d97706) 1; }
+.lvi-vscol.right { border-top: 3px solid transparent; border-image: var(--grad) 1; }
+.lvi-vscol .vh { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; }
+.lvi-vscol .vh .vi { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; flex: none; }
+.lvi-vscol.wrong .vh .vi { background: var(--amber-bg, #fef3e2); color: var(--amber, #d97706); }
+.lvi-vscol.right .vh .vi { background: rgba(20, 184, 166, 0.14); color: var(--teal-ink); }
+.lvi-vscol .vh .vi svg { width: 18px; height: 18px; }
+.lvi-vscol .vh h3 { font-family: var(--display); font-weight: 700; font-size: 17px; color: var(--ink); }
+.lvi-vscol ul { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; }
+.lvi-vscol ul li {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--muted-ink);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.4s ease, transform 0.4s var(--ease);
+}
+.lvi-vscol.in ul li { opacity: 1; transform: none; }
+.lvi-vscol.in ul li:nth-child(1) { transition-delay: 0.1s; }
+.lvi-vscol.in ul li:nth-child(2) { transition-delay: 0.18s; }
+.lvi-vscol.in ul li:nth-child(3) { transition-delay: 0.26s; }
+.lvi-vscol.in ul li:nth-child(4) { transition-delay: 0.34s; }
+.lvi-vscol.in ul li:nth-child(5) { transition-delay: 0.42s; }
+.lvi-vscol.in ul li:nth-child(6) { transition-delay: 0.5s; }
+.lvi-vscol ul li .m { flex: none; width: 18px; height: 18px; border-radius: 5px; display: grid; place-items: center; margin-top: 1px; }
+.lvi-vscol.wrong ul li .m { background: var(--amber-bg, #fef3e2); color: var(--amber, #d97706); }
+.lvi-vscol.right ul li .m { background: rgba(20, 184, 166, 0.14); color: var(--teal-ink); }
+.lvi-vscol ul li .m svg { width: 11px; height: 11px; }
+
+/* ---------------- logo type table ---------------- */
+.lvi-lt-tbl {
+  border: 1px solid var(--peach-line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--surface);
+}
+.lvi-lt-row { display: grid; grid-template-columns: 1fr 1.4fr 1.4fr; gap: 0; border-bottom: 1px solid var(--peach-line); }
+.lvi-lt-row:last-child { border-bottom: 0; }
+.lvi-lt-row.head {
+  background: var(--surface-2);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.lvi-lt-row.head > div { padding: 13px 16px; }
+.lvi-lt-row > div { padding: 15px 16px; font-size: 12.5px; color: var(--muted-ink); display: flex; align-items: center; line-height: 1.45; min-width: 0; }
+.lvi-lt-row .ln { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 13.5px; }
+.lvi-lt-row:not(.head):hover { background: var(--surface-2); }
+@media (max-width: 760px) {
+  .lvi-lt-row { grid-template-columns: 1fr 1.4fr; }
+  .lvi-lt-row .lc3 { display: none; }
+}
+.lvi-lt-note { margin-top: 22px; font-size: 15px; line-height: 1.6; color: var(--muted-ink); }
+.lvi-lt-note strong { color: var(--ink); font-weight: 600; }
+
+/* ---------------- eight building blocks ---------------- */
+.lvi-blk-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 900px) {
+  .lvi-blk-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .lvi-blk-grid { grid-template-columns: 1fr; }
+}
+.lvi-blk {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s ease;
+}
+.lvi-blk:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: rgba(37, 99, 235, 0.34); }
+.lvi-blk .bn { font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--teal-ink); }
+.lvi-blk .bi {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  margin: 10px 0 12px;
+  transition: transform 0.55s var(--ease), opacity 0.45s ease, background 0.3s ease, color 0.3s ease;
+  transform: scale(0.6) rotate(-8deg);
+  opacity: 0.001;
+}
+.lvi-blk-grid.in .bi { transform: none; opacity: 1; }
+.lvi-blk-grid.in .lvi-blk:nth-child(1) .bi { transition-delay: 0.08s; }
+.lvi-blk-grid.in .lvi-blk:nth-child(2) .bi { transition-delay: 0.15s; }
+.lvi-blk-grid.in .lvi-blk:nth-child(3) .bi { transition-delay: 0.22s; }
+.lvi-blk-grid.in .lvi-blk:nth-child(4) .bi { transition-delay: 0.29s; }
+.lvi-blk-grid.in .lvi-blk:nth-child(5) .bi { transition-delay: 0.36s; }
+.lvi-blk-grid.in .lvi-blk:nth-child(6) .bi { transition-delay: 0.43s; }
+.lvi-blk-grid.in .lvi-blk:nth-child(7) .bi { transition-delay: 0.5s; }
+.lvi-blk-grid.in .lvi-blk:nth-child(8) .bi { transition-delay: 0.57s; }
+.lvi-blk:hover .bi { background: var(--grad); color: #fff; border-color: transparent; }
+.lvi-blk .bi svg { width: 19px; height: 19px; }
+.lvi-blk h3 { font-family: var(--display); font-weight: 700; font-size: 14.5px; color: var(--ink); margin-bottom: 6px; }
+.lvi-blk p { font-size: 12px; line-height: 1.5; color: var(--muted-ink); }
+
+/* ---------------- what we don't do (dark, amber) ---------------- */
+.lvi-dont-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 640px) {
+  .lvi-dont-grid { grid-template-columns: 1fr; }
+}
+.lvi-dontc {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  padding: 22px;
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
+}
+.lvi-dontc:hover { transform: translateY(-4px); border-color: rgba(245, 158, 11, 0.4); }
+.lvi-dontc h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.lvi-dontc h3 .x {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  display: grid;
+  place-items: center;
+  flex: none;
+  margin-top: 1px;
+}
+.lvi-dontc h3 .x svg { width: 13px; height: 13px; }
+.lvi-dontc h3 .x svg path { stroke-dasharray: 34; stroke-dashoffset: 34; transition: stroke-dashoffset 0.55s var(--ease) 0.3s; }
+.lvi-dontc.in h3 .x svg path { stroke-dashoffset: 0; }
+.lvi-dontc p { font-size: 12.5px; line-height: 1.55; color: #9fb0c9; }
+.lvi-dontc p strong { color: #fff; font-weight: 600; }
+.lvi-dont-note {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-left: 3px solid;
+  border-image: linear-gradient(135deg, #60a5fa, #5eead4) 1;
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+.lvi-dont-note .mk {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(94, 234, 212, 0.16);
+  color: var(--teal-bright);
+  display: grid;
+  place-items: center;
+}
+.lvi-dont-note .mk svg { width: 18px; height: 18px; }
+.lvi-dont-note p { font-family: var(--display); font-weight: 600; font-size: clamp(15px, 2vw, 18px); color: #fff; line-height: 1.4; }
+.lvi-dont-note p strong { font-weight: 700; }
+
+/* ---------------- what's included (interactive tabs) ---------------- */
+.lvi-wb-wrap { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 26px; align-items: start; }
+.lvi-wb-list { display: flex; flex-direction: column; gap: 6px; max-height: 460px; overflow-y: auto; padding-right: 6px; }
+.lvi-wb-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--peach-line);
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 13px 15px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s var(--ease);
+  white-space: nowrap;
+}
+.lvi-wb-btn:hover { border-color: rgba(37, 99, 235, 0.4); }
+.lvi-wb-btn .di {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  flex: none;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.lvi-wb-btn .dn b { display: block; font-family: var(--display); font-weight: 600; font-size: 14px; color: var(--ink); }
+.lvi-wb-btn .dn small { font-size: 11px; color: var(--muted); }
+.lvi-wb-btn[aria-selected="true"] {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(20, 184, 166, 0.08));
+  border-color: transparent;
+  transform: translateX(3px);
+}
+.lvi-wb-btn[aria-selected="true"] .di { background: var(--grad); color: #fff; border-color: transparent; }
+.lvi-wb-panel {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  min-height: 340px;
+}
+.lvi-wb-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1.4px;
+  background: var(--grad);
+  opacity: 0.4;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.lvi-wp-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 26px 28px;
+  border-bottom: 1px dashed var(--peach-line);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.04), transparent);
+}
+.lvi-wp-top .big {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--grad);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex: none;
+  box-shadow: 0 12px 26px -12px rgba(37, 99, 235, 0.7);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 20px;
+}
+.lvi-wp-top .big svg { width: 24px; height: 24px; }
+.lvi-wp-top h3 { font-family: var(--display); font-weight: 700; font-size: clamp(19px, 2.4vw, 25px); color: var(--ink); }
+.lvi-wp-top .tagline { font-size: 13.5px; color: var(--muted-ink); margin-top: 4px; }
+.lvi-wp-body { padding: 24px 28px 28px; }
+.lvi-wp-body .k {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 14px;
+}
+.lvi-wp-list { display: grid; grid-template-columns: 1fr 1fr; gap: 11px 22px; }
+.lvi-wp-list div { position: relative; padding-left: 26px; font-size: 14px; line-height: 1.5; color: var(--muted-ink); }
+.lvi-wp-list div::before { content: ""; position: absolute; left: 0; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: rgba(20, 184, 166, 0.15); }
+.lvi-wp-list div::after { content: "✓"; position: absolute; left: 3.5px; top: 0.5px; font-size: 10px; font-weight: 700; color: var(--teal-ink); }
+.lvi-wp-fade { animation: lviWpIn 0.4s var(--ease); }
+@keyframes lviWpIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@media (max-width: 820px) {
+  .lvi-wb-wrap { grid-template-columns: 1fr; gap: 18px; }
+  .lvi-wb-list { flex-direction: row; flex-wrap: nowrap; overflow-x: auto; max-height: none; padding-bottom: 8px; }
+  .lvi-wb-btn { width: auto; }
+}
+@media (max-width: 560px) {
+  .lvi-wp-list { grid-template-columns: 1fr; }
+  .lvi-wp-top { padding: 22px 20px; }
+  .lvi-wp-body { padding: 20px 20px 24px; }
+}
+
+/* ---------------- who this is for (2-up, icon + copy) ----------------
+   the design sets the 2-up column count inline; it lives here instead */
+.lvi-who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+@media (max-width: 560px) {
+  .lvi-who-grid { grid-template-columns: 1fr; }
+}
+.lvi-who {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.lvi-who:hover { transform: translateY(-4px); border-color: rgba(37, 99, 235, 0.34); }
+.lvi-who .wi {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(20, 184, 166, 0.14);
+  color: var(--teal-ink);
+  display: grid;
+  place-items: center;
+  flex: none;
+  transform: scale(0.55);
+  opacity: 0.001;
+  transition: transform 0.5s var(--ease) 0.12s, opacity 0.4s ease 0.12s;
+}
+.lvi-who.in .wi { transform: none; opacity: 1; }
+.lvi-who .wi svg { width: 18px; height: 18px; }
+.lvi-who p { font-size: 14px; line-height: 1.55; color: var(--muted-ink); }
+.lvi-who p strong { color: var(--ink); font-weight: 600; }
+
+/* ---------------- how it works (4-up, week pills) ----------------
+   the design sets the 4-up column count inline; it lives here instead */
+.lvi-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+@media (max-width: 960px) {
+  .lvi-steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .lvi-steps { grid-template-columns: 1fr; }
+}
+.lvi-step {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.lvi-step:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.lvi-step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s var(--ease) 0.12s;
+}
+.lvi-step.in::before { transform: scaleX(1); }
+.lvi-step-no {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 6px 11px;
+  border-radius: 100px;
+  background: var(--grad);
+  display: inline-block;
+  box-shadow: 0 10px 22px -10px rgba(37, 99, 235, 0.75);
+  margin-bottom: 14px;
+  transform: scale(0.6);
+  opacity: 0.001;
+  transition: transform 0.5s var(--ease) 0.2s, opacity 0.4s ease 0.2s;
+}
+.lvi-step.in .lvi-step-no { transform: none; opacity: 1; }
+.lvi-step h3 { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--ink); margin-bottom: 8px; }
+.lvi-step p { font-size: 12.5px; line-height: 1.5; color: var(--muted-ink); }
+
+/* ---------------- reduced motion: animation-driven copy must stay visible ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .lvi-iv, .lvi-pal span, .lvi-files span { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .lvi-feat .fi, .lvi-vscol ul li, .lvi-blk .bi, .lvi-who .wi, .lvi-step-no {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .lvi-step::before { transform: scaleX(1) !important; }
+  .lvi-dontc h3 .x svg path { stroke-dashoffset: 0 !important; transition: none !important; }
+  .lvi-wp-fade { animation: none !important; }
+}

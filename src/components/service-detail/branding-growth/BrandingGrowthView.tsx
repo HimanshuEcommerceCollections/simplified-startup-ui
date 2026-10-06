@@ -196,6 +196,8 @@ const GROUPS = [
     icon: ICON_SEARCH,
     title: "Strategy & Research",
     items: ["Brand discovery workshop", "Audience research & buyer profiles", "Competitor analysis", "Market positioning", "Voice & tone definition", "Findings document"],
+    href: "/branding-growth/brand-strategy-positioning",
+    linkLabel: "See the brand strategy page",
   },
   {
     icon: ICON_LINES,
@@ -208,6 +210,8 @@ const GROUPS = [
     title: "Visual Identity",
     items: ["Primary logo design", "Stacked & horizontal variants", "Icon & favicon", "Full & single-colour versions", "File package (SVG/PNG/EPS/PDF)", "Palette, type & iconography"],
     delay: 140,
+    href: "/branding-growth/logo-visual-identity",
+    linkLabel: "See the logo & identity page",
   },
   {
     icon: (
@@ -229,7 +233,7 @@ const ADDONS: { label: string; href?: string }[] = [
   { label: "Business cards & stationery" },
   { label: "Social profile design" },
   { label: "Email signature" },
-  { label: "Pitch deck template" },
+  { label: "Pitch deck & investor materials", href: "/branding-growth/pitch-deck-investor" },
   { label: "Full brand launch" },
 ];
 
@@ -443,6 +447,11 @@ export default function BrandingGrowthView() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+                {group.href && (
+                  <a className="bg-grp-link" href={group.href}>
+                    {group.linkLabel} <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </Reveal>
             ))}
           </div>

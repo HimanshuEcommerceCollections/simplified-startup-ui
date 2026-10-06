@@ -79,7 +79,16 @@ const SERVICE_LINKS: ServiceLink[] = [
       { label: "Lead gen audit", href: "/sales-lead-gen/lead-gen-audit" },
     ],
   },
-  { label: "Branding & Growth", href: "/branding-growth", hint: "Look like the leader in your space" },
+  {
+    label: "Branding & Growth",
+    href: "/branding-growth",
+    hint: "Look like the leader in your space",
+    children: [
+      { label: "Brand strategy & positioning", href: "/branding-growth/brand-strategy-positioning" },
+      { label: "Logo & visual identity", href: "/branding-growth/logo-visual-identity" },
+      { label: "Pitch deck & investor materials", href: "/branding-growth/pitch-deck-investor" },
+    ],
+  },
   {
     label: "Business & Startup Advisory",
     href: "/business-advisory",

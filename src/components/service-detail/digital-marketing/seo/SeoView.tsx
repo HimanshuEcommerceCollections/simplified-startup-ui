@@ -255,6 +255,8 @@ type SeoService = {
   name: string;
   tag: string;
   items: string[];
+  /** Set when the service has its own sub-page; the panel's "See full details" goes there. */
+  href?: string;
 };
 
 const SERVICES: SeoService[] = [
@@ -265,6 +267,7 @@ const SERVICES: SeoService[] = [
     btnSub: "Map pack",
     name: "Local SEO",
     tag: "Rank in the map pack for your city and service area.",
+    href: "/digital-marketing/local-seo",
     items: ["Google Business Profile optimization", "Local pack ranking improvements", "NAP consistency clean-up", "Location pages for multi-location", "Local link building", "Review generation & response"],
   },
   {
@@ -328,6 +331,7 @@ const SERVICES: SeoService[] = [
     btnSub: "Product & category",
     name: "E-commerce SEO",
     tag: "Rank product and category pages for buyer-intent searches.",
+    href: "/digital-marketing/ecommerce-seo",
     items: ["Product page optimization", "Category page SEO", "Product schema markup", "Faceted navigation fixes", "Internal search optimization", "Site-wide e-commerce technical audit"],
   },
   {
@@ -400,7 +404,7 @@ function ServicesExplorer() {
               <div key={item}>{item}</div>
             ))}
           </div>
-          <a className="seo-sp-cta" href="#start">
+          <a className="seo-sp-cta" href={sv.href ?? "#start"}>
             See full details <span className="arw">↗</span>
           </a>
         </div>

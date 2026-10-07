@@ -1,0 +1,352 @@
+/* ---------------- Marketing & Sales Support Staff sub-page (namespaced .mss-) ---------------- */
+
+/* ---------------- hero signature: team structure org chart ----------------
+   the design's foot has a 10px top margin; the kit foot has none, so the body carries it */
+.mss-org-body { padding: 18px 18px 20px; }
+.mss-on {
+  border: 1px solid var(--peach-line);
+  border-radius: 11px;
+  padding: 10px 13px;
+  text-align: center;
+  background: var(--surface);
+  opacity: 0;
+  transform: translateY(8px);
+}
+.mss-org.run .mss-on { animation: mssOnIn 0.4s var(--ease) forwards; }
+@keyframes mssOnIn {
+  to { opacity: 1; transform: none; }
+}
+.mss-on b { display: block; font-family: var(--display); font-weight: 700; font-size: 12.5px; color: var(--ink); }
+.mss-on small { font-size: 9.5px; color: var(--muted); }
+.mss-on.lead { background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(20, 184, 166, 0.04)); }
+.mss-on.you { background: var(--grad); border-color: transparent; box-shadow: 0 10px 22px -12px rgba(37, 99, 235, 0.7); }
+.mss-on.you b { color: #fff; }
+.mss-on.you small { color: rgba(255, 255, 255, 0.85); }
+.mss-org-you { max-width: 60%; margin: 0 auto; }
+/* the design sets the 1s delay on the (unanimated) wrapper; it belongs on the node */
+.mss-org.run .mss-org-you .mss-on { animation-delay: 1s; }
+.mss-org-conn { height: 16px; position: relative; margin: 0 auto; width: 60%; }
+.mss-org-conn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--peach-line);
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top;
+}
+.mss-org.run .mss-org-conn::before { animation: mssGrowY 0.4s var(--ease) 1.2s forwards; }
+@keyframes mssGrowY {
+  to { transform: translateX(-50%) scaleY(1); }
+}
+.mss-org-leads { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 2px; }
+.mss-org.run .mss-org-leads .mss-on:nth-child(1) { animation-delay: 1.4s; }
+.mss-org.run .mss-org-leads .mss-on:nth-child(2) { animation-delay: 1.5s; }
+.mss-org-sup { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.mss-org.run .mss-org-sup .mss-on:nth-child(1) { animation-delay: 1.75s; }
+.mss-org.run .mss-org-sup .mss-on:nth-child(2) { animation-delay: 1.85s; }
+.mss-org-crm {
+  margin: 10px auto 0;
+  max-width: 70%;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px dashed rgba(20, 184, 166, 0.4);
+  border-radius: 9px;
+  padding: 9px;
+  text-align: center;
+  opacity: 0;
+}
+.mss-org.run .mss-org-crm { animation: mssOnIn 0.4s var(--ease) 2s forwards; }
+
+/* ---------------- where sales time goes (dark, count-ups) ----------------
+   the design's stat grid is declared 3-up and overridden inline to 4-up; laid out 4-up here */
+.mss-stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+@media (max-width: 960px) {
+  .mss-stat-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .mss-stat-grid { grid-template-columns: 1fr; }
+}
+.mss-stat {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  padding: 32px 28px;
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), border-color 0.3s ease;
+}
+.mss-stat:hover { transform: translateY(-5px); border-color: rgba(94, 234, 212, 0.4); }
+.mss-stat::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #60a5fa, #5eead4);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s var(--ease) 0.1s;
+}
+.mss-stat.in::before { transform: scaleX(1); }
+.mss-stat .sv {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1;
+  background: linear-gradient(135deg, #60a5fa, #5eead4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0.7);
+  opacity: 0.001;
+  transition: transform 0.6s var(--ease) 0.2s, opacity 0.5s ease 0.2s;
+}
+.mss-stat.in .sv { transform: none; opacity: 1; }
+.mss-stat .sk {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-bright);
+  margin-top: 12px;
+  display: block;
+}
+.mss-stat p { font-size: 13.5px; line-height: 1.5; color: #9fb0c9; margin-top: 10px; }
+.mss-stat p em { color: #c7d3e6; }
+.mss-stat-note { margin-top: 24px; font-size: 15.5px; line-height: 1.6; color: #c7d3e6; }
+.mss-stat-note strong { color: #fff; font-weight: 600; }
+
+/* ---------------- roles we place (8 cards, 2-up) ---------------- */
+.mss-role-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 760px) {
+  .mss-role-grid { grid-template-columns: 1fr; }
+}
+.mss-role {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s ease;
+}
+.mss-role:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(37, 99, 235, 0.34); }
+.mss-role .rtag {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 100px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.mss-role .rtag.mkt { background: rgba(37, 99, 235, 0.1); color: var(--blue); }
+.mss-role .rtag.sales { background: rgba(20, 184, 166, 0.14); color: var(--teal-ink); }
+.mss-role .rh { display: flex; align-items: center; gap: 11px; margin-bottom: 8px; }
+.mss-role .ri {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--surface-2);
+  border: 1px solid var(--peach-line);
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  flex: none;
+  transition: transform 0.55s var(--ease), opacity 0.45s ease, background 0.3s ease, color 0.3s ease;
+  transform: scale(0.6) rotate(-8deg);
+  opacity: 0.001;
+}
+.mss-role-grid.in .ri { transform: none; opacity: 1; }
+.mss-role-grid.in .mss-role:nth-child(1) .ri { transition-delay: 0.08s; }
+.mss-role-grid.in .mss-role:nth-child(2) .ri { transition-delay: 0.16s; }
+.mss-role-grid.in .mss-role:nth-child(3) .ri { transition-delay: 0.24s; }
+.mss-role-grid.in .mss-role:nth-child(4) .ri { transition-delay: 0.32s; }
+.mss-role-grid.in .mss-role:nth-child(5) .ri { transition-delay: 0.4s; }
+.mss-role-grid.in .mss-role:nth-child(6) .ri { transition-delay: 0.48s; }
+.mss-role-grid.in .mss-role:nth-child(7) .ri { transition-delay: 0.56s; }
+.mss-role-grid.in .mss-role:nth-child(8) .ri { transition-delay: 0.64s; }
+.mss-role:hover .ri { background: var(--grad); color: #fff; border-color: transparent; }
+.mss-role .ri svg { width: 20px; height: 20px; }
+.mss-role h3 { font-family: var(--display); font-weight: 700; font-size: 16px; color: var(--ink); }
+.mss-role p { font-size: 12.5px; line-height: 1.55; color: var(--muted-ink); margin-bottom: 12px; }
+.mss-role .tools {
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--teal-ink);
+  padding-top: 11px;
+  border-top: 1px dashed var(--peach-line);
+}
+.mss-role .tools b {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+
+/* ---------------- icon + copy cards (structure 3-up, who 2-up) ---------------- */
+.mss-struct-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 860px) {
+  .mss-struct-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .mss-struct-grid { grid-template-columns: 1fr; }
+}
+.mss-who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+@media (max-width: 560px) {
+  .mss-who-grid { grid-template-columns: 1fr; }
+}
+.mss-who {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.mss-who:hover { transform: translateY(-4px); border-color: rgba(37, 99, 235, 0.34); }
+.mss-who .wi {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(20, 184, 166, 0.14);
+  color: var(--teal-ink);
+  display: grid;
+  place-items: center;
+  flex: none;
+  transform: scale(0.55);
+  opacity: 0.001;
+  transition: transform 0.5s var(--ease) 0.12s, opacity 0.4s ease 0.12s;
+}
+.mss-who.in .wi { transform: none; opacity: 1; }
+.mss-who .wi svg { width: 18px; height: 18px; }
+.mss-who p { font-size: 14px; line-height: 1.55; color: var(--muted-ink); }
+.mss-who p strong { color: var(--ink); font-weight: 600; }
+
+/* ---------------- skills matrix (8 roles x 7 tools) ---------------- */
+.mss-mx-wrap { overflow-x: auto; border: 1px solid var(--peach-line); border-radius: 18px; box-shadow: var(--shadow-sm); }
+.mss-mx-tbl { width: 100%; min-width: 680px; border-collapse: collapse; background: var(--surface); }
+.mss-mx-tbl th, .mss-mx-tbl td { padding: 13px 10px; text-align: center; font-size: 11.5px; border-bottom: 1px solid var(--peach-line); }
+.mss-mx-tbl thead th {
+  background: var(--surface-2);
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.mss-mx-tbl tbody th {
+  text-align: left;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 12.5px;
+  color: var(--ink);
+  white-space: nowrap;
+  padding-left: 16px;
+}
+.mss-mx-tbl tbody tr:last-child td, .mss-mx-tbl tbody tr:last-child th { border-bottom: 0; }
+.mss-mx-tbl tbody tr:hover td, .mss-mx-tbl tbody tr:hover th { background: var(--surface-2); }
+.mss-mx-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--grad); display: inline-block; transform: scale(0); }
+.mss-mx-tbl.in .mss-mx-dot { animation: mssDotPop 0.3s var(--ease) forwards; }
+@keyframes mssDotPop {
+  to { transform: scale(1); }
+}
+.mss-mx-note { margin-top: 18px; font-size: 13px; color: var(--muted); text-align: center; }
+
+/* ---------------- ways to work together (engagement table) ---------------- */
+.mss-eng-tbl { border: 1px solid var(--peach-line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-sm); background: var(--surface); }
+.mss-eng-row { display: grid; grid-template-columns: 1fr 1.4fr 1.4fr; gap: 0; border-bottom: 1px solid var(--peach-line); }
+.mss-eng-row:last-child { border-bottom: 0; }
+.mss-eng-row.head {
+  background: var(--surface-2);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.mss-eng-row.head > div { padding: 13px 16px; }
+.mss-eng-row > div { padding: 15px 16px; font-size: 12.5px; color: var(--muted-ink); display: flex; align-items: center; line-height: 1.45; min-width: 0; }
+.mss-eng-row .en { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 13.5px; }
+.mss-eng-row:not(.head):hover { background: var(--surface-2); }
+@media (max-width: 760px) {
+  .mss-eng-row { grid-template-columns: 1fr 1.4fr; }
+  .mss-eng-row .ec2 { display: none; }
+}
+.mss-eng-note { margin-top: 22px; font-size: 14px; line-height: 1.6; color: var(--muted-ink); }
+.mss-eng-note strong { color: var(--ink); font-weight: 600; }
+
+/* ---------------- every engagement includes (8-item list) ---------------- */
+.mss-inc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 22px; }
+@media (max-width: 640px) {
+  .mss-inc-grid { grid-template-columns: 1fr; }
+}
+.mss-inc {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 13px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
+}
+.mss-inc:hover { transform: translateY(-3px); border-color: rgba(37, 99, 235, 0.34); }
+.mss-inc .ik {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: rgba(20, 184, 166, 0.14);
+  color: var(--teal-ink);
+  display: grid;
+  place-items: center;
+  transition: transform 0.5s var(--ease), opacity 0.4s ease;
+  transform: scale(0.5);
+  opacity: 0.001;
+}
+.mss-inc-grid.in .ik { transform: none; opacity: 1; }
+.mss-inc-grid.in .mss-inc:nth-child(1) .ik { transition-delay: 0.06s; }
+.mss-inc-grid.in .mss-inc:nth-child(2) .ik { transition-delay: 0.12s; }
+.mss-inc-grid.in .mss-inc:nth-child(3) .ik { transition-delay: 0.18s; }
+.mss-inc-grid.in .mss-inc:nth-child(4) .ik { transition-delay: 0.24s; }
+.mss-inc-grid.in .mss-inc:nth-child(5) .ik { transition-delay: 0.3s; }
+.mss-inc-grid.in .mss-inc:nth-child(6) .ik { transition-delay: 0.36s; }
+.mss-inc-grid.in .mss-inc:nth-child(7) .ik { transition-delay: 0.42s; }
+.mss-inc-grid.in .mss-inc:nth-child(8) .ik { transition-delay: 0.48s; }
+.mss-inc .ik svg { width: 15px; height: 15px; }
+.mss-inc p { font-size: 13.5px; line-height: 1.5; color: var(--ink); font-weight: 500; padding-top: 4px; }
+
+/* ---------------- reduced motion: animation-driven pieces must stay visible ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .mss-on, .mss-org-crm { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .mss-org-conn::before { transform: translateX(-50%) scaleY(1) !important; animation: none !important; }
+  .mss-mx-dot { transform: scale(1) !important; animation: none !important; }
+  .mss-stat .sv, .mss-role .ri, .mss-who .wi, .mss-inc .ik {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .mss-stat::before { transform: scaleX(1) !important; }
+}

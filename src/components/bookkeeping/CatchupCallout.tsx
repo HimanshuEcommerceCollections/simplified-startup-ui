@@ -14,7 +14,7 @@ export default function CatchupCallout() {
               before monthly service starts, no lecture.
             </p>
           </div>
-          <a href="#book" className="btn">
+          <a href="/bookkeeping/catch-up-bookkeeping" className="btn">
             Scope my catch-up <span className="arw" aria-hidden="true">→</span>
           </a>
         </Reveal>

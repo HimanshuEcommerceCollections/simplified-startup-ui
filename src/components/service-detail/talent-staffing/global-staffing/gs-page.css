@@ -1,0 +1,383 @@
+/* ---------------- Global Staffing sub-page (namespaced .gs-) ---------------- */
+
+/* ---------------- hero signature: coverage map ----------------
+   the design's foot has an 8px top margin; the kit foot has none, so the body carries it */
+.gs-globe-body { padding: 16px 18px 16px; display: flex; flex-direction: column; gap: 8px; }
+.gs-gr {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid var(--peach-line);
+  border-radius: 11px;
+  padding: 11px 13px;
+  background: var(--surface);
+  opacity: 0;
+  transform: translateX(-8px);
+}
+.gs-card.run .gs-gr { animation: gsGrIn 0.4s var(--ease) forwards; }
+.gs-card.run .gs-gr:nth-child(1) { animation-delay: 1s; }
+.gs-card.run .gs-gr:nth-child(2) { animation-delay: 1.18s; }
+.gs-card.run .gs-gr:nth-child(3) { animation-delay: 1.36s; }
+@keyframes gsGrIn {
+  to { opacity: 1; transform: none; }
+}
+.gs-gr .gp {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+}
+.gs-gr.on .gp { background: #2563eb; }
+.gs-gr.near .gp { background: #14b8a6; }
+.gs-gr.off .gp { background: #d97706; }
+.gs-gr .gn { min-width: 0; }
+.gs-gr .gn b { display: block; font-family: var(--display); font-weight: 700; font-size: 12.5px; color: var(--ink); }
+.gs-gr .gn small { font-size: 10px; color: var(--muted); }
+.gs-gr .gbar { position: relative; width: 88px; height: 8px; border-radius: 5px; background: var(--surface-2); overflow: hidden; flex: none; }
+.gs-gr .gbar i { position: absolute; top: 0; bottom: 0; border-radius: 5px; transform: scaleX(0); transform-origin: left; }
+.gs-gr.on .gbar i { background: #2563eb; }
+.gs-gr.near .gbar i { background: #14b8a6; }
+.gs-gr.off .gbar i { background: #d97706; }
+.gs-card.run .gs-gr .gbar i { animation: gsGrBar 0.7s var(--ease) forwards; }
+.gs-card.run .gs-gr:nth-child(1) .gbar i { animation-delay: 1.3s; }
+.gs-card.run .gs-gr:nth-child(2) .gbar i { animation-delay: 1.48s; }
+.gs-card.run .gs-gr:nth-child(3) .gbar i { animation-delay: 1.66s; }
+@keyframes gsGrBar {
+  to { transform: scaleX(1); }
+}
+
+/* ---------------- stats (dark, count-ups) ----------------
+   the design overrides its 3-up stat grid inline to 4-up; declared here instead */
+.gs-stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+@media (max-width: 960px) {
+  .gs-stat-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .gs-stat-grid { grid-template-columns: 1fr; }
+}
+.gs-stat {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  padding: 32px 28px;
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), border-color 0.3s ease;
+}
+.gs-stat:hover { transform: translateY(-5px); border-color: rgba(94, 234, 212, 0.4); }
+.gs-stat::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #60a5fa, #5eead4);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s var(--ease) 0.1s;
+}
+.gs-stat.in::before { transform: scaleX(1); }
+.gs-stat .sv {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1;
+  background: linear-gradient(135deg, #60a5fa, #5eead4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0.7);
+  opacity: 0.001;
+  transition: transform 0.6s var(--ease) 0.2s, opacity 0.5s ease 0.2s;
+}
+.gs-stat.in .sv { transform: none; opacity: 1; }
+.gs-stat .sk {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-bright);
+  margin-top: 12px;
+  display: block;
+}
+.gs-stat p { font-size: 13.5px; line-height: 1.5; color: #9fb0c9; margin-top: 10px; }
+.gs-stat p em { color: #c7d3e6; }
+.gs-stat-note { margin-top: 24px; font-size: 15.5px; line-height: 1.6; color: #c7d3e6; }
+.gs-stat-note strong { color: #fff; font-weight: 600; }
+
+/* ---------------- three model cards ---------------- */
+.gs-mdl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 820px) {
+  .gs-mdl-grid { grid-template-columns: 1fr; }
+}
+.gs-mdlc {
+  position: relative;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--peach-line);
+  background: var(--surface);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.gs-mdlc:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.gs-mdlc::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--ease) 0.12s;
+}
+.gs-mdlc.on::before { background: #2563eb; }
+.gs-mdlc.near::before { background: #14b8a6; }
+.gs-mdlc.off::before { background: #d97706; }
+/* the design keys this on `.mdlc.in`, but only the grid ever receives `.in` */
+.gs-mdl-grid.in .gs-mdlc::before { transform: scaleX(1); }
+.gs-mdlc .mh { display: flex; align-items: center; gap: 11px; margin-bottom: 4px; }
+.gs-mdlc .mi {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  flex: none;
+  transform: scale(0.6) rotate(-8deg);
+  opacity: 0.001;
+  transition: transform 0.55s var(--ease), opacity 0.45s ease;
+}
+.gs-mdl-grid.in .mi { transform: none; opacity: 1; }
+.gs-mdl-grid.in .gs-mdlc:nth-child(2) .mi { transition-delay: 0.15s; }
+.gs-mdl-grid.in .gs-mdlc:nth-child(3) .mi { transition-delay: 0.3s; }
+.gs-mdlc.on .mi { background: #2563eb; }
+.gs-mdlc.near .mi { background: #14b8a6; }
+.gs-mdlc.off .mi { background: #d97706; }
+.gs-mdlc .mi svg { width: 22px; height: 22px; }
+.gs-mdlc h3 { font-family: var(--display); font-weight: 700; font-size: 19px; color: var(--ink); }
+.gs-mdlc .mloc { font-size: 12.5px; color: var(--muted); margin: 2px 0 16px; padding-bottom: 14px; border-bottom: 1px dashed var(--peach-line); }
+.gs-mdlc dl { display: flex; flex-direction: column; gap: 12px; margin: 0; }
+.gs-mdlc dl dt.k {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  display: block;
+  margin-bottom: 2px;
+}
+.gs-mdlc dl dd.v { font-size: 12.5px; line-height: 1.45; color: var(--muted-ink); margin: 0; }
+.gs-mdlc dl dd.v b { color: var(--ink); font-weight: 600; }
+.gs-mdl-note { margin-top: 22px; font-size: 14px; line-height: 1.6; color: var(--muted-ink); text-align: center; }
+.gs-mdl-note strong { color: var(--ink); font-weight: 600; }
+
+/* ---------------- time-zone overlap ----------------
+   the design pads the scale 200px but the track starts at 190px label + 16px gap = 206px;
+   padded to 206px here so the four stops line up with the tracks */
+.gs-tz { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.gs-tz-scale {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-left: 206px;
+  margin-bottom: -2px;
+}
+.gs-tzr { display: grid; grid-template-columns: 190px 1fr; gap: 16px; align-items: center; }
+.gs-tzr .tl b { display: block; font-family: var(--display); font-weight: 700; font-size: 13.5px; color: var(--ink); }
+.gs-tzr .tl small { font-size: 11px; color: var(--muted); font-family: var(--mono); }
+.gs-tzr .ttrack { position: relative; height: 34px; border-radius: 9px; background: var(--surface-2); border: 1px solid var(--peach-line); overflow: hidden; }
+.gs-tzr .tfill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s var(--ease);
+}
+/* the scale header is child 1, so the rows are children 2 to 6 */
+.gs-tz.in .gs-tzr:nth-child(2) .tfill { transition-delay: 0.1s; }
+.gs-tz.in .gs-tzr:nth-child(3) .tfill { transition-delay: 0.24s; }
+.gs-tz.in .gs-tzr:nth-child(4) .tfill { transition-delay: 0.38s; }
+.gs-tz.in .gs-tzr:nth-child(5) .tfill { transition-delay: 0.52s; }
+.gs-tz.in .gs-tzr:nth-child(6) .tfill { transition-delay: 0.66s; }
+.gs-tz.in .tfill { transform: scaleX(1); }
+.gs-tzr .tfill.team { background: var(--grad-fill); }
+.gs-tzr .tfill.on { background: #2563eb; }
+.gs-tzr .tfill.near { background: #14b8a6; }
+.gs-tzr .tfill.off { background: #d97706; }
+.gs-tzr .tfill.async {
+  background: repeating-linear-gradient(45deg, rgba(148, 163, 184, 0.5), rgba(148, 163, 184, 0.5) 7px, rgba(148, 163, 184, 0.3) 7px, rgba(148, 163, 184, 0.3) 14px);
+  color: var(--muted-ink);
+}
+.gs-tz-note { margin-top: 22px; font-size: 13px; line-height: 1.6; color: var(--muted); text-align: center; }
+@media (max-width: 700px) {
+  .gs-tz-scale { display: none; }
+  .gs-tzr { grid-template-columns: 1fr; gap: 5px; }
+}
+
+/* ---------------- role matrix ---------------- */
+.gs-rm-wrap { overflow-x: auto; border: 1px solid var(--peach-line); border-radius: 18px; box-shadow: var(--shadow-sm); }
+.gs-rm-tbl { width: 100%; min-width: 600px; border-collapse: collapse; background: var(--surface); }
+.gs-rm-tbl th, .gs-rm-tbl td { padding: 14px 12px; text-align: center; border-bottom: 1px solid var(--peach-line); }
+.gs-rm-tbl thead th {
+  background: var(--surface-2);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+.gs-rm-tbl tbody th {
+  text-align: left;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+  white-space: nowrap;
+  padding-left: 18px;
+}
+.gs-rm-tbl tbody th a { color: inherit; border-bottom: 1px dashed rgba(37, 99, 235, 0.35); transition: color 0.2s ease, border-color 0.2s ease; }
+.gs-rm-tbl tbody th a:hover { color: var(--blue); border-color: var(--blue); }
+.gs-rm-tbl tbody tr:last-child td, .gs-rm-tbl tbody tr:last-child th { border-bottom: 0; }
+.gs-rm-tbl tbody tr:hover td, .gs-rm-tbl tbody tr:hover th { background: var(--surface-2); }
+.gs-rmdot { display: inline-flex; gap: 3px; align-items: center; justify-content: center; }
+.gs-rmdot i { width: 9px; height: 9px; border-radius: 50%; background: var(--grad); display: inline-block; transform: scale(0); }
+.gs-rm-tbl.in .gs-rmdot i { animation: gsRmPop 0.3s var(--ease) forwards; }
+@keyframes gsRmPop {
+  to { transform: scale(1); }
+}
+.gs-rmdot.one i { background: var(--teal); }
+.gs-rmdash { color: var(--muted); font-size: 14px; opacity: 0.5; }
+.gs-rm-legend {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.gs-rm-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.gs-rm-legend .d2 { display: inline-flex; gap: 2px; }
+.gs-rm-legend .d2 i { width: 8px; height: 8px; border-radius: 50%; background: var(--grad); }
+.gs-rm-legend .d1 i { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); display: inline-block; }
+
+/* ---------------- included list (8 items, 2-up) ---------------- */
+.gs-inc2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 22px; }
+@media (max-width: 640px) {
+  .gs-inc2-grid { grid-template-columns: 1fr; }
+}
+.gs-inc2 {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 13px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
+}
+.gs-inc2:hover { transform: translateY(-3px); border-color: rgba(37, 99, 235, 0.34); }
+.gs-inc2 .ik {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: rgba(20, 184, 166, 0.14);
+  color: var(--teal-ink);
+  display: grid;
+  place-items: center;
+  transition: transform 0.5s var(--ease), opacity 0.4s ease;
+  transform: scale(0.5);
+  opacity: 0.001;
+}
+.gs-inc2-grid.in .ik { transform: none; opacity: 1; }
+.gs-inc2-grid.in .gs-inc2:nth-child(1) .ik { transition-delay: 0.06s; }
+.gs-inc2-grid.in .gs-inc2:nth-child(2) .ik { transition-delay: 0.12s; }
+.gs-inc2-grid.in .gs-inc2:nth-child(3) .ik { transition-delay: 0.18s; }
+.gs-inc2-grid.in .gs-inc2:nth-child(4) .ik { transition-delay: 0.24s; }
+.gs-inc2-grid.in .gs-inc2:nth-child(5) .ik { transition-delay: 0.3s; }
+.gs-inc2-grid.in .gs-inc2:nth-child(6) .ik { transition-delay: 0.36s; }
+.gs-inc2-grid.in .gs-inc2:nth-child(7) .ik { transition-delay: 0.42s; }
+.gs-inc2-grid.in .gs-inc2:nth-child(8) .ik { transition-delay: 0.48s; }
+.gs-inc2 .ik svg { width: 15px; height: 15px; }
+.gs-inc2 p { font-size: 13.5px; line-height: 1.5; color: var(--ink); font-weight: 500; padding-top: 4px; }
+
+/* ---------------- who this is for (2-up, icon + copy) ----------------
+   the design overrides its 3-up who grid inline to 2-up; declared here instead */
+.gs-who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+@media (max-width: 560px) {
+  .gs-who-grid { grid-template-columns: 1fr; }
+}
+.gs-who {
+  background: var(--surface);
+  border: 1px solid var(--peach-line);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.gs-who:hover { transform: translateY(-4px); border-color: rgba(37, 99, 235, 0.34); }
+.gs-who .wi {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(20, 184, 166, 0.14);
+  color: var(--teal-ink);
+  display: grid;
+  place-items: center;
+  flex: none;
+  transform: scale(0.55);
+  opacity: 0.001;
+  transition: transform 0.5s var(--ease) 0.12s, opacity 0.4s ease 0.12s;
+}
+.gs-who.in .wi { transform: none; opacity: 1; }
+.gs-who .wi svg { width: 18px; height: 18px; }
+.gs-who p { font-size: 14px; line-height: 1.55; color: var(--muted-ink); }
+.gs-who p strong { color: var(--ink); font-weight: 600; }
+
+/* ---------------- reduced motion: animation-driven pieces must stay visible ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .gs-gr { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .gs-gr .gbar i { transform: scaleX(1) !important; animation: none !important; }
+  .gs-stat .sv, .gs-mdlc .mi, .gs-inc2 .ik, .gs-who .wi {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .gs-stat::before, .gs-mdlc::before { transform: scaleX(1) !important; }
+  .gs-tzr .tfill { transform: scaleX(1) !important; transition: none !important; }
+  .gs-rmdot i { transform: scale(1) !important; animation: none !important; }
+}

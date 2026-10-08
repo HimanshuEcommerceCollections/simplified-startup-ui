@@ -53,6 +53,8 @@ const SERVICE_LINKS: ServiceLink[] = [
       { label: "Social media management", href: "/digital-marketing/social-media-management" },
       { label: "Content marketing", href: "/digital-marketing/content-marketing" },
       { label: "AI search & GEO", href: "/digital-marketing/ai-search-geo" },
+      { label: "Local SEO", href: "/digital-marketing/local-seo" },
+      { label: "E-commerce SEO", href: "/digital-marketing/ecommerce-seo" },
     ],
   },
   {
@@ -100,8 +102,29 @@ const SERVICE_LINKS: ServiceLink[] = [
       { label: "Pricing strategy", href: "/business-advisory/pricing-strategy" },
     ],
   },
-  { label: "Talent & Staffing", href: "/talent-staffing", hint: "Senior capability, no full-time hire" },
-  { label: "Bookkeeping & Accounting", href: "/bookkeeping", hint: "Finance handled, end to end" },
+  {
+    label: "Talent & Staffing",
+    href: "/talent-staffing",
+    hint: "Senior capability, no full-time hire",
+    children: [
+      { label: "Marketing & sales support staff", href: "/talent-staffing/marketing-sales-support-staff" },
+      { label: "Virtual assistants", href: "/talent-staffing/virtual-assistants" },
+      { label: "Customer support staffing", href: "/talent-staffing/customer-support-staffing" },
+      { label: "Fractional executives", href: "/talent-staffing/fractional-specialists" },
+      { label: "Global staffing", href: "/talent-staffing/global-staffing" },
+    ],
+  },
+  {
+    label: "Bookkeeping & Accounting",
+    href: "/bookkeeping",
+    hint: "Finance handled, end to end",
+    children: [
+      { label: "Monthly bookkeeping", href: "/bookkeeping/monthly-bookkeeping" },
+      { label: "Catch-up bookkeeping", href: "/bookkeeping/catch-up-bookkeeping" },
+      { label: "Payroll services", href: "/bookkeeping/payroll-services" },
+      { label: "QuickBooks & Xero setup", href: "/bookkeeping/quickbooks-xero-setup" },
+    ],
+  },
 ];
 
 const RESOURCE_LINKS: NavLink[] = [
@@ -268,7 +291,7 @@ export default function Navbar() {
               )}
             </div>
             {svc.children && (
-              <ul className="nav-mega-list">
+              <ul className={`nav-mega-list${svc.children.length > 8 ? " nav-mega-list--wide" : ""}`}>
                 {svc.children.map((child) => (
                   <li key={child.href}>
                     <Link href={child.href} role="menuitem" className={pathname === child.href ? "active" : undefined} onClick={closeAll}>

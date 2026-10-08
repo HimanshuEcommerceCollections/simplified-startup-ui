@@ -314,3 +314,31 @@
   .ts-hstep::before { transform: scaleX(1) !important; }
   .ts-rp-fade { animation: none !important; }
 }
+
+/* ---------------- staffing services index (sub-page links) ---------------- */
+.ts-subs { border-top: 1px solid var(--peach-line); }
+.ts-sub {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 24px 8px;
+  border-bottom: 1px solid var(--peach-line);
+  transition: padding-left 0.28s var(--ease), background 0.28s ease;
+}
+.ts-sub:hover { padding-left: 18px; background: var(--surface-2); }
+.ts-sub .sn { font-family: var(--mono); font-size: 12px; color: var(--blue); font-weight: 700; }
+.ts-sub .st h3 { font-family: var(--display); font-weight: 700; font-size: clamp(18px, 2vw, 22px); color: var(--ink); letter-spacing: -0.01em; }
+.ts-sub .st p { margin-top: 6px; font-size: 14.5px; line-height: 1.55; color: var(--muted-ink); max-width: 74ch; }
+.ts-sub .go {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--peach-line);
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  transition: border-color 0.25s ease, transform 0.25s var(--ease);
+}
+.ts-sub:hover .go { border-color: var(--blue); transform: translateX(3px); }

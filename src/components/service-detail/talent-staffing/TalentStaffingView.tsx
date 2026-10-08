@@ -404,6 +404,16 @@ const HIW_STEPS = [
   { no: "6", hn: "Scale, cut, or swap", title: "Anytime, no penalty", text: "More hours? Add them. Slower month? Cut back. Wrong fit? Swap. Month-to-month.", delay: 120 },
 ];
 
+/* -------- staffing services (sub-pages) -------- */
+
+const SUBS = [
+  { n: "01", h: "Marketing & sales support staff", p: "Marketing assistants, SDRs, and CRM admins who work under your existing leads and keep the pipeline moving.", href: "/talent-staffing/marketing-sales-support-staff" },
+  { n: "02", h: "Virtual assistants", p: "A dedicated VA in your hours and tools for inbox, calendar, admin, research, and customer support.", href: "/talent-staffing/virtual-assistants" },
+  { n: "03", h: "Customer support staffing", p: "Trained agents across email, chat, phone, and social, inside your help desk, on the hours your customers need.", href: "/talent-staffing/customer-support-staffing" },
+  { n: "04", h: "Fractional executives", p: "A part-time CMO, CFO, COO, CRO, CTO, or Head of People who owns results without a full-time hire.", href: "/talent-staffing/fractional-specialists" },
+  { n: "05", h: "Global staffing", p: "Onshore, nearshore, or offshore, matched by time-zone overlap, communication, and budget.", href: "/talent-staffing/global-staffing" },
+];
+
 const MODELS = [
   {
     icon: (
@@ -601,6 +611,29 @@ export default function TalentStaffingView() {
             <p>Every role can be embedded part-time, full-time, or on a project basis, and every one comes with the full agency behind them.</p>
           </Reveal>
           <RolesExplorer />
+        </div>
+      </section>
+
+      {/* STAFFING SERVICES (sub-pages) */}
+      <section className="band" id="services">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <span className="eyebrow">Staffing services</span>
+            <h2>Five ways to add people without adding headcount.</h2>
+            <p>Beyond marketing specialists, the same vetting and month-to-month terms apply to support staff, assistants, support teams, fractional leaders, and remote teams in any time zone.</p>
+          </Reveal>
+          <Reveal className="ts-subs">
+            {SUBS.map((sub) => (
+              <a className="ts-sub" href={sub.href} key={sub.n}>
+                <span className="sn">{sub.n}</span>
+                <div className="st">
+                  <h3>{sub.h}</h3>
+                  <p>{sub.p}</p>
+                </div>
+                <span className="go">↗</span>
+              </a>
+            ))}
+          </Reveal>
         </div>
       </section>
 

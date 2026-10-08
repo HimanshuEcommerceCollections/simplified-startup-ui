@@ -31,6 +31,9 @@
 .bk-line:hover::before { transform: scaleY(1); }
 .bk-line h3 { font-family: var(--display); font-weight: 700; font-size: 17px; color: var(--ink); min-width: 210px; }
 .bk-line p { font-size: 14.5px; line-height: 1.55; color: var(--muted-ink); margin: 0; }
+.bk-line-go { display: inline-flex; align-items: center; gap: 5px; margin-left: 10px; font-family: var(--display); font-weight: 600; font-size: 13.5px; color: var(--blue); white-space: nowrap; }
+.bk-line-go span { display: inline-block; transition: transform 0.25s cubic-bezier(0.16, 0.84, 0.44, 1); }
+.bk-line-go:hover span { transform: translate(3px, -3px); }
 
 @media (max-width: 900px) {
   .bk-line { grid-template-columns: 1fr; gap: 6px; }

@@ -181,7 +181,7 @@
   transform: translateY(8px);
   display: grid;
   /* second column is wider: Digital Marketing lists its pages two abreast */
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.9fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 2px 20px;
   padding: 16px 18px 12px;
 }
@@ -192,14 +192,14 @@
    panel scrolls instead of running off-screen (the hover-close delay covers
    the clipped hover bridge). */
 @media (max-height: 780px) {
-  .nav-links .nav-drop--mega .nav-drop-panel { max-height: calc(100vh - 108px); overflow-y: auto; }
+  .nav-links .nav-drop--mega .nav-drop-panel { max-height: calc(100vh - 100px); overflow-y: auto; }
 }
 /* The mega panel hangs off the pill, not the Services word, so its hover bridge
    must reach up through the pill's bottom padding to just under the link row
    (18px gap + 20px padding − 2px so it never sits over the sibling links), or
    the pointer leaves the item on its way down and the menu closes. */
 .nav-drop--mega .nav-drop-panel::before { top: -36px; height: 36px; }
-.nav-mega-col { min-width: 0; padding: 4px 0 8px; }
+.nav-mega-col { min-width: 0; padding: 2px 0 4px; }
 .nav-mega-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px; }
 .nav-mega-head .nav-mega-svc { flex: 1; min-width: 0; }
 .nav-links .nav-drop-panel--mega a.nav-mega-svc { padding: 9px 10px 7px; }
@@ -208,7 +208,7 @@
 /* A column with more than eight pages (Digital Marketing) lists them two abreast
    so the panel's first row stays as short as the Website Development column. */
 .nav-links .nav-drop-panel--mega .nav-mega-list--wide { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2px; padding-left: 6px; }
-.nav-links .nav-drop-panel--mega .nav-mega-list--wide a { padding: 4px 8px; font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav-links .nav-drop-panel--mega .nav-mega-list--wide a { padding: 2px 8px; font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .nav-links .nav-drop-panel--mega .nav-mega-list a {
   padding: 4px 10px;
   font-size: 14px;
@@ -220,8 +220,8 @@
 .nav-links .nav-drop-panel--mega .nav-mega-list a.active { color: var(--blue); background: var(--peach); }
 .nav-links .nav-drop-panel--mega a.nav-mega-all {
   grid-column: 1 / -1;
-  margin-top: 6px;
-  padding: 12px 10px 6px;
+  margin-top: 2px;
+  padding: 8px 10px 4px;
   border-top: 1px solid var(--peach-line);
   border-radius: 0;
   font-size: 14px;

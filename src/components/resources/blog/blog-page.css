@@ -219,14 +219,16 @@
   left: 14px;
   z-index: 2;
   font-family: var(--mono);
-  font-size: 10px;
+  font-weight: 700;
+  font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #0f766e;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(20, 184, 166, 0.4);
   border-radius: 100px;
-  padding: 6px 12px;
+  padding: 7px 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.14);
 }
 .bl-art { width: 70%; max-width: 220px; height: auto; transition: transform 0.5s var(--ease); }
 .bl-featured .bl-art { width: 56%; }
@@ -238,6 +240,18 @@
 
 .bl-body { display: flex; flex-direction: column; gap: 10px; padding: 22px 22px 24px; flex: 1; }
 .bl-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.bl-meta-tag {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  background: rgba(20, 184, 166, 0.12);
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  border-radius: 100px;
+  padding: 4px 10px;
+}
 .bl-cat { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue-deep); }
 .bl-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
 .bl-read { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--muted); }
@@ -275,4 +289,3 @@
 /* uploaded cover image (overrides the artwork preset) */
 .bl-cover-photo { background: var(--surface-2); position: relative; }
 .bl-cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.bl-cover-photo .bl-cover-tag { z-index: 1; }

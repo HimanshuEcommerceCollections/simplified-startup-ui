@@ -55,6 +55,13 @@ const SERVICE_LINKS: ServiceLink[] = [
       { label: "AI search & GEO", href: "/digital-marketing/ai-search-geo" },
       { label: "Local SEO", href: "/digital-marketing/local-seo" },
       { label: "E-commerce SEO", href: "/digital-marketing/ecommerce-seo" },
+      { label: "B2B & SaaS SEO", href: "/digital-marketing/b2b-saas-seo" },
+      { label: "Enterprise SEO", href: "/digital-marketing/enterprise-seo" },
+      { label: "SEO audit", href: "/digital-marketing/seo-audit" },
+      { label: "Technical SEO audit", href: "/digital-marketing/technical-seo-audit" },
+      { label: "On-page SEO", href: "/digital-marketing/on-page-seo" },
+      { label: "SEO content writing", href: "/digital-marketing/seo-content-writing" },
+      { label: "Link building", href: "/digital-marketing/link-building" },
     ],
   },
   {

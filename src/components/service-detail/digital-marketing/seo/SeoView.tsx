@@ -277,6 +277,7 @@ const SERVICES: SeoService[] = [
     btnSub: "Speed & structure",
     name: "Technical SEO",
     tag: "Speed, crawlability, and structure fixes Google rewards.",
+    href: "/digital-marketing/technical-seo-audit",
     items: ["Core Web Vitals & page speed", "Mobile responsiveness fixes", "Crawlability & indexation cleanup", "Schema markup implementation", "Site architecture & URL restructuring", "JavaScript rendering fixes"],
   },
   {
@@ -286,6 +287,7 @@ const SERVICES: SeoService[] = [
     btnSub: "Every page ranks",
     name: "On-Page SEO",
     tag: "Titles, headings, and content that rank every page.",
+    href: "/digital-marketing/on-page-seo",
     items: ["Meta title & description writing", "Header structure optimization", "Content optimization for keywords", "Internal linking strategy", "Image alt text & optimization", "URL structure clean-up"],
   },
   {
@@ -295,6 +297,7 @@ const SERVICES: SeoService[] = [
     btnSub: "Real authority",
     name: "Off-Page SEO & Link Building",
     tag: "White-hat backlinks that build real authority.",
+    href: "/digital-marketing/link-building",
     items: ["White-hat guest posting", "Digital PR & outreach", "Resource-page & broken-link building", "Local citation building", "Brand mention monitoring", "Toxic backlink disavow"],
   },
   {
@@ -313,6 +316,7 @@ const SERVICES: SeoService[] = [
     btnSub: "Rank & get cited",
     name: "Content SEO",
     tag: "Blog posts and pages built to rank and get cited.",
+    href: "/digital-marketing/seo-content-writing",
     items: ["Content pillar & cluster planning", "SEO blog post writing", "Money page creation (service × industry × location)", "Existing content refresh & re-optimization", "Content briefs for in-house writers", "Topic authority building"],
   },
   {
@@ -341,6 +345,7 @@ const SERVICES: SeoService[] = [
     btnSub: "One-off review",
     name: "SEO Audit",
     tag: "One-off deep audit + strategy doc, no ongoing commitment.",
+    href: "/digital-marketing/seo-audit",
     items: ["Full site crawl & technical health check", "Current keyword ranking audit", "Backlink profile review", "Content gap analysis vs competitors", "Prioritized 90-day & 12-month roadmap", "Delivered as a shareable strategy doc"],
   },
 ];

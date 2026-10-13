@@ -296,6 +296,8 @@ const HOOD_GROUPS = [
       { name: "SEO", desc: "Technical, on-page, and content, built around what buyers actually search.", href: "/digital-marketing/seo" },
       { name: "Local SEO", desc: "Show up where your customers are standing, maps, local packs, citations.", href: "/digital-marketing/local-seo" },
       { name: "E-commerce SEO", desc: "Category and product pages that rank for shoppers ready to buy.", href: "/digital-marketing/ecommerce-seo" },
+      { name: "B2B & SaaS SEO", desc: "Content for every seat on the buying committee, measured in pipeline, not pageviews.", href: "/digital-marketing/b2b-saas-seo" },
+      { name: "Enterprise SEO", desc: "Template-level fixes, governance, and migrations for large sites with many teams.", href: "/digital-marketing/enterprise-seo" },
       { name: "Technical SEO", desc: "Speed, structure, indexing, and the plumbing rankings quietly depend on." },
       { name: "Google Business Profile", desc: "The listing customers see first, kept accurate, active, and answering." },
       { name: "AI search optimization", desc: "Structured, extractable answers for the search engines that now write answers.", href: "/digital-marketing/ai-search-geo" },

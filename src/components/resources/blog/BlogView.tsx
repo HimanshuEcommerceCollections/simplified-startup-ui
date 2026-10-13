@@ -17,7 +17,7 @@ function CardCover({ article }: { article: BlogCard }) {
   if (article.cover) {
     return (
       <div className="bl-cover bl-cover-photo" aria-hidden="true">
-        {article.featured && <span className="bl-cover-tag">Featured</span>}
+        {/* no overlay tag here: uploaded covers often carry their own headline at the top-left; the featured chip lives in the meta row instead */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="bl-cover-img" src={`${API_URL}${article.cover.url}`} alt={article.cover.alt} loading="lazy" />
       </div>
@@ -145,6 +145,7 @@ export default function BlogView({
                   <CardCover article={article} />
                   <div className="bl-body">
                     <div className="bl-meta">
+                      {article.featured && article.cover && <span className="bl-meta-tag">Featured</span>}
                       <span className="bl-cat">{article.categoryLabel}</span>
                       <span className="bl-dot"></span>
                       <span className="bl-read">{article.readTime}</span>

@@ -71,8 +71,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <img src={`${API_URL}${cover.url}`} alt={cover.alt} />
             </Reveal>
           )}
-          {/* body is sanitized server-side against the editor's allowlist */}
-          <Reveal className="bl-article-body" dangerouslySetInnerHTML={{ __html: article.body }} />
+          {/* body is sanitized server-side against the editor's allowlist.
+              threshold 0: a long body can never reach the default 16% visible ratio, so it would stay hidden */}
+          <Reveal className="bl-article-body" threshold={0} dangerouslySetInnerHTML={{ __html: article.body }} />
         </div>
       </article>
     </ResourcePage>

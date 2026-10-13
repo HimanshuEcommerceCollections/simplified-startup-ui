@@ -194,9 +194,11 @@
 }
 .bl-card-link:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
 .bl-featured { grid-column: span 3; }
-.bl-featured .bl-card-link { flex-direction: row; }
+/* featured cards each take a full row, so without a shared floor their heights follow their own title length */
+.bl-featured .bl-card-link { flex-direction: row; min-height: 390px; }
 .bl-featured .bl-cover { width: 44%; flex: none; }
 .bl-featured .bl-body { justify-content: center; }
+.bl-featured .bl-more { margin-top: 0; } /* stay with the text block instead of dropping to the card floor */
 .bl-featured .bl-title { font-size: clamp(24px, 2.8vw, 34px); }
 .bl-featured .bl-sum { font-size: 16px; max-width: 52ch; }
 
@@ -269,7 +271,7 @@
 @media (max-width: 900px) {
   .bl-grid { grid-template-columns: repeat(2, 1fr); }
   .bl-featured { grid-column: span 2; }
-  .bl-featured .bl-card-link { flex-direction: column; }
+  .bl-featured .bl-card-link { flex-direction: column; min-height: 0; }
   .bl-featured .bl-cover { width: 100%; aspect-ratio: 16/9; }
 }
 @media (max-width: 600px) {
@@ -289,3 +291,4 @@
 /* uploaded cover image (overrides the artwork preset) */
 .bl-cover-photo { background: var(--surface-2); position: relative; }
 .bl-cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.bl-featured .bl-cover-img { object-position: left center; } /* uploaded covers put their headline at the left edge */

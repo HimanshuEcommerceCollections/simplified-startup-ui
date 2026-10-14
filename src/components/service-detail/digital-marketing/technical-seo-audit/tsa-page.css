@@ -20,17 +20,22 @@
 @keyframes tsaRingFill {
   to { stroke-dashoffset: 34; }
 }
+/* The design used `display: grid`, which splits "85" and "/100" into two rows and
+   pushes the score off-centre; a baseline-aligned flex row keeps "85/100" centred. */
 .tsa-scan-ring .num {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding-top: 30px;
   font-family: var(--display);
   font-weight: 800;
   font-size: 24px;
+  line-height: 1;
   color: var(--ink);
 }
-.tsa-scan-ring .num small { font-size: 10px; color: var(--muted); font-weight: 600; }
+.tsa-scan-ring .num small { font-size: 10px; color: var(--muted); font-weight: 600; margin-left: 1px; }
 .tsa-scan-hero .sd { flex: 1; }
 .tsa-scan-hero .sd b { display: block; font-family: var(--display); font-weight: 700; font-size: 14px; color: var(--ink); margin-bottom: 8px; }
 .tsa-scan-pri { display: flex; flex-direction: column; gap: 5px; }

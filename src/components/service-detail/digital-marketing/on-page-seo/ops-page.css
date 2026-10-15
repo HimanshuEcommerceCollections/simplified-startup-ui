@@ -5,7 +5,19 @@
 
 /* ---------------- hero signature: page-optimization document ---------------- */
 .ops-doc-body { padding: 18px; display: flex; flex-direction: column; gap: 10px; }
-.ops-doc-body .dl { position: relative; opacity: 0; transform: translateX(-8px); }
+/* The design let the bars run under the absolutely-positioned tags and gave rows
+   less height than a tag, so tags overlapped bars and each other. Each row now
+   reserves the widest tag's width on the right and is at least a tag tall. */
+.ops-doc-body .dl {
+  position: relative;
+  min-height: 26px;
+  padding-right: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-8px);
+}
 .ops-doc.run .dl { animation: opsDlIn 0.36s var(--ease) forwards; }
 .ops-doc.run .dl:nth-child(1) { animation-delay: 1s; }
 .ops-doc.run .dl:nth-child(2) { animation-delay: 1.14s; }

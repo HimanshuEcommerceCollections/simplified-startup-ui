@@ -288,11 +288,13 @@ const INCLUDED = [
 
 /* -------- business types (interactive) -------- */
 
-type BusinessType = { key: string; icon: ReactNode; btnName: string; btnSub: string; name: string; tag: string; items: string[] };
+/** `href` marks a business type that has its own sub-page; the panel's "See full details" goes there. */
+type BusinessType = { key: string; icon: ReactNode; btnName: string; btnSub: string; name: string; tag: string; items: string[]; href?: string };
 
 const TYPES: BusinessType[] = [
   {
     key: "ecom",
+    href: "/digital-marketing/google-shopping-pmax",
     icon: ICON_CART,
     btnName: "E-commerce",
     btnSub: "Shopping & PMax",
@@ -373,6 +375,7 @@ const TYPES: BusinessType[] = [
   },
   {
     key: "audit",
+    href: "/digital-marketing/google-ads-audit",
     icon: ICON_AUDIT,
     btnName: "Ads audit",
     btnSub: "One-off review",
@@ -446,7 +449,7 @@ function TypesExplorer() {
               <div key={item}>{item}</div>
             ))}
           </div>
-          <a className="ads-tp-cta" href="#start">
+          <a className="ads-tp-cta" href={ty.href ?? "#start"}>
             See full details <span className="arw">↗</span>
           </a>
         </div>

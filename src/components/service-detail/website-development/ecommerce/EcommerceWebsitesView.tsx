@@ -418,8 +418,8 @@ const PLATFORMS = [
   { name: "Shopify", best: "Most e-commerce brands, easy to manage, huge app ecosystem, scales with you." },
   { name: "Shopify Plus", best: "High-volume brands ($1M+/yr), checkout customization, wholesale, multi-store." },
   { name: "WooCommerce", best: "WordPress-based stores wanting maximum flexibility and no monthly platform fee." },
-  { name: "BigCommerce", best: "Mid-market brands wanting Shopify-like features with more built-in tools." },
-  { name: "Custom (Headless)", best: "Advanced brands needing performance beyond off-the-shelf platforms." },
+  { name: "BigCommerce", best: "Mid-market brands wanting Shopify-like features with more built-in tools.", href: "/website-development/bigcommerce-development" },
+  { name: "Custom (Headless)", best: "Advanced brands needing performance beyond off-the-shelf platforms.", href: "/website-development/headless-commerce" },
 ];
 
 /* -------- who / steps / pricing / faq -------- */
@@ -558,7 +558,7 @@ export default function EcommerceWebsitesView() {
             </div>
             {PLATFORMS.map((p) => (
               <div className="ecw-plat-row" key={p.name}>
-                <div className="pn">{p.name}</div>
+                <div className="pn">{p.href ? <a href={p.href}>{p.name} <span aria-hidden="true">↗</span></a> : p.name}</div>
                 <div>{p.best}</div>
               </div>
             ))}

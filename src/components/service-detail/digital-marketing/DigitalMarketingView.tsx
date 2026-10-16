@@ -312,7 +312,7 @@ const HOOD_GROUPS = [
       { name: "Meta Ads", desc: "Facebook and Instagram campaigns with creative that earns the stop-scroll.", href: "/digital-marketing/meta-ads" },
       { name: "LinkedIn Ads", desc: "For when your buyer is a title, not a demographic.", href: "/digital-marketing/linkedin-ads" },
       { name: "YouTube Ads", desc: "Video reach with frequency caps and measurement, not spray-and-pray.", href: "/digital-marketing/youtube-ads" },
-      { name: "Retargeting", desc: "Reminding warm visitors, with frequency capping mandatory, never stalking." },
+      { name: "Retargeting", desc: "Reminding warm visitors, with frequency capping mandatory, never stalking.", href: "/digital-marketing/meta-retargeting" },
     ],
   },
   {

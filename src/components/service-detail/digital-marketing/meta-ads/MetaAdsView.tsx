@@ -234,7 +234,7 @@ const FEATURES = [
   { icon: ICON_BOLT, title: "Creative is the unfair advantage", text: <>Great creative beats a big budget with weak creative. <strong>Small brands win here every day.</strong></>, delay: 60 },
   { icon: ICON_LINES, title: "Full-funnel in one platform", text: <>Awareness with Reels, consideration with carousels, conversion with retargeting, <strong>one ad account.</strong></>, delay: 120 },
   { icon: ICON_CLOCK, title: "Fast feedback loop", text: <>Test five creatives Monday, know the winner by Friday. <strong>Nothing compares for speed.</strong></> },
-  { icon: ICON_REFRESH, title: "Retargeting that closes", text: <>80% don’t buy on the first visit. Retargeting brings them back <strong>at a fraction of the CPC.</strong></>, delay: 60 },
+  { icon: ICON_REFRESH, title: "Retargeting that closes", text: <>80% don’t buy on the first visit. <a href="/digital-marketing/meta-retargeting">Retargeting</a> brings them back <strong>at a fraction of the CPC.</strong></>, delay: 60 },
   { icon: ICON_CHART, title: "Fastest way to scale", text: <>Sales for e-commerce, leads for services, awareness for new brands, <strong>done right, nothing’s faster.</strong></>, delay: 120 },
 ];
 
@@ -334,11 +334,13 @@ const INCLUDED = [
 
 /* -------- business types (interactive) -------- */
 
-type BusinessType = { key: string; icon: ReactNode; btnName: string; btnSub: string; name: string; tag: string; items: string[] };
+/** `href` marks a business type that has its own sub-page; the panel's "See full details" goes there. */
+type BusinessType = { key: string; icon: ReactNode; btnName: string; btnSub: string; name: string; tag: string; items: string[]; href?: string };
 
 const TYPES: BusinessType[] = [
   {
     key: "ecom",
+    href: "/digital-marketing/meta-ads-ecommerce",
     icon: ICON_CART,
     btnName: "E-commerce",
     btnSub: "Scalable sales",
@@ -355,6 +357,7 @@ const TYPES: BusinessType[] = [
   },
   {
     key: "local",
+    href: "/digital-marketing/meta-ads-local-business",
     icon: ICON_PIN,
     btnName: "Local businesses",
     btnSub: "Bookings & walk-ins",
@@ -419,6 +422,7 @@ const TYPES: BusinessType[] = [
   },
   {
     key: "audit",
+    href: "/digital-marketing/meta-ads-audit",
     icon: ICON_AUDIT,
     btnName: "Meta Ads Audit",
     btnSub: "One-off review",
@@ -492,6 +496,11 @@ function TypesExplorer() {
               <div key={item}>{item}</div>
             ))}
           </div>
+          {ty.href && (
+            <a className="meta-tp-cta" href={ty.href}>
+              See the full {ty.name} page <span className="arw">↗</span>
+            </a>
+          )}
         </div>
       </div>
     </Reveal>
@@ -537,7 +546,7 @@ const FAQS = [
   { q: "How long before I see results?", a: <>Traffic and engagement day one. Meaningful ROAS/CPL data in <strong>2–4 weeks</strong> as the algorithm learns. Real compounding growth usually starts month 2–3.</> },
   { q: "Do you handle the creative?", a: <>Yes, strategy, briefs, and production included: static, carousel, video, and Reels-native. If you have brand assets or content, <strong>even better; we work with what you have.</strong></> },
   { q: "What about the iOS 14 privacy changes?", a: <>Ads still work, but only with correct tracking. The Pixel alone loses 30–50% of data since iOS 14. <strong>We fix it with the Conversions API and server-side tracking</strong>, which most agencies still skip.</> },
-  { q: "Facebook and Instagram both?", a: <>Yes, that’s what “Meta ads” means. Facebook Feed & Stories, Instagram Feed, Reels & Stories, plus Messenger and Audience Network. <strong>We place them where they perform best.</strong></> },
+  { q: "Facebook and Instagram both?", a: <>Yes, that’s what “Meta ads” means. Facebook Feed & Stories, <a href="/digital-marketing/instagram-ads">Instagram Feed, Reels & Stories</a>, plus Messenger and Audience Network. <strong>We place them where they perform best.</strong></> },
   { q: "Do you run TikTok or LinkedIn ads?", a: <>LinkedIn Ads is a separate service; TikTok can be added on request. <strong>Meta remains the largest paid social channel</strong> for most businesses, which is why it gets its own service.</> },
   { q: "I’m already running ads with another agency, switch?", a: <>Start with our free audit. Most accounts have preventable issues, audience overlap, weak CAPI, ad fatigue, wrong bid strategy. <strong>Often the fixes alone cover our fee.</strong></> },
   { q: "Do I own the ad account?", a: <>Yes, every account we build or manage is under your ownership. You’re the primary owner, we’re a partner. <strong>If you leave, you keep everything.</strong></> },

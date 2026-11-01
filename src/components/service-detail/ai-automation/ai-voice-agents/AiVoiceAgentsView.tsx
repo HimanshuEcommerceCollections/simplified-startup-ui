@@ -433,10 +433,11 @@ const INCLUDED: { no: string; icon: ReactNode; title: string; text: string }[] =
   { no: "08", icon: ICON_TREND, title: "Analytics & optimization", text: "Weekly call review, stuck-conversation retraining, monthly report (calls handled, booked, transferred, leads) + cost-per-recovered-call." },
 ];
 
-const INDUSTRIES: { icon: ReactNode; title: string; text: string }[] = [
-  { icon: ICON_TOOTH, title: "Dental & medical", text: "New patient intake, booking, insurance questions, HIPAA-compliant workflows." },
-  { icon: ICON_SCALES, title: "Law firms", text: "Case-intake screening, practice-area routing, consultation booking." },
-  { icon: ICON_WRENCH, title: "Home services", text: "Emergency vs scheduled triage, service-area checks, tech dispatch." },
+/** `href` marks an industry with its own AI receptionist page. */
+const INDUSTRIES: { icon: ReactNode; title: string; text: string; href?: string }[] = [
+  { icon: ICON_TOOTH, title: "Dental & medical", text: "New patient intake, booking, insurance questions, HIPAA-compliant workflows.", href: "/ai-automation/ai-receptionist-dental" },
+  { icon: ICON_SCALES, title: "Law firms", text: "Case-intake screening, practice-area routing, consultation booking.", href: "/ai-automation/ai-receptionist-law-firms" },
+  { icon: ICON_WRENCH, title: "Home services", text: "Emergency vs scheduled triage, service-area checks, tech dispatch.", href: "/ai-automation/ai-receptionist-home-services" },
   { icon: ICON_HOUSE, title: "Real estate", text: "Property inquiries, showing scheduling, lender referrals, agent routing." },
   { icon: ICON_SCISSORS, title: "Salons, spas & gyms", text: "Service booking, stylist/trainer selection, memberships, cancellations." },
   { icon: ICON_CUTLERY, title: "Restaurants", text: "Reservations, takeout orders, private dining, event bookings." },
@@ -645,6 +646,11 @@ export default function AiVoiceAgentsView() {
                 <span className="ii">{item.icon}</span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
+                {item.href && (
+                  <a className="va-ind-link" href={item.href}>
+                    See the full page <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </div>
             ))}
           </Reveal>

@@ -542,3 +542,8 @@
   .va-dontc h3 .x svg path { stroke-dashoffset: 0 !important; transition: none !important; }
   .va-wp-fade { animation: none !important; }
 }
+
+/* link to the sub-page */
+.va-ind-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-family: var(--display); font-weight: 600; font-size: 13.5px; color: var(--blue); }
+.va-ind-link span { display: inline-block; transition: transform 0.25s var(--ease); }
+.va-ind-link:hover span { transform: translate(3px, -3px); }

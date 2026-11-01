@@ -533,3 +533,8 @@
   .cb-dontc h3 .x svg path { stroke-dashoffset: 0 !important; transition: none !important; }
   .cb-wp-fade { animation: none !important; }
 }
+
+/* link to the sub-page */
+.cb-ind-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-family: var(--display); font-weight: 600; font-size: 13.5px; color: var(--blue); }
+.cb-ind-link span { display: inline-block; transition: transform 0.25s var(--ease); }
+.cb-ind-link:hover span { transform: translate(3px, -3px); }

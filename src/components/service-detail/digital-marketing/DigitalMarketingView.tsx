@@ -341,6 +341,7 @@ const HOOD_GROUPS = [
     full: true,
     items: [
       { name: "Email marketing", desc: "Opted-in lists only, welcome flows, campaigns, and lifecycle sends.", href: "/digital-marketing/email-marketing" },
+      { name: "SMS & WhatsApp", desc: "Permission-based texts and WhatsApp messages customers actually welcome.", href: "/digital-marketing/sms-whatsapp-marketing" },
       { name: "Analytics & reporting", desc: "The monthly report that leads with numbers, what we did, what it moved, what changes." },
       { name: "Reputation management", desc: "Review generation done right, never bought, written, incentivized, or gated." },
     ],

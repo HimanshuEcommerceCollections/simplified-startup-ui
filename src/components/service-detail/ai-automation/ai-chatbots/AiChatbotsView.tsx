@@ -301,12 +301,13 @@ const PLATFORMS = [
   { icon: ICON_SMS, name: "SMS", how: "Twilio integration.", best: "Appointment-heavy services" },
 ];
 
-const INDUSTRIES = [
-  { icon: ICON_CART, name: "Ecommerce", text: "Product Q&A, order tracking, cart recovery, upsells." },
-  { icon: ICON_HOUSE, name: "Real estate", text: "Property inquiries, showing scheduling, area info." },
-  { icon: ICON_TOOTH, name: "Dental & medical", text: "Booking, insurance questions, new-patient intake." },
+/** `href` marks an industry with its own chatbot page. */
+const INDUSTRIES: { icon: ReactNode; name: string; text: string; href?: string }[] = [
+  { icon: ICON_CART, name: "Ecommerce", text: "Product Q&A, order tracking, cart recovery, upsells.", href: "/ai-automation/ecommerce-chatbot" },
+  { icon: ICON_HOUSE, name: "Real estate", text: "Property inquiries, showing scheduling, area info.", href: "/ai-automation/real-estate-chatbot" },
+  { icon: ICON_TOOTH, name: "Dental & medical", text: "Booking, insurance questions, new-patient intake.", href: "/ai-automation/healthcare-chatbot" },
   { icon: ICON_SCALES, name: "Law firms", text: "Case intake, practice-area Q&A, consultation booking." },
-  { icon: ICON_LAPTOP, name: "SaaS", text: "In-app support, feature Q&A, trial signup, demo booking." },
+  { icon: ICON_LAPTOP, name: "SaaS", text: "In-app support, feature Q&A, trial signup, demo booking.", href: "/ai-automation/saas-chatbot" },
   { icon: ICON_WRENCH, name: "Local services", text: "Service area, quote requests, emergency booking." },
   { icon: ICON_BRIEFCASE, name: "Agencies & consultants", text: "Service inquiries, case-study delivery, call booking." },
   { icon: ICON_CUTLERY, name: "Restaurants & hospitality", text: "Reservations, menu Q&A, event bookings, hours." },
@@ -693,6 +694,11 @@ export default function AiChatbotsView() {
                 <span className="ii">{ind.icon}</span>
                 <h3>{ind.name}</h3>
                 <p>{ind.text}</p>
+                {ind.href && (
+                  <a className="cb-ind-link" href={ind.href}>
+                    See the full page <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </div>
             ))}
           </Reveal>

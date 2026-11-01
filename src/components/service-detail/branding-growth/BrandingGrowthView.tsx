@@ -228,6 +228,7 @@ const GROUPS = [
 
 /** `href` marks an add-on that has its own sub-service page. */
 const ADDONS: { label: string; href?: string }[] = [
+  { label: "Startup logo design", href: "/branding-growth/startup-logo-design" },
   { label: "Brand naming" },
   { label: "Tagline-only" },
   { label: "Business cards & stationery" },

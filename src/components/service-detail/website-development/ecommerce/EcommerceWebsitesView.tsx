@@ -415,9 +415,9 @@ function IncludedExplorer() {
 /* -------- platforms -------- */
 
 const PLATFORMS = [
-  { name: "Shopify", best: "Most e-commerce brands, easy to manage, huge app ecosystem, scales with you." },
-  { name: "Shopify Plus", best: "High-volume brands ($1M+/yr), checkout customization, wholesale, multi-store." },
-  { name: "WooCommerce", best: "WordPress-based stores wanting maximum flexibility and no monthly platform fee." },
+  { name: "Shopify", best: "Most e-commerce brands, easy to manage, huge app ecosystem, scales with you.", href: "/website-development/shopify-development" },
+  { name: "Shopify Plus", best: "High-volume brands ($1M+/yr), checkout customization, wholesale, multi-store.", href: "/website-development/shopify-development" },
+  { name: "WooCommerce", best: "WordPress-based stores wanting maximum flexibility and no monthly platform fee.", href: "/website-development/woocommerce-development" },
   { name: "BigCommerce", best: "Mid-market brands wanting Shopify-like features with more built-in tools.", href: "/website-development/bigcommerce-development" },
   { name: "Custom (Headless)", best: "Advanced brands needing performance beyond off-the-shelf platforms.", href: "/website-development/headless-commerce" },
 ];

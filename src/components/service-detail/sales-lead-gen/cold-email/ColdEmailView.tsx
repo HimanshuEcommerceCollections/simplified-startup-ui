@@ -322,7 +322,7 @@ const WHO = [
         <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="currentColor" strokeWidth="2" />
       </svg>
     ),
-    text: <><strong>A B2B services business</strong>, agency, consultant, freelancer, staffing, booking meetings with target accounts.</>,
+    text: <><strong>A B2B services business</strong>, <a href="/sales-lead-gen/cold-email-agencies">agency</a>, <a href="/sales-lead-gen/cold-email-consulting">consultant</a>, freelancer, staffing, booking meetings with target accounts.</>,
     delay: 0,
   },
   {
@@ -331,7 +331,7 @@ const WHO = [
         <path d="M5 15c0-4 3-9 7-11 4 2 7 7 7 11l-3 2H8z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
       </svg>
     ),
-    text: <><strong>A SaaS or software company</strong> driving demos of your product to specific job titles at specific companies.</>,
+    text: <><strong><a href="/sales-lead-gen/cold-email-saas">A SaaS or software company</a></strong> driving demos of your product to specific job titles at specific companies.</>,
     delay: 60,
   },
   {
@@ -395,7 +395,7 @@ const FAQS = [
   { q: "Won’t cold email hurt my domain reputation?", a: <>Not if it&apos;s done right. We use <strong>secondary sending domains, never your primary company domain</strong>, so your main reputation is protected. If a secondary domain ever burns out, we rotate it with no impact on your business.</> },
   { q: "Do you buy lists?", a: <>Never. Bought lists are the fastest way to get spam-flagged and destroy your infrastructure. <strong>We build every list custom,</strong> from verified sources (Apollo, LinkedIn Sales Nav, ZoomInfo, Clay), and verify every contact before sending.</> },
   { q: "Is cold email legal?", a: <>In the US, yes, under CAN-SPAM. In the EU, GDPR has strict rules. <strong>We follow the legal requirements for every region we send to</strong>, clear identification, opt-out language, opt-outs honored immediately, no deception.</> },
-  { q: "What if my emails still go to spam?", a: <>That&apos;s the deliverability layer we handle constantly. If placement drops, we adjust: <strong>rotate inboxes, refresh warm-up, tighten copy, or swap domains.</strong> It&apos;s baked into the service, not a separate fee.</> },
+  { q: "What if my emails still go to spam?", a: <>That&apos;s the <a href="/sales-lead-gen/cold-email-deliverability">deliverability layer</a> we handle constantly. If placement drops, we adjust: <strong>rotate inboxes, refresh warm-up, tighten copy, or swap domains.</strong> It&apos;s baked into the service, not a separate fee.</> },
   { q: "Do I own the domains and lists?", a: <>Yes, 100%. Every domain is registered under your name and paid on your card (at cost). Every list is delivered to you monthly. <strong>If you leave, you keep the entire infrastructure.</strong></> },
   { q: "Can I use my own sending platform?", a: <>Yes, we work with <strong>Instantly, Smartlead, Apollo, Lemlist,</strong> and most modern cold email platforms. Already have a subscription? We plug into it. If not, we&apos;ll recommend one.</> },
   { q: "My current program is underperforming, can you help?", a: <>Start with our audit. Most programs we review have preventable issues, no warm-up, weak SPF/DKIM, terrible copy, bought lists. <strong>The fix list alone usually justifies the audit fee.</strong></> },

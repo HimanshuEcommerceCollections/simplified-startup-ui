@@ -33,6 +33,15 @@ const LINES: { title: string; desc: string; href?: string }[] = [
   },
 ];
 
+/** Industry versions of the monthly close, each with its own page. */
+const INDUSTRIES = [
+  { label: "Agencies", href: "/bookkeeping/agency-bookkeeping" },
+  { label: "E-commerce", href: "/bookkeeping/ecommerce-bookkeeping" },
+  { label: "Real estate", href: "/bookkeeping/real-estate-bookkeeping" },
+  { label: "Restaurants", href: "/bookkeeping/restaurant-bookkeeping" },
+  { label: "SaaS", href: "/bookkeeping/saas-bookkeeping" },
+];
+
 export default function ServiceLines() {
   return (
     <section className="band" aria-label="The service lines">
@@ -60,6 +69,16 @@ export default function ServiceLines() {
             </Reveal>
           ))}
         </div>
+        <Reveal className="bk-industries">
+          <span className="bk-ind-label">Set up for your industry</span>
+          <div className="bk-ind-chips">
+            {INDUSTRIES.map((ind) => (
+              <a key={ind.href} href={ind.href}>
+                {ind.label} <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

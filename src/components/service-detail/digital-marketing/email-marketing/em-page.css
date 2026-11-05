@@ -470,3 +470,13 @@
   .em-pain .pk svg path { stroke-dashoffset: 0 !important; transition: none !important; }
   .em-pain-note .mk, .em-wp-fade { animation: none !important; }
 }
+
+/* link to the sub-page */
+.em-wp-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-family: var(--display); font-weight: 600; font-size: 13.5px; color: var(--blue); }
+.em-wp-link span { display: inline-block; transition: transform 0.25s var(--ease); }
+.em-wp-link:hover span { transform: translate(3px, -3px); }
+
+/* link to the sub-page */
+.em-bt-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-family: var(--display); font-weight: 600; font-size: 13.5px; color: var(--blue); }
+.em-bt-link span { display: inline-block; transition: transform 0.25s var(--ease); }
+.em-bt-link:hover span { transform: translate(3px, -3px); }

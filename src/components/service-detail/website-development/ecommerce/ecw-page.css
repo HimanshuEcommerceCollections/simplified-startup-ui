@@ -301,6 +301,9 @@
 .ecw-plat-row.head > div { padding: 13px 18px; }
 .ecw-plat-row > div { padding: 16px 18px; font-size: 13.5px; color: var(--muted-ink); display: flex; align-items: center; line-height: 1.45; }
 .ecw-plat-row .pn { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 14.5px; }
+.ecw-plat-row .pn a { color: var(--blue); }
+.ecw-plat-row .pn a span { display: inline-block; transition: transform 0.25s var(--ease); }
+.ecw-plat-row .pn a:hover span { transform: translate(3px, -3px); }
 .ecw-plat-row:not(.head):hover { background: var(--surface-2); }
 .ecw-plat-note { margin-top: 22px; font-size: 15px; line-height: 1.6; color: var(--muted-ink); }
 .ecw-plat-note strong { color: var(--ink); font-weight: 600; }

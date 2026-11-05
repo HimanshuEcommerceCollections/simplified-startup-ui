@@ -557,7 +557,8 @@ function TypesTabs() {
 
 /* -------- platforms -------- */
 
-const PLATFORMS = [
+/** `href` marks a platform with its own page. */
+const PLATFORMS: { icon: ReactNode; name: string; tag: string; text: string; delay?: number; href?: string }[] = [
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
@@ -579,6 +580,7 @@ const PLATFORMS = [
     name: "Facebook",
     tag: "Local · community",
     text: "Feed, Groups, events, and community management.",
+    href: "/digital-marketing/facebook-marketing",
     delay: 50,
   },
   {
@@ -590,6 +592,7 @@ const PLATFORMS = [
     name: "TikTok",
     tag: "Reach · awareness",
     text: "Short-form video, trends, creator collaborations.",
+    href: "/digital-marketing/tiktok-marketing",
     delay: 100,
   },
   {
@@ -614,6 +617,7 @@ const PLATFORMS = [
     name: "YouTube",
     tag: "Long-form · evergreen",
     text: "Full videos + Shorts, SEO-driven content.",
+    href: "/digital-marketing/youtube-marketing",
   },
   {
     icon: (
@@ -624,6 +628,7 @@ const PLATFORMS = [
     name: "X (Twitter)",
     tag: "B2B · real-time",
     text: "Written content, live posting, industry conversations.",
+    href: "/digital-marketing/x-twitter-marketing",
     delay: 50,
   },
   {
@@ -815,6 +820,11 @@ export default function SocialMediaManagementView() {
                 <h3>{plat.name}</h3>
                 <span className="pb">{plat.tag}</span>
                 <p>{plat.text}</p>
+                {plat.href && (
+                  <a className="smm-plat-link" href={plat.href}>
+                    See the full page <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </Reveal>
             ))}
           </div>

@@ -39,3 +39,12 @@
   .bk-line { grid-template-columns: 1fr; gap: 6px; }
   .bk-line h3 { min-width: 0; }
 }
+
+/* industry pages row */
+.bk-industries { margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.bk-ind-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.bk-ind-chips { display: flex; flex-wrap: wrap; gap: 9px; }
+.bk-ind-chips a { font-family: var(--display); font-weight: 600; font-size: 13.5px; color: var(--blue); background: var(--surface); border: 1px solid var(--peach-line); border-radius: 100px; padding: 7px 14px; transition: border-color 0.2s ease; }
+.bk-ind-chips a:hover { border-color: rgba(37, 99, 235, 0.34); }
+.bk-ind-chips a span { display: inline-block; transition: transform 0.25s cubic-bezier(0.16, 0.84, 0.44, 1); }
+.bk-ind-chips a:hover span { transform: translate(3px, -3px); }

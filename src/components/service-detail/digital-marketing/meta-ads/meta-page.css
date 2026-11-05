@@ -397,3 +397,8 @@
   .meta-stat::before, .meta-step::before { transform: scaleX(1) !important; }
   .meta-tp-fade { animation: none !important; }
 }
+
+/* explorer panel link to a sub-page (same look as the Google Ads panel's) */
+.meta-tp-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-family: var(--display); font-weight: 600; font-size: 14px; color: var(--blue); }
+.meta-tp-cta .arw { transition: transform 0.2s ease; }
+.meta-tp-cta:hover .arw { transform: translate(3px, -3px); }

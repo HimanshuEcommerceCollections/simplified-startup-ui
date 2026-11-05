@@ -238,6 +238,8 @@ type Included = {
   name: string;
   tag: string;
   items: string[];
+  /** Set when the panel has its own sub-page. */
+  href?: string;
 };
 
 const INCLUDED: Included[] = [
@@ -275,6 +277,7 @@ const INCLUDED: Included[] = [
   },
   {
     key: "flows",
+    href: "/digital-marketing/email-automation-flows",
     btnName: "Automation flows",
     btnSub: "Revenue on autopilot",
     name: "Automation Flows",
@@ -291,6 +294,7 @@ const INCLUDED: Included[] = [
   },
   {
     key: "deliver",
+    href: "/digital-marketing/email-deliverability-audit",
     btnName: "Deliverability",
     btnSub: "Inbox, not spam",
     name: "Deliverability & Compliance",
@@ -299,6 +303,7 @@ const INCLUDED: Included[] = [
   },
   {
     key: "sms",
+    href: "/digital-marketing/sms-whatsapp-marketing",
     btnName: "SMS & WhatsApp",
     btnSub: "Add-on channel",
     name: "SMS & WhatsApp (Add-on)",
@@ -374,6 +379,11 @@ function IncludedExplorer() {
               <div key={line}>{line}</div>
             ))}
           </div>
+          {item.href && (
+            <a className="em-wp-link" href={item.href}>
+              See the full {item.btnName} page <span aria-hidden="true">↗</span>
+            </a>
+          )}
         </div>
       </div>
     </Reveal>
@@ -382,12 +392,12 @@ function IncludedExplorer() {
 
 /* -------- business types -------- */
 
-const TYPES: { icon: ReactNode; title: string; desc: string; items: string[] }[] = [
-  { icon: ICON_CART, title: "E-commerce", desc: "Email drives 20–40% of total revenue when done right.", items: ["Klaviyo / Shopify Email setup", "Full flow suite (welcome, cart, browse, win-back)", "Weekly campaign calendar", "Product recommendation blocks", "Segmentation by purchase history"] },
+const TYPES: { icon: ReactNode; title: string; desc: string; items: string[]; href?: string }[] = [
+  { icon: ICON_CART, title: "E-commerce", desc: "Email drives 20–40% of total revenue when done right.", items: ["Klaviyo / Shopify Email setup", "Full flow suite (welcome, cart, browse, win-back)", "Weekly campaign calendar", "Product recommendation blocks", "Segmentation by purchase history"], href: "/digital-marketing/ecommerce-email-marketing" },
   { icon: ICON_PIN, title: "Local businesses", desc: "Email that fills your booking calendar.", items: ["Booking & appointment reminders", "Local promo & event campaigns", "Birthday & anniversary flows", "Review request automations", "Referral campaigns + local growth"] },
   { icon: ICON_BRIEFCASE, title: "B2B & SaaS", desc: "For long sales cycles and high customer values.", items: ["Lead-nurture sequences", "Sales-triggered email flows", "Segment-specific content tracks", "Trial & onboarding sequences", "CRM integration + pipeline reporting"] },
   { icon: ICON_PHONE, title: "Cold email & outbound", desc: "Booking meetings from cold outreach.", items: ["Prospect list building", "Domain warm-up + deliverability", "Multi-step sequence design", "Personalized copy at scale", "Reply management + booked-meeting reporting"] },
-  { icon: ICON_ENVELOPE, title: "Newsletter & content", desc: "For creators & media growing a real audience.", items: ["Editorial content strategy", "Weekly / bi-weekly newsletter writing", "Sponsorship & monetization setup", "Beehiiv / Substack / ConvertKit setup", "Referral + cross-promo growth"] },
+  { icon: ICON_ENVELOPE, title: "Newsletter & content", desc: "For creators & media growing a real audience.", items: ["Editorial content strategy", "Weekly / bi-weekly newsletter writing", "Sponsorship & monetization setup", "Beehiiv / Substack / ConvertKit setup", "Referral + cross-promo growth"], href: "/digital-marketing/newsletter-marketing" },
   { icon: ICON_AUDIT, title: "Email Marketing Audit", desc: "A deep one-off review, no commitment.", items: ["Full list health & deliverability check", "Campaign & flow review", "Segmentation & personalization audit", "Design & copy critique", "Revenue-per-email + prioritized fix list"] },
 ];
 
@@ -433,10 +443,10 @@ const TIERS = [
 const FAQS = [
   { q: "Which email platform should I use?", a: <>Depends on your business, <strong>Klaviyo</strong> for e-commerce, <strong>HubSpot</strong> for B2B, Brevo/Mailchimp for small businesses, ConvertKit/Beehiiv for creators. We’ll recommend the right one on the strategy call, no upsell to the priciest tool.</> },
   { q: "How big does my list need to be?", a: <>No hard minimum. Even a few hundred can generate real revenue with the right automations. <strong>Engagement matters more, an engaged 500 beats a stale 50,000.</strong></> },
-  { q: "Email marketing vs email automation?", a: <>Email marketing is the whole program, campaigns, automations, list growth. <strong>Automation is one part:</strong> the flows (welcome, cart, post-purchase) that send themselves based on behavior.</> },
+  { q: "Email marketing vs email automation?", a: <>Email marketing is the whole program, campaigns, automations, list growth. <strong>Automation is one part:</strong> <a href="/digital-marketing/email-automation-flows">the flows</a> (welcome, cart, post-purchase) that send themselves based on behavior.</> },
   { q: "How long before I see results?", a: <>For e-commerce with traffic: automation-flow revenue usually shows in the <strong>first 30 days,</strong> campaign revenue in 60. Segmentation and testing gains compound from month 3.</> },
-  { q: "Do you handle SMS too?", a: <>Yes, email + SMS together significantly outperform email alone. We run them from the same platform on a combined strategy (see the SMS &amp; WhatsApp Marketing service).</> },
-  { q: "What if my emails land in spam?", a: <>A deliverability problem, usually fixable in 2–4 weeks. We audit sender authentication, list hygiene, engagement, and content triggers. <strong>Deliverability is included, not a paid add-on.</strong></> },
+  { q: "Do you handle SMS too?", a: <>Yes, email + SMS together significantly outperform email alone. We run them from the same platform on a combined strategy (see the <a href="/digital-marketing/sms-whatsapp-marketing">SMS &amp; WhatsApp Marketing service</a>).</> },
+  { q: "What if my emails land in spam?", a: <>A deliverability problem, usually fixable in 2–4 weeks. We <a href="/digital-marketing/email-deliverability-audit">audit</a> sender authentication, list hygiene, engagement, and content triggers. <strong>Deliverability is included, not a paid add-on.</strong></> },
   { q: "Do I own my list and account?", a: <>Yes, every list, account, template, and piece of content stays under your ownership. <strong>If you leave, you keep everything.</strong></> },
   { q: "Do you write the emails or do I?", a: <>We handle it, copy, subject lines, and design included at every tier. You always get final approval, and you can write your own with our templates and strategy if you prefer.</> },
   { q: "Can you help grow my list, not just email it?", a: <>Yes, list growth is core to every package: <strong>sign-up forms, pop-ups, lead magnets, referral loops, and landing-page opt-ins.</strong></> },
@@ -543,6 +553,11 @@ export default function EmailMarketingView() {
                     <li key={line}>{line}</li>
                   ))}
                 </ul>
+                {type.href && (
+                  <a className="em-bt-link" href={type.href}>
+                    See the full page <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </div>
             ))}
           </Reveal>
